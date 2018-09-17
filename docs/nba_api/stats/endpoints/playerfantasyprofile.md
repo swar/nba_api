@@ -11,13 +11,13 @@ Parameter Name | Pattern | Required | Nullable
 ------------ | :-----------: | :---: | :---:
 _**MeasureType**_ | `^(Base)$` | `Y` |  | 
 _**PaceAdjust**_ | `^(N)$` | `Y` |  | 
-_**PerMode**_ | `^(Totals)|(PerGame)|(Per36)$` | `Y` |  | 
+_**PerMode**_ | `^(Totals)\|(PerGame)\|(Per36)$` | `Y` |  | 
 _**PlayerID**_ |  | `Y` |  | 
 _**PlusMinus**_ | `^(N)$` | `Y` |  | 
 _**Rank**_ | `^(N)$` | `Y` |  | 
 _**Season**_ | `^\d{4}-\d{2}$` | `Y` |  | 
-_**SeasonType**_ | `^(Regular Season)|(Pre Season)|(Playoffs)$` | `Y` |  | 
-_**LeagueID**_ | `(00)|(20)|(10)` |  | `Y` | 
+_**SeasonType**_ | `^(Regular Season)\|(Pre Season)\|(Playoffs)$` | `Y` |  | 
+_**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` | 
 
 ## Data Sets
 #### DaysRestModified `days_rest_modified`

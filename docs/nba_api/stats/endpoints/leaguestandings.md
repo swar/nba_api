@@ -11,7 +11,7 @@ Parameter Name | Pattern | Required | Nullable
 ------------ | :-----------: | :---: | :---:
 _**LeagueID**_ | `^\d{2}$` | `Y` |  | 
 _**Season**_ | `^\d{4}-\d{2}$` | `Y` |  | 
-_**SeasonType**_ | `^(Regular Season)|(Pre Season)$` | `Y` |  | 
+_**SeasonType**_ | `^(Regular Season)\|(Pre Season)$` | `Y` |  | 
 _**SeasonYear**_ |  |  | `Y` | 
 
 ## Data Sets

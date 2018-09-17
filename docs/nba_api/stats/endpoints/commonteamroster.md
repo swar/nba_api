@@ -11,7 +11,7 @@ Parameter Name | Pattern | Required | Nullable
 ------------ | :-----------: | :---: | :---:
 _**Season**_ | `^\d{4}-\d{2}$` | `Y` |  | 
 _**TeamID**_ |  | `Y` |  | 
-_**LeagueID**_ | `(00)|(20)|(10)` |  | `Y` | 
+_**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` | 
 
 ## Data Sets
 #### Coaches `coaches`

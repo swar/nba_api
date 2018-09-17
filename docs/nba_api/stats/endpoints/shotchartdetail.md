@@ -9,37 +9,37 @@
 ## Parameters
 Parameter Name | Pattern | Required | Nullable
 ------------ | :-----------: | :---: | :---:
-_**ContextMeasure**_ | `^((PTS)|(FGM)|(FGA)|(FG_PCT)|(FG3M)|(FG3A)|(FG3_PCT)|(PF)|(EFG_PCT)|(TS_PCT)|(PTS_FB)|(PTS_OFF_TOV)|(PTS_2ND_CHANCE)|(PF))?$` | `Y` |  | 
+_**ContextMeasure**_ | `^((PTS)\|(FGM)\|(FGA)\|(FG_PCT)\|(FG3M)\|(FG3A)\|(FG3_PCT)\|(PF)\|(EFG_PCT)\|(TS_PCT)\|(PTS_FB)\|(PTS_OFF_TOV)\|(PTS_2ND_CHANCE)\|(PF))?$` | `Y` |  | 
 _**LastNGames**_ |  | `Y` |  | 
-_**LeagueID**_ | `(00)|(20)|(10)` |  |  | 
+_**LeagueID**_ | `(00)\|(20)\|(10)` |  |  | 
 _**Month**_ |  | `Y` |  | 
 _**OpponentTeamID**_ |  | `Y` |  | 
 _**Period**_ |  | `Y` |  | 
 _**PlayerID**_ |  | `Y` |  | 
-_**SeasonType**_ | `^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$` | `Y` |  | 
+_**SeasonType**_ | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star)$` | `Y` |  | 
 _**TeamID**_ |  | `Y` |  | 
-_**VsDivision**_ | `^((Atlantic)|(Central)|(Northwest)|(Pacific)|(Southeast)|(Southwest)|(East)|(West))?$` | `Y` | `Y` | 
-_**VsConference**_ | `^((East)|(West))?$` | `Y` | `Y` | 
+_**VsDivision**_ | `^((Atlantic)\|(Central)\|(Northwest)\|(Pacific)\|(Southeast)\|(Southwest)\|(East)\|(West))?$` | `Y` | `Y` | 
+_**VsConference**_ | `^((East)\|(West))?$` | `Y` | `Y` | 
 _**StartRange**_ |  |  | `Y` | 
 _**StartPeriod**_ |  |  | `Y` | 
-_**SeasonSegment**_ | `^((Post All-Star)|(Pre All-Star))?$` | `Y` | `Y` | 
+_**SeasonSegment**_ | `^((Post All-Star)\|(Pre All-Star))?$` | `Y` | `Y` | 
 _**Season**_ | `^(\d{4}-\d{2})?$` |  | `Y` | 
 _**RookieYear**_ | `^(\d{4}-\d{2})?$` | `Y` | `Y` | 
 _**RangeType**_ |  |  | `Y` | 
 _**Position**_ |  |  | `Y` | 
 _**PointDiff**_ |  |  | `Y` | 
-_**PlayerPosition**_ | `^((Guard)|(Center)|(Forward))?$` | `Y` | `Y` | 
-_**Outcome**_ | `^((W)|(L))?$` | `Y` | `Y` | 
-_**Location**_ | `^((Home)|(Road))?$` | `Y` | `Y` | 
-_**GameSegment**_ | `^((First Half)|(Overtime)|(Second Half))?$` | `Y` | `Y` | 
+_**PlayerPosition**_ | `^((Guard)\|(Center)\|(Forward))?$` | `Y` | `Y` | 
+_**Outcome**_ | `^((W)\|(L))?$` | `Y` | `Y` | 
+_**Location**_ | `^((Home)\|(Road))?$` | `Y` | `Y` | 
+_**GameSegment**_ | `^((First Half)\|(Overtime)\|(Second Half))?$` | `Y` | `Y` | 
 _**GameID**_ | `^(\d{10})?$` | `Y` | `Y` | 
 _**EndRange**_ |  |  | `Y` | 
 _**EndPeriod**_ |  |  | `Y` | 
 _**DateTo**_ |  | `Y` | `Y` | 
 _**DateFrom**_ |  | `Y` | `Y` | 
 _**ContextFilter**_ |  |  | `Y` | 
-_**ClutchTime**_ | `^((Last 5 Minutes)|(Last 4 Minutes)|(Last 3 Minutes)|(Last 2 Minutes)|(Last 1 Minute)|(Last 30 Seconds)|(Last 10 Seconds))?$` |  | `Y` | 
-_**AheadBehind**_ | `^((Ahead or Behind)|(Ahead or Tied)|(Behind or Tied))?$` |  | `Y` | 
+_**ClutchTime**_ | `^((Last 5 Minutes)\|(Last 4 Minutes)\|(Last 3 Minutes)\|(Last 2 Minutes)\|(Last 1 Minute)\|(Last 30 Seconds)\|(Last 10 Seconds))?$` |  | `Y` | 
+_**AheadBehind**_ | `^((Ahead or Behind)\|(Ahead or Tied)\|(Behind or Tied))?$` |  | `Y` | 
 
 ## Data Sets
 #### LeagueAverages `league_averages`

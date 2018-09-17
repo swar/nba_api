@@ -9,9 +9,9 @@
 ## Parameters
 Parameter Name | Pattern | Required | Nullable
 ------------ | :-----------: | :---: | :---:
-_**PerMode**_ | `^(Totals)|(PerGame)|(Per36)$` | `Y` |  | 
+_**PerMode**_ | `^(Totals)\|(PerGame)\|(Per36)$` | `Y` |  | 
 _**PlayerID**_ |  | `Y` |  | 
-_**LeagueID**_ | `(00)|(20)|(10)` |  | `Y` | 
+_**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` | 
 
 ## Data Sets
 #### CareerTotalsAllStarSeason `career_totals_all_star_season`

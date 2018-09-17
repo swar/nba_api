@@ -9,10 +9,10 @@
 ## Parameters
 Parameter Name | Pattern | Required | Nullable
 ------------ | :-----------: | :---: | :---:
-_**Season**_ | `^(\d{4}-\d{2})|(ALL)$` | `Y` |  | 
-_**SeasonType**_ | `^(Regular Season)|(Pre Season)|(Playoffs)|(All-Star)|(All Star)|(Preseason)$` | `Y` |  | 
+_**Season**_ | `^(\d{4}-\d{2})\|(ALL)$` | `Y` |  | 
+_**SeasonType**_ | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All-Star)\|(All Star)\|(Preseason)$` | `Y` |  | 
 _**TeamID**_ |  | `Y` |  | 
-_**LeagueID**_ | `(00)|(20)|(10)` |  | `Y` | 
+_**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` | 
 _**DateTo**_ |  |  | `Y` | 
 _**DateFrom**_ |  |  | `Y` | 
 

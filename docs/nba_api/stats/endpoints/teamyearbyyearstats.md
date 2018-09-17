@@ -10,8 +10,8 @@
 Parameter Name | Pattern | Required | Nullable
 ------------ | :-----------: | :---: | :---:
 _**LeagueID**_ | `^\d{2}$` | `Y` |  | 
-_**PerMode**_ | `^(Totals)|(PerGame)$` | `Y` |  | 
-_**SeasonType**_ | `^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$` | `Y` |  | 
+_**PerMode**_ | `^(Totals)\|(PerGame)$` | `Y` |  | 
+_**SeasonType**_ | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star)$` | `Y` |  | 
 _**TeamID**_ |  | `Y` |  | 
 
 ## Data Sets

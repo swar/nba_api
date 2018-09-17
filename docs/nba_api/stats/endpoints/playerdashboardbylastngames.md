@@ -10,26 +10,26 @@
 Parameter Name | Pattern | Required | Nullable
 ------------ | :-----------: | :---: | :---:
 _**LastNGames**_ |  | `Y` |  | 
-_**MeasureType**_ | `^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)$` | `Y` |  | 
+_**MeasureType**_ | `^(Base)\|(Advanced)\|(Misc)\|(Four Factors)\|(Scoring)\|(Opponent)\|(Usage)$` | `Y` |  | 
 _**Month**_ |  | `Y` |  | 
 _**OpponentTeamID**_ |  | `Y` |  | 
-_**PaceAdjust**_ | `^(Y)|(N)$` | `Y` |  | 
-_**PerMode**_ | `^(Totals)|(PerGame)|(MinutesPer)|(Per48)|(Per40)|(Per36)|(PerMinute)|(PerPossession)|(PerPlay)|(Per100Possessions)|(Per100Plays)$` | `Y` |  | 
+_**PaceAdjust**_ | `^(Y)\|(N)$` | `Y` |  | 
+_**PerMode**_ | `^(Totals)\|(PerGame)\|(MinutesPer)\|(Per48)\|(Per40)\|(Per36)\|(PerMinute)\|(PerPossession)\|(PerPlay)\|(Per100Possessions)\|(Per100Plays)$` | `Y` |  | 
 _**Period**_ |  | `Y` |  | 
 _**PlayerID**_ |  | `Y` |  | 
-_**PlusMinus**_ | `^(Y)|(N)$` | `Y` |  | 
-_**Rank**_ | `^(Y)|(N)$` | `Y` |  | 
+_**PlusMinus**_ | `^(Y)\|(N)$` | `Y` |  | 
+_**Rank**_ | `^(Y)\|(N)$` | `Y` |  | 
 _**Season**_ | `^\d{4}-\d{2}$` | `Y` |  | 
-_**SeasonType**_ | `^(Regular Season)|(Pre Season)|(Playoffs)$` | `Y` |  | 
-_**VsDivision**_ | `^((Atlantic)|(Central)|(Northwest)|(Pacific)|(Southeast)|(Southwest)|(East)|(West))?$` | `Y` | `Y` | 
-_**VsConference**_ | `^((East)|(West))?$` | `Y` | `Y` | 
-_**ShotClockRange**_ | `((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?` |  | `Y` | 
-_**SeasonSegment**_ | `^((Post All-Star)|(Pre All-Star))?$` | `Y` | `Y` | 
+_**SeasonType**_ | `^(Regular Season)\|(Pre Season)\|(Playoffs)$` | `Y` |  | 
+_**VsDivision**_ | `^((Atlantic)\|(Central)\|(Northwest)\|(Pacific)\|(Southeast)\|(Southwest)\|(East)\|(West))?$` | `Y` | `Y` | 
+_**VsConference**_ | `^((East)\|(West))?$` | `Y` | `Y` | 
+_**ShotClockRange**_ | `((24-22)\|(22-18 Very Early)\|(18-15 Early)\|(15-7 Average)\|(7-4 Late)\|(4-0 Very Late)\|(ShotClock Off))?` |  | `Y` | 
+_**SeasonSegment**_ | `^((Post All-Star)\|(Pre All-Star))?$` | `Y` | `Y` | 
 _**PORound**_ |  |  | `Y` | 
-_**Outcome**_ | `^((W)|(L))?$` | `Y` | `Y` | 
-_**Location**_ | `^((Home)|(Road))?$` | `Y` | `Y` | 
-_**LeagueID**_ | `(00)|(20)|(10)` |  | `Y` | 
-_**GameSegment**_ | `^((First Half)|(Overtime)|(Second Half))?$` | `Y` | `Y` | 
+_**Outcome**_ | `^((W)\|(L))?$` | `Y` | `Y` | 
+_**Location**_ | `^((Home)\|(Road))?$` | `Y` | `Y` | 
+_**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` | 
+_**GameSegment**_ | `^((First Half)\|(Overtime)\|(Second Half))?$` | `Y` | `Y` | 
 _**DateTo**_ |  | `Y` | `Y` | 
 _**DateFrom**_ |  | `Y` | `Y` | 
 

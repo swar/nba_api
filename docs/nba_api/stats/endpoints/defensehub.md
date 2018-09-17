@@ -9,12 +9,12 @@
 ## Parameters
 Parameter Name | Pattern | Required | Nullable
 ------------ | :-----------: | :---: | :---:
-_**GameScope**_ | `^(Season)|(Last 10)|(Yesterday)|(Finals)$` | `Y` |  | 
+_**GameScope**_ | `^(Season)\|(Last 10)\|(Yesterday)\|(Finals)$` | `Y` |  | 
 _**LeagueID**_ | `^\d{2}$` | `Y` |  | 
-_**PlayerOrTeam**_ | `^(Player)|(Team)$` | `Y` |  | 
-_**PlayerScope**_ | `^(All Players)|(Rookies)$` | `Y` |  | 
+_**PlayerOrTeam**_ | `^(Player)\|(Team)$` | `Y` |  | 
+_**PlayerScope**_ | `^(All Players)\|(Rookies)$` | `Y` |  | 
 _**Season**_ | `^\d{4}-\d{2}$` | `Y` |  | 
-_**SeasonType**_ | `^(Regular Season)|(Pre Season)|(Playoffs)$` | `Y` |  | 
+_**SeasonType**_ | `^(Regular Season)\|(Pre Season)\|(Playoffs)$` | `Y` |  | 
 
 ## Data Sets
 #### DefenseHubStat1 `defense_hub_stat1`

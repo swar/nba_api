@@ -9,8 +9,8 @@
 ## Parameters
 Parameter Name | Pattern | Required | Nullable
 ------------ | :-----------: | :---: | :---:
-_**LeagueID**_ | `^(00)|(10)|(20)$` | `Y` |  | 
-_**SeasonYear**_ | `^(\d{4}-\d{2})|(All Time)$` | `Y` |  | 
+_**LeagueID**_ | `^(00)\|(10)\|(20)$` | `Y` |  | 
+_**SeasonYear**_ | `^(\d{4}-\d{2})\|(All Time)$` | `Y` |  | 
 
 ## Data Sets
 #### DraftCombineStats `draft_combine_stats`

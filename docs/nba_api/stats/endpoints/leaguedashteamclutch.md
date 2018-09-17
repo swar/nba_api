@@ -9,38 +9,38 @@
 ## Parameters
 Parameter Name | Pattern | Required | Nullable
 ------------ | :-----------: | :---: | :---:
-_**AheadBehind**_ | `^((Ahead or Behind)|(Behind or Tied)|(Ahead or Tied))?$` | `Y` |  | 
-_**ClutchTime**_ | `^((Last 5 Minutes)|(Last 4 Minutes)|(Last 3 Minutes)|(Last 2 Minutes)|(Last 1 Minute)|(Last 30 Seconds)|(Last 10 Seconds))?$` | `Y` |  | 
+_**AheadBehind**_ | `^((Ahead or Behind)\|(Behind or Tied)\|(Ahead or Tied))?$` | `Y` |  | 
+_**ClutchTime**_ | `^((Last 5 Minutes)\|(Last 4 Minutes)\|(Last 3 Minutes)\|(Last 2 Minutes)\|(Last 1 Minute)\|(Last 30 Seconds)\|(Last 10 Seconds))?$` | `Y` |  | 
 _**LastNGames**_ |  | `Y` |  | 
-_**MeasureType**_ | `^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$` | `Y` |  | 
+_**MeasureType**_ | `^(Base)\|(Advanced)\|(Misc)\|(Four Factors)\|(Scoring)\|(Opponent)\|(Usage)\|(Defense)$` | `Y` |  | 
 _**Month**_ |  | `Y` |  | 
 _**OpponentTeamID**_ |  | `Y` |  | 
-_**PaceAdjust**_ | `^(Y)|(N)$` | `Y` |  | 
-_**PerMode**_ | `^(Totals)|(PerGame)|(MinutesPer)|(Per48)|(Per40)|(Per36)|(PerMinute)|(PerPossession)|(PerPlay)|(Per100Possessions)|(Per100Plays)$` | `Y` |  | 
+_**PaceAdjust**_ | `^(Y)\|(N)$` | `Y` |  | 
+_**PerMode**_ | `^(Totals)\|(PerGame)\|(MinutesPer)\|(Per48)\|(Per40)\|(Per36)\|(PerMinute)\|(PerPossession)\|(PerPlay)\|(Per100Possessions)\|(Per100Plays)$` | `Y` |  | 
 _**Period**_ |  | `Y` |  | 
-_**PlusMinus**_ | `^(Y)|(N)$` | `Y` |  | 
+_**PlusMinus**_ | `^(Y)\|(N)$` | `Y` |  | 
 _**PointDiff**_ |  | `Y` |  | 
-_**Rank**_ | `^(Y)|(N)$` | `Y` |  | 
+_**Rank**_ | `^(Y)\|(N)$` | `Y` |  | 
 _**Season**_ | `^\d{4}-\d{2}$` | `Y` |  | 
-_**SeasonType**_ | `^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$` | `Y` |  | 
-_**VsDivision**_ | `^((Atlantic)|(Central)|(Northwest)|(Pacific)|(Southeast)|(Southwest)|(East)|(West))?$` | `Y` | `Y` | 
-_**VsConference**_ | `^((East)|(West))?$` | `Y` | `Y` | 
+_**SeasonType**_ | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star)$` | `Y` |  | 
+_**VsDivision**_ | `^((Atlantic)\|(Central)\|(Northwest)\|(Pacific)\|(Southeast)\|(Southwest)\|(East)\|(West))?$` | `Y` | `Y` | 
+_**VsConference**_ | `^((East)\|(West))?$` | `Y` | `Y` | 
 _**TeamID**_ |  |  | `Y` | 
-_**StarterBench**_ | `((Starters)|(Bench))?` | `Y` | `Y` | 
-_**ShotClockRange**_ | `((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?` |  | `Y` | 
-_**SeasonSegment**_ | `^((Post All-Star)|(Pre All-Star))?$` | `Y` | `Y` | 
-_**PlayerPosition**_ | `((F)|(C)|(G)|(C-F)|(F-C)|(F-G)|(G-F))?` | `Y` | `Y` | 
-_**PlayerExperience**_ | `((Rookie)|(Sophomore)|(Veteran))?` | `Y` | `Y` | 
+_**StarterBench**_ | `((Starters)\|(Bench))?` | `Y` | `Y` | 
+_**ShotClockRange**_ | `((24-22)\|(22-18 Very Early)\|(18-15 Early)\|(15-7 Average)\|(7-4 Late)\|(4-0 Very Late)\|(ShotClock Off))?` |  | `Y` | 
+_**SeasonSegment**_ | `^((Post All-Star)\|(Pre All-Star))?$` | `Y` | `Y` | 
+_**PlayerPosition**_ | `((F)\|(C)\|(G)\|(C-F)\|(F-C)\|(F-G)\|(G-F))?` | `Y` | `Y` | 
+_**PlayerExperience**_ | `((Rookie)\|(Sophomore)\|(Veteran))?` | `Y` | `Y` | 
 _**PORound**_ |  |  | `Y` | 
-_**Outcome**_ | `^((W)|(L))?$` | `Y` | `Y` | 
-_**Location**_ | `^((Home)|(Road))?$` | `Y` | `Y` | 
-_**LeagueID**_ | `(00)|(20)|(10)` |  | `Y` | 
-_**GameSegment**_ | `^((First Half)|(Overtime)|(Second Half))?$` | `Y` | `Y` | 
-_**GameScope**_ | `((Yesterday)|(Last 10))?` | `Y` | `Y` | 
-_**Division**_ | `((Atlantic)|(Central)|(Northwest)|(Pacific)|(Southeast)|(Southwest))?` |  | `Y` | 
+_**Outcome**_ | `^((W)\|(L))?$` | `Y` | `Y` | 
+_**Location**_ | `^((Home)\|(Road))?$` | `Y` | `Y` | 
+_**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` | 
+_**GameSegment**_ | `^((First Half)\|(Overtime)\|(Second Half))?$` | `Y` | `Y` | 
+_**GameScope**_ | `((Yesterday)\|(Last 10))?` | `Y` | `Y` | 
+_**Division**_ | `((Atlantic)\|(Central)\|(Northwest)\|(Pacific)\|(Southeast)\|(Southwest))?` |  | `Y` | 
 _**DateTo**_ |  | `Y` | `Y` | 
 _**DateFrom**_ |  | `Y` | `Y` | 
-_**Conference**_ | `((East)|(West))?` |  | `Y` | 
+_**Conference**_ | `((East)\|(West))?` |  | `Y` | 
 
 ## Data Sets
 #### LeagueDashTeamClutch `league_dash_team_clutch`

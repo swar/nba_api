@@ -9,7 +9,7 @@
 ## Parameters
 Parameter Name | Pattern | Required | Nullable
 ------------ | :-----------: | :---: | :---:
-_**PlayerOrTeam**_ | `^(P)|(T)$` | `Y` |  | 
+_**PlayerOrTeam**_ | `^(P)\|(T)$` | `Y` |  | 
 _**YearsExperience**_ |  |  | `Y` | 
 _**VsTeamID**_ |  |  | `Y` | 
 _**VsDivision**_ |  |  | `Y` | 

@@ -10,38 +10,38 @@
 Parameter Name | Pattern | Required | Nullable
 ------------ | :-----------: | :---: | :---:
 _**LeagueID**_ | `^\d{2}$` | `Y` |  | 
-_**PerMode**_ | `^(Totals)|(PerGame)$` | `Y` |  | 
+_**PerMode**_ | `^(Totals)\|(PerGame)$` | `Y` |  | 
 _**Season**_ | `^\d{4}-\d{2}$` | `Y` |  | 
-_**SeasonType**_ | `^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$` | `Y` |  | 
+_**SeasonType**_ | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star)$` | `Y` |  | 
 _**Weight**_ |  |  | `Y` | 
-_**VsDivision**_ | `^((Atlantic)|(Central)|(Northwest)|(Pacific)|(Southeast)|(Southwest)|(East)|(West))?$` |  | `Y` | 
-_**VsConference**_ | `^((East)|(West))?$` |  | `Y` | 
+_**VsDivision**_ | `^((Atlantic)\|(Central)\|(Northwest)\|(Pacific)\|(Southeast)\|(Southwest)\|(East)\|(West))?$` |  | `Y` | 
+_**VsConference**_ | `^((East)\|(West))?$` |  | `Y` | 
 _**TouchTimeRange**_ |  |  | `Y` | 
 _**TeamID**_ |  |  | `Y` | 
 _**StarterBench**_ |  |  | `Y` | 
 _**ShotDistRange**_ |  |  | `Y` | 
 _**ShotClockRange**_ |  |  | `Y` | 
-_**SeasonSegment**_ | `^((Post All-Star)|(Pre All-Star))?$` |  | `Y` | 
+_**SeasonSegment**_ | `^((Post All-Star)\|(Pre All-Star))?$` |  | `Y` | 
 _**PlayerPosition**_ |  |  | `Y` | 
 _**PlayerExperience**_ |  |  | `Y` | 
 _**Period**_ |  |  | `Y` | 
 _**PORound**_ |  |  | `Y` | 
-_**Outcome**_ | `^((W)|(L))?$` |  | `Y` | 
+_**Outcome**_ | `^((W)\|(L))?$` |  | `Y` | 
 _**OpponentTeamID**_ |  |  | `Y` | 
 _**Month**_ |  |  | `Y` | 
-_**Location**_ | `^((Home)|(Road))?$` |  | `Y` | 
+_**Location**_ | `^((Home)\|(Road))?$` |  | `Y` | 
 _**LastNGames**_ |  |  | `Y` | 
 _**Height**_ |  |  | `Y` | 
 _**GeneralRange**_ |  |  | `Y` | 
-_**GameSegment**_ | `^((First Half)|(Overtime)|(Second Half))?$` |  | `Y` | 
+_**GameSegment**_ | `^((First Half)\|(Overtime)\|(Second Half))?$` |  | `Y` | 
 _**DribbleRange**_ |  |  | `Y` | 
 _**DraftYear**_ |  |  | `Y` | 
 _**DraftPick**_ |  |  | `Y` | 
-_**Division**_ | `^((Atlantic)|(Central)|(Northwest)|(Pacific)|(Southeast)|(Southwest)|(East)|(West))?$` |  | `Y` | 
+_**Division**_ | `^((Atlantic)\|(Central)\|(Northwest)\|(Pacific)\|(Southeast)\|(Southwest)\|(East)\|(West))?$` |  | `Y` | 
 _**DateTo**_ |  |  | `Y` | 
 _**DateFrom**_ |  |  | `Y` | 
 _**Country**_ |  |  | `Y` | 
-_**Conference**_ | `^((East)|(West))?$` |  | `Y` | 
+_**Conference**_ | `^((East)\|(West))?$` |  | `Y` | 
 _**College**_ |  |  | `Y` | 
 _**CloseDefDistRange**_ |  |  | `Y` | 
 

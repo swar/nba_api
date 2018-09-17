@@ -10,12 +10,12 @@
 Parameter Name | Pattern | Required | Nullable
 ------------ | :-----------: | :---: | :---:
 _**Counter**_ |  |  |  | 
-_**Direction**_ | `^(ASC)|(DESC)$` | `Y` |  | 
-_**LeagueID**_ | `^(00)|(20)$` | `Y` |  | 
-_**PlayerOrTeam**_ | `^(P)|(T)$` | `Y` |  | 
-_**Season**_ | `^(\d{4}-\d{2})|(ALLTIME)$` | `Y` |  | 
-_**SeasonType**_ | `^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)|(All-Star)$` | `Y` |  | 
-_**Sorter**_ | `^((FGM)|(FGA)|(FG_PCT)|(FG3M)|(FG3A)|(FG3_PCT)|(FTM)|(FTA)|(FT_PCT)|(OREB)|(DREB)|(AST)|(STL)|(BLK)|(TOV)|(REB)|(PTS)|(DATE))$` | `Y` |  | 
+_**Direction**_ | `^(ASC)\|(DESC)$` | `Y` |  | 
+_**LeagueID**_ | `^(00)\|(20)$` | `Y` |  | 
+_**PlayerOrTeam**_ | `^(P)\|(T)$` | `Y` |  | 
+_**Season**_ | `^(\d{4}-\d{2})\|(ALLTIME)$` | `Y` |  | 
+_**SeasonType**_ | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star)\|(All-Star)$` | `Y` |  | 
+_**Sorter**_ | `^((FGM)\|(FGA)\|(FG_PCT)\|(FG3M)\|(FG3A)\|(FG3_PCT)\|(FTM)\|(FTA)\|(FT_PCT)\|(OREB)\|(DREB)\|(AST)\|(STL)\|(BLK)\|(TOV)\|(REB)\|(PTS)\|(DATE))$` | `Y` |  | 
 _**DateTo**_ |  |  | `Y` | 
 _**DateFrom**_ |  |  | `Y` | 
 

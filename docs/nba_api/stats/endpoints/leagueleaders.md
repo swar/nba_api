@@ -10,10 +10,10 @@
 Parameter Name | Pattern | Required | Nullable
 ------------ | :-----------: | :---: | :---:
 _**LeagueID**_ | `^\d{2}$` | `Y` |  | 
-_**PerMode**_ | `^(Totals)|(PerGame)|(Per48)$` | `Y` |  | 
-_**Scope**_ | `^(RS)|(S)|(Rookies)$` | `Y` |  | 
-_**Season**_ | `^(\d{4}-\d{2})|(All Time)$` | `Y` |  | 
-_**SeasonType**_ | `^(Regular Season)|(Playoffs)|(All Star)|(Pre Season)$` | `Y` |  | 
+_**PerMode**_ | `^(Totals)\|(PerGame)\|(Per48)$` | `Y` |  | 
+_**Scope**_ | `^(RS)\|(S)\|(Rookies)$` | `Y` |  | 
+_**Season**_ | `^(\d{4}-\d{2})\|(All Time)$` | `Y` |  | 
+_**SeasonType**_ | `^(Regular Season)\|(Playoffs)\|(All Star)\|(Pre Season)$` | `Y` |  | 
 _**StatCategory**_ |  | `Y` |  | 
 _**ActiveFlag**_ |  |  | `Y` | 
 

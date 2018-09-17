@@ -11,7 +11,7 @@ Parameter Name | Pattern | Required | Nullable
 ------------ | :-----------: | :---: | :---:
 _**Season**_ | `^\d{4}-\d{2}$` | `Y` |  | 
 _**SeriesID**_ |  |  | `Y` | 
-_**LeagueID**_ | `(00)|(20)|(10)` | `Y` | `Y` | 
+_**LeagueID**_ | `(00)\|(20)\|(10)` | `Y` | `Y` | 
 
 ## Data Sets
 #### PlayoffSeries `playoff_series`

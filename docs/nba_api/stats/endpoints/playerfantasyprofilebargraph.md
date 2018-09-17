@@ -11,8 +11,8 @@ Parameter Name | Pattern | Required | Nullable
 ------------ | :-----------: | :---: | :---:
 _**PlayerID**_ |  | `Y` |  | 
 _**Season**_ | `^\d{4}-\d{2}$` | `Y` |  | 
-_**SeasonType**_ | `^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$` |  | `Y` | 
-_**LeagueID**_ | `(00)|(20)|(10)` |  | `Y` | 
+_**SeasonType**_ | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star)$` |  | `Y` | 
+_**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` | 
 
 ## Data Sets
 #### LastFiveGamesAvg `last_five_games_avg`
