@@ -102,3 +102,12 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# PyCharm
+.idea
+
+# Debug Files
+nba_api/nba_api/library/debug/
+nba_api/scripts/endpoint_analysis/
+nba_api/scripts/endpoint_documentation/
+nba_api/scripts/endpoint_files/
