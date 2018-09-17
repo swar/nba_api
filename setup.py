@@ -5,10 +5,10 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="nba_api",
-    version="1.0.0",
+    version="1.0.2",
     author="Swar Patel",
     author_email="swar.m.patel@gmail.com",
-    description="A API Client package to access the APIs for NBA.com",
+    description="An API Client package to access the APIs for NBA.com",
     install_requires=["requests"],
     keywords='nba api sports data basketball stats',
     license="MIT",
