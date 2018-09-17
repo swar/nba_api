@@ -1,0 +1,91 @@
+# TeamGameLog
+
+##### Endpoint URL
+>[https://stats.nba.com/stats/teamgamelog](https://stats.nba.com/stats/teamgamelog)
+
+##### Valid URL
+>[https://stats.nba.com/stats/teamgamelog?DateFrom=&DateTo=&LeagueID=&Season=2017-18&SeasonType=Regular+Season&TeamID=1610612739](https://stats.nba.com/stats/teamgamelog?DateFrom=&DateTo=&LeagueID=&Season=2017-18&SeasonType=Regular+Season&TeamID=1610612739)
+
+## Parameters
+Parameter Name | Pattern | Required | Nullable
+------------ | :-----------: | :---: | :---:
+_**Season**_ | `^(\d{4}-\d{2})|(ALL)$` | `Y` |  | 
+_**SeasonType**_ | `^(Regular Season)|(Pre Season)|(Playoffs)|(All-Star)|(All Star)|(Preseason)$` | `Y` |  | 
+_**TeamID**_ |  | `Y` |  | 
+_**LeagueID**_ | `(00)|(20)|(10)` |  | `Y` | 
+_**DateTo**_ |  |  | `Y` | 
+_**DateFrom**_ |  |  | `Y` | 
+
+## Data Sets
+#### TeamGameLog `team_game_log`
+```text
+['Team_ID', 'Game_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'W', 'L', 'W_PCT', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS']
+```
+
+
+## JSON
+```json
+{
+    "data_sets": {
+        "TeamGameLog": [
+            "Team_ID",
+            "Game_ID",
+            "GAME_DATE",
+            "MATCHUP",
+            "WL",
+            "W",
+            "L",
+            "W_PCT",
+            "MIN",
+            "FGM",
+            "FGA",
+            "FG_PCT",
+            "FG3M",
+            "FG3A",
+            "FG3_PCT",
+            "FTM",
+            "FTA",
+            "FT_PCT",
+            "OREB",
+            "DREB",
+            "REB",
+            "AST",
+            "STL",
+            "BLK",
+            "TOV",
+            "PF",
+            "PTS"
+        ]
+    },
+    "endpoint": "TeamGameLog",
+    "nullable_parameters": [
+        "DateFrom",
+        "DateTo",
+        "LeagueID"
+    ],
+    "parameter_patterns": {
+        "DateFrom": null,
+        "DateTo": null,
+        "LeagueID": "(00)|(20)|(10)",
+        "Season": "^(\\d{4}-\\d{2})|(ALL)$",
+        "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All-Star)|(All Star)|(Preseason)$",
+        "TeamID": null
+    },
+    "parameters": [
+        "DateFrom",
+        "DateTo",
+        "LeagueID",
+        "Season",
+        "SeasonType",
+        "TeamID"
+    ],
+    "required_parameters": [
+        "Season",
+        "SeasonType",
+        "TeamID"
+    ],
+    "status": "success"
+}
+```
+
+Last validated 2018-09-16
