@@ -1,7 +1,5 @@
 # Table of Contents
 
-- [Index](index.md)
-
 - [Table of Contents](table_of_contents.md)
 
 - [Package Structure](package_structure.md)
