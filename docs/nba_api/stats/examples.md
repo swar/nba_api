@@ -1,35 +1,126 @@
-# Example Imports
+# Stats Examples
+
+## Endpoint Usage Example
+
+This is an example of how to call an `stats.nba.com` endpoint and access the data returned. This example can be applied to all stats endpoints.
+
+Let's say we want to get the player information for `LeBron James (2544)`. I know that I can get this information by calling the [`CommonPlayerInfo`](endpoints/commonplayerinfo.md) stats endpoint.
+
+Once you call the class, the request will be sent an the information will be stored inside the `player_info` variable.
+
 ```python
-from nba_api.stats.endpoints import *
-from nba_api.stats.static import players, teams
+from nba_api.stats.endpoints import commonplayerinfo
+
+player_info = commonplayerinfo.CommonPlayerInfo(player_id=2544)
 ```
 
-# Usage Examples
+`player_info` can now be used to access different information that was returned by the request. [`CommonPlayerInfo`](endpoints/commonplayerinfo.md) contains the following data sets that are stored as a [`DataSet`](endpoints_data_structure.md).
 
-### Find Player by First Name
-```python
-# Find Players with first name matching regex pattern 'lebron'
+* `available_seasons`
+* `common_player_info`
+* `player_headline_stats`
 
-player = players.find_players_by_first_name('lebron')
-```
-##### Returns
-```python
-players = [{'id': 2544, 'full_name': 'LeBron James', 'first_name': 'LeBron', 'last_name': 'James'}]
-```
+Each data set has additional methods in order to access the data in either `json`, a `dictionary`, or a `DataFrame`.
 
-### Find Team by City
 ```python
-# Find Teams with city matching regex pattern 'cleveland'
-team = teams.find_teams_by_city('cleveland')
-```
-##### Returns
-```python
-teams = [{'id': 1610612739, 'full_name': 'Cleveland Cavaliers', 'abbreviation': 'CLE', 'nickname': 'Cavaliers', 'city': 'Cleveland', 'state': 'Ohio', 'year_founded': 1970}]
+# Returns data in a JSON string.
+player_info.available_seasons.get_json()
+
+# Returns data in a dictionary.
+player_info.available_seasons.get_dict()
+
+# Returns the data set in a pandas DataFrame.
+player_info.available_seasons.get_data_frame()
 ```
 
+Alternatively, you can retrieve the raw request of the response as well as all the data sets in `json`, a `dictionary`, a normalized `json` dictionary (`header:value` format), a normalized `dictionary`, and in a list of pandas `DataFrame`.
 
-### Get Player Shot Chart Details in a pandas `DataFrame`
 ```python
-df_shotchartdetails = shotchartdetail.ShotChartDetail(player_id='2544', team_id='1610612739').shot_chart_detail.get_data_frame()
+# Returns the raw response of the request.
+player_info.get_response()
+
+# Returns all data in a JSON string.
+player_info.get_json()
+
+# Returns all data in a dictionary.
+player_info.get_dict()
+
+# Returns all data in a normalized JSON string.
+player_info.get_normalized_json()
+
+# Returns all data in a normalized dictionary.
+player_info.get_normalized_dict()
+
+# Returns a list of all data in a pandas DataFrame structure.
+player_info.get_data_frames()
 ```
-This will return shot chart details in a data frame.
+
+
+## Static Usage Examples
+
+Using functions from the static library will not send any requests over http. This data is embedded in this package and will be updated as necessary.
+
+### Players
+
+You can find players using a regex pattern `case-insensitive` by full name, first name, last_name. Below is an example result for `LeBron James (2544)`
+```python
+lebron_james = {
+  'id': 2544,
+  'full_name': 'LeBron James',
+  'first_name': 'LeBron',
+  'last_name': 'James'
+}
+```
+
+All three of these searches will return a list of players.
+
+```python
+from nba_api.stats.static import players
+
+# Find players by full name.
+players.find_players_by_full_name('james')
+
+# Find players by first name.
+players.find_players_by_first_name('lebron')
+
+# Find players by last name.
+players.find_players_by_last_name('^(james|love)$')
+
+# Get all players.
+players.get_players()
+```
+
+In addition, you can find players by ID by using `find_player_by_id()`.
+
+
+### Teams
+
+You can also find teams using regex patterns on fields such as full name, state, city, and nickname. As well as finding teams by year founded, abbreviation, and id.
+
+```python
+from nba_api.stats.static import teams
+
+# Find teams by full name.
+teams.find_teams_by_full_name('cav')
+
+# Find teams by state.
+teams.find_teams_by_state('ohio')
+
+# Find teams by city.
+teams.find_teams_by_city('cleveland')
+
+# Find teams by team nickname.
+teams.find_teams_by_nickname('cav')
+
+# Find teams by year founded.
+teams.find_teams_by_year_founded(1968)
+
+# Find teams by abbreviation.
+teams.find_team_by_abbreviation('cle')
+
+# Find teams by id.
+teams.find_team_name_by_id(1610612739)
+
+# Get all teams.
+teams.get_teams()
+```
