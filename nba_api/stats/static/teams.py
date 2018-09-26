@@ -67,7 +67,7 @@ def find_team_name_by_id(team_id):
     elif not teams_list:
         return None
     else:
-        return {_get_team_dict(teams_list[0])}
+        return teams_list[0]
 
 
 def get_teams():
