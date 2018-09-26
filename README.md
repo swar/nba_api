@@ -2,7 +2,7 @@
 
 # nba_api
 
-##### Current Version: v1.0.3
+##### Current Version: v1.0.4
 
 `nba_api` is an API Client for `www.nba.com`. This package is meant to make the API Endpoints more accessible and to provide extensive documentation.
 
@@ -26,6 +26,11 @@ pip install nba_api
 - [pandas](https://pandas.pydata.org/) `optional`
 
 
+## Endpoint Analysis
+A major purpose of this package is to map and analyze as many endpoints on NBA.com as possible. The documentation and analysis on the Endpoints and Parameters found in this package is some of the most extensive information available on these largely undocumented Endpoints. Please open an issue with any additional Endpoints/APIs. 
+
+[Endpoint Analysis JSON _for use with other clients_](https://github.com/swar/nba_api/tree/master/analysis_archive/stats)
+
 ## Usage Examples
 - [`stats.nba.com`](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/examples.md)
 
@@ -36,27 +41,8 @@ pip install nba_api
 
 - [Package Structure](https://github.com/swar/nba_api/tree/master/docs/package_structure.md)
 
-- [Endpoint Analysis Format](https://github.com/swar/nba_api/tree/master/docs/endpoint_analysis_format.md)
-
-- [Scripts](https://github.com/swar/nba_api/tree/master/docs/scripts.md)
-
-- NBA API
-    - Library
-        - Debug 
-            - [debug.py](https://github.com/swar/nba_api/tree/master/docs/nba_api/debug.md)
-        - [http.py](https://github.com/swar/nba_api/tree/master/docs/nba_api/library/http.md)
-    - Tools
-        - [Endpoint Analysis](https://github.com/swar/nba_api/tree/master/docs/nba_api/tools/stats/endpoint_analysis/analysis.md)
-        - [Endpoint Documentation Generator](https://github.com/swar/nba_api/tree/master/docs/nba_api/tools/stats/endpoint_documentation_generator/generator.md)
-        - [Endpoint Py File Generator](https://github.com/swar/nba_api/tree/master/docs/nba_api/tools/stats/endpoint_py_file_generator/generator.md)
-        - [Parameter Documentation Generator](https://github.com/swar/nba_api/tree/master/docs/nba_api/tools/stats/parameter_documentation_generator/generator.md)
-    - Stats [`stats.nba.com`](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/endpoints)
-        - [Examples](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/examples.md)
-        - Library
-            - [data.py](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/library/data.md)
-            - [http.py](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/library/http.md)
-            - [parameters.py](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/library/parameters.md)
-        - Static
-            - [players.py](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/static/players.md)
-            - [teams.py](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/static/teams.md)
-        - [Endpoints](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/endpoints_data_structure.md)
+- Stats [`stats.nba.com`](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/endpoints)
+    - [Endpoints Documentation](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/endpoints)
+    - Static
+        - [players.py](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/static/players.md)
+        - [teams.py](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/static/teams.md)

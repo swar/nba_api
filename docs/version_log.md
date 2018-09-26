@@ -1,3 +1,7 @@
+# `v1.0.4`
+#### 2018-09-25
+* Updating description on PyPi 
+
 # `v1.0.3`
 #### 2018-09-25
 * Fixed a bug in `find_team_name_by_id()` in static/teams. 
