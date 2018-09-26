@@ -27,36 +27,36 @@ pip install nba_api
 
 
 ## Usage Examples
-- [`stats.nba.com`](docs/nba_api/stats/examples.md)
+- [`stats.nba.com`](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/examples.md)
 
 
 ## Documentation
 
-- [Table of Contents](table_of_contents.md)
+- [Table of Contents](https://github.com/swar/nba_api/tree/master/docs/table_of_contents.md)
 
-- [Package Structure](package_structure.md)
+- [Package Structure](https://github.com/swar/nba_api/tree/master/docs/package_structure.md)
 
-- [Endpoint Analysis Format](endpoint_analysis_format.md)
+- [Endpoint Analysis Format](https://github.com/swar/nba_api/tree/master/docs/endpoint_analysis_format.md)
 
-- [Scripts](scripts.md)
+- [Scripts](https://github.com/swar/nba_api/tree/master/docs/scripts.md)
 
 - NBA API
     - Library
         - Debug 
-            - [debug.py](nba_api/debug.md)
-        - [http.py](nba_api/library/http.md)
+            - [debug.py](https://github.com/swar/nba_api/tree/master/docs/nba_api/debug.md)
+        - [http.py](https://github.com/swar/nba_api/tree/master/docs/nba_api/library/http.md)
     - Tools
-        - [Endpoint Analysis](nba_api/tools/stats/endpoint_analysis/analysis.md)
-        - [Endpoint Documentation Generator](nba_api/tools/stats/endpoint_documentation_generator/generator.md)
-        - [Endpoint Py File Generator](nba_api/tools/stats/endpoint_py_file_generator/generator.md)
-        - [Parameter Documentation Generator](nba_api/tools/stats/parameter_documentation_generator/generator.md)
-    - Stats [`stats.nba.com`](nba_api/stats/endpoints)
-        - [Examples](nba_api/stats/examples.md)
+        - [Endpoint Analysis](https://github.com/swar/nba_api/tree/master/docs/nba_api/tools/stats/endpoint_analysis/analysis.md)
+        - [Endpoint Documentation Generator](https://github.com/swar/nba_api/tree/master/docs/nba_api/tools/stats/endpoint_documentation_generator/generator.md)
+        - [Endpoint Py File Generator](https://github.com/swar/nba_api/tree/master/docs/nba_api/tools/stats/endpoint_py_file_generator/generator.md)
+        - [Parameter Documentation Generator](https://github.com/swar/nba_api/tree/master/docs/nba_api/tools/stats/parameter_documentation_generator/generator.md)
+    - Stats [`stats.nba.com`](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/endpoints)
+        - [Examples](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/examples.md)
         - Library
-            - [data.py](nba_api/stats/library/data.md)
-            - [http.py](nba_api/stats/library/http.md)
-            - [parameters.py](nba_api/stats/library/parameters.md)
+            - [data.py](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/library/data.md)
+            - [http.py](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/library/http.md)
+            - [parameters.py](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/library/parameters.md)
         - Static
-            - [players.py](nba_api/stats/static/players.md)
-            - [teams.py](nba_api/stats/static/teams.md)
-        - [Endpoints](nba_api/stats/endpoints_data_structure.md)
+            - [players.py](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/static/players.md)
+            - [teams.py](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/static/teams.md)
+        - [Endpoints](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/endpoints_data_structure.md)
