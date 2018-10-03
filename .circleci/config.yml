@@ -1,0 +1,42 @@
+version: 2.0
+
+flake8-steps: &steps
+  - checkout
+  #- run: sudo pip install -r requirements.txt
+  - run: pip install --user flake8  # pytest
+  - run: python -m flake8 --version ; pip --version
+  # stop the build if there are Python syntax errors or undefined names
+  - run: python -m flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics
+  # exit-zero treats all errors as warnings.  The GitHub editor is 127 chars wide      
+  - run: python -m flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+  #- run: pytest
+
+jobs:
+  Python34:
+    docker:
+      - image: circleci/python:3.4
+    steps: *steps
+
+  Python35:
+    docker:
+      - image: circleci/python:3.5
+    steps: *steps
+
+  Python36:
+    docker:
+      - image: circleci/python:3.6
+    steps: *steps
+
+  Python37:
+    docker:
+      - image: circleci/python:3.7
+    steps: *steps
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - Python34
+      - Python35
+      - Python36
+      - Python37
