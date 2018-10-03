@@ -12,19 +12,31 @@ flake8-steps: &steps
   #- run: pytest
 
 jobs:
-  Python2:
+  Python34:
     docker:
-      - image: circleci/python:2.7.15
+      - image: circleci/python:3.4
     steps: *steps
 
-  Python3:
+  Python35:
     docker:
-      - image: circleci/python:3.7.0
+      - image: circleci/python:3.5
+    steps: *steps
+
+  Python36:
+    docker:
+      - image: circleci/python:3.6
+    steps: *steps
+
+  Python37:
+    docker:
+      - image: circleci/python:3.7
     steps: *steps
 
 workflows:
   version: 2
   build:
     jobs:
-      - Python2
-      - Python3
+      - Python34
+      - Python35
+      - Python36
+      - Python37
