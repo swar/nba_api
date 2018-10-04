@@ -6,7 +6,7 @@
 
 `nba_api` is an API Client for `www.nba.com`. This package is meant to make the API Endpoints more accessible and to provide extensive documentation.
 
-The APIs on `www.nba.com` are largely undocumented and changes frequently.
+The APIs on `www.nba.com` are largely undocumented and change frequently.
 
 Please feel free to contribute and have an open discussion regarding improvements and additional APIs to be mapped.
 
