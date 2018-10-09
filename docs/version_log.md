@@ -6,6 +6,11 @@
 * Adding _LeagueDashPtStats_ endpoint
 * Adding PtMeasureType to parameters
 * Updating `missing_parameter_regex` for `Season Year` bug.
+* Switching default values in `parameters.py`
+  * `LastNGames` from `10` -> `0`
+  * `Period` from `1` -> `0`
+  * `StartPeriod` from `1` -> `0`
+  * `EndPeriod` from `1` -> `0`
 
 # `v1.0.4`
 #### 2018-09-25
