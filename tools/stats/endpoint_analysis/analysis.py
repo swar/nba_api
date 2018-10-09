@@ -214,7 +214,7 @@ def analyze_endpoint(endpoint, pause=1):
 
     # No need to continue if Endpoint is deprecated.
     if status == 'deprecated':
-        return {'status': status, 'endpoint': endpoint, 'last_validated': str(datetime.now().date())}
+        return {'status': status, 'endpoint': endpoint, 'last_validated_date': str(datetime.now().date())}
 
     # Testing endpoint with the minimal amount of parameters required.
     status_test, all_parameters, data_sets, all_params_errors = \
@@ -247,7 +247,7 @@ def analyze_endpoint(endpoint, pause=1):
         'nullable_parameters': nullable_parameters,
         'parameter_patterns': parameter_patterns,
         'data_sets': data_sets,
-        'last_validated': str(datetime.now().date()),
+        'last_validated_date': str(datetime.now().date()),
     }
 
     return endpoint_analysis
