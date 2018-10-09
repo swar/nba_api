@@ -4,7 +4,7 @@
 >[https://stats.nba.com/stats/playerdashptpass](https://stats.nba.com/stats/playerdashptpass)
 
 ##### Valid URL
->[https://stats.nba.com/stats/playerdashptpass?DateFrom=&DateTo=&LastNGames=10&LeagueID=00&Location=&Month=0&OpponentTeamID=0&Outcome=&PerMode=Totals&PlayerID=2544&Season=2017-18&SeasonSegment=&SeasonType=Regular+Season&TeamID=1610612739&VsConference=&VsDivision=](https://stats.nba.com/stats/playerdashptpass?DateFrom=&DateTo=&LastNGames=10&LeagueID=00&Location=&Month=0&OpponentTeamID=0&Outcome=&PerMode=Totals&PlayerID=2544&Season=2017-18&SeasonSegment=&SeasonType=Regular+Season&TeamID=1610612739&VsConference=&VsDivision=)
+>[https://stats.nba.com/stats/playerdashptpass?DateFrom=&DateTo=&LastNGames=0&LeagueID=00&Location=&Month=0&OpponentTeamID=0&Outcome=&PerMode=Totals&PlayerID=2544&Season=2017-18&SeasonSegment=&SeasonType=Regular+Season&TeamID=1610612739&VsConference=&VsDivision=](https://stats.nba.com/stats/playerdashptpass?DateFrom=&DateTo=&LastNGames=0&LeagueID=00&Location=&Month=0&OpponentTeamID=0&Outcome=&PerMode=Totals&PlayerID=2544&Season=2017-18&SeasonSegment=&SeasonType=Regular+Season&TeamID=1610612739&VsConference=&VsDivision=)
 
 ## Parameters
 Parameter Name | Pattern | Required | Nullable

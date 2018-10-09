@@ -269,7 +269,7 @@ class LastNGames:
     def games(self, i):
         return str(int(i))
 
-    default = '10'
+    default = '0'
 
 
 class LastNGamesNullable(_NotRequired, LastNGames):
@@ -381,7 +381,7 @@ class Period:
     def overtime(self, i):
         return str(4 + int(i))
 
-    default = first
+    default = all
 
 
 class PeriodNullable(_NotRequired, Period):

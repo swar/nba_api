@@ -529,7 +529,7 @@ parameter_variations = {
     },
     'StartPeriod': {
         'default_py_value': 'StartPeriod.default',
-        'parameter_value': StartPeriod.default,
+        'parameter_value': '1',
         'parameter_error_value': 'a',
     },
     'StartPeriodNullable': {
@@ -539,7 +539,7 @@ parameter_variations = {
     },
     'EndPeriod': {
         'default_py_value': 'EndPeriod.default',
-        'parameter_value': EndPeriod.default,
+        'parameter_value': '1',
         'parameter_error_value': 'a',
     },
     'EndPeriodNullable': {

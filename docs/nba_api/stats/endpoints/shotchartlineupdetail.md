@@ -4,7 +4,7 @@
 >[https://stats.nba.com/stats/shotchartlineupdetail](https://stats.nba.com/stats/shotchartlineupdetail)
 
 ##### Valid URL
->[https://stats.nba.com/stats/shotchartlineupdetail?ContextFilter=&ContextMeasure=PTS&DateFrom=&DateTo=&GROUP_ID=0&GameID=&GameSegment=&LastNGames=&LeagueID=00&Location=&Month=&OpponentTeamID=&Outcome=&Period=1&Season=2017-18&SeasonSegment=&SeasonType=Regular+Season&TeamID=&VsConference=&VsDivision=](https://stats.nba.com/stats/shotchartlineupdetail?ContextFilter=&ContextMeasure=PTS&DateFrom=&DateTo=&GROUP_ID=0&GameID=&GameSegment=&LastNGames=&LeagueID=00&Location=&Month=&OpponentTeamID=&Outcome=&Period=1&Season=2017-18&SeasonSegment=&SeasonType=Regular+Season&TeamID=&VsConference=&VsDivision=)
+>[https://stats.nba.com/stats/shotchartlineupdetail?ContextFilter=&ContextMeasure=PTS&DateFrom=&DateTo=&GROUP_ID=0&GameID=&GameSegment=&LastNGames=&LeagueID=00&Location=&Month=&OpponentTeamID=&Outcome=&Period=0&Season=2017-18&SeasonSegment=&SeasonType=Regular+Season&TeamID=&VsConference=&VsDivision=](https://stats.nba.com/stats/shotchartlineupdetail?ContextFilter=&ContextMeasure=PTS&DateFrom=&DateTo=&GROUP_ID=0&GameID=&GameSegment=&LastNGames=&LeagueID=00&Location=&Month=&OpponentTeamID=&Outcome=&Period=0&Season=2017-18&SeasonSegment=&SeasonType=Regular+Season&TeamID=&VsConference=&VsDivision=)
 
 ## Parameters
 Parameter Name | Pattern | Required | Nullable
