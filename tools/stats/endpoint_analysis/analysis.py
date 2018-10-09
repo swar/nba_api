@@ -1,10 +1,11 @@
 import re
 import json
 import time
+from datetime import datetime
+
 from nba_api.stats.library.http import NBAStatsHTTP
 
 from tools.library.file_handler import load_file, save_file, get_file_path
-
 from tools.stats.library.mapping import endpoint_list, parameter_variations, parameter_map
 
 missing_parameter_regex = "\s*?(?:The value '[^']+' is not valid for |The )?([A-z]+\s?[A-z0-9]*?)(?:property is required\.?| is required\.?(?:, pass 0 for default)?|\.)$"
@@ -213,7 +214,7 @@ def analyze_endpoint(endpoint, pause=1):
 
     # No need to continue if Endpoint is deprecated.
     if status == 'deprecated':
-        return {'status': status, 'endpoint': endpoint}
+        return {'status': status, 'endpoint': endpoint, 'last_validated': str(datetime.now().date())}
 
     # Testing endpoint with the minimal amount of parameters required.
     status_test, all_parameters, data_sets, all_params_errors = \
@@ -246,6 +247,7 @@ def analyze_endpoint(endpoint, pause=1):
         'nullable_parameters': nullable_parameters,
         'parameter_patterns': parameter_patterns,
         'data_sets': data_sets,
+        'last_validated': str(datetime.now().date()),
     }
 
     return endpoint_analysis
