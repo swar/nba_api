@@ -96,6 +96,9 @@ if not test:
 test = leaguedashptdefend.LeagueDashPtDefend().nba_response.valid_json()
 if not test:
     raise Exception('fail', 'leaguedashptdefend')
+test = leaguedashptstats.LeagueDashPtStats().nba_response.valid_json()
+if not test:
+    raise Exception('fail', 'leaguedashptstats')
 test = leaguedashptteamdefend.LeagueDashPtTeamDefend().nba_response.valid_json()
 if not test:
     raise Exception('fail', 'leaguedashptteamdefend')

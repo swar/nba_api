@@ -5,7 +5,7 @@ __all__ = ['boxscoreadvancedv2', 'boxscorefourfactorsv2', 'boxscoremiscv2', 'box
            'draftcombinespotshooting', 'draftcombinestats', 'drafthistory', 'franchisehistory', 'homepageleaders',
            'homepagev2', 'infographicfanduelplayer', 'leaderstiles', 'leaguedashlineups', 'leaguedashplayerbiostats',
            'leaguedashplayerclutch', 'leaguedashplayerptshot', 'leaguedashplayershotlocations', 'leaguedashplayerstats',
-           'leaguedashptdefend', 'leaguedashptteamdefend', 'leaguedashteamclutch', 'leaguedashteamptshot',
+           'leaguedashptdefend', 'leaguedashptstats', 'leaguedashptteamdefend', 'leaguedashteamclutch', 'leaguedashteamptshot',
            'leaguedashteamshotlocations', 'leaguedashteamstats', 'leaguegamefinder', 'leaguegamelog', 'leagueleaders',
            'leaguestandings', 'playbyplay', 'playbyplayv2', 'playerawards', 'playercareerstats', 'playercompare',
            'playerdashptpass', 'playerdashptreb', 'playerdashptshotdefend', 'playerdashptshots',
