@@ -74,6 +74,7 @@ _**SeasonYear**_ | `^(\d{4}-\d{2})\|(All Time)$` | `Y` |  |
         ]
     },
     "endpoint": "DraftCombineStats",
+    "last_validated_date": "2018-10-08",
     "nullable_parameters": [],
     "parameter_patterns": {
         "LeagueID": "^(00)|(10)|(20)$",
@@ -91,4 +92,4 @@ _**SeasonYear**_ | `^(\d{4}-\d{2})\|(All Time)$` | `Y` |  |
 }
 ```
 
-Last validated 2018-09-16
+Last validated 2018-10-08

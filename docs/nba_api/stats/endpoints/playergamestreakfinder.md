@@ -123,6 +123,7 @@ _**ActiveStreaksOnly**_ |  |  | `Y` |
         ]
     },
     "endpoint": "PlayerGameStreakFinder",
+    "last_validated_date": "2018-10-08",
     "nullable_parameters": [
         "ActiveStreaksOnly",
         "Conference",
@@ -401,4 +402,4 @@ _**ActiveStreaksOnly**_ |  |  | `Y` |
 }
 ```
 
-Last validated 2018-09-16
+Last validated 2018-10-08

@@ -110,6 +110,7 @@ _**SeasonYear**_ |  |  | `Y` |
         ]
     },
     "endpoint": "LeagueStandings",
+    "last_validated_date": "2018-10-08",
     "nullable_parameters": [
         "SeasonYear"
     ],
@@ -134,4 +135,4 @@ _**SeasonYear**_ |  |  | `Y` |
 }
 ```
 
-Last validated 2018-09-16
+Last validated 2018-10-08

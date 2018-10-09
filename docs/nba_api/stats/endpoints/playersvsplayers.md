@@ -4,7 +4,7 @@
 >[https://stats.nba.com/stats/playersvsplayers](https://stats.nba.com/stats/playersvsplayers)
 
 ##### Valid URL
->[https://stats.nba.com/stats/playersvsplayers?Conference=&DateFrom=&DateTo=&Division=&GameSegment=&LastNGames=10&LeagueID=&Location=&MeasureType=Base&Month=0&OpponentTeamID=0&Outcome=&PaceAdjust=N&PerMode=Totals&Period=1&PlayerID1=202681&PlayerID2=203078&PlayerID3=202681&PlayerID4=201567&PlayerID5=203954&PlayerTeamID=1610612739&PlusMinus=N&Rank=N&Season=2017-18&SeasonSegment=&SeasonType=Regular+Season&ShotClockRange=&VsConference=&VsDivision=&VsPlayerID1=201566&VsPlayerID2=201939&VsPlayerID3=201935&VsPlayerID4=201142&VsPlayerID5=203076&VsTeamID=1610612765](https://stats.nba.com/stats/playersvsplayers?Conference=&DateFrom=&DateTo=&Division=&GameSegment=&LastNGames=10&LeagueID=&Location=&MeasureType=Base&Month=0&OpponentTeamID=0&Outcome=&PaceAdjust=N&PerMode=Totals&Period=1&PlayerID1=202681&PlayerID2=203078&PlayerID3=202681&PlayerID4=201567&PlayerID5=203954&PlayerTeamID=1610612739&PlusMinus=N&Rank=N&Season=2017-18&SeasonSegment=&SeasonType=Regular+Season&ShotClockRange=&VsConference=&VsDivision=&VsPlayerID1=201566&VsPlayerID2=201939&VsPlayerID3=201935&VsPlayerID4=201142&VsPlayerID5=203076&VsTeamID=1610612765)
+>[https://stats.nba.com/stats/playersvsplayers?Conference=&DateFrom=&DateTo=&Division=&GameSegment=&LastNGames=10&LeagueID=&Location=&MeasureType=Base&Month=0&OpponentTeamID=0&Outcome=&PaceAdjust=N&PerMode=Totals&Period=1&PlayerID1=202681&PlayerID2=203078&PlayerID3=203507&PlayerID4=201567&PlayerID5=203954&PlayerTeamID=1610612739&PlusMinus=N&Rank=N&Season=2017-18&SeasonSegment=&SeasonType=Regular+Season&ShotClockRange=&VsConference=&VsDivision=&VsPlayerID1=201566&VsPlayerID2=201939&VsPlayerID3=201935&VsPlayerID4=201142&VsPlayerID5=203076&VsTeamID=1610612765](https://stats.nba.com/stats/playersvsplayers?Conference=&DateFrom=&DateTo=&Division=&GameSegment=&LastNGames=10&LeagueID=&Location=&MeasureType=Base&Month=0&OpponentTeamID=0&Outcome=&PaceAdjust=N&PerMode=Totals&Period=1&PlayerID1=202681&PlayerID2=203078&PlayerID3=203507&PlayerID4=201567&PlayerID5=203954&PlayerTeamID=1610612739&PlusMinus=N&Rank=N&Season=2017-18&SeasonSegment=&SeasonType=Regular+Season&ShotClockRange=&VsConference=&VsDivision=&VsPlayerID1=201566&VsPlayerID2=201939&VsPlayerID3=201935&VsPlayerID4=201142&VsPlayerID5=203076&VsTeamID=1610612765)
 
 ## Parameters
 Parameter Name | Pattern | Required | Nullable
@@ -146,6 +146,7 @@ _**Conference**_ | `^((East)\|(West))?$` |  | `Y` |
         ]
     },
     "endpoint": "PlayersVsPlayers",
+    "last_validated_date": "2018-09-16",
     "nullable_parameters": [
         "Conference",
         "DateFrom",
@@ -271,4 +272,4 @@ _**Conference**_ | `^((East)\|(West))?$` |  | `Y` |
 }
 ```
 
-Last validated 2018-09-16
+Last validated 2018-10-08

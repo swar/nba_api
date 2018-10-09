@@ -39,7 +39,7 @@ _**SeasonType**_ | `^(Regular Season)\|(Pre Season)\|(Playoffs)$` | `Y` |  |
 
 #### DefenseHubStat4 `defense_hub_stat4`
 ```text
-['RANK', 'TEAM_ID', 'TEAM_ABBREVIATION', 'TEAM_NAME', 'DEF_RATING']
+['RANK', 'TEAM_ID', 'TEAM_ABBREVIATION', 'TEAM_NAME', 'TM_DEF_RATING']
 ```
 
 #### DefenseHubStat5 `defense_hub_stat5`
@@ -99,7 +99,7 @@ _**SeasonType**_ | `^(Regular Season)\|(Pre Season)\|(Playoffs)$` | `Y` |  |
             "TEAM_ID",
             "TEAM_ABBREVIATION",
             "TEAM_NAME",
-            "DEF_RATING"
+            "TM_DEF_RATING"
         ],
         "DefenseHubStat5": [
             "RANK",
@@ -138,6 +138,7 @@ _**SeasonType**_ | `^(Regular Season)\|(Pre Season)\|(Playoffs)$` | `Y` |  |
         ]
     },
     "endpoint": "DefenseHub",
+    "last_validated_date": "2018-10-08",
     "nullable_parameters": [],
     "parameter_patterns": {
         "GameScope": "^(Season)|(Last 10)|(Yesterday)|(Finals)$",
@@ -167,4 +168,4 @@ _**SeasonType**_ | `^(Regular Season)\|(Pre Season)\|(Playoffs)$` | `Y` |  |
 }
 ```
 
-Last validated 2018-09-16
+Last validated 2018-10-08

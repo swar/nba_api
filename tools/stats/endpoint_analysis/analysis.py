@@ -8,7 +8,8 @@ from nba_api.stats.library.http import NBAStatsHTTP
 from tools.library.file_handler import load_file, save_file, get_file_path
 from tools.stats.library.mapping import endpoint_list, parameter_variations, parameter_map
 
-missing_parameter_regex = "\s*?(?:The value '[^']+' is not valid for |The )?([A-z]+\s?[A-z0-9]*?)(?:property is required\.?| is required\.?(?:, pass 0 for default)?|\.)$"
+missing_parameter_regex = "^\s*?(?:The value '[^']+' is not valid for |The )?([A-z0-9]+( Scope| Category)?)(?: Year)?\s*(?:property is required\.?| is required\.?(?:, pass 0 for default)?|\.)$"
+# Season Year -> Season     This only occurs in LeagueDashPtStats
 
 parameter_pattern_regex = "\s*The field ([A-z]+) must match the regular expression '([^']+)'\.(?:;|$)"
 
@@ -90,7 +91,7 @@ def required_parameters_test(endpoint):
             status = 'invalid'
             required_params[prop] = '0'
             required_params_errors[prop] = 'a'
-    
+
     return status, required_parameters, required_params, required_params_errors
 
 

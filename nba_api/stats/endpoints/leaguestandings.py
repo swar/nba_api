@@ -1,6 +1,6 @@
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
-from nba_api.stats.library.parameters import LeagueID, Season, SeasonType, SeasonYear
+from nba_api.stats.library.parameters import LeagueID, Season, SeasonType, SeasonNullable
 
 
 class LeagueStandings(Endpoint):
@@ -11,14 +11,14 @@ class LeagueStandings(Endpoint):
                  league_id=LeagueID.default,
                  season=Season.default,
                  season_type=SeasonType.default,
-                 season_year=SeasonYear.default):
+                 season_nullable=SeasonNullable.default):
         self.nba_response = NBAStatsHTTP().send_api_request(
             endpoint=self.endpoint,
             parameters={
                 'LeagueID': league_id,
                 'Season': season,
                 'SeasonType': season_type,
-                'SeasonYear': season_year
+                'SeasonYear': season_nullable
             },
         )
         data_sets = self.nba_response.get_data_sets()

@@ -47,6 +47,7 @@ endpoint_list = [
     'LeagueDashPlayerShotLocations',
     'LeagueDashPlayerStats',
     'LeagueDashPtDefend',
+    'LeagueDashPtStats',
     'LeagueDashPtTeamDefend',
     'LeagueDashTeamClutch',
     'LeagueDashTeamPtShot',
@@ -603,7 +604,7 @@ parameter_variations = {
     },
     'PlayerID3': {
         'default_py_value': None,
-        'parameter_value': '202681',  # Kyrie Irving
+        'parameter_value': '203507',  # Giannis Antetokounmpo
         'parameter_error_value': 'a',
     },
     'PlayerID4': {
@@ -790,6 +791,11 @@ parameter_variations = {
         'default_py_value': "''",
         'parameter_value': '',
         'parameter_error_value': 'a',
+    },
+    'PtMeasureType': {
+        'default_py_value': 'PtMeasureType.default',
+        'parameter_value': PtMeasureType.default,
+        'parameter_error_value': 0,
     },
     'RangeType': {
         'default_py_value': 'RangeType.default',
@@ -2483,6 +2489,13 @@ parameter_map = {
 
         }
     },
+    'PtMeasureType': {
+        'nullable': {
+        },
+        'non-nullable': {
+            '^(SpeedDistance)|(Rebounding)|(Possessions)|(CatchShoot)|(PullUpShot)|(Defense)|(Drives)|(Passing)|(ElbowTouch)|(PostTouch)|(PaintTouch)|(Efficiency)$': 'PtMeasureType'
+        }
+    },
     'RangeType': {
         'nullable': {
             None: 'RangeTypeNullable'
@@ -2585,7 +2598,7 @@ parameter_map = {
     },
     'SeasonYear': {
         'nullable': {
-            None: 'SeasonYear',
+            None: 'SeasonNullable',
         },
         'non-nullable': {
             '^\\d{4}-\\d{2}$': 'Season',

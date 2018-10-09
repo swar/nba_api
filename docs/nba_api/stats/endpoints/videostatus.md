@@ -4,7 +4,7 @@
 >[https://stats.nba.com/stats/videostatus](https://stats.nba.com/stats/videostatus)
 
 ##### Valid URL
->[https://stats.nba.com/stats/videostatus?GameDate=2018-09-16&LeagueID=00](https://stats.nba.com/stats/videostatus?GameDate=2018-09-16&LeagueID=00)
+>[https://stats.nba.com/stats/videostatus?GameDate=2018-10-08&LeagueID=00](https://stats.nba.com/stats/videostatus?GameDate=2018-10-08&LeagueID=00)
 
 ## Parameters
 Parameter Name | Pattern | Required | Nullable
@@ -41,6 +41,7 @@ _**LeagueID**_ | `^\d{2}$` | `Y` |  |
         ]
     },
     "endpoint": "VideoStatus",
+    "last_validated_date": "2018-10-08",
     "nullable_parameters": [],
     "parameter_patterns": {
         "GameDate": null,
@@ -58,4 +59,4 @@ _**LeagueID**_ | `^\d{2}$` | `Y` |  |
 }
 ```
 
-Last validated 2018-09-16
+Last validated 2018-10-08

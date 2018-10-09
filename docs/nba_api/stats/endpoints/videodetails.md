@@ -48,6 +48,7 @@ _**AheadBehind**_ |  |  | `Y` |
 {
     "data_sets": {},
     "endpoint": "VideoDetails",
+    "last_validated_date": "2018-10-08",
     "nullable_parameters": [
         "AheadBehind",
         "ClutchTime",
@@ -164,4 +165,4 @@ _**AheadBehind**_ |  |  | `Y` |
 }
 ```
 
-Last validated 2018-09-16
+Last validated 2018-10-08

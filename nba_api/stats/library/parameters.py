@@ -501,6 +501,23 @@ class PointDiffNullable(_NotRequired, PointDiff):
     pass
 
 
+class PtMeasureType:
+    speed_distance = 'SpeedDistance'
+    rebounding = 'Rebounding'
+    possessions = 'Possessions'
+    catch_shoot = 'CatchShoot'
+    pull_up_shot = 'PullUpShot'
+    defense = 'Defense'
+    drives = 'Drives'
+    passing = 'Passing'
+    elbowTouch = 'ElbowTouch'
+    postTouch = 'PostTouch'
+    paintTouch = 'PaintTouch'
+    efficiency = 'Efficiency'
+
+    default = speed_distance
+
+
 class RangeType:
     default = '0'
 

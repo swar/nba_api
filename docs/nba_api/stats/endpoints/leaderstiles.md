@@ -73,6 +73,7 @@ _**Stat**_ | `^(PTS)\|(REB)\|(AST)\|(FG_PCT)\|(FT_PCT)\|(FG3_PCT)\|(STL)\|(BLK)$
         ]
     },
     "endpoint": "LeadersTiles",
+    "last_validated_date": "2018-10-08",
     "nullable_parameters": [],
     "parameter_patterns": {
         "GameScope": "^(Season)|(Last 10)|(Yesterday)|(Finals)$",
@@ -105,4 +106,4 @@ _**Stat**_ | `^(PTS)\|(REB)\|(AST)\|(FG_PCT)\|(FT_PCT)\|(FG3_PCT)\|(STL)\|(BLK)$
 }
 ```
 
-Last validated 2018-09-16
+Last validated 2018-10-08

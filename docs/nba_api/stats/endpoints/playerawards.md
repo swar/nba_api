@@ -40,6 +40,7 @@ _**PlayerID**_ |  | `Y` |  |
         ]
     },
     "endpoint": "PlayerAwards",
+    "last_validated_date": "2018-10-08",
     "nullable_parameters": [],
     "parameter_patterns": {
         "PlayerID": null
@@ -54,4 +55,4 @@ _**PlayerID**_ |  | `Y` |  |
 }
 ```
 
-Last validated 2018-09-16
+Last validated 2018-10-08

@@ -113,6 +113,7 @@ _**Conference**_ | `((East)\|(West))?` |  | `Y` |
         ]
     },
     "endpoint": "LeagueDashTeamClutch",
+    "last_validated_date": "2018-10-08",
     "nullable_parameters": [
         "Conference",
         "DateFrom",
@@ -233,4 +234,4 @@ _**Conference**_ | `((East)\|(West))?` |  | `Y` |
 }
 ```
 
-Last validated 2018-09-16
+Last validated 2018-10-08

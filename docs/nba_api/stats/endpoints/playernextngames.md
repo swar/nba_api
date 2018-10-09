@@ -43,6 +43,7 @@ _**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` |
         ]
     },
     "endpoint": "PlayerNextNGames",
+    "last_validated_date": "2018-10-08",
     "nullable_parameters": [
         "LeagueID"
     ],
@@ -70,4 +71,4 @@ _**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` |
 }
 ```
 
-Last validated 2018-09-16
+Last validated 2018-10-08

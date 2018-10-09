@@ -35,12 +35,12 @@ _**DateFrom**_ |  | `Y` | `Y` |
 ## Data Sets
 #### OnOffCourt `on_off_court`
 ```text
-['GROUP_SET', 'PLAYER_ID', 'PLAYER_NAME', 'VS_PLAYER_ID', 'VS_PLAYER_NAME', 'COURT_STATUS', 'GP', 'W', 'L', 'W_PCT', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'TOV', 'STL', 'BLK', 'BLKA', 'PF', 'PFD', 'PTS', 'PLUS_MINUS', 'CFID', 'CFPARAMS']
+['GROUP_SET', 'PLAYER_ID', 'PLAYER_NAME', 'VS_PLAYER_ID', 'VS_PLAYER_NAME', 'COURT_STATUS', 'GP', 'W', 'L', 'W_PCT', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'TOV', 'STL', 'BLK', 'BLKA', 'PF', 'PFD', 'PTS', 'PLUS_MINUS', 'NBA_FANTASY_PTS', 'CFID', 'CFPARAMS']
 ```
 
 #### Overall `overall`
 ```text
-['GROUP_SET', 'GROUP_VALUE', 'PLAYER_ID', 'PLAYER_NAME', 'GP', 'W', 'L', 'W_PCT', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'TOV', 'STL', 'BLK', 'BLKA', 'PF', 'PFD', 'PTS', 'PLUS_MINUS', 'CFID', 'CFPARAMS']
+['GROUP_SET', 'GROUP_VALUE', 'PLAYER_ID', 'PLAYER_NAME', 'GP', 'W', 'L', 'W_PCT', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'TOV', 'STL', 'BLK', 'BLKA', 'PF', 'PFD', 'PTS', 'PLUS_MINUS', 'NBA_FANTASY_PTS', 'CFID', 'CFPARAMS']
 ```
 
 #### PlayerInfo `player_info`
@@ -121,6 +121,7 @@ _**DateFrom**_ |  | `Y` | `Y` |
             "PFD",
             "PTS",
             "PLUS_MINUS",
+            "NBA_FANTASY_PTS",
             "CFID",
             "CFPARAMS"
         ],
@@ -155,6 +156,7 @@ _**DateFrom**_ |  | `Y` | `Y` |
             "PFD",
             "PTS",
             "PLUS_MINUS",
+            "NBA_FANTASY_PTS",
             "CFID",
             "CFPARAMS"
         ],
@@ -262,6 +264,7 @@ _**DateFrom**_ |  | `Y` | `Y` |
         ]
     },
     "endpoint": "PlayerVsPlayer",
+    "last_validated_date": "2018-10-08",
     "nullable_parameters": [
         "DateFrom",
         "DateTo",
@@ -348,4 +351,4 @@ _**DateFrom**_ |  | `Y` | `Y` |
 }
 ```
 
-Last validated 2018-09-16
+Last validated 2018-10-08

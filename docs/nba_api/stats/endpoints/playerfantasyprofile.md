@@ -22,27 +22,27 @@ _**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` |
 ## Data Sets
 #### DaysRestModified `days_rest_modified`
 ```text
-['GROUP_SET', 'GROUP_VALUE', 'SEASON_YEAR', 'GP', 'W', 'L', 'W_PCT', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'TOV', 'STL', 'BLK', 'BLKA', 'PF', 'PFD', 'PTS', 'PLUS_MINUS', 'DD2', 'TD3', 'FAN_DUEL_PTS']
+['GROUP_SET', 'GROUP_VALUE', 'SEASON_YEAR', 'GP', 'W', 'L', 'W_PCT', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'TOV', 'STL', 'BLK', 'BLKA', 'PF', 'PFD', 'PTS', 'PLUS_MINUS', 'DD2', 'TD3', 'FAN_DUEL_PTS', 'NBA_FANTASY_PTS']
 ```
 
 #### LastNGames `last_n_games`
 ```text
-['GROUP_SET', 'GROUP_VALUE', 'GP', 'W', 'L', 'W_PCT', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'TOV', 'STL', 'BLK', 'BLKA', 'PF', 'PFD', 'PTS', 'PLUS_MINUS', 'DD2', 'TD3', 'FAN_DUEL_PTS']
+['GROUP_SET', 'GROUP_VALUE', 'GP', 'W', 'L', 'W_PCT', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'TOV', 'STL', 'BLK', 'BLKA', 'PF', 'PFD', 'PTS', 'PLUS_MINUS', 'DD2', 'TD3', 'FAN_DUEL_PTS', 'NBA_FANTASY_PTS']
 ```
 
 #### Location `location`
 ```text
-['GROUP_SET', 'GROUP_VALUE', 'GP', 'W', 'L', 'W_PCT', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'TOV', 'STL', 'BLK', 'BLKA', 'PF', 'PFD', 'PTS', 'PLUS_MINUS', 'DD2', 'TD3', 'FAN_DUEL_PTS']
+['GROUP_SET', 'GROUP_VALUE', 'GP', 'W', 'L', 'W_PCT', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'TOV', 'STL', 'BLK', 'BLKA', 'PF', 'PFD', 'PTS', 'PLUS_MINUS', 'DD2', 'TD3', 'FAN_DUEL_PTS', 'NBA_FANTASY_PTS']
 ```
 
 #### Opponent `opponent`
 ```text
-['GROUP_SET', 'GROUP_VALUE', 'GP', 'W', 'L', 'W_PCT', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'TOV', 'STL', 'BLK', 'BLKA', 'PF', 'PFD', 'PTS', 'PLUS_MINUS', 'DD2', 'TD3', 'FAN_DUEL_PTS']
+['GROUP_SET', 'GROUP_VALUE', 'GP', 'W', 'L', 'W_PCT', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'TOV', 'STL', 'BLK', 'BLKA', 'PF', 'PFD', 'PTS', 'PLUS_MINUS', 'DD2', 'TD3', 'FAN_DUEL_PTS', 'NBA_FANTASY_PTS']
 ```
 
 #### Overall `overall`
 ```text
-['GROUP_SET', 'GROUP_VALUE', 'GP', 'W', 'L', 'W_PCT', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'TOV', 'STL', 'BLK', 'BLKA', 'PF', 'PFD', 'PTS', 'PLUS_MINUS', 'DD2', 'TD3', 'FAN_DUEL_PTS']
+['GROUP_SET', 'GROUP_VALUE', 'GP', 'W', 'L', 'W_PCT', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'TOV', 'STL', 'BLK', 'BLKA', 'PF', 'PFD', 'PTS', 'PLUS_MINUS', 'DD2', 'TD3', 'FAN_DUEL_PTS', 'NBA_FANTASY_PTS']
 ```
 
 
@@ -82,7 +82,8 @@ _**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` |
             "PLUS_MINUS",
             "DD2",
             "TD3",
-            "FAN_DUEL_PTS"
+            "FAN_DUEL_PTS",
+            "NBA_FANTASY_PTS"
         ],
         "LastNGames": [
             "GROUP_SET",
@@ -115,7 +116,8 @@ _**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` |
             "PLUS_MINUS",
             "DD2",
             "TD3",
-            "FAN_DUEL_PTS"
+            "FAN_DUEL_PTS",
+            "NBA_FANTASY_PTS"
         ],
         "Location": [
             "GROUP_SET",
@@ -148,7 +150,8 @@ _**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` |
             "PLUS_MINUS",
             "DD2",
             "TD3",
-            "FAN_DUEL_PTS"
+            "FAN_DUEL_PTS",
+            "NBA_FANTASY_PTS"
         ],
         "Opponent": [
             "GROUP_SET",
@@ -181,7 +184,8 @@ _**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` |
             "PLUS_MINUS",
             "DD2",
             "TD3",
-            "FAN_DUEL_PTS"
+            "FAN_DUEL_PTS",
+            "NBA_FANTASY_PTS"
         ],
         "Overall": [
             "GROUP_SET",
@@ -214,10 +218,12 @@ _**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` |
             "PLUS_MINUS",
             "DD2",
             "TD3",
-            "FAN_DUEL_PTS"
+            "FAN_DUEL_PTS",
+            "NBA_FANTASY_PTS"
         ]
     },
     "endpoint": "PlayerFantasyProfile",
+    "last_validated_date": "2018-10-08",
     "nullable_parameters": [
         "LeagueID"
     ],
@@ -257,4 +263,4 @@ _**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` |
 }
 ```
 
-Last validated 2018-09-16
+Last validated 2018-10-08

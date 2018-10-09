@@ -58,6 +58,7 @@ _**DateFrom**_ |  |  | `Y` |
         ]
     },
     "endpoint": "TeamGameLog",
+    "last_validated_date": "2018-10-08",
     "nullable_parameters": [
         "DateFrom",
         "DateTo",
@@ -88,4 +89,4 @@ _**DateFrom**_ |  |  | `Y` |
 }
 ```
 
-Last validated 2018-09-16
+Last validated 2018-10-08

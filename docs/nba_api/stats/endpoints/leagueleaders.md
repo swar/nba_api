@@ -59,6 +59,7 @@ _**ActiveFlag**_ |  |  | `Y` |
         ]
     },
     "endpoint": "LeagueLeaders",
+    "last_validated_date": "2018-10-08",
     "nullable_parameters": [
         "ActiveFlag"
     ],
@@ -92,4 +93,4 @@ _**ActiveFlag**_ |  |  | `Y` |
 }
 ```
 
-Last validated 2018-09-16
+Last validated 2018-10-08

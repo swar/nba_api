@@ -111,6 +111,7 @@ _**TeamID**_ |  | `Y` |  |
         ]
     },
     "endpoint": "TeamDetails",
+    "last_validated_date": "2018-10-08",
     "nullable_parameters": [],
     "parameter_patterns": {
         "TeamID": null
@@ -125,4 +126,4 @@ _**TeamID**_ |  | `Y` |  |
 }
 ```
 
-Last validated 2018-09-16
+Last validated 2018-10-08

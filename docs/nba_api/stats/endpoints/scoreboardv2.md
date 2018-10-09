@@ -4,7 +4,7 @@
 >[https://stats.nba.com/stats/scoreboardv2](https://stats.nba.com/stats/scoreboardv2)
 
 ##### Valid URL
->[https://stats.nba.com/stats/scoreboardv2?DayOffset=0&GameDate=2018-09-16&LeagueID=00](https://stats.nba.com/stats/scoreboardv2?DayOffset=0&GameDate=2018-09-16&LeagueID=00)
+>[https://stats.nba.com/stats/scoreboardv2?DayOffset=0&GameDate=2018-10-08&LeagueID=00](https://stats.nba.com/stats/scoreboardv2?DayOffset=0&GameDate=2018-10-08&LeagueID=00)
 
 ## Parameters
 Parameter Name | Pattern | Required | Nullable
@@ -198,6 +198,7 @@ _**LeagueID**_ | `^\d{2}$` | `Y` |  |
         "WinProbability": []
     },
     "endpoint": "ScoreboardV2",
+    "last_validated_date": "2018-10-08",
     "nullable_parameters": [],
     "parameter_patterns": {
         "DayOffset": "^-{0,1}\\d+$",
@@ -218,4 +219,4 @@ _**LeagueID**_ | `^\d{2}$` | `Y` |  |
 }
 ```
 
-Last validated 2018-09-16
+Last validated 2018-10-08

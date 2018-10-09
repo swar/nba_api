@@ -121,6 +121,7 @@ _**StatType**_ | `^(Traditional)\|(Advanced)\|(Tracking)$` | `Y` |  |
         ]
     },
     "endpoint": "HomePageV2",
+    "last_validated_date": "2018-10-08",
     "nullable_parameters": [],
     "parameter_patterns": {
         "GameScope": "^(Season)|(Last 10)|(Yesterday)|(Finals)$",
@@ -153,4 +154,4 @@ _**StatType**_ | `^(Traditional)\|(Advanced)\|(Tracking)$` | `Y` |  |
 }
 ```
 
-Last validated 2018-09-16
+Last validated 2018-10-08

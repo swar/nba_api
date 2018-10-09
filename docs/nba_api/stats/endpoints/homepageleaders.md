@@ -71,6 +71,7 @@ _**StatCategory**_ | `^(Points)\|(Rebounds)\|(Assists)\|(Defense)\|(Clutch)\|(Pl
         ]
     },
     "endpoint": "HomePageLeaders",
+    "last_validated_date": "2018-10-08",
     "nullable_parameters": [],
     "parameter_patterns": {
         "GameScope": "^(Season)|(Last 10)|(Yesterday)|(Finals)$",
@@ -103,4 +104,4 @@ _**StatCategory**_ | `^(Points)\|(Rebounds)\|(Assists)\|(Defense)\|(Clutch)\|(Pl
 }
 ```
 
-Last validated 2018-09-16
+Last validated 2018-10-08

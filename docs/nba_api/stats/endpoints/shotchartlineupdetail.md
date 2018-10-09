@@ -85,6 +85,7 @@ _**ContextFilter**_ |  | `Y` | `Y` |
         ]
     },
     "endpoint": "ShotChartLineupDetail",
+    "last_validated_date": "2018-10-08",
     "nullable_parameters": [
         "ContextFilter",
         "DateFrom",
@@ -171,4 +172,4 @@ _**ContextFilter**_ |  | `Y` | `Y` |
 }
 ```
 
-Last validated 2018-09-16
+Last validated 2018-10-08

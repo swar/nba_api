@@ -1,11 +1,13 @@
 {
     "AllPlayers": {
         "endpoint": "AllPlayers",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "AllStarBallotPredictor": {
         "data_sets": {},
         "endpoint": "AllStarBallotPredictor",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EastPlayer1": null,
@@ -47,10 +49,12 @@
     },
     "AssistTrackerStats": {
         "endpoint": "AssistTrackerStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "BoxScoreAdvanced": {
         "endpoint": "BoxScoreAdvanced",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "BoxScoreAdvancedV2": {
@@ -65,8 +69,11 @@
                 "START_POSITION",
                 "COMMENT",
                 "MIN",
+                "E_OFF_RATING",
                 "OFF_RATING",
+                "E_DEF_RATING",
                 "DEF_RATING",
+                "E_NET_RATING",
                 "NET_RATING",
                 "AST_PCT",
                 "AST_TOV",
@@ -78,6 +85,8 @@
                 "EFG_PCT",
                 "TS_PCT",
                 "USG_PCT",
+                "E_USG_PCT",
+                "E_PACE",
                 "PACE",
                 "PIE"
             ],
@@ -88,8 +97,11 @@
                 "TEAM_ABBREVIATION",
                 "TEAM_CITY",
                 "MIN",
+                "E_OFF_RATING",
                 "OFF_RATING",
+                "E_DEF_RATING",
                 "DEF_RATING",
+                "E_NET_RATING",
                 "NET_RATING",
                 "AST_PCT",
                 "AST_TOV",
@@ -97,15 +109,19 @@
                 "OREB_PCT",
                 "DREB_PCT",
                 "REB_PCT",
+                "E_TM_TOV_PCT",
                 "TM_TOV_PCT",
                 "EFG_PCT",
                 "TS_PCT",
                 "USG_PCT",
+                "E_USG_PCT",
+                "E_PACE",
                 "PACE",
                 "PIE"
             ]
         },
         "endpoint": "BoxScoreAdvancedV2",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EndPeriod": null,
@@ -135,6 +151,7 @@
     },
     "BoxScoreFourFactors": {
         "endpoint": "BoxScoreFourFactors",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "BoxScoreFourFactorsV2": {
@@ -176,6 +193,7 @@
             ]
         },
         "endpoint": "BoxScoreFourFactorsV2",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EndPeriod": null,
@@ -205,6 +223,7 @@
     },
     "BoxScoreMisc": {
         "endpoint": "BoxScoreMisc",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "BoxScoreMiscV2": {
@@ -254,6 +273,7 @@
             ]
         },
         "endpoint": "BoxScoreMiscV2",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EndPeriod": null,
@@ -343,6 +363,7 @@
             ]
         },
         "endpoint": "BoxScorePlayerTrackV2",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameID": "^\\d{10}$"
@@ -357,10 +378,12 @@
     },
     "BoxScorePlayerTracking": {
         "endpoint": "BoxScorePlayerTracking",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "BoxScoreScoring": {
         "endpoint": "BoxScoreScoring",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "BoxScoreScoringV2": {
@@ -416,6 +439,7 @@
             ]
         },
         "endpoint": "BoxScoreScoringV2",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EndPeriod": null,
@@ -445,6 +469,7 @@
     },
     "BoxScoreSummary": {
         "endpoint": "BoxScoreSummary",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "BoxScoreSummaryV2": {
@@ -562,6 +587,7 @@
             ]
         },
         "endpoint": "BoxScoreSummaryV2",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameID": "^\\d{10}$"
@@ -576,6 +602,7 @@
     },
     "BoxScoreTraditional": {
         "endpoint": "BoxScoreTraditional",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "BoxScoreTraditionalV2": {
@@ -666,6 +693,7 @@
             ]
         },
         "endpoint": "BoxScoreTraditionalV2",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EndPeriod": null,
@@ -695,6 +723,7 @@
     },
     "BoxScoreUsage": {
         "endpoint": "BoxScoreUsage",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "BoxScoreUsageV2": {
@@ -756,6 +785,7 @@
             ]
         },
         "endpoint": "BoxScoreUsageV2",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EndPeriod": null,
@@ -802,6 +832,7 @@
             ]
         },
         "endpoint": "CommonAllPlayers",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "IsOnlyCurrentSeason": null,
@@ -867,6 +898,7 @@
             ]
         },
         "endpoint": "CommonPlayerInfo",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "LeagueID"
         ],
@@ -894,6 +926,7 @@
             ]
         },
         "endpoint": "CommonPlayoffSeries",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "LeagueID",
             "SeriesID"
@@ -946,6 +979,7 @@
             ]
         },
         "endpoint": "CommonTeamRoster",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "LeagueID"
         ],
@@ -976,6 +1010,7 @@
             ]
         },
         "endpoint": "CommonTeamYears",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "LeagueID": "^\\d{2}$"
@@ -1017,7 +1052,7 @@
                 "TEAM_ID",
                 "TEAM_ABBREVIATION",
                 "TEAM_NAME",
-                "DEF_RATING"
+                "TM_DEF_RATING"
             ],
             "DefenseHubStat5": [
                 "RANK",
@@ -1056,6 +1091,7 @@
             ]
         },
         "endpoint": "DefenseHub",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameScope": "^(Season)|(Last 10)|(Yesterday)|(Finals)$",
@@ -1101,6 +1137,7 @@
             ]
         },
         "endpoint": "DraftCombineDrillResults",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "LeagueID": "^(00)|(10)|(20)$",
@@ -1152,6 +1189,7 @@
             ]
         },
         "endpoint": "DraftCombineNonStationaryShooting",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "LeagueID": "^(00)|(10)|(20)$",
@@ -1191,6 +1229,7 @@
             ]
         },
         "endpoint": "DraftCombinePlayerAnthro",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "LeagueID": "^(00)|(10)|(20)$",
@@ -1208,6 +1247,7 @@
     },
     "DraftCombinePlayerMeasurements": {
         "endpoint": "DraftCombinePlayerMeasurements",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "DraftCombineSpotShooting": {
@@ -1267,6 +1307,7 @@
             ]
         },
         "endpoint": "DraftCombineSpotShooting",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "LeagueID": "^(00)|(10)|(20)$",
@@ -1335,6 +1376,7 @@
             ]
         },
         "endpoint": "DraftCombineStats",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "LeagueID": "^(00)|(10)|(20)$",
@@ -1368,6 +1410,7 @@
             ]
         },
         "endpoint": "DraftHistory",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "College",
             "OverallPick",
@@ -1440,6 +1483,7 @@
             ]
         },
         "endpoint": "FranchiseHistory",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "LeagueID": "^\\d{2}$"
@@ -1454,10 +1498,12 @@
     },
     "GLeaguePredictor": {
         "endpoint": "GLeaguePredictor",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "HomePage": {
         "endpoint": "HomePage",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "HomePageLeaders": {
@@ -1495,6 +1541,7 @@
             ]
         },
         "endpoint": "HomePageLeaders",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameScope": "^(Season)|(Last 10)|(Yesterday)|(Finals)$",
@@ -1585,6 +1632,7 @@
             ]
         },
         "endpoint": "HomePageV2",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameScope": "^(Season)|(Last 10)|(Yesterday)|(Finals)$",
@@ -1654,6 +1702,7 @@
             ]
         },
         "endpoint": "InfographicFanDuelPlayer",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameID": "^\\d{10}$"
@@ -1698,6 +1747,7 @@
             ]
         },
         "endpoint": "LeadersTiles",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameScope": "^(Season)|(Last 10)|(Yesterday)|(Finals)$",
@@ -1791,6 +1841,7 @@
             ]
         },
         "endpoint": "LeagueDashLineups",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "Conference",
             "DateFrom",
@@ -1916,6 +1967,7 @@
             ]
         },
         "endpoint": "LeagueDashPlayerBioStats",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "College",
             "Conference",
@@ -2092,6 +2144,7 @@
             ]
         },
         "endpoint": "LeagueDashPlayerClutch",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "College",
             "Conference",
@@ -2254,6 +2307,7 @@
             ]
         },
         "endpoint": "LeagueDashPlayerPtShot",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "CloseDefDistRange",
             "College",
@@ -2421,6 +2475,7 @@
             ]
         },
         "endpoint": "LeagueDashPlayerShotLocations",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "College",
             "Conference",
@@ -2622,6 +2677,7 @@
             ]
         },
         "endpoint": "LeagueDashPlayerStats",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "College",
             "Conference",
@@ -2769,6 +2825,7 @@
             ]
         },
         "endpoint": "LeagueDashPtDefend",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "College",
             "Conference",
@@ -2872,6 +2929,138 @@
         ],
         "status": "success"
     },
+    "LeagueDashPtStats": {
+        "data_sets": {
+            "LeagueDashPtStats": [
+                "TEAM_ID",
+                "TEAM_ABBREVIATION",
+                "TEAM_NAME",
+                "GP",
+                "W",
+                "L",
+                "MIN",
+                "DIST_FEET",
+                "DIST_MILES",
+                "DIST_MILES_OFF",
+                "DIST_MILES_DEF",
+                "AVG_SPEED",
+                "AVG_SPEED_OFF",
+                "AVG_SPEED_DEF"
+            ]
+        },
+        "endpoint": "LeagueDashPtStats",
+        "last_validated_date": "2018-10-08",
+        "nullable_parameters": [
+            "College",
+            "Conference",
+            "Country",
+            "DateFrom",
+            "DateTo",
+            "Division",
+            "DraftPick",
+            "DraftYear",
+            "GameScope",
+            "Height",
+            "LeagueID",
+            "Location",
+            "Outcome",
+            "PORound",
+            "PlayerExperience",
+            "PlayerPosition",
+            "SeasonSegment",
+            "StarterBench",
+            "TeamID",
+            "VsConference",
+            "VsDivision",
+            "Weight"
+        ],
+        "parameter_patterns": {
+            "College": null,
+            "Conference": "((East)|(West))?",
+            "Country": null,
+            "DateFrom": null,
+            "DateTo": null,
+            "Division": "((Atlantic)|(Central)|(Northwest)|(Pacific)|(Southeast)|(Southwest))?",
+            "DraftPick": null,
+            "DraftYear": null,
+            "GameScope": "((Yesterday)|(Last 10))?",
+            "Height": null,
+            "LastNGames": null,
+            "LeagueID": "(00)|(20)|(10)",
+            "Location": "^((Home)|(Road))?$",
+            "Month": null,
+            "OpponentTeamID": null,
+            "Outcome": "^((W)|(L))?$",
+            "PORound": null,
+            "PerMode": "^(Totals)|(PerGame)$",
+            "PlayerExperience": "((Rookie)|(Sophomore)|(Veteran))?",
+            "PlayerOrTeam": "^(Player)|(Team)$",
+            "PlayerPosition": "((F)|(C)|(G)|(C-F)|(F-C)|(F-G)|(G-F))?",
+            "PtMeasureType": "^(SpeedDistance)|(Rebounding)|(Possessions)|(CatchShoot)|(PullUpShot)|(Defense)|(Drives)|(Passing)|(ElbowTouch)|(PostTouch)|(PaintTouch)|(Efficiency)$",
+            "Season": "^\\d{4}-\\d{2}$",
+            "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
+            "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
+            "StarterBench": "((Starters)|(Bench))?",
+            "TeamID": null,
+            "VsConference": "^((East)|(West))?$",
+            "VsDivision": "^((Atlantic)|(Central)|(Northwest)|(Pacific)|(Southeast)|(Southwest)|(East)|(West))?$",
+            "Weight": null
+        },
+        "parameters": [
+            "College",
+            "Conference",
+            "Country",
+            "DateFrom",
+            "DateTo",
+            "Division",
+            "DraftPick",
+            "DraftYear",
+            "GameScope",
+            "Height",
+            "LastNGames",
+            "LeagueID",
+            "Location",
+            "Month",
+            "OpponentTeamID",
+            "Outcome",
+            "PORound",
+            "PerMode",
+            "PlayerExperience",
+            "PlayerOrTeam",
+            "PlayerPosition",
+            "PtMeasureType",
+            "Season",
+            "SeasonSegment",
+            "SeasonType",
+            "StarterBench",
+            "TeamID",
+            "VsConference",
+            "VsDivision",
+            "Weight"
+        ],
+        "required_parameters": [
+            "DateFrom",
+            "DateTo",
+            "GameScope",
+            "LastNGames",
+            "Location",
+            "Month",
+            "OpponentTeamID",
+            "Outcome",
+            "PerMode",
+            "PlayerExperience",
+            "PlayerOrTeam",
+            "PlayerPosition",
+            "PtMeasureType",
+            "Season",
+            "SeasonSegment",
+            "SeasonType",
+            "StarterBench",
+            "VsConference",
+            "VsDivision"
+        ],
+        "status": "success"
+    },
     "LeagueDashPtTeamDefend": {
         "data_sets": {
             "LeagueDashPtTeamDefend": [
@@ -2889,6 +3078,7 @@
             ]
         },
         "endpoint": "LeagueDashPtTeamDefend",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "Conference",
             "DateFrom",
@@ -3024,6 +3214,7 @@
             ]
         },
         "endpoint": "LeagueDashTeamClutch",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "Conference",
             "DateFrom",
@@ -3166,6 +3357,7 @@
             ]
         },
         "endpoint": "LeagueDashTeamPtShot",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "CloseDefDistRange",
             "Conference",
@@ -3303,6 +3495,7 @@
             ]
         },
         "endpoint": "LeagueDashTeamShotLocations",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "Conference",
             "DateFrom",
@@ -3477,6 +3670,7 @@
             ]
         },
         "endpoint": "LeagueDashTeamStats",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "Conference",
             "DateFrom",
@@ -3616,6 +3810,7 @@
             ]
         },
         "endpoint": "LeagueGameFinder",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "Conference",
             "DateFrom",
@@ -3925,6 +4120,7 @@
             ]
         },
         "endpoint": "LeagueGameLog",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo"
@@ -3994,6 +4190,7 @@
             ]
         },
         "endpoint": "LeagueLeaders",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "ActiveFlag"
         ],
@@ -4112,6 +4309,7 @@
             ]
         },
         "endpoint": "LeagueStandings",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "SeasonYear"
         ],
@@ -4136,6 +4334,7 @@
     },
     "LineupStats": {
         "endpoint": "LineupStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayByPlay": {
@@ -4159,6 +4358,7 @@
             ]
         },
         "endpoint": "PlayByPlay",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EndPeriod": null,
@@ -4179,6 +4379,7 @@
     },
     "PlayByPlayMini": {
         "endpoint": "PlayByPlayMini",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayByPlayV2": {
@@ -4223,6 +4424,7 @@
             ]
         },
         "endpoint": "PlayByPlayV2",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EndPeriod": null,
@@ -4261,6 +4463,7 @@
             ]
         },
         "endpoint": "PlayerAwards",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "PlayerID": null
@@ -4275,6 +4478,7 @@
     },
     "PlayerBioStats": {
         "endpoint": "PlayerBioStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayerCareerStats": {
@@ -4559,6 +4763,7 @@
             ]
         },
         "endpoint": "PlayerCareerStats",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "LeagueID"
         ],
@@ -4580,6 +4785,7 @@
     },
     "PlayerClutchStats": {
         "endpoint": "PlayerClutchStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayerCompare": {
@@ -4638,6 +4844,7 @@
             ]
         },
         "endpoint": "PlayerCompare",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "Conference",
             "DateFrom",
@@ -4733,6 +4940,7 @@
     },
     "PlayerCompareStats": {
         "endpoint": "PlayerCompareStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayerDashPtPass": {
@@ -4785,6 +4993,7 @@
             ]
         },
         "endpoint": "PlayerDashPtPass",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -4947,6 +5156,7 @@
             ]
         },
         "endpoint": "PlayerDashPtReb",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -5020,6 +5230,7 @@
     },
     "PlayerDashPtReboundLogs": {
         "endpoint": "PlayerDashPtReboundLogs",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayerDashPtShotDefend": {
@@ -5038,6 +5249,7 @@
             ]
         },
         "endpoint": "PlayerDashPtShotDefend",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -5111,6 +5323,7 @@
     },
     "PlayerDashPtShotlog": {
         "endpoint": "PlayerDashPtShotlog",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayerDashPtShots": {
@@ -5264,6 +5477,7 @@
             ]
         },
         "endpoint": "PlayerDashPtShots",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -6043,6 +6257,7 @@
             ]
         },
         "endpoint": "PlayerDashboardByClutch",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -6454,6 +6669,7 @@
             ]
         },
         "endpoint": "PlayerDashboardByGameSplits",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -6993,6 +7209,7 @@
             ]
         },
         "endpoint": "PlayerDashboardByGeneralSplits",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -7468,6 +7685,7 @@
             ]
         },
         "endpoint": "PlayerDashboardByLastNGames",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -7815,6 +8033,7 @@
             ]
         },
         "endpoint": "PlayerDashboardByOpponent",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -8165,6 +8384,7 @@
             ]
         },
         "endpoint": "PlayerDashboardByShootingSplits",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -8518,6 +8738,7 @@
             ]
         },
         "endpoint": "PlayerDashboardByTeamPerformance",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -8743,6 +8964,7 @@
             ]
         },
         "endpoint": "PlayerDashboardByYearOverYear",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -8832,6 +9054,7 @@
     },
     "PlayerDefenseStats": {
         "endpoint": "PlayerDefenseStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayerFantasyProfile": {
@@ -8868,7 +9091,8 @@
                 "PLUS_MINUS",
                 "DD2",
                 "TD3",
-                "FAN_DUEL_PTS"
+                "FAN_DUEL_PTS",
+                "NBA_FANTASY_PTS"
             ],
             "LastNGames": [
                 "GROUP_SET",
@@ -8901,7 +9125,8 @@
                 "PLUS_MINUS",
                 "DD2",
                 "TD3",
-                "FAN_DUEL_PTS"
+                "FAN_DUEL_PTS",
+                "NBA_FANTASY_PTS"
             ],
             "Location": [
                 "GROUP_SET",
@@ -8934,7 +9159,8 @@
                 "PLUS_MINUS",
                 "DD2",
                 "TD3",
-                "FAN_DUEL_PTS"
+                "FAN_DUEL_PTS",
+                "NBA_FANTASY_PTS"
             ],
             "Opponent": [
                 "GROUP_SET",
@@ -8967,7 +9193,8 @@
                 "PLUS_MINUS",
                 "DD2",
                 "TD3",
-                "FAN_DUEL_PTS"
+                "FAN_DUEL_PTS",
+                "NBA_FANTASY_PTS"
             ],
             "Overall": [
                 "GROUP_SET",
@@ -9000,10 +9227,12 @@
                 "PLUS_MINUS",
                 "DD2",
                 "TD3",
-                "FAN_DUEL_PTS"
+                "FAN_DUEL_PTS",
+                "NBA_FANTASY_PTS"
             ]
         },
         "endpoint": "PlayerFantasyProfile",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "LeagueID"
         ],
@@ -9079,6 +9308,7 @@
             ]
         },
         "endpoint": "PlayerFantasyProfileBarGraph",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "LeagueID",
             "SeasonType"
@@ -9134,6 +9364,7 @@
             ]
         },
         "endpoint": "PlayerGameLog",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -9164,10 +9395,12 @@
     },
     "PlayerGameLogsStats": {
         "endpoint": "PlayerGameLogsStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayerGameSplitsStats": {
         "endpoint": "PlayerGameSplitsStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayerGameStreakFinder": {
@@ -9185,6 +9418,7 @@
             ]
         },
         "endpoint": "PlayerGameStreakFinder",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "ActiveStreaksOnly",
             "Conference",
@@ -9463,14 +9697,17 @@
     },
     "PlayerGeneralSplitsStats": {
         "endpoint": "PlayerGeneralSplitsStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayerInfo": {
         "endpoint": "PlayerInfo",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayerLastNGamesStats": {
         "endpoint": "PlayerLastNGamesStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayerNextNGames": {
@@ -9492,6 +9729,7 @@
             ]
         },
         "endpoint": "PlayerNextNGames",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "LeagueID"
         ],
@@ -9519,19 +9757,23 @@
     },
     "PlayerOnDetails": {
         "endpoint": "PlayerOnDetails",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayerOpponentStats": {
         "endpoint": "PlayerOpponentStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayerPassesStats": {
         "endpoint": "PlayerPassesStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayerProfile": {
         "data_sets": {},
         "endpoint": "PlayerProfile",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "GraphEndSeason",
             "GraphStartSeason",
@@ -9943,6 +10185,7 @@
             ]
         },
         "endpoint": "PlayerProfileV2",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "LeagueID"
         ],
@@ -9964,18 +10207,22 @@
     },
     "PlayerReboundsStats": {
         "endpoint": "PlayerReboundsStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayerShotChartDetail": {
         "endpoint": "PlayerShotChartDetail",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayerShotsStats": {
         "endpoint": "PlayerShotsStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayerTeamPerformanceStats": {
         "endpoint": "PlayerTeamPerformanceStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayerVsPlayer": {
@@ -10013,6 +10260,7 @@
                 "PFD",
                 "PTS",
                 "PLUS_MINUS",
+                "NBA_FANTASY_PTS",
                 "CFID",
                 "CFPARAMS"
             ],
@@ -10047,6 +10295,7 @@
                 "PFD",
                 "PTS",
                 "PLUS_MINUS",
+                "NBA_FANTASY_PTS",
                 "CFID",
                 "CFPARAMS"
             ],
@@ -10154,6 +10403,7 @@
             ]
         },
         "endpoint": "PlayerVsPlayer",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -10240,42 +10490,52 @@
     },
     "PlayerYearOverYearStats": {
         "endpoint": "PlayerYearOverYearStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayersCareerStats": {
         "endpoint": "PlayersCareerStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayersClutchStats": {
         "endpoint": "PlayersClutchStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayersDefenseStats": {
         "endpoint": "PlayersDefenseStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayersGeneralStats": {
         "endpoint": "PlayersGeneralStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayersHustleLeaders": {
         "endpoint": "PlayersHustleLeaders",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayersHustleStats": {
         "endpoint": "PlayersHustleStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayersShotLocationStats": {
         "endpoint": "PlayersShotLocationStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayersShotStats": {
         "endpoint": "PlayersShotStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayersTrackingStats": {
         "endpoint": "PlayersTrackingStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "PlayersVsPlayers": {
@@ -10360,6 +10620,7 @@
             ]
         },
         "endpoint": "PlayersVsPlayers",
+        "last_validated_date": "2018-09-16",
         "nullable_parameters": [
             "Conference",
             "DateFrom",
@@ -10581,6 +10842,7 @@
             ]
         },
         "endpoint": "PlayoffPicture",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "LeagueID": "^\\d{2}$",
@@ -10598,6 +10860,7 @@
     },
     "PlayoffSeries": {
         "endpoint": "PlayoffSeries",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "Scoreboard": {
@@ -10706,6 +10969,7 @@
             ]
         },
         "endpoint": "Scoreboard",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "DayOffset": "^-{0,1}\\d+$",
@@ -10726,6 +10990,7 @@
     },
     "ScoreboardMini": {
         "endpoint": "ScoreboardMini",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "ScoreboardV2": {
@@ -10859,6 +11124,7 @@
             "WinProbability": []
         },
         "endpoint": "ScoreboardV2",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "DayOffset": "^-{0,1}\\d+$",
@@ -10916,6 +11182,7 @@
             ]
         },
         "endpoint": "ShotChartDetail",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "AheadBehind",
             "ClutchTime",
@@ -11070,6 +11337,7 @@
             ]
         },
         "endpoint": "ShotChartLineupDetail",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "ContextFilter",
             "DateFrom",
@@ -11156,10 +11424,12 @@
     },
     "TeamAndPlayerVsPlayers": {
         "endpoint": "TeamAndPlayerVsPlayers",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamClutchStats": {
         "endpoint": "TeamClutchStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamDashLineups": {
@@ -11282,6 +11552,7 @@
             ]
         },
         "endpoint": "TeamDashLineups",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -11420,6 +11691,7 @@
             ]
         },
         "endpoint": "TeamDashPtPass",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -11579,6 +11851,7 @@
             ]
         },
         "endpoint": "TeamDashPtReb",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -11771,6 +12044,7 @@
             ]
         },
         "endpoint": "TeamDashPtShots",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -12481,6 +12755,7 @@
             ]
         },
         "endpoint": "TeamDashboardByClutch",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -12862,6 +13137,7 @@
             ]
         },
         "endpoint": "TeamDashboardByGameSplits",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -13307,6 +13583,7 @@
             ]
         },
         "endpoint": "TeamDashboardByGeneralSplits",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -13746,6 +14023,7 @@
             ]
         },
         "endpoint": "TeamDashboardByLastNGames",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -14069,6 +14347,7 @@
             ]
         },
         "endpoint": "TeamDashboardByOpponent",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -14399,6 +14678,7 @@
             ]
         },
         "endpoint": "TeamDashboardByShootingSplits",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -14728,6 +15008,7 @@
             ]
         },
         "endpoint": "TeamDashboardByTeamPerformance",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -14935,6 +15216,7 @@
             ]
         },
         "endpoint": "TeamDashboardByYearOverYear",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -15078,6 +15360,7 @@
             ]
         },
         "endpoint": "TeamDetails",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "TeamID": null
@@ -15092,10 +15375,12 @@
     },
     "TeamFranchiseLeaders": {
         "endpoint": "TeamFranchiseLeaders",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamFranchiseLeadersRank": {
         "endpoint": "TeamFranchiseLeadersRank",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamGameLog": {
@@ -15131,6 +15416,7 @@
             ]
         },
         "endpoint": "TeamGameLog",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -15161,6 +15447,7 @@
     },
     "TeamGameSplitsStats": {
         "endpoint": "TeamGameSplitsStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamGameStreakFinder": {
@@ -15179,6 +15466,7 @@
             ]
         },
         "endpoint": "TeamGameStreakFinder",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "ActiveStreaksOnly",
             "ActiveTeamsOnly",
@@ -15754,6 +16042,7 @@
     },
     "TeamGeneralSplitsStats": {
         "endpoint": "TeamGeneralSplitsStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamHistoricalLeaders": {
@@ -15779,6 +16068,7 @@
             ]
         },
         "endpoint": "TeamHistoricalLeaders",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "LeagueID": "^\\d{2}$",
@@ -15799,6 +16089,7 @@
     },
     "TeamInfo": {
         "endpoint": "TeamInfo",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamInfoCommon": {
@@ -15838,6 +16129,7 @@
             ]
         },
         "endpoint": "TeamInfoCommon",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "Season",
             "SeasonType"
@@ -15862,22 +16154,27 @@
     },
     "TeamLastNGamesStats": {
         "endpoint": "TeamLastNGamesStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamLineupStats": {
         "endpoint": "TeamLineupStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamOpponentStats": {
         "endpoint": "TeamOpponentStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamPassesStats": {
         "endpoint": "TeamPassesStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamPerformanceStats": {
         "endpoint": "TeamPerformanceStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamPlayerDashboard": {
@@ -16005,6 +16302,7 @@
             ]
         },
         "endpoint": "TeamPlayerDashboard",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -16277,6 +16575,7 @@
             ]
         },
         "endpoint": "TeamPlayerOnOffDetails",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -16451,6 +16750,7 @@
             ]
         },
         "endpoint": "TeamPlayerOnOffSummary",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -16534,26 +16834,32 @@
     },
     "TeamPlayerStats": {
         "endpoint": "TeamPlayerStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamReboundsStats": {
         "endpoint": "TeamReboundsStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamRoster": {
         "endpoint": "TeamRoster",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamShootingSplitsStats": {
         "endpoint": "TeamShootingSplitsStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamShotChartLineupDetail": {
         "endpoint": "TeamShotChartLineupDetail",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamShotsStats": {
         "endpoint": "TeamShotsStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamVsPlayer": {
@@ -16832,6 +17138,7 @@
             ]
         },
         "endpoint": "TeamVsPlayer",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -16959,6 +17266,7 @@
             ]
         },
         "endpoint": "TeamYearByYearStats",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "LeagueID": "^\\d{2}$",
@@ -16982,47 +17290,58 @@
     },
     "TeamYearOverYearStats": {
         "endpoint": "TeamYearOverYearStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamYears": {
         "endpoint": "TeamYears",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamsClutchStats": {
         "endpoint": "TeamsClutchStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamsDefenseStats": {
         "endpoint": "TeamsDefenseStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamsGeneralStats": {
         "endpoint": "TeamsGeneralStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamsHustleLeaders": {
         "endpoint": "TeamsHustleLeaders",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamsHustleStats": {
         "endpoint": "TeamsHustleStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamsShotLocationStats": {
         "endpoint": "TeamsShotLocationStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamsShotStats": {
         "endpoint": "TeamsShotStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "TeamsYearByYearStats": {
         "endpoint": "TeamsYearByYearStats",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     },
     "VideoDetails": {
         "data_sets": {},
         "endpoint": "VideoDetails",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [
             "AheadBehind",
             "ClutchTime",
@@ -17140,6 +17459,7 @@
     "VideoEvents": {
         "data_sets": {},
         "endpoint": "VideoEvents",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameEventID": null,
@@ -17175,6 +17495,7 @@
             ]
         },
         "endpoint": "VideoStatus",
+        "last_validated_date": "2018-10-08",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameDate": null,
@@ -17192,6 +17513,7 @@
     },
     "WinProbabilityPlayByPlay": {
         "endpoint": "WinProbabilityPlayByPlay",
+        "last_validated_date": "2018-10-08",
         "status": "deprecated"
     }
 }

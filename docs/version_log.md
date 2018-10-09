@@ -2,6 +2,11 @@
 #### TBD
 * Adding `last_validated_date` to analysis json.
 
+`stats.nba.com`
+* Adding _LeagueDashPtStats_ endpoint
+* Adding PtMeasureType to parameters
+* Updating `missing_parameter_regex` for `Season Year` bug.
+
 # `v1.0.4`
 #### 2018-09-25
 * Updating description on PyPi 

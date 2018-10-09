@@ -94,6 +94,7 @@ _**AheadBehind**_ | `^((Ahead or Behind)\|(Ahead or Tied)\|(Behind or Tied))?$` 
         ]
     },
     "endpoint": "ShotChartDetail",
+    "last_validated_date": "2018-10-08",
     "nullable_parameters": [
         "AheadBehind",
         "ClutchTime",
@@ -209,4 +210,4 @@ _**AheadBehind**_ | `^((Ahead or Behind)\|(Ahead or Tied)\|(Behind or Tied))?$` 
 }
 ```
 
-Last validated 2018-09-16
+Last validated 2018-10-08

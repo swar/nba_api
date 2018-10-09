@@ -63,6 +63,7 @@ _**LeagueID**_ | `^\d{2}$` | `Y` |  |
         ]
     },
     "endpoint": "FranchiseHistory",
+    "last_validated_date": "2018-10-08",
     "nullable_parameters": [],
     "parameter_patterns": {
         "LeagueID": "^\\d{2}$"
@@ -77,4 +78,4 @@ _**LeagueID**_ | `^\d{2}$` | `Y` |  |
 }
 ```
 
-Last validated 2018-09-16
+Last validated 2018-10-08

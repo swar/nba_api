@@ -48,6 +48,7 @@ _**StartPeriod**_ |  | `Y` |  |
         ]
     },
     "endpoint": "PlayByPlay",
+    "last_validated_date": "2018-10-08",
     "nullable_parameters": [],
     "parameter_patterns": {
         "EndPeriod": null,
@@ -68,4 +69,4 @@ _**StartPeriod**_ |  | `Y` |  |
 }
 ```
 
-Last validated 2018-09-16
+Last validated 2018-10-08

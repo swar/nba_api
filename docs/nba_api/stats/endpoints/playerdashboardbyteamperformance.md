@@ -323,6 +323,7 @@ _**DateFrom**_ |  | `Y` | `Y` |
         ]
     },
     "endpoint": "PlayerDashboardByTeamPerformance",
+    "last_validated_date": "2018-10-08",
     "nullable_parameters": [
         "DateFrom",
         "DateTo",
@@ -412,4 +413,4 @@ _**DateFrom**_ |  | `Y` | `Y` |
 }
 ```
 
-Last validated 2018-09-16
+Last validated 2018-10-08

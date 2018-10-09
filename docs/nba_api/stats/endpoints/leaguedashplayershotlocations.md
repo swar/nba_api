@@ -107,6 +107,7 @@ _**College**_ |  |  | `Y` |
         ]
     },
     "endpoint": "LeagueDashPlayerShotLocations",
+    "last_validated_date": "2018-10-08",
     "nullable_parameters": [
         "College",
         "Conference",
@@ -239,4 +240,4 @@ _**College**_ |  |  | `Y` |
 }
 ```
 
-Last validated 2018-09-16
+Last validated 2018-10-08
