@@ -35,7 +35,7 @@ class NBAResponse:
         return self._response
 
     def get_dict(self):
-        return json.loads(self._response)
+        return json.loads(self._response) if self._response else {'error': 'Response is None'}
 
     def get_json(self):
         return json.dumps(self.get_dict())
