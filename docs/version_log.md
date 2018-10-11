@@ -1,3 +1,7 @@
+# `v1.0.6`
+#### 2018-10-11
+* Accidentally distributed with DEBUG Mode enabled in `v1.0.5`.
+
 # `v1.0.5`
 #### 2018-10-10
 * Adding `last_validated_date` to analysis json.
