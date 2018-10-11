@@ -1,5 +1,5 @@
 # `v1.0.5`
-#### TBD
+#### 2018-10-10
 * Adding `last_validated_date` to analysis json.
 
 `stats.nba.com`
