@@ -1,7 +1,9 @@
 import os
 import json
 import requests
+import requests_cache
 
+requests_cache.install_cache('nba_api_cache')
 
 try:
     from nba_api.library.debug.debug import DEBUG
