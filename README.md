@@ -38,6 +38,8 @@ A major purpose of this package is to map and analyze as many endpoints on NBA.c
 ## Usage Examples
 - [`stats.nba.com`](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/examples.md)
 
+- [Example Jupyter Notebooks](docs/examples)
+    - Here you can see usage of the package in practical problems, like looking for play-by-play data for a particular game.
 
 ## Documentation
 
@@ -50,6 +52,3 @@ A major purpose of this package is to map and analyze as many endpoints on NBA.c
     - Static
         - [players.py](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/static/players.md)
         - [teams.py](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/static/teams.md)
-
-- [Example Jupyter Notebooks](docs/examples)
-    - Here you can see usage of the package in practical problems, like looking for play-by-play data for a particular game.
