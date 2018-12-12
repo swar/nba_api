@@ -1,4 +1,5 @@
 # PlayerProfileV2
+##### [nba_api/stats/endpoints/playerprofilev2.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/playerprofilev2.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/playerprofilev2](https://stats.nba.com/stats/playerprofilev2)
@@ -7,11 +8,11 @@
 >[https://stats.nba.com/stats/playerprofilev2?LeagueID=&PerMode=Totals&PlayerID=2544](https://stats.nba.com/stats/playerprofilev2?LeagueID=&PerMode=Totals&PlayerID=2544)
 
 ## Parameters
-Parameter Name | Pattern | Required | Nullable
------------- | :-----------: | :---: | :---:
-_**PerMode**_ | `^(Totals)\|(PerGame)\|(Per36)$` | `Y` |  | 
-_**PlayerID**_ |  | `Y` |  | 
-_**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` | 
+API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | ------------ | :-----------: | :---: | :---:
+_**PerMode**_ | [PerMode36](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PerMode) | per_mode36 | `^(Totals)\|(PerGame)\|(Per36)$` | `Y` |  | 
+_**PlayerID**_ | [PlayerID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerID) | player_id |  | `Y` |  | 
+_**LeagueID**_ | [LeagueIDNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable | `(00)\|(20)\|(10)` |  | `Y` | 
 
 ## Data Sets
 #### CareerHighs `career_highs`
@@ -469,7 +470,7 @@ _**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` |
         ]
     },
     "endpoint": "PlayerProfileV2",
-    "last_validated_date": "2018-10-08",
+    "last_validated_date": "2018-12-11",
     "nullable_parameters": [
         "LeagueID"
     ],
@@ -491,4 +492,4 @@ _**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` |
 }
 ```
 
-Last validated 2018-10-08
+Last validated 2018-12-11

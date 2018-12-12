@@ -1,18 +1,19 @@
 # PlayerFantasyProfileBarGraph
+##### [nba_api/stats/endpoints/playerfantasyprofilebargraph.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/playerfantasyprofilebargraph.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/playerfantasyprofilebargraph](https://stats.nba.com/stats/playerfantasyprofilebargraph)
 
 ##### Valid URL
->[https://stats.nba.com/stats/playerfantasyprofilebargraph?LeagueID=&PlayerID=2544&Season=2017-18&SeasonType=](https://stats.nba.com/stats/playerfantasyprofilebargraph?LeagueID=&PlayerID=2544&Season=2017-18&SeasonType=)
+>[https://stats.nba.com/stats/playerfantasyprofilebargraph?LeagueID=&PlayerID=2544&Season=2018-19&SeasonType=](https://stats.nba.com/stats/playerfantasyprofilebargraph?LeagueID=&PlayerID=2544&Season=2018-19&SeasonType=)
 
 ## Parameters
-Parameter Name | Pattern | Required | Nullable
------------- | :-----------: | :---: | :---:
-_**PlayerID**_ |  | `Y` |  | 
-_**Season**_ | `^\d{4}-\d{2}$` | `Y` |  | 
-_**SeasonType**_ | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star)$` |  | `Y` | 
-_**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` | 
+API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | ------------ | :-----------: | :---: | :---:
+_**PlayerID**_ | [PlayerID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerID) | player_id |  | `Y` |  | 
+_**Season**_ | [Season](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season | `^\d{4}-\d{2}$` | `Y` |  | 
+_**SeasonType**_ | [SeasonTypeAllStarNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_all_star_nullable | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star)$` |  | `Y` | 
+_**LeagueID**_ | [LeagueIDNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable | `(00)\|(20)\|(10)` |  | `Y` | 
 
 ## Data Sets
 #### LastFiveGamesAvg `last_five_games_avg`
@@ -66,7 +67,7 @@ _**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` |
         ]
     },
     "endpoint": "PlayerFantasyProfileBarGraph",
-    "last_validated_date": "2018-10-08",
+    "last_validated_date": "2018-12-11",
     "nullable_parameters": [
         "LeagueID",
         "SeasonType"
@@ -91,4 +92,4 @@ _**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` |
 }
 ```
 
-Last validated 2018-10-08
+Last validated 2018-12-11

@@ -1,4 +1,5 @@
 # BoxScoreSummaryV2
+##### [nba_api/stats/endpoints/boxscoresummaryv2.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/boxscoresummaryv2.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/boxscoresummaryv2](https://stats.nba.com/stats/boxscoresummaryv2)
@@ -7,9 +8,9 @@
 >[https://stats.nba.com/stats/boxscoresummaryv2?GameID=0021700807](https://stats.nba.com/stats/boxscoresummaryv2?GameID=0021700807)
 
 ## Parameters
-Parameter Name | Pattern | Required | Nullable
------------- | :-----------: | :---: | :---:
-_**GameID**_ | `^\d{10}$` | `Y` |  | 
+API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | ------------ | :-----------: | :---: | :---:
+_**GameID**_ | [GameID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameID) | game_id | `^\d{10}$` | `Y` |  | 
 
 ## Data Sets
 #### AvailableVideo `available_video`
@@ -175,7 +176,7 @@ _**GameID**_ | `^\d{10}$` | `Y` |  |
         ]
     },
     "endpoint": "BoxScoreSummaryV2",
-    "last_validated_date": "2018-10-08",
+    "last_validated_date": "2018-12-11",
     "nullable_parameters": [],
     "parameter_patterns": {
         "GameID": "^\\d{10}$"
@@ -190,4 +191,4 @@ _**GameID**_ | `^\d{10}$` | `Y` |  |
 }
 ```
 
-Last validated 2018-10-08
+Last validated 2018-12-11

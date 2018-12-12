@@ -1,45 +1,46 @@
 # LeagueDashPlayerBioStats
+##### [nba_api/stats/endpoints/leaguedashplayerbiostats.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/leaguedashplayerbiostats.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/leaguedashplayerbiostats](https://stats.nba.com/stats/leaguedashplayerbiostats)
 
 ##### Valid URL
->[https://stats.nba.com/stats/leaguedashplayerbiostats?College=&Conference=&Country=&DateFrom=&DateTo=&Division=&DraftPick=&DraftYear=&GameScope=&GameSegment=&Height=&LastNGames=&LeagueID=&Location=&Month=&OpponentTeamID=&Outcome=&PORound=&PerMode=Totals&Period=&PlayerExperience=&PlayerPosition=&Season=2017-18&SeasonSegment=&SeasonType=Regular+Season&ShotClockRange=&StarterBench=&TeamID=&VsConference=&VsDivision=&Weight=](https://stats.nba.com/stats/leaguedashplayerbiostats?College=&Conference=&Country=&DateFrom=&DateTo=&Division=&DraftPick=&DraftYear=&GameScope=&GameSegment=&Height=&LastNGames=&LeagueID=&Location=&Month=&OpponentTeamID=&Outcome=&PORound=&PerMode=Totals&Period=&PlayerExperience=&PlayerPosition=&Season=2017-18&SeasonSegment=&SeasonType=Regular+Season&ShotClockRange=&StarterBench=&TeamID=&VsConference=&VsDivision=&Weight=)
+>[https://stats.nba.com/stats/leaguedashplayerbiostats?College=&Conference=&Country=&DateFrom=&DateTo=&Division=&DraftPick=&DraftYear=&GameScope=&GameSegment=&Height=&LastNGames=&LeagueID=&Location=&Month=&OpponentTeamID=&Outcome=&PORound=&PerMode=Totals&Period=&PlayerExperience=&PlayerPosition=&Season=2018-19&SeasonSegment=&SeasonType=Regular+Season&ShotClockRange=&StarterBench=&TeamID=&VsConference=&VsDivision=&Weight=](https://stats.nba.com/stats/leaguedashplayerbiostats?College=&Conference=&Country=&DateFrom=&DateTo=&Division=&DraftPick=&DraftYear=&GameScope=&GameSegment=&Height=&LastNGames=&LeagueID=&Location=&Month=&OpponentTeamID=&Outcome=&PORound=&PerMode=Totals&Period=&PlayerExperience=&PlayerPosition=&Season=2018-19&SeasonSegment=&SeasonType=Regular+Season&ShotClockRange=&StarterBench=&TeamID=&VsConference=&VsDivision=&Weight=)
 
 ## Parameters
-Parameter Name | Pattern | Required | Nullable
------------- | :-----------: | :---: | :---:
-_**PerMode**_ | `^(Totals)\|(PerGame)$` | `Y` |  | 
-_**Season**_ | `^\d{4}-\d{2}$` | `Y` |  | 
-_**SeasonType**_ | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star)$` | `Y` |  | 
-_**Weight**_ |  |  | `Y` | 
-_**VsDivision**_ | `^((Atlantic)\|(Central)\|(Northwest)\|(Pacific)\|(Southeast)\|(Southwest)\|(East)\|(West))?$` |  | `Y` | 
-_**VsConference**_ | `^((East)\|(West))?$` |  | `Y` | 
-_**TeamID**_ |  |  | `Y` | 
-_**StarterBench**_ | `((Starters)\|(Bench))?` |  | `Y` | 
-_**ShotClockRange**_ | `((24-22)\|(22-18 Very Early)\|(18-15 Early)\|(15-7 Average)\|(7-4 Late)\|(4-0 Very Late)\|(ShotClock Off))?` |  | `Y` | 
-_**SeasonSegment**_ | `^((Post All-Star)\|(Pre All-Star))?$` |  | `Y` | 
-_**PlayerPosition**_ | `((F)\|(C)\|(G)\|(C-F)\|(F-C)\|(F-G)\|(G-F))?` |  | `Y` | 
-_**PlayerExperience**_ | `((Rookie)\|(Sophomore)\|(Veteran))?` |  | `Y` | 
-_**Period**_ |  |  | `Y` | 
-_**PORound**_ |  |  | `Y` | 
-_**Outcome**_ | `^((W)\|(L))?$` |  | `Y` | 
-_**OpponentTeamID**_ |  |  | `Y` | 
-_**Month**_ |  |  | `Y` | 
-_**Location**_ | `^((Home)\|(Road))?$` |  | `Y` | 
-_**LeagueID**_ | `(00)\|(20)\|(10)` | `Y` | `Y` | 
-_**LastNGames**_ |  |  | `Y` | 
-_**Height**_ |  |  | `Y` | 
-_**GameSegment**_ | `^((First Half)\|(Overtime)\|(Second Half))?$` |  | `Y` | 
-_**GameScope**_ | `((Yesterday)\|(Last 10))?` |  | `Y` | 
-_**DraftYear**_ |  |  | `Y` | 
-_**DraftPick**_ |  |  | `Y` | 
-_**Division**_ | `((Atlantic)\|(Central)\|(Northwest)\|(Pacific)\|(Southeast)\|(Southwest))?` |  | `Y` | 
-_**DateTo**_ |  |  | `Y` | 
-_**DateFrom**_ |  |  | `Y` | 
-_**Country**_ |  |  | `Y` | 
-_**Conference**_ | `((East)\|(West))?` |  | `Y` | 
-_**College**_ |  |  | `Y` | 
+API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | ------------ | :-----------: | :---: | :---:
+_**PerMode**_ | [PerModeSimple](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PerMode) | per_mode_simple | `^(Totals)\|(PerGame)$` | `Y` |  | 
+_**Season**_ | [Season](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season | `^\d{4}-\d{2}$` | `Y` |  | 
+_**SeasonType**_ | [SeasonTypeAllStar](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_all_star | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star)$` | `Y` |  | 
+_**Weight**_ | [WeightNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Weight) | weight_nullable |  |  | `Y` | 
+_**VsDivision**_ | [VsDivisionNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#VsDivision) | vs_division_nullable | `^((Atlantic)\|(Central)\|(Northwest)\|(Pacific)\|(Southeast)\|(Southwest)\|(East)\|(West))?$` |  | `Y` | 
+_**VsConference**_ | [VsConferenceNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#VsConference) | vs_conference_nullable | `^((East)\|(West))?$` |  | `Y` | 
+_**TeamID**_ | [TeamIDNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TeamID) | team_id_nullable |  |  | `Y` | 
+_**StarterBench**_ | [StarterBenchNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#StarterBench) | starter_bench_nullable | `((Starters)\|(Bench))?` |  | `Y` | 
+_**ShotClockRange**_ | [ShotClockRangeNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#ShotClockRange) | shot_clock_range_nullable | `((24-22)\|(22-18 Very Early)\|(18-15 Early)\|(15-7 Average)\|(7-4 Late)\|(4-0 Very Late)\|(ShotClock Off))?` |  | `Y` | 
+_**SeasonSegment**_ | [SeasonSegmentNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonSegment) | season_segment_nullable | `^((Post All-Star)\|(Pre All-Star))?$` |  | `Y` | 
+_**PlayerPosition**_ | [PlayerPositionAbbreviationNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerPosition) | player_position_abbreviation_nullable | `((F)\|(C)\|(G)\|(C-F)\|(F-C)\|(F-G)\|(G-F))?` |  | `Y` | 
+_**PlayerExperience**_ | [PlayerExperienceNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerExperience) | player_experience_nullable | `((Rookie)\|(Sophomore)\|(Veteran))?` |  | `Y` | 
+_**Period**_ | [PeriodNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Period) | period_nullable |  |  | `Y` | 
+_**PORound**_ | [PORoundNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PORound) | po_round_nullable |  |  | `Y` | 
+_**Outcome**_ | [OutcomeNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Outcome) | outcome_nullable | `^((W)\|(L))?$` |  | `Y` | 
+_**OpponentTeamID**_ | [OpponentTeamIDNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#OpponentTeamID) | opponent_team_id_nullable |  |  | `Y` | 
+_**Month**_ | [MonthNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Month) | month_nullable |  |  | `Y` | 
+_**Location**_ | [LocationNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Location) | location_nullable | `^((Home)\|(Road))?$` |  | `Y` | 
+_**LeagueID**_ | [LeagueIDNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable | `(00)\|(20)\|(10)` | `Y` | `Y` | 
+_**LastNGames**_ | [LastNGamesNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LastNGames) | last_n_games_nullable |  |  | `Y` | 
+_**Height**_ | [HeightNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Height) | height_nullable |  |  | `Y` | 
+_**GameSegment**_ | [GameSegmentNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameSegment) | game_segment_nullable | `^((First Half)\|(Overtime)\|(Second Half))?$` |  | `Y` | 
+_**GameScope**_ | [GameScopeSimpleNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameScope) | game_scope_simple_nullable | `((Yesterday)\|(Last 10))?` |  | `Y` | 
+_**DraftYear**_ | [DraftYearNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DraftYear) | draft_year_nullable |  |  | `Y` | 
+_**DraftPick**_ | [DraftPickNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DraftPick) | draft_pick_nullable |  |  | `Y` | 
+_**Division**_ | [DivisionSimpleNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Division) | division_simple_nullable | `((Atlantic)\|(Central)\|(Northwest)\|(Pacific)\|(Southeast)\|(Southwest))?` |  | `Y` | 
+_**DateTo**_ | [DateToNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DateTo) | date_to_nullable |  |  | `Y` | 
+_**DateFrom**_ | [DateFromNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DateFrom) | date_from_nullable |  |  | `Y` | 
+_**Country**_ | [CountryNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Country) | country_nullable |  |  | `Y` | 
+_**Conference**_ | [ConferenceNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Conference) | conference_nullable | `((East)\|(West))?` |  | `Y` | 
+_**College**_ | [CollegeNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#College) | college_nullable |  |  | `Y` | 
 
 ## Data Sets
 #### LeagueDashPlayerBioStats `league_dash_player_bio_stats`
@@ -79,7 +80,7 @@ _**College**_ |  |  | `Y` |
         ]
     },
     "endpoint": "LeagueDashPlayerBioStats",
-    "last_validated_date": "2018-10-08",
+    "last_validated_date": "2018-12-11",
     "nullable_parameters": [
         "College",
         "Conference",
@@ -186,4 +187,4 @@ _**College**_ |  |  | `Y` |
 }
 ```
 
-Last validated 2018-10-08
+Last validated 2018-12-11

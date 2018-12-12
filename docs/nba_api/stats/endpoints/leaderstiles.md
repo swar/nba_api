@@ -1,21 +1,22 @@
 # LeadersTiles
+##### [nba_api/stats/endpoints/leaderstiles.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/leaderstiles.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/leaderstiles](https://stats.nba.com/stats/leaderstiles)
 
 ##### Valid URL
->[https://stats.nba.com/stats/leaderstiles?GameScope=Season&LeagueID=00&PlayerOrTeam=Team&PlayerScope=All+Players&Season=2017-18&SeasonType=Regular+Season&Stat=PTS](https://stats.nba.com/stats/leaderstiles?GameScope=Season&LeagueID=00&PlayerOrTeam=Team&PlayerScope=All+Players&Season=2017-18&SeasonType=Regular+Season&Stat=PTS)
+>[https://stats.nba.com/stats/leaderstiles?GameScope=Season&LeagueID=00&PlayerOrTeam=Team&PlayerScope=All+Players&Season=2018-19&SeasonType=Regular+Season&Stat=PTS](https://stats.nba.com/stats/leaderstiles?GameScope=Season&LeagueID=00&PlayerOrTeam=Team&PlayerScope=All+Players&Season=2018-19&SeasonType=Regular+Season&Stat=PTS)
 
 ## Parameters
-Parameter Name | Pattern | Required | Nullable
------------- | :-----------: | :---: | :---:
-_**GameScope**_ | `^(Season)\|(Last 10)\|(Yesterday)\|(Finals)$` | `Y` |  | 
-_**LeagueID**_ | `^\d{2}$` | `Y` |  | 
-_**PlayerOrTeam**_ | `^(Player)\|(Team)$` | `Y` |  | 
-_**PlayerScope**_ | `^(All Players)\|(Rookies)$` | `Y` |  | 
-_**Season**_ | `^\d{4}-\d{2}$` | `Y` |  | 
-_**SeasonType**_ | `^(Regular Season)\|(Pre Season)\|(Playoffs)$` | `Y` |  | 
-_**Stat**_ | `^(PTS)\|(REB)\|(AST)\|(FG_PCT)\|(FT_PCT)\|(FG3_PCT)\|(STL)\|(BLK)$` | `Y` |  | 
+API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | ------------ | :-----------: | :---: | :---:
+_**GameScope**_ | [GameScopeDetailed](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameScope) | game_scope_detailed | `^(Season)\|(Last 10)\|(Yesterday)\|(Finals)$` | `Y` |  | 
+_**LeagueID**_ | [LeagueID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^\d{2}$` | `Y` |  | 
+_**PlayerOrTeam**_ | [PlayerOrTeam](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerOrTeam) | player_or_team | `^(Player)\|(Team)$` | `Y` |  | 
+_**PlayerScope**_ | [PlayerScope](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerScope) | player_scope | `^(All Players)\|(Rookies)$` | `Y` |  | 
+_**Season**_ | [Season](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season | `^\d{4}-\d{2}$` | `Y` |  | 
+_**SeasonType**_ | [SeasonTypePlayoffs](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_playoffs | `^(Regular Season)\|(Pre Season)\|(Playoffs)$` | `Y` |  | 
+_**Stat**_ | [Stat](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Stat) | stat | `^(PTS)\|(REB)\|(AST)\|(FG_PCT)\|(FT_PCT)\|(FG3_PCT)\|(STL)\|(BLK)$` | `Y` |  | 
 
 ## Data Sets
 #### AllTimeSeasonHigh `all_time_season_high`
@@ -73,7 +74,7 @@ _**Stat**_ | `^(PTS)\|(REB)\|(AST)\|(FG_PCT)\|(FT_PCT)\|(FG3_PCT)\|(STL)\|(BLK)$
         ]
     },
     "endpoint": "LeadersTiles",
-    "last_validated_date": "2018-10-08",
+    "last_validated_date": "2018-12-11",
     "nullable_parameters": [],
     "parameter_patterns": {
         "GameScope": "^(Season)|(Last 10)|(Yesterday)|(Finals)$",
@@ -106,4 +107,4 @@ _**Stat**_ | `^(PTS)\|(REB)\|(AST)\|(FG_PCT)\|(FT_PCT)\|(FG3_PCT)\|(STL)\|(BLK)$
 }
 ```
 
-Last validated 2018-10-08
+Last validated 2018-12-11

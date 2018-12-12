@@ -1,20 +1,21 @@
 # PlayerGameLog
+##### [nba_api/stats/endpoints/playergamelog.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/playergamelog.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/playergamelog](https://stats.nba.com/stats/playergamelog)
 
 ##### Valid URL
->[https://stats.nba.com/stats/playergamelog?DateFrom=&DateTo=&LeagueID=&PlayerID=2544&Season=2017-18&SeasonType=Regular+Season](https://stats.nba.com/stats/playergamelog?DateFrom=&DateTo=&LeagueID=&PlayerID=2544&Season=2017-18&SeasonType=Regular+Season)
+>[https://stats.nba.com/stats/playergamelog?DateFrom=&DateTo=&LeagueID=&PlayerID=2544&Season=2018-19&SeasonType=Regular+Season](https://stats.nba.com/stats/playergamelog?DateFrom=&DateTo=&LeagueID=&PlayerID=2544&Season=2018-19&SeasonType=Regular+Season)
 
 ## Parameters
-Parameter Name | Pattern | Required | Nullable
------------- | :-----------: | :---: | :---:
-_**PlayerID**_ |  | `Y` |  | 
-_**Season**_ | `^(\d{4}-\d{2})\|(ALL)$` | `Y` |  | 
-_**SeasonType**_ | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All-Star)\|(All Star)$` | `Y` |  | 
-_**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` | 
-_**DateTo**_ |  |  | `Y` | 
-_**DateFrom**_ |  |  | `Y` | 
+API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | ------------ | :-----------: | :---: | :---:
+_**PlayerID**_ | [PlayerID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerID) | player_id |  | `Y` |  | 
+_**Season**_ | [SeasonAll](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season_all | `^(\d{4}-\d{2})\|(ALL)$` | `Y` |  | 
+_**SeasonType**_ | [SeasonTypeAllStar](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_all_star | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All-Star)\|(All Star)$` | `Y` |  | 
+_**LeagueID**_ | [LeagueIDNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable | `(00)\|(20)\|(10)` |  | `Y` | 
+_**DateTo**_ | [DateToNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DateTo) | date_to_nullable |  |  | `Y` | 
+_**DateFrom**_ | [DateFromNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DateFrom) | date_from_nullable |  |  | `Y` | 
 
 ## Data Sets
 #### PlayerGameLog `player_game_log`
@@ -58,7 +59,7 @@ _**DateFrom**_ |  |  | `Y` |
         ]
     },
     "endpoint": "PlayerGameLog",
-    "last_validated_date": "2018-10-08",
+    "last_validated_date": "2018-12-11",
     "nullable_parameters": [
         "DateFrom",
         "DateTo",
@@ -89,4 +90,4 @@ _**DateFrom**_ |  |  | `Y` |
 }
 ```
 
-Last validated 2018-10-08
+Last validated 2018-12-11

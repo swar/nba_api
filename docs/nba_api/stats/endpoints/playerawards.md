@@ -1,4 +1,5 @@
 # PlayerAwards
+##### [nba_api/stats/endpoints/playerawards.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/playerawards.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/playerawards](https://stats.nba.com/stats/playerawards)
@@ -7,9 +8,9 @@
 >[https://stats.nba.com/stats/playerawards?PlayerID=2544](https://stats.nba.com/stats/playerawards?PlayerID=2544)
 
 ## Parameters
-Parameter Name | Pattern | Required | Nullable
------------- | :-----------: | :---: | :---:
-_**PlayerID**_ |  | `Y` |  | 
+API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | ------------ | :-----------: | :---: | :---:
+_**PlayerID**_ | [PlayerID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerID) | player_id |  | `Y` |  | 
 
 ## Data Sets
 #### PlayerAwards `player_awards`
@@ -40,7 +41,7 @@ _**PlayerID**_ |  | `Y` |  |
         ]
     },
     "endpoint": "PlayerAwards",
-    "last_validated_date": "2018-10-08",
+    "last_validated_date": "2018-12-11",
     "nullable_parameters": [],
     "parameter_patterns": {
         "PlayerID": null
@@ -55,4 +56,4 @@ _**PlayerID**_ |  | `Y` |  |
 }
 ```
 
-Last validated 2018-10-08
+Last validated 2018-12-11

@@ -1,17 +1,18 @@
 # CommonAllPlayers
+##### [nba_api/stats/endpoints/commonallplayers.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/commonallplayers.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/commonallplayers](https://stats.nba.com/stats/commonallplayers)
 
 ##### Valid URL
->[https://stats.nba.com/stats/commonallplayers?IsOnlyCurrentSeason=0&LeagueID=00&Season=2017-18](https://stats.nba.com/stats/commonallplayers?IsOnlyCurrentSeason=0&LeagueID=00&Season=2017-18)
+>[https://stats.nba.com/stats/commonallplayers?IsOnlyCurrentSeason=0&LeagueID=00&Season=2018-19](https://stats.nba.com/stats/commonallplayers?IsOnlyCurrentSeason=0&LeagueID=00&Season=2018-19)
 
 ## Parameters
-Parameter Name | Pattern | Required | Nullable
------------- | :-----------: | :---: | :---:
-_**IsOnlyCurrentSeason**_ |  | `Y` |  | 
-_**LeagueID**_ | `^\d{2}$` | `Y` |  | 
-_**Season**_ | `^\d{4}-\d{2}$` | `Y` |  | 
+API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | ------------ | :-----------: | :---: | :---:
+_**IsOnlyCurrentSeason**_ | [IsOnlyCurrentSeason](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#IsOnlyCurrentSeason) | is_only_current_season |  | `Y` |  | 
+_**LeagueID**_ | [LeagueID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^\d{2}$` | `Y` |  | 
+_**Season**_ | [Season](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season | `^\d{4}-\d{2}$` | `Y` |  | 
 
 ## Data Sets
 #### CommonAllPlayers `common_all_players`
@@ -41,7 +42,7 @@ _**Season**_ | `^\d{4}-\d{2}$` | `Y` |  |
         ]
     },
     "endpoint": "CommonAllPlayers",
-    "last_validated_date": "2018-10-08",
+    "last_validated_date": "2018-12-11",
     "nullable_parameters": [],
     "parameter_patterns": {
         "IsOnlyCurrentSeason": null,
@@ -62,4 +63,4 @@ _**Season**_ | `^\d{4}-\d{2}$` | `Y` |  |
 }
 ```
 
-Last validated 2018-10-08
+Last validated 2018-12-11

@@ -1,44 +1,45 @@
 # VideoDetails
+##### [nba_api/stats/endpoints/videodetails.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/videodetails.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/videodetails](https://stats.nba.com/stats/videodetails)
 
 ##### Valid URL
->[https://stats.nba.com/stats/videodetails?AheadBehind=&ClutchTime=&ContextFilter=&ContextMeasure=PTS&DateFrom=&DateTo=&EndPeriod=&EndRange=&GameID=&GameSegment=&LastNGames=0&LeagueID=&Location=&Month=0&OpponentTeamID=0&Outcome=&Period=0&PlayerID=2544&PointDiff=&Position=&RangeType=&RookieYear=&Season=2017-18&SeasonSegment=&SeasonType=Regular+Season&StartPeriod=&StartRange=&TeamID=1610612739&VsConference=&VsDivision=](https://stats.nba.com/stats/videodetails?AheadBehind=&ClutchTime=&ContextFilter=&ContextMeasure=PTS&DateFrom=&DateTo=&EndPeriod=&EndRange=&GameID=&GameSegment=&LastNGames=0&LeagueID=&Location=&Month=0&OpponentTeamID=0&Outcome=&Period=0&PlayerID=2544&PointDiff=&Position=&RangeType=&RookieYear=&Season=2017-18&SeasonSegment=&SeasonType=Regular+Season&StartPeriod=&StartRange=&TeamID=1610612739&VsConference=&VsDivision=)
+>[https://stats.nba.com/stats/videodetails?AheadBehind=&ClutchTime=&ContextFilter=&ContextMeasure=PTS&DateFrom=&DateTo=&EndPeriod=&EndRange=&GameID=&GameSegment=&LastNGames=0&LeagueID=&Location=&Month=0&OpponentTeamID=0&Outcome=&Period=0&PlayerID=2544&PointDiff=&Position=&RangeType=&RookieYear=&Season=2018-19&SeasonSegment=&SeasonType=Regular+Season&StartPeriod=&StartRange=&TeamID=1610612739&VsConference=&VsDivision=](https://stats.nba.com/stats/videodetails?AheadBehind=&ClutchTime=&ContextFilter=&ContextMeasure=PTS&DateFrom=&DateTo=&EndPeriod=&EndRange=&GameID=&GameSegment=&LastNGames=0&LeagueID=&Location=&Month=0&OpponentTeamID=0&Outcome=&Period=0&PlayerID=2544&PointDiff=&Position=&RangeType=&RookieYear=&Season=2018-19&SeasonSegment=&SeasonType=Regular+Season&StartPeriod=&StartRange=&TeamID=1610612739&VsConference=&VsDivision=)
 
 ## Parameters
-Parameter Name | Pattern | Required | Nullable
------------- | :-----------: | :---: | :---:
-_**ContextMeasure**_ | `^((FGM)\|(FGA)\|(FG_PCT)\|(FG3M)\|(FG3A)\|(FG3_PCT)\|(FTM)\|(FTA)\|(OREB)\|(DREB)\|(AST)\|(FGM_AST)\|(FG3_AST)\|(STL)\|(BLK)\|(BLKA)\|(TOV)\|(PF)\|(PFD)\|(POSS_END_FT)\|(PTS_PAINT)\|(PTS_FB)\|(PTS_OFF_TOV)\|(PTS_2ND_CHANCE)\|(REB)\|(TM_FGM)\|(TM_FGA)\|(TM_FG3M)\|(TM_FG3A)\|(TM_FTM)\|(TM_FTA)\|(TM_OREB)\|(TM_DREB)\|(TM_REB)\|(TM_TEAM_REB)\|(TM_AST)\|(TM_STL)\|(TM_BLK)\|(TM_BLKA)\|(TM_TOV)\|(TM_TEAM_TOV)\|(TM_PF)\|(TM_PFD)\|(TM_PTS)\|(TM_PTS_PAINT)\|(TM_PTS_FB)\|(TM_PTS_OFF_TOV)\|(TM_PTS_2ND_CHANCE)\|(TM_FGM_AST)\|(TM_FG3_AST)\|(TM_POSS_END_FT)\|(OPP_FGM)\|(OPP_FGA)\|(OPP_FG3M)\|(OPP_FG3A)\|(OPP_FTM)\|(OPP_FTA)\|(OPP_OREB)\|(OPP_DREB)\|(OPP_REB)\|(OPP_TEAM_REB)\|(OPP_AST)\|(OPP_STL)\|(OPP_BLK)\|(OPP_BLKA)\|(OPP_TOV)\|(OPP_TEAM_TOV)\|(OPP_PF)\|(OPP_PFD)\|(OPP_PTS)\|(OPP_PTS_PAINT)\|(OPP_PTS_FB)\|(OPP_PTS_OFF_TOV)\|(OPP_PTS_2ND_CHANCE)\|(OPP_FGM_AST)\|(OPP_FG3_AST)\|(OPP_POSS_END_FT)\|(PTS))$` | `Y` |  | 
-_**LastNGames**_ |  | `Y` |  | 
-_**Month**_ |  | `Y` |  | 
-_**OpponentTeamID**_ |  | `Y` |  | 
-_**Period**_ |  | `Y` |  | 
-_**PlayerID**_ |  | `Y` |  | 
-_**Season**_ | `^(\d{4}-\d{2})?$` | `Y` |  | 
-_**SeasonType**_ | `^((Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star))?$` | `Y` |  | 
-_**TeamID**_ |  | `Y` |  | 
-_**VsDivision**_ | `^((Atlantic)\|(Central)\|(Northwest)\|(Pacific)\|(Southeast)\|(Southwest)\|(East)\|(West))?$` | `Y` | `Y` | 
-_**VsConference**_ | `^((East)\|(West))?$` | `Y` | `Y` | 
-_**StartRange**_ |  | `Y` | `Y` | 
-_**StartPeriod**_ |  | `Y` | `Y` | 
-_**SeasonSegment**_ | `^((Post All-Star)\|(Pre All-Star))?$` | `Y` | `Y` | 
-_**RookieYear**_ |  |  | `Y` | 
-_**RangeType**_ |  | `Y` | `Y` | 
-_**Position**_ |  |  | `Y` | 
-_**PointDiff**_ |  |  | `Y` | 
-_**Outcome**_ | `^((W)\|(L))?$` | `Y` | `Y` | 
-_**Location**_ | `^((Home)\|(Road))?$` | `Y` | `Y` | 
-_**LeagueID**_ | `^((00)\|(20))?$` | `Y` | `Y` | 
-_**GameSegment**_ |  |  | `Y` | 
-_**GameID**_ | `^(\d{10})?$` | `Y` | `Y` | 
-_**EndRange**_ |  | `Y` | `Y` | 
-_**EndPeriod**_ |  | `Y` | `Y` | 
-_**DateTo**_ |  | `Y` | `Y` | 
-_**DateFrom**_ |  | `Y` | `Y` | 
-_**ContextFilter**_ |  |  | `Y` | 
-_**ClutchTime**_ |  |  | `Y` | 
-_**AheadBehind**_ |  |  | `Y` | 
+API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | ------------ | :-----------: | :---: | :---:
+_**ContextMeasure**_ | [ContextMeasureDetailed](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#ContextMeasure) | context_measure_detailed | `^((FGM)\|(FGA)\|(FG_PCT)\|(FG3M)\|(FG3A)\|(FG3_PCT)\|(FTM)\|(FTA)\|(OREB)\|(DREB)\|(AST)\|(FGM_AST)\|(FG3_AST)\|(STL)\|(BLK)\|(BLKA)\|(TOV)\|(PF)\|(PFD)\|(POSS_END_FT)\|(PTS_PAINT)\|(PTS_FB)\|(PTS_OFF_TOV)\|(PTS_2ND_CHANCE)\|(REB)\|(TM_FGM)\|(TM_FGA)\|(TM_FG3M)\|(TM_FG3A)\|(TM_FTM)\|(TM_FTA)\|(TM_OREB)\|(TM_DREB)\|(TM_REB)\|(TM_TEAM_REB)\|(TM_AST)\|(TM_STL)\|(TM_BLK)\|(TM_BLKA)\|(TM_TOV)\|(TM_TEAM_TOV)\|(TM_PF)\|(TM_PFD)\|(TM_PTS)\|(TM_PTS_PAINT)\|(TM_PTS_FB)\|(TM_PTS_OFF_TOV)\|(TM_PTS_2ND_CHANCE)\|(TM_FGM_AST)\|(TM_FG3_AST)\|(TM_POSS_END_FT)\|(OPP_FGM)\|(OPP_FGA)\|(OPP_FG3M)\|(OPP_FG3A)\|(OPP_FTM)\|(OPP_FTA)\|(OPP_OREB)\|(OPP_DREB)\|(OPP_REB)\|(OPP_TEAM_REB)\|(OPP_AST)\|(OPP_STL)\|(OPP_BLK)\|(OPP_BLKA)\|(OPP_TOV)\|(OPP_TEAM_TOV)\|(OPP_PF)\|(OPP_PFD)\|(OPP_PTS)\|(OPP_PTS_PAINT)\|(OPP_PTS_FB)\|(OPP_PTS_OFF_TOV)\|(OPP_PTS_2ND_CHANCE)\|(OPP_FGM_AST)\|(OPP_FG3_AST)\|(OPP_POSS_END_FT)\|(PTS))$` | `Y` |  | 
+_**LastNGames**_ | [LastNGames](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LastNGames) | last_n_games |  | `Y` |  | 
+_**Month**_ | [Month](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Month) | month |  | `Y` |  | 
+_**OpponentTeamID**_ | [OpponentTeamID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#OpponentTeamID) | opponent_team_id |  | `Y` |  | 
+_**Period**_ | [Period](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Period) | period |  | `Y` |  | 
+_**PlayerID**_ | [PlayerID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerID) | player_id |  | `Y` |  | 
+_**Season**_ | [Season](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season | `^(\d{4}-\d{2})?$` | `Y` |  | 
+_**SeasonType**_ | [SeasonTypeAllStar](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_all_star | `^((Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star))?$` | `Y` |  | 
+_**TeamID**_ | [TeamID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TeamID) | team_id |  | `Y` |  | 
+_**VsDivision**_ | [VsDivisionNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#VsDivision) | vs_division_nullable | `^((Atlantic)\|(Central)\|(Northwest)\|(Pacific)\|(Southeast)\|(Southwest)\|(East)\|(West))?$` | `Y` | `Y` | 
+_**VsConference**_ | [VsConferenceNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#VsConference) | vs_conference_nullable | `^((East)\|(West))?$` | `Y` | `Y` | 
+_**StartRange**_ | [StartRangeNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#StartRange) | start_range_nullable |  | `Y` | `Y` | 
+_**StartPeriod**_ | [StartPeriodNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#StartPeriod) | start_period_nullable |  | `Y` | `Y` | 
+_**SeasonSegment**_ | [SeasonSegmentNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonSegment) | season_segment_nullable | `^((Post All-Star)\|(Pre All-Star))?$` | `Y` | `Y` | 
+_**RookieYear**_ | [RookieYearNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#RookieYear) | rookie_year_nullable |  |  | `Y` | 
+_**RangeType**_ | [RangeTypeNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#RangeType) | range_type_nullable |  | `Y` | `Y` | 
+_**Position**_ | [PositionNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Position) | position_nullable |  |  | `Y` | 
+_**PointDiff**_ | [PointDiffNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PointDiff) | point_diff_nullable |  |  | `Y` | 
+_**Outcome**_ | [OutcomeNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Outcome) | outcome_nullable | `^((W)\|(L))?$` | `Y` | `Y` | 
+_**Location**_ | [LocationNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Location) | location_nullable | `^((Home)\|(Road))?$` | `Y` | `Y` | 
+_**LeagueID**_ | [LeagueIDNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable | `^((00)\|(20))?$` | `Y` | `Y` | 
+_**GameSegment**_ | [GameSegmentNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameSegment) | game_segment_nullable |  |  | `Y` | 
+_**GameID**_ | [GameIDNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameID) | game_id_nullable | `^(\d{10})?$` | `Y` | `Y` | 
+_**EndRange**_ | [EndRangeNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#EndRange) | end_range_nullable |  | `Y` | `Y` | 
+_**EndPeriod**_ | [EndPeriodNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#EndPeriod) | end_period_nullable |  | `Y` | `Y` | 
+_**DateTo**_ | [DateToNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DateTo) | date_to_nullable |  | `Y` | `Y` | 
+_**DateFrom**_ | [DateFromNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DateFrom) | date_from_nullable |  | `Y` | `Y` | 
+_**ContextFilter**_ | [ContextFilterNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#ContextFilter) | context_filter_nullable |  |  | `Y` | 
+_**ClutchTime**_ | [ClutchTimeNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#ClutchTime) | clutch_time_nullable |  |  | `Y` | 
+_**AheadBehind**_ | [AheadBehindNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#AheadBehind) | ahead_behind_nullable |  |  | `Y` | 
 
 ## Data Sets
 
@@ -48,7 +49,7 @@ _**AheadBehind**_ |  |  | `Y` |
 {
     "data_sets": {},
     "endpoint": "VideoDetails",
-    "last_validated_date": "2018-10-08",
+    "last_validated_date": "2018-12-11",
     "nullable_parameters": [
         "AheadBehind",
         "ClutchTime",
@@ -165,4 +166,4 @@ _**AheadBehind**_ |  |  | `Y` |
 }
 ```
 
-Last validated 2018-10-08
+Last validated 2018-12-11

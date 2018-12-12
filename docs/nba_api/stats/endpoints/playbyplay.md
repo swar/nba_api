@@ -1,4 +1,5 @@
 # PlayByPlay
+##### [nba_api/stats/endpoints/playbyplay.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/playbyplay.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/playbyplay](https://stats.nba.com/stats/playbyplay)
@@ -7,11 +8,11 @@
 >[https://stats.nba.com/stats/playbyplay?EndPeriod=1&GameID=0021700807&StartPeriod=1](https://stats.nba.com/stats/playbyplay?EndPeriod=1&GameID=0021700807&StartPeriod=1)
 
 ## Parameters
-Parameter Name | Pattern | Required | Nullable
------------- | :-----------: | :---: | :---:
-_**EndPeriod**_ |  | `Y` |  | 
-_**GameID**_ | `^\d{10}$` | `Y` |  | 
-_**StartPeriod**_ |  | `Y` |  | 
+API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | ------------ | :-----------: | :---: | :---:
+_**EndPeriod**_ | [EndPeriod](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#EndPeriod) | end_period |  | `Y` |  | 
+_**GameID**_ | [GameID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameID) | game_id | `^\d{10}$` | `Y` |  | 
+_**StartPeriod**_ | [StartPeriod](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#StartPeriod) | start_period |  | `Y` |  | 
 
 ## Data Sets
 #### AvailableVideo `available_video`
@@ -48,7 +49,7 @@ _**StartPeriod**_ |  | `Y` |  |
         ]
     },
     "endpoint": "PlayByPlay",
-    "last_validated_date": "2018-10-08",
+    "last_validated_date": "2018-12-11",
     "nullable_parameters": [],
     "parameter_patterns": {
         "EndPeriod": null,
@@ -69,4 +70,4 @@ _**StartPeriod**_ |  | `Y` |  |
 }
 ```
 
-Last validated 2018-10-08
+Last validated 2018-12-11

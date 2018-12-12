@@ -1,18 +1,19 @@
 # LeagueStandings
+##### [nba_api/stats/endpoints/leaguestandings.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/leaguestandings.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/leaguestandings](https://stats.nba.com/stats/leaguestandings)
 
 ##### Valid URL
->[https://stats.nba.com/stats/leaguestandings?LeagueID=00&Season=2017-18&SeasonType=Regular+Season&SeasonYear=](https://stats.nba.com/stats/leaguestandings?LeagueID=00&Season=2017-18&SeasonType=Regular+Season&SeasonYear=)
+>[https://stats.nba.com/stats/leaguestandings?LeagueID=00&Season=2018-19&SeasonType=Regular+Season&SeasonYear=](https://stats.nba.com/stats/leaguestandings?LeagueID=00&Season=2018-19&SeasonType=Regular+Season&SeasonYear=)
 
 ## Parameters
-Parameter Name | Pattern | Required | Nullable
------------- | :-----------: | :---: | :---:
-_**LeagueID**_ | `^\d{2}$` | `Y` |  | 
-_**Season**_ | `^\d{4}-\d{2}$` | `Y` |  | 
-_**SeasonType**_ | `^(Regular Season)\|(Pre Season)$` | `Y` |  | 
-_**SeasonYear**_ |  |  | `Y` | 
+API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | ------------ | :-----------: | :---: | :---:
+_**LeagueID**_ | [LeagueID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^\d{2}$` | `Y` |  | 
+_**Season**_ | [Season](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season | `^\d{4}-\d{2}$` | `Y` |  | 
+_**SeasonType**_ | [SeasonType](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type | `^(Regular Season)\|(Pre Season)$` | `Y` |  | 
+_**SeasonYear**_ | [SeasonNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonYear) | season_nullable |  |  | `Y` | 
 
 ## Data Sets
 #### Standings `standings`
@@ -110,7 +111,7 @@ _**SeasonYear**_ |  |  | `Y` |
         ]
     },
     "endpoint": "LeagueStandings",
-    "last_validated_date": "2018-10-08",
+    "last_validated_date": "2018-12-11",
     "nullable_parameters": [
         "SeasonYear"
     ],
@@ -135,4 +136,4 @@ _**SeasonYear**_ |  |  | `Y` |
 }
 ```
 
-Last validated 2018-10-08
+Last validated 2018-12-11

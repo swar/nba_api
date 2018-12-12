@@ -455,8 +455,8 @@ No available information.
 
 Variable Name | Value
 ------------ | -------------
-_**first**_ `default` | `1`
-_**all**_ | `0`
+_**all**_ `default` | `0`
+_**first**_ | `1`
 _**fourth**_ | `4`
 _**overtime**_ | `overtime()`
 _**quarter**_ | `quarter()`
@@ -668,9 +668,9 @@ No available information.
 Variable Name | Value
 ------------ | -------------
 _**none**_ `default` | 
-_**current_datetime**_ | `2018-10-08 22:47:01.644939`
-_**current_season**_ | `2017-18`
-_**current_season_year**_ | `2017`
+_**current_datetime**_ | `2018-12-11 20:51:53.358305`
+_**current_season**_ | `2018-19`
+_**current_season_year**_ | `2018`
 
 ## _GraphStartSeason_
 
@@ -681,9 +681,9 @@ _**current_season_year**_ | `2017`
 Variable Name | Value
 ------------ | -------------
 _**none**_ `default` | 
-_**current_datetime**_ | `2018-10-08 22:47:01.644939`
-_**current_season**_ | `2017-18`
-_**current_season_year**_ | `2017`
+_**current_datetime**_ | `2018-12-11 20:51:53.358305`
+_**current_season**_ | `2018-19`
+_**current_season_year**_ | `2018`
 
 ## _GraphStat_
 No available information.
@@ -1301,8 +1301,8 @@ _**per_game**_ | `PerGame`
 
 Variable Name | Value
 ------------ | -------------
-_**first**_ `default` | `1`
-_**all**_ | `0`
+_**all**_ `default` | `0`
+_**first**_ | `1`
 _**fourth**_ | `4`
 _**overtime**_ | `overtime()`
 _**quarter**_ | `quarter()`
@@ -1517,9 +1517,9 @@ _**no**_ `default` | `N`
 Variable Name | Value
 ------------ | -------------
 _**none**_ `default` | 
-_**current_datetime**_ | `2018-10-08 22:47:01.644939`
-_**current_season**_ | `2017-18`
-_**current_season_year**_ | `2017`
+_**current_datetime**_ | `2018-12-11 20:51:53.358305`
+_**current_season**_ | `2018-19`
+_**current_season_year**_ | `2018`
 
 ## _RoundNum_
 No available information.
@@ -1550,9 +1550,9 @@ _**rs**_ | `RS`
 
 Variable Name | Value
 ------------ | -------------
-_**current_season**_ `default` | `2017-18`
-_**current_datetime**_ | `2018-10-08 22:47:01.644939`
-_**current_season_year**_ | `2017`
+_**current_season**_ `default` | `2018-19`
+_**current_datetime**_ | `2018-12-11 20:51:53.358305`
+_**current_season_year**_ | `2018`
 
 #### Class `SeasonAll`
 ##### Patterns 
@@ -1560,10 +1560,10 @@ _**current_season_year**_ | `2017`
 
 Variable Name | Value
 ------------ | -------------
-_**current_season**_ `default` | `2017-18`
+_**current_season**_ `default` | `2018-19`
 _**all**_ | `ALL`
-_**current_datetime**_ | `2018-10-08 22:47:01.644939`
-_**current_season_year**_ | `2017`
+_**current_datetime**_ | `2018-12-11 20:51:53.358305`
+_**current_season_year**_ | `2018`
 
 #### Class `SeasonAllNullable`
 ##### Patterns 
@@ -1573,9 +1573,9 @@ Variable Name | Value
 ------------ | -------------
 _**none**_ `default` | 
 _**all**_ | `ALL`
-_**current_datetime**_ | `2018-10-08 22:47:01.644939`
-_**current_season**_ | `2017-18`
-_**current_season_year**_ | `2017`
+_**current_datetime**_ | `2018-12-11 20:51:53.358305`
+_**current_season**_ | `2018-19`
+_**current_season_year**_ | `2018`
 
 #### Class `SeasonAllTime`
 ##### Patterns 
@@ -1583,10 +1583,10 @@ _**current_season_year**_ | `2017`
 
 Variable Name | Value
 ------------ | -------------
-_**current_season**_ `default` | `2017-18`
+_**current_season**_ `default` | `2018-19`
 _**alltime**_ | `ALLTIME`
-_**current_datetime**_ | `2018-10-08 22:47:01.644939`
-_**current_season_year**_ | `2017`
+_**current_datetime**_ | `2018-12-11 20:51:53.358305`
+_**current_season_year**_ | `2018`
 
 #### Class `SeasonAll_Time`
 ##### Patterns 
@@ -1594,10 +1594,10 @@ _**current_season_year**_ | `2017`
 
 Variable Name | Value
 ------------ | -------------
-_**current_season**_ `default` | `2017-18`
+_**current_season**_ `default` | `2018-19`
 _**all_time**_ | `All Time`
-_**current_datetime**_ | `2018-10-08 22:47:01.644939`
-_**current_season_year**_ | `2017`
+_**current_datetime**_ | `2018-12-11 20:51:53.358305`
+_**current_season_year**_ | `2018`
 
 #### Class `SeasonNullable`
 ##### Patterns 
@@ -1606,9 +1606,9 @@ _**current_season_year**_ | `2017`
 Variable Name | Value
 ------------ | -------------
 _**none**_ `default` | 
-_**current_datetime**_ | `2018-10-08 22:47:01.644939`
-_**current_season**_ | `2017-18`
-_**current_season_year**_ | `2017`
+_**current_datetime**_ | `2018-12-11 20:51:53.358305`
+_**current_season**_ | `2018-19`
+_**current_season_year**_ | `2018`
 
 #### Class `SeasonYearNullable`
 ##### Patterns 
@@ -1617,8 +1617,8 @@ _**current_season_year**_ | `2017`
 Variable Name | Value
 ------------ | -------------
 _**none**_ `default` | 
-_**current_datetime**_ | `2018-10-08 22:47:01.644939`
-_**current_season_year**_ | `2017`
+_**current_datetime**_ | `2018-12-11 20:51:53.358305`
+_**current_season_year**_ | `2018`
 
 ## _SeasonID_
 
@@ -1628,8 +1628,8 @@ _**current_season_year**_ | `2017`
 
 Variable Name | Value
 ------------ | -------------
-_**current_season_year**_ `default` | `22017`
-_**current_datetime**_ | `2018-10-08 22:47:01.644939`
+_**current_season_year**_ `default` | `22018`
+_**current_datetime**_ | `2018-12-11 20:51:53.358305`
 _**get_season_id**_ | `get_season_id()`
 
 ## _SeasonSegment_
@@ -1707,9 +1707,9 @@ _**preseason**_ | `Pre Season`
 
 Variable Name | Value
 ------------ | -------------
-_**current_season**_ `default` | `2017-18`
-_**current_datetime**_ | `2018-10-08 22:47:01.644939`
-_**current_season_year**_ | `2017`
+_**current_season**_ `default` | `2018-19`
+_**current_datetime**_ | `2018-12-11 20:51:53.358305`
+_**current_season_year**_ | `2018`
 
 #### Class `SeasonAll_Time`
 ##### Patterns 
@@ -1717,17 +1717,17 @@ _**current_season_year**_ | `2017`
 
 Variable Name | Value
 ------------ | -------------
-_**current_season**_ `default` | `2017-18`
+_**current_season**_ `default` | `2018-19`
 _**all_time**_ | `All Time`
-_**current_datetime**_ | `2018-10-08 22:47:01.644939`
-_**current_season_year**_ | `2017`
+_**current_datetime**_ | `2018-12-11 20:51:53.358305`
+_**current_season_year**_ | `2018`
 
 Variable Name | Value
 ------------ | -------------
 _**none**_ `default` | 
-_**current_datetime**_ | `2018-10-08 22:47:01.644939`
-_**current_season**_ | `2017-18`
-_**current_season_year**_ | `2017`
+_**current_datetime**_ | `2018-12-11 20:51:53.358305`
+_**current_season**_ | `2018-19`
+_**current_season_year**_ | `2018`
 
 ## _SeriesID_
 No available information.
@@ -1786,8 +1786,8 @@ _**tov**_ | `TOV`
 
 Variable Name | Value
 ------------ | -------------
-_**first**_ `default` | `1`
-_**all**_ | `0`
+_**all**_ `default` | `0`
+_**first**_ | `1`
 _**fourth**_ | `4`
 _**overtime**_ | `overtime()`
 _**quarter**_ | `quarter()`
@@ -1902,6 +1902,10 @@ No available information.
 
 
 ## _TouchTimeRange_
+No available information.
+
+
+## _TwoWay_
 No available information.
 
 

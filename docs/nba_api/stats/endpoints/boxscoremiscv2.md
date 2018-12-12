@@ -1,4 +1,5 @@
 # BoxScoreMiscV2
+##### [nba_api/stats/endpoints/boxscoremiscv2.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/boxscoremiscv2.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/boxscoremiscv2](https://stats.nba.com/stats/boxscoremiscv2)
@@ -7,14 +8,14 @@
 >[https://stats.nba.com/stats/boxscoremiscv2?EndPeriod=1&EndRange=0&GameID=0021700807&RangeType=0&StartPeriod=1&StartRange=0](https://stats.nba.com/stats/boxscoremiscv2?EndPeriod=1&EndRange=0&GameID=0021700807&RangeType=0&StartPeriod=1&StartRange=0)
 
 ## Parameters
-Parameter Name | Pattern | Required | Nullable
------------- | :-----------: | :---: | :---:
-_**EndPeriod**_ |  | `Y` |  | 
-_**EndRange**_ |  | `Y` |  | 
-_**GameID**_ | `^\d{10}$` | `Y` |  | 
-_**RangeType**_ |  | `Y` |  | 
-_**StartPeriod**_ |  | `Y` |  | 
-_**StartRange**_ |  | `Y` |  | 
+API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | ------------ | :-----------: | :---: | :---:
+_**EndPeriod**_ | [EndPeriod](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#EndPeriod) | end_period |  | `Y` |  | 
+_**EndRange**_ | [EndRange](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#EndRange) | end_range |  | `Y` |  | 
+_**GameID**_ | [GameID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameID) | game_id | `^\d{10}$` | `Y` |  | 
+_**RangeType**_ | [RangeType](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#RangeType) | range_type |  | `Y` |  | 
+_**StartPeriod**_ | [StartPeriod](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#StartPeriod) | start_period |  | `Y` |  | 
+_**StartRange**_ | [StartRange](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#StartRange) | start_range |  | `Y` |  | 
 
 ## Data Sets
 #### sqlPlayersMisc `sql_players_misc`
@@ -77,7 +78,7 @@ _**StartRange**_ |  | `Y` |  |
         ]
     },
     "endpoint": "BoxScoreMiscV2",
-    "last_validated_date": "2018-10-08",
+    "last_validated_date": "2018-12-11",
     "nullable_parameters": [],
     "parameter_patterns": {
         "EndPeriod": null,
@@ -107,4 +108,4 @@ _**StartRange**_ |  | `Y` |  |
 }
 ```
 
-Last validated 2018-10-08
+Last validated 2018-12-11

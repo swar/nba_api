@@ -1,16 +1,17 @@
 # DraftCombineStats
+##### [nba_api/stats/endpoints/draftcombinestats.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/draftcombinestats.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/draftcombinestats](https://stats.nba.com/stats/draftcombinestats)
 
 ##### Valid URL
->[https://stats.nba.com/stats/draftcombinestats?LeagueID=00&SeasonYear=2017-18](https://stats.nba.com/stats/draftcombinestats?LeagueID=00&SeasonYear=2017-18)
+>[https://stats.nba.com/stats/draftcombinestats?LeagueID=00&SeasonYear=2018-19](https://stats.nba.com/stats/draftcombinestats?LeagueID=00&SeasonYear=2018-19)
 
 ## Parameters
-Parameter Name | Pattern | Required | Nullable
------------- | :-----------: | :---: | :---:
-_**LeagueID**_ | `^(00)\|(10)\|(20)$` | `Y` |  | 
-_**SeasonYear**_ | `^(\d{4}-\d{2})\|(All Time)$` | `Y` |  | 
+API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | ------------ | :-----------: | :---: | :---:
+_**LeagueID**_ | [LeagueID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^(00)\|(10)\|(20)$` | `Y` |  | 
+_**SeasonYear**_ | [SeasonAll_Time](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonYear) | season_all_time | `^(\d{4}-\d{2})\|(All Time)$` | `Y` |  | 
 
 ## Data Sets
 #### DraftCombineStats `draft_combine_stats`
@@ -74,7 +75,7 @@ _**SeasonYear**_ | `^(\d{4}-\d{2})\|(All Time)$` | `Y` |  |
         ]
     },
     "endpoint": "DraftCombineStats",
-    "last_validated_date": "2018-10-08",
+    "last_validated_date": "2018-12-11",
     "nullable_parameters": [],
     "parameter_patterns": {
         "LeagueID": "^(00)|(10)|(20)$",
@@ -92,4 +93,4 @@ _**SeasonYear**_ | `^(\d{4}-\d{2})\|(All Time)$` | `Y` |  |
 }
 ```
 
-Last validated 2018-10-08
+Last validated 2018-12-11

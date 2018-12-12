@@ -1,23 +1,24 @@
 # PlayerFantasyProfile
+##### [nba_api/stats/endpoints/playerfantasyprofile.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/playerfantasyprofile.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/playerfantasyprofile](https://stats.nba.com/stats/playerfantasyprofile)
 
 ##### Valid URL
->[https://stats.nba.com/stats/playerfantasyprofile?LeagueID=&MeasureType=Base&PaceAdjust=N&PerMode=Totals&PlayerID=2544&PlusMinus=N&Rank=N&Season=2017-18&SeasonType=Regular+Season](https://stats.nba.com/stats/playerfantasyprofile?LeagueID=&MeasureType=Base&PaceAdjust=N&PerMode=Totals&PlayerID=2544&PlusMinus=N&Rank=N&Season=2017-18&SeasonType=Regular+Season)
+>[https://stats.nba.com/stats/playerfantasyprofile?LeagueID=&MeasureType=Base&PaceAdjust=N&PerMode=Totals&PlayerID=2544&PlusMinus=N&Rank=N&Season=2018-19&SeasonType=Regular+Season](https://stats.nba.com/stats/playerfantasyprofile?LeagueID=&MeasureType=Base&PaceAdjust=N&PerMode=Totals&PlayerID=2544&PlusMinus=N&Rank=N&Season=2018-19&SeasonType=Regular+Season)
 
 ## Parameters
-Parameter Name | Pattern | Required | Nullable
------------- | :-----------: | :---: | :---:
-_**MeasureType**_ | `^(Base)$` | `Y` |  | 
-_**PaceAdjust**_ | `^(N)$` | `Y` |  | 
-_**PerMode**_ | `^(Totals)\|(PerGame)\|(Per36)$` | `Y` |  | 
-_**PlayerID**_ |  | `Y` |  | 
-_**PlusMinus**_ | `^(N)$` | `Y` |  | 
-_**Rank**_ | `^(N)$` | `Y` |  | 
-_**Season**_ | `^\d{4}-\d{2}$` | `Y` |  | 
-_**SeasonType**_ | `^(Regular Season)\|(Pre Season)\|(Playoffs)$` | `Y` |  | 
-_**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` | 
+API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | ------------ | :-----------: | :---: | :---:
+_**MeasureType**_ | [MeasureTypeBase](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#MeasureType) | measure_type_base | `^(Base)$` | `Y` |  | 
+_**PaceAdjust**_ | [PaceAdjustNo](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PaceAdjust) | pace_adjust_no | `^(N)$` | `Y` |  | 
+_**PerMode**_ | [PerMode36](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PerMode) | per_mode36 | `^(Totals)\|(PerGame)\|(Per36)$` | `Y` |  | 
+_**PlayerID**_ | [PlayerID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerID) | player_id |  | `Y` |  | 
+_**PlusMinus**_ | [PlusMinusNo](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlusMinus) | plus_minus_no | `^(N)$` | `Y` |  | 
+_**Rank**_ | [RankNo](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Rank) | rank_no | `^(N)$` | `Y` |  | 
+_**Season**_ | [Season](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season | `^\d{4}-\d{2}$` | `Y` |  | 
+_**SeasonType**_ | [SeasonTypePlayoffs](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_playoffs | `^(Regular Season)\|(Pre Season)\|(Playoffs)$` | `Y` |  | 
+_**LeagueID**_ | [LeagueIDNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable | `(00)\|(20)\|(10)` |  | `Y` | 
 
 ## Data Sets
 #### DaysRestModified `days_rest_modified`
@@ -223,7 +224,7 @@ _**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` |
         ]
     },
     "endpoint": "PlayerFantasyProfile",
-    "last_validated_date": "2018-10-08",
+    "last_validated_date": "2018-12-11",
     "nullable_parameters": [
         "LeagueID"
     ],
@@ -263,4 +264,4 @@ _**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` |
 }
 ```
 
-Last validated 2018-10-08
+Last validated 2018-12-11

@@ -1,4 +1,5 @@
 # TeamYearByYearStats
+##### [nba_api/stats/endpoints/teamyearbyyearstats.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/teamyearbyyearstats.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/teamyearbyyearstats](https://stats.nba.com/stats/teamyearbyyearstats)
@@ -7,12 +8,12 @@
 >[https://stats.nba.com/stats/teamyearbyyearstats?LeagueID=00&PerMode=Totals&SeasonType=Regular+Season&TeamID=1610612739](https://stats.nba.com/stats/teamyearbyyearstats?LeagueID=00&PerMode=Totals&SeasonType=Regular+Season&TeamID=1610612739)
 
 ## Parameters
-Parameter Name | Pattern | Required | Nullable
------------- | :-----------: | :---: | :---:
-_**LeagueID**_ | `^\d{2}$` | `Y` |  | 
-_**PerMode**_ | `^(Totals)\|(PerGame)$` | `Y` |  | 
-_**SeasonType**_ | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star)$` | `Y` |  | 
-_**TeamID**_ |  | `Y` |  | 
+API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | ------------ | :-----------: | :---: | :---:
+_**LeagueID**_ | [LeagueID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^\d{2}$` | `Y` |  | 
+_**PerMode**_ | [PerModeSimple](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PerMode) | per_mode_simple | `^(Totals)\|(PerGame)$` | `Y` |  | 
+_**SeasonType**_ | [SeasonTypeAllStar](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_all_star | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star)$` | `Y` |  | 
+_**TeamID**_ | [TeamID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TeamID) | team_id |  | `Y` |  | 
 
 ## Data Sets
 #### TeamStats `team_stats`
@@ -63,7 +64,7 @@ _**TeamID**_ |  | `Y` |  |
         ]
     },
     "endpoint": "TeamYearByYearStats",
-    "last_validated_date": "2018-10-08",
+    "last_validated_date": "2018-12-11",
     "nullable_parameters": [],
     "parameter_patterns": {
         "LeagueID": "^\\d{2}$",
@@ -87,4 +88,4 @@ _**TeamID**_ |  | `Y` |  |
 }
 ```
 
-Last validated 2018-10-08
+Last validated 2018-12-11

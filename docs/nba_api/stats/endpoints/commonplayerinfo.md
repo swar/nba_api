@@ -1,4 +1,5 @@
 # CommonPlayerInfo
+##### [nba_api/stats/endpoints/commonplayerinfo.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/commonplayerinfo.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/commonplayerinfo](https://stats.nba.com/stats/commonplayerinfo)
@@ -7,10 +8,10 @@
 >[https://stats.nba.com/stats/commonplayerinfo?LeagueID=&PlayerID=2544](https://stats.nba.com/stats/commonplayerinfo?LeagueID=&PlayerID=2544)
 
 ## Parameters
-Parameter Name | Pattern | Required | Nullable
------------- | :-----------: | :---: | :---:
-_**PlayerID**_ |  | `Y` |  | 
-_**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` | 
+API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | ------------ | :-----------: | :---: | :---:
+_**PlayerID**_ | [PlayerID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerID) | player_id |  | `Y` |  | 
+_**LeagueID**_ | [LeagueIDNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable | `(00)\|(20)\|(10)` |  | `Y` | 
 
 ## Data Sets
 #### AvailableSeasons `available_seasons`
@@ -20,7 +21,7 @@ _**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` |
 
 #### CommonPlayerInfo `common_player_info`
 ```text
-['PERSON_ID', 'FIRST_NAME', 'LAST_NAME', 'DISPLAY_FIRST_LAST', 'DISPLAY_LAST_COMMA_FIRST', 'DISPLAY_FI_LAST', 'BIRTHDATE', 'SCHOOL', 'COUNTRY', 'LAST_AFFILIATION', 'HEIGHT', 'WEIGHT', 'SEASON_EXP', 'JERSEY', 'POSITION', 'ROSTERSTATUS', 'TEAM_ID', 'TEAM_NAME', 'TEAM_ABBREVIATION', 'TEAM_CODE', 'TEAM_CITY', 'PLAYERCODE', 'FROM_YEAR', 'TO_YEAR', 'DLEAGUE_FLAG', 'GAMES_PLAYED_FLAG', 'DRAFT_YEAR', 'DRAFT_ROUND', 'DRAFT_NUMBER']
+['PERSON_ID', 'FIRST_NAME', 'LAST_NAME', 'DISPLAY_FIRST_LAST', 'DISPLAY_LAST_COMMA_FIRST', 'DISPLAY_FI_LAST', 'BIRTHDATE', 'SCHOOL', 'COUNTRY', 'LAST_AFFILIATION', 'HEIGHT', 'WEIGHT', 'SEASON_EXP', 'JERSEY', 'POSITION', 'ROSTERSTATUS', 'TEAM_ID', 'TEAM_NAME', 'TEAM_ABBREVIATION', 'TEAM_CODE', 'TEAM_CITY', 'PLAYERCODE', 'FROM_YEAR', 'TO_YEAR', 'DLEAGUE_FLAG', 'NBA_FLAG', 'GAMES_PLAYED_FLAG', 'DRAFT_YEAR', 'DRAFT_ROUND', 'DRAFT_NUMBER']
 ```
 
 #### PlayerHeadlineStats `player_headline_stats`
@@ -62,6 +63,7 @@ _**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` |
             "FROM_YEAR",
             "TO_YEAR",
             "DLEAGUE_FLAG",
+            "NBA_FLAG",
             "GAMES_PLAYED_FLAG",
             "DRAFT_YEAR",
             "DRAFT_ROUND",
@@ -78,7 +80,7 @@ _**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` |
         ]
     },
     "endpoint": "CommonPlayerInfo",
-    "last_validated_date": "2018-10-08",
+    "last_validated_date": "2018-12-11",
     "nullable_parameters": [
         "LeagueID"
     ],
@@ -97,4 +99,4 @@ _**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` |
 }
 ```
 
-Last validated 2018-10-08
+Last validated 2018-12-11

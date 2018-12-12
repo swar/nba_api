@@ -1,4 +1,5 @@
 # DraftHistory
+##### [nba_api/stats/endpoints/drafthistory.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/drafthistory.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/drafthistory](https://stats.nba.com/stats/drafthistory)
@@ -7,16 +8,16 @@
 >[https://stats.nba.com/stats/drafthistory?College=&LeagueID=00&OverallPick=&RoundNum=&RoundPick=&Season=&TeamID=&TopX=](https://stats.nba.com/stats/drafthistory?College=&LeagueID=00&OverallPick=&RoundNum=&RoundPick=&Season=&TeamID=&TopX=)
 
 ## Parameters
-Parameter Name | Pattern | Required | Nullable
------------- | :-----------: | :---: | :---:
-_**LeagueID**_ | `^\d{2}$` | `Y` |  | 
-_**TopX**_ |  |  | `Y` | 
-_**TeamID**_ |  |  | `Y` | 
-_**Season**_ | `^\d{4}$` |  | `Y` | 
-_**RoundPick**_ |  |  | `Y` | 
-_**RoundNum**_ |  |  | `Y` | 
-_**OverallPick**_ |  |  | `Y` | 
-_**College**_ |  |  | `Y` | 
+API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | ------------ | :-----------: | :---: | :---:
+_**LeagueID**_ | [LeagueID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^\d{2}$` | `Y` |  | 
+_**TopX**_ | [TopXNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TopX) | topx_nullable |  |  | `Y` | 
+_**TeamID**_ | [TeamIDNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TeamID) | team_id_nullable |  |  | `Y` | 
+_**Season**_ | [SeasonYearNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season_year_nullable | `^\d{4}$` |  | `Y` | 
+_**RoundPick**_ | [RoundPickNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#RoundPick) | round_pick_nullable |  |  | `Y` | 
+_**RoundNum**_ | [RoundNumNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#RoundNum) | round_num_nullable |  |  | `Y` | 
+_**OverallPick**_ | [OverallPickNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#OverallPick) | overall_pick_nullable |  |  | `Y` | 
+_**College**_ | [CollegeNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#College) | college_nullable |  |  | `Y` | 
 
 ## Data Sets
 #### DraftHistory `draft_history`
@@ -45,7 +46,7 @@ _**College**_ |  |  | `Y` |
         ]
     },
     "endpoint": "DraftHistory",
-    "last_validated_date": "2018-10-08",
+    "last_validated_date": "2018-12-11",
     "nullable_parameters": [
         "College",
         "OverallPick",
@@ -82,4 +83,4 @@ _**College**_ |  |  | `Y` |
 }
 ```
 
-Last validated 2018-10-08
+Last validated 2018-12-11

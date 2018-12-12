@@ -1,17 +1,18 @@
 # CommonTeamRoster
+##### [nba_api/stats/endpoints/commonteamroster.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/commonteamroster.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/commonteamroster](https://stats.nba.com/stats/commonteamroster)
 
 ##### Valid URL
->[https://stats.nba.com/stats/commonteamroster?LeagueID=&Season=2017-18&TeamID=1610612739](https://stats.nba.com/stats/commonteamroster?LeagueID=&Season=2017-18&TeamID=1610612739)
+>[https://stats.nba.com/stats/commonteamroster?LeagueID=&Season=2018-19&TeamID=1610612739](https://stats.nba.com/stats/commonteamroster?LeagueID=&Season=2018-19&TeamID=1610612739)
 
 ## Parameters
-Parameter Name | Pattern | Required | Nullable
------------- | :-----------: | :---: | :---:
-_**Season**_ | `^\d{4}-\d{2}$` | `Y` |  | 
-_**TeamID**_ |  | `Y` |  | 
-_**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` | 
+API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | ------------ | :-----------: | :---: | :---:
+_**Season**_ | [Season](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season | `^\d{4}-\d{2}$` | `Y` |  | 
+_**TeamID**_ | [TeamID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TeamID) | team_id |  | `Y` |  | 
+_**LeagueID**_ | [LeagueIDNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable | `(00)\|(20)\|(10)` |  | `Y` | 
 
 ## Data Sets
 #### Coaches `coaches`
@@ -59,7 +60,7 @@ _**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` |
         ]
     },
     "endpoint": "CommonTeamRoster",
-    "last_validated_date": "2018-10-08",
+    "last_validated_date": "2018-12-11",
     "nullable_parameters": [
         "LeagueID"
     ],
@@ -81,4 +82,4 @@ _**LeagueID**_ | `(00)\|(20)\|(10)` |  | `Y` |
 }
 ```
 
-Last validated 2018-10-08
+Last validated 2018-12-11

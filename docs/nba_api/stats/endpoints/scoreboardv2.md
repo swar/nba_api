@@ -1,17 +1,18 @@
 # ScoreboardV2
+##### [nba_api/stats/endpoints/scoreboardv2.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/scoreboardv2.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/scoreboardv2](https://stats.nba.com/stats/scoreboardv2)
 
 ##### Valid URL
->[https://stats.nba.com/stats/scoreboardv2?DayOffset=0&GameDate=2018-10-08&LeagueID=00](https://stats.nba.com/stats/scoreboardv2?DayOffset=0&GameDate=2018-10-08&LeagueID=00)
+>[https://stats.nba.com/stats/scoreboardv2?DayOffset=0&GameDate=2018-12-11&LeagueID=00](https://stats.nba.com/stats/scoreboardv2?DayOffset=0&GameDate=2018-12-11&LeagueID=00)
 
 ## Parameters
-Parameter Name | Pattern | Required | Nullable
------------- | :-----------: | :---: | :---:
-_**DayOffset**_ | `^-{0,1}\d+$` | `Y` |  | 
-_**GameDate**_ |  | `Y` |  | 
-_**LeagueID**_ | `^\d{2}$` | `Y` |  | 
+API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | ------------ | :-----------: | :---: | :---:
+_**DayOffset**_ | [DayOffset](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DayOffset) | day_offset | `^-{0,1}\d+$` | `Y` |  | 
+_**GameDate**_ | [GameDate](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameDate) | game_date |  | `Y` |  | 
+_**LeagueID**_ | [LeagueID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^\d{2}$` | `Y` |  | 
 
 ## Data Sets
 #### Available `available`
@@ -198,7 +199,7 @@ _**LeagueID**_ | `^\d{2}$` | `Y` |  |
         "WinProbability": []
     },
     "endpoint": "ScoreboardV2",
-    "last_validated_date": "2018-10-08",
+    "last_validated_date": "2018-12-11",
     "nullable_parameters": [],
     "parameter_patterns": {
         "DayOffset": "^-{0,1}\\d+$",
@@ -219,4 +220,4 @@ _**LeagueID**_ | `^\d{2}$` | `Y` |  |
 }
 ```
 
-Last validated 2018-10-08
+Last validated 2018-12-11

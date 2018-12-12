@@ -1,4 +1,5 @@
 # TeamDetails
+##### [nba_api/stats/endpoints/teamdetails.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/teamdetails.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/teamdetails](https://stats.nba.com/stats/teamdetails)
@@ -7,9 +8,9 @@
 >[https://stats.nba.com/stats/teamdetails?TeamID=1610612739](https://stats.nba.com/stats/teamdetails?TeamID=1610612739)
 
 ## Parameters
-Parameter Name | Pattern | Required | Nullable
------------- | :-----------: | :---: | :---:
-_**TeamID**_ |  | `Y` |  | 
+API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | ------------ | :-----------: | :---: | :---:
+_**TeamID**_ | [TeamID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TeamID) | team_id |  | `Y` |  | 
 
 ## Data Sets
 #### TeamAwardsChampionships `team_awards_championships`
@@ -111,7 +112,7 @@ _**TeamID**_ |  | `Y` |  |
         ]
     },
     "endpoint": "TeamDetails",
-    "last_validated_date": "2018-10-08",
+    "last_validated_date": "2018-12-11",
     "nullable_parameters": [],
     "parameter_patterns": {
         "TeamID": null
@@ -126,4 +127,4 @@ _**TeamID**_ |  | `Y` |  |
 }
 ```
 
-Last validated 2018-10-08
+Last validated 2018-12-11

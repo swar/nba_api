@@ -1,16 +1,17 @@
 # VideoStatus
+##### [nba_api/stats/endpoints/videostatus.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/videostatus.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/videostatus](https://stats.nba.com/stats/videostatus)
 
 ##### Valid URL
->[https://stats.nba.com/stats/videostatus?GameDate=2018-10-08&LeagueID=00](https://stats.nba.com/stats/videostatus?GameDate=2018-10-08&LeagueID=00)
+>[https://stats.nba.com/stats/videostatus?GameDate=2018-12-11&LeagueID=00](https://stats.nba.com/stats/videostatus?GameDate=2018-12-11&LeagueID=00)
 
 ## Parameters
-Parameter Name | Pattern | Required | Nullable
------------- | :-----------: | :---: | :---:
-_**GameDate**_ |  | `Y` |  | 
-_**LeagueID**_ | `^\d{2}$` | `Y` |  | 
+API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | ------------ | :-----------: | :---: | :---:
+_**GameDate**_ | [GameDate](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameDate) | game_date |  | `Y` |  | 
+_**LeagueID**_ | [LeagueID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^\d{2}$` | `Y` |  | 
 
 ## Data Sets
 #### VideoStatus `video_status`
@@ -41,7 +42,7 @@ _**LeagueID**_ | `^\d{2}$` | `Y` |  |
         ]
     },
     "endpoint": "VideoStatus",
-    "last_validated_date": "2018-10-08",
+    "last_validated_date": "2018-12-11",
     "nullable_parameters": [],
     "parameter_patterns": {
         "GameDate": null,
@@ -59,4 +60,4 @@ _**LeagueID**_ | `^\d{2}$` | `Y` |  |
 }
 ```
 
-Last validated 2018-10-08
+Last validated 2018-12-11

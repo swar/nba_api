@@ -1,23 +1,24 @@
 # LeagueGameLog
+##### [nba_api/stats/endpoints/leaguegamelog.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/leaguegamelog.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/leaguegamelog](https://stats.nba.com/stats/leaguegamelog)
 
 ##### Valid URL
->[https://stats.nba.com/stats/leaguegamelog?Counter=0&DateFrom=&DateTo=&Direction=ASC&LeagueID=00&PlayerOrTeam=T&Season=2017-18&SeasonType=Regular+Season&Sorter=DATE](https://stats.nba.com/stats/leaguegamelog?Counter=0&DateFrom=&DateTo=&Direction=ASC&LeagueID=00&PlayerOrTeam=T&Season=2017-18&SeasonType=Regular+Season&Sorter=DATE)
+>[https://stats.nba.com/stats/leaguegamelog?Counter=0&DateFrom=&DateTo=&Direction=ASC&LeagueID=00&PlayerOrTeam=T&Season=2018-19&SeasonType=Regular+Season&Sorter=DATE](https://stats.nba.com/stats/leaguegamelog?Counter=0&DateFrom=&DateTo=&Direction=ASC&LeagueID=00&PlayerOrTeam=T&Season=2018-19&SeasonType=Regular+Season&Sorter=DATE)
 
 ## Parameters
-Parameter Name | Pattern | Required | Nullable
------------- | :-----------: | :---: | :---:
-_**Counter**_ |  |  |  | 
-_**Direction**_ | `^(ASC)\|(DESC)$` | `Y` |  | 
-_**LeagueID**_ | `^(00)\|(20)$` | `Y` |  | 
-_**PlayerOrTeam**_ | `^(P)\|(T)$` | `Y` |  | 
-_**Season**_ | `^(\d{4}-\d{2})\|(ALLTIME)$` | `Y` |  | 
-_**SeasonType**_ | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star)\|(All-Star)$` | `Y` |  | 
-_**Sorter**_ | `^((FGM)\|(FGA)\|(FG_PCT)\|(FG3M)\|(FG3A)\|(FG3_PCT)\|(FTM)\|(FTA)\|(FT_PCT)\|(OREB)\|(DREB)\|(AST)\|(STL)\|(BLK)\|(TOV)\|(REB)\|(PTS)\|(DATE))$` | `Y` |  | 
-_**DateTo**_ |  |  | `Y` | 
-_**DateFrom**_ |  |  | `Y` | 
+API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | ------------ | :-----------: | :---: | :---:
+_**Counter**_ | [Counter](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Counter) | counter |  |  |  | 
+_**Direction**_ | [Direction](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Direction) | direction | `^(ASC)\|(DESC)$` | `Y` |  | 
+_**LeagueID**_ | [LeagueID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^(00)\|(20)$` | `Y` |  | 
+_**PlayerOrTeam**_ | [PlayerOrTeamAbbreviation](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerOrTeam) | player_or_team_abbreviation | `^(P)\|(T)$` | `Y` |  | 
+_**Season**_ | [SeasonAllTime](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season_all_time | `^(\d{4}-\d{2})\|(ALLTIME)$` | `Y` |  | 
+_**SeasonType**_ | [SeasonTypeAllStar](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_all_star | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star)\|(All-Star)$` | `Y` |  | 
+_**Sorter**_ | [Sorter](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Sorter) | sorter | `^((FGM)\|(FGA)\|(FG_PCT)\|(FG3M)\|(FG3A)\|(FG3_PCT)\|(FTM)\|(FTA)\|(FT_PCT)\|(OREB)\|(DREB)\|(AST)\|(STL)\|(BLK)\|(TOV)\|(REB)\|(PTS)\|(DATE))$` | `Y` |  | 
+_**DateTo**_ | [DateToNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DateTo) | date_to_nullable |  |  | `Y` | 
+_**DateFrom**_ | [DateFromNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DateFrom) | date_from_nullable |  |  | `Y` | 
 
 ## Data Sets
 #### LeagueGameLog `league_game_log`
@@ -63,7 +64,7 @@ _**DateFrom**_ |  |  | `Y` |
         ]
     },
     "endpoint": "LeagueGameLog",
-    "last_validated_date": "2018-10-08",
+    "last_validated_date": "2018-12-11",
     "nullable_parameters": [
         "DateFrom",
         "DateTo"
@@ -102,4 +103,4 @@ _**DateFrom**_ |  |  | `Y` |
 }
 ```
 
-Last validated 2018-10-08
+Last validated 2018-12-11

@@ -1,4 +1,5 @@
 # TeamInfoCommon
+##### [nba_api/stats/endpoints/teaminfocommon.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/teaminfocommon.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/teaminfocommon](https://stats.nba.com/stats/teaminfocommon)
@@ -7,12 +8,12 @@
 >[https://stats.nba.com/stats/teaminfocommon?LeagueID=00&Season=&SeasonType=&TeamID=1610612739](https://stats.nba.com/stats/teaminfocommon?LeagueID=00&Season=&SeasonType=&TeamID=1610612739)
 
 ## Parameters
-Parameter Name | Pattern | Required | Nullable
------------- | :-----------: | :---: | :---:
-_**LeagueID**_ | `^\d{2}$` | `Y` |  | 
-_**TeamID**_ |  | `Y` |  | 
-_**SeasonType**_ |  |  | `Y` | 
-_**Season**_ |  |  | `Y` | 
+API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | ------------ | :-----------: | :---: | :---:
+_**LeagueID**_ | [LeagueID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^\d{2}$` | `Y` |  | 
+_**TeamID**_ | [TeamID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TeamID) | team_id |  | `Y` |  | 
+_**SeasonType**_ | [SeasonTypeNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_nullable |  |  | `Y` | 
+_**Season**_ | [SeasonNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season_nullable |  |  | `Y` | 
 
 ## Data Sets
 #### AvailableSeasons `available_seasons`
@@ -70,7 +71,7 @@ _**Season**_ |  |  | `Y` |
         ]
     },
     "endpoint": "TeamInfoCommon",
-    "last_validated_date": "2018-10-08",
+    "last_validated_date": "2018-12-11",
     "nullable_parameters": [
         "Season",
         "SeasonType"
@@ -95,4 +96,4 @@ _**Season**_ |  |  | `Y` |
 }
 ```
 
-Last validated 2018-10-08
+Last validated 2018-12-11

@@ -1,16 +1,17 @@
 # DraftCombineNonStationaryShooting
+##### [nba_api/stats/endpoints/draftcombinenonstationaryshooting.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/draftcombinenonstationaryshooting.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/draftcombinenonstationaryshooting](https://stats.nba.com/stats/draftcombinenonstationaryshooting)
 
 ##### Valid URL
->[https://stats.nba.com/stats/draftcombinenonstationaryshooting?LeagueID=00&SeasonYear=2017-18](https://stats.nba.com/stats/draftcombinenonstationaryshooting?LeagueID=00&SeasonYear=2017-18)
+>[https://stats.nba.com/stats/draftcombinenonstationaryshooting?LeagueID=00&SeasonYear=2018-19](https://stats.nba.com/stats/draftcombinenonstationaryshooting?LeagueID=00&SeasonYear=2018-19)
 
 ## Parameters
-Parameter Name | Pattern | Required | Nullable
------------- | :-----------: | :---: | :---:
-_**LeagueID**_ | `^(00)\|(10)\|(20)$` | `Y` |  | 
-_**SeasonYear**_ | `^\d{4}-\d{2}$` | `Y` |  | 
+API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | ------------ | :-----------: | :---: | :---:
+_**LeagueID**_ | [LeagueID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^(00)\|(10)\|(20)$` | `Y` |  | 
+_**SeasonYear**_ | [Season](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonYear) | season | `^\d{4}-\d{2}$` | `Y` |  | 
 
 ## Data Sets
 #### Results `results`
@@ -57,7 +58,7 @@ _**SeasonYear**_ | `^\d{4}-\d{2}$` | `Y` |  |
         ]
     },
     "endpoint": "DraftCombineNonStationaryShooting",
-    "last_validated_date": "2018-10-08",
+    "last_validated_date": "2018-12-11",
     "nullable_parameters": [],
     "parameter_patterns": {
         "LeagueID": "^(00)|(10)|(20)$",
@@ -75,4 +76,4 @@ _**SeasonYear**_ | `^\d{4}-\d{2}$` | `Y` |  |
 }
 ```
 
-Last validated 2018-10-08
+Last validated 2018-12-11

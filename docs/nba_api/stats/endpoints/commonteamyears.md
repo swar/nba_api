@@ -1,4 +1,5 @@
 # CommonTeamYears
+##### [nba_api/stats/endpoints/commonteamyears.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/commonteamyears.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/commonteamyears](https://stats.nba.com/stats/commonteamyears)
@@ -7,9 +8,9 @@
 >[https://stats.nba.com/stats/commonteamyears?LeagueID=00](https://stats.nba.com/stats/commonteamyears?LeagueID=00)
 
 ## Parameters
-Parameter Name | Pattern | Required | Nullable
------------- | :-----------: | :---: | :---:
-_**LeagueID**_ | `^\d{2}$` | `Y` |  | 
+API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | ------------ | :-----------: | :---: | :---:
+_**LeagueID**_ | [LeagueID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^\d{2}$` | `Y` |  | 
 
 ## Data Sets
 #### TeamYears `team_years`
@@ -31,7 +32,7 @@ _**LeagueID**_ | `^\d{2}$` | `Y` |  |
         ]
     },
     "endpoint": "CommonTeamYears",
-    "last_validated_date": "2018-10-08",
+    "last_validated_date": "2018-12-11",
     "nullable_parameters": [],
     "parameter_patterns": {
         "LeagueID": "^\\d{2}$"
@@ -46,4 +47,4 @@ _**LeagueID**_ | `^\d{2}$` | `Y` |  |
 }
 ```
 
-Last validated 2018-10-08
+Last validated 2018-12-11

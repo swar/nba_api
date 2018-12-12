@@ -1,17 +1,18 @@
 # TeamHistoricalLeaders
+##### [nba_api/stats/endpoints/teamhistoricalleaders.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/teamhistoricalleaders.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/teamhistoricalleaders](https://stats.nba.com/stats/teamhistoricalleaders)
 
 ##### Valid URL
->[https://stats.nba.com/stats/teamhistoricalleaders?LeagueID=00&SeasonID=22017&TeamID=1610612739](https://stats.nba.com/stats/teamhistoricalleaders?LeagueID=00&SeasonID=22017&TeamID=1610612739)
+>[https://stats.nba.com/stats/teamhistoricalleaders?LeagueID=00&SeasonID=22018&TeamID=1610612739](https://stats.nba.com/stats/teamhistoricalleaders?LeagueID=00&SeasonID=22018&TeamID=1610612739)
 
 ## Parameters
-Parameter Name | Pattern | Required | Nullable
------------- | :-----------: | :---: | :---:
-_**LeagueID**_ | `^\d{2}$` | `Y` |  | 
-_**SeasonID**_ | `^\d{5}$` | `Y` |  | 
-_**TeamID**_ |  | `Y` |  | 
+API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | ------------ | :-----------: | :---: | :---:
+_**LeagueID**_ | [LeagueID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^\d{2}$` | `Y` |  | 
+_**SeasonID**_ | [SeasonID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonID) | season_id | `^\d{5}$` | `Y` |  | 
+_**TeamID**_ | [TeamID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TeamID) | team_id |  | `Y` |  | 
 
 ## Data Sets
 #### CareerLeadersByTeam `career_leaders_by_team`
@@ -45,7 +46,7 @@ _**TeamID**_ |  | `Y` |  |
         ]
     },
     "endpoint": "TeamHistoricalLeaders",
-    "last_validated_date": "2018-10-08",
+    "last_validated_date": "2018-12-11",
     "nullable_parameters": [],
     "parameter_patterns": {
         "LeagueID": "^\\d{2}$",
@@ -66,4 +67,4 @@ _**TeamID**_ |  | `Y` |  |
 }
 ```
 
-Last validated 2018-10-08
+Last validated 2018-12-11
