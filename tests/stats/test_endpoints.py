@@ -39,7 +39,7 @@ if not test:
 test = commonteamyears.CommonTeamYears().nba_response.valid_json()
 if not test:
     raise Exception('fail', 'commonteamyears')
-test = defensehub.DefenseHub().nba_response.valid_json()
+test = defensehub.DefenseHub(season='2017-18').nba_response.valid_json()
 if not test:
     raise Exception('fail', 'defensehub')
 test = draftcombinedrillresults.DraftCombineDrillResults().nba_response.valid_json()
@@ -199,13 +199,6 @@ if not test:
 test = playervsplayer.PlayerVsPlayer(player_id='2544', vs_player_id='202681').nba_response.valid_json()
 if not test:
     raise Exception('fail', 'playervsplayer')
-test = playersvsplayers.PlayersVsPlayers(player_id1='202681', player_id2='203078', player_id3='202681',
-                                         player_id4='201567', player_id5='203954', vs_player_id1='201566',
-                                         vs_player_id2='201939', vs_player_id3='201935', vs_player_id4='201142',
-                                         vs_player_id5='203076', player_team_id='1610612739',
-                                         vs_team_id='1610612765').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'playersvsplayers')
 test = playoffpicture.PlayoffPicture().nba_response.valid_json()
 if not test:
     raise Exception('fail', 'playoffpicture')

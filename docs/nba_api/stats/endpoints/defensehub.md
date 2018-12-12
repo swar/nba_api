@@ -5,7 +5,7 @@
 >[https://stats.nba.com/stats/defensehub](https://stats.nba.com/stats/defensehub)
 
 ##### Valid URL
->[https://stats.nba.com/stats/defensehub?GameScope=Season&LeagueID=00&PlayerOrTeam=Team&PlayerScope=All+Players&Season=2018-19&SeasonType=Regular+Season](https://stats.nba.com/stats/defensehub?GameScope=Season&LeagueID=00&PlayerOrTeam=Team&PlayerScope=All+Players&Season=2018-19&SeasonType=Regular+Season)
+>[https://stats.nba.com/stats/defensehub?GameScope=Season&LeagueID=00&PlayerOrTeam=Team&PlayerScope=All+Players&Season=2017-18&SeasonType=Regular+Season](https://stats.nba.com/stats/defensehub?GameScope=Season&LeagueID=00&PlayerOrTeam=Team&PlayerScope=All+Players&Season=2017-18&SeasonType=Regular+Season)
 
 ## Parameters
 API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable

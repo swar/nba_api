@@ -13,7 +13,7 @@ __all__ = ['boxscoreadvancedv2', 'boxscorefourfactorsv2', 'boxscoremiscv2', 'box
            'playerdashboardbylastngames', 'playerdashboardbyopponent', 'playerdashboardbyshootingsplits',
            'playerdashboardbyteamperformance', 'playerdashboardbyyearoveryear', 'playerfantasyprofile',
            'playerfantasyprofilebargraph', 'playergamelog', 'playergamestreakfinder', 'playernextngames',
-           'playerprofilev2', 'playervsplayer', 'playersvsplayers', 'playoffpicture', 'scoreboard', 'scoreboardv2',
+           'playerprofilev2', 'playervsplayer', 'playoffpicture', 'scoreboard', 'scoreboardv2',
            'shotchartdetail', 'shotchartlineupdetail', 'teamdashlineups', 'teamdashptpass', 'teamdashptreb',
            'teamdashptshots', 'teamdashboardbyclutch', 'teamdashboardbygamesplits', 'teamdashboardbygeneralsplits',
            'teamdashboardbylastngames', 'teamdashboardbyopponent', 'teamdashboardbyshootingsplits',
