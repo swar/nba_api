@@ -1,3 +1,8 @@
+# `v1.0.7`
+#### TBD
+`stats.nba.com`
+* PlayersVsPlayers no longer valid.
+
 # `v1.0.6`
 #### 2018-10-11
 * Accidentally distributed with DEBUG Mode enabled in `v1.0.5`.
