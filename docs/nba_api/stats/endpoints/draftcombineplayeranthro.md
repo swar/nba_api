@@ -8,10 +8,10 @@
 >[https://stats.nba.com/stats/draftcombineplayeranthro?LeagueID=00&SeasonYear=2018-19](https://stats.nba.com/stats/draftcombineplayeranthro?LeagueID=00&SeasonYear=2018-19)
 
 ## Parameters
-API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+API Parameter Name | Python Parameter Variable | Parameter Mapping Class | Pattern | Required | Nullable
 ------------ | ------------ | ------------ | :-----------: | :---: | :---:
-_**LeagueID**_ | [LeagueID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^(00)\|(10)\|(20)$` | `Y` |  | 
-_**SeasonYear**_ | [Season](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonYear) | season | `^\d{4}-\d{2}$` | `Y` |  | 
+[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | LeagueID | `^(00)\|(10)\|(20)$` | `Y` |  | 
+[_**SeasonYear**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonYear) | season | Season | `^\d{4}-\d{2}$` | `Y` |  | 
 
 ## Data Sets
 #### Results `results`

@@ -59,12 +59,12 @@ def get_endpoint_documentation(endpoint, endpoints_information):
             nullable = '`Y`'
             map_key = 'nullable'
 
-        python_parameter_class = parameter_map[parameter][map_key][parameter_patterns[parameter]]
-        python_parameter_variable = get_python_variable_name(python_parameter_class)
+        parameter_mapping_class = parameter_map[parameter][map_key][parameter_patterns[parameter]]
+        python_parameter_variable = get_python_variable_name(parameter_mapping_class)
 
         parameter_line = parameter_line_template.format(api_parameter_name=parameter,
-                                                        python_parameter_class=python_parameter_class,
                                                         python_parameter_variable=python_parameter_variable,
+                                                        parameter_mapping_class=parameter_mapping_class,
                                                         pattern=pattern, required=required, nullable=nullable)
         if parameter in nullable_parameters:
             parameter_texts.append(parameter_line)

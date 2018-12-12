@@ -8,10 +8,10 @@
 >[https://stats.nba.com/stats/videoevents?GameEventID=0&GameID=0021700807](https://stats.nba.com/stats/videoevents?GameEventID=0&GameID=0021700807)
 
 ## Parameters
-API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+API Parameter Name | Python Parameter Variable | Parameter Mapping Class | Pattern | Required | Nullable
 ------------ | ------------ | ------------ | :-----------: | :---: | :---:
-_**GameEventID**_ | [GameEventID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameEventID) | game_event_id |  | `Y` |  | 
-_**GameID**_ | [GameID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameID) | game_id | `^(\d{10})?$` | `Y` |  | 
+[_**GameEventID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameEventID) | game_event_id | GameEventID |  | `Y` |  | 
+[_**GameID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameID) | game_id | GameID | `^(\d{10})?$` | `Y` |  | 
 
 ## Data Sets
 

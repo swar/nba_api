@@ -8,11 +8,11 @@
 >[https://stats.nba.com/stats/scoreboard?DayOffset=0&GameDate=2018-12-11&LeagueID=00](https://stats.nba.com/stats/scoreboard?DayOffset=0&GameDate=2018-12-11&LeagueID=00)
 
 ## Parameters
-API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+API Parameter Name | Python Parameter Variable | Parameter Mapping Class | Pattern | Required | Nullable
 ------------ | ------------ | ------------ | :-----------: | :---: | :---:
-_**DayOffset**_ | [DayOffset](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DayOffset) | day_offset | `^-{0,1}\d+$` | `Y` |  | 
-_**GameDate**_ | [GameDate](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameDate) | game_date |  | `Y` |  | 
-_**LeagueID**_ | [LeagueID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^\d{2}$` | `Y` |  | 
+[_**DayOffset**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DayOffset) | day_offset | DayOffset | `^-{0,1}\d+$` | `Y` |  | 
+[_**GameDate**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameDate) | game_date | GameDate |  | `Y` |  | 
+[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | LeagueID | `^\d{2}$` | `Y` |  | 
 
 ## Data Sets
 #### Available `available`

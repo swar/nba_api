@@ -8,15 +8,15 @@
 >[https://stats.nba.com/stats/leagueleaders?ActiveFlag=&LeagueID=00&PerMode=Totals&Scope=S&Season=2018-19&SeasonType=Regular+Season&StatCategory=PTS](https://stats.nba.com/stats/leagueleaders?ActiveFlag=&LeagueID=00&PerMode=Totals&Scope=S&Season=2018-19&SeasonType=Regular+Season&StatCategory=PTS)
 
 ## Parameters
-API Parameter Name | Python Parameter Class | Python Parameter Variable | Pattern | Required | Nullable
+API Parameter Name | Python Parameter Variable | Parameter Mapping Class | Pattern | Required | Nullable
 ------------ | ------------ | ------------ | :-----------: | :---: | :---:
-_**LeagueID**_ | [LeagueID](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^\d{2}$` | `Y` |  | 
-_**PerMode**_ | [PerMode48](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PerMode) | per_mode48 | `^(Totals)\|(PerGame)\|(Per48)$` | `Y` |  | 
-_**Scope**_ | [Scope](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Scope) | scope | `^(RS)\|(S)\|(Rookies)$` | `Y` |  | 
-_**Season**_ | [SeasonAll_Time](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season_all_time | `^(\d{4}-\d{2})\|(All Time)$` | `Y` |  | 
-_**SeasonType**_ | [SeasonTypeAllStar](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_all_star | `^(Regular Season)\|(Playoffs)\|(All Star)\|(Pre Season)$` | `Y` |  | 
-_**StatCategory**_ | [StatCategoryAbbreviation](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#StatCategory) | stat_category_abbreviation |  | `Y` |  | 
-_**ActiveFlag**_ | [ActiveFlagNullable](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#ActiveFlag) | active_flag_nullable |  |  | `Y` | 
+[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | LeagueID | `^\d{2}$` | `Y` |  | 
+[_**PerMode**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PerMode) | per_mode48 | PerMode48 | `^(Totals)\|(PerGame)\|(Per48)$` | `Y` |  | 
+[_**Scope**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Scope) | scope | Scope | `^(RS)\|(S)\|(Rookies)$` | `Y` |  | 
+[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season_all_time | SeasonAll_Time | `^(\d{4}-\d{2})\|(All Time)$` | `Y` |  | 
+[_**SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_all_star | SeasonTypeAllStar | `^(Regular Season)\|(Playoffs)\|(All Star)\|(Pre Season)$` | `Y` |  | 
+[_**StatCategory**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#StatCategory) | stat_category_abbreviation | StatCategoryAbbreviation |  | `Y` |  | 
+[_**ActiveFlag**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#ActiveFlag) | active_flag_nullable | ActiveFlagNullable |  |  | `Y` | 
 
 ## Data Sets
 #### LeagueLeaders `league_leaders`
