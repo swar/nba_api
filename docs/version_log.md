@@ -1,5 +1,5 @@
 # `v1.0.7`
-#### TBD
+#### 2018-12-11
 `stats.nba.com`
 * PlayersVsPlayers no longer valid.
 * Adding TwoWay to parameters
