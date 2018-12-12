@@ -7,6 +7,9 @@
 `Documentation`
 * Updating Endpoint docs with Python variables for [#19](https://github.com/swar/nba_api/issues/19).
 
+`Endpoint Documentation Generator`
+* Updating Endpoint docs with Python variables for [#19](https://github.com/swar/nba_api/issues/19).
+
 # `v1.0.6`
 #### 2018-10-11
 * Accidentally distributed with DEBUG Mode enabled in `v1.0.5`.

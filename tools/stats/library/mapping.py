@@ -1911,6 +1911,11 @@ parameter_variations = {
         'parameter_value': '',
         'parameter_error_value': 'a',
     },
+    'TwoWayNullable': {
+        'default_py_value': "''",
+        'parameter_value': '',
+        'parameter_error_value': 'a',
+    },
 }
 
 parameter_map = {
@@ -4245,6 +4250,14 @@ parameter_map = {
     'DraftRound': {
         'nullable': {
             None: 'DraftRoundNullable'
+        },
+        'non-nullable': {
+
+        }
+    },
+    'TwoWay': {
+        'nullable': {
+            None: 'TwoWayNullable'
         },
         'non-nullable': {
 
