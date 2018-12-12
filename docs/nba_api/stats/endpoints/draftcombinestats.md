@@ -8,10 +8,10 @@
 >[https://stats.nba.com/stats/draftcombinestats?LeagueID=00&SeasonYear=2018-19](https://stats.nba.com/stats/draftcombinestats?LeagueID=00&SeasonYear=2018-19)
 
 ## Parameters
-API Parameter Name | Python Parameter Variable | Parameter Mapping Class | Pattern | Required | Nullable
------------- | ------------ | ------------ | :-----------: | :---: | :---:
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | LeagueID | `^(00)\|(10)\|(20)$` | `Y` |  | 
-[_**SeasonYear**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonYear) | season_all_time | SeasonAll_Time | `^(\d{4}-\d{2})\|(All Time)$` | `Y` |  | 
+API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | :-----------: | :---: | :---:
+[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^(00)\|(10)\|(20)$` | `Y` |  | 
+[_**SeasonYear**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonYear) | season_all_time | `^(\d{4}-\d{2})\|(All Time)$` | `Y` |  | 
 
 ## Data Sets
 #### DraftCombineStats `draft_combine_stats`

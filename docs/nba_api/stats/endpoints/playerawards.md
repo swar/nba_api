@@ -8,9 +8,9 @@
 >[https://stats.nba.com/stats/playerawards?PlayerID=2544](https://stats.nba.com/stats/playerawards?PlayerID=2544)
 
 ## Parameters
-API Parameter Name | Python Parameter Variable | Parameter Mapping Class | Pattern | Required | Nullable
------------- | ------------ | ------------ | :-----------: | :---: | :---:
-[_**PlayerID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerID) | player_id | PlayerID |  | `Y` |  | 
+API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | :-----------: | :---: | :---:
+[_**PlayerID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerID) | player_id |  | `Y` |  | 
 
 ## Data Sets
 #### PlayerAwards `player_awards`

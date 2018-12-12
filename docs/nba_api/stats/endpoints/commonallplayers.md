@@ -8,11 +8,11 @@
 >[https://stats.nba.com/stats/commonallplayers?IsOnlyCurrentSeason=0&LeagueID=00&Season=2018-19](https://stats.nba.com/stats/commonallplayers?IsOnlyCurrentSeason=0&LeagueID=00&Season=2018-19)
 
 ## Parameters
-API Parameter Name | Python Parameter Variable | Parameter Mapping Class | Pattern | Required | Nullable
------------- | ------------ | ------------ | :-----------: | :---: | :---:
-[_**IsOnlyCurrentSeason**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#IsOnlyCurrentSeason) | is_only_current_season | IsOnlyCurrentSeason |  | `Y` |  | 
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | LeagueID | `^\d{2}$` | `Y` |  | 
-[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season | Season | `^\d{4}-\d{2}$` | `Y` |  | 
+API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | :-----------: | :---: | :---:
+[_**IsOnlyCurrentSeason**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#IsOnlyCurrentSeason) | is_only_current_season |  | `Y` |  | 
+[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^\d{2}$` | `Y` |  | 
+[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season | `^\d{4}-\d{2}$` | `Y` |  | 
 
 ## Data Sets
 #### CommonAllPlayers `common_all_players`

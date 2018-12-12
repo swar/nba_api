@@ -8,13 +8,13 @@
 >[https://stats.nba.com/stats/playernextngames?LeagueID=&NumberOfGames=2147483647&PlayerID=2544&Season=2018-19&SeasonType=Regular+Season](https://stats.nba.com/stats/playernextngames?LeagueID=&NumberOfGames=2147483647&PlayerID=2544&Season=2018-19&SeasonType=Regular+Season)
 
 ## Parameters
-API Parameter Name | Python Parameter Variable | Parameter Mapping Class | Pattern | Required | Nullable
------------- | ------------ | ------------ | :-----------: | :---: | :---:
-[_**NumberOfGames**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#NumberOfGames) | number_of_games | NumberOfGames |  | `Y` |  | 
-[_**PlayerID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerID) | player_id | PlayerID |  | `Y` |  | 
-[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season_all | SeasonAll | `^(\d{4}-\d{2})\|(ALL)$` | `Y` |  | 
-[_**SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_all_star | SeasonTypeAllStar | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All-Star)\|(All Star)$` | `Y` |  | 
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable | LeagueIDNullable | `(00)\|(20)\|(10)` |  | `Y` | 
+API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
+------------ | ------------ | :-----------: | :---: | :---:
+[_**NumberOfGames**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#NumberOfGames) | number_of_games |  | `Y` |  | 
+[_**PlayerID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerID) | player_id |  | `Y` |  | 
+[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season_all | `^(\d{4}-\d{2})\|(ALL)$` | `Y` |  | 
+[_**SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_all_star | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All-Star)\|(All Star)$` | `Y` |  | 
+[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable | `(00)\|(20)\|(10)` |  | `Y` | 
 
 ## Data Sets
 #### NextNGames `next_n_games`

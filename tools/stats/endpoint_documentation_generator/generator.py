@@ -64,7 +64,6 @@ def get_endpoint_documentation(endpoint, endpoints_information):
 
         parameter_line = parameter_line_template.format(api_parameter_name=parameter,
                                                         python_parameter_variable=python_parameter_variable,
-                                                        parameter_mapping_class=parameter_mapping_class,
                                                         pattern=pattern, required=required, nullable=nullable)
         if parameter in nullable_parameters:
             parameter_texts.append(parameter_line)
