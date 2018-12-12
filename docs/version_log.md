@@ -2,6 +2,10 @@
 #### TBD
 `stats.nba.com`
 * PlayersVsPlayers no longer valid.
+* Adding TwoWay to parameters
+
+`Documentation`
+* Updating Endpoint docs with Python variables for [#19](https://github.com/swar/nba_api/issues/19).
 
 # `v1.0.6`
 #### 2018-10-11

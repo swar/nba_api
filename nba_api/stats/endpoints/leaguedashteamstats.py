@@ -35,6 +35,7 @@ class LeagueDashTeamStats(Endpoint):
                  shot_clock_range_nullable=ShotClockRangeNullable.default,
                  starter_bench_nullable=StarterBenchNullable.default,
                  team_id_nullable='',
+                 two_way_nullable='',
                  vs_conference_nullable=ConferenceNullable.default,
                  vs_division_nullable=DivisionNullable.default):
         self.nba_response = NBAStatsHTTP().send_api_request(
@@ -67,6 +68,7 @@ class LeagueDashTeamStats(Endpoint):
                 'ShotClockRange': shot_clock_range_nullable,
                 'StarterBench': starter_bench_nullable,
                 'TeamID': team_id_nullable,
+                'TwoWay': two_way_nullable,
                 'VsConference': vs_conference_nullable,
                 'VsDivision': vs_division_nullable
             },
