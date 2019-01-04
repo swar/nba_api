@@ -1,7 +1,7 @@
-# players.py
->/nba_api/stats/static/players.py
+# teams.py
+>/nba_api/stats/static/teams.py
 
-The purpose of this module is to access player information without having to submit requests.
+The purpose of this module is to access team information without having to submit requests.
 
 ## `_find_teams`(_`regex_pattern`_, _`row_id`_)
 
