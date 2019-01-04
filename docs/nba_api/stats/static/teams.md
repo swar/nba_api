@@ -5,7 +5,7 @@ The purpose of this module is to access team information without having to submi
 
 ## `_find_teams`(_`regex_pattern`_, _`row_id`_)
 
-This is a protected function used to help search regex patterns through the players list.
+This is a protected function used to help search regex patterns through the teams list.
 
 ## `_get_team_dict`(_`team_row`_)
 ```python
@@ -19,7 +19,7 @@ team = {
     'year_founded': year_founded,
 }
 ```
-This a protected function that will parse a player list row into a friendly `dictionary`.
+This a protected function that will parse a team list row into a friendly `dictionary`.
 
 ## `find_teams_by_full_name`(_`regex_pattern`_)
 
