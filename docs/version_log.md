@@ -1,3 +1,8 @@
+# `v1.0.8`
+#### TBD
+`stats.nba.com`
+* Fixing auto-complete tabs for IDEs on endpoints. [#45]
+
 # `v1.0.7`
 #### 2018-12-11
 `stats.nba.com`
