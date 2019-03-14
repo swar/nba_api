@@ -4397,7 +4397,7 @@ teams = [
     [1610612741, 'CHI', 'Bulls', 1966, 'Chicago', 'Chicago Bulls', 'Illinois'],
     [1610612742, 'DAL', 'Mavericks', 1980, 'Dallas', 'Dallas Mavericks', 'Texas'],
     [1610612743, 'DEN', 'Nuggets', 1976, 'Denver', 'Denver Nuggets', 'Colorado'],
-    [1610612744, 'GSW', 'Warriors', 1946, 'Golden State', 'Golden State Warriors', 'California'],
+    [1610612744, 'GSW', 'Warriors', 1946, 'Oakland', 'Golden State Warriors', 'California'],
     [1610612745, 'HOU', 'Rockets', 1967, 'Houston', 'Houston Rockets', 'Texas'],
     [1610612746, 'LAC', 'Clippers', 1970, 'Los Angeles', 'Los Angeles Clippers', 'California'],
     [1610612747, 'LAL', 'Lakers', 1948, 'Los Angeles', 'Los Angeles Lakers', 'California'],
