@@ -1,335 +1,126 @@
 from nba_api.stats.endpoints import *
+import nba_api.stats.endpoints as ep
 
-test = assistleaders.AssistLeaders().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'assistleaders')
-test = assisttracker.AssistTracker().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'assisttracker')
-test = boxscoreadvancedv2.BoxScoreAdvancedV2(game_id='0021700807').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'boxscoreadvancedv2')
-test = boxscoredefensive.BoxScoreDefensive(game_id='0021700807').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'boxscoredefensive')
-test = boxscorefourfactorsv2.BoxScoreFourFactorsV2(game_id='0021700807').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'boxscorefourfactorsv2')
-test = boxscorematchups.BoxScoreMatchups(game_id='0021700807').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'boxscorematchups')
-test = boxscoremiscv2.BoxScoreMiscV2(game_id='0021700807').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'boxscoremiscv2')
-test = boxscoreplayertrackv2.BoxScorePlayerTrackV2(game_id='0021700807').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'boxscoreplayertrackv2')
-test = boxscorescoringv2.BoxScoreScoringV2(game_id='0021700807').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'boxscorescoringv2')
-test = boxscoresummaryv2.BoxScoreSummaryV2(game_id='0021700807').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'boxscoresummaryv2')
-test = boxscoretraditionalv2.BoxScoreTraditionalV2(game_id='0021700807').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'boxscoretraditionalv2')
-test = boxscoreusagev2.BoxScoreUsageV2(game_id='0021700807').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'boxscoreusagev2')
-test = commonallplayers.CommonAllPlayers().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'commonallplayers')
-test = commonplayerinfo.CommonPlayerInfo(player_id='2544').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'commonplayerinfo')
-test = commonplayoffseries.CommonPlayoffSeries().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'commonplayoffseries')
-test = commonteamroster.CommonTeamRoster(team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'commonteamroster')
-test = commonteamyears.CommonTeamYears().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'commonteamyears')
-test = defensehub.DefenseHub(season='2017-18').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'defensehub')
-test = draftcombinedrillresults.DraftCombineDrillResults().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'draftcombinedrillresults')
-test = draftcombinenonstationaryshooting.DraftCombineNonStationaryShooting().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'draftcombinenonstationaryshooting')
-test = draftcombineplayeranthro.DraftCombinePlayerAnthro().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'draftcombineplayeranthro')
-test = draftcombinespotshooting.DraftCombineSpotShooting().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'draftcombinespotshooting')
-test = draftcombinestats.DraftCombineStats().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'draftcombinestats')
-test = drafthistory.DraftHistory().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'drafthistory')
-test = fantasywidget.FantasyWidget().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'fantasywidget')
-test = franchisehistory.FranchiseHistory().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'franchisehistory')
-test = franchiseleaders.FranchiseLeaders(team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'franchiseleaders')
-test = franchiseplayers.FranchisePlayers(team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'franchiseplayers')
-test = homepageleaders.HomePageLeaders().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'homepageleaders')
-test = homepagev2.HomePageV2().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'homepagev2')
-test = infographicfanduelplayer.InfographicFanDuelPlayer(game_id='0021700807').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'infographicfanduelplayer')
-test = leaderstiles.LeadersTiles().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'leaderstiles')
-test = leaguedashlineups.LeagueDashLineups().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'leaguedashlineups')
-test = leaguedashplayerbiostats.LeagueDashPlayerBioStats().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'leaguedashplayerbiostats')
-test = leaguedashplayerclutch.LeagueDashPlayerClutch().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'leaguedashplayerclutch')
-test = leaguedashplayerptshot.LeagueDashPlayerPtShot().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'leaguedashplayerptshot')
-test = leaguedashplayershotlocations.LeagueDashPlayerShotLocations().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'leaguedashplayershotlocations')
-test = leaguedashplayerstats.LeagueDashPlayerStats().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'leaguedashplayerstats')
-test = leaguedashptdefend.LeagueDashPtDefend().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'leaguedashptdefend')
-test = leaguedashptstats.LeagueDashPtStats().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'leaguedashptstats')
-test = leaguedashptteamdefend.LeagueDashPtTeamDefend().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'leaguedashptteamdefend')
-test = leaguedashteamclutch.LeagueDashTeamClutch().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'leaguedashteamclutch')
-test = leaguedashteamptshot.LeagueDashTeamPtShot().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'leaguedashteamptshot')
-test = leaguedashteamshotlocations.LeagueDashTeamShotLocations().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'leaguedashteamshotlocations')
-test = leaguedashteamstats.LeagueDashTeamStats().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'leaguedashteamstats')
-test = leaguegamefinder.LeagueGameFinder().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'leaguegamefinder')
-test = leaguegamelog.LeagueGameLog().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'leaguegamelog')
-test = leagueleaders.LeagueLeaders().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'leagueleaders')
-test = leagueplayerondetails.LeaguePlayerOnDetails(team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'leagueplayerondetails')
-test = leagueseasonmatchups.LeagueSeasonMatchups(off_player_id_nullable=2544, def_player_id_nullable='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'leagueseasonmatchups')
-test = leaguestandings.LeagueStandings().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'leaguestandings')
-test = playbyplay.PlayByPlay(game_id='0021700807').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'playbyplay')
-test = playbyplayv2.PlayByPlayV2(game_id='0021700807').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'playbyplayv2')
-test = playerawards.PlayerAwards(player_id='2544').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'playerawards')
-test = playercareerstats.PlayerCareerStats(player_id='2544').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'playercareerstats')
-test = playercompare.PlayerCompare(player_id_list='202681,203078,2544,201567,203954',
-                                   vs_player_id_list='201566,201939,201935,201142,203076').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'playercompare')
-test = playerdashptpass.PlayerDashPtPass(player_id='2544', team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'playerdashptpass')
-test = playerdashptreb.PlayerDashPtReb(player_id='2544', team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'playerdashptreb')
-test = playerdashptshotdefend.PlayerDashPtShotDefend(player_id='2544', team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'playerdashptshotdefend')
-test = playerdashptshots.PlayerDashPtShots(player_id='2544', team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'playerdashptshots')
-test = playerdashboardbyclutch.PlayerDashboardByClutch(player_id='2544').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'playerdashboardbyclutch')
-test = playerdashboardbygamesplits.PlayerDashboardByGameSplits(player_id='2544').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'playerdashboardbygamesplits')
-test = playerdashboardbygeneralsplits.PlayerDashboardByGeneralSplits(player_id='2544').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'playerdashboardbygeneralsplits')
-test = playerdashboardbylastngames.PlayerDashboardByLastNGames(player_id='2544').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'playerdashboardbylastngames')
-test = playerdashboardbyopponent.PlayerDashboardByOpponent(player_id='2544').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'playerdashboardbyopponent')
-test = playerdashboardbyshootingsplits.PlayerDashboardByShootingSplits(player_id='2544').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'playerdashboardbyshootingsplits')
-test = playerdashboardbyteamperformance.PlayerDashboardByTeamPerformance(player_id='2544').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'playerdashboardbyteamperformance')
-test = playerdashboardbyyearoveryear.PlayerDashboardByYearOverYear(player_id='2544').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'playerdashboardbyyearoveryear')
-test = playerfantasyprofile.PlayerFantasyProfile(player_id='2544').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'playerfantasyprofile')
-test = playerfantasyprofilebargraph.PlayerFantasyProfileBarGraph(player_id='2544').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'playerfantasyprofilebargraph')
-test = playergamelog.PlayerGameLog(player_id='2544').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'playergamelog')
-test = playergamestreakfinder.PlayerGameStreakFinder().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'playergamestreakfinder')
-test = playernextngames.PlayerNextNGames(player_id='2544').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'playernextngames')
-test = playerprofilev2.PlayerProfileV2(player_id='2544').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'playerprofilev2')
-test = playervsplayer.PlayerVsPlayer(player_id='2544', vs_player_id='202681').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'playervsplayer')
-test = playoffpicture.PlayoffPicture().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'playoffpicture')
-test = scoreboard.Scoreboard().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'scoreboard')
-test = scoreboardv2.ScoreboardV2().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'scoreboardv2')
-test = shotchartdetail.ShotChartDetail(player_id='2544', team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'shotchartdetail')
-test = shotchartlineupdetail.ShotChartLineupDetail().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'shotchartlineupdetail')
-test = teamandplayersvsplayers.TeamAndPlayersVsPlayers(team_id=1610612739,
-                                                       player_id1=203954,
-                                                       player_id2=201567,
-                                                       player_id3=203507,
-                                                       player_id4=203078,
-                                                       player_id5=202681,
-                                                       vs_team_id=1610612765,
-                                                       vs_player_id1=203954,
-                                                       vs_player_id2=201567,
-                                                       vs_player_id3=203507,
-                                                       vs_player_id4=203078,
-                                                       vs_player_id5=202681).nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'teamandplayersvsplayers')
-test = teamdashlineups.TeamDashLineups(team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'teamdashlineups')
-test = teamdashptpass.TeamDashPtPass(team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'teamdashptpass')
-test = teamdashptreb.TeamDashPtReb(team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'teamdashptreb')
-test = teamdashptshots.TeamDashPtShots(team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'teamdashptshots')
-test = teamdashboardbyclutch.TeamDashboardByClutch(team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'teamdashboardbyclutch')
-test = teamdashboardbygamesplits.TeamDashboardByGameSplits(team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'teamdashboardbygamesplits')
-test = teamdashboardbygeneralsplits.TeamDashboardByGeneralSplits(team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'teamdashboardbygeneralsplits')
-test = teamdashboardbylastngames.TeamDashboardByLastNGames(team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'teamdashboardbylastngames')
-test = teamdashboardbyopponent.TeamDashboardByOpponent(team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'teamdashboardbyopponent')
-test = teamdashboardbyshootingsplits.TeamDashboardByShootingSplits(team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'teamdashboardbyshootingsplits')
-test = teamdashboardbyteamperformance.TeamDashboardByTeamPerformance(team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'teamdashboardbyteamperformance')
-test = teamdashboardbyyearoveryear.TeamDashboardByYearOverYear(team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'teamdashboardbyyearoveryear')
-test = teamdetails.TeamDetails(team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'teamdetails')
-test = teamgamelog.TeamGameLog(team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'teamgamelog')
-test = teamgamestreakfinder.TeamGameStreakFinder().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'teamgamestreakfinder')
-test = teamhistoricalleaders.TeamHistoricalLeaders(team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'teamhistoricalleaders')
-test = teaminfocommon.TeamInfoCommon(team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'teaminfocommon')
-test = teamplayerdashboard.TeamPlayerDashboard(team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'teamplayerdashboard')
-test = teamplayeronoffdetails.TeamPlayerOnOffDetails(team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'teamplayeronoffdetails')
-test = teamplayeronoffsummary.TeamPlayerOnOffSummary(team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'teamplayeronoffsummary')
-test = teamvsplayer.TeamVsPlayer(team_id='1610612739', vs_player_id='2544').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'teamvsplayer')
-test = teamyearbyyearstats.TeamYearByYearStats(team_id='1610612739').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'teamyearbyyearstats')
-test = videodetails.VideoDetails(player_id='2544', game_id='0021700807', team_id='1610612739', start_period=1, end_period=1).nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'videodetails')
-test = videoevents.VideoEvents(game_id='0021700807').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'videoevents')
-test = videostatus.VideoStatus().nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'videostatus')
-test = winprobabilitypbp.WinProbabilityPBP(game_id='0021700807').nba_response.valid_json()
-if not test:
-    raise Exception('fail', 'winprobabilitypbp')
+def test_valid_json():
+    api_calls = [ ep.AssistLeaders(),
+            ep.AssistTracker(),
+            ep.BoxScoreAdvancedV2(game_id='0021700807'),
+            ep.BoxScoreDefensive(game_id='0021700807'),
+            ep.BoxScoreFourFactorsV2(game_id='0021700807'),
+            ep.BoxScoreMatchups(game_id='0021700807'),
+            ep.BoxScoreMiscV2(game_id='0021700807'),
+            ep.BoxScorePlayerTrackV2(game_id='0021700807'),
+            ep.BoxScoreScoringV2(game_id='0021700807'),
+            ep.BoxScoreSummaryV2(game_id='0021700807'),
+            ep.BoxScoreTraditionalV2(game_id='0021700807'),
+            ep.BoxScoreUsageV2(game_id='0021700807'),
+            ep.CommonAllPlayers(),
+            ep.CommonPlayerInfo(player_id='2544'),
+            ep.CommonPlayoffSeries(),
+            ep.CommonTeamRoster(team_id='1610612739'),
+            ep.CommonTeamYears(),
+            ep.DefenseHub(season='2017-18'),
+            ep.DraftCombineDrillResults(),
+            ep.DraftCombineNonStationaryShooting(),
+            ep.DraftCombinePlayerAnthro(),
+            ep.DraftCombineSpotShooting(),
+            ep.DraftCombineStats(),
+            ep.DraftHistory(),
+            ep.FantasyWidget(),
+            ep.FranchiseHistory(),
+            ep.FranchiseLeaders(team_id='1610612739'),
+            ep.FranchisePlayers(team_id='1610612739'),
+            ep.HomePageLeaders(),
+            ep.HomePageV2(),
+            ep.InfographicFanDuelPlayer(game_id='0021700807'),
+            ep.LeadersTiles(),
+            ep.LeagueDashLineups(),
+            ep.LeagueDashPlayerBioStats(),
+            ep.LeagueDashPlayerClutch(),
+            ep.LeagueDashPlayerPtShot(),
+            ep.LeagueDashPlayerShotLocations(),
+            ep.LeagueDashPlayerStats(),
+            ep.LeagueDashPtDefend(),
+            ep.LeagueDashPtStats(),
+            ep.LeagueDashPtTeamDefend(),
+            ep.LeagueDashTeamClutch(),
+            ep.LeagueDashTeamPtShot(),
+            ep.LeagueDashTeamShotLocations(),
+            ep.LeagueDashTeamStats(),
+            ep.LeagueGameFinder(),
+            ep.LeagueGameLog(),
+            ep.LeagueLeaders(),
+            ep.LeaguePlayerOnDetails(team_id='1610612739'),
+            ep.LeagueSeasonMatchups(off_player_id_nullable=2544,
+                def_player_id_nullable='1610612739'),
+            ep.LeagueStandings(),
+            ep.PlayByPlay(game_id='0021700807'),
+            ep.PlayByPlayV2(game_id='0021700807'),
+            ep.PlayerAwards(player_id='2544'),
+            ep.PlayerCareerStats(player_id='2544'),
+            ep.PlayerCompare(player_id_list='202681,203078,2544,201567,203954',
+                    vs_player_id_list='201566,201939,201935,201142,203076'),
+            ep.PlayerDashPtPass(player_id='2544', team_id='1610612739'),
+            ep.PlayerDashPtReb(player_id='2544', team_id='1610612739'),
+            ep.PlayerDashPtShotDefend(player_id='2544',
+                    team_id='1610612739'),
+            ep.PlayerDashPtShots(player_id='2544', team_id='1610612739'),
+            ep.PlayerDashboardByClutch(player_id='2544'),
+            ep.PlayerDashboardByGameSplits(player_id='2544'),
+            ep.PlayerDashboardByGeneralSplits(player_id='2544'),
+            ep.PlayerDashboardByLastNGames(player_id='2544'),
+            ep.PlayerDashboardByOpponent(player_id='2544'),
+            ep.PlayerDashboardByShootingSplits(player_id='2544'),
+            ep.PlayerDashboardByTeamPerformance(player_id='2544'),
+            ep.PlayerDashboardByYearOverYear(player_id='2544'),
+            ep.PlayerFantasyProfile(player_id='2544'),
+            ep.PlayerFantasyProfileBarGraph(player_id='2544'),
+            ep.PlayerGameLog(player_id='2544'),
+            ep.PlayerGameStreakFinder(),
+            ep.PlayerNextNGames(player_id='2544'),
+            ep.PlayerProfileV2(player_id='2544'),
+            ep.PlayerVsPlayer(player_id='2544', vs_player_id='202681'),
+            ep.PlayoffPicture(),
+            ep.Scoreboard(),
+            ep.ScoreboardV2(),
+            ep.ShotChartDetail(player_id='2544', team_id='1610612739'),
+            ep.ShotChartLineupDetail(),
+            ep.TeamAndPlayersVsPlayers(team_id=1610612739,
+                                                                   player_id1=203954,
+                                                                   player_id2=201567,
+                                                                   player_id3=203507,
+                                                                   player_id4=203078,
+                                                                   player_id5=202681,
+                                                                   vs_team_id=1610612765,
+                                                                   vs_player_id1=203954,
+                                                                   vs_player_id2=201567,
+                                                                   vs_player_id3=203507,
+                                                                   vs_player_id4=203078,
+                                                                   vs_player_id5=202681),
+            ep.TeamDashLineups(team_id='1610612739'),
+            ep.TeamDashPtPass(team_id='1610612739'),
+            ep.TeamDashPtReb(team_id='1610612739'),
+            ep.TeamDashPtShots(team_id='1610612739'),
+            ep.TeamDashboardByClutch(team_id='1610612739'),
+            ep.TeamDashboardByGameSplits(team_id='1610612739'),
+            ep.TeamDashboardByGeneralSplits(team_id='1610612739'),
+            ep.TeamDashboardByLastNGames(team_id='1610612739'),
+            ep.TeamDashboardByOpponent(team_id='1610612739'),
+            ep.TeamDashboardByShootingSplits(team_id='1610612739'),
+            ep.TeamDashboardByTeamPerformance(team_id='1610612739'),
+            ep.TeamDashboardByYearOverYear(team_id='1610612739'),
+            ep.TeamDetails(team_id='1610612739'),
+            ep.TeamGameLog(team_id='1610612739'),
+            ep.TeamGameStreakFinder(),
+            ep.TeamHistoricalLeaders(team_id='1610612739'),
+            ep.TeamInfoCommon(team_id='1610612739'),
+            ep.TeamPlayerDashboard(team_id='1610612739'),
+            ep.TeamPlayerOnOffDetails(team_id='1610612739'),
+            ep.TeamPlayerOnOffSummary(team_id='1610612739'),
+            ep.TeamVsPlayer(team_id='1610612739', vs_player_id='2544'),
+            ep.TeamYearByYearStats(team_id='1610612739'),
+            ep.VideoDetails(player_id='2544', game_id='0021700807',
+                    team_id='1610612739', start_period=1, end_period=1),
+            ep.VideoEvents(game_id='0021700807'),
+            ep.VideoStatus(),
+            ep.WinProbabilityPBP(game_id='0021700807') ]
