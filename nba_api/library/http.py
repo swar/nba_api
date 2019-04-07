@@ -98,10 +98,15 @@ class NBAHTTP:
         status_code = None
         contents = None
 
+        # Sort parameters by key... for some reason this matters for some requests...
+        parameters = sorted(parameters.items(), key=lambda kv: kv[0])
+
         if DEBUG and DEBUG_STORAGE:
             print(endpoint, parameters)
             directory_name = 'debug_storage'
-            parameter_string = '&'.join('{}={}'.format(key, quote_plus(str(val))) for key, val in sorted(parameters.items(), key=lambda kv: kv[0]))
+            parameter_string = '&'.join('{}={}'.format(key, '' if val is None else quote_plus(str(val))) for key, val in parameters)
+            url = "{}?{}".format(base_url, parameter_string)
+            print(url)
             file_name = "{}-{}.txt".format(endpoint, md5(parameter_string.encode('utf-8')).hexdigest())
             file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'debug', directory_name)
             if not os.path.exists(file_path):
@@ -112,7 +117,6 @@ class NBAHTTP:
                 f = open(file_path, 'r')
                 contents = f.read()
                 f.close()
-                url = "{}?{}".format(base_url, parameter_string)
                 print('loading from file...')
 
         if not contents:
