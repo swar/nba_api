@@ -4,14 +4,62 @@ import time
 from datetime import datetime
 
 from nba_api.stats.library.http import NBAStatsHTTP
+from nba_api.stats.library.parameters import *
 
 from tools.library.file_handler import load_file, save_file, get_file_path
 from tools.stats.library.mapping import endpoint_list, parameter_variations, parameter_map
 
-missing_parameter_regex = "^\s*?(?:The value '[^']+' is not valid for |The )?([A-z0-9]+( Scope| Category)?)(?: Year)?\s*(?:property is required\.?| is required\.?(?:, pass 0 for default)?|\.)$"
+missing_parameter_regex = r"^\s*?(?:The value '[^']+' is not valid for |The )?([A-z0-9]+( Scope| Category)?)(?: Year)?\s*(?:property is required\.?| is required\.?(?:, pass 0 for default)?|\.)$"
 # Season Year -> Season     This only occurs in LeagueDashPtStats
 
-parameter_pattern_regex = "\s*The field ([A-z]+) must match the regular expression '([^']+)'\.(?:;|$)"
+parameter_pattern_regex = r"\s*The field ([A-z]+) must match the regular expression '([^']+)'\.(?:;|$)"
+
+missing_required_parameters = {
+    'DefenseHub': {'Season': '2017-18'},
+    'LeagueDashLineups': {'Season': Season.default},
+    'LeagueDashPlayerClutch': {'Season': Season.default},
+    'LeagueDashPlayerStats': {'Season': Season.default},
+    'LeagueDashTeamClutch': {'Season': Season.default},
+    'LeagueDashTeamShotLocations': {'Season': Season.default},
+    'LeagueDashTeamStats': {'Season': Season.default},
+    'LeagueGameLog': {'Counter': 0, 'Season': Season.default},
+    'LeagueLeaders': {'Season': Season.default},
+    'LeaguePlayerOnDetails': {'Season': Season.default, 'TeamID': '1610612739'},  # Cleveland Cavaliers
+    'LeagueStandings': {'Season': Season.default},
+    'PlayerCompare': {'Season': Season.default},
+    'PlayerDashboardByClutch': {'Season': Season.default},
+    'PlayerDashboardByGameSplits': {'Season': Season.default},
+    'PlayerDashboardByGeneralSplits': {'Season': Season.default},
+    'PlayerDashboardByLastNGames': {'Season': Season.default},
+    'PlayerDashboardByOpponent': {'Season': Season.default},
+    'PlayerDashboardByShootingSplits': {'Season': Season.default},
+    'PlayerDashboardByTeamPerformance': {'Season': Season.default},
+    'PlayerDashboardByYearOverYear': {'Season': Season.default},
+    'PlayerDashPtPass': {'LeagueID': LeagueID.default},
+    'PlayerDashPtReb': {'LeagueID': LeagueID.default},
+    'PlayerDashPtShotDefend': {'LeagueID': LeagueID.default},
+    'PlayerDashPtShots': {'LeagueID': LeagueID.default},
+    'PlayerFantasyProfile': {'Season': Season.default},
+    'PlayerVsPlayer': {'Season': Season.default},
+    'ShotChartDetail': {'ContextMeasure': ''},
+    'TeamAndPlayersVsPlayers': {'Season': Season.default},
+    'TeamDashboardByClutch': {'Season': Season.default},
+    'TeamDashboardByGameSplits': {'Season': Season.default},
+    'TeamDashboardByGeneralSplits': {'Season': Season.default},
+    'TeamDashboardByLastNGames': {'Season': Season.default},
+    'TeamDashboardByOpponent': {'Season': Season.default},
+    'TeamDashboardByShootingSplits': {'Season': Season.default},
+    'TeamDashboardByTeamPerformance': {'Season': Season.default},
+    'TeamDashboardByYearOverYear': {'Season': Season.default},
+    'TeamDashLineups': {'Season': Season.default},
+    'TeamDashPtPass': {'LeagueID': LeagueID.default},
+    'TeamDashPtReb': {'LeagueID': LeagueID.default},
+    'TeamDashPtShots': {'LeagueID': LeagueID.default},
+    'TeamPlayerDashboard': {'Season': Season.default},
+    'TeamPlayerOnOffDetails': {'Season': Season.default},
+    'TeamPlayerOnOffSummary': {'Season': Season.default},
+    'TeamVsPlayer': {'Season': Season.default},
+}
 
 
 def get_patterns_from_response(nba_stats_response):
@@ -35,6 +83,8 @@ def get_patterns_from_response(nba_stats_response):
             prop = prop.replace(' ', '')
         elif match in [' Invalid date', '<Error><Message>An error has occurred.</Message></Error>', 'Invalid game date',
                        ' Invalid game date']:
+            pass
+        elif nba_stats_response.valid_json():
             pass
         elif not parameter_regex_match and not invalid_parameter_match and 'Invalid date' not in nba_stats_response.get_response() and 'must be between' not in nba_stats_response.get_response():
             raise Exception('Failed to match error.', match)
@@ -101,6 +151,10 @@ def minimal_requirement_tests(endpoint, required_params, pause=1):
     # 1. minimal requirement test with default non-nullable values
     nba_stats_response = NBAStatsHTTP().send_api_request(endpoint=endpoint, parameters=required_params)
 
+    if endpoint in missing_required_parameters:
+        for parameter, value in missing_required_parameters[endpoint].items():
+            required_params[parameter] = value
+
     # 2. minimal requirement test with pattern matching
     if not nba_stats_response.valid_json():
         parameter_patterns = get_patterns_from_response(nba_stats_response=nba_stats_response)
@@ -115,9 +169,6 @@ def minimal_requirement_tests(endpoint, required_params, pause=1):
                 parameter_info_key = parameter_map[prop][map_key][pattern]
                 parameter_info = parameter_variations[parameter_info_key]
                 required_params[prop] = parameter_info['parameter_value']
-        # This error sometimes occurs because LeagueID won't show as as required parameter.
-        if '<Error><Message>An error has occurred.</Message></Error>' in nba_stats_response.get_response():
-            required_params['LeagueID'] = '00'
         time.sleep(pause)
         nba_stats_response = NBAStatsHTTP().send_api_request(endpoint=endpoint, parameters=required_params)
 
@@ -149,7 +200,13 @@ def minimal_requirement_tests(endpoint, required_params, pause=1):
             all_params[prop] = 'a'
             all_params_errors[prop] = 'a'
 
-    return status, all_parameters, data_sets, all_params_errors
+    nullable_parameters = []
+    if nba_stats_response.get_parameters():
+        for parameter, value in nba_stats_response.get_parameters().items():
+            if value is None or value is "":
+                nullable_parameters.append(parameter)
+
+    return status, all_parameters, data_sets, all_params_errors, nullable_parameters
 
 
 def nullable_parameters_test(endpoint, all_parameters):
@@ -160,30 +217,8 @@ def nullable_parameters_test(endpoint, all_parameters):
         return []
 
     non_nullable_list = ['DefenseCategory']
-    non_nullable_endpoint_parameters = [
-        ['playergamelog', 'Season'],
-        ['videodetails', 'Season'],
-        ['teamgamelog', 'Season'],
-        ['playernextngames', 'Season'],
-        ['teamdashptshots', 'Season'],
-        ['teamdashptreb', 'Season'],
-        ['teamdashptpass', 'Season'],
-        ['shotchartdetail', 'ContextMeasure'],
-        ['scoreboardv2', 'Season'],
-        ['scoreboard', 'Season'],
-        ['leaguegamelog', 'Counter'],
-        ['playerdashptpass', 'LeagueID'],
-        ['playerdashptreb', 'LeagueID'],
-        ['playerdashptshotdefend', 'LeagueID'],
-        ['playerdashptshots', 'LeagueID'],
-        ['shotchartdetail', 'LeagueID'],
-        ['teamdashptpass', 'LeagueID'],
-        ['teamgamelog', 'SeasonType'],
-        ['teamdashptreb', 'LeagueID'],
-        ['teamdashptshots', 'LeagueID'],
-    ]
-    params = {prop: '' for prop in all_parameters if prop not in non_nullable_list and [endpoint.lower(), prop] not in non_nullable_endpoint_parameters}
 
+    params = {prop: '' for prop in all_parameters if prop not in non_nullable_list and endpoint in missing_required_parameters and prop not in missing_required_parameters[endpoint]}
     nba_stats_response = NBAStatsHTTP().send_api_request(endpoint=endpoint, parameters=params)
 
     if 'An error has occurred.' in nba_stats_response.get_response() \
@@ -192,6 +227,10 @@ def nullable_parameters_test(endpoint, all_parameters):
 
     required_parameters = get_required_parameters(nba_stats_response)
     nullable_parameters = [prop for prop in list(params.keys()) if prop not in required_parameters]
+    if nba_stats_response.get_parameters():
+        for parameter, value in nba_stats_response.get_parameters().items():
+            if value is None or value is "":
+                nullable_parameters.append(parameter)
 
     return nullable_parameters
 
@@ -218,7 +257,7 @@ def analyze_endpoint(endpoint, pause=1):
         return {'status': status, 'endpoint': endpoint, 'last_validated_date': str(datetime.now().date())}
 
     # Testing endpoint with the minimal amount of parameters required.
-    status_test, all_parameters, data_sets, all_params_errors = \
+    status_test, all_parameters, data_sets, all_params_errors, nullable_parameters = \
         minimal_requirement_tests(endpoint=endpoint, required_params=required_params)
     time.sleep(pause)
 
@@ -226,7 +265,8 @@ def analyze_endpoint(endpoint, pause=1):
         status = status_test
 
     # Testing endpoint with all parameters with empty values to see which ones are allowed to be nullable.
-    nullable_parameters = nullable_parameters_test(endpoint=endpoint, all_parameters=all_parameters)
+    nullable_parameters += nullable_parameters_test(endpoint=endpoint, all_parameters=all_parameters)
+    nullable_parameters = list(set(nullable_parameters))
     time.sleep(pause)
 
     # Testing endpoint with invalid values to grab matching patterns.
