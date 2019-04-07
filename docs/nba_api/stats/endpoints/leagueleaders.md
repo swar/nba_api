@@ -13,7 +13,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 [_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^\d{2}$` | `Y` |  | 
 [_**PerMode**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PerMode) | per_mode48 | `^(Totals)\|(PerGame)\|(Per48)$` | `Y` |  | 
 [_**Scope**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Scope) | scope | `^(RS)\|(S)\|(Rookies)$` | `Y` |  | 
-[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season_all_time | `^(\d{4}-\d{2})\|(All Time)$` | `Y` |  | 
+[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season |  | `Y` |  | 
 [_**SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_all_star | `^(Regular Season)\|(Playoffs)\|(All Star)\|(Pre Season)$` | `Y` |  | 
 [_**StatCategory**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#StatCategory) | stat_category_abbreviation |  | `Y` |  | 
 [_**ActiveFlag**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#ActiveFlag) | active_flag_nullable |  |  | `Y` | 
@@ -60,7 +60,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "LeagueLeaders",
-    "last_validated_date": "2018-12-11",
+    "last_validated_date": "2019-04-07",
     "nullable_parameters": [
         "ActiveFlag"
     ],
@@ -69,7 +69,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         "LeagueID": "^\\d{2}$",
         "PerMode": "^(Totals)|(PerGame)|(Per48)$",
         "Scope": "^(RS)|(S)|(Rookies)$",
-        "Season": "^(\\d{4}-\\d{2})|(All Time)$",
+        "Season": null,
         "SeasonType": "^(Regular Season)|(Playoffs)|(All Star)|(Pre Season)$",
         "StatCategory": null
     },
@@ -94,4 +94,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2018-12-11
+Last validated 2019-04-07

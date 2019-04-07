@@ -14,7 +14,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 [_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^\d{2}$` | `Y` |  | 
 [_**PlayerOrTeam**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerOrTeam) | player_or_team | `^(Player)\|(Team)$` | `Y` |  | 
 [_**PlayerScope**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerScope) | player_scope | `^(All Players)\|(Rookies)$` | `Y` |  | 
-[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season | `^\d{4}-\d{2}$` | `Y` |  | 
+[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season |  | `Y` |  | 
 [_**SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_playoffs | `^(Regular Season)\|(Pre Season)\|(Playoffs)$` | `Y` |  | 
 
 ## Data Sets
@@ -139,14 +139,14 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "DefenseHub",
-    "last_validated_date": "2018-12-11",
+    "last_validated_date": "2019-04-07",
     "nullable_parameters": [],
     "parameter_patterns": {
         "GameScope": "^(Season)|(Last 10)|(Yesterday)|(Finals)$",
         "LeagueID": "^\\d{2}$",
         "PlayerOrTeam": "^(Player)|(Team)$",
         "PlayerScope": "^(All Players)|(Rookies)$",
-        "Season": "^\\d{4}-\\d{2}$",
+        "Season": null,
         "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)$"
     },
     "parameters": [
@@ -169,4 +169,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2018-12-11
+Last validated 2019-04-07

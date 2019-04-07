@@ -12,7 +12,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 ------------ | ------------ | :-----------: | :---: | :---:
 [_**ContextMeasure**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#ContextMeasure) | context_measure_simple | `^((PTS)\|(FGM)\|(FGA)\|(FG_PCT)\|(FG3M)\|(FG3A)\|(FG3_PCT)\|(PF)\|(EFG_PCT)\|(TS_PCT)\|(PTS_FB)\|(PTS_OFF_TOV)\|(PTS_2ND_CHANCE)\|(PF))?$` | `Y` |  | 
 [_**LastNGames**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LastNGames) | last_n_games |  | `Y` |  | 
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `(00)\|(20)\|(10)` |  |  | 
+[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `(00)\|(20)\|(10)` | `Y` |  | 
 [_**Month**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Month) | month |  | `Y` |  | 
 [_**OpponentTeamID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#OpponentTeamID) | opponent_team_id |  | `Y` |  | 
 [_**Period**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Period) | period |  | `Y` |  | 
@@ -24,8 +24,8 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 [_**StartRange**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#StartRange) | start_range_nullable |  |  | `Y` | 
 [_**StartPeriod**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#StartPeriod) | start_period_nullable |  |  | `Y` | 
 [_**SeasonSegment**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonSegment) | season_segment_nullable | `^((Post All-Star)\|(Pre All-Star))?$` | `Y` | `Y` | 
-[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season_nullable | `^(\d{4}-\d{2})?$` |  | `Y` | 
-[_**RookieYear**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#RookieYear) | rookie_year_nullable | `^(\d{4}-\d{2})?$` | `Y` | `Y` | 
+[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season_nullable |  |  | `Y` | 
+[_**RookieYear**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#RookieYear) | rookie_year_nullable |  | `Y` | `Y` | 
 [_**RangeType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#RangeType) | range_type_nullable |  |  | `Y` | 
 [_**Position**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Position) | position_nullable |  |  | `Y` | 
 [_**PointDiff**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PointDiff) | point_diff_nullable |  |  | `Y` | 
@@ -95,7 +95,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "ShotChartDetail",
-    "last_validated_date": "2018-12-11",
+    "last_validated_date": "2019-04-07",
     "nullable_parameters": [
         "AheadBehind",
         "ClutchTime",
@@ -143,8 +143,8 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         "PointDiff": null,
         "Position": null,
         "RangeType": null,
-        "RookieYear": "^(\\d{4}-\\d{2})?$",
-        "Season": "^(\\d{4}-\\d{2})?$",
+        "RookieYear": null,
+        "Season": null,
         "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
         "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
         "StartPeriod": null,
@@ -193,6 +193,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         "GameID",
         "GameSegment",
         "LastNGames",
+        "LeagueID",
         "Location",
         "Month",
         "OpponentTeamID",
@@ -211,4 +212,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2018-12-11
+Last validated 2019-04-07

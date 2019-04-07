@@ -14,7 +14,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 [_**GROUP_ID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GROUP_ID) | group_id | `^\d+(( - \d+){2,4})?$` | `Y` |  | 
 [_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^(00)\|(20)$` | `Y` |  | 
 [_**Period**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Period) | period |  | `Y` |  | 
-[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season | `^\d{4}-\d{2}$` | `Y` |  | 
+[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season |  | `Y` |  | 
 [_**SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_all_star | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star)$` | `Y` |  | 
 [_**VsDivision**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#VsDivision) | vs_division_nullable | `^((Atlantic)\|(Central)\|(Northwest)\|(Pacific)\|(Southeast)\|(Southwest)\|(East)\|(West))?$` | `Y` | `Y` | 
 [_**VsConference**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#VsConference) | vs_conference_nullable | `^((East)\|(West))?$` | `Y` | `Y` | 
@@ -86,7 +86,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "ShotChartLineupDetail",
-    "last_validated_date": "2018-12-11",
+    "last_validated_date": "2019-04-07",
     "nullable_parameters": [
         "ContextFilter",
         "DateFrom",
@@ -118,7 +118,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         "OpponentTeamID": null,
         "Outcome": "^((W)|(L))?$",
         "Period": null,
-        "Season": "^\\d{4}-\\d{2}$",
+        "Season": null,
         "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
         "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
         "TeamID": null,
@@ -173,4 +173,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2018-12-11
+Last validated 2019-04-07

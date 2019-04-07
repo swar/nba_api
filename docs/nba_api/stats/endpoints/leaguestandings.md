@@ -11,7 +11,7 @@
 API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 ------------ | ------------ | :-----------: | :---: | :---:
 [_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^\d{2}$` | `Y` |  | 
-[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season | `^\d{4}-\d{2}$` | `Y` |  | 
+[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season |  | `Y` |  | 
 [_**SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type | `^(Regular Season)\|(Pre Season)$` | `Y` |  | 
 [_**SeasonYear**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonYear) | season_nullable |  |  | `Y` | 
 
@@ -111,13 +111,13 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "LeagueStandings",
-    "last_validated_date": "2018-12-11",
+    "last_validated_date": "2019-04-07",
     "nullable_parameters": [
         "SeasonYear"
     ],
     "parameter_patterns": {
         "LeagueID": "^\\d{2}$",
-        "Season": "^\\d{4}-\\d{2}$",
+        "Season": null,
         "SeasonType": "^(Regular Season)|(Pre Season)$",
         "SeasonYear": null
     },
@@ -136,4 +136,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2018-12-11
+Last validated 2019-04-07

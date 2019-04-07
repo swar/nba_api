@@ -10,11 +10,11 @@
 ## Parameters
 API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 ------------ | ------------ | :-----------: | :---: | :---:
-[_**Counter**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Counter) | counter |  |  |  | 
+[_**Counter**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Counter) | counter |  | `Y` |  | 
 [_**Direction**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Direction) | direction | `^(ASC)\|(DESC)$` | `Y` |  | 
 [_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^(00)\|(20)$` | `Y` |  | 
 [_**PlayerOrTeam**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerOrTeam) | player_or_team_abbreviation | `^(P)\|(T)$` | `Y` |  | 
-[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season_all_time | `^(\d{4}-\d{2})\|(ALLTIME)$` | `Y` |  | 
+[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season |  | `Y` |  | 
 [_**SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_all_star | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star)\|(All-Star)$` | `Y` |  | 
 [_**Sorter**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Sorter) | sorter | `^((FGM)\|(FGA)\|(FG_PCT)\|(FG3M)\|(FG3A)\|(FG3_PCT)\|(FTM)\|(FTA)\|(FT_PCT)\|(OREB)\|(DREB)\|(AST)\|(STL)\|(BLK)\|(TOV)\|(REB)\|(PTS)\|(DATE))$` | `Y` |  | 
 [_**DateTo**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DateTo) | date_to_nullable |  |  | `Y` | 
@@ -64,7 +64,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "LeagueGameLog",
-    "last_validated_date": "2018-12-11",
+    "last_validated_date": "2019-04-07",
     "nullable_parameters": [
         "DateFrom",
         "DateTo"
@@ -76,7 +76,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         "Direction": "^(ASC)|(DESC)$",
         "LeagueID": "^(00)|(20)$",
         "PlayerOrTeam": "^(P)|(T)$",
-        "Season": "^(\\d{4}-\\d{2})|(ALLTIME)$",
+        "Season": null,
         "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)|(All-Star)$",
         "Sorter": "^((FGM)|(FGA)|(FG_PCT)|(FG3M)|(FG3A)|(FG3_PCT)|(FTM)|(FTA)|(FT_PCT)|(OREB)|(DREB)|(AST)|(STL)|(BLK)|(TOV)|(REB)|(PTS)|(DATE))$"
     },
@@ -92,6 +92,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         "Sorter"
     ],
     "required_parameters": [
+        "Counter",
         "Direction",
         "LeagueID",
         "PlayerOrTeam",
@@ -103,4 +104,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2018-12-11
+Last validated 2019-04-07
