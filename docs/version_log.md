@@ -1,4 +1,4 @@
-# `v1.1.0`
+# `v1.1.1`
 #### `2019-04-07`
 `stats.nba.com`
 * Adding proxy, header, and timeout support for every request. [#49] [Example](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/examples.md)
