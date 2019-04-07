@@ -40,8 +40,9 @@ missing_required_parameters = {
     'PlayerDashPtShotDefend': {'LeagueID': LeagueID.default},
     'PlayerDashPtShots': {'LeagueID': LeagueID.default},
     'PlayerFantasyProfile': {'Season': Season.default},
+    'PlayerFantasyProfileBarGraph': {'Season': Season.default},
     'PlayerVsPlayer': {'Season': Season.default},
-    'ShotChartDetail': {'PlayerPosition': ''},
+    'ShotChartDetail': {'ContextMeasure': ContextMeasureSimple.default,'LeagueID': LeagueID.default, 'PlayerPosition': ''},
     'ShotChartLineupDetail': {'GameID': '', 'TeamID': ''},
     'TeamAndPlayersVsPlayers': {'Season': Season.default},
     'TeamDashboardByClutch': {'Season': Season.default},
@@ -96,7 +97,7 @@ def get_patterns_from_response(nba_stats_response):
     return parameter_patterns
 
 
-def get_required_parameters(nba_stats_response):
+def get_required_parameters(endpoint, nba_stats_response):
     required_parameters = []
     if re.search('<.*?>', nba_stats_response.get_response()):  # Skip if HTML Response
         required_parameters_matches = []
@@ -115,6 +116,13 @@ def get_required_parameters(nba_stats_response):
         if required_parameter == 'Runtype':
             required_parameter = 'RunType'
         required_parameters.append(required_parameter)
+
+    # Adding required parameters that need overriding
+    if endpoint in missing_required_parameters:
+        for parameter in missing_required_parameters[endpoint]:
+            if parameter in required_parameters:
+                continue
+            required_parameters.append(parameter)
     return required_parameters
 
 
@@ -122,7 +130,7 @@ def required_parameters_test(endpoint):
     status = 'success'
     nba_stats_response = NBAStatsHTTP().send_api_request(endpoint=endpoint,  parameters={})
 
-    required_parameters = get_required_parameters(nba_stats_response)
+    required_parameters = get_required_parameters(endpoint, nba_stats_response)
 
     if '<title>NBA.com/Stats  | 404 Page Not Found </title>' in nba_stats_response.get_response():
         status = 'deprecated'
@@ -240,7 +248,7 @@ def nullable_parameters_test(endpoint, all_parameters):
             or 'A value is required' in nba_stats_response.get_response():
         raise Exception('Failed to pass nullable parameters test. Possibly non-nullable value failing.')
 
-    required_parameters = get_required_parameters(nba_stats_response)
+    required_parameters = get_required_parameters(endpoint, nba_stats_response)
     nullable_parameters = [prop for prop in list(params.keys()) if prop not in required_parameters]
     if nba_stats_response.get_parameters():
         response_parameters = nba_stats_response.get_parameters()
