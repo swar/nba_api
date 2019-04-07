@@ -6,13 +6,28 @@
 
 #### An API Client package to access the APIs for NBA.com
 
-##### Development Version: v1.0.8
+##### Development Version: v1.1.0
 
 `nba_api` is an API Client for `www.nba.com`. This package is meant to make the API Endpoints more accessible and to provide extensive documentation.
 
 The APIs on `www.nba.com` are largely undocumented and change frequently.
 
 Please feel free to contribute and have an open discussion regarding improvements and additional APIs to be mapped.
+
+
+#### Recent Changes
+* Adding individual proxy, headers, and timeout support for requests.
+
+```python
+from nba_api.stats.endpoints import commonplayerinfo
+
+# Regular Request
+player_info = commonplayerinfo.CommonPlayerInfo(player_id=2544)
+
+# Proxy Support, Custom Headers Support, Timeout Support
+player_info = commonplayerinfo.CommonPlayerInfo(player_id=2544, proxy='127.0.0.1:80', headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'}, timeout=100)
+```
+
 
 #### Mapped API Clients
 
@@ -31,8 +46,8 @@ Required and Optional Packages:
 
 
 ## Usage Examples
-- [Basic Usage](/docs/nba_api/stats/examples.md) -- The basics of calling an API endpoint.
-- [Jupyter Notebooks](/docs/examples) -- Larger practical examples in Jupyter Notebook format, including looking for play-by-play data for a particular game.
+- [Basic Usage](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/examples.md) -- The basics of calling an API endpoint.
+- [Jupyter Notebooks](https://github.com/swar/nba_api/tree/master/docs/examples) -- Larger practical examples in Jupyter Notebook format, including looking for play-by-play data for a particular game.
 
 ## Documentation
 
@@ -72,5 +87,4 @@ A major purpose of this package is to map and analyze as many endpoints on NBA.c
 
 ## Examples for Other Clients
 
-[Endpoint Analysis JSON _for use with other clients_](/analysis_archive/stats)
-
+[Endpoint Analysis JSON _for use with other clients_](https://github.com/swar/nba_api/tree/master/analysis_archive/stats)
