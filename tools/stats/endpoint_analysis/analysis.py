@@ -41,7 +41,8 @@ missing_required_parameters = {
     'PlayerDashPtShots': {'LeagueID': LeagueID.default},
     'PlayerFantasyProfile': {'Season': Season.default},
     'PlayerVsPlayer': {'Season': Season.default},
-    'ShotChartDetail': {'ContextMeasure': ''},
+    'ShotChartDetail': {'PlayerPosition': ''},
+    'ShotChartLineupDetail': {'GameID': '', 'TeamID': ''},
     'TeamAndPlayersVsPlayers': {'Season': Season.default},
     'TeamDashboardByClutch': {'Season': Season.default},
     'TeamDashboardByGameSplits': {'Season': Season.default},
@@ -58,7 +59,7 @@ missing_required_parameters = {
     'TeamPlayerDashboard': {'Season': Season.default},
     'TeamPlayerOnOffDetails': {'Season': Season.default},
     'TeamPlayerOnOffSummary': {'Season': Season.default},
-    'TeamVsPlayer': {'Season': Season.default},
+    'TeamVsPlayer': {'Season': Season.default, 'TeamID': '1610612739'},  # Cleveland Cavaliers
 }
 
 
@@ -110,6 +111,9 @@ def get_required_parameters(nba_stats_response):
         elif not required_parameter:
             raise Exception('Failed to find required_parameter in match.', match)
         required_parameter = required_parameter.group(1).replace(' ', '')
+        # Fix case sensitivity
+        if required_parameter == 'Runtype':
+            required_parameter = 'RunType'
         required_parameters.append(required_parameter)
     return required_parameters
 
@@ -148,12 +152,13 @@ def required_parameters_test(endpoint):
 def minimal_requirement_tests(endpoint, required_params, pause=1):
     status = 'success'
     all_parameters = list(required_params.keys())
-    # 1. minimal requirement test with default non-nullable values
-    nba_stats_response = NBAStatsHTTP().send_api_request(endpoint=endpoint, parameters=required_params)
 
     if endpoint in missing_required_parameters:
         for parameter, value in missing_required_parameters[endpoint].items():
             required_params[parameter] = value
+
+    # 1. minimal requirement test with default non-nullable values
+    nba_stats_response = NBAStatsHTTP().send_api_request(endpoint=endpoint, parameters=required_params)
 
     # 2. minimal requirement test with pattern matching
     if not nba_stats_response.valid_json():
@@ -202,16 +207,26 @@ def minimal_requirement_tests(endpoint, required_params, pause=1):
 
     nullable_parameters = []
     if nba_stats_response.get_parameters():
-        for parameter, value in nba_stats_response.get_parameters().items():
+        response_parameters = nba_stats_response.get_parameters()
+        for parameter, value in response_parameters.items():
             if value is None or value is "":
                 nullable_parameters.append(parameter)
+
+        for parameter in all_parameters:
+            if parameter in response_parameters.keys():
+                continue
+            if parameter in missing_required_parameters[endpoint] and missing_required_parameters[endpoint][parameter]:
+                continue
+            nullable_parameters.append(parameter)
+
+        nullable_parameters = list(set(nullable_parameters))
 
     return status, all_parameters, data_sets, all_params_errors, nullable_parameters
 
 
 def nullable_parameters_test(endpoint, all_parameters):
     skip_endpoints = ['boxscoreadvancedv2', 'boxscorefourfactorsv2', 'boxscoremiscv2', 'boxscorescoringv2',
-                      'boxscoretraditionalv2', 'boxscoreusagev2']
+                      'boxscoretraditionalv2', 'boxscoreusagev2', 'winprobabilitypbp']
 
     if endpoint.lower() in skip_endpoints:
         return []
@@ -228,9 +243,17 @@ def nullable_parameters_test(endpoint, all_parameters):
     required_parameters = get_required_parameters(nba_stats_response)
     nullable_parameters = [prop for prop in list(params.keys()) if prop not in required_parameters]
     if nba_stats_response.get_parameters():
-        for parameter, value in nba_stats_response.get_parameters().items():
+        response_parameters = nba_stats_response.get_parameters()
+        for parameter, value in response_parameters.items():
             if value is None or value is "":
                 nullable_parameters.append(parameter)
+
+        for parameter in all_parameters:
+            if parameter in response_parameters.keys():
+                continue
+            if parameter in missing_required_parameters[endpoint] and missing_required_parameters[endpoint][parameter]:
+                continue
+            nullable_parameters.append(parameter)
 
     return nullable_parameters
 
