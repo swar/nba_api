@@ -1,11 +1,23 @@
 from nba_api.stats.endpoints import *
 
+test = assistleaders.AssistLeaders().nba_response.valid_json()
+if not test:
+    raise Exception('fail', 'assistleaders')
+test = assisttracker.AssistTracker().nba_response.valid_json()
+if not test:
+    raise Exception('fail', 'assisttracker')
 test = boxscoreadvancedv2.BoxScoreAdvancedV2(game_id='0021700807').nba_response.valid_json()
 if not test:
     raise Exception('fail', 'boxscoreadvancedv2')
+test = boxscoredefensive.BoxScoreDefensive(game_id='0021700807').nba_response.valid_json()
+if not test:
+    raise Exception('fail', 'boxscoredefensive')
 test = boxscorefourfactorsv2.BoxScoreFourFactorsV2(game_id='0021700807').nba_response.valid_json()
 if not test:
     raise Exception('fail', 'boxscorefourfactorsv2')
+test = boxscorematchups.BoxScoreMatchups(game_id='0021700807').nba_response.valid_json()
+if not test:
+    raise Exception('fail', 'boxscorematchups')
 test = boxscoremiscv2.BoxScoreMiscV2(game_id='0021700807').nba_response.valid_json()
 if not test:
     raise Exception('fail', 'boxscoremiscv2')
@@ -60,9 +72,18 @@ if not test:
 test = drafthistory.DraftHistory().nba_response.valid_json()
 if not test:
     raise Exception('fail', 'drafthistory')
+test = fantasywidget.FantasyWidget().nba_response.valid_json()
+if not test:
+    raise Exception('fail', 'fantasywidget')
 test = franchisehistory.FranchiseHistory().nba_response.valid_json()
 if not test:
     raise Exception('fail', 'franchisehistory')
+test = franchiseleaders.FranchiseLeaders(team_id='1610612739').nba_response.valid_json()
+if not test:
+    raise Exception('fail', 'franchiseleaders')
+test = franchiseplayers.FranchisePlayers(team_id='1610612739').nba_response.valid_json()
+if not test:
+    raise Exception('fail', 'franchiseplayers')
 test = homepageleaders.HomePageLeaders().nba_response.valid_json()
 if not test:
     raise Exception('fail', 'homepageleaders')
@@ -123,6 +144,12 @@ if not test:
 test = leagueleaders.LeagueLeaders().nba_response.valid_json()
 if not test:
     raise Exception('fail', 'leagueleaders')
+test = leagueplayerondetails.LeaguePlayerOnDetails(team_id='1610612739').nba_response.valid_json()
+if not test:
+    raise Exception('fail', 'leagueplayerondetails')
+test = leagueseasonmatchups.LeagueSeasonMatchups(off_player_id_nullable=2544, def_player_id_nullable='1610612739').nba_response.valid_json()
+if not test:
+    raise Exception('fail', 'leagueseasonmatchups')
 test = leaguestandings.LeagueStandings().nba_response.valid_json()
 if not test:
     raise Exception('fail', 'leaguestandings')
@@ -214,6 +241,20 @@ if not test:
 test = shotchartlineupdetail.ShotChartLineupDetail().nba_response.valid_json()
 if not test:
     raise Exception('fail', 'shotchartlineupdetail')
+test = teamandplayersvsplayers.TeamAndPlayersVsPlayers(team_id=1610612739,
+                                                       player_id1=203954,
+                                                       player_id2=201567,
+                                                       player_id3=203507,
+                                                       player_id4=203078,
+                                                       player_id5=202681,
+                                                       vs_team_id=1610612765,
+                                                       vs_player_id1=203954,
+                                                       vs_player_id2=201567,
+                                                       vs_player_id3=203507,
+                                                       vs_player_id4=203078,
+                                                       vs_player_id5=202681).nba_response.valid_json()
+if not test:
+    raise Exception('fail', 'teamandplayersvsplayers')
 test = teamdashlineups.TeamDashLineups(team_id='1610612739').nba_response.valid_json()
 if not test:
     raise Exception('fail', 'teamdashlineups')
@@ -280,7 +321,7 @@ if not test:
 test = teamyearbyyearstats.TeamYearByYearStats(team_id='1610612739').nba_response.valid_json()
 if not test:
     raise Exception('fail', 'teamyearbyyearstats')
-test = videodetails.VideoDetails(player_id='2544', team_id='1610612739').nba_response.valid_json()
+test = videodetails.VideoDetails(player_id='2544', game_id='0021700807', team_id='1610612739', start_period=1, end_period=1).nba_response.valid_json()
 if not test:
     raise Exception('fail', 'videodetails')
 test = videoevents.VideoEvents(game_id='0021700807').nba_response.valid_json()
@@ -289,3 +330,6 @@ if not test:
 test = videostatus.VideoStatus().nba_response.valid_json()
 if not test:
     raise Exception('fail', 'videostatus')
+test = winprobabilitypbp.WinProbabilityPBP(game_id='0021700807').nba_response.valid_json()
+if not test:
+    raise Exception('fail', 'winprobabilitypbp')
