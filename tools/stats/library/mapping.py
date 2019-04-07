@@ -3,11 +3,15 @@ from nba_api.stats.library.parameters import *
 endpoint_list = [
     'AllPlayers',
     'AllStarBallotPredictor',
+    'AssistLeaders',
+    'AssistTracker',
     'AssistTrackerStats',
     'BoxScoreAdvanced',
     'BoxScoreAdvancedV2',
+    'BoxScoreDefensive',
     'BoxScoreFourFactors',
     'BoxScoreFourFactorsV2',
+    'BoxScoreMatchups',
     'BoxScoreMisc',
     'BoxScoreMiscV2',
     'BoxScorePlayerTracking',
@@ -33,7 +37,10 @@ endpoint_list = [
     'DraftCombineSpotShooting',
     'DraftCombineStats',
     'DraftHistory',
+    'FantasyWidget',
     'FranchiseHistory',
+    'FranchiseLeaders',
+    'FranchisePlayers',
     'GLeaguePredictor',
     'HomePage',
     'HomePageLeaders',
@@ -41,6 +48,7 @@ endpoint_list = [
     'InfographicFanDuelPlayer',
     'LeadersTiles',
     'LeagueDashLineups',
+    'LeagueDashOppPtShot',
     'LeagueDashPlayerBioStats',
     'LeagueDashPlayerClutch',
     'LeagueDashPlayerPtShot',
@@ -56,6 +64,8 @@ endpoint_list = [
     'LeagueGameFinder',
     'LeagueGameLog',
     'LeagueLeaders',
+    'LeaguePlayerOnDetails',
+    'LeagueSeasonMatchups',
     'LeagueStandings',
     'LineupStats',
     'PlayByPlay',
@@ -121,6 +131,7 @@ endpoint_list = [
     'ShotChartDetail',
     'ShotChartLineupDetail',
     'TeamAndPlayerVsPlayers',
+    'TeamAndPlayersVsPlayers',
     'TeamClutchStats',
     'TeamDashboardByClutch',
     'TeamDashboardByGameSplits',
@@ -174,6 +185,7 @@ endpoint_list = [
     'VideoEvents',
     'VideoStatus',
     'WinProbabilityPlayByPlay',
+    'WinProbabilityPBP',
 ]
 
 parameter_variations = {
@@ -552,6 +564,11 @@ parameter_variations = {
         'parameter_value': PerModeSimple.default,
         'parameter_error_value': 0,
     },
+    'PerModeSimpleNullable': {
+        'default_py_value': 'PerModeSimpleNullable.default',
+        'parameter_value': PerModeSimpleNullable.default,
+        'parameter_error_value': 0,
+    },
     'PerMode36': {
         'default_py_value': 'PerMode36.default',
         'parameter_value': PerMode36.default,
@@ -577,6 +594,16 @@ parameter_variations = {
         'parameter_value': PlayerExperienceNullable.default,
         'parameter_error_value': 0,
     },
+    'ActivePlayers': {
+        'default_py_value': 'ActivePlayers.default',
+        'parameter_value': ActivePlayers.default,
+        'parameter_error_value': 'a',
+    },
+    'TodaysPlayers': {
+        'default_py_value': 'TodaysPlayers.default',
+        'parameter_value': TodaysPlayers.default,
+        'parameter_error_value': 'a',
+    },
     'PlayerID': {
         'default_py_value': None,
         'parameter_value': '2544',  # Lebron James
@@ -585,6 +612,16 @@ parameter_variations = {
     'PlayerIDNullable': {
         'default_py_value': "''",
         'parameter_value': '',  # Lebron James
+        'parameter_error_value': 'a',
+    },
+    'DefPlayerIDNullable': {
+        'default_py_value': "''",
+        'parameter_value': '',
+        'parameter_error_value': 'a',
+    },
+    'OffPlayerIDNullable': {
+        'default_py_value': "''",
+        'parameter_value': '',
         'parameter_error_value': 'a',
     },
     'VsPlayerID': {
@@ -762,6 +799,11 @@ parameter_variations = {
         'parameter_value': '0',  # Cleveland Cavaliers: 1610612739
         'parameter_error_value': 'a',
     },
+    'TodaysOpponent': {
+        'default_py_value': 0,
+        'parameter_value': '0',
+        'parameter_error_value': 'a',
+    },
     'OpponentTeamID': {
         'default_py_value': '0',
         'parameter_value': '0',
@@ -770,6 +812,26 @@ parameter_variations = {
     'OpponentTeamIDNullable': {
         'default_py_value': "''",
         'parameter_value': '0',  # Dallas Mavericks: 1610612742
+        'parameter_error_value': 'a',
+    },
+    'DefTeamID': {
+        'default_py_value': None,
+        'parameter_value': '1610612742',  # Dallas Mavericks
+        'parameter_error_value': 'a',
+    },
+    'DefTeamIDNullable': {
+        'default_py_value': None,
+        'parameter_value': '',
+        'parameter_error_value': 'a',
+    },
+    'OffTeamID': {
+        'default_py_value': None,
+        'parameter_value': '1610612739',  # Cleveland Cavaliers
+        'parameter_error_value': 'a',
+    },
+    'OffTeamIDNullable': {
+        'default_py_value': None,
+        'parameter_value': '',
         'parameter_error_value': 'a',
     },
     'PointDiff': {
@@ -788,8 +850,8 @@ parameter_variations = {
         'parameter_error_value': 'a',
     },
     'PositionNullable': {
-        'default_py_value': "''",
-        'parameter_value': '',
+        'default_py_value': "PositionNullable.default",
+        'parameter_value': PositionNullable.default,
         'parameter_error_value': 'a',
     },
     'PtMeasureType': {
@@ -855,6 +917,11 @@ parameter_variations = {
     'Scope': {
         'default_py_value': 'Scope.default',
         'parameter_value': Scope.default,
+        'parameter_error_value': 'a',
+    },
+    'RunType': {
+        'default_py_value': 'RunType.default',
+        'parameter_value': RunType.default,
         'parameter_error_value': 'a',
     },
     'SeasonYear': {
@@ -2174,7 +2241,8 @@ parameter_map = {
         },
         'non-nullable': {
             '^(\\d{10})?$': 'GameID',
-            '^\\d{10}$': 'GameID'
+            '^\\d{10}$': 'GameID',
+            None: 'GameID'
         }
     },
     'GameScope': {
@@ -2244,7 +2312,7 @@ parameter_map = {
     },
     'IsOnlyCurrentSeason': {
         'nullable': {
-
+            None: 'IsOnlyCurrentSeason'
         },
         'non-nullable': {
             None: 'IsOnlyCurrentSeason'
@@ -2269,7 +2337,8 @@ parameter_map = {
             '^\\d{2}$': 'LeagueID',
             '^(00)|(10)|(20)$': 'LeagueID',
             '(00)|(20)|(10)': 'LeagueID',
-            '^(00)|(20)$': 'LeagueID'
+            '^(00)|(20)$': 'LeagueID',
+            '^((00)|(20))?$': 'LeagueID'
         }
     },
     'Location': {
@@ -2352,7 +2421,8 @@ parameter_map = {
     },
     'PerMode': {
         'nullable': {
-
+            '^(Totals)|(PerGame)$': 'PerModeSimpleNullable',
+            None: 'PerModeSimpleNullable'
         },
         'non-nullable': {
             '^(Totals)|(PerGame)$': 'PerModeSimple',
@@ -2376,6 +2446,22 @@ parameter_map = {
         },
         'non-nullable': {
 
+        }
+    },
+    'ActivePlayers': {
+        'nullable': {
+
+        },
+        'non-nullable': {
+            '^(Y)|(N)$': 'ActivePlayers'
+        }
+    },
+    'TodaysPlayers': {
+        'nullable': {
+
+        },
+        'non-nullable': {
+            '^(Y)|(N)$': 'TodaysPlayers'
         }
     },
     'PlayerID': {
@@ -2424,6 +2510,22 @@ parameter_map = {
         },
         'non-nullable': {
             None: 'PlayerID5'
+        }
+    },
+    'DefPlayerID': {
+        'nullable': {
+            None: 'DefPlayerIDNullable'
+        },
+        'non-nullable': {
+
+        }
+    },
+    'OffPlayerID': {
+        'nullable': {
+            None: 'OffPlayerIDNullable'
+        },
+        'non-nullable': {
+
         }
     },
     'PlayerIDList': {
@@ -2488,7 +2590,8 @@ parameter_map = {
     },
     'Position': {
         'nullable': {
-            None: 'PositionNullable'
+            None: 'PositionNullable',
+            '^(Guard|Forward|Center)?$': 'PositionNullable'
         },
         'non-nullable': {
 
@@ -2543,6 +2646,22 @@ parameter_map = {
 
         }
     },
+    'RunType': {
+        'nullable': {
+
+        },
+        'non-nullable': {
+            None: 'RunType'
+        }
+    },
+    'Runtype': {
+        'nullable': {
+
+        },
+        'non-nullable': {
+            None: 'RunType'
+        }
+    },
     'Scope': {
         'nullable': {
 
@@ -2559,8 +2678,10 @@ parameter_map = {
             None: 'SeasonNullable'
         },
         'non-nullable': {
+            '^(\\d{4}-\\d{2})$': 'Season',
             '^\\d{4}-\\d{2}$': 'Season',
             '^(\\d{4}-\\d{2})?$': 'Season',
+            None: 'Season',
             '^(\\d{4}-\\d{2})|(All Time)$': 'SeasonAll_Time',
             '^(\\d{4}-\\d{2})|(ALLTIME)$': 'SeasonAllTime',
             '^(\\d{4}-\\d{2})|(ALL)$': 'SeasonAll'
@@ -2593,6 +2714,7 @@ parameter_map = {
         'non-nullable': {
             '^(Regular Season)|(Pre Season)$': 'SeasonType',
             '^(Regular Season)|(Pre Season)|(Playoffs)$': 'SeasonTypePlayoffs',
+            '^(Regular Season)|(Pre Season)|(Playoffs)|(Pre-Season)$': 'SeasonTypePlayoffs',
             '^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$': 'SeasonTypeAllStar',
             '^((Regular Season)|(Pre Season)|(Playoffs)|(All Star))?$': 'SeasonTypeAllStar',
             '^(Regular Season)|(Playoffs)|(All Star)|(Pre Season)$': 'SeasonTypeAllStar',
@@ -2607,6 +2729,7 @@ parameter_map = {
         },
         'non-nullable': {
             '^\\d{4}-\\d{2}$': 'Season',
+            None: 'SeasonYear',
             '^(\\d{4}-\\d{2})|(All Time)$': 'SeasonAll_Time'
         }
     },
@@ -2699,6 +2822,30 @@ parameter_map = {
         },
         'non-nullable': {
             None: 'TeamID'
+        }
+    },
+    'TodaysOpponent': {
+        'nullable': {
+
+        },
+        'non-nullable': {
+            None: 'TodaysOpponent'
+        }
+    },
+    'DefTeamID': {
+        'nullable': {
+            None: 'DefTeamIDNullable'
+        },
+        'non-nullable': {
+            None: 'DefTeamID'
+        }
+    },
+    'OffTeamID': {
+        'nullable': {
+            None: 'OffTeamIDNullable'
+        },
+        'non-nullable': {
+            None: 'OffTeamID'
         }
     },
     'TopX': {
