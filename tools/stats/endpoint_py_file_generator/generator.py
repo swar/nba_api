@@ -25,7 +25,7 @@ def get_endpoint_contents(endpoint, endpoint_analysis):
     parameters.sort()
     nullable_parameters.sort()
 
-    for prop in parameters:
+    for prop in sorted(parameters):
         if prop in nullable_parameters:
             continue
         pattern = parameter_patterns[prop]
