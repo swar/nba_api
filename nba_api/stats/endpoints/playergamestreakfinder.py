@@ -7,6 +7,12 @@ class PlayerGameStreakFinder(Endpoint):
     endpoint = 'playergamestreakfinder'
     expected_data = {'PlayerGameStreakFinderResults': ['PLAYER_NAME_LAST_FIRST', 'PLAYER_ID', 'GAMESTREAK', 'STARTDATE', 'ENDDATE', 'ACTIVESTREAK', 'NUMSEASONS', 'LASTSEASON', 'FIRSTSEASON']}
 
+    nba_response = None
+    data_sets = None
+    player_stats = None
+    team_stats = None
+    headers = None
+
     def __init__(self,
                  active_streaks_only_nullable='',
                  conference_nullable=ConferenceNullable.default,
@@ -96,10 +102,16 @@ class PlayerGameStreakFinder(Endpoint):
                  vs_conference_nullable=ConferenceNullable.default,
                  vs_division_nullable=DivisionNullable.default,
                  vs_team_id_nullable='',
-                 years_experience_nullable=''):
-        self.nba_response = NBAStatsHTTP().send_api_request(
-            endpoint=self.endpoint,
-            parameters={
+                 years_experience_nullable='',
+                 proxy=None,
+                 headers=None,
+                 timeout=30,
+                 get_request=True):
+        self.proxy = proxy
+        if headers is not None:
+            self.headers = headers
+        self.timeout = timeout
+        self.parameters = {
                 'ActiveStreaksOnly': active_streaks_only_nullable,
                 'Conference': conference_nullable,
                 'DateFrom': date_from_nullable,
@@ -189,8 +201,21 @@ class PlayerGameStreakFinder(Endpoint):
                 'VsDivision': vs_division_nullable,
                 'VsTeamID': vs_team_id_nullable,
                 'YearsExperience': years_experience_nullable
-            },
+        }
+        if get_request:
+            self.get_request()
+    
+    def get_request(self):
+        self.nba_response = NBAStatsHTTP().send_api_request(
+            endpoint=self.endpoint,
+            parameters=self.parameters,
+            proxy=self.proxy,
+            headers=self.headers,
+            timeout=self.timeout,
         )
+        self.load_response()
+        
+    def load_response(self):
         data_sets = self.nba_response.get_data_sets()
         self.data_sets = [Endpoint.DataSet(data=data_set) for data_set_name, data_set in data_sets.items()]
         self.player_game_streak_finder_results = Endpoint.DataSet(data=data_sets['PlayerGameStreakFinderResults'])

@@ -7,6 +7,12 @@ class PlayerCompare(Endpoint):
     endpoint = 'playercompare'
     expected_data = {'Individual': ['GROUP_SET', 'DESCRIPTION', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'TOV', 'STL', 'BLK', 'BLKA', 'PF', 'PFD', 'PTS', 'PLUS_MINUS'], 'OverallCompare': ['GROUP_SET', 'DESCRIPTION', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'TOV', 'STL', 'BLK', 'BLKA', 'PF', 'PFD', 'PTS', 'PLUS_MINUS']}
 
+    nba_response = None
+    data_sets = None
+    player_stats = None
+    team_stats = None
+    headers = None
+
     def __init__(self,
                  vs_player_id_list,
                  player_id_list,
@@ -32,10 +38,16 @@ class PlayerCompare(Endpoint):
                  season_segment_nullable=SeasonSegmentNullable.default,
                  shot_clock_range_nullable=ShotClockRangeNullable.default,
                  vs_conference_nullable=ConferenceNullable.default,
-                 vs_division_nullable=DivisionNullable.default):
-        self.nba_response = NBAStatsHTTP().send_api_request(
-            endpoint=self.endpoint,
-            parameters={
+                 vs_division_nullable=DivisionNullable.default,
+                 proxy=None,
+                 headers=None,
+                 timeout=30,
+                 get_request=True):
+        self.proxy = proxy
+        if headers is not None:
+            self.headers = headers
+        self.timeout = timeout
+        self.parameters = {
                 'VsPlayerIDList': vs_player_id_list,
                 'PlayerIDList': player_id_list,
                 'LastNGames': last_n_games,
@@ -61,8 +73,21 @@ class PlayerCompare(Endpoint):
                 'ShotClockRange': shot_clock_range_nullable,
                 'VsConference': vs_conference_nullable,
                 'VsDivision': vs_division_nullable
-            },
+        }
+        if get_request:
+            self.get_request()
+    
+    def get_request(self):
+        self.nba_response = NBAStatsHTTP().send_api_request(
+            endpoint=self.endpoint,
+            parameters=self.parameters,
+            proxy=self.proxy,
+            headers=self.headers,
+            timeout=self.timeout,
         )
+        self.load_response()
+        
+    def load_response(self):
         data_sets = self.nba_response.get_data_sets()
         self.data_sets = [Endpoint.DataSet(data=data_set) for data_set_name, data_set in data_sets.items()]
         self.individual = Endpoint.DataSet(data=data_sets['Individual'])

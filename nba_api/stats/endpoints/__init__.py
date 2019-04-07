@@ -1,30 +1,119 @@
-__all__ = ['boxscoreadvancedv2', 'boxscorefourfactorsv2', 'boxscoremiscv2', 'boxscoreplayertrackv2',
-           'boxscorescoringv2', 'boxscoresummaryv2', 'boxscoretraditionalv2', 'boxscoreusagev2', 'commonallplayers',
-           'commonplayerinfo', 'commonplayoffseries', 'commonteamroster', 'commonteamyears', 'defensehub',
-           'draftcombinedrillresults', 'draftcombinenonstationaryshooting', 'draftcombineplayeranthro',
-           'draftcombinespotshooting', 'draftcombinestats', 'drafthistory', 'franchisehistory', 'homepageleaders',
-           'homepagev2', 'infographicfanduelplayer', 'leaderstiles', 'leaguedashlineups', 'leaguedashplayerbiostats',
-           'leaguedashplayerclutch', 'leaguedashplayerptshot', 'leaguedashplayershotlocations', 'leaguedashplayerstats',
-           'leaguedashptdefend', 'leaguedashptstats', 'leaguedashptteamdefend', 'leaguedashteamclutch', 'leaguedashteamptshot',
-           'leaguedashteamshotlocations', 'leaguedashteamstats', 'leaguegamefinder', 'leaguegamelog', 'leagueleaders',
-           'leaguestandings', 'playbyplay', 'playbyplayv2', 'playerawards', 'playercareerstats', 'playercompare',
-           'playerdashptpass', 'playerdashptreb', 'playerdashptshotdefend', 'playerdashptshots',
-           'playerdashboardbyclutch', 'playerdashboardbygamesplits', 'playerdashboardbygeneralsplits',
-           'playerdashboardbylastngames', 'playerdashboardbyopponent', 'playerdashboardbyshootingsplits',
-           'playerdashboardbyteamperformance', 'playerdashboardbyyearoveryear', 'playerfantasyprofile',
-           'playerfantasyprofilebargraph', 'playergamelog', 'playergamestreakfinder', 'playernextngames',
-           'playerprofilev2', 'playervsplayer', 'playoffpicture', 'scoreboard', 'scoreboardv2',
-           'shotchartdetail', 'shotchartlineupdetail', 'teamdashlineups', 'teamdashptpass', 'teamdashptreb',
-           'teamdashptshots', 'teamdashboardbyclutch', 'teamdashboardbygamesplits', 'teamdashboardbygeneralsplits',
-           'teamdashboardbylastngames', 'teamdashboardbyopponent', 'teamdashboardbyshootingsplits',
-           'teamdashboardbyteamperformance', 'teamdashboardbyyearoveryear', 'teamdetails', 'teamgamelog',
-           'teamgamestreakfinder', 'teamhistoricalleaders', 'teaminfocommon', 'teamplayerdashboard',
-           'teamplayeronoffdetails', 'teamplayeronoffsummary', 'teamvsplayer', 'teamyearbyyearstats', 'videodetails',
-           'videoevents', 'videostatus']
+__all__ = [
+    'assistleaders',
+    'assisttracker',
+    'boxscoreadvancedv2',
+    'boxscoredefensive',
+    'boxscorefourfactorsv2',
+    'boxscorematchups',
+    'boxscoremiscv2',
+    'boxscoreplayertrackv2',
+    'boxscorescoringv2',
+    'boxscoresummaryv2',
+    'boxscoretraditionalv2',
+    'boxscoreusagev2',
+    'commonallplayers',
+    'commonplayerinfo',
+    'commonplayoffseries',
+    'commonteamroster',
+    'commonteamyears',
+    'defensehub',
+    'draftcombinedrillresults',
+    'draftcombinenonstationaryshooting',
+    'draftcombineplayeranthro',
+    'draftcombinespotshooting',
+    'draftcombinestats',
+    'drafthistory',
+    'fantasywidget',
+    'franchisehistory',
+    'franchiseleaders',
+    'franchiseplayers',
+    'homepageleaders',
+    'homepagev2',
+    'infographicfanduelplayer',
+    'leaderstiles',
+    'leaguedashlineups',
+    'leaguedashplayerbiostats',
+    'leaguedashplayerclutch',
+    'leaguedashplayerptshot',
+    'leaguedashplayershotlocations',
+    'leaguedashplayerstats',
+    'leaguedashptdefend',
+    'leaguedashptstats',
+    'leaguedashptteamdefend',
+    'leaguedashteamclutch',
+    'leaguedashteamptshot',
+    'leaguedashteamshotlocations',
+    'leaguedashteamstats',
+    'leaguegamefinder',
+    'leaguegamelog',
+    'leagueleaders',
+    'leagueplayerondetails',
+    'leagueseasonmatchups',
+    'leaguestandings',
+    'playbyplay',
+    'playbyplayv2',
+    'playerawards',
+    'playercareerstats',
+    'playercompare',
+    'playerdashptpass',
+    'playerdashptreb',
+    'playerdashptshotdefend',
+    'playerdashptshots',
+    'playerdashboardbyclutch',
+    'playerdashboardbygamesplits',
+    'playerdashboardbygeneralsplits',
+    'playerdashboardbylastngames',
+    'playerdashboardbyopponent',
+    'playerdashboardbyshootingsplits',
+    'playerdashboardbyteamperformance',
+    'playerdashboardbyyearoveryear',
+    'playerfantasyprofile',
+    'playerfantasyprofilebargraph',
+    'playergamelog',
+    'playergamestreakfinder',
+    'playernextngames',
+    'playerprofilev2',
+    'playervsplayer',
+    'playoffpicture',
+    'scoreboard',
+    'scoreboardv2',
+    'shotchartdetail',
+    'shotchartlineupdetail',
+    'teamandplayersvsplayers',
+    'teamdashlineups',
+    'teamdashptpass',
+    'teamdashptreb',
+    'teamdashptshots',
+    'teamdashboardbyclutch',
+    'teamdashboardbygamesplits',
+    'teamdashboardbygeneralsplits',
+    'teamdashboardbylastngames',
+    'teamdashboardbyopponent',
+    'teamdashboardbyshootingsplits',
+    'teamdashboardbyteamperformance',
+    'teamdashboardbyyearoveryear',
+    'teamdetails',
+    'teamgamelog',
+    'teamgamestreakfinder',
+    'teamhistoricalleaders',
+    'teaminfocommon',
+    'teamplayerdashboard',
+    'teamplayeronoffdetails',
+    'teamplayeronoffsummary',
+    'teamvsplayer',
+    'teamyearbyyearstats',
+    'videodetails',
+    'videoevents',
+    'videostatus',
+    'winprobabilitypbp',
+]
 
-# I don't love the repetitiveness of this, but it seems unavoidable.
+from .assistleaders import AssistLeaders
+from .assisttracker import AssistTracker
 from .boxscoreadvancedv2 import BoxScoreAdvancedV2
+from .boxscoredefensive import BoxScoreDefensive
 from .boxscorefourfactorsv2 import BoxScoreFourFactorsV2
+from .boxscorematchups import BoxScoreMatchups
 from .boxscoremiscv2 import BoxScoreMiscV2
 from .boxscoreplayertrackv2 import BoxScorePlayerTrackV2
 from .boxscorescoringv2 import BoxScoreScoringV2
@@ -43,7 +132,10 @@ from .draftcombineplayeranthro import DraftCombinePlayerAnthro
 from .draftcombinespotshooting import DraftCombineSpotShooting
 from .draftcombinestats import DraftCombineStats
 from .drafthistory import DraftHistory
+from .fantasywidget import FantasyWidget
 from .franchisehistory import FranchiseHistory
+from .franchiseleaders import FranchiseLeaders
+from .franchiseplayers import FranchisePlayers
 from .homepageleaders import HomePageLeaders
 from .homepagev2 import HomePageV2
 from .infographicfanduelplayer import InfographicFanDuelPlayer
@@ -64,6 +156,8 @@ from .leaguedashteamstats import LeagueDashTeamStats
 from .leaguegamefinder import LeagueGameFinder
 from .leaguegamelog import LeagueGameLog
 from .leagueleaders import LeagueLeaders
+from .leagueplayerondetails import LeaguePlayerOnDetails
+from .leagueseasonmatchups import LeagueSeasonMatchups
 from .leaguestandings import LeagueStandings
 from .playbyplay import PlayByPlay
 from .playbyplayv2 import PlayByPlayV2
@@ -94,6 +188,7 @@ from .scoreboard import Scoreboard
 from .scoreboardv2 import ScoreboardV2
 from .shotchartdetail import ShotChartDetail
 from .shotchartlineupdetail import ShotChartLineupDetail
+from .teamandplayersvsplayers import TeamAndPlayersVsPlayers
 from .teamdashlineups import TeamDashLineups
 from .teamdashptpass import TeamDashPtPass
 from .teamdashptreb import TeamDashPtReb
@@ -119,3 +214,4 @@ from .teamyearbyyearstats import TeamYearByYearStats
 from .videodetails import VideoDetails
 from .videoevents import VideoEvents
 from .videostatus import VideoStatus
+from .winprobabilitypbp import WinProbabilityPBP

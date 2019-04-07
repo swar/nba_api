@@ -7,6 +7,12 @@ class LeagueDashPtStats(Endpoint):
     endpoint = 'leaguedashptstats'
     expected_data = {'LeagueDashPtStats': ['TEAM_ID', 'TEAM_ABBREVIATION', 'TEAM_NAME', 'GP', 'W', 'L', 'MIN', 'DIST_FEET', 'DIST_MILES', 'DIST_MILES_OFF', 'DIST_MILES_DEF', 'AVG_SPEED', 'AVG_SPEED_OFF', 'AVG_SPEED_DEF']}
 
+    nba_response = None
+    data_sets = None
+    player_stats = None
+    team_stats = None
+    headers = None
+
     def __init__(self,
                  last_n_games=LastNGames.default,
                  month=Month.default,
@@ -37,10 +43,16 @@ class LeagueDashPtStats(Endpoint):
                  team_id_nullable='',
                  vs_conference_nullable=ConferenceNullable.default,
                  vs_division_nullable=DivisionNullable.default,
-                 weight_nullable=''):
-        self.nba_response = NBAStatsHTTP().send_api_request(
-            endpoint=self.endpoint,
-            parameters={
+                 weight_nullable='',
+                 proxy=None,
+                 headers=None,
+                 timeout=30,
+                 get_request=True):
+        self.proxy = proxy
+        if headers is not None:
+            self.headers = headers
+        self.timeout = timeout
+        self.parameters = {
                 'LastNGames': last_n_games,
                 'Month': month,
                 'OpponentTeamID': opponent_team_id,
@@ -71,8 +83,21 @@ class LeagueDashPtStats(Endpoint):
                 'VsConference': vs_conference_nullable,
                 'VsDivision': vs_division_nullable,
                 'Weight': weight_nullable
-            },
+        }
+        if get_request:
+            self.get_request()
+    
+    def get_request(self):
+        self.nba_response = NBAStatsHTTP().send_api_request(
+            endpoint=self.endpoint,
+            parameters=self.parameters,
+            proxy=self.proxy,
+            headers=self.headers,
+            timeout=self.timeout,
         )
+        self.load_response()
+        
+    def load_response(self):
         data_sets = self.nba_response.get_data_sets()
         self.data_sets = [Endpoint.DataSet(data=data_set) for data_set_name, data_set in data_sets.items()]
         self.league_dash_pt_stats = Endpoint.DataSet(data=data_sets['LeagueDashPtStats'])
