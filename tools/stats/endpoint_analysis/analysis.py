@@ -61,6 +61,7 @@ missing_required_parameters = {
     'TeamPlayerOnOffDetails': {'Season': Season.default},
     'TeamPlayerOnOffSummary': {'Season': Season.default},
     'TeamVsPlayer': {'Season': Season.default, 'TeamID': '1610612739'},  # Cleveland Cavaliers
+    'VideoDetails': {'Season': Season.default},  # Cleveland Cavaliers
 }
 
 
