@@ -12,9 +12,9 @@ These variables are set in [`/nba_api/debug.py`](/docs/nba_api/debug.md)
 
 ## class `NBAResponse`
 
-#### `__init__` (_`response`_, _`url`_)
+#### `__init__` (_`response`_, _`status_code`_, _`url`_)
 
-Loads the response text and url on initiation.
+Loads the response text, status_code, and url on initiation.
 
 #### `get_response`( )
 
@@ -49,6 +49,10 @@ This is used to set the `NBAResponse` class.
 
 This is used to set the base url of requests.
 
+#### `parameters`
+
+This is used to load the parameters needed for the requests.
+
 #### `headers`
 
 This is used to set the headers of requests.
@@ -57,6 +61,10 @@ This is used to set the headers of requests.
 
 This method is used to clean any contents if any invalid values are returned.
 
-#### `send_api_request`(_`endpoint`_, _`parameters`_ \[, _`referer=None`_, _`proxy=PROXY`_, _`raise_exception_on_error=False`_\] )
+#### `send_api_request`(_`endpoint`_, _`parameters`_ \[, _`referer=None`_, _`proxy=None`_, _`headers=None`_, _`timeout=None`_, _`raise_exception_on_error=False`_\] )
 
-This method will send out an api request with the given endpoint, parameters, and referer on a given proxy. You can also enable the option to raise an exception any time a valid `json` response is not returned.
+This method will send out an api request with the given endpoint, parameters, referer, proxy, header, and timeout. You can also enable the option to raise an exception any time a valid `json` response is not returned.
+
+If the value supplied for proxy or headers are `null`, it will use the default system setting. In order to override the system settings, please supply it an empty `string` or `dictionary`. 
+
+The default timeout for each request is 30 seconds.

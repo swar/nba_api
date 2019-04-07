@@ -2,6 +2,7 @@ import os
 import json
 import requests
 
+from urllib.parse import quote_plus
 
 try:
     from nba_api.library.debug.debug import DEBUG
@@ -27,8 +28,9 @@ if DEBUG:
 
 
 class NBAResponse:
-    def __init__(self, response, url):
+    def __init__(self, response, status_code, url):
         self._response = response
+        self._status_code = status_code
         self._url = url
 
     def get_response(self):
@@ -57,34 +59,50 @@ class NBAHTTP:
 
     base_url = None
 
+    parameters = None
+
     headers = None
 
     def clean_contents(self, contents):
         return contents
 
-    def send_api_request(self, endpoint, parameters, referer=None, proxy=PROXY, raise_exception_on_error=False):
+    def send_api_request(self, endpoint, parameters, referer=None, proxy=None, headers=None, timeout=None, raise_exception_on_error=False):
         if not self.base_url:
             raise Exception('Cannot use send_api_request from _HTTP class.')
         base_url = self.base_url.format(endpoint=endpoint)
         endpoint = endpoint.lower()
-        headers = self.headers
+        self.parameters = parameters
+
+        if headers is None:
+            request_headers = self.headers
+        else:
+            request_headers = headers
+
         if referer:
-            headers['Referer'] = referer
+            request_headers['Referer'] = referer
+
+        if proxy is None:
+            request_proxy = PROXY
+        elif not proxy:
+            request_proxy = None
+        else:
+            request_proxy = proxy
         proxies = None
-        if proxy:
+        if request_proxy:
             proxies = {
-                "http": proxy,
-                "https": proxy,
+                "http": request_proxy,
+                "https": request_proxy,
             }
 
-        contents = None
         url = None
+        status_code = None
+        contents = None
 
         if DEBUG and DEBUG_STORAGE:
             print(endpoint, parameters)
             directory_name = 'debug_storage'
-            parameter_string = '&'.join('{}={}'.format(key, val) for key, val in sorted(parameters.items())).encode('utf-8')
-            file_name = "{}-{}.txt".format(endpoint, md5(parameter_string).hexdigest())
+            parameter_string = '&'.join('{}={}'.format(key, quote_plus(str(val))) for key, val in sorted(parameters.items(), key=lambda kv: kv[0]))
+            file_name = "{}-{}.txt".format(endpoint, md5(parameter_string.encode('utf-8')).hexdigest())
             file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'debug', directory_name)
             if not os.path.exists(file_path):
                 os.makedirs(file_path)
@@ -98,8 +116,9 @@ class NBAHTTP:
                 print('loading from file...')
 
         if not contents:
-            response = requests.get(url=base_url, params=parameters, headers=headers, proxies=proxies)
+            response = requests.get(url=base_url, params=parameters, headers=request_headers, proxies=proxies, timeout=timeout)
             url = response.url
+            status_code = response.status_code
             contents = response.text
 
         contents = self.clean_contents(contents)
@@ -107,8 +126,9 @@ class NBAHTTP:
             f = open(file_path, 'w')
             f.write(contents)
             f.close()
+            print(url)
 
-        data = self.nba_response(response=contents, url=url)
+        data = self.nba_response(response=contents, status_code=status_code, url=url)
 
         if raise_exception_on_error and not data.valid_json():
             raise Exception('InvalidResponse: Response is not in a valid JSON format.')
