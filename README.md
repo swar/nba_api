@@ -16,17 +16,7 @@ Please feel free to contribute and have an open discussion regarding improvement
 
 
 #### Recent Changes
-* Adding individual proxy, headers, and timeout support for requests.
-
-```python
-from nba_api.stats.endpoints import commonplayerinfo
-
-# Regular Request
-player_info = commonplayerinfo.CommonPlayerInfo(player_id=2544)
-
-# Proxy Support, Custom Headers Support, Timeout Support
-player_info = commonplayerinfo.CommonPlayerInfo(player_id=2544, proxy='127.0.0.1:80', headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'}, timeout=100)
-```
+* Adding individual proxy, headers, and timeout support for requests. [Usage](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/examples.md)
 
 
 #### Mapped API Clients
