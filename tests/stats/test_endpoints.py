@@ -1,11 +1,18 @@
-import nba_api.stats.endpoints as ep
+import time
+
 import pytest
+import numpy as np
+
+import nba_api.stats.endpoints as ep
 
 # Create a version of an endpoint that defers evaluation.
 def endpoint_tester(endpoint_class, **kwargs):
     def run():
         return endpoint_class(**kwargs)
     return run
+
+# Once we run the test to call the endpoints, we'll cache the responses here.
+called_eps = []
 
 # A bunch of valid but uninstantiated endpoints for testing:
 @pytest.fixture
@@ -135,7 +142,25 @@ def endpoints():
             endpoint_tester(ep.WinProbabilityPBP, game_id='0021700807')]
     return eps
 
-def test_valid_json(endpoints):
-    # Run through all the endpoints and make sure 
+def test_valid_endpoints(endpoints):
+    '''This test will only fail if we try to import an invalid endpoint.'''
     return endpoints
 
+def test_endpoints_run(endpoints):
+    '''Test that all the endpoints are callable.
+    
+    This takes a very, very long time (10-20 minutes) because we don't want to
+    barrage the NBA site with requests.'''
+    for ep in endpoints:
+        # Delay briefly.
+        wait = np.random.gamma(shape=9, scale=0.4)
+        time.sleep(wait)
+        # Call the API.
+        called_ep = ep()
+        called_eps.append(called_ep)
+    assert len(called_eps) == len(endpoints)
+
+def test_valid_json():
+    # Check that every called endpoint is valid json.
+    valid = [ep.nba_response.valid_json() for ep in called_eps]
+    assert all(valid)
