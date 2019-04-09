@@ -61,6 +61,15 @@ python -m pip install -e .
 ```
 This command will install the package for development, such that any changes you make in the repo will be reflected the next time you import the package in Python.
 
+### Testing
+If you make a change to the package, it's important to verify everything still works.
+Do so by first installing the package for development, with the `-e` flag (see *Development* above), and then running
+```bash
+pytest
+```
+on the command line from the base directory of the repo.
+The pytest utility will run through all the package tests and print output throughout, informing you of any failures.
+
 ### Contributing
 We're always looking for people to help!
 Some examples of ways to get involved are:
