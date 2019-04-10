@@ -1,28 +1,29 @@
 import time
 import json
+import random
 
 import pytest
-import numpy as np
 
 from deferred_endpoints import deferred_endpoints
 
 # Once we run the test to call the endpoints, we'll cache the responses here.
 cached_eps = []
 
+# Run this test on each endpoint in deferred_endpoints.
 @pytest.mark.parametrize('deferred_endpoint', deferred_endpoints)
 def test_endpoints_run(deferred_endpoint):
     '''Test that each endpoint is callable.
     
     This takes a very, very long time in total (10-20 minutes) because we don't
     want to barrage the NBA site with requests.'''
-    # Delay briefly.
-    wait = np.random.gamma(shape=9, scale=0.4)
+    # Delay briefly
+    wait = random.gammavariate(alpha=9, beta=0.4)
     time.sleep(wait)
     # Call the API.
     try:
         response = deferred_endpoint()
     except json.decoder.JSONDecodeError:
-        endpoint_class = type(deferred_endpoint.endpoint_class)
+        endpoint_class = deferred_endpoint.endpoint_class
         msg = 'Unable to decode response for {}'.format(endpoint_class)
         pytest.fail(msg=msg)
     # We want to hang onto all the responses so we don't need to re-retrieve
