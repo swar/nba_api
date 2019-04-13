@@ -411,6 +411,10 @@ class PerModeSimple:
     default = totals
 
 
+class PerModeSimpleNullable(_NotRequired, PerModeSimple):
+    pass
+
+
 class PerMode36(PerModeSimple):
     per_36 = 'Per36'
 
@@ -467,6 +471,10 @@ class PlayerPositionNullable(_NotRequired, PlayerPosition):
     pass
 
 
+class PositionNullable(_NotRequired, PlayerPosition):
+    pass
+
+
 class PlayerPositionAbbreviation:
     forward = 'F'
     center = 'C'
@@ -488,6 +496,14 @@ class PlayerScope:
     rookies = 'Rookies'
 
     default = all_players
+
+
+class TodaysPlayers(_YesNo):
+    pass
+
+
+class ActivePlayers(_YesNo):
+    pass
 
 
 class PointDiff:
@@ -532,6 +548,10 @@ class Rank(_YesNo):
 
 class RankNo(_No):
     pass
+
+
+class RunType:
+    default = 'each second'
 
 
 class StartRange:

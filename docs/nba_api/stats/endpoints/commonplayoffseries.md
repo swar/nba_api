@@ -5,14 +5,14 @@
 >[https://stats.nba.com/stats/commonplayoffseries](https://stats.nba.com/stats/commonplayoffseries)
 
 ##### Valid URL
->[https://stats.nba.com/stats/commonplayoffseries?LeagueID=&Season=2018-19&SeriesID=](https://stats.nba.com/stats/commonplayoffseries?LeagueID=&Season=2018-19&SeriesID=)
+>[https://stats.nba.com/stats/commonplayoffseries?LeagueID=00&Season=2018-19&SeriesID=](https://stats.nba.com/stats/commonplayoffseries?LeagueID=00&Season=2018-19&SeriesID=)
 
 ## Parameters
 API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 ------------ | ------------ | :-----------: | :---: | :---:
-[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season | `^\d{4}-\d{2}$` | `Y` |  | 
+[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `(00)\|(20)\|(10)` | `Y` |  | 
+[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season |  | `Y` |  | 
 [_**SeriesID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeriesID) | series_id_nullable |  |  | `Y` | 
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable | `(00)\|(20)\|(10)` | `Y` | `Y` | 
 
 ## Data Sets
 #### PlayoffSeries `playoff_series`
@@ -34,14 +34,13 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "CommonPlayoffSeries",
-    "last_validated_date": "2018-12-11",
+    "last_validated_date": "2019-04-07",
     "nullable_parameters": [
-        "LeagueID",
         "SeriesID"
     ],
     "parameter_patterns": {
         "LeagueID": "(00)|(20)|(10)",
-        "Season": "^\\d{4}-\\d{2}$",
+        "Season": null,
         "SeriesID": null
     },
     "parameters": [
@@ -57,4 +56,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2018-12-11
+Last validated 2019-04-07

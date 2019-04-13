@@ -1,13 +1,13 @@
 {
     "AllPlayers": {
         "endpoint": "AllPlayers",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "AllStarBallotPredictor": {
         "data_sets": {},
         "endpoint": "AllStarBallotPredictor",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EastPlayer1": null,
@@ -47,14 +47,151 @@
         ],
         "status": "invalid"
     },
+    "AssistLeaders": {
+        "data_sets": {
+            "AssistLeaders": [
+                "RANK",
+                "TEAM_ID",
+                "TEAM_ABBREVIATION",
+                "TEAM_NAME",
+                "AST"
+            ]
+        },
+        "endpoint": "AssistLeaders",
+        "last_validated_date": "2019-04-07",
+        "nullable_parameters": [],
+        "parameter_patterns": {
+            "LeagueID": "^\\d{2}$",
+            "PerMode": "^(Totals)|(PerGame)$",
+            "PlayerOrTeam": "^(Player)|(Team)$",
+            "Season": "^(\\d{4}-\\d{2})$",
+            "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(Pre-Season)$"
+        },
+        "parameters": [
+            "LeagueID",
+            "PerMode",
+            "PlayerOrTeam",
+            "Season",
+            "SeasonType"
+        ],
+        "required_parameters": [
+            "LeagueID",
+            "PerMode",
+            "PlayerOrTeam",
+            "Season",
+            "SeasonType"
+        ],
+        "status": "success"
+    },
+    "AssistTracker": {
+        "data_sets": {
+            "AssistTracker": [
+                "ASSISTS"
+            ]
+        },
+        "endpoint": "AssistTracker",
+        "last_validated_date": "2019-04-07",
+        "nullable_parameters": [
+            "College",
+            "Conference",
+            "Country",
+            "DateFrom",
+            "DateTo",
+            "Division",
+            "DraftPick",
+            "DraftYear",
+            "GameScope",
+            "Height",
+            "LastNGames",
+            "LeagueID",
+            "Location",
+            "Month",
+            "OpponentTeamID",
+            "Outcome",
+            "PORound",
+            "PerMode",
+            "PlayerExperience",
+            "PlayerPosition",
+            "Season",
+            "SeasonSegment",
+            "SeasonType",
+            "StarterBench",
+            "TeamID",
+            "VsConference",
+            "VsDivision",
+            "Weight"
+        ],
+        "parameter_patterns": {
+            "College": null,
+            "Conference": "((East)|(West))?",
+            "Country": null,
+            "DateFrom": null,
+            "DateTo": null,
+            "Division": "((Atlantic)|(Central)|(Northwest)|(Pacific)|(Southeast)|(Southwest))?",
+            "DraftPick": null,
+            "DraftYear": null,
+            "GameScope": "((Yesterday)|(Last 10))?",
+            "Height": null,
+            "LastNGames": null,
+            "LeagueID": "(00)|(20)|(10)",
+            "Location": "^((Home)|(Road))?$",
+            "Month": null,
+            "OpponentTeamID": null,
+            "Outcome": "^((W)|(L))?$",
+            "PORound": null,
+            "PerMode": "^(Totals)|(PerGame)$",
+            "PlayerExperience": "((Rookie)|(Sophomore)|(Veteran))?",
+            "PlayerPosition": "((F)|(C)|(G)|(C-F)|(F-C)|(F-G)|(G-F))?",
+            "Season": null,
+            "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
+            "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
+            "StarterBench": "((Starters)|(Bench))?",
+            "TeamID": null,
+            "VsConference": "^((East)|(West))?$",
+            "VsDivision": "^((Atlantic)|(Central)|(Northwest)|(Pacific)|(Southeast)|(Southwest)|(East)|(West))?$",
+            "Weight": null
+        },
+        "parameters": [
+            "College",
+            "Conference",
+            "Country",
+            "DateFrom",
+            "DateTo",
+            "Division",
+            "DraftPick",
+            "DraftYear",
+            "GameScope",
+            "Height",
+            "LastNGames",
+            "LeagueID",
+            "Location",
+            "Month",
+            "OpponentTeamID",
+            "Outcome",
+            "PORound",
+            "PerMode",
+            "PlayerExperience",
+            "PlayerPosition",
+            "Season",
+            "SeasonSegment",
+            "SeasonType",
+            "StarterBench",
+            "TeamID",
+            "VsConference",
+            "VsDivision",
+            "Weight"
+        ],
+        "required_parameters": [],
+        "status": "success"
+    },
     "AssistTrackerStats": {
         "endpoint": "AssistTrackerStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "BoxScoreAdvanced": {
         "endpoint": "BoxScoreAdvanced",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "BoxScoreAdvancedV2": {
@@ -121,7 +258,7 @@
             ]
         },
         "endpoint": "BoxScoreAdvancedV2",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EndPeriod": null,
@@ -149,9 +286,61 @@
         ],
         "status": "success"
     },
+    "BoxScoreDefensive": {
+        "data_sets": {
+            "PlayerDefensiveStats": [
+                "GAME_ID",
+                "TEAM_ID",
+                "TEAM_ABBREVIATION",
+                "TEAM_CITY",
+                "TEAM_NICKNAME",
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "START_POSITION",
+                "COMMENT",
+                "MIN",
+                "POSS",
+                "PLAYER_PTS",
+                "TEAM_PTS",
+                "DREB",
+                "AST",
+                "TOV",
+                "STL",
+                "BLK",
+                "FGM",
+                "FGA",
+                "FG_PCT",
+                "FG3M",
+                "FG3A",
+                "FG3_PCT",
+                "FTM",
+                "SFL",
+                "DEF_FLS",
+                "CFGM",
+                "CFGA",
+                "CFG_PCT",
+                "CFG3M",
+                "CFG3A",
+                "CFG3_PCT"
+            ]
+        },
+        "endpoint": "BoxScoreDefensive",
+        "last_validated_date": "2019-04-07",
+        "nullable_parameters": [],
+        "parameter_patterns": {
+            "GameID": "^\\d{10}$"
+        },
+        "parameters": [
+            "GameID"
+        ],
+        "required_parameters": [
+            "GameID"
+        ],
+        "status": "success"
+    },
     "BoxScoreFourFactors": {
         "endpoint": "BoxScoreFourFactors",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "BoxScoreFourFactorsV2": {
@@ -193,7 +382,7 @@
             ]
         },
         "endpoint": "BoxScoreFourFactorsV2",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EndPeriod": null,
@@ -221,9 +410,60 @@
         ],
         "status": "success"
     },
+    "BoxScoreMatchups": {
+        "data_sets": {
+            "PlayerMatchupsStats": [
+                "GAME_ID",
+                "OFF_TEAM_ID",
+                "OFF_TEAM_ABBREVIATION",
+                "OFF_TEAM_CITY",
+                "OFF_TEAM_NICKNAME",
+                "OFF_PLAYER_ID",
+                "OFF_PLAYER_NAME",
+                "DEF_TEAM_ID",
+                "DEF_TEAM_ABBREVIATION",
+                "DEF_TEAM_CITY",
+                "DEF_TEAM_NICKNAME",
+                "DEF_PLAYER_ID",
+                "DEF_PLAYER_NAME",
+                "POSS",
+                "OFF_MATCHUP_PCT",
+                "PLAYER_PTS",
+                "TEAM_PTS",
+                "AST",
+                "TOV",
+                "BLK",
+                "HELP_BLK",
+                "HELP_BLK_REC",
+                "FGM",
+                "FGA",
+                "FG_PCT",
+                "FG3M",
+                "FG3A",
+                "FG3_PCT",
+                "FTM",
+                "SFL",
+                "DEF_FOULS",
+                "OFF_FOULS"
+            ]
+        },
+        "endpoint": "BoxScoreMatchups",
+        "last_validated_date": "2019-04-07",
+        "nullable_parameters": [],
+        "parameter_patterns": {
+            "GameID": "^\\d{10}$"
+        },
+        "parameters": [
+            "GameID"
+        ],
+        "required_parameters": [
+            "GameID"
+        ],
+        "status": "success"
+    },
     "BoxScoreMisc": {
         "endpoint": "BoxScoreMisc",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "BoxScoreMiscV2": {
@@ -273,7 +513,7 @@
             ]
         },
         "endpoint": "BoxScoreMiscV2",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EndPeriod": null,
@@ -363,7 +603,7 @@
             ]
         },
         "endpoint": "BoxScorePlayerTrackV2",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameID": "^\\d{10}$"
@@ -378,12 +618,12 @@
     },
     "BoxScorePlayerTracking": {
         "endpoint": "BoxScorePlayerTracking",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "BoxScoreScoring": {
         "endpoint": "BoxScoreScoring",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "BoxScoreScoringV2": {
@@ -439,7 +679,7 @@
             ]
         },
         "endpoint": "BoxScoreScoringV2",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EndPeriod": null,
@@ -469,7 +709,7 @@
     },
     "BoxScoreSummary": {
         "endpoint": "BoxScoreSummary",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "BoxScoreSummaryV2": {
@@ -587,7 +827,7 @@
             ]
         },
         "endpoint": "BoxScoreSummaryV2",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameID": "^\\d{10}$"
@@ -602,7 +842,7 @@
     },
     "BoxScoreTraditional": {
         "endpoint": "BoxScoreTraditional",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "BoxScoreTraditionalV2": {
@@ -693,7 +933,7 @@
             ]
         },
         "endpoint": "BoxScoreTraditionalV2",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EndPeriod": null,
@@ -723,7 +963,7 @@
     },
     "BoxScoreUsage": {
         "endpoint": "BoxScoreUsage",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "BoxScoreUsageV2": {
@@ -785,7 +1025,7 @@
             ]
         },
         "endpoint": "BoxScoreUsageV2",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EndPeriod": null,
@@ -832,12 +1072,12 @@
             ]
         },
         "endpoint": "CommonAllPlayers",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "IsOnlyCurrentSeason": null,
             "LeagueID": "^\\d{2}$",
-            "Season": "^\\d{4}-\\d{2}$"
+            "Season": null
         },
         "parameters": [
             "IsOnlyCurrentSeason",
@@ -899,7 +1139,7 @@
             ]
         },
         "endpoint": "CommonPlayerInfo",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "LeagueID"
         ],
@@ -927,14 +1167,13 @@
             ]
         },
         "endpoint": "CommonPlayoffSeries",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
-            "LeagueID",
             "SeriesID"
         ],
         "parameter_patterns": {
             "LeagueID": "(00)|(20)|(10)",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeriesID": null
         },
         "parameters": [
@@ -980,13 +1219,13 @@
             ]
         },
         "endpoint": "CommonTeamRoster",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "LeagueID"
         ],
         "parameter_patterns": {
             "LeagueID": "(00)|(20)|(10)",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "TeamID": null
         },
         "parameters": [
@@ -1011,7 +1250,7 @@
             ]
         },
         "endpoint": "CommonTeamYears",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "LeagueID": "^\\d{2}$"
@@ -1092,14 +1331,14 @@
             ]
         },
         "endpoint": "DefenseHub",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameScope": "^(Season)|(Last 10)|(Yesterday)|(Finals)$",
             "LeagueID": "^\\d{2}$",
             "PlayerOrTeam": "^(Player)|(Team)$",
             "PlayerScope": "^(All Players)|(Rookies)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)$"
         },
         "parameters": [
@@ -1138,11 +1377,11 @@
             ]
         },
         "endpoint": "DraftCombineDrillResults",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "LeagueID": "^(00)|(10)|(20)$",
-            "SeasonYear": "^\\d{4}-\\d{2}$"
+            "SeasonYear": null
         },
         "parameters": [
             "LeagueID",
@@ -1190,11 +1429,11 @@
             ]
         },
         "endpoint": "DraftCombineNonStationaryShooting",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "LeagueID": "^(00)|(10)|(20)$",
-            "SeasonYear": "^\\d{4}-\\d{2}$"
+            "SeasonYear": null
         },
         "parameters": [
             "LeagueID",
@@ -1230,11 +1469,11 @@
             ]
         },
         "endpoint": "DraftCombinePlayerAnthro",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "LeagueID": "^(00)|(10)|(20)$",
-            "SeasonYear": "^\\d{4}-\\d{2}$"
+            "SeasonYear": null
         },
         "parameters": [
             "LeagueID",
@@ -1248,7 +1487,7 @@
     },
     "DraftCombinePlayerMeasurements": {
         "endpoint": "DraftCombinePlayerMeasurements",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "DraftCombineSpotShooting": {
@@ -1308,11 +1547,11 @@
             ]
         },
         "endpoint": "DraftCombineSpotShooting",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "LeagueID": "^(00)|(10)|(20)$",
-            "SeasonYear": "^\\d{4}-\\d{2}$"
+            "SeasonYear": null
         },
         "parameters": [
             "LeagueID",
@@ -1377,7 +1616,7 @@
             ]
         },
         "endpoint": "DraftCombineStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "LeagueID": "^(00)|(10)|(20)$",
@@ -1411,7 +1650,7 @@
             ]
         },
         "endpoint": "DraftHistory",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "College",
             "OverallPick",
@@ -1443,6 +1682,100 @@
         ],
         "required_parameters": [
             "LeagueID"
+        ],
+        "status": "success"
+    },
+    "FantasyWidget": {
+        "data_sets": {
+            "FantasyWidgetResult": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "PLAYER_POSITION",
+                "TEAM_ID",
+                "TEAM_ABBREVIATION",
+                "GP",
+                "MIN",
+                "FAN_DUEL_PTS",
+                "NBA_FANTASY_PTS",
+                "PTS",
+                "REB",
+                "AST",
+                "BLK",
+                "STL",
+                "TOV",
+                "FG3M",
+                "FGA",
+                "FG_PCT",
+                "FTA",
+                "FT_PCT"
+            ]
+        },
+        "endpoint": "FantasyWidget",
+        "last_validated_date": "2019-04-07",
+        "nullable_parameters": [
+            "DateFrom",
+            "DateTo",
+            "Location",
+            "Month",
+            "OpponentTeamID",
+            "PORound",
+            "PlayerID",
+            "Position",
+            "SeasonSegment",
+            "TeamID",
+            "VsConference",
+            "VsDivision"
+        ],
+        "parameter_patterns": {
+            "ActivePlayers": "^(Y)|(N)$",
+            "DateFrom": null,
+            "DateTo": null,
+            "LastNGames": null,
+            "LeagueID": "^\\d{2}$",
+            "Location": "^((Home)|(Road))?$",
+            "Month": null,
+            "OpponentTeamID": null,
+            "PORound": null,
+            "PlayerID": null,
+            "Position": "^(Guard|Forward|Center)?$",
+            "Season": null,
+            "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
+            "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
+            "TeamID": null,
+            "TodaysOpponent": null,
+            "TodaysPlayers": "^(Y)|(N)$",
+            "VsConference": "^((East)|(West))?$",
+            "VsDivision": "^((Atlantic)|(Central)|(Northwest)|(Pacific)|(Southeast)|(Southwest)|(East)|(West))?$"
+        },
+        "parameters": [
+            "ActivePlayers",
+            "DateFrom",
+            "DateTo",
+            "LastNGames",
+            "LeagueID",
+            "Location",
+            "Month",
+            "OpponentTeamID",
+            "PORound",
+            "PlayerID",
+            "Position",
+            "Season",
+            "SeasonSegment",
+            "SeasonType",
+            "TeamID",
+            "TodaysOpponent",
+            "TodaysPlayers",
+            "VsConference",
+            "VsDivision"
+        ],
+        "required_parameters": [
+            "ActivePlayers",
+            "LastNGames",
+            "LeagueID",
+            "Season",
+            "SeasonType",
+            "TodaysOpponent",
+            "TodaysPlayers"
         ],
         "status": "success"
     },
@@ -1484,7 +1817,7 @@
             ]
         },
         "endpoint": "FranchiseHistory",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "LeagueID": "^\\d{2}$"
@@ -1497,14 +1830,107 @@
         ],
         "status": "success"
     },
+    "FranchiseLeaders": {
+        "data_sets": {
+            "FranchiseLeaders": [
+                "TEAM_ID",
+                "PTS",
+                "PTS_PERSON_ID",
+                "PTS_PLAYER",
+                "AST",
+                "AST_PERSON_ID",
+                "AST_PLAYER",
+                "REB",
+                "REB_PERSON_ID",
+                "REB_PLAYER",
+                "BLK",
+                "BLK_PERSON_ID",
+                "BLK_PLAYER",
+                "STL",
+                "STL_PERSON_ID",
+                "STL_PLAYER"
+            ]
+        },
+        "endpoint": "FranchiseLeaders",
+        "last_validated_date": "2019-04-07",
+        "nullable_parameters": [
+            "LeagueID"
+        ],
+        "parameter_patterns": {
+            "LeagueID": "(00)|(20)|(10)",
+            "TeamID": null
+        },
+        "parameters": [
+            "LeagueID",
+            "TeamID"
+        ],
+        "required_parameters": [
+            "TeamID"
+        ],
+        "status": "success"
+    },
+    "FranchisePlayers": {
+        "data_sets": {
+            "FranchisePlayers": [
+                "LEAGUE_ID",
+                "TEAM_ID",
+                "TEAM",
+                "PERSON_ID",
+                "PLAYER",
+                "SEASON_TYPE",
+                "ACTIVE_WITH_TEAM",
+                "GP",
+                "FGM",
+                "FGA",
+                "FG_PCT",
+                "FG3M",
+                "FG3A",
+                "FG3_PCT",
+                "FTM",
+                "FTA",
+                "FT_PCT",
+                "OREB",
+                "DREB",
+                "REB",
+                "AST",
+                "PF",
+                "STL",
+                "TOV",
+                "BLK",
+                "PTS"
+            ]
+        },
+        "endpoint": "FranchisePlayers",
+        "last_validated_date": "2019-04-07",
+        "nullable_parameters": [],
+        "parameter_patterns": {
+            "LeagueID": "(00)|(20)|(10)",
+            "PerMode": "^(Totals)|(PerGame)|(MinutesPer)|(Per48)|(Per40)|(Per36)|(PerMinute)|(PerPossession)|(PerPlay)|(Per100Possessions)|(Per100Plays)$",
+            "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
+            "TeamID": null
+        },
+        "parameters": [
+            "LeagueID",
+            "PerMode",
+            "SeasonType",
+            "TeamID"
+        ],
+        "required_parameters": [
+            "LeagueID",
+            "PerMode",
+            "SeasonType",
+            "TeamID"
+        ],
+        "status": "success"
+    },
     "GLeaguePredictor": {
         "endpoint": "GLeaguePredictor",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "HomePage": {
         "endpoint": "HomePage",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "HomePageLeaders": {
@@ -1542,14 +1968,14 @@
             ]
         },
         "endpoint": "HomePageLeaders",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameScope": "^(Season)|(Last 10)|(Yesterday)|(Finals)$",
             "LeagueID": "^\\d{2}$",
             "PlayerOrTeam": "^(Player)|(Team)$",
             "PlayerScope": "^(All Players)|(Rookies)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)$",
             "StatCategory": "^(Points)|(Rebounds)|(Assists)|(Defense)|(Clutch)|(Playmaking)|(Efficiency)|(Fast Break)|(Scoring Breakdown)$"
         },
@@ -1633,14 +2059,14 @@
             ]
         },
         "endpoint": "HomePageV2",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameScope": "^(Season)|(Last 10)|(Yesterday)|(Finals)$",
             "LeagueID": "^\\d{2}$",
             "PlayerOrTeam": "^(Player)|(Team)$",
             "PlayerScope": "^(All Players)|(Rookies)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)$",
             "StatType": "^(Traditional)|(Advanced)|(Tracking)$"
         },
@@ -1703,7 +2129,7 @@
             ]
         },
         "endpoint": "InfographicFanDuelPlayer",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameID": "^\\d{10}$"
@@ -1748,14 +2174,14 @@
             ]
         },
         "endpoint": "LeadersTiles",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameScope": "^(Season)|(Last 10)|(Yesterday)|(Finals)$",
             "LeagueID": "^\\d{2}$",
             "PlayerOrTeam": "^(Player)|(Team)$",
             "PlayerScope": "^(All Players)|(Rookies)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)$",
             "Stat": "^(PTS)|(REB)|(AST)|(FG_PCT)|(FT_PCT)|(FG3_PCT)|(STL)|(BLK)$"
         },
@@ -1842,7 +2268,7 @@
             ]
         },
         "endpoint": "LeagueDashLineups",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "Conference",
             "DateFrom",
@@ -1879,7 +2305,7 @@
             "Period": null,
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
@@ -1939,6 +2365,119 @@
         ],
         "status": "success"
     },
+    "LeagueDashOppPtShot": {
+        "data_sets": {
+            "LeagueDashPTShots": [
+                "TEAM_ID",
+                "TEAM_NAME",
+                "TEAM_ABBREVIATION",
+                "GP",
+                "G",
+                "FGA_FREQUENCY",
+                "FGM",
+                "FGA",
+                "FG_PCT",
+                "EFG_PCT",
+                "FG2A_FREQUENCY",
+                "FG2M",
+                "FG2A",
+                "FG2_PCT",
+                "FG3A_FREQUENCY",
+                "FG3M",
+                "FG3A",
+                "FG3_PCT"
+            ]
+        },
+        "endpoint": "LeagueDashOppPtShot",
+        "last_validated_date": "2019-04-07",
+        "nullable_parameters": [
+            "CloseDefDistRange",
+            "Conference",
+            "DateFrom",
+            "DateTo",
+            "Division",
+            "DribbleRange",
+            "GameSegment",
+            "GeneralRange",
+            "LastNGames",
+            "Location",
+            "Month",
+            "OpponentTeamID",
+            "Outcome",
+            "PORound",
+            "Period",
+            "SeasonSegment",
+            "ShotClockRange",
+            "ShotDistRange",
+            "TeamID",
+            "TouchTimeRange",
+            "VsConference",
+            "VsDivision"
+        ],
+        "parameter_patterns": {
+            "CloseDefDistRange": null,
+            "Conference": "^((East)|(West))?$",
+            "DateFrom": null,
+            "DateTo": null,
+            "Division": "^((Atlantic)|(Central)|(Northwest)|(Pacific)|(Southeast)|(Southwest)|(East)|(West))?$",
+            "DribbleRange": null,
+            "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
+            "GeneralRange": null,
+            "LastNGames": null,
+            "LeagueID": "^\\d{2}$",
+            "Location": "^((Home)|(Road))?$",
+            "Month": null,
+            "OpponentTeamID": null,
+            "Outcome": "^((W)|(L))?$",
+            "PORound": null,
+            "PerMode": "^(Totals)|(PerGame)$",
+            "Period": null,
+            "Season": null,
+            "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
+            "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
+            "ShotClockRange": null,
+            "ShotDistRange": null,
+            "TeamID": null,
+            "TouchTimeRange": null,
+            "VsConference": "^((East)|(West))?$",
+            "VsDivision": "^((Atlantic)|(Central)|(Northwest)|(Pacific)|(Southeast)|(Southwest)|(East)|(West))?$"
+        },
+        "parameters": [
+            "CloseDefDistRange",
+            "Conference",
+            "DateFrom",
+            "DateTo",
+            "Division",
+            "DribbleRange",
+            "GameSegment",
+            "GeneralRange",
+            "LastNGames",
+            "LeagueID",
+            "Location",
+            "Month",
+            "OpponentTeamID",
+            "Outcome",
+            "PORound",
+            "PerMode",
+            "Period",
+            "Season",
+            "SeasonSegment",
+            "SeasonType",
+            "ShotClockRange",
+            "ShotDistRange",
+            "TeamID",
+            "TouchTimeRange",
+            "VsConference",
+            "VsDivision"
+        ],
+        "required_parameters": [
+            "LeagueID",
+            "PerMode",
+            "Season",
+            "SeasonType"
+        ],
+        "status": "success"
+    },
     "LeagueDashPlayerBioStats": {
         "data_sets": {
             "LeagueDashPlayerBioStats": [
@@ -1968,7 +2507,7 @@
             ]
         },
         "endpoint": "LeagueDashPlayerBioStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "College",
             "Conference",
@@ -1982,7 +2521,6 @@
             "GameSegment",
             "Height",
             "LastNGames",
-            "LeagueID",
             "Location",
             "Month",
             "OpponentTeamID",
@@ -2022,7 +2560,7 @@
             "Period": null,
             "PlayerExperience": "((Rookie)|(Sophomore)|(Veteran))?",
             "PlayerPosition": "((F)|(C)|(G)|(C-F)|(F-C)|(F-G)|(G-F))?",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
@@ -2145,7 +2683,7 @@
             ]
         },
         "endpoint": "LeagueDashPlayerClutch",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "College",
             "Conference",
@@ -2202,7 +2740,7 @@
             "PlusMinus": "^(Y)|(N)$",
             "PointDiff": null,
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
@@ -2308,7 +2846,7 @@
             ]
         },
         "endpoint": "LeagueDashPlayerPtShot",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "CloseDefDistRange",
             "College",
@@ -2367,7 +2905,7 @@
             "Period": null,
             "PlayerExperience": null,
             "PlayerPosition": null,
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "ShotClockRange": null,
@@ -2476,7 +3014,7 @@
             ]
         },
         "endpoint": "LeagueDashPlayerShotLocations",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "College",
             "Conference",
@@ -2531,7 +3069,7 @@
             "PlayerPosition": "((F)|(C)|(G)|(C-F)|(F-C)|(F-G)|(G-F))?",
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
@@ -2678,7 +3216,7 @@
             ]
         },
         "endpoint": "LeagueDashPlayerStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "College",
             "Conference",
@@ -2733,7 +3271,7 @@
             "PlayerPosition": "((F)|(C)|(G)|(C-F)|(F-C)|(F-G)|(G-F))?",
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
@@ -2829,7 +3367,7 @@
             ]
         },
         "endpoint": "LeagueDashPtDefend",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "College",
             "Conference",
@@ -2882,7 +3420,7 @@
             "PlayerExperience": null,
             "PlayerID": null,
             "PlayerPosition": null,
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "StarterBench": null,
@@ -2953,7 +3491,7 @@
             ]
         },
         "endpoint": "LeagueDashPtStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "College",
             "Conference",
@@ -3001,7 +3539,7 @@
             "PlayerOrTeam": "^(Player)|(Team)$",
             "PlayerPosition": "((F)|(C)|(G)|(C-F)|(F-C)|(F-G)|(G-F))?",
             "PtMeasureType": "^(SpeedDistance)|(Rebounding)|(Possessions)|(CatchShoot)|(PullUpShot)|(Defense)|(Drives)|(Passing)|(ElbowTouch)|(PostTouch)|(PaintTouch)|(Efficiency)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "StarterBench": "((Starters)|(Bench))?",
@@ -3082,7 +3620,7 @@
             ]
         },
         "endpoint": "LeagueDashPtTeamDefend",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "Conference",
             "DateFrom",
@@ -3117,7 +3655,7 @@
             "PORound": null,
             "PerMode": "^(Totals)|(PerGame)$",
             "Period": null,
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "TeamID": null,
@@ -3218,7 +3756,7 @@
             ]
         },
         "endpoint": "LeagueDashTeamClutch",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "Conference",
             "DateFrom",
@@ -3264,7 +3802,7 @@
             "PlusMinus": "^(Y)|(N)$",
             "PointDiff": null,
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
@@ -3361,7 +3899,7 @@
             ]
         },
         "endpoint": "LeagueDashTeamPtShot",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "CloseDefDistRange",
             "Conference",
@@ -3404,7 +3942,7 @@
             "PORound": null,
             "PerMode": "^(Totals)|(PerGame)$",
             "Period": null,
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "ShotClockRange": null,
@@ -3499,7 +4037,7 @@
             ]
         },
         "endpoint": "LeagueDashTeamShotLocations",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "Conference",
             "DateFrom",
@@ -3543,7 +4081,7 @@
             "PlayerPosition": "((F)|(C)|(G)|(C-F)|(F-C)|(F-G)|(G-F))?",
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
@@ -3674,7 +4212,7 @@
             ]
         },
         "endpoint": "LeagueDashTeamStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "Conference",
             "DateFrom",
@@ -3718,7 +4256,7 @@
             "PlayerPosition": "((F)|(C)|(G)|(C-F)|(F-C)|(F-G)|(G-F))?",
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
@@ -3817,7 +4355,7 @@
             ]
         },
         "endpoint": "LeagueGameFinder",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "Conference",
             "DateFrom",
@@ -4127,7 +4665,7 @@
             ]
         },
         "endpoint": "LeagueGameLog",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo"
@@ -4139,7 +4677,7 @@
             "Direction": "^(ASC)|(DESC)$",
             "LeagueID": "^(00)|(20)$",
             "PlayerOrTeam": "^(P)|(T)$",
-            "Season": "^(\\d{4}-\\d{2})|(ALLTIME)$",
+            "Season": null,
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)|(All-Star)$",
             "Sorter": "^((FGM)|(FGA)|(FG_PCT)|(FG3M)|(FG3A)|(FG3_PCT)|(FTM)|(FTA)|(FT_PCT)|(OREB)|(DREB)|(AST)|(STL)|(BLK)|(TOV)|(REB)|(PTS)|(DATE))$"
         },
@@ -4155,6 +4693,7 @@
             "Sorter"
         ],
         "required_parameters": [
+            "Counter",
             "Direction",
             "LeagueID",
             "PlayerOrTeam",
@@ -4197,7 +4736,7 @@
             ]
         },
         "endpoint": "LeagueLeaders",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "ActiveFlag"
         ],
@@ -4206,7 +4745,7 @@
             "LeagueID": "^\\d{2}$",
             "PerMode": "^(Totals)|(PerGame)|(Per48)$",
             "Scope": "^(RS)|(S)|(Rookies)$",
-            "Season": "^(\\d{4}-\\d{2})|(All Time)$",
+            "Season": null,
             "SeasonType": "^(Regular Season)|(Playoffs)|(All Star)|(Pre Season)$",
             "StatCategory": null
         },
@@ -4226,6 +4765,241 @@
             "Season",
             "SeasonType",
             "StatCategory"
+        ],
+        "status": "success"
+    },
+    "LeaguePlayerOnDetails": {
+        "data_sets": {
+            "PlayersOnCourtLeaguePlayerDetails": [
+                "GROUP_SET",
+                "TEAM_ID",
+                "TEAM_ABBREVIATION",
+                "TEAM_NAME",
+                "VS_PLAYER_ID",
+                "VS_PLAYER_NAME",
+                "COURT_STATUS",
+                "GP",
+                "W",
+                "L",
+                "W_PCT",
+                "MIN",
+                "FGM",
+                "FGA",
+                "FG_PCT",
+                "FG3M",
+                "FG3A",
+                "FG3_PCT",
+                "FTM",
+                "FTA",
+                "FT_PCT",
+                "OREB",
+                "DREB",
+                "REB",
+                "AST",
+                "TOV",
+                "STL",
+                "BLK",
+                "BLKA",
+                "PF",
+                "PFD",
+                "PTS",
+                "PLUS_MINUS",
+                "GP_RANK",
+                "W_RANK",
+                "L_RANK",
+                "W_PCT_RANK",
+                "MIN_RANK",
+                "FGM_RANK",
+                "FGA_RANK",
+                "FG_PCT_RANK",
+                "FG3M_RANK",
+                "FG3A_RANK",
+                "FG3_PCT_RANK",
+                "FTM_RANK",
+                "FTA_RANK",
+                "FT_PCT_RANK",
+                "OREB_RANK",
+                "DREB_RANK",
+                "REB_RANK",
+                "AST_RANK",
+                "TOV_RANK",
+                "STL_RANK",
+                "BLK_RANK",
+                "BLKA_RANK",
+                "PF_RANK",
+                "PFD_RANK",
+                "PTS_RANK",
+                "PLUS_MINUS_RANK"
+            ]
+        },
+        "endpoint": "LeaguePlayerOnDetails",
+        "last_validated_date": "2019-04-07",
+        "nullable_parameters": [
+            "DateFrom",
+            "DateTo",
+            "GameSegment",
+            "LeagueID",
+            "Location",
+            "Outcome",
+            "SeasonSegment",
+            "VsConference",
+            "VsDivision"
+        ],
+        "parameter_patterns": {
+            "DateFrom": null,
+            "DateTo": null,
+            "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
+            "LastNGames": null,
+            "LeagueID": "(00)|(20)|(10)",
+            "Location": "^((Home)|(Road))?$",
+            "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$",
+            "Month": null,
+            "OpponentTeamID": null,
+            "Outcome": "^((W)|(L))?$",
+            "PaceAdjust": "^(Y)|(N)$",
+            "PerMode": "^(Totals)|(PerGame)|(MinutesPer)|(Per48)|(Per40)|(Per36)|(PerMinute)|(PerPossession)|(PerPlay)|(Per100Possessions)|(Per100Plays)$",
+            "Period": null,
+            "PlusMinus": "^(Y)|(N)$",
+            "Rank": "^(Y)|(N)$",
+            "Season": null,
+            "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
+            "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
+            "TeamID": null,
+            "VsConference": "^((East)|(West))?$",
+            "VsDivision": "^((Atlantic)|(Central)|(Northwest)|(Pacific)|(Southeast)|(Southwest)|(East)|(West))?$"
+        },
+        "parameters": [
+            "DateFrom",
+            "DateTo",
+            "GameSegment",
+            "LastNGames",
+            "LeagueID",
+            "Location",
+            "MeasureType",
+            "Month",
+            "OpponentTeamID",
+            "Outcome",
+            "PaceAdjust",
+            "PerMode",
+            "Period",
+            "PlusMinus",
+            "Rank",
+            "Season",
+            "SeasonSegment",
+            "SeasonType",
+            "TeamID",
+            "VsConference",
+            "VsDivision"
+        ],
+        "required_parameters": [
+            "DateFrom",
+            "DateTo",
+            "GameSegment",
+            "LastNGames",
+            "Location",
+            "MeasureType",
+            "Month",
+            "OpponentTeamID",
+            "Outcome",
+            "PaceAdjust",
+            "PerMode",
+            "Period",
+            "PlusMinus",
+            "Rank",
+            "Season",
+            "SeasonSegment",
+            "SeasonType",
+            "TeamID",
+            "VsConference",
+            "VsDivision"
+        ],
+        "status": "success"
+    },
+    "LeagueSeasonMatchups": {
+        "data_sets": {
+            "SeasonMatchups": [
+                "OFF_TEAM_ID",
+                "OFF_TEAM_ABBREVIATION",
+                "OFF_TEAM_CITY",
+                "OFF_TEAM_NICKNAME",
+                "OFF_PLAYER_ID",
+                "OFF_PLAYER_NAME",
+                "DEF_TEAM_ID",
+                "DEF_TEAM_ABBREVIATION",
+                "DEF_TEAM_CITY",
+                "DEF_TEAM_NICKNAME",
+                "DEF_PLAYER_ID",
+                "DEF_PLAYER_NAME",
+                "GP",
+                "POSS",
+                "OFF_MATCHUP_PCT",
+                "PLAYER_PTS",
+                "PLAYER_PTS_DIFF",
+                "TEAM_PTS",
+                "TEAM_PTS_DIFF",
+                "AST",
+                "TOV",
+                "BLK",
+                "HELP_BLK",
+                "HELP_BLK_REC",
+                "FGM",
+                "FGA",
+                "FGA_DIFF",
+                "FG_PCT",
+                "FG3M",
+                "FG3A",
+                "FG3_PCT",
+                "FTM",
+                "SFL",
+                "DEF_FOULS",
+                "OFF_FOULS"
+            ]
+        },
+        "endpoint": "LeagueSeasonMatchups",
+        "last_validated_date": "2019-04-07",
+        "nullable_parameters": [
+            "DateFrom",
+            "DateTo",
+            "DefPlayerID",
+            "DefTeamID",
+            "OffPlayerID",
+            "OffTeamID",
+            "Outcome",
+            "PORound",
+            "PerMode"
+        ],
+        "parameter_patterns": {
+            "DateFrom": null,
+            "DateTo": null,
+            "DefPlayerID": null,
+            "DefTeamID": null,
+            "LeagueID": "^\\d{2}$",
+            "OffPlayerID": null,
+            "OffTeamID": null,
+            "Outcome": null,
+            "PORound": null,
+            "PerMode": null,
+            "Season": "^(\\d{4}-\\d{2})$",
+            "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(Pre-Season)$"
+        },
+        "parameters": [
+            "DateFrom",
+            "DateTo",
+            "DefPlayerID",
+            "DefTeamID",
+            "LeagueID",
+            "OffPlayerID",
+            "OffTeamID",
+            "Outcome",
+            "PORound",
+            "PerMode",
+            "Season",
+            "SeasonType"
+        ],
+        "required_parameters": [
+            "LeagueID",
+            "Season",
+            "SeasonType"
         ],
         "status": "success"
     },
@@ -4316,13 +5090,13 @@
             ]
         },
         "endpoint": "LeagueStandings",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "SeasonYear"
         ],
         "parameter_patterns": {
             "LeagueID": "^\\d{2}$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonType": "^(Regular Season)|(Pre Season)$",
             "SeasonYear": null
         },
@@ -4341,7 +5115,7 @@
     },
     "LineupStats": {
         "endpoint": "LineupStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayByPlay": {
@@ -4365,7 +5139,7 @@
             ]
         },
         "endpoint": "PlayByPlay",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EndPeriod": null,
@@ -4386,7 +5160,7 @@
     },
     "PlayByPlayMini": {
         "endpoint": "PlayByPlayMini",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayByPlayV2": {
@@ -4431,7 +5205,7 @@
             ]
         },
         "endpoint": "PlayByPlayV2",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EndPeriod": null,
@@ -4470,7 +5244,7 @@
             ]
         },
         "endpoint": "PlayerAwards",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "PlayerID": null
@@ -4485,7 +5259,7 @@
     },
     "PlayerBioStats": {
         "endpoint": "PlayerBioStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayerCareerStats": {
@@ -4770,7 +5544,7 @@
             ]
         },
         "endpoint": "PlayerCareerStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "LeagueID"
         ],
@@ -4792,7 +5566,7 @@
     },
     "PlayerClutchStats": {
         "endpoint": "PlayerClutchStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayerCompare": {
@@ -4851,7 +5625,7 @@
             ]
         },
         "endpoint": "PlayerCompare",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "Conference",
             "DateFrom",
@@ -4885,7 +5659,7 @@
             "PlayerIDList": null,
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)$",
             "ShotClockRange": null,
@@ -4947,7 +5721,7 @@
     },
     "PlayerCompareStats": {
         "endpoint": "PlayerCompareStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayerDashPtPass": {
@@ -5000,7 +5774,7 @@
             ]
         },
         "endpoint": "PlayerDashPtPass",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -5021,7 +5795,7 @@
             "Outcome": "^((W)|(L))?$",
             "PerMode": "^(Totals)|(PerGame)$",
             "PlayerID": null,
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "TeamID": null,
@@ -5050,6 +5824,7 @@
             "DateFrom",
             "DateTo",
             "LastNGames",
+            "LeagueID",
             "Location",
             "Month",
             "OpponentTeamID",
@@ -5163,7 +5938,7 @@
             ]
         },
         "endpoint": "PlayerDashPtReb",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -5187,7 +5962,7 @@
             "PerMode": "^(Totals)|(PerGame)$",
             "Period": null,
             "PlayerID": null,
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "TeamID": null,
@@ -5219,6 +5994,7 @@
             "DateTo",
             "GameSegment",
             "LastNGames",
+            "LeagueID",
             "Location",
             "Month",
             "OpponentTeamID",
@@ -5237,7 +6013,7 @@
     },
     "PlayerDashPtReboundLogs": {
         "endpoint": "PlayerDashPtReboundLogs",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayerDashPtShotDefend": {
@@ -5256,7 +6032,7 @@
             ]
         },
         "endpoint": "PlayerDashPtShotDefend",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -5280,7 +6056,7 @@
             "PerMode": "^(Totals)|(PerGame)$",
             "Period": null,
             "PlayerID": null,
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "TeamID": null,
@@ -5312,6 +6088,7 @@
             "DateTo",
             "GameSegment",
             "LastNGames",
+            "LeagueID",
             "Location",
             "Month",
             "OpponentTeamID",
@@ -5330,7 +6107,7 @@
     },
     "PlayerDashPtShotlog": {
         "endpoint": "PlayerDashPtShotlog",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayerDashPtShots": {
@@ -5484,7 +6261,7 @@
             ]
         },
         "endpoint": "PlayerDashPtShots",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -5508,7 +6285,7 @@
             "PerMode": "^(Totals)|(PerGame)$",
             "Period": null,
             "PlayerID": null,
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "TeamID": null,
@@ -5540,6 +6317,7 @@
             "DateTo",
             "GameSegment",
             "LastNGames",
+            "LeagueID",
             "Location",
             "Month",
             "OpponentTeamID",
@@ -6264,7 +7042,7 @@
             ]
         },
         "endpoint": "PlayerDashboardByClutch",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -6296,7 +7074,7 @@
             "PlayerID": null,
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)$",
             "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
@@ -6676,7 +7454,7 @@
             ]
         },
         "endpoint": "PlayerDashboardByGameSplits",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -6708,7 +7486,7 @@
             "PlayerID": null,
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)$",
             "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
@@ -7216,7 +7994,7 @@
             ]
         },
         "endpoint": "PlayerDashboardByGeneralSplits",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -7248,7 +8026,7 @@
             "PlayerID": null,
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)$",
             "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
@@ -7692,7 +8470,7 @@
             ]
         },
         "endpoint": "PlayerDashboardByLastNGames",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -7724,7 +8502,7 @@
             "PlayerID": null,
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)$",
             "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
@@ -8040,7 +8818,7 @@
             ]
         },
         "endpoint": "PlayerDashboardByOpponent",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -8072,7 +8850,7 @@
             "PlayerID": null,
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)$",
             "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
@@ -8391,7 +9169,7 @@
             ]
         },
         "endpoint": "PlayerDashboardByShootingSplits",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -8423,7 +9201,7 @@
             "PlayerID": null,
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)$",
             "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
@@ -8745,7 +9523,7 @@
             ]
         },
         "endpoint": "PlayerDashboardByTeamPerformance",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -8777,7 +9555,7 @@
             "PlayerID": null,
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)$",
             "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
@@ -8971,7 +9749,7 @@
             ]
         },
         "endpoint": "PlayerDashboardByYearOverYear",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -9003,7 +9781,7 @@
             "PlayerID": null,
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)$",
             "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
@@ -9061,7 +9839,7 @@
     },
     "PlayerDefenseStats": {
         "endpoint": "PlayerDefenseStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayerFantasyProfile": {
@@ -9239,7 +10017,7 @@
             ]
         },
         "endpoint": "PlayerFantasyProfile",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "LeagueID"
         ],
@@ -9251,7 +10029,7 @@
             "PlayerID": null,
             "PlusMinus": "^(N)$",
             "Rank": "^(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)$"
         },
         "parameters": [
@@ -9315,7 +10093,7 @@
             ]
         },
         "endpoint": "PlayerFantasyProfileBarGraph",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "LeagueID",
             "SeasonType"
@@ -9323,7 +10101,7 @@
         "parameter_patterns": {
             "LeagueID": "(00)|(20)|(10)",
             "PlayerID": null,
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$"
         },
         "parameters": [
@@ -9371,7 +10149,7 @@
             ]
         },
         "endpoint": "PlayerGameLog",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -9382,7 +10160,7 @@
             "DateTo": null,
             "LeagueID": "(00)|(20)|(10)",
             "PlayerID": null,
-            "Season": "^(\\d{4}-\\d{2})|(ALL)$",
+            "Season": null,
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All-Star)|(All Star)$"
         },
         "parameters": [
@@ -9402,12 +10180,12 @@
     },
     "PlayerGameLogsStats": {
         "endpoint": "PlayerGameLogsStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayerGameSplitsStats": {
         "endpoint": "PlayerGameSplitsStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayerGameStreakFinder": {
@@ -9425,7 +10203,7 @@
             ]
         },
         "endpoint": "PlayerGameStreakFinder",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "ActiveStreaksOnly",
             "Conference",
@@ -9704,17 +10482,17 @@
     },
     "PlayerGeneralSplitsStats": {
         "endpoint": "PlayerGeneralSplitsStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayerInfo": {
         "endpoint": "PlayerInfo",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayerLastNGamesStats": {
         "endpoint": "PlayerLastNGamesStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayerNextNGames": {
@@ -9736,7 +10514,7 @@
             ]
         },
         "endpoint": "PlayerNextNGames",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "LeagueID"
         ],
@@ -9764,35 +10542,31 @@
     },
     "PlayerOnDetails": {
         "endpoint": "PlayerOnDetails",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayerOpponentStats": {
         "endpoint": "PlayerOpponentStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayerPassesStats": {
         "endpoint": "PlayerPassesStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayerProfile": {
         "data_sets": {},
         "endpoint": "PlayerProfile",
-        "last_validated_date": "2018-12-11",
-        "nullable_parameters": [
-            "GraphEndSeason",
-            "GraphStartSeason",
-            "GraphStat"
-        ],
+        "last_validated_date": "2019-04-07",
+        "nullable_parameters": [],
         "parameter_patterns": {
-            "GraphEndSeason": "^(\\d{4}-\\d{2})?$",
-            "GraphStartSeason": "^(\\d{4}-\\d{2})?$",
+            "GraphEndSeason": null,
+            "GraphStartSeason": null,
             "GraphStat": null,
             "LeagueID": "^\\d{2}$",
             "PlayerID": null,
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)$"
         },
         "parameters": [
@@ -10192,7 +10966,7 @@
             ]
         },
         "endpoint": "PlayerProfileV2",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "LeagueID"
         ],
@@ -10214,22 +10988,22 @@
     },
     "PlayerReboundsStats": {
         "endpoint": "PlayerReboundsStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayerShotChartDetail": {
         "endpoint": "PlayerShotChartDetail",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayerShotsStats": {
         "endpoint": "PlayerShotsStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayerTeamPerformanceStats": {
         "endpoint": "PlayerTeamPerformanceStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayerVsPlayer": {
@@ -10410,7 +11184,7 @@
             ]
         },
         "endpoint": "PlayerVsPlayer",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -10439,7 +11213,7 @@
             "PlayerID": null,
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)$",
             "VsConference": "^((East)|(West))?$",
@@ -10497,68 +11271,59 @@
     },
     "PlayerYearOverYearStats": {
         "endpoint": "PlayerYearOverYearStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayersCareerStats": {
         "endpoint": "PlayersCareerStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayersClutchStats": {
         "endpoint": "PlayersClutchStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayersDefenseStats": {
         "endpoint": "PlayersDefenseStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayersGeneralStats": {
         "endpoint": "PlayersGeneralStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayersHustleLeaders": {
         "endpoint": "PlayersHustleLeaders",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayersHustleStats": {
         "endpoint": "PlayersHustleStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayersShotLocationStats": {
         "endpoint": "PlayersShotLocationStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayersShotStats": {
         "endpoint": "PlayersShotStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayersTrackingStats": {
         "endpoint": "PlayersTrackingStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "PlayersVsPlayers": {
         "data_sets": {},
         "endpoint": "PlayersVsPlayers",
-        "last_validated_date": "2018-12-11",
-        "nullable_parameters": [
-            "DateFrom",
-            "DateTo",
-            "GameSegment",
-            "Location",
-            "Outcome",
-            "SeasonSegment",
-            "VsConference",
-            "VsDivision"
-        ],
+        "last_validated_date": "2019-04-07",
+        "nullable_parameters": [],
         "parameter_patterns": {
             "DateFrom": null,
             "DateTo": null,
@@ -10580,7 +11345,6 @@
             "PlayerTeamID": null,
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)$",
             "VsConference": "^((East)|(West))?$",
@@ -10613,7 +11377,6 @@
             "PlayerTeamID",
             "PlusMinus",
             "Rank",
-            "Season",
             "SeasonSegment",
             "SeasonType",
             "VsConference",
@@ -10646,7 +11409,6 @@
             "PlayerTeamID",
             "PlusMinus",
             "Rank",
-            "Season",
             "SeasonSegment",
             "SeasonType",
             "VsConference",
@@ -10758,7 +11520,7 @@
             ]
         },
         "endpoint": "PlayoffPicture",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "LeagueID": "^\\d{2}$",
@@ -10776,7 +11538,7 @@
     },
     "PlayoffSeries": {
         "endpoint": "PlayoffSeries",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "Scoreboard": {
@@ -10885,7 +11647,7 @@
             ]
         },
         "endpoint": "Scoreboard",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "DayOffset": "^-{0,1}\\d+$",
@@ -10906,7 +11668,7 @@
     },
     "ScoreboardMini": {
         "endpoint": "ScoreboardMini",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "ScoreboardV2": {
@@ -11040,7 +11802,7 @@
             "WinProbability": []
         },
         "endpoint": "ScoreboardV2",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "DayOffset": "^-{0,1}\\d+$",
@@ -11098,7 +11860,7 @@
             ]
         },
         "endpoint": "ShotChartDetail",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "AheadBehind",
             "ClutchTime",
@@ -11146,8 +11908,8 @@
             "PointDiff": null,
             "Position": null,
             "RangeType": null,
-            "RookieYear": "^(\\d{4}-\\d{2})?$",
-            "Season": "^(\\d{4}-\\d{2})?$",
+            "RookieYear": null,
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "StartPeriod": null,
@@ -11196,6 +11958,7 @@
             "GameID",
             "GameSegment",
             "LastNGames",
+            "LeagueID",
             "Location",
             "Month",
             "OpponentTeamID",
@@ -11253,7 +12016,7 @@
             ]
         },
         "endpoint": "ShotChartLineupDetail",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "ContextFilter",
             "DateFrom",
@@ -11285,7 +12048,7 @@
             "OpponentTeamID": null,
             "Outcome": "^((W)|(L))?$",
             "Period": null,
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "TeamID": null,
@@ -11340,12 +12103,277 @@
     },
     "TeamAndPlayerVsPlayers": {
         "endpoint": "TeamAndPlayerVsPlayers",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
+    },
+    "TeamAndPlayersVsPlayers": {
+        "data_sets": {
+            "PlayersVsPlayers": [
+                "GROUP_SET",
+                "TITLE_DESCRIPTION",
+                "DESCRIPTION",
+                "MIN",
+                "FGM",
+                "FGA",
+                "FG_PCT",
+                "FG3M",
+                "FG3A",
+                "FG3_PCT",
+                "FTM",
+                "FTA",
+                "FT_PCT",
+                "OREB",
+                "DREB",
+                "REB",
+                "AST",
+                "TOV",
+                "STL",
+                "BLK",
+                "BLKA",
+                "PF",
+                "PFD",
+                "PTS",
+                "PLUS_MINUS"
+            ],
+            "TeamPlayersVsPlayersOff": [
+                "GROUP_SET",
+                "TITLE_DESCRIPTION",
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "MIN",
+                "FGM",
+                "FGA",
+                "FG_PCT",
+                "FG3M",
+                "FG3A",
+                "FG3_PCT",
+                "FTM",
+                "FTA",
+                "FT_PCT",
+                "OREB",
+                "DREB",
+                "REB",
+                "AST",
+                "TOV",
+                "STL",
+                "BLK",
+                "BLKA",
+                "PF",
+                "PFD",
+                "PTS",
+                "PLUS_MINUS"
+            ],
+            "TeamPlayersVsPlayersOn": [
+                "GROUP_SET",
+                "TITLE_DESCRIPTION",
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "MIN",
+                "FGM",
+                "FGA",
+                "FG_PCT",
+                "FG3M",
+                "FG3A",
+                "FG3_PCT",
+                "FTM",
+                "FTA",
+                "FT_PCT",
+                "OREB",
+                "DREB",
+                "REB",
+                "AST",
+                "TOV",
+                "STL",
+                "BLK",
+                "BLKA",
+                "PF",
+                "PFD",
+                "PTS",
+                "PLUS_MINUS"
+            ],
+            "TeamVsPlayers": [
+                "GROUP_SET",
+                "TITLE_DESCRIPTION",
+                "DESCRIPTION",
+                "MIN",
+                "FGM",
+                "FGA",
+                "FG_PCT",
+                "FG3M",
+                "FG3A",
+                "FG3_PCT",
+                "FTM",
+                "FTA",
+                "FT_PCT",
+                "OREB",
+                "DREB",
+                "REB",
+                "AST",
+                "TOV",
+                "STL",
+                "BLK",
+                "BLKA",
+                "PF",
+                "PFD",
+                "PTS",
+                "PLUS_MINUS"
+            ],
+            "TeamVsPlayersOff": [
+                "GROUP_SET",
+                "TITLE_DESCRIPTION",
+                "DESCRIPTION",
+                "MIN",
+                "FGM",
+                "FGA",
+                "FG_PCT",
+                "FG3M",
+                "FG3A",
+                "FG3_PCT",
+                "FTM",
+                "FTA",
+                "FT_PCT",
+                "OREB",
+                "DREB",
+                "REB",
+                "AST",
+                "TOV",
+                "STL",
+                "BLK",
+                "BLKA",
+                "PF",
+                "PFD",
+                "PTS",
+                "PLUS_MINUS"
+            ]
+        },
+        "endpoint": "TeamAndPlayersVsPlayers",
+        "last_validated_date": "2019-04-07",
+        "nullable_parameters": [
+            "Conference",
+            "DateFrom",
+            "DateTo",
+            "Division",
+            "GameSegment",
+            "LeagueID",
+            "Location",
+            "Outcome",
+            "SeasonSegment",
+            "ShotClockRange",
+            "VsConference",
+            "VsDivision"
+        ],
+        "parameter_patterns": {
+            "Conference": "^((East)|(West))?$",
+            "DateFrom": null,
+            "DateTo": null,
+            "Division": null,
+            "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
+            "LastNGames": null,
+            "LeagueID": "(00)|(20)|(10)",
+            "Location": "^((Home)|(Road))?$",
+            "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$",
+            "Month": null,
+            "OpponentTeamID": null,
+            "Outcome": "^((W)|(L))?$",
+            "PaceAdjust": "^(Y)|(N)$",
+            "PerMode": "^(Totals)|(PerGame)|(MinutesPer)|(Per48)|(Per40)|(Per36)|(PerMinute)|(PerPossession)|(PerPlay)|(Per100Possessions)|(Per100Plays)$",
+            "Period": null,
+            "PlayerID1": null,
+            "PlayerID2": null,
+            "PlayerID3": null,
+            "PlayerID4": null,
+            "PlayerID5": null,
+            "PlusMinus": "^(Y)|(N)$",
+            "Rank": "^(Y)|(N)$",
+            "Season": null,
+            "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
+            "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)$",
+            "ShotClockRange": null,
+            "TeamID": null,
+            "VsConference": "^((East)|(West))?$",
+            "VsDivision": "^((Atlantic)|(Central)|(Northwest)|(Pacific)|(Southeast)|(Southwest)|(East)|(West))?$",
+            "VsPlayerID1": null,
+            "VsPlayerID2": null,
+            "VsPlayerID3": null,
+            "VsPlayerID4": null,
+            "VsPlayerID5": null,
+            "VsTeamID": null
+        },
+        "parameters": [
+            "Conference",
+            "DateFrom",
+            "DateTo",
+            "Division",
+            "GameSegment",
+            "LastNGames",
+            "LeagueID",
+            "Location",
+            "MeasureType",
+            "Month",
+            "OpponentTeamID",
+            "Outcome",
+            "PaceAdjust",
+            "PerMode",
+            "Period",
+            "PlayerID1",
+            "PlayerID2",
+            "PlayerID3",
+            "PlayerID4",
+            "PlayerID5",
+            "PlusMinus",
+            "Rank",
+            "Season",
+            "SeasonSegment",
+            "SeasonType",
+            "ShotClockRange",
+            "TeamID",
+            "VsConference",
+            "VsDivision",
+            "VsPlayerID1",
+            "VsPlayerID2",
+            "VsPlayerID3",
+            "VsPlayerID4",
+            "VsPlayerID5",
+            "VsTeamID"
+        ],
+        "required_parameters": [
+            "DateFrom",
+            "DateTo",
+            "GameSegment",
+            "LastNGames",
+            "Location",
+            "MeasureType",
+            "Month",
+            "OpponentTeamID",
+            "Outcome",
+            "PaceAdjust",
+            "PerMode",
+            "Period",
+            "PlayerID1",
+            "PlayerID2",
+            "PlayerID3",
+            "PlayerID4",
+            "PlayerID5",
+            "PlusMinus",
+            "Rank",
+            "Season",
+            "SeasonSegment",
+            "SeasonType",
+            "TeamID",
+            "VsConference",
+            "VsDivision",
+            "VsPlayerID1",
+            "VsPlayerID2",
+            "VsPlayerID3",
+            "VsPlayerID4",
+            "VsPlayerID5",
+            "VsTeamID"
+        ],
+        "status": "success"
     },
     "TeamClutchStats": {
         "endpoint": "TeamClutchStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "TeamDashLineups": {
@@ -11468,7 +12496,7 @@
             ]
         },
         "endpoint": "TeamDashLineups",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -11502,7 +12530,7 @@
             "Period": null,
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
@@ -11607,7 +12635,7 @@
             ]
         },
         "endpoint": "TeamDashPtPass",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -11627,7 +12655,7 @@
             "OpponentTeamID": null,
             "Outcome": "^((W)|(L))?$",
             "PerMode": "^(Totals)|(PerGame)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "TeamID": null,
@@ -11655,6 +12683,7 @@
             "DateFrom",
             "DateTo",
             "LastNGames",
+            "LeagueID",
             "Location",
             "Month",
             "OpponentTeamID",
@@ -11767,7 +12796,7 @@
             ]
         },
         "endpoint": "TeamDashPtReb",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -11790,7 +12819,7 @@
             "Outcome": "^((W)|(L))?$",
             "PerMode": "^(Totals)|(PerGame)$",
             "Period": null,
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "TeamID": null,
@@ -11821,6 +12850,7 @@
             "DateTo",
             "GameSegment",
             "LastNGames",
+            "LeagueID",
             "Location",
             "Month",
             "OpponentTeamID",
@@ -11960,7 +12990,7 @@
             ]
         },
         "endpoint": "TeamDashPtShots",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -11983,7 +13013,7 @@
             "Outcome": "^((W)|(L))?$",
             "PerMode": "^(Totals)|(PerGame)$",
             "Period": null,
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "TeamID": null,
@@ -12014,6 +13044,7 @@
             "DateTo",
             "GameSegment",
             "LastNGames",
+            "LeagueID",
             "Location",
             "Month",
             "OpponentTeamID",
@@ -12671,7 +13702,7 @@
             ]
         },
         "endpoint": "TeamDashboardByClutch",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -12702,7 +13733,7 @@
             "Period": null,
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
@@ -13053,7 +14084,7 @@
             ]
         },
         "endpoint": "TeamDashboardByGameSplits",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -13084,7 +14115,7 @@
             "Period": null,
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
@@ -13499,7 +14530,7 @@
             ]
         },
         "endpoint": "TeamDashboardByGeneralSplits",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -13530,7 +14561,7 @@
             "Period": null,
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
@@ -13939,7 +14970,7 @@
             ]
         },
         "endpoint": "TeamDashboardByLastNGames",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -13970,7 +15001,7 @@
             "Period": null,
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
@@ -14263,7 +15294,7 @@
             ]
         },
         "endpoint": "TeamDashboardByOpponent",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -14294,7 +15325,7 @@
             "Period": null,
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
@@ -14594,7 +15625,7 @@
             ]
         },
         "endpoint": "TeamDashboardByShootingSplits",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -14625,7 +15656,7 @@
             "Period": null,
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
@@ -14924,7 +15955,7 @@
             ]
         },
         "endpoint": "TeamDashboardByTeamPerformance",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -14955,7 +15986,7 @@
             "Period": null,
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
@@ -15132,7 +16163,7 @@
             ]
         },
         "endpoint": "TeamDashboardByYearOverYear",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -15163,7 +16194,7 @@
             "Period": null,
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
@@ -15276,7 +16307,7 @@
             ]
         },
         "endpoint": "TeamDetails",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "TeamID": null
@@ -15291,12 +16322,12 @@
     },
     "TeamFranchiseLeaders": {
         "endpoint": "TeamFranchiseLeaders",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "TeamFranchiseLeadersRank": {
         "endpoint": "TeamFranchiseLeadersRank",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "TeamGameLog": {
@@ -15332,7 +16363,7 @@
             ]
         },
         "endpoint": "TeamGameLog",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -15363,7 +16394,7 @@
     },
     "TeamGameSplitsStats": {
         "endpoint": "TeamGameSplitsStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "TeamGameStreakFinder": {
@@ -15382,7 +16413,7 @@
             ]
         },
         "endpoint": "TeamGameStreakFinder",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "ActiveStreaksOnly",
             "ActiveTeamsOnly",
@@ -15958,7 +16989,7 @@
     },
     "TeamGeneralSplitsStats": {
         "endpoint": "TeamGeneralSplitsStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "TeamHistoricalLeaders": {
@@ -15984,7 +17015,7 @@
             ]
         },
         "endpoint": "TeamHistoricalLeaders",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "LeagueID": "^\\d{2}$",
@@ -16005,7 +17036,7 @@
     },
     "TeamInfo": {
         "endpoint": "TeamInfo",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "TeamInfoCommon": {
@@ -16045,7 +17076,7 @@
             ]
         },
         "endpoint": "TeamInfoCommon",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "Season",
             "SeasonType"
@@ -16070,27 +17101,27 @@
     },
     "TeamLastNGamesStats": {
         "endpoint": "TeamLastNGamesStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "TeamLineupStats": {
         "endpoint": "TeamLineupStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "TeamOpponentStats": {
         "endpoint": "TeamOpponentStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "TeamPassesStats": {
         "endpoint": "TeamPassesStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "TeamPerformanceStats": {
         "endpoint": "TeamPerformanceStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "TeamPlayerDashboard": {
@@ -16218,7 +17249,7 @@
             ]
         },
         "endpoint": "TeamPlayerDashboard",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -16249,7 +17280,7 @@
             "Period": null,
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
@@ -16491,7 +17522,7 @@
             ]
         },
         "endpoint": "TeamPlayerOnOffDetails",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -16519,7 +17550,7 @@
             "Period": null,
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "TeamID": null,
@@ -16666,7 +17697,7 @@
             ]
         },
         "endpoint": "TeamPlayerOnOffSummary",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -16694,7 +17725,7 @@
             "Period": null,
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "TeamID": null,
@@ -16750,32 +17781,32 @@
     },
     "TeamPlayerStats": {
         "endpoint": "TeamPlayerStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "TeamReboundsStats": {
         "endpoint": "TeamReboundsStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "TeamRoster": {
         "endpoint": "TeamRoster",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "TeamShootingSplitsStats": {
         "endpoint": "TeamShootingSplitsStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "TeamShotChartLineupDetail": {
         "endpoint": "TeamShotChartLineupDetail",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "TeamShotsStats": {
         "endpoint": "TeamShotsStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "TeamVsPlayer": {
@@ -17054,7 +18085,7 @@
             ]
         },
         "endpoint": "TeamVsPlayer",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -17084,7 +18115,7 @@
             "PlayerID": null,
             "PlusMinus": "^(Y)|(N)$",
             "Rank": "^(Y)|(N)$",
-            "Season": "^\\d{4}-\\d{2}$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)$",
             "TeamID": null,
@@ -17182,7 +18213,7 @@
             ]
         },
         "endpoint": "TeamYearByYearStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "LeagueID": "^\\d{2}$",
@@ -17206,58 +18237,58 @@
     },
     "TeamYearOverYearStats": {
         "endpoint": "TeamYearOverYearStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "TeamYears": {
         "endpoint": "TeamYears",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "TeamsClutchStats": {
         "endpoint": "TeamsClutchStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "TeamsDefenseStats": {
         "endpoint": "TeamsDefenseStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "TeamsGeneralStats": {
         "endpoint": "TeamsGeneralStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "TeamsHustleLeaders": {
         "endpoint": "TeamsHustleLeaders",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "TeamsHustleStats": {
         "endpoint": "TeamsHustleStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "TeamsShotLocationStats": {
         "endpoint": "TeamsShotLocationStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "TeamsShotStats": {
         "endpoint": "TeamsShotStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "TeamsYearByYearStats": {
         "endpoint": "TeamsYearByYearStats",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     },
     "VideoDetails": {
         "data_sets": {},
         "endpoint": "VideoDetails",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [
             "AheadBehind",
             "ClutchTime",
@@ -17304,7 +18335,7 @@
             "Position": null,
             "RangeType": null,
             "RookieYear": null,
-            "Season": "^(\\d{4}-\\d{2})?$",
+            "Season": null,
             "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
             "SeasonType": "^((Regular Season)|(Pre Season)|(Playoffs)|(All Star))?$",
             "StartPeriod": null,
@@ -17375,7 +18406,7 @@
     "VideoEvents": {
         "data_sets": {},
         "endpoint": "VideoEvents",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameEventID": null,
@@ -17411,7 +18442,7 @@
             ]
         },
         "endpoint": "VideoStatus",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameDate": null,
@@ -17427,9 +18458,56 @@
         ],
         "status": "success"
     },
+    "WinProbabilityPBP": {
+        "data_sets": {
+            "GameInfo": [
+                "GAME_ID",
+                "GAME_DATE",
+                "HOME_TEAM_ID",
+                "HOME_TEAM_ABR",
+                "HOME_TEAM_PTS",
+                "VISITOR_TEAM_ID",
+                "VISITOR_TEAM_ABR",
+                "VISITOR_TEAM_PTS"
+            ],
+            "WinProbPBP": [
+                "GAME_ID",
+                "EVENT_NUM",
+                "HOME_PCT",
+                "VISITOR_PCT",
+                "HOME_PTS",
+                "VISITOR_PTS",
+                "HOME_SCORE_MARGIN",
+                "PERIOD",
+                "SECONDS_REMAINING",
+                "HOME_POSS_IND",
+                "HOME_G",
+                "DESCRIPTION",
+                "LOCATION",
+                "PCTIMESTRING",
+                "ISVISIBLE"
+            ]
+        },
+        "endpoint": "WinProbabilityPBP",
+        "last_validated_date": "2019-04-07",
+        "nullable_parameters": [],
+        "parameter_patterns": {
+            "GameID": null,
+            "RunType": null
+        },
+        "parameters": [
+            "GameID",
+            "RunType"
+        ],
+        "required_parameters": [
+            "GameID",
+            "RunType"
+        ],
+        "status": "success"
+    },
     "WinProbabilityPlayByPlay": {
         "endpoint": "WinProbabilityPlayByPlay",
-        "last_validated_date": "2018-12-11",
+        "last_validated_date": "2019-04-07",
         "status": "deprecated"
     }
 }

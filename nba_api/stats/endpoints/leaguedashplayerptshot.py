@@ -7,6 +7,12 @@ class LeagueDashPlayerPtShot(Endpoint):
     endpoint = 'leaguedashplayerptshot'
     expected_data = {'LeagueDashPTShots': ['PLAYER_ID', 'PLAYER_NAME', 'PLAYER_LAST_TEAM_ID', 'PLAYER_LAST_TEAM_ABBREVIATION', 'AGE', 'GP', 'G', 'FGA_FREQUENCY', 'FGM', 'FGA', 'FG_PCT', 'EFG_PCT', 'FG2A_FREQUENCY', 'FG2M', 'FG2A', 'FG2_PCT', 'FG3A_FREQUENCY', 'FG3M', 'FG3A', 'FG3_PCT']}
 
+    nba_response = None
+    data_sets = None
+    player_stats = None
+    team_stats = None
+    headers = None
+
     def __init__(self,
                  league_id=LeagueID.default,
                  per_mode_simple=PerModeSimple.default,
@@ -42,10 +48,16 @@ class LeagueDashPlayerPtShot(Endpoint):
                  touch_time_range_nullable='',
                  vs_conference_nullable=ConferenceNullable.default,
                  vs_division_nullable=DivisionNullable.default,
-                 weight_nullable=''):
-        self.nba_response = NBAStatsHTTP().send_api_request(
-            endpoint=self.endpoint,
-            parameters={
+                 weight_nullable='',
+                 proxy=None,
+                 headers=None,
+                 timeout=30,
+                 get_request=True):
+        self.proxy = proxy
+        if headers is not None:
+            self.headers = headers
+        self.timeout = timeout
+        self.parameters = {
                 'LeagueID': league_id,
                 'PerMode': per_mode_simple,
                 'Season': season,
@@ -81,8 +93,21 @@ class LeagueDashPlayerPtShot(Endpoint):
                 'VsConference': vs_conference_nullable,
                 'VsDivision': vs_division_nullable,
                 'Weight': weight_nullable
-            },
+        }
+        if get_request:
+            self.get_request()
+    
+    def get_request(self):
+        self.nba_response = NBAStatsHTTP().send_api_request(
+            endpoint=self.endpoint,
+            parameters=self.parameters,
+            proxy=self.proxy,
+            headers=self.headers,
+            timeout=self.timeout,
         )
+        self.load_response()
+        
+    def load_response(self):
         data_sets = self.nba_response.get_data_sets()
         self.data_sets = [Endpoint.DataSet(data=data_set) for data_set_name, data_set in data_sets.items()]
         self.league_dash_ptshots = Endpoint.DataSet(data=data_sets['LeagueDashPTShots'])

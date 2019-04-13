@@ -12,7 +12,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 ------------ | ------------ | :-----------: | :---: | :---:
 [_**IsOnlyCurrentSeason**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#IsOnlyCurrentSeason) | is_only_current_season |  | `Y` |  | 
 [_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^\d{2}$` | `Y` |  | 
-[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season | `^\d{4}-\d{2}$` | `Y` |  | 
+[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season |  | `Y` |  | 
 
 ## Data Sets
 #### CommonAllPlayers `common_all_players`
@@ -42,12 +42,12 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "CommonAllPlayers",
-    "last_validated_date": "2018-12-11",
+    "last_validated_date": "2019-04-07",
     "nullable_parameters": [],
     "parameter_patterns": {
         "IsOnlyCurrentSeason": null,
         "LeagueID": "^\\d{2}$",
-        "Season": "^\\d{4}-\\d{2}$"
+        "Season": null
     },
     "parameters": [
         "IsOnlyCurrentSeason",
@@ -63,4 +63,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2018-12-11
+Last validated 2019-04-07

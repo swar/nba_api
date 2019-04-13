@@ -49,12 +49,17 @@ class NBAStatsResponse(http.NBAResponse):
         return json.dumps(self.get_normalized_dict())
 
     def get_parameters(self):
+        if not self.valid_json() or 'parameters' not in self.get_dict():
+            return None
+
         parameters = self.get_dict()['parameters']
-        if isinstance(parameters, list):
-            parameters = {}
-            for parameter in self.get_dict()['parameters']:
-                for key, value in parameter.items():
-                    parameters.update({key: value})
+        if isinstance(parameters, dict):
+            return parameters
+
+        parameters = {}
+        for parameter in self.get_dict()['parameters']:
+            for key, value in parameter.items():
+                parameters.update({key: value})
         return parameters
 
     def get_headers_from_data_sets(self):
@@ -87,7 +92,7 @@ class NBAStatsHTTP(http.NBAHTTP):
 
     nba_response = NBAStatsResponse
 
-    base_url = 'http://stats.nba.com/stats/{endpoint}'
+    base_url = 'https://stats.nba.com/stats/{endpoint}'
 
     headers = STATS_HEADERS
 

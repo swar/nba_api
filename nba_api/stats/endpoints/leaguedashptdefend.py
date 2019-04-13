@@ -7,6 +7,12 @@ class LeagueDashPtDefend(Endpoint):
     endpoint = 'leaguedashptdefend'
     expected_data = {'LeagueDashPTDefend': ['CLOSE_DEF_PERSON_ID', 'PLAYER_NAME', 'PLAYER_LAST_TEAM_ID', 'PLAYER_LAST_TEAM_ABBREVIATION', 'PLAYER_POSITION', 'AGE', 'GP', 'G', 'FREQ', 'D_FGM', 'D_FGA', 'D_FG_PCT', 'NORMAL_FG_PCT', 'PCT_PLUSMINUS']}
 
+    nba_response = None
+    data_sets = None
+    player_stats = None
+    team_stats = None
+    headers = None
+
     def __init__(self,
                  defense_category=DefenseCategory.default,
                  league_id=LeagueID.default,
@@ -38,10 +44,16 @@ class LeagueDashPtDefend(Endpoint):
                  team_id_nullable='',
                  vs_conference_nullable=ConferenceNullable.default,
                  vs_division_nullable=DivisionNullable.default,
-                 weight_nullable=''):
-        self.nba_response = NBAStatsHTTP().send_api_request(
-            endpoint=self.endpoint,
-            parameters={
+                 weight_nullable='',
+                 proxy=None,
+                 headers=None,
+                 timeout=30,
+                 get_request=True):
+        self.proxy = proxy
+        if headers is not None:
+            self.headers = headers
+        self.timeout = timeout
+        self.parameters = {
                 'DefenseCategory': defense_category,
                 'LeagueID': league_id,
                 'PerMode': per_mode_simple,
@@ -73,8 +85,21 @@ class LeagueDashPtDefend(Endpoint):
                 'VsConference': vs_conference_nullable,
                 'VsDivision': vs_division_nullable,
                 'Weight': weight_nullable
-            },
+        }
+        if get_request:
+            self.get_request()
+    
+    def get_request(self):
+        self.nba_response = NBAStatsHTTP().send_api_request(
+            endpoint=self.endpoint,
+            parameters=self.parameters,
+            proxy=self.proxy,
+            headers=self.headers,
+            timeout=self.timeout,
         )
+        self.load_response()
+        
+    def load_response(self):
         data_sets = self.nba_response.get_data_sets()
         self.data_sets = [Endpoint.DataSet(data=data_set) for data_set_name, data_set in data_sets.items()]
         self.league_dash_p_tdefend = Endpoint.DataSet(data=data_sets['LeagueDashPTDefend'])

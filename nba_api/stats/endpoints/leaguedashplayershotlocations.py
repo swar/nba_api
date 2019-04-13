@@ -7,6 +7,12 @@ class LeagueDashPlayerShotLocations(Endpoint):
     endpoint = 'leaguedashplayershotlocations'
     expected_data = {'ShotLocations': [{'columnNames': ['Restricted Area', 'In The Paint (Non-RA)', 'Mid-Range', 'Left Corner 3', 'Right Corner 3', 'Above the Break 3', 'Backcourt'], 'columnSpan': 3, 'columnsToSkip': 5, 'name': 'SHOT_CATEGORY'}, {'columnNames': ['PLAYER_ID', 'PLAYER_NAME', 'TEAM_ID', 'TEAM_ABBREVIATION', 'AGE', 'FGM', 'FGA', 'FG_PCT', 'FGM', 'FGA', 'FG_PCT', 'FGM', 'FGA', 'FG_PCT', 'FGM', 'FGA', 'FG_PCT', 'FGM', 'FGA', 'FG_PCT', 'FGM', 'FGA', 'FG_PCT', 'FGM', 'FGA', 'FG_PCT'], 'columnSpan': 1, 'name': 'columns'}]}
 
+    nba_response = None
+    data_sets = None
+    player_stats = None
+    team_stats = None
+    headers = None
+
     def __init__(self,
                  distance_range=DistanceRange.default,
                  last_n_games=LastNGames.default,
@@ -43,10 +49,16 @@ class LeagueDashPlayerShotLocations(Endpoint):
                  team_id_nullable='',
                  vs_conference_nullable=ConferenceNullable.default,
                  vs_division_nullable=DivisionNullable.default,
-                 weight_nullable=''):
-        self.nba_response = NBAStatsHTTP().send_api_request(
-            endpoint=self.endpoint,
-            parameters={
+                 weight_nullable='',
+                 proxy=None,
+                 headers=None,
+                 timeout=30,
+                 get_request=True):
+        self.proxy = proxy
+        if headers is not None:
+            self.headers = headers
+        self.timeout = timeout
+        self.parameters = {
                 'DistanceRange': distance_range,
                 'LastNGames': last_n_games,
                 'MeasureType': measure_type_simple,
@@ -83,8 +95,21 @@ class LeagueDashPlayerShotLocations(Endpoint):
                 'VsConference': vs_conference_nullable,
                 'VsDivision': vs_division_nullable,
                 'Weight': weight_nullable
-            },
+        }
+        if get_request:
+            self.get_request()
+    
+    def get_request(self):
+        self.nba_response = NBAStatsHTTP().send_api_request(
+            endpoint=self.endpoint,
+            parameters=self.parameters,
+            proxy=self.proxy,
+            headers=self.headers,
+            timeout=self.timeout,
         )
+        self.load_response()
+        
+    def load_response(self):
         data_sets = self.nba_response.get_data_sets()
         self.data_sets = [Endpoint.DataSet(data=data_set) for data_set_name, data_set in data_sets.items()]
         self.shot_locations = Endpoint.DataSet(data=data_sets['ShotLocations'])

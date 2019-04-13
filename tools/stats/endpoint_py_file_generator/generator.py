@@ -25,10 +25,12 @@ def get_endpoint_contents(endpoint, endpoint_analysis):
     parameters.sort()
     nullable_parameters.sort()
 
-    for prop in parameters:
+    for prop in sorted(parameters):
         if prop in nullable_parameters:
             continue
         pattern = parameter_patterns[prop]
+        if pattern not in parameter_map[prop]['non-nullable']:
+            raise Exception(endpoint, pattern, prop, 'non-nullable')
         parameter_key = parameter_map[prop]['non-nullable'][pattern]
         python_variable = get_python_variable_name(parameter_key)
         default_value = parameter_variations[parameter_key]['default_py_value']
@@ -44,6 +46,8 @@ def get_endpoint_contents(endpoint, endpoint_analysis):
 
     for prop in nullable_parameters:
         pattern = parameter_patterns[prop]
+        if pattern not in parameter_map[prop]['nullable']:
+            raise Exception(pattern, prop, 'nullable')
         parameter_key = parameter_map[prop]['nullable'][pattern]
         python_variable = get_python_variable_name(parameter_key)
         default_value = parameter_variations[parameter_key]['default_py_value']

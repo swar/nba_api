@@ -36,11 +36,11 @@ The purpose of this test is to retrieve all required parameters so that we can u
  
 ### `minimal_requirement_tests`(_`endpoint`_, _`required_params`_ \[, _`pause=1`_\] )
 
-returns _`status`_, _`all_parameters`_, _`data_sets`_, _`all_params_errors`_
+returns _`status`_, _`all_parameters`_, _`data_sets`_, _`all_params_errors`_, _`nullable_parameters`_
 
-This function will return status, all parameters and data sets, and all params errors by submitting a request with valid required parameters. If any parameter fails, it will replace those matches with values from the patterns that get returned from the errors. It will retry the request and return all values.
+This function will return status, all parameters and data sets, all params errors, and initial nullable_parameters by submitting a request with valid required parameters. If any parameter fails, it will replace those matches with values from the patterns that get returned from the errors. It will retry the request and return all values.
 
-Usually, we will be able to make endpoints work by rearranging the mapping file, but please keep in mind the impact any changes will have on these files. The point of this entire process is to accurately map as many endpoints as possible, so we may have to make additional tests in order to map all endpoints. 
+Usually, we will be able to make endpoints work by rearranging the mapping file, but please keep in mind the impact any changes will have on any other endpoints. The point of this entire process is to accurately map as many endpoints as possible, so we may have to make additional tests in order to map all endpoints. 
  
 ### `nullable_parameters_test`(_`endpoint`_, _`all_parameters`_)
 

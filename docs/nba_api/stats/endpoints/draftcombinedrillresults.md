@@ -5,13 +5,13 @@
 >[https://stats.nba.com/stats/draftcombinedrillresults](https://stats.nba.com/stats/draftcombinedrillresults)
 
 ##### Valid URL
->[https://stats.nba.com/stats/draftcombinedrillresults?LeagueID=00&SeasonYear=2018-19](https://stats.nba.com/stats/draftcombinedrillresults?LeagueID=00&SeasonYear=2018-19)
+>[https://stats.nba.com/stats/draftcombinedrillresults?LeagueID=00&SeasonYear=2018](https://stats.nba.com/stats/draftcombinedrillresults?LeagueID=00&SeasonYear=2018)
 
 ## Parameters
 API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 ------------ | ------------ | :-----------: | :---: | :---:
 [_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^(00)\|(10)\|(20)$` | `Y` |  | 
-[_**SeasonYear**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonYear) | season | `^\d{4}-\d{2}$` | `Y` |  | 
+[_**SeasonYear**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonYear) | season_year |  | `Y` |  | 
 
 ## Data Sets
 #### Results `results`
@@ -40,11 +40,11 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "DraftCombineDrillResults",
-    "last_validated_date": "2018-12-11",
+    "last_validated_date": "2019-04-07",
     "nullable_parameters": [],
     "parameter_patterns": {
         "LeagueID": "^(00)|(10)|(20)$",
-        "SeasonYear": "^\\d{4}-\\d{2}$"
+        "SeasonYear": null
     },
     "parameters": [
         "LeagueID",
@@ -58,4 +58,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2018-12-11
+Last validated 2019-04-07

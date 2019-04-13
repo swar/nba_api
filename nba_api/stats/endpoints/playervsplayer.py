@@ -7,6 +7,12 @@ class PlayerVsPlayer(Endpoint):
     endpoint = 'playervsplayer'
     expected_data = {'OnOffCourt': ['GROUP_SET', 'PLAYER_ID', 'PLAYER_NAME', 'VS_PLAYER_ID', 'VS_PLAYER_NAME', 'COURT_STATUS', 'GP', 'W', 'L', 'W_PCT', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'TOV', 'STL', 'BLK', 'BLKA', 'PF', 'PFD', 'PTS', 'PLUS_MINUS', 'NBA_FANTASY_PTS', 'CFID', 'CFPARAMS'], 'Overall': ['GROUP_SET', 'GROUP_VALUE', 'PLAYER_ID', 'PLAYER_NAME', 'GP', 'W', 'L', 'W_PCT', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'TOV', 'STL', 'BLK', 'BLKA', 'PF', 'PFD', 'PTS', 'PLUS_MINUS', 'NBA_FANTASY_PTS', 'CFID', 'CFPARAMS'], 'PlayerInfo': ['PERSON_ID', 'FIRST_NAME', 'LAST_NAME', 'DISPLAY_FIRST_LAST', 'DISPLAY_LAST_COMMA_FIRST', 'DISPLAY_FI_LAST', 'BIRTHDATE', 'SCHOOL', 'COUNTRY', 'LAST_AFFILIATION'], 'ShotAreaOffCourt': ['GROUP_SET', 'PLAYER_ID', 'PLAYER_NAME', 'VS_PLAYER_ID', 'VS_PLAYER_NAME', 'COURT_STATUS', 'GROUP_VALUE', 'FGM', 'FGA', 'FG_PCT', 'CFID', 'CFPARAMS'], 'ShotAreaOnCourt': ['GROUP_SET', 'PLAYER_ID', 'PLAYER_NAME', 'VS_PLAYER_ID', 'VS_PLAYER_NAME', 'COURT_STATUS', 'GROUP_VALUE', 'FGM', 'FGA', 'FG_PCT', 'CFID', 'CFPARAMS'], 'ShotAreaOverall': ['GROUP_SET', 'GROUP_VALUE', 'PLAYER_ID', 'PLAYER_NAME', 'FGM', 'FGA', 'FG_PCT', 'CFID', 'CFPARAMS'], 'ShotDistanceOffCourt': ['GROUP_SET', 'PLAYER_ID', 'PLAYER_NAME', 'VS_PLAYER_ID', 'VS_PLAYER_NAME', 'COURT_STATUS', 'GROUP_VALUE', 'FGM', 'FGA', 'FG_PCT', 'CFID', 'CFPARAMS'], 'ShotDistanceOnCourt': ['GROUP_SET', 'PLAYER_ID', 'PLAYER_NAME', 'VS_PLAYER_ID', 'VS_PLAYER_NAME', 'COURT_STATUS', 'GROUP_VALUE', 'FGM', 'FGA', 'FG_PCT', 'CFID', 'CFPARAMS'], 'ShotDistanceOverall': ['GROUP_SET', 'GROUP_VALUE', 'PLAYER_ID', 'PLAYER_NAME', 'FGM', 'FGA', 'FG_PCT', 'CFID', 'CFPARAMS'], 'VsPlayerInfo': ['PERSON_ID', 'FIRST_NAME', 'LAST_NAME', 'DISPLAY_FIRST_LAST', 'DISPLAY_LAST_COMMA_FIRST', 'DISPLAY_FI_LAST', 'BIRTHDATE', 'SCHOOL', 'COUNTRY', 'LAST_AFFILIATION']}
 
+    nba_response = None
+    data_sets = None
+    player_stats = None
+    team_stats = None
+    headers = None
+
     def __init__(self,
                  vs_player_id,
                  player_id,
@@ -29,10 +35,16 @@ class PlayerVsPlayer(Endpoint):
                  outcome_nullable=OutcomeNullable.default,
                  season_segment_nullable=SeasonSegmentNullable.default,
                  vs_conference_nullable=ConferenceNullable.default,
-                 vs_division_nullable=DivisionNullable.default):
-        self.nba_response = NBAStatsHTTP().send_api_request(
-            endpoint=self.endpoint,
-            parameters={
+                 vs_division_nullable=DivisionNullable.default,
+                 proxy=None,
+                 headers=None,
+                 timeout=30,
+                 get_request=True):
+        self.proxy = proxy
+        if headers is not None:
+            self.headers = headers
+        self.timeout = timeout
+        self.parameters = {
                 'VsPlayerID': vs_player_id,
                 'PlayerID': player_id,
                 'LastNGames': last_n_games,
@@ -55,8 +67,21 @@ class PlayerVsPlayer(Endpoint):
                 'SeasonSegment': season_segment_nullable,
                 'VsConference': vs_conference_nullable,
                 'VsDivision': vs_division_nullable
-            },
+        }
+        if get_request:
+            self.get_request()
+    
+    def get_request(self):
+        self.nba_response = NBAStatsHTTP().send_api_request(
+            endpoint=self.endpoint,
+            parameters=self.parameters,
+            proxy=self.proxy,
+            headers=self.headers,
+            timeout=self.timeout,
         )
+        self.load_response()
+        
+    def load_response(self):
         data_sets = self.nba_response.get_data_sets()
         self.data_sets = [Endpoint.DataSet(data=data_set) for data_set_name, data_set in data_sets.items()]
         self.on_off_court = Endpoint.DataSet(data=data_sets['OnOffCourt'])

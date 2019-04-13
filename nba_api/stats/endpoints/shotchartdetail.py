@@ -1,11 +1,17 @@
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
-from nba_api.stats.library.parameters import ContextMeasureSimple, LastNGames, LeagueID, Month, Period, SeasonTypeAllStar, AheadBehindNullable, ClutchTimeNullable, EndPeriodNullable, EndRangeNullable, GameSegmentNullable, LocationNullable, OutcomeNullable, PlayerPositionNullable, PointDiffNullable, RangeTypeNullable, SeasonNullable, SeasonSegmentNullable, StartPeriodNullable, StartRangeNullable, ConferenceNullable, DivisionNullable
+from nba_api.stats.library.parameters import ContextMeasureSimple, LastNGames, LeagueID, Month, Period, SeasonTypeAllStar, AheadBehindNullable, ClutchTimeNullable, EndPeriodNullable, EndRangeNullable, GameSegmentNullable, LocationNullable, OutcomeNullable, PlayerPositionNullable, PointDiffNullable, PositionNullable, RangeTypeNullable, SeasonNullable, SeasonSegmentNullable, StartPeriodNullable, StartRangeNullable, ConferenceNullable, DivisionNullable
 
 
 class ShotChartDetail(Endpoint):
     endpoint = 'shotchartdetail'
     expected_data = {'LeagueAverages': ['GRID_TYPE', 'SHOT_ZONE_BASIC', 'SHOT_ZONE_AREA', 'SHOT_ZONE_RANGE', 'FGA', 'FGM', 'FG_PCT'], 'Shot_Chart_Detail': ['GRID_TYPE', 'GAME_ID', 'GAME_EVENT_ID', 'PLAYER_ID', 'PLAYER_NAME', 'TEAM_ID', 'TEAM_NAME', 'PERIOD', 'MINUTES_REMAINING', 'SECONDS_REMAINING', 'EVENT_TYPE', 'ACTION_TYPE', 'SHOT_TYPE', 'SHOT_ZONE_BASIC', 'SHOT_ZONE_AREA', 'SHOT_ZONE_RANGE', 'SHOT_DISTANCE', 'LOC_X', 'LOC_Y', 'SHOT_ATTEMPTED_FLAG', 'SHOT_MADE_FLAG', 'GAME_DATE', 'HTM', 'VTM']}
+
+    nba_response = None
+    data_sets = None
+    player_stats = None
+    team_stats = None
+    headers = None
 
     def __init__(self,
                  team_id,
@@ -30,7 +36,7 @@ class ShotChartDetail(Endpoint):
                  outcome_nullable=OutcomeNullable.default,
                  player_position_nullable=PlayerPositionNullable.default,
                  point_diff_nullable=PointDiffNullable.default,
-                 position_nullable='',
+                 position_nullable=PositionNullable.default,
                  range_type_nullable=RangeTypeNullable.default,
                  rookie_year_nullable=SeasonNullable.default,
                  season_nullable=SeasonNullable.default,
@@ -38,10 +44,16 @@ class ShotChartDetail(Endpoint):
                  start_period_nullable=StartPeriodNullable.default,
                  start_range_nullable=StartRangeNullable.default,
                  vs_conference_nullable=ConferenceNullable.default,
-                 vs_division_nullable=DivisionNullable.default):
-        self.nba_response = NBAStatsHTTP().send_api_request(
-            endpoint=self.endpoint,
-            parameters={
+                 vs_division_nullable=DivisionNullable.default,
+                 proxy=None,
+                 headers=None,
+                 timeout=30,
+                 get_request=True):
+        self.proxy = proxy
+        if headers is not None:
+            self.headers = headers
+        self.timeout = timeout
+        self.parameters = {
                 'TeamID': team_id,
                 'PlayerID': player_id,
                 'ContextMeasure': context_measure_simple,
@@ -73,8 +85,21 @@ class ShotChartDetail(Endpoint):
                 'StartRange': start_range_nullable,
                 'VsConference': vs_conference_nullable,
                 'VsDivision': vs_division_nullable
-            },
+        }
+        if get_request:
+            self.get_request()
+    
+    def get_request(self):
+        self.nba_response = NBAStatsHTTP().send_api_request(
+            endpoint=self.endpoint,
+            parameters=self.parameters,
+            proxy=self.proxy,
+            headers=self.headers,
+            timeout=self.timeout,
         )
+        self.load_response()
+        
+    def load_response(self):
         data_sets = self.nba_response.get_data_sets()
         self.data_sets = [Endpoint.DataSet(data=data_set) for data_set_name, data_set in data_sets.items()]
         self.league_averages = Endpoint.DataSet(data=data_sets['LeagueAverages'])
