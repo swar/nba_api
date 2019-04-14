@@ -5,51 +5,51 @@ from nba_api.stats.library.playbyplayregex import *
 class TestPlayByPlay(object):
 
     #PLAYER NAME
-    from nba_api.stats.library.playbyplayregex import pattern_player_name
+    from nba_api.stats.library.playbyplayregex import pattern_player
 
-    def test_player_name(self):
+    def test_player(self):
  
-        re_player_name = re.compile('^{player_name}'.format(player_name=pattern_player_name))
+        re_player = re.compile('^{player}'.format(player=pattern_player))
 
         #Single Name
         description = "Millsap REBOUND (Off:0 Def:2)"
-        player_name = re_player_name.search(description).group('player_name')
-        assert player_name == 'Millsap'
+        player = re_player.search(description).group('player')
+        assert player == 'Millsap'
 
         #Hyphenated Name
         description = "Bates-Diop REBOUND (Off:0 Def:1)"
-        player_name = re_player_name.search(description).group('player_name')
-        assert player_name == 'Bates-Diop'
+        player = re_player.search(description).group('player')
+        assert player == 'Bates-Diop'
 
         #Name with Apostrophe
         description = "O'Quinn REBOUND (Off:0 Def:1)"
-        player_name = re_player_name.search(description).group('player_name')
-        assert player_name == "O'Quinn"
+        player = re_player.search(description).group('player')
+        assert player == "O'Quinn"
 
         #First Initial + Last Name
         description = "S. Hill REBOUND (Off:0 Def:1)"
-        player_name = re_player_name.search(description).group('player_name')
-        assert player_name == "S. Hill"
+        player = re_player.search(description).group('player')
+        assert player == "S. Hill"
 
         #Junior
         description = "Porter Jr. REBOUND (Off:0 Def:1)"
-        player_name = re_player_name.search(description).group('player_name')
-        assert player_name == "Porter Jr."
+        player = re_player.search(description).group('player')
+        assert player == "Porter Jr."
 
         #Second
         description = "Payton II REBOUND (Off:0 Def:1)"
-        player_name = re_player_name.search(description).group('player_name')
-        assert player_name == "Payton II"
+        player = re_player.search(description).group('player')
+        assert player == "Payton II"
 
         #Third
         description = "Robinson III REBOUND (Off:0 Def:1)"
-        player_name = re_player_name.search(description).group('player_name')
-        assert player_name == "Robinson III"
+        player = re_player.search(description).group('player')
+        assert player == "Robinson III"
         
         #Fourth
         description = "Walker IV REBOUND (Off:0 Def:1)"
-        player_name = re_player_name.search(description).group('player_name')
-        assert player_name == "Walker IV"
+        player = re_player.search(description).group('player')
+        assert player == "Walker IV"
 
     #BLOCK
     block_player = "Collins BLOCK (1 BLK)"
@@ -60,8 +60,8 @@ class TestPlayByPlay(object):
         search_result = re_block.search(self.block_player)
         
         #Player Name
-        player_name = search_result.group('player_name')
-        assert player_name == 'Collins'
+        player = search_result.group('player')
+        assert player == 'Collins'
 
         #Player
         block = search_result.group('blocks')
@@ -77,8 +77,8 @@ class TestPlayByPlay(object):
         assert field_goal_type == '3PT Jump Shot'
 
         #Player Name
-        player_name = search_result.group('player_name')
-        assert player_name == 'Evans'
+        player = search_result.group('player')
+        assert player == 'Evans'
 
         #Disatance
         distance = search_result.group('distance')
@@ -93,8 +93,8 @@ class TestPlayByPlay(object):
         assert points == '1'
 
         #Player Name Assist
-        player_name = search_result.group('player_name_ast')
-        assert player_name == "O'Quinn"
+        player = search_result.group('player_ast')
+        assert player == "O'Quinn"
 
     #FIELD GOAL MISSED
     field_goal_missed = "MISS O'Quinn 17' Jump Shot"
@@ -106,8 +106,8 @@ class TestPlayByPlay(object):
         assert field_goal_type == 'Jump Shot'
 
         #Player Name
-        player_name = search_result.group('player_name')
-        assert player_name == "O'Quinn"
+        player = search_result.group('player')
+        assert player == "O'Quinn"
 
         #Distance
         distance = search_result.group('distance')
@@ -119,8 +119,8 @@ class TestPlayByPlay(object):
         search_result = re_foul.search(self.foul_player)
         
         #Player Name
-        player_name = search_result.group('player_name')
-        assert player_name == 'Collison'
+        player = search_result.group('player')
+        assert player == 'Collison'
 
         #Foul Type
         foul_type = search_result.group('foul_type')
@@ -144,8 +144,8 @@ class TestPlayByPlay(object):
         search_result = re_free_throw_made.search(self.free_throw_made)
         
         #Player Name
-        player_name = search_result.group('player_name')
-        assert player_name == 'Sumner'
+        player = search_result.group('player')
+        assert player == 'Sumner'
 
         #Free Throw Type
         free_throw_type = search_result.group('free_throw_type')
@@ -161,8 +161,8 @@ class TestPlayByPlay(object):
         search_result = re_free_throw_miss.search(self.free_throw_miss)
         
         #Player Name
-        player_name = search_result.group('player_name')
-        assert player_name == 'Prince'
+        player = search_result.group('player')
+        assert player == 'Prince'
 
         #Free Throw Type
         free_throw_type = search_result.group('free_throw_type')
@@ -174,16 +174,16 @@ class TestPlayByPlay(object):
         search_result = re_jump_ball.search(self.jump_ball)
         
         #Player Name
-        player_name = search_result.group('player_name_home')
-        assert player_name == 'Collins'
+        player = search_result.group('player_home')
+        assert player == 'Collins'
 
         #Player Name
-        player_name = search_result.group('player_name_away')
-        assert player_name == "O'Quinn"
+        player = search_result.group('player_away')
+        assert player == "O'Quinn"
 
         #Player Name
-        player_name = search_result.group('player_name_tip')
-        assert player_name == 'Leaf'
+        player = search_result.group('player_tip')
+        assert player == 'Leaf'
 
     #REBOUND PLAYER
     rebound_player = "Zubac REBOUND (Off:2 Def:4)"
@@ -191,8 +191,8 @@ class TestPlayByPlay(object):
         search_result = re_rebound_player.search(self.rebound_player)
         
         #Player Name
-        player_name = search_result.group('player_name')
-        assert player_name == 'Zubac'
+        player = search_result.group('player')
+        assert player == 'Zubac'
 
         #Offensive
         offensive = search_result.group('offensive')
@@ -208,8 +208,8 @@ class TestPlayByPlay(object):
         search_result = re_rebound_team.search(self.rebound_team)
         
         #Team Name
-        team_name = search_result.group('team_name')
-        assert team_name == 'Timberwolves'
+        team = search_result.group('team')
+        assert team == 'Timberwolves'
         
     #STEAL
     steal_player = "Bradley STEAL (2 STL)"
@@ -217,8 +217,8 @@ class TestPlayByPlay(object):
         search_result = re_steal.search(self.steal_player)
         
         #Player Name
-        player_name = search_result.group('player_name')
-        assert player_name == 'Bradley'
+        player = search_result.group('player')
+        assert player == 'Bradley'
 
         #Steals
         offensive = search_result.group('steals')
@@ -230,12 +230,12 @@ class TestPlayByPlay(object):
         search_result = re_substitution.search(self.substitution)
         
         #Player In Name
-        player_name_in = search_result.group('player_name_in')
-        assert player_name_in == 'Sefolosha'
+        player_in = search_result.group('player_in')
+        assert player_in == 'Sefolosha'
 
         #Player Out Name
-        player_name_out = search_result.group('player_name_out')
-        assert player_name_out == 'Ingles'
+        player_out = search_result.group('player_out')
+        assert player_out == 'Ingles'
 
     #TIMEOUT
     timeout = "TRAIL BLAZERS Timeout: Regular (Full 5 Short 0)"
@@ -243,8 +243,8 @@ class TestPlayByPlay(object):
         search_result = re_timeout.search(self.timeout)
         
         #Team Name
-        team_name = search_result.group('team_name')
-        assert team_name == 'TRAIL BLAZERS'
+        team = search_result.group('team')
+        assert team == 'TRAIL BLAZERS'
 
         #Timeout type
         timeout_type = search_result.group('timeout_type')
@@ -268,8 +268,8 @@ class TestPlayByPlay(object):
         assert turnover_type == 'Double Dribble'
 
         #Player Name
-        player_name = search_result.group('player_name')
-        assert player_name == 'G. Harrison'
+        player = search_result.group('player')
+        assert player == 'G. Harrison'
 
         #Player
         player = search_result.group('personal')
@@ -285,16 +285,16 @@ class TestPlayByPlay(object):
         search_result = re_turnover_team.search(self.turnover_team)
         
         #Team Name
-        team_name = search_result.group('team_name')
-        assert team_name == 'NUGGETS'
+        team = search_result.group('team')
+        assert team == 'NUGGETS'
 
         #Turnover Type
-        team_name = search_result.group('turnover_type')
-        assert team_name == 'Shot Clock'
+        team = search_result.group('turnover_type')
+        assert team == 'Shot Clock'
 
         #Turnovers
-        team_name = search_result.group('turnovers')
-        assert team_name == '12'
+        team = search_result.group('turnovers')
+        assert team == '12'
 
     #VIOLATION
     violation = "Dieng Violation:Kicked Ball (T.Brown)"
@@ -306,8 +306,8 @@ class TestPlayByPlay(object):
         assert violation_type == 'Kicked Ball'
 
         #Player Name
-        player_name = search_result.group('player_name')
-        assert player_name == 'Dieng'
+        player = search_result.group('player')
+        assert player == 'Dieng'
 
         #Referee
         referee = search_result.group('referee')
