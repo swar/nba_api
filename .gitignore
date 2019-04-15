@@ -111,3 +111,10 @@ nba_api/nba_api/library/debug/
 nba_api/scripts/endpoint_analysis/
 nba_api/scripts/endpoint_documentation/
 nba_api/scripts/endpoint_files/
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
