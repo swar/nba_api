@@ -94,6 +94,7 @@ deferred_endpoints = [
         DeferredEndpoint(ep.ScoreboardV2),
         DeferredEndpoint(ep.ShotChartDetail, player_id='2544', team_id='1610612739'),
         DeferredEndpoint(ep.ShotChartLineupDetail),
+        DeferredEndpoint(ep.SynergyPlayTypes),
         DeferredEndpoint(ep.TeamAndPlayersVsPlayers,
                 team_id=1610612739,
                 player_id1=203954,
@@ -133,5 +134,5 @@ deferred_endpoints = [
                 team_id='1610612739', start_period=1, end_period=1),
         DeferredEndpoint(ep.VideoEvents, game_id='0021700807'),
         DeferredEndpoint(ep.VideoStatus),
-        DeferredEndpoint(ep.WinProbabilityPBP, game_id='0021700807')]
-
+        DeferredEndpoint(ep.WinProbabilityPBP, game_id='0021700807')
+]
