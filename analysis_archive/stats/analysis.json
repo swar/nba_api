@@ -12101,6 +12101,66 @@
         ],
         "status": "success"
     },
+    "SynergyPlayTypes": {
+        "data_sets": {
+            "SynergyPlayType": [
+                "SEASON_ID",
+                "TEAM_ID",
+                "TEAM_ABBREVIATION",
+                "TEAM_NAME",
+                "PLAY_TYPE",
+                "TYPE_GROUPING",
+                "PERCENTILE",
+                "GP",
+                "POSS_PCT",
+                "PPP",
+                "FG_PCT",
+                "FT_POSS_PCT",
+                "TOV_POSS_PCT",
+                "SF_POSS_PCT",
+                "PLUSONE_POSS_PCT",
+                "SCORE_POSS_PCT",
+                "EFG_PCT",
+                "POSS",
+                "PTS",
+                "FGM",
+                "FGA",
+                "FGMX"
+            ]
+        },
+        "endpoint": "SynergyPlayTypes",
+        "last_validated_date": "2019-04-14",
+        "nullable_parameters": [
+            "PlayType",
+            "TypeGrouping"
+        ],
+        "parameter_patterns": {
+            "LeagueID": "^\\d{2}$",
+            "PerMode": "^(Totals)|(PerGame)$",
+            "PlayType": null,
+            "PlayerOrTeam": "^(P)|(T)$",
+            "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)|(All-Star)$",
+            "SeasonYear": "^(\\d{4}-\\d{2})|(\\d{4})$",
+            "TypeGrouping": null
+        },
+        "parameters": [
+            "LeagueID",
+            "PerMode",
+            "PlayType",
+            "PlayerOrTeam",
+            "SeasonType",
+            "SeasonYear",
+            "TypeGrouping"
+        ],
+        "required_parameters": [
+            "LeagueID",
+            "PerMode",
+            "PlayerOrTeam",
+            "SeasonType",
+            "SeasonYear"
+        ],
+        "status": "success"
+    },
     "TeamAndPlayerVsPlayers": {
         "endpoint": "TeamAndPlayerVsPlayers",
         "last_validated_date": "2019-04-07",
