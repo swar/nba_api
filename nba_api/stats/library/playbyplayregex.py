@@ -16,7 +16,7 @@ pattern_field_goal_made = r"^{player}\s{{1,2}}?((?P<distance>\d+)\' )?{field_goa
     player=pattern_player,player_ast=pattern_player.replace('player','player_ast'), field_goal_type=pattern_field_goal_type,points=pattern_points)
 pattern_field_goal_missed = r"^MISS {player}\s{{1,2}}?((?P<distance>\d+)\' )?{field_goal_type}$".format(player=pattern_player,field_goal_type=pattern_field_goal_type)
 pattern_foul = r"^{player} (?P<foul_type>.*)\s(?=(\(\w+(?P<personal>\d+)(\.\w+(?P<team>[\d|\w]+))?\) (\((?P<referee>\w.\w+)\)))$)".format(player=pattern_player)
-pattern_free_throw_made = r"{player} Free Throw {free_throw_type} {points}$".format(player=pattern_player,free_throw_type=pattern_free_throw_type,points=pattern_points)
+pattern_free_throw_made = r"^{player} Free Throw {free_throw_type} {points}$".format(player=pattern_player,free_throw_type=pattern_free_throw_type,points=pattern_points)
 pattern_free_throw_miss = r"^MISS {player} Free Throw {free_throw_type}$".format(player=pattern_player,free_throw_type=pattern_free_throw_type)
 pattern_jump_ball = r"^Jump Ball {player_home} vs. {player_away}: Tip to {player_tip}$".format(player_home=pattern_player.replace('player','player_home'),
     player_away=pattern_player.replace('player','player_away'),
