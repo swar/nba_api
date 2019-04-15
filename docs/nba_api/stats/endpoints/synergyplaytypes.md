@@ -15,7 +15,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 [_**PlayerOrTeam**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerOrTeam) | player_or_team_abbreviation | `^(P)\|(T)$` | `Y` |  | 
 [_**SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_all_star | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star)\|(All-Star)$` | `Y` |  | 
 [_**SeasonYear**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonYear) | season | `^(\d{4}-\d{2})\|(\d{4})$` | `Y` |  | 
-[_**TypeGrouping**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TypeGrouping) | type_grouping_nullable | `^\|(offensive)\|(defensive)$` |  | `Y` | 
+[_**TypeGrouping**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TypeGrouping) | type_grouping_nullable | `^(offensive)\|(defensive)$` |  | `Y` | 
 [_**PlayType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayType) | play_type_nullable | `^(Transition)\|(Isolation)\|(PRBallHandler)\|(PRRollman)\|(Postup)\|(Spotup)\|(Handoff)\|(Cut)\|(OffScreen)\|(OffRebound)\|(Misc)$` |  | `Y` | 
 
 ## Data Sets
