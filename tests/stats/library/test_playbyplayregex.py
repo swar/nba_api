@@ -2,11 +2,9 @@ import pytest
 import re
 from nba_api.stats.library.playbyplayregex import *
 
-class TestPlayByPlay(object):
+class TestPlayByPlayRegex(object):
 
     #PLAYER NAME
-    from nba_api.stats.library.playbyplayregex import pattern_player
-
     def test_player(self):
  
         re_player = re.compile('^{player}'.format(player=pattern_player))
