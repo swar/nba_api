@@ -1,10 +1,18 @@
+# `v1.1.2`
+#### `2019-04-15`
+`stats.nba.com`
+* Updating PlayByPlay Regex. [#59](https://github.com/swar/nba_api/pull/59)
+* Adding endpoints [#60](https://github.com/swar/nba_api/pull/60)
+  * SynergyPlayTypes
+
 # `v1.1.1`
 #### `2019-04-07`
 `stats.nba.com`
-* Adding proxy, header, and timeout support for every request. [#49] [Example](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/examples.md)
-* Fixing auto-complete tabs for IDEs on endpoints. [#45]
+* Adding proxy, header, and timeout support for every request. [#49](https://github.com/swar/nba_api/issues/49)
+  * [Example](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/examples.md)
+* Fixing auto-complete tabs for IDEs on endpoints. [#45](https://github.com/swar/nba_api/pull/45)
 * Laid out foundation for future url generation without requesting.
-* Adding endpoints [#54]
+* Adding endpoints [#54](https://github.com/swar/nba_api/issues/54)
   * AssistLeaders
   * AssistTracker
   * BoxScoreDefensive
