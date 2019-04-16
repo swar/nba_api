@@ -1,5 +1,6 @@
 import nba_api.stats.endpoints as ep
 
+
 class DeferredEndpoint:
     '''Simple class to represent an endpoint with deferred evaluation.'''
     def __init__(self, endpoint_class, **kwargs):
@@ -8,6 +9,7 @@ class DeferredEndpoint:
 
     def __call__(self):
         return self.endpoint_class(**self.kwargs)
+
 
 # A bunch of valid but uninstantiated endpoints for testing:
 deferred_endpoints = [
@@ -130,8 +132,8 @@ deferred_endpoints = [
         DeferredEndpoint(ep.TeamPlayerOnOffSummary, team_id='1610612739'),
         DeferredEndpoint(ep.TeamVsPlayer, team_id='1610612739', vs_player_id='2544'),
         DeferredEndpoint(ep.TeamYearByYearStats, team_id='1610612739'),
-        DeferredEndpoint(ep.VideoDetails, player_id='2544', game_id='0021700807',
-                team_id='1610612739', start_period=1, end_period=1),
+        DeferredEndpoint(ep.VideoDetails, player_id='2544', game_id_nullable='0021700807',
+                team_id='1610612739', start_period_nullable=1, end_period_nullable=1),
         DeferredEndpoint(ep.VideoEvents, game_id='0021700807'),
         DeferredEndpoint(ep.VideoStatus),
         DeferredEndpoint(ep.WinProbabilityPBP, game_id='0021700807')
