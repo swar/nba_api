@@ -387,7 +387,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "PlayerDashboardByGameSplits",
-    "last_validated_date": "2019-04-07",
+    "last_validated_date": "2019-04-15",
     "nullable_parameters": [
         "DateFrom",
         "DateTo",
@@ -477,4 +477,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2019-04-07
+Last validated 2019-04-15

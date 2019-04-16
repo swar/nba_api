@@ -84,7 +84,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "BoxScoreScoringV2",
-    "last_validated_date": "2019-04-07",
+    "last_validated_date": "2019-04-15",
     "nullable_parameters": [],
     "parameter_patterns": {
         "EndPeriod": null,
@@ -114,4 +114,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2019-04-07
+Last validated 2019-04-15

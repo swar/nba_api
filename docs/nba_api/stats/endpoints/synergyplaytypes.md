@@ -15,8 +15,8 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 [_**PlayerOrTeam**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerOrTeam) | player_or_team_abbreviation | `^(P)\|(T)$` | `Y` |  | 
 [_**SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_all_star | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star)\|(All-Star)$` | `Y` |  | 
 [_**SeasonYear**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonYear) | season | `^(\d{4}-\d{2})\|(\d{4})$` | `Y` |  | 
-[_**TypeGrouping**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TypeGrouping) | type_grouping_nullable | `^(offensive)\|(defensive)$` |  | `Y` | 
-[_**PlayType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayType) | play_type_nullable | `^(Transition)\|(Isolation)\|(PRBallHandler)\|(PRRollman)\|(Postup)\|(Spotup)\|(Handoff)\|(Cut)\|(OffScreen)\|(OffRebound)\|(Misc)$` |  | `Y` | 
+[_**TypeGrouping**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TypeGrouping) | type_grouping_nullable |  |  | `Y` | 
+[_**PlayType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayType) | play_type_nullable |  |  | `Y` | 
 
 ## Data Sets
 #### SynergyPlayType `synergy_play_type`
@@ -55,7 +55,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "SynergyPlayTypes",
-    "last_validated_date": "2019-04-14",
+    "last_validated_date": "2019-04-15",
     "nullable_parameters": [
         "PlayType",
         "TypeGrouping"
@@ -63,11 +63,11 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
     "parameter_patterns": {
         "LeagueID": "^\\d{2}$",
         "PerMode": "^(Totals)|(PerGame)$",
-        "PlayType": "^(Transition)|(Isolation)|(PRBallHandler)|(PRRollman)|(Postup)|(Spotup)|(Handoff)|(Cut)|(OffScreen)|(OffRebound)|(Misc)$",
+        "PlayType": null,
         "PlayerOrTeam": "^(P)|(T)$",
         "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)|(All-Star)$",
         "SeasonYear": "^(\\d{4}-\\d{2})|(\\d{4})$",
-        "TypeGrouping": "^|(offensive)|(defensive)$"
+        "TypeGrouping": null
     },
     "parameters": [
         "LeagueID",
@@ -89,4 +89,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2019-04-14
+Last validated 2019-04-15
