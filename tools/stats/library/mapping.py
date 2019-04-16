@@ -2596,7 +2596,6 @@ parameter_map = {
         'nullable': {
             None: 'PlayTypeNullable',
             '^(Transition)|(Isolation)|(PRBallHandler)|(PRRollman)|(Postup)|(Spotup)|(Handoff)|(Cut)|(OffScreen)|(OffRebound)|(Misc)$': 'PlayTypeNullable'
-
         },
         'non-nullable': {
 
@@ -2899,8 +2898,6 @@ parameter_map = {
     'TypeGrouping': {
         'nullable': {
             None: 'TypeGroupingNullable',
-            '^|(offensive)|(defensive)$': 'TypeGroupingNullable'
-
         },
         'non-nullable': {
 
