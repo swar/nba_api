@@ -2595,7 +2595,6 @@ parameter_map = {
     'PlayType': {
         'nullable': {
             None: 'PlayTypeNullable',
-            '^(Transition)|(Isolation)|(PRBallHandler)|(PRRollman)|(Postup)|(Spotup)|(Handoff)|(Cut)|(OffScreen)|(OffRebound)|(Misc)$': 'PlayTypeNullable'
         },
         'non-nullable': {
 
