@@ -75,7 +75,7 @@ def get_endpoint_contents(endpoint, endpoint_analysis):
     return file_contents
 
 
-def generate_endpoint_file(endpoint, file_contents):
+def write_endpoint_file(endpoint, file_contents):
     directory = endpoint_file_creation_directory
     if not os.path.exists(directory):
         os.makedirs(directory)
@@ -85,9 +85,9 @@ def generate_endpoint_file(endpoint, file_contents):
     f.close()
 
 
-def generate_endpoint_files(endpoints_information=load_endpoint_file()):
+def generate_endpoint_file(endpoints_information=load_endpoint_file()):
     for endpoint, endpoint_analysis in endpoints_information.items():
         if endpoint_analysis['status'] != 'success':
             continue
         file_contents = get_endpoint_contents(endpoint=endpoint, endpoint_analysis=endpoint_analysis)
-        generate_endpoint_file(endpoint=endpoint, file_contents=file_contents)
+        write_endpoint_file(endpoint=endpoint, file_contents=file_contents)

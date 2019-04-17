@@ -5,15 +5,15 @@ from tools.stats.parameter_documentation_generator import generator as parameter
 
 # Analyze Endpoints
 
-endpoint_analysis.analyze_and_save_all_endpoints()
+endpoint_analysis.analyze_and_save_endpoints()
 
 # Generate Endpoint Py Files
 
-py_file_generator.generate_endpoint_files()
+py_file_generator.generate_endpoint_file()
 
 # Generate Endpoint Documentation
 
-endpoint_documentation_generator.generate_all_endpoint_documentation()
+endpoint_documentation_generator.generate_endpoint_documentation()
 
 # Generate Parameter Documentation
 

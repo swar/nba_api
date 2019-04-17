@@ -48,8 +48,7 @@ def get_endpoint_documentation(endpoint, endpoints_information):
     for parameter in reversed(parameters):
         pattern = ''
         if parameter_patterns[parameter]:
-            pattern = "`{parameter_pattern}`".format(parameter_pattern=parameter_patterns[parameter]
-                                                     .replace('|', r'\|'))
+            pattern = f"`{parameter_patterns[parameter]}`".replace('|', r'\|')
         required = ''
         nullable = ''
         map_key = 'non-nullable'
@@ -82,9 +81,9 @@ def get_endpoint_documentation(endpoint, endpoints_information):
     return documentation_text
 
 
-def generate_all_endpoint_documentation(directory='endpoint_documentation'):
+def generate_endpoint_documentation(endpoints=endpoint_list, directory='endpoint_documentation'):
     endpoints_information = load_endpoint_file()
-    for endpoint in endpoint_list:
+    for endpoint in endpoints:
         if endpoints_information[endpoint]['status'] != 'success':
             continue
         file_path = get_file_path(directory)
