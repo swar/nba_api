@@ -64,6 +64,31 @@ missing_required_parameters = {
     'VideoDetails': {'Season': Season.default},  # Cleveland Cavaliers
 }
 
+todo_list = {}
+
+
+def add_todo_item(endpoint, item_type, prop, extras=False, extras_label=None):
+    todo_list.setdefault(endpoint, {})
+    todo_list[endpoint].setdefault(prop, {})
+    todo_list[endpoint][prop].setdefault(item_type, {})
+
+    if extras:
+        todo_list[endpoint][prop][item_type].setdefault(extras_label, [])
+        todo_list[endpoint][prop][item_type][extras_label].append(str(extras))
+
+
+def print_todo_items(file_path, file_name):
+    for endpoint, endpoint_data in todo_list.items():
+        print(f"TODO items for {endpoint}:")
+        for parameter, todo_item in endpoint_data.items():
+            for item, extras in todo_item.items():
+                if extras:
+                    for extra_label, extra_value in extras.items():
+                        print(f"\t{parameter}: {item} - {extra_label}: {' '.join(extra_value)}")
+                else:
+                    print(f"\t{parameter}: {item}")
+    print(f'Check {get_file_path(file_path, file_name)} for more info about parameters.')
+
 
 def get_patterns_from_response(nba_stats_response):
     parameter_patterns = {}
@@ -151,6 +176,7 @@ def required_parameters_test(endpoint):
             required_params_errors[prop] = parameter_info['parameter_error_value']
         else:
             print(f'Property "{prop}" - required parameter; not found in parameter_map')
+            add_todo_item(endpoint, 'Add to parameter_map', prop, extras=True, extras_label='Required parameter')
             status = 'invalid'
             required_params[prop] = '0'
             required_params_errors[prop] = 'a'
@@ -176,13 +202,26 @@ def minimal_requirement_tests(endpoint, required_params, pause=1):
         for prop in required_params.keys():
             if prop in parameter_patterns:
                 pattern = parameter_patterns[prop]
-                if pattern in parameter_map[prop]['non-nullable']:
-                    map_key = 'non-nullable'
-                else:
-                    map_key = 'nullable'
-                parameter_info_key = parameter_map[prop][map_key][pattern]
-                parameter_info = parameter_variations[parameter_info_key]
-                required_params[prop] = parameter_info['parameter_value']
+                # Check if parameter is in parameter_map.
+                try:
+                    if pattern in parameter_map[prop]['non-nullable']:
+                        map_key = 'non-nullable'
+                    else:
+                        map_key = 'nullable'
+                    parameter_info_key = parameter_map[prop][map_key][pattern]
+                except KeyError:
+                    add_todo_item(endpoint, 'Add to parameter_map', prop=prop, extras=pattern,
+                                  extras_label='parameter pattern')
+                    parameter_info_key = prop
+                # Check if parameter is in parameter_variations.
+                try:
+                    parameter_info = parameter_variations[parameter_info_key]
+                    required_params[prop] = parameter_info['parameter_value']
+
+                except KeyError:
+                    add_todo_item(endpoint, 'Add to parameter_variations', prop=prop, extras=required_params[prop],
+                                  extras_label='possible parameter_error_value')
+
         time.sleep(pause)
         nba_stats_response = NBAStatsHTTP().send_api_request(endpoint=endpoint, parameters=required_params)
 
@@ -213,6 +252,7 @@ def minimal_requirement_tests(endpoint, required_params, pause=1):
             status = 'invalid'
             all_params[prop] = 'a'
             all_params_errors[prop] = 'a'
+            add_todo_item(endpoint, 'Add to parameter_map', prop=prop)
 
     nullable_parameters = []
     if nba_stats_response.get_parameters():
@@ -354,6 +394,12 @@ def analyze_and_save_endpoints(endpoints=endpoint_list, file_path=None, file_nam
         endpoints_information[endpoint] = endpoint_analysis
         time.sleep(pause)
 
+        if endpoint not in endpoint_list and endpoint_analysis['status'] != 'deprecated':
+            add_todo_item(endpoint, 'Add to endpoint_list', prop=endpoint)
+
         contents = json.dumps(endpoints_information, sort_keys=True, indent=4)
         save_file(file_path=file_path, file_name=file_name, contents=contents)
         print(f"Endpoint analysis for {endpoint} finished. Status: {endpoint_analysis['status']}")
+
+    if todo_list:
+        print_todo_items(file_path, file_name)
