@@ -85,7 +85,8 @@ def write_endpoint_file(endpoint, file_contents):
     f.close()
 
 
-def generate_endpoint_file(endpoints_information=load_endpoint_file()):
+def generate_endpoint_file():
+    endpoints_information = load_endpoint_file()
     for endpoint, endpoint_analysis in endpoints_information.items():
         if endpoint_analysis['status'] != 'success':
             continue
