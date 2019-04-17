@@ -150,7 +150,7 @@ def required_parameters_test(endpoint):
             required_params[prop] = parameter_info['parameter_value']
             required_params_errors[prop] = parameter_info['parameter_error_value']
         else:
-            print('Property "{prop}" not in parameter_map'.format(prop=prop))
+            print(f'Property "{prop}" - required parameter; not found in parameter_map')
             status = 'invalid'
             required_params[prop] = '0'
             required_params_errors[prop] = 'a'
@@ -191,7 +191,7 @@ def minimal_requirement_tests(endpoint, required_params, pause=1):
         all_parameters += list(nba_stats_response.get_parameters().keys())
     else:
         status = 'invalid'
-        print(status, 'failed to pass minimal values test')
+        print(f"{endpoint}: {status}; failed to pass minimal values test")
         data_sets = {}
     all_parameters = list(set(all_parameters))
 
@@ -209,7 +209,7 @@ def minimal_requirement_tests(endpoint, required_params, pause=1):
             all_params[prop] = parameter_info['parameter_value']
             all_params_errors[prop] = parameter_info['parameter_error_value']
         else:
-            print(prop, 'not found in parameter map - minimal test')
+            print(f'Property "{prop}" - minimal test; not found in parameter_map')
             status = 'invalid'
             all_params[prop] = 'a'
             all_params_errors[prop] = 'a'
@@ -305,7 +305,8 @@ def analyze_endpoint(endpoint, pause=1):
     parameter_patterns = invalid_values_test(endpoint=endpoint, all_params_errors=all_params_errors)
 
     if len(parameter_patterns) != len(all_parameters):
-        print(endpoint, 'length of patterns does not equal all our parameters', parameter_patterns, all_parameters)
+        print(f"{endpoint}: Length of patterns does not equal all our parameters.")
+        print(f"Parameter Patters: {parameter_patterns}\nAll Parameters: {all_parameters}")
         status = 'invalid'
 
     all_parameters.sort()
@@ -339,14 +340,14 @@ def load_endpoint_file(file_path=None, file_name='analysis.json'):
     return endpoints_information
 
 
-def analyze_and_save_all_endpoints(endpoints=endpoint_list, file_path=None, file_name='analysis.json', pause=1):
+def analyze_and_save_endpoints(endpoints=endpoint_list, file_path=None, file_name='analysis.json', pause=1):
     if not file_path:
         file_path = get_file_path(directory_name='endpoint_analysis')
     endpoints_information = load_endpoint_file(file_name=file_name, file_path=file_path)
 
     for endpoint in endpoints:
         if endpoint in endpoints_information and endpoints_information[endpoint]['status'] in ['success', 'deprecated']:
-            print("skipping", endpoints_information[endpoint]['status'], endpoint)
+            print(f"{endpoint} already analyzed completely. Status: {endpoints_information[endpoint]['status']}")
             continue
 
         endpoint_analysis = analyze_endpoint(endpoint=endpoint, pause=pause)
@@ -355,4 +356,4 @@ def analyze_and_save_all_endpoints(endpoints=endpoint_list, file_path=None, file
 
         contents = json.dumps(endpoints_information, sort_keys=True, indent=4)
         save_file(file_path=file_path, file_name=file_name, contents=contents)
-        print(endpoint_analysis['status'], endpoint)
+        print(f"Endpoint analysis for {endpoint} finished. Status: {endpoint_analysis['status']}")
