@@ -130,6 +130,7 @@ endpoint_list = [
     'ScoreboardV2',
     'ShotChartDetail',
     'ShotChartLineupDetail',
+    'SynergyPlayTypes',
     'TeamAndPlayerVsPlayers',
     'TeamAndPlayersVsPlayers',
     'TeamClutchStats',
@@ -834,6 +835,16 @@ parameter_variations = {
         'parameter_value': '',
         'parameter_error_value': 'a',
     },
+    'PlayType': {
+        'default_py_value': 'PlayType.default',
+        'parameter_value': PlayType.default,
+        'parameter_error_value': 0,
+    },
+    'PlayTypeNullable': {
+        'default_py_value': 'PlayTypeNullable.default',
+        'parameter_value': PlayTypeNullable.default,
+        'parameter_error_value': 0,
+    },
     'PointDiff': {
         'default_py_value': 'PointDiff.default',
         'parameter_value': PointDiff.default,
@@ -1093,6 +1104,16 @@ parameter_variations = {
         'default_py_value': "''",
         'parameter_value': '',
         'parameter_error_value': 'a',
+    },
+    'TypeGrouping': {
+        'default_py_value': 'TypeGrouping.default',
+        'parameter_value': TypeGrouping.default,
+        'parameter_error_value': 0,
+    },
+    'TypeGroupingNullable': {
+        'default_py_value': 'TypeGroupingNullable.default',
+        'parameter_value': TypeGroupingNullable.default,
+        'parameter_error_value': 0,
     },
     'WeightNullable': {
         'default_py_value': "''",
@@ -2571,6 +2592,14 @@ parameter_map = {
             None: 'PlayerTeamID'
         }
     },
+    'PlayType': {
+        'nullable': {
+            None: 'PlayTypeNullable',
+        },
+        'non-nullable': {
+
+        }
+    },
     'PlusMinus': {
         'nullable': {
 
@@ -2730,7 +2759,8 @@ parameter_map = {
         'non-nullable': {
             '^\\d{4}-\\d{2}$': 'Season',
             None: 'SeasonYear',
-            '^(\\d{4}-\\d{2})|(All Time)$': 'SeasonAll_Time'
+            '^(\\d{4}-\\d{2})|(All Time)$': 'SeasonAll_Time',
+            '^(\\d{4}-\\d{2})|(\\d{4})$': 'Season'
         }
     },
     'SeriesID': {
@@ -2859,6 +2889,14 @@ parameter_map = {
     'TouchTimeRange': {
         'nullable': {
             None: 'TouchTimeRangeNullable'
+        },
+        'non-nullable': {
+
+        }
+    },
+    'TypeGrouping': {
+        'nullable': {
+            None: 'TypeGroupingNullable',
         },
         'non-nullable': {
 

@@ -79,6 +79,7 @@ __all__ = [
     'scoreboardv2',
     'shotchartdetail',
     'shotchartlineupdetail',
+    'synergyplaytypes',
     'teamandplayersvsplayers',
     'teamdashlineups',
     'teamdashptpass',
@@ -188,6 +189,7 @@ from .scoreboard import Scoreboard
 from .scoreboardv2 import ScoreboardV2
 from .shotchartdetail import ShotChartDetail
 from .shotchartlineupdetail import ShotChartLineupDetail
+from .synergyplaytypes import SynergyPlayTypes
 from .teamandplayersvsplayers import TeamAndPlayersVsPlayers
 from .teamdashlineups import TeamDashLineups
 from .teamdashptpass import TeamDashPtPass

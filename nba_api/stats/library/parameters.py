@@ -506,6 +506,26 @@ class ActivePlayers(_YesNo):
     pass
 
 
+class PlayType:
+    transition = 'Transition'
+    isolation = 'Isolation'
+    pr_ball_handler = 'PRBallHandler'
+    pr_roll_man = 'PRRollman'
+    post_up = 'Postup'
+    spot_up = 'Spotup'
+    handoff = 'Handoff'
+    cut = 'Cut'
+    off_screen = 'OffScreen'
+    putbacks = 'OffRebound'
+    misc = 'Misc'
+
+    default = transition
+
+
+class PlayTypeNullable(_NotRequired, PlayType):
+    pass
+
+
 class PointDiff:
     def points(self, i):
         return str(int(i))
@@ -775,3 +795,14 @@ class StatType:
     tracking = 'Tracking'
 
     default = traditional
+
+
+class TypeGrouping:
+    offensive = 'offensive'
+    defensive = 'defensive'
+
+    default = offensive
+
+
+class TypeGroupingNullable(_NotRequired, TypeGrouping):
+    pass

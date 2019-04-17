@@ -52,7 +52,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 
 #### SeasonHighs `season_highs`
 ```text
-['PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'VS_TEAM_ID', 'VS_TEAM_CITY', 'VS_TEAM_NAME', 'VS_TEAM_ABBREVIATION', 'STAT', 'STAT_VALUE', 'STAT_ORDER', 'DATE_EST']
+['PLAYER_ID', 'GAME_DATE', 'VS_TEAM_ID', 'VS_TEAM_CITY', 'VS_TEAM_NAME', 'VS_TEAM_ABBREVIATION', 'STAT', 'STATS_VALUE', 'STAT_ORDER', 'DATE_EST']
 ```
 
 #### SeasonRankingsPostSeason `season_rankings_post_season`
@@ -254,14 +254,13 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ],
         "SeasonHighs": [
             "PLAYER_ID",
-            "GAME_ID",
             "GAME_DATE",
             "VS_TEAM_ID",
             "VS_TEAM_CITY",
             "VS_TEAM_NAME",
             "VS_TEAM_ABBREVIATION",
             "STAT",
-            "STAT_VALUE",
+            "STATS_VALUE",
             "STAT_ORDER",
             "DATE_EST"
         ],
@@ -470,7 +469,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "PlayerProfileV2",
-    "last_validated_date": "2019-04-07",
+    "last_validated_date": "2019-04-15",
     "nullable_parameters": [
         "LeagueID"
     ],
@@ -492,4 +491,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2019-04-07
+Last validated 2019-04-15
