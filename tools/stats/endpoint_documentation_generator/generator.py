@@ -48,7 +48,8 @@ def get_endpoint_documentation(endpoint, endpoints_information):
     for parameter in reversed(parameters):
         pattern = ''
         if parameter_patterns[parameter]:
-            pattern = f"`{parameter_patterns[parameter]}`".replace('|', r'\|')
+            pattern = "`{parameter_pattern}`".format(parameter_pattern=parameter_patterns[parameter]
+                                                     .replace('|', r'\|'))
         required = ''
         nullable = ''
         map_key = 'non-nullable'

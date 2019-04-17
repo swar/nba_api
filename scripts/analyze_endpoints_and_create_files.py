@@ -36,8 +36,9 @@ def create_new_analysis_json():
     new_analysis_json = endpoint_analysis.load_endpoint_file(file_path=file_path_new_analysis)
 
     if not existing_analysis_json or not new_analysis_json:
-        print(f"{file_path_existing_analysis}/analysis.json and/or {file_path_new_analysis}/analysis.json could "
-              f"not be loaded correctly")
+        print("{file_path_existing_analysis}/analysis.json and/or {file_path_new_analysis}/analysis.json could "
+              "not be loaded correctly".format(file_path_existing_analysis=file_path_existing_analysis,
+                                               file_path_new_analysis=file_path_new_analysis))
         return
 
     for endpoint, endpoint_data in new_analysis_json.items():
