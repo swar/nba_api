@@ -169,14 +169,21 @@ def required_parameters_test(endpoint):
     required_params_errors = {}
     for prop in required_parameters:
         if prop in parameter_map:
-            if len(parameter_map[prop]['non-nullable']):
-                map_key = 'non-nullable'
-            else:
-                map_key = 'nullable'
-            parameter_info_key = list(parameter_map[prop][map_key].values())[0]
-            parameter_info = parameter_variations[parameter_info_key]
-            required_params[prop] = parameter_info['parameter_value']
-            required_params_errors[prop] = parameter_info['parameter_error_value']
+            try:
+                if len(parameter_map[prop]['non-nullable']):
+                    map_key = 'non-nullable'
+                else:
+                    map_key = 'nullable'
+                parameter_info_key = list(parameter_map[prop][map_key].values())[0]
+                parameter_info = parameter_variations[parameter_info_key]
+                required_params[prop] = parameter_info['parameter_value']
+                required_params_errors[prop] = parameter_info['parameter_error_value']
+            except KeyError:
+                print('Property "{prop}" - required parameter; not found in parameter_variations'.format(prop=prop))
+                add_todo_item(endpoint, 'Add to parameter_variations', prop)
+                status = 'invalid'
+                required_params[prop] = '0'
+                required_params_errors[prop] = 'a'
         else:
             print('Property "{prop}" - required parameter; not found in parameter_map'.format(prop=prop))
             add_todo_item(endpoint, 'Add to parameter_map', prop, extras=True, extras_label='Required parameter')
@@ -242,14 +249,21 @@ def minimal_requirement_tests(endpoint, required_params, pause=1):
     all_params_errors = {}
     for prop in all_parameters:
         if prop in parameter_map:
-            if len(parameter_map[prop]['non-nullable']):
-                map_key = 'non-nullable'
-            else:
-                map_key = 'nullable'
-            parameter_info_key = list(parameter_map[prop][map_key].values())[0]
-            parameter_info = parameter_variations[parameter_info_key]
-            all_params[prop] = parameter_info['parameter_value']
-            all_params_errors[prop] = parameter_info['parameter_error_value']
+            try:
+                if len(parameter_map[prop]['non-nullable']):
+                    map_key = 'non-nullable'
+                else:
+                    map_key = 'nullable'
+                parameter_info_key = list(parameter_map[prop][map_key].values())[0]
+                parameter_info = parameter_variations[parameter_info_key]
+                all_params[prop] = parameter_info['parameter_value']
+                all_params_errors[prop] = parameter_info['parameter_error_value']
+            except KeyError:
+                print('Property "{prop}" - minimal test; not found in parameter_variations'.format(prop=prop))
+                add_todo_item(endpoint, 'Add to parameter_variations', prop)
+                status = 'invalid'
+                all_params[prop] = 'a'
+                all_params_errors[prop] = 'a'
         else:
             print('Property "{prop}" - minimal test; not found in parameter_map'.format(prop=prop))
             status = 'invalid'
