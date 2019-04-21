@@ -87,7 +87,8 @@ lebron_james = {
   'id': 2544,
   'full_name': 'LeBron James',
   'first_name': 'LeBron',
-  'last_name': 'James'
+  'last_name': 'James',
+  'is_active': True
 }
 ```
 
@@ -109,7 +110,7 @@ players.find_players_by_last_name('^(james|love)$')
 players.get_players()
 ```
 
-In addition, you can find players by ID by using `find_player_by_id()`.
+In addition, you can find players by ID by using `find_player_by_id()`. `get_active_players()` and `get_inactive_players()` will return a list of only active and only inactive players, respectively.
 
 
 ### Teams

@@ -14,6 +14,7 @@ player = {
     'full_name': full_name,
     'first_name': first_name,
     'last_name': last_name,
+    'is_active': True or False
 }
 ```
 This a protected function that will parse a player list row into a friendly `dictionary`.
@@ -34,6 +35,14 @@ Returns a list of players where last names match the provided `regex pattern`.
 
 Returns a player that matches the player id provided. Function will fail on any multiple matches. This means our player list has a duplicate or there's an error in the function. No matches will return a `null` value.
 
-## `get_players`(_`regex_pattern`_, _`row_id`_)
+## `get_players`()
 
 Returns a list of all players.
+
+## `get_active_players`()
+
+Returns a list of all active players.
+
+## `get_inactive_players`()
+
+Returns a list of all inactive players.

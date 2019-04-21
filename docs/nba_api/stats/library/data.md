@@ -19,6 +19,8 @@ This is a list of lists of player information.
 
 `player_index_full_name` = `3`
 
+`player_index_is_active` = `4`
+
 
 
 ### list `teams`
