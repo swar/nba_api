@@ -8,9 +8,6 @@ from tools.library.functions import get_python_variable_name
 from tools.stats.library.mapping import parameter_variations, parameter_map
 
 
-endpoint_file_creation_directory = 'endpoint_files'
-
-
 def get_endpoint_contents(endpoint, endpoint_analysis):
     arguments_list = []
     parameters_list = []
@@ -75,8 +72,7 @@ def get_endpoint_contents(endpoint, endpoint_analysis):
     return file_contents
 
 
-def generate_endpoint_file(endpoint, file_contents):
-    directory = endpoint_file_creation_directory
+def generate_endpoint_file(endpoint, file_contents, directory):
     if not os.path.exists(directory):
         os.makedirs(directory)
     file_name = '{endpoint_lowercase}.py'.format(endpoint_lowercase=endpoint.lower())
@@ -85,9 +81,10 @@ def generate_endpoint_file(endpoint, file_contents):
     f.close()
 
 
-def generate_endpoint_files(endpoints_information=load_endpoint_file()):
+def generate_endpoint_files(directory='endpoint_files'):
+    endpoints_information = load_endpoint_file()
     for endpoint, endpoint_analysis in endpoints_information.items():
         if endpoint_analysis['status'] != 'success':
             continue
         file_contents = get_endpoint_contents(endpoint=endpoint, endpoint_analysis=endpoint_analysis)
-        generate_endpoint_file(endpoint=endpoint, file_contents=file_contents)
+        generate_endpoint_file(endpoint=endpoint, file_contents=file_contents, directory=directory)
