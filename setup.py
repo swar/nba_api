@@ -15,7 +15,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/swar/nba_api",
-    packages=setuptools.find_packages(),
+    packages=setuptools.find_packages(exclude=["tools", "tools.*"]),
     classifiers=[
         "Intended Audience :: Developers",
         "Intended Audience :: Science/Research",
