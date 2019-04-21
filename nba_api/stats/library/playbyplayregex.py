@@ -12,6 +12,7 @@ pattern_rebound_team = r'^{team} Rebound$'.format(team=pattern_team)
 pattern_turnover_team = r'^{team} Turnover: (?P<turnover_type>\w+\s?\w+) \(T#(?P<turnovers>\d.)\)$'.format(team=pattern_team)
 pattern_timeout = r'^{team} Timeout: ((?P<timeout_type>\w+)) \(\w+ (?P<full>\d+) \w+ (?P<short>\d+)\)$'.format(team=pattern_team)
 pattern_block = r"^{player} BLOCK \((?P<blocks>\d+) BLK\)$".format(player=pattern_player)                    
+pattern_ejection = r'^{player} Ejection:(?P<ejection_type>.*)$'.format(player=pattern_player)
 pattern_field_goal_made = r"^{player}\s{{1,2}}?((?P<distance>\d+)\' )?{field_goal_type} {points}( \({player_ast} (?P<assists>\d+) AST\))?$".format(
     player=pattern_player,player_ast=pattern_player.replace('player','player_ast'), field_goal_type=pattern_field_goal_type,points=pattern_points)
 pattern_field_goal_missed = r"^MISS {player}\s{{1,2}}?((?P<distance>\d+)\' )?{field_goal_type}$".format(player=pattern_player,field_goal_type=pattern_field_goal_type)
@@ -30,6 +31,7 @@ pattern_violation = r"^{player} Violation:(?P<violation_type>\w+\s?\w+)\s\((?P<r
 
 # compiled regex for all playbyplay and playbyplayv2 HOMEDESCRIPTION & VISITORDESCRIPTION fields 
 re_block = re.compile(pattern_block)
+re_ejection = re.compile(pattern_ejection)
 re_field_goal_made = re.compile(pattern_field_goal_made)
 re_field_goal_missed = re.compile(pattern_field_goal_missed)
 re_free_throw_made = re.compile(pattern_free_throw_made)
