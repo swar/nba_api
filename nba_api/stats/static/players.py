@@ -1,6 +1,6 @@
 import re
 from nba_api.stats.library.data import players
-from nba_api.stats.library.data import player_index_id, player_index_full_name, player_index_first_name, player_index_last_name, player_is_active
+from nba_api.stats.library.data import player_index_id, player_index_full_name, player_index_first_name, player_index_last_name, player_index_is_active
 
 
 def _find_players(regex_pattern, row_id):
@@ -17,7 +17,7 @@ def _get_player_dict(player_row):
         'full_name': player_row[player_index_full_name],
         'first_name': player_row[player_index_first_name],
         'last_name': player_row[player_index_last_name],
-        'is_active': player_row[player_is_active]
+        'is_active': player_row[player_index_is_active]
     }
 
 
@@ -54,7 +54,7 @@ def get_players():
 def get_active_players():
     players_list = []
     for player in players:
-        if player[player_is_active]:
+        if player[player_index_is_active]:
             players_list.append(_get_player_dict(player))
     return players_list
 
@@ -62,6 +62,6 @@ def get_active_players():
 def get_inactive_players():
     players_list = []
     for player in players:
-        if not player[player_is_active]:
+        if not player[player_index_is_active]:
             players_list.append(_get_player_dict(player))
     return players_list

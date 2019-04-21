@@ -2,7 +2,7 @@ player_index_id = 0
 player_index_last_name = 1
 player_index_first_name = 2
 player_index_full_name = 3
-player_is_active = 4
+player_index_is_active = 4
 
 # Data last updated: Apr, 20 2019
 
