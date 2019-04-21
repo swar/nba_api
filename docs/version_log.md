@@ -1,3 +1,10 @@
+# `v1.1.3`
+#### `2019-04-21`
+`stats.nba.com`
+* Added PlayByPlay Regex for Ejections [#64](https://github.com/swar/nba_api/pull/64)
+* Adding Active Status to Static Player List [#66](https://github.com/swar/nba_api/pull/66)
+* Removing `tools` from the PyPi upload
+
 # `v1.1.2`
 #### `2019-04-15`
 `stats.nba.com`

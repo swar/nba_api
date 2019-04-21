@@ -6,7 +6,7 @@
 
 #### An API Client package to access the APIs for NBA.com
 
-##### Development Version: v1.1.2
+##### Development Version: v1.1.3
 
 `nba_api` is an API Client for `www.nba.com`. This package is meant to make the API Endpoints more accessible and to provide extensive documentation.
 
