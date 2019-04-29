@@ -1,3 +1,17 @@
+# `v1.1.4`
+#### `2019-04-28`
+`stats.nba.com`
+* Updates to PlayByPlay Regex [#70](https://github.com/swar/nba_api/pull/70)
+
+`Scripts`
+* Added Script for Static Player Updater
+
+`Tests`
+* Updates to PlayByPlay Tests with Yesterday's Games [#70](https://github.com/swar/nba_api/pull/70)
+
+`Tools`
+* Added Static Player Data Updater Tool [#67](https://github.com/swar/nba_api/pull/67) 
+
 # `v1.1.3`
 #### `2019-04-21`
 `stats.nba.com`

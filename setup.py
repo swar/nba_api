@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="nba_api",
-    version="1.1.3",
+    version="1.1.4",
     author="Swar Patel",
     author_email="swar.m.patel@gmail.com",
     description="An API Client package to access the APIs for NBA.com",
