@@ -11,7 +11,7 @@ flake8-steps: &steps
   - run: python -m flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
   #- run: pytest
   - run: pip install --user pytest
-  - run: python -m pytest  tests/stats/library/playbyplay/test_playbyplayregex.py
+  - run: python -m pytest  tests/stats/library/playbyplay/test_play_by_play_regex.py
   
 jobs:
   Python34:
