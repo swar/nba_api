@@ -1,5 +1,5 @@
 [![PyPI](https://img.shields.io/pypi/v/nba_api.svg?longCache=true&style=for-the-badge)](https://pypi.python.org/pypi/nba_api)
-[![CircleCI (all branches)](https://img.shields.io/circleci/project/github/swar/nba_api.svg?style=for-the-badge)](https://circleci.com/gh/swar/nba_api) 
+[![CircleCI (all branches)](https://img.shields.io/circleci/project/github/swar/nba_api.svg?style=for-the-badge)](https://circleci.com/gh/swar/nba_api)
 [![GitHub](https://img.shields.io/github/license/swar/nba_api.svg?style=for-the-badge)](https://pypi.python.org/pypi/nba_api)
 
 # nba_api
@@ -53,36 +53,43 @@ Required and Optional Packages:
 
 
 ## Contributing and Development
-### Development
-To get started developing, clone the repo and `cd` into it.
-Then, in an environment (conda or virtualenv) where you have not yet installed `nba_api`, run
-```bash
-python -m pip install -e .
-```
-This command will install the package for development, such that any changes you make in the repo will be reflected the next time you import the package in Python.
-
-### Testing
-If you make a change to the package, it's important to verify everything still works.
-Do so by first installing the package for development, with the `-e` flag (see *Development* above), and then running
-```bash
-pytest
-```
-on the command line from the base directory of the repo.
-The pytest utility will run through all the package tests and print output throughout, informing you of any failures.
 
 ### Contributing
 We're always looking for people to help!
+
 Some examples of ways to get involved are:
 - fix a bug
 - add a feature
 - create or improve documentation and examples
 
-Just fork this repo, make your changes (see [Development](#Development) above), and issue a pull request.
+Check out the [issues page](https://github.com/swar/nba_api/issues) to find examples of how to get involved. To get started, checkout the [Development](#Development) and [Testing](#Testing) sections below.
+
+### Development
+To get started developing, first make a fork of the repositiory. Then clone the forked repo and `cd` into it. Next, create a virtual environment (conda or virtualenv). Then run the commands below.
+
+```bash
+pip install requirements.txt
+python -m pip install -e .
+```
+
+These commands will install the required libaries for the package, and install the `nba_api` package for development. Any changes you make in the repo will be reflected the next time you import the package in Python.
+
+### Testing
+If you want to make a change to the package, it's important to first verify everything still works.
+To do so, simply run `nox` on the command line from the root directory of the repo. The Nox utility will setup a python environment to run the pytest utility. The pytest utility will run through all the package tests and print output throughout, informing you of any failures.
+
+```bash
+nox
+```
+__Notice: it's not uncommon to fail a few of the tests from `test_endpoint_responses_valid.py`__
+
+
+After you have made changes just run `nox` again to ensure everything still works. Once your changes are compelte [issue a pull request](#https://help.github.com/en/articles/creating-a-pull-request) to have your work added to the project.
 
 # Other
 
 ## Endpoint Analysis
-A major purpose of this package is to map and analyze as many endpoints on NBA.com as possible. The documentation and analysis on the Endpoints and Parameters found in this package is some of the most extensive information available on these largely undocumented Endpoints. Please open an issue with any additional Endpoints/APIs. 
+A major purpose of this package is to map and analyze as many endpoints on NBA.com as possible. The documentation and analysis on the Endpoints and Parameters found in this package is some of the most extensive information available on these largely undocumented Endpoints. Please open an issue with any additional Endpoints/APIs.
 
 ## Examples for Other Clients
 

@@ -118,3 +118,6 @@ nba_api/scripts/endpoint_files/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# Nox
+.nox
