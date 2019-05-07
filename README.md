@@ -84,7 +84,7 @@ nox
 __Notice: it's not uncommon to fail a few of the tests from `test_endpoint_responses_valid.py`__
 
 
-After you have made changes just run `nox` again to ensure everything still works. Once your changes are compelte [issue a pull request](#https://help.github.com/en/articles/creating-a-pull-request) to have your work added to the project.
+After you have made changes just run `nox` again to ensure everything still works. Once your changes are compelte [issue a pull request](https://help.github.com/en/articles/creating-a-pull-request) to have your work added to the project.
 
 # Other
 
