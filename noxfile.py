@@ -1,7 +1,7 @@
 import nox
 
 
-# @nox.session(python="3.6")
+@nox.session(python="3.6")
 def test(session):
     # Install requirements
     session.install("-r", "requirements.txt")
