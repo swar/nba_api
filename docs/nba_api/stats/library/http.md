@@ -1,7 +1,7 @@
 # http.py
->/nba_api/library/http.py
+>/nba_api/stats/library/http.py
 
-The purpose of this module is to connect to the NBA website as well as store the response in a `NBAResponse` class.
+The purpose of this module is to connect to the NBA website as well as store the response in a `NBAStatsResponse` class.
 
 This should be considered as a base file to build on-top of an NBA API location.
 
