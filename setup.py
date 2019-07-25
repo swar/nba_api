@@ -9,7 +9,7 @@ setuptools.setup(
     author="Swar Patel",
     author_email="swar.m.patel@gmail.com",
     description="An API Client package to access the APIs for NBA.com",
-    install_requires=["requests"],
+    install_requires=["requests", "Click"],
     keywords='nba api sports data basketball stats',
     license="MIT",
     long_description=long_description,
@@ -23,4 +23,7 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
+    entry_points={
+        'console_scripts': ['nba-cli=nba_api.nba_cli.nba_cli:cli']
+    },
 )
