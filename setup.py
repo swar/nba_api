@@ -24,6 +24,9 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     entry_points={
-        'console_scripts': ['nba-cli=nba_api.nba_cli.nba_cli:cli']
+        'console_scripts': [
+            'nba-players=nba_api.nba_cli.nba_cli:get_players',
+            'nba-teams=nba_api.nba_cli.nba_cli:get_teams'
+        ]
     },
 )
