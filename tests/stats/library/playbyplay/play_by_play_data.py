@@ -16,17 +16,17 @@ playbyplay["FieldGoalMade"].append({"description" : "S. Hill 24' 3PT Jump Shot (
 #Field Goal Made (Without Assist)
 playbyplay["FieldGoalMade"].append({"description" : "Aldridge 6' Turnaround Hook Shot (8 PTS)", "player" : "Aldridge", "distance" : "6", "field_goal_type" : "Turnaround Hook Shot", "points" : "8", "player_ast" : None, "assists" : None})
 
-#Field Goal Made (Without Distance)
-playbyplay["FieldGoalMade"].append({"description" : "Broekhoff 3PT Jump Shot (3 PTS) (Lee 2 AST)", "player" : "Broekhoff", "distance" : None, "field_goal_type" : "3PT Jump Shot", "points" : "3", "player_ast" : "Lee", "assists" : "2"})
+#Field Goal Made (Without Distance & With Double Space)
+playbyplay["FieldGoalMade"].append({"description" : "Broekhoff  3PT Jump Shot (3 PTS) (Lee 2 AST)", "player" : "Broekhoff", "distance" : None, "field_goal_type" : "3PT Jump Shot", "points" : "3", "player_ast" : "Lee", "assists" : "2"})
 
 #Field Goal Missed
 playbyplay["FieldGoalMissed"].append({"description" : "MISS O'Quinn 17' Jump Shot", "player" : "O'Quinn", "distance" : "17", "field_goal_type" : "Jump Shot"})
 
+#Field Goal Missed (Without Disstance & With Double Space)
+playbyplay["FieldGoalMissed"].append({"description" : "MISS O'Quinn  3PT Jump Shot", "player" : "O'Quinn", "distance" : None, "field_goal_type" : "3PT Jump Shot"})
+
 #Foul Player
 playbyplay["FoulPlayer"].append({"description" : "Collison P.FOUL (P1.TN) (M.Lindsay)", "player" : "Collison", "foul_type" : "P.FOUL", "personal" : "1", "team" : "N", "referee" : "M.Lindsay"})
-
-#Foul Player (Long Referee Name)
-playbyplay["FoulPlayer"].append({"description" : "Allen P.FOUL (P1.T3) (J.Van Duyne)", "player" : "Allen", "foul_type" : "P.FOUL", "personal" : "1", "team" : "3", "referee" : "J.Van Duyne"})
 
 #Foul Team
 playbyplay["FoulTeam"].append({"description" : "BUCKS T.Foul (Def. 3 Sec Lopez ) (M.Callahan)", "team" : "BUCKS", "foul_type" : "Def. 3 Sec", "player" : "Lopez", "referee" : "M.Callahan"})
@@ -44,31 +44,7 @@ playbyplay["FreeThrowMissed"].append({"description" : "MISS Prince Free Throw 1 
 playbyplay["JumpBall"].append({"description" : "Jump Ball Collins vs. O'Quinn: Tip to Leaf", "player_home" : "Collins", "player_away" : "O'Quinn", "player_tip" : "Leaf"})
 
 #Jump Ball (Without player_tip)
-playbyplay["JumpBall"].append({"description" : "Jump Ball Green vs. McKinnie: Tip to", "player_home" : "Green", "player_away" : "McKinnie", "player_tip" : None})
-
-#Player (Single Name)
-playbyplay["Player"].append({"description" : "Millsap 25' 3PT Jump Shot (9 PTS) (Teague 1 AST)", "player" : "Millsap"})   
-
-#Player (Hyphenated Name)
-playbyplay["Player"].append({"description" : "Bates-Diop P.FOUL (P1.T4) (M.Boland)", "player" : "Bates-Diop"})   
-
-#Player (Apostrophe)
-playbyplay["Player"].append({"description" : "O'Quinn 20' Jump Shot (2 PTS) (Oladipo 1 AST)", "player" : "O'Quinn"})   
-
-#Player (First Initial dot Last Name)
-playbyplay["Player"].append({"description" : "S. Hill 24' 3PT Jump Shot (3 PTS) (Mahinmi 1 AST)", "player" : "S. Hill"})   
-
-#Player (Junior)
-playbyplay["Player"].append({"description" : "Porter Jr. 10' Driving Floating Jump Shot (2 PTS)", "player" : "Porter Jr."})   
-
-#Player (Second)
-playbyplay["Player"].append({"description" : "Payton II 2' Driving Reverse Layup (2 PTS) (Middleton 6 AST)", "player" : "Payton II"})   
-
-#Player (Third)
-playbyplay["Player"].append({"description" : "Robinson III Free Throw 1 of 1 (3 PTS)", "player" : "Robinson III"})   
-
-#Player (Fourth)
-playbyplay["Player"].append({"description" : "Walker IV REBOUND (Off:0 Def:1)", "player" : "Walker IV"})  
+playbyplay["JumpBall"].append({"description" : "Jump Ball Green vs. McKinnie: Tip to", "player_home" : "Green", "player_away" : "McKinnie", "player_tip" : None})  
 
 #Rebound Player
 playbyplay["ReboundPlayer"].append({"description" : "Zubac REBOUND (Off:2 Def:4)", "player" : "Zubac", "offensive" : "2", "defensive" : "4"})
