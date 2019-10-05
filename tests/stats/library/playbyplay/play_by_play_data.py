@@ -88,6 +88,9 @@ playbyplay["Substitution"].append({"description" : "SUB: Sefolosha FOR Ingles", 
 #Timeout
 playbyplay["Timeout"].append({"description" : "TRAIL BLAZERS Timeout: Regular (Full 5 Short 0)", "team" : "TRAIL BLAZERS", "timeout_type" : "Regular", "full" : "5", "short" : "0"})
 
+#Timeout
+playbyplay["Timeout"].append({"description" : "Magic Timeout: Regular (Reg.4 Short 0)", "team" : "Magic", "timeout_type" : "Regular", "full" : "4", "short" : "0"})
+
 #Turnover Player
 playbyplay["TurnoverPlayer"].append({"description" : "G. Harrison Double Dribble Turnover (P1.T10)", "player" : "G. Harrison", "turnover_type" : "Double Dribble", "personal" : "1", "team" : "10"})
 

@@ -13,7 +13,7 @@ pattern_player = r"(?P<player>\w+{player_char}{player_suffix})".format(player_ch
 pattern_points = r"\((?P<points>\d+) PTS\)"
 pattern_rebound_team = r'^{team} Rebound$'.format(team=pattern_team)
 pattern_turnover_team = r'^{team} Turnover: (?P<turnover_type>.*) \(T#(?P<turnovers>\d+)\)$'.format(team=pattern_team)
-pattern_timeout = r'^{team} Timeout: ((?P<timeout_type>\w+)) \(\w+ (?P<full>\d+) \w+ (?P<short>\d+)\)$'.format(team=pattern_team)
+pattern_timeout = r'^{team} Timeout: ((?P<timeout_type>\w+)) \(\w+( |\.)(?P<full>\d+) \w+ (?P<short>\d+)\)$'.format(team=pattern_team)
 pattern_block = r"^{player} BLOCK \((?P<blocks>\d+) BLK\)$".format(player=pattern_player)                    
 pattern_ejection = r'^{player} Ejection:(?P<ejection_type>.*)$'.format(player=pattern_player)
 pattern_field_goal_made = r"^{player}\s{{1,2}}?((?P<distance>\d+)\' )?{field_goal_type} {points}( \({player_ast} (?P<assists>\d+) AST\))?$".format(
