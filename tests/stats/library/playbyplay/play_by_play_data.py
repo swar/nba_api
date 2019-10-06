@@ -67,8 +67,32 @@ playbyplay["Timeout"].append({"description" : "TRAIL BLAZERS Timeout: Regular (F
 #Timeout
 playbyplay["Timeout"].append({"description" : "Magic Timeout: Regular (Reg.4 Short 0)", "team" : "Magic", "timeout_type" : "Regular", "full" : "4", "short" : "0"})
 
-#Turnover Player
-playbyplay["TurnoverPlayer"].append({"description" : "G. Harrison Double Dribble Turnover (P1.T10)", "player" : "G. Harrison", "turnover_type" : "Double Dribble", "personal" : "1", "team" : "10"})
+#Turnover Player (Single Name)
+playbyplay["TurnoverPlayer"].append({"description" : "Harrison Double Dribble Turnover (P1.T10)", "player" : "Harrison", "turnover_type" : "Double Dribble", "personal" : "1", "team" : "10"})
+
+#Turnover Player (Mark Morris)
+playbyplay["TurnoverPlayer"].append({"description" : "Mark Morris Discontinue Dribble Turnover (P1.T11)", "player" : "Mark Morris", "turnover_type" : "Discontinue Dribble", "personal" : "1", "team" : "11"})
+
+#Turnover Player (Hyphenated Name)
+playbyplay["TurnoverPlayer"].append({"description" : "Bates-Diop 3 Second Violation Turnover (P1.T14)", "player" : "Bates-Diop", "turnover_type" : "3 Second Violation", "personal" : "1", "team" : "14"})
+
+#Turnover Player (Apostrophe)
+playbyplay["TurnoverPlayer"].append({"description" : "O'Quinn Inbound Turnover (P2.T6)", "player" : "O'Quinn", "turnover_type" : "Inbound", "personal" : "2", "team" : "6"})
+
+#Turnover Player (First Initial dot Last Name)
+playbyplay["TurnoverPlayer"].append({"description" : "S. Hill Backcourt Turnover (P1.T3)", "player" : "S. Hill", "turnover_type" : "Backcourt", "personal" : "1", "team" : "3"})
+
+#Turnover Player (Junior)
+playbyplay["TurnoverPlayer"].append({"description" : "Porter Jr. Offensive Goaltending Turnover (P1.T16)", "player" : "Porter Jr.", "turnover_type" : "Offensive Goaltending", "personal" : "1", "team" : "16"})
+
+#Turnover Player (Second)
+playbyplay["TurnoverPlayer"].append({"description" : "Payton II Lane Violation Turnover (P1.T6)", "player" : "Payton II", "turnover_type" : "Lane Violation", "personal" : "1", "team" : "6"})
+
+#Turnover Player (Third)
+playbyplay["TurnoverPlayer"].append({"description" : "Robinson III Kicked Ball Violation Turnover (P1.T2)", "player" : "Robinson III", "turnover_type" : "Kicked Ball Violation", "personal" : "1", "team" : "2"})
+
+#Turnover Player (Fourth)
+playbyplay["TurnoverPlayer"].append({"description" : "Walker IV Out of Bounds - Bad Pass Turnover Turnover (P2.T5)", "player" : "Walker IV", "turnover_type" : "Out of Bounds - Bad Pass Turnover", "personal" : "2", "team" : "5"})
 
 #Turnover Team (less than 10)
 playbyplay["TurnoverTeam"].append({"description" : "NUGGETS Turnover: Shot Clock (T#12)", "team" : "NUGGETS", "turnover_type" : "Shot Clock", "turnovers" : "12"})

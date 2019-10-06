@@ -215,18 +215,6 @@ def test_jump_ball(play):
     #Player Name
     player = search_result.group('player_tip')
     assert player == play['player_tip']
-
-#PLAYER NAME
-@pytest.mark.parametrize('play', playbyplay['Player'])
-def test_player(play):
-                
-    re_player = re.compile('^{player}'.format(player=pattern_player))
-    #Get Capture Groups
-    search_result = re_player.search(play['description'])
-
-    #Player Name
-    player = search_result.group('player')
-    assert player == play['player']
     
 #REBOUND PLAYER
 @pytest.mark.parametrize('play', playbyplay['ReboundPlayer'])
