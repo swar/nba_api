@@ -29,7 +29,7 @@ pattern_rebound_player = r"^(?P<player>.+) REBOUND \(Off:(?P<offensive>\d+) Def:
 pattern_steal = r"^(?P<player>.+) STEAL \((?P<steals>\d+) STL\)$"
 pattern_substitution = r"^SUB: (?P<player_in>.+) FOR (?P<player_out>.+)$"
 pattern_turnover_player = r"^{player} (?P<turnover_type>[\w+?\-? ]*) (Turnover[ ]?)+ \(P(?P<personal>\d+)\.T(?P<team>\d+)\)$".format(player=pattern_player)
-pattern_violation = r"^(?P<player>.+) Violation:(?P<violation_type>\w+\s?\w+)\s\((?P<referee>.*)\)$"
+pattern_violation = r"^(?P<player>.+) Violation:(?P<violation_type>\w+\s?\w+)(\s\((?P<referee>.*)\))?$"
 
 # compiled regex for all playbyplay and playbyplayv2 HOMEDESCRIPTION & VISITORDESCRIPTION fields 
 re_block = re.compile(pattern_block)
