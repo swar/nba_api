@@ -111,6 +111,7 @@ nba_api/nba_api/library/debug/
 nba_api/scripts/endpoint_analysis/
 nba_api/scripts/endpoint_documentation/
 nba_api/scripts/endpoint_files/
+nba_api/library/debug/
 
 # Visual Studio Code
 .vscode/*
