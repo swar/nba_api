@@ -491,6 +491,11 @@ parameter_variations = {
         'parameter_value': MeasureTypeDetailedDefense.default,
         'parameter_error_value': 0,
     },
+    'MeasureTypePlayerGameLogsNullable': {
+        'default_py_value': None,
+        'parameter_value': '',
+        'parameter_error_value': 0,
+    },
     'NumberOfGames': {
         'default_py_value': 'NumberOfGames.default',
         'parameter_value': NumberOfGames.default,
@@ -803,6 +808,11 @@ parameter_variations = {
     },
     'TodaysOpponent': {
         'default_py_value': 0,
+        'parameter_value': '0',
+        'parameter_error_value': 'a',
+    },
+    'OppTeamIDNullable': {
+        'default_py_value': None,
         'parameter_value': '0',
         'parameter_error_value': 'a',
     },
@@ -2360,7 +2370,9 @@ parameter_map = {
             '^(00)|(10)|(20)$': 'LeagueID',
             '(00)|(20)|(10)': 'LeagueID',
             '^(00)|(20)$': 'LeagueID',
-            '^((00)|(20))?$': 'LeagueID'
+            '^((00)|(20))?$': 'LeagueID',
+            '^(00)|(20)|(10)$': 'LeagueID',
+            None: 'LeagueID'
         }
     },
     'Location': {
@@ -2374,7 +2386,7 @@ parameter_map = {
     },
     'MeasureType': {
         'nullable': {
-
+            None: 'MeasureTypePlayerGameLogsNullable',
         },
         'non-nullable': {
             '^(Base)$': 'MeasureTypeBase',
@@ -2397,6 +2409,13 @@ parameter_map = {
         },
         'non-nullable': {
             None: 'NumberOfGames'
+        }
+    },
+    'OppTeamID': {
+        'nullable': {
+            None: 'OppTeamIDNullable'
+        },
+        'non-nullable': {
         }
     },
     'OpponentTeamID': {
