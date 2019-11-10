@@ -30,6 +30,7 @@ def test_endpoints_run(deferred_endpoint):
     # them later.
     cached_eps.append(response)
 
+
 def test_valid_json():
     # Check that every called endpoint is valid json.
     valid = [ep.nba_response.valid_json() for ep in cached_eps]
