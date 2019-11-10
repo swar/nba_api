@@ -1,3 +1,13 @@
+# `v1.1.5`
+#### `2019-11-09`
+`stats.nba.com`
+* Bug fix to PlayByPlay Regex [#89](https://github.com/swar/nba_api/pull/89)
+* Updates to Static Players Data with 2019 Draft [#91](https://github.com/swar/nba_api/issues/91)
+* Updating Headers to Include Referer [#94](https://github.com/swar/nba_api/issues/94)
+* Adding endpoint [#79](https://github.com/swar/nba_api/issues/79)
+  * PlayerGameLogs
+
+
 # `v1.1.4`
 #### `2019-04-28`
 `stats.nba.com`
@@ -12,6 +22,7 @@
 `Tools`
 * Added Static Player Data Updater Tool [#67](https://github.com/swar/nba_api/pull/67) 
 
+
 # `v1.1.3`
 #### `2019-04-21`
 `stats.nba.com`
@@ -19,12 +30,14 @@
 * Adding Active Status to Static Player List [#66](https://github.com/swar/nba_api/pull/66)
 * Removing `tools` from the PyPi upload
 
+
 # `v1.1.2`
 #### `2019-04-15`
 `stats.nba.com`
 * Updating PlayByPlay Regex. [#59](https://github.com/swar/nba_api/pull/59)
-* Adding endpoints [#60](https://github.com/swar/nba_api/pull/60)
+* Adding endpoint [#60](https://github.com/swar/nba_api/pull/60)
   * SynergyPlayTypes
+
 
 # `v1.1.1`
 #### `2019-04-07`
@@ -49,6 +62,7 @@
 `Tools`
 * Updating analysis for site updates
 
+
 # `v1.0.7`
 #### 2018-12-11
 `stats.nba.com`
@@ -61,9 +75,11 @@
 `Endpoint Documentation Generator`
 * Updating Endpoint docs with Python variables for [#19](https://github.com/swar/nba_api/issues/19).
 
+
 # `v1.0.6`
 #### 2018-10-11
 * Accidentally distributed with DEBUG Mode enabled in `v1.0.5`.
+
 
 # `v1.0.5`
 #### 2018-10-10
@@ -79,24 +95,29 @@
   * `StartPeriod` from `1` -> `0`
   * `EndPeriod` from `1` -> `0`
 
+
 # `v1.0.4`
 #### 2018-09-25
 * Updating description on PyPi 
+
 
 # `v1.0.3`
 #### 2018-09-25
 `stats.nba.com`
 * Fixed a bug in `find_team_name_by_id()` in static/teams. 
 
+
 # `v1.0.2`
 #### 2018-09-17
 `stats.nba.com`
 * Added `__all__` to the following file: `nba_api/nba_api/stats/static/__init__.py`
 
+
 # `v1.0.1`
 #### 2018-09-17
 `stats.nba.com`
 * Added `__init__.py` to the following directory: `nba_api/nba_api/stats/static`
+
 
 # `v1.0.0`
 #### 2018-09-16
