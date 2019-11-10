@@ -218,7 +218,7 @@ def minimal_requirement_tests(endpoint, required_params, pause=1):
     if nba_stats_response.get_parameters():
         response_parameters = nba_stats_response.get_parameters()
         for parameter, value in response_parameters.items():
-            if value is None or value is "":
+            if value is None or value == "":
                 nullable_parameters.append(parameter)
 
         for parameter in all_parameters:
@@ -254,7 +254,7 @@ def nullable_parameters_test(endpoint, all_parameters):
     if nba_stats_response.get_parameters():
         response_parameters = nba_stats_response.get_parameters()
         for parameter, value in response_parameters.items():
-            if value is None or value is "":
+            if value is None or value == "":
                 nullable_parameters.append(parameter)
 
         for parameter in all_parameters:
