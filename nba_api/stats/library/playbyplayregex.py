@@ -3,35 +3,33 @@ from collections import defaultdict
 from nba_api.stats.library.eventmsgtype import EventMsgType
 
 # regex patterns for all playbyplay and playbyplayv2 HOMEDESCRIPTION & VISITORDESCRIPTION fields 
+# note: regarding pattern_player_name_anomaly & "Mark Morris"
+#   The majority of player names in the NBA traditionally follow patterns involving last name only with some prefix or suffix. 
+#   In the context of a turnover, there is no solution for dealing with multiple names in conjunction with the turnover type
+#   Example: "Mark Morris Lane Violation Turnover (P1.T6)" could be parsed many ways. While human readable, it's not regex friendly.
+#   There are likely to be others. If you find one, please open an Issue or create a PR. The regex allows for multiple using the `(name name)|` format.
+pattern_player_name_anomaly = r'(Mark Morris)|'
 pattern_player_char = r'((?#char)(\. \w+)|(\-?\'?\w+))?'
 pattern_player_suffix = r'((?#suffix)([\s](Jr\.|III|II|IV)))?'
-pattern_referee = r'(?P<referee>.*)'
-pattern_team = r'(?P<team>\w+( \w+)?)'
-pattern_field_goal_type = r'(?P<field_goal_type>[\w+( |\-)]*)'
-pattern_free_throw_type = r'(?P<free_throw_type>(.* )?(\d of \d)|\w+)'
-pattern_player = r"(?P<player>\w+{player_char}{player_suffix})".format(player_char=pattern_player_char,player_suffix=pattern_player_suffix)
-pattern_points = r"\((?P<points>\d+) PTS\)"
-pattern_rebound_team = r'^{team} Rebound$'.format(team=pattern_team)
-pattern_turnover_team = r'^{team} Turnover: (?P<turnover_type>.*) \(T#(?P<turnovers>\d+)\)$'.format(team=pattern_team)
-pattern_timeout = r'^{team} Timeout: ((?P<timeout_type>\w+)) \(\w+ (?P<full>\d+) \w+ (?P<short>\d+)\)$'.format(team=pattern_team)
-pattern_block = r"^{player} BLOCK \((?P<blocks>\d+) BLK\)$".format(player=pattern_player)                    
-pattern_ejection = r'^{player} Ejection:(?P<ejection_type>.*)$'.format(player=pattern_player)
-pattern_field_goal_made = r"^{player}\s{{1,2}}?((?P<distance>\d+)\' )?{field_goal_type} {points}( \({player_ast} (?P<assists>\d+) AST\))?$".format(
-    player=pattern_player,player_ast=pattern_player.replace('player','player_ast'), field_goal_type=pattern_field_goal_type,points=pattern_points)
-pattern_field_goal_missed = r"^MISS {player}\s{{1,2}}?((?P<distance>\d+)\' )?{field_goal_type}$".format(player=pattern_player,field_goal_type=pattern_field_goal_type)
-pattern_foul_player = r"^{player} (?P<foul_type>.*)\s(?=(\(\w+(?P<personal>\d+)(\.\w+(?P<team>[\d|\w]+))?\) (\({referee}\)))$)".format(player=pattern_player, referee=pattern_referee)
-pattern_foul_team = r"^{team} T.Foul \((?P<foul_type>.*) {player} \) (\({referee}\))".format(player=pattern_player, team=pattern_team, referee=pattern_referee)
-pattern_free_throw_made = r"^{player} Free Throw {free_throw_type} {points}$".format(player=pattern_player,free_throw_type=pattern_free_throw_type,points=pattern_points)
-pattern_free_throw_miss = r"^MISS {player} Free Throw {free_throw_type}$".format(player=pattern_player,free_throw_type=pattern_free_throw_type)
-pattern_jump_ball = r"^Jump Ball {player_home} vs. {player_away}: Tip to( {player_tip})?$".format(player_home=pattern_player.replace('player','player_home'),
-    player_away=pattern_player.replace('player','player_away'),
-    player_tip=pattern_player.replace('player','player_tip'))
-pattern_rebound_player = r"^{player} REBOUND \(Off:(?P<offensive>\d+) Def:(?P<defensive>\d+)\)$".format(player=pattern_player)
-pattern_steal = r"^{player}\s{{1,2}}?STEAL \((?P<steals>\d+) STL\)$".format(player=pattern_player)
-pattern_substitution = r"^SUB: {player_in} FOR {player_out}$".format(
-    player_in=pattern_player.replace('player','player_in'),player_out=pattern_player.replace('player','player_out'))
-pattern_turnover_player = r"^{player}\s{{1,2}}?(?P<turnover_type>[\w+?\-? ]*) (Turnover[ ]?)+ \(P(?P<personal>\d+)\.T(?P<team>\d+)\)$".format(player=pattern_player)
-pattern_violation = r"^{player} Violation:(?P<violation_type>\w+\s?\w+)\s\({referee}\)$".format(player=pattern_player, referee=pattern_referee)
+pattern_player = r"(?P<player>{player_name_anomaly}(\w+{player_char}{player_suffix}))".format(player_name_anomaly=pattern_player_name_anomaly,
+    player_char=pattern_player_char,player_suffix=pattern_player_suffix)
+pattern_rebound_team = r'^(?P<team>\w+( \w+)?) Rebound$'
+pattern_turnover_team = r'^(?P<team>\w+( \w+)?) Turnover: (?P<turnover_type>.*) \(T#(?P<turnovers>\d+)\)$'
+pattern_timeout = r'^(?P<team>\w+( \w+)?) Timeout: ((?P<timeout_type>\w+)) \(\w+( |\.)(?P<full>\d+) \w+ (?P<short>\d+)\)$'
+pattern_block = r"^(?P<player>.+) BLOCK \((?P<blocks>\d+) BLK\)$"                    
+pattern_ejection = r'^(?P<player>.+) Ejection:(?P<ejection_type>.*)$'
+pattern_field_goal_made = r"^(?P<player>.+) (((?P<distance>\d+)\' )| )(?P<field_goal_type>[\w+( |\-)]*) \((?P<points>\d+) PTS\)( \((?P<player_ast>\D+) (?P<assists>\d+) AST\))?$"
+pattern_field_goal_missed = r"^MISS (?P<player>.+) (((?P<distance>\d+)\' )| )(?P<field_goal_type>[\w+( |\-)]*)$"
+pattern_foul_player = r"^(?P<player>.+) (?P<foul_type>.*)\s(?=(\(\w+(?P<personal>\d+)(\.\w+(?P<team>[\d|\w]+))?\)( \((?P<referee>.*)\))?)$)"
+pattern_foul_team = r"^(?P<team>\w+( \w+)?) T.Foul \((?P<foul_type>.*) (?P<player>.+) \) (\((?P<referee>.*)\))"
+pattern_free_throw_made = r"^(?P<player>.+) Free Throw (?P<free_throw_type>(.* )?(\d of \d)|\w+) \((?P<points>\d+) PTS\)$"
+pattern_free_throw_miss = r"^MISS (?P<player>.+) Free Throw (?P<free_throw_type>(.* )?(\d of \d)|\w+)$"
+pattern_jump_ball = r"^Jump Ball (?P<player_home>.+) vs. (?P<player_away>.+): Tip to( (?P<player_tip>.+))?$"
+pattern_rebound_player = r"^(?P<player>.+) REBOUND \(Off:(?P<offensive>\d+) Def:(?P<defensive>\d+)\)$"
+pattern_steal = r"^(?P<player>.+) STEAL \((?P<steals>\d+) STL\)$"
+pattern_substitution = r"^SUB: (?P<player_in>.+) FOR (?P<player_out>.+)$"
+pattern_turnover_player = r"^{player} (?P<turnover_type>[\w+?\-? ]*) (Turnover[ ]?)+ \(P(?P<personal>\d+)\.T(?P<team>\d+)\)$".format(player=pattern_player)
+pattern_violation = r"^(?P<player>.+) Violation:(?P<violation_type>\w+\s?\w+)(\s\((?P<referee>.*)\))?$"
 
 # compiled regex for all playbyplay and playbyplayv2 HOMEDESCRIPTION & VISITORDESCRIPTION fields 
 re_block = re.compile(pattern_block)

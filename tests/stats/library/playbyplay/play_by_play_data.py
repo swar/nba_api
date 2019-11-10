@@ -16,17 +16,20 @@ playbyplay["FieldGoalMade"].append({"description" : "S. Hill 24' 3PT Jump Shot (
 #Field Goal Made (Without Assist)
 playbyplay["FieldGoalMade"].append({"description" : "Aldridge 6' Turnaround Hook Shot (8 PTS)", "player" : "Aldridge", "distance" : "6", "field_goal_type" : "Turnaround Hook Shot", "points" : "8", "player_ast" : None, "assists" : None})
 
-#Field Goal Made (Without Distance)
-playbyplay["FieldGoalMade"].append({"description" : "Broekhoff 3PT Jump Shot (3 PTS) (Lee 2 AST)", "player" : "Broekhoff", "distance" : None, "field_goal_type" : "3PT Jump Shot", "points" : "3", "player_ast" : "Lee", "assists" : "2"})
+#Field Goal Made (Without Distance & With Double Space)
+playbyplay["FieldGoalMade"].append({"description" : "Broekhoff  3PT Jump Shot (3 PTS) (Lee 2 AST)", "player" : "Broekhoff", "distance" : None, "field_goal_type" : "3PT Jump Shot", "points" : "3", "player_ast" : "Lee", "assists" : "2"})
 
 #Field Goal Missed
 playbyplay["FieldGoalMissed"].append({"description" : "MISS O'Quinn 17' Jump Shot", "player" : "O'Quinn", "distance" : "17", "field_goal_type" : "Jump Shot"})
 
+#Field Goal Missed (Without Disstance & With Double Space)
+playbyplay["FieldGoalMissed"].append({"description" : "MISS O'Quinn  3PT Jump Shot", "player" : "O'Quinn", "distance" : None, "field_goal_type" : "3PT Jump Shot"})
+
 #Foul Player
 playbyplay["FoulPlayer"].append({"description" : "Collison P.FOUL (P1.TN) (M.Lindsay)", "player" : "Collison", "foul_type" : "P.FOUL", "personal" : "1", "team" : "N", "referee" : "M.Lindsay"})
 
-#Foul Player (Long Referee Name)
-playbyplay["FoulPlayer"].append({"description" : "Allen P.FOUL (P1.T3) (J.Van Duyne)", "player" : "Allen", "foul_type" : "P.FOUL", "personal" : "1", "team" : "3", "referee" : "J.Van Duyne"})
+#Foul Player (Without Referee)
+playbyplay["FoulPlayer"].append({"description" : "Jamison P.FOUL (P4.PN)", "player" : "Jamison", "foul_type" : "P.FOUL", "personal" : "4", "team" : "N", "referee" : None})
 
 #Foul Team
 playbyplay["FoulTeam"].append({"description" : "BUCKS T.Foul (Def. 3 Sec Lopez ) (M.Callahan)", "team" : "BUCKS", "foul_type" : "Def. 3 Sec", "player" : "Lopez", "referee" : "M.Callahan"})
@@ -44,31 +47,7 @@ playbyplay["FreeThrowMissed"].append({"description" : "MISS Prince Free Throw 1 
 playbyplay["JumpBall"].append({"description" : "Jump Ball Collins vs. O'Quinn: Tip to Leaf", "player_home" : "Collins", "player_away" : "O'Quinn", "player_tip" : "Leaf"})
 
 #Jump Ball (Without player_tip)
-playbyplay["JumpBall"].append({"description" : "Jump Ball Green vs. McKinnie: Tip to", "player_home" : "Green", "player_away" : "McKinnie", "player_tip" : None})
-
-#Player (Single Name)
-playbyplay["Player"].append({"description" : "Millsap 25' 3PT Jump Shot (9 PTS) (Teague 1 AST)", "player" : "Millsap"})   
-
-#Player (Hyphenated Name)
-playbyplay["Player"].append({"description" : "Bates-Diop P.FOUL (P1.T4) (M.Boland)", "player" : "Bates-Diop"})   
-
-#Player (Apostrophe)
-playbyplay["Player"].append({"description" : "O'Quinn 20' Jump Shot (2 PTS) (Oladipo 1 AST)", "player" : "O'Quinn"})   
-
-#Player (First Initial dot Last Name)
-playbyplay["Player"].append({"description" : "S. Hill 24' 3PT Jump Shot (3 PTS) (Mahinmi 1 AST)", "player" : "S. Hill"})   
-
-#Player (Junior)
-playbyplay["Player"].append({"description" : "Porter Jr. 10' Driving Floating Jump Shot (2 PTS)", "player" : "Porter Jr."})   
-
-#Player (Second)
-playbyplay["Player"].append({"description" : "Payton II 2' Driving Reverse Layup (2 PTS) (Middleton 6 AST)", "player" : "Payton II"})   
-
-#Player (Third)
-playbyplay["Player"].append({"description" : "Robinson III Free Throw 1 of 1 (3 PTS)", "player" : "Robinson III"})   
-
-#Player (Fourth)
-playbyplay["Player"].append({"description" : "Walker IV REBOUND (Off:0 Def:1)", "player" : "Walker IV"})  
+playbyplay["JumpBall"].append({"description" : "Jump Ball Green vs. McKinnie: Tip to", "player_home" : "Green", "player_away" : "McKinnie", "player_tip" : None})  
 
 #Rebound Player
 playbyplay["ReboundPlayer"].append({"description" : "Zubac REBOUND (Off:2 Def:4)", "player" : "Zubac", "offensive" : "2", "defensive" : "4"})
@@ -88,8 +67,35 @@ playbyplay["Substitution"].append({"description" : "SUB: Sefolosha FOR Ingles", 
 #Timeout
 playbyplay["Timeout"].append({"description" : "TRAIL BLAZERS Timeout: Regular (Full 5 Short 0)", "team" : "TRAIL BLAZERS", "timeout_type" : "Regular", "full" : "5", "short" : "0"})
 
-#Turnover Player
-playbyplay["TurnoverPlayer"].append({"description" : "G. Harrison Double Dribble Turnover (P1.T10)", "player" : "G. Harrison", "turnover_type" : "Double Dribble", "personal" : "1", "team" : "10"})
+#Timeout
+playbyplay["Timeout"].append({"description" : "Magic Timeout: Regular (Reg.4 Short 0)", "team" : "Magic", "timeout_type" : "Regular", "full" : "4", "short" : "0"})
+
+#Turnover Player (Single Name)
+playbyplay["TurnoverPlayer"].append({"description" : "Harrison Double Dribble Turnover (P1.T10)", "player" : "Harrison", "turnover_type" : "Double Dribble", "personal" : "1", "team" : "10"})
+
+#Turnover Player (Mark Morris)
+playbyplay["TurnoverPlayer"].append({"description" : "Mark Morris Discontinue Dribble Turnover (P1.T11)", "player" : "Mark Morris", "turnover_type" : "Discontinue Dribble", "personal" : "1", "team" : "11"})
+
+#Turnover Player (Hyphenated Name)
+playbyplay["TurnoverPlayer"].append({"description" : "Bates-Diop 3 Second Violation Turnover (P1.T14)", "player" : "Bates-Diop", "turnover_type" : "3 Second Violation", "personal" : "1", "team" : "14"})
+
+#Turnover Player (Apostrophe)
+playbyplay["TurnoverPlayer"].append({"description" : "O'Quinn Inbound Turnover (P2.T6)", "player" : "O'Quinn", "turnover_type" : "Inbound", "personal" : "2", "team" : "6"})
+
+#Turnover Player (First Initial dot Last Name)
+playbyplay["TurnoverPlayer"].append({"description" : "S. Hill Backcourt Turnover (P1.T3)", "player" : "S. Hill", "turnover_type" : "Backcourt", "personal" : "1", "team" : "3"})
+
+#Turnover Player (Junior)
+playbyplay["TurnoverPlayer"].append({"description" : "Porter Jr. Offensive Goaltending Turnover (P1.T16)", "player" : "Porter Jr.", "turnover_type" : "Offensive Goaltending", "personal" : "1", "team" : "16"})
+
+#Turnover Player (Second)
+playbyplay["TurnoverPlayer"].append({"description" : "Payton II Lane Violation Turnover (P1.T6)", "player" : "Payton II", "turnover_type" : "Lane Violation", "personal" : "1", "team" : "6"})
+
+#Turnover Player (Third)
+playbyplay["TurnoverPlayer"].append({"description" : "Robinson III Kicked Ball Violation Turnover (P1.T2)", "player" : "Robinson III", "turnover_type" : "Kicked Ball Violation", "personal" : "1", "team" : "2"})
+
+#Turnover Player (Fourth)
+playbyplay["TurnoverPlayer"].append({"description" : "Walker IV Out of Bounds - Bad Pass Turnover Turnover (P2.T5)", "player" : "Walker IV", "turnover_type" : "Out of Bounds - Bad Pass Turnover", "personal" : "2", "team" : "5"})
 
 #Turnover Team (less than 10)
 playbyplay["TurnoverTeam"].append({"description" : "NUGGETS Turnover: Shot Clock (T#12)", "team" : "NUGGETS", "turnover_type" : "Shot Clock", "turnovers" : "12"})
@@ -103,3 +109,5 @@ playbyplay["TurnoverTeam"].append({"description" : "WIZARDS Turnover: 5 Second V
 #Violation
 playbyplay["Violation"].append({"description" : "Dieng Violation:Kicked Ball (T.Brown)", "player" : "Dieng", "violation_type" : "Kicked Ball", "referee" : "T.Brown"})
 
+#Violation (Without Referee)
+playbyplay["Violation"].append({"description" : "Miles Violation:Lane", "player" : "Miles", "violation_type" : "Lane", "referee" : None})
