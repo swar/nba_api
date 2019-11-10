@@ -70,6 +70,7 @@ __all__ = [
     'playerfantasyprofile',
     'playerfantasyprofilebargraph',
     'playergamelog',
+    'playergamelogs',
     'playergamestreakfinder',
     'playernextngames',
     'playerprofilev2',
