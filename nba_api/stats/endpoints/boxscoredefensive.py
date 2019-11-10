@@ -4,7 +4,7 @@ from nba_api.stats.library.http import NBAStatsHTTP
 
 class BoxScoreDefensive(Endpoint):
     endpoint = 'boxscoredefensive'
-    expected_data = {'PlayerDefensiveStats': ['GAME_ID', 'TEAM_ID', 'TEAM_ABBREVIATION', 'TEAM_CITY', 'TEAM_NICKNAME', 'PLAYER_ID', 'PLAYER_NAME', 'START_POSITION', 'COMMENT', 'MIN', 'POSS', 'PLAYER_PTS', 'TEAM_PTS', 'DREB', 'AST', 'TOV', 'STL', 'BLK', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'SFL', 'DEF_FLS', 'CFGM', 'CFGA', 'CFG_PCT', 'CFG3M', 'CFG3A', 'CFG3_PCT']}
+    expected_data = {'PlayerDefensiveStats': ['GAME_ID', 'TEAM_ID', 'TEAM_ABBREVIATION', 'TEAM_CITY', 'TEAM_NICKNAME', 'PLAYER_ID', 'PLAYER_NAME', 'START_POSITION', 'COMMENT', 'MATCHUP_MIN', 'PARTIAL_POSS', 'SWITCHES_ON', 'PLAYER_PTS', 'DREB', 'MATCHUP_AST', 'MATCHUP_TOV', 'STL', 'BLK', 'MATCHUP_FGM', 'MATCHUP_FGA', 'MATCHUP_FG_PCT', 'MATCHUP_FG3M', 'MATCHUP_FG3A', 'MATCHUP_FG3_PCT'], 'Table1': [':1']}
 
     nba_response = None
     data_sets = None
@@ -42,3 +42,4 @@ class BoxScoreDefensive(Endpoint):
         data_sets = self.nba_response.get_data_sets()
         self.data_sets = [Endpoint.DataSet(data=data_set) for data_set_name, data_set in data_sets.items()]
         self.player_defensive_stats = Endpoint.DataSet(data=data_sets['PlayerDefensiveStats'])
+        self.table1 = Endpoint.DataSet(data=data_sets['Table1'])

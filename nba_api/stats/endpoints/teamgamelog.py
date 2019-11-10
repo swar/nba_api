@@ -1,6 +1,6 @@
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
-from nba_api.stats.library.parameters import SeasonAll, SeasonTypeAllStar, LeagueIDNullable
+from nba_api.stats.library.parameters import Season, SeasonTypeAllStar, LeagueIDNullable
 
 
 class TeamGameLog(Endpoint):
@@ -15,7 +15,7 @@ class TeamGameLog(Endpoint):
 
     def __init__(self,
                  team_id,
-                 season_all=SeasonAll.default,
+                 season=Season.default,
                  season_type_all_star=SeasonTypeAllStar.default,
                  date_from_nullable='',
                  date_to_nullable='',
@@ -30,7 +30,7 @@ class TeamGameLog(Endpoint):
         self.timeout = timeout
         self.parameters = {
                 'TeamID': team_id,
-                'Season': season_all,
+                'Season': season,
                 'SeasonType': season_type_all_star,
                 'DateFrom': date_from_nullable,
                 'DateTo': date_to_nullable,

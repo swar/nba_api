@@ -5,7 +5,7 @@ from nba_api.stats.library.parameters import LeagueID, SeasonYearNullable
 
 class DraftHistory(Endpoint):
     endpoint = 'drafthistory'
-    expected_data = {'DraftHistory': ['PERSON_ID', 'PLAYER_NAME', 'SEASON', 'ROUND_NUMBER', 'ROUND_PICK', 'OVERALL_PICK', 'TEAM_ID', 'TEAM_CITY', 'TEAM_NAME', 'TEAM_ABBREVIATION', 'ORGANIZATION', 'ORGANIZATION_TYPE']}
+    expected_data = {'DraftHistory': ['PERSON_ID', 'PLAYER_NAME', 'SEASON', 'ROUND_NUMBER', 'ROUND_PICK', 'OVERALL_PICK', 'DRAFT_TYPE', 'TEAM_ID', 'TEAM_CITY', 'TEAM_NAME', 'TEAM_ABBREVIATION', 'ORGANIZATION', 'ORGANIZATION_TYPE']}
 
     nba_response = None
     data_sets = None

@@ -1,11 +1,11 @@
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
-from nba_api.stats.library.parameters import LeagueID, Season, SeasonType, OutcomeNullable, PerModeSimpleNullable
+from nba_api.stats.library.parameters import LeagueID, PerModeSimple, Season, SeasonType
 
 
 class LeagueSeasonMatchups(Endpoint):
     endpoint = 'leagueseasonmatchups'
-    expected_data = {'SeasonMatchups': ['OFF_TEAM_ID', 'OFF_TEAM_ABBREVIATION', 'OFF_TEAM_CITY', 'OFF_TEAM_NICKNAME', 'OFF_PLAYER_ID', 'OFF_PLAYER_NAME', 'DEF_TEAM_ID', 'DEF_TEAM_ABBREVIATION', 'DEF_TEAM_CITY', 'DEF_TEAM_NICKNAME', 'DEF_PLAYER_ID', 'DEF_PLAYER_NAME', 'GP', 'POSS', 'OFF_MATCHUP_PCT', 'PLAYER_PTS', 'PLAYER_PTS_DIFF', 'TEAM_PTS', 'TEAM_PTS_DIFF', 'AST', 'TOV', 'BLK', 'HELP_BLK', 'HELP_BLK_REC', 'FGM', 'FGA', 'FGA_DIFF', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'SFL', 'DEF_FOULS', 'OFF_FOULS']}
+    expected_data = {'SeasonMatchups': ['SEASON_ID', 'OFF_PLAYER_ID', 'OFF_PLAYER_NAME', 'DEF_PLAYER_ID', 'DEF_PLAYER_NAME', 'GP', 'MATCHUP_MIN', 'PARTIAL_POSS', 'PLAYER_PTS', 'TEAM_PTS', 'MATCHUP_AST', 'MATCHUP_TOV', 'MATCHUP_BLK', 'MATCHUP_FGM', 'MATCHUP_FGA', 'MATCHUP_FG_PCT', 'MATCHUP_FG3M', 'MATCHUP_FG3A', 'MATCHUP_FG3_PCT', 'HELP_BLK', 'HELP_FGM', 'HELP_FGA', 'HELP_FG_PERC', 'MATCHUP_FTM', 'MATCHUP_FTA', 'SFL']}
 
     nba_response = None
     data_sets = None
@@ -15,17 +15,13 @@ class LeagueSeasonMatchups(Endpoint):
 
     def __init__(self,
                  league_id=LeagueID.default,
+                 per_mode_simple=PerModeSimple.default,
                  season=Season.default,
                  season_type_playoffs=SeasonType.default,
-                 date_from_nullable='',
-                 date_to_nullable='',
                  def_player_id_nullable='',
                  def_team_id_nullable=None,
                  off_player_id_nullable='',
                  off_team_id_nullable=None,
-                 outcome_nullable=OutcomeNullable.default,
-                 po_round_nullable='',
-                 per_mode_simple_nullable=PerModeSimpleNullable.default,
                  proxy=None,
                  headers=None,
                  timeout=30,
@@ -36,17 +32,13 @@ class LeagueSeasonMatchups(Endpoint):
         self.timeout = timeout
         self.parameters = {
                 'LeagueID': league_id,
+                'PerMode': per_mode_simple,
                 'Season': season,
                 'SeasonType': season_type_playoffs,
-                'DateFrom': date_from_nullable,
-                'DateTo': date_to_nullable,
                 'DefPlayerID': def_player_id_nullable,
                 'DefTeamID': def_team_id_nullable,
                 'OffPlayerID': off_player_id_nullable,
-                'OffTeamID': off_team_id_nullable,
-                'Outcome': outcome_nullable,
-                'PORound': po_round_nullable,
-                'PerMode': per_mode_simple_nullable
+                'OffTeamID': off_team_id_nullable
         }
         if get_request:
             self.get_request()
