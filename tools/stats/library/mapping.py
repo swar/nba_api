@@ -95,6 +95,7 @@ endpoint_list = [
     'PlayerFantasyProfile',
     'PlayerFantasyProfileBarGraph',
     'PlayerGameLog',
+    'PlayerGameLogs',
     'PlayerGameLogsStats',
     'PlayerGameSplitsStats',
     'PlayerGameStreakFinder',
