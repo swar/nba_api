@@ -310,12 +310,15 @@ class MeasureTypeSimple(MeasureTypeBase):
     opponent = 'Opponent'
 
 
-class MeasureTypeDetailed(MeasureTypeSimple):
+class MeasureTypePlayerGameLogs(MeasureTypeBase):
     advanced = 'Advanced'
     misc = 'Misc'
-    four_factors = 'Four Factors'
     scoring = 'Scoring'
     usage = 'Usage'
+
+
+class MeasureTypeDetailed(MeasureTypeSimple, MeasureTypePlayerGameLogs):
+    four_factors = 'Four Factors'
 
 
 class MeasureTypeDetailedDefense(MeasureTypeDetailed):
