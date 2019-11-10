@@ -5,7 +5,7 @@
 >[https://stats.nba.com/stats/synergyplaytypes](https://stats.nba.com/stats/synergyplaytypes)
 
 ##### Valid URL
->[https://stats.nba.com/stats/synergyplaytypes?LeagueID=00&PerMode=Totals&PlayType=&PlayerOrTeam=T&SeasonType=Regular+Season&SeasonYear=2018-19&TypeGrouping=](https://stats.nba.com/stats/synergyplaytypes?LeagueID=00&PerMode=Totals&PlayType=&PlayerOrTeam=T&SeasonType=Regular+Season&SeasonYear=2018-19&TypeGrouping=)
+>[https://stats.nba.com/stats/synergyplaytypes?LeagueID=00&PerMode=Totals&PlayType=&PlayerOrTeam=T&SeasonType=Regular+Season&SeasonYear=2019-20&TypeGrouping=](https://stats.nba.com/stats/synergyplaytypes?LeagueID=00&PerMode=Totals&PlayType=&PlayerOrTeam=T&SeasonType=Regular+Season&SeasonYear=2019-20&TypeGrouping=)
 
 ## Parameters
 API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
@@ -55,7 +55,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "SynergyPlayTypes",
-    "last_validated_date": "2019-04-15",
+    "last_validated_date": "2019-11-09",
     "nullable_parameters": [
         "PlayType",
         "TypeGrouping"
@@ -89,4 +89,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2019-04-15
+Last validated 2019-11-09

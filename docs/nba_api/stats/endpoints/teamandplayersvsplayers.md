@@ -5,7 +5,7 @@
 >[https://stats.nba.com/stats/teamandplayersvsplayers](https://stats.nba.com/stats/teamandplayersvsplayers)
 
 ##### Valid URL
->[https://stats.nba.com/stats/teamandplayersvsplayers?Conference=&DateFrom=&DateTo=&Division=&GameSegment=&LastNGames=0&LeagueID=&Location=&MeasureType=Base&Month=0&OpponentTeamID=0&Outcome=&PaceAdjust=N&PerMode=Totals&Period=0&PlayerID1=202681&PlayerID2=203078&PlayerID3=203507&PlayerID4=201567&PlayerID5=203954&PlusMinus=N&Rank=N&Season=2018-19&SeasonSegment=&SeasonType=Regular+Season&ShotClockRange=&TeamID=1610612739&VsConference=&VsDivision=&VsPlayerID1=201566&VsPlayerID2=201939&VsPlayerID3=201935&VsPlayerID4=201142&VsPlayerID5=203076&VsTeamID=1610612765](https://stats.nba.com/stats/teamandplayersvsplayers?Conference=&DateFrom=&DateTo=&Division=&GameSegment=&LastNGames=0&LeagueID=&Location=&MeasureType=Base&Month=0&OpponentTeamID=0&Outcome=&PaceAdjust=N&PerMode=Totals&Period=0&PlayerID1=202681&PlayerID2=203078&PlayerID3=203507&PlayerID4=201567&PlayerID5=203954&PlusMinus=N&Rank=N&Season=2018-19&SeasonSegment=&SeasonType=Regular+Season&ShotClockRange=&TeamID=1610612739&VsConference=&VsDivision=&VsPlayerID1=201566&VsPlayerID2=201939&VsPlayerID3=201935&VsPlayerID4=201142&VsPlayerID5=203076&VsTeamID=1610612765)
+>[https://stats.nba.com/stats/teamandplayersvsplayers?Conference=&DateFrom=&DateTo=&Division=&GameSegment=&LastNGames=0&LeagueID=&Location=&MeasureType=Base&Month=0&OpponentTeamID=0&Outcome=&PaceAdjust=N&PerMode=Totals&Period=0&PlayerID1=202681&PlayerID2=203078&PlayerID3=203507&PlayerID4=201567&PlayerID5=203954&PlusMinus=N&Rank=N&Season=2019-20&SeasonSegment=&SeasonType=Regular+Season&ShotClockRange=&TeamID=1610612739&VsConference=&VsDivision=&VsPlayerID1=201566&VsPlayerID2=201939&VsPlayerID3=201935&VsPlayerID4=201142&VsPlayerID5=203076&VsTeamID=1610612765](https://stats.nba.com/stats/teamandplayersvsplayers?Conference=&DateFrom=&DateTo=&Division=&GameSegment=&LastNGames=0&LeagueID=&Location=&MeasureType=Base&Month=0&OpponentTeamID=0&Outcome=&PaceAdjust=N&PerMode=Totals&Period=0&PlayerID1=202681&PlayerID2=203078&PlayerID3=203507&PlayerID4=201567&PlayerID5=203954&PlusMinus=N&Rank=N&Season=2019-20&SeasonSegment=&SeasonType=Regular+Season&ShotClockRange=&TeamID=1610612739&VsConference=&VsDivision=&VsPlayerID1=201566&VsPlayerID2=201939&VsPlayerID3=201935&VsPlayerID4=201142&VsPlayerID5=203076&VsTeamID=1610612765)
 
 ## Parameters
 API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
@@ -216,7 +216,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "TeamAndPlayersVsPlayers",
-    "last_validated_date": "2019-04-15",
+    "last_validated_date": "2019-11-09",
     "nullable_parameters": [
         "Conference",
         "DateFrom",
@@ -342,4 +342,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2019-04-15
+Last validated 2019-11-09

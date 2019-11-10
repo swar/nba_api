@@ -5,7 +5,7 @@
 >[https://stats.nba.com/stats/teamhistoricalleaders](https://stats.nba.com/stats/teamhistoricalleaders)
 
 ##### Valid URL
->[https://stats.nba.com/stats/teamhistoricalleaders?LeagueID=00&SeasonID=22018&TeamID=1610612739](https://stats.nba.com/stats/teamhistoricalleaders?LeagueID=00&SeasonID=22018&TeamID=1610612739)
+>[https://stats.nba.com/stats/teamhistoricalleaders?LeagueID=00&SeasonID=22019&TeamID=1610612739](https://stats.nba.com/stats/teamhistoricalleaders?LeagueID=00&SeasonID=22019&TeamID=1610612739)
 
 ## Parameters
 API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
@@ -46,7 +46,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "TeamHistoricalLeaders",
-    "last_validated_date": "2019-04-15",
+    "last_validated_date": "2019-11-09",
     "nullable_parameters": [],
     "parameter_patterns": {
         "LeagueID": "^\\d{2}$",
@@ -67,4 +67,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2019-04-15
+Last validated 2019-11-09

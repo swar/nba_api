@@ -5,7 +5,7 @@
 >[https://stats.nba.com/stats/defensehub](https://stats.nba.com/stats/defensehub)
 
 ##### Valid URL
->[https://stats.nba.com/stats/defensehub?GameScope=Season&LeagueID=00&PlayerOrTeam=Team&PlayerScope=All+Players&Season=2018-19&SeasonType=Regular+Season](https://stats.nba.com/stats/defensehub?GameScope=Season&LeagueID=00&PlayerOrTeam=Team&PlayerScope=All+Players&Season=2018-19&SeasonType=Regular+Season)
+>[https://stats.nba.com/stats/defensehub?GameScope=Season&LeagueID=00&PlayerOrTeam=Team&PlayerScope=All+Players&Season=2019-20&SeasonType=Regular+Season](https://stats.nba.com/stats/defensehub?GameScope=Season&LeagueID=00&PlayerOrTeam=Team&PlayerScope=All+Players&Season=2019-20&SeasonType=Regular+Season)
 
 ## Parameters
 API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
@@ -139,7 +139,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "DefenseHub",
-    "last_validated_date": "2019-04-15",
+    "last_validated_date": "2019-11-09",
     "nullable_parameters": [],
     "parameter_patterns": {
         "GameScope": "^(Season)|(Last 10)|(Yesterday)|(Finals)$",
@@ -169,4 +169,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2019-04-15
+Last validated 2019-11-09

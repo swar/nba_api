@@ -5,14 +5,14 @@
 >[https://stats.nba.com/stats/shotchartlineupdetail](https://stats.nba.com/stats/shotchartlineupdetail)
 
 ##### Valid URL
->[https://stats.nba.com/stats/shotchartlineupdetail?ContextFilter=&ContextMeasure=PTS&DateFrom=&DateTo=&GROUP_ID=0&GameID=&GameSegment=&LastNGames=&LeagueID=00&Location=&Month=&OpponentTeamID=&Outcome=&Period=0&Season=2018-19&SeasonSegment=&SeasonType=Regular+Season&TeamID=&VsConference=&VsDivision=](https://stats.nba.com/stats/shotchartlineupdetail?ContextFilter=&ContextMeasure=PTS&DateFrom=&DateTo=&GROUP_ID=0&GameID=&GameSegment=&LastNGames=&LeagueID=00&Location=&Month=&OpponentTeamID=&Outcome=&Period=0&Season=2018-19&SeasonSegment=&SeasonType=Regular+Season&TeamID=&VsConference=&VsDivision=)
+>[https://stats.nba.com/stats/shotchartlineupdetail?ContextFilter=&ContextMeasure=PTS&DateFrom=&DateTo=&GROUP_ID=0&GameID=&GameSegment=&LastNGames=&LeagueID=00&Location=&Month=&OpponentTeamID=&Outcome=&Period=0&Season=2019-20&SeasonSegment=&SeasonType=Regular+Season&TeamID=&VsConference=&VsDivision=](https://stats.nba.com/stats/shotchartlineupdetail?ContextFilter=&ContextMeasure=PTS&DateFrom=&DateTo=&GROUP_ID=0&GameID=&GameSegment=&LastNGames=&LeagueID=00&Location=&Month=&OpponentTeamID=&Outcome=&Period=0&Season=2019-20&SeasonSegment=&SeasonType=Regular+Season&TeamID=&VsConference=&VsDivision=)
 
 ## Parameters
 API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 ------------ | ------------ | :-----------: | :---: | :---:
 [_**ContextMeasure**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#ContextMeasure) | context_measure_detailed | `^((PTS)\|(FGM)\|(FGA)\|(FG_PCT)\|(FG3M)\|(FG3A)\|(FG3_PCT)\|(FTM)\|(FTA)\|(OREB)\|(DREB)\|(AST)\|(FGM_AST)\|(FG3_AST)\|(STL)\|(BLK)\|(BLKA)\|(TOV)\|(POSS_END_FT)\|(PTS_PAINT)\|(PTS_FB)\|(PTS_OFF_TOV)\|(PTS_2ND_CHANCE)\|(REB)\|(TM_FGM)\|(TM_FGA)\|(TM_FG3M)\|(TM_FG3A)\|(TM_FTM)\|(TM_FTA)\|(TM_OREB)\|(TM_DREB)\|(TM_REB)\|(TM_TEAM_REB)\|(TM_AST)\|(TM_STL)\|(TM_BLK)\|(TM_BLKA)\|(TM_TOV)\|(TM_TEAM_TOV)\|(TM_PF)\|(TM_PFD)\|(TM_PTS)\|(TM_PTS_PAINT)\|(TM_PTS_FB)\|(TM_PTS_OFF_TOV)\|(TM_PTS_2ND_CHANCE)\|(TM_FGM_AST)\|(TM_FG3_AST)\|(TM_POSS_END_FT)\|(OPP_FTM)\|(OPP_FTA)\|(OPP_OREB)\|(OPP_DREB)\|(OPP_REB)\|(OPP_TEAM_REB)\|(OPP_AST)\|(OPP_STL)\|(OPP_BLK)\|(OPP_BLKA)\|(OPP_TOV)\|(OPP_TEAM_TOV)\|(OPP_PF)\|(OPP_PFD)\|(OPP_PTS)\|(OPP_PTS_PAINT)\|(OPP_PTS_FB)\|(OPP_PTS_OFF_TOV)\|(OPP_PTS_2ND_CHANCE)\|(OPP_FGM_AST)\|(OPP_FG3_AST)\|(OPP_POSS_END_FT)\|(PTS))$` | `Y` |  | 
 [_**GROUP_ID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GROUP_ID) | group_id | `^\d+(( - \d+){2,4})?$` | `Y` |  | 
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^(00)\|(20)$` | `Y` |  | 
+[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id |  | `Y` |  | 
 [_**Period**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Period) | period |  | `Y` |  | 
 [_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season |  | `Y` |  | 
 [_**SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_all_star | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star)$` | `Y` |  | 
@@ -86,7 +86,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "ShotChartLineupDetail",
-    "last_validated_date": "2019-04-15",
+    "last_validated_date": "2019-11-09",
     "nullable_parameters": [
         "ContextFilter",
         "DateFrom",
@@ -112,7 +112,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         "GameID": "^(\\d{10})?$",
         "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
         "LastNGames": null,
-        "LeagueID": "^(00)|(20)$",
+        "LeagueID": null,
         "Location": "^((Home)|(Road))?$",
         "Month": null,
         "OpponentTeamID": null,
@@ -173,4 +173,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2019-04-15
+Last validated 2019-11-09

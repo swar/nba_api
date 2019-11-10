@@ -5,7 +5,7 @@
 >[https://stats.nba.com/stats/commonplayoffseries](https://stats.nba.com/stats/commonplayoffseries)
 
 ##### Valid URL
->[https://stats.nba.com/stats/commonplayoffseries?LeagueID=00&Season=2018-19&SeriesID=](https://stats.nba.com/stats/commonplayoffseries?LeagueID=00&Season=2018-19&SeriesID=)
+>[https://stats.nba.com/stats/commonplayoffseries?LeagueID=00&Season=2019-20&SeriesID=](https://stats.nba.com/stats/commonplayoffseries?LeagueID=00&Season=2019-20&SeriesID=)
 
 ## Parameters
 API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
@@ -34,7 +34,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "CommonPlayoffSeries",
-    "last_validated_date": "2019-04-15",
+    "last_validated_date": "2019-11-09",
     "nullable_parameters": [
         "SeriesID"
     ],
@@ -56,4 +56,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2019-04-15
+Last validated 2019-11-09

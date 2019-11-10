@@ -22,7 +22,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 ## Data Sets
 #### DraftHistory `draft_history`
 ```text
-['PERSON_ID', 'PLAYER_NAME', 'SEASON', 'ROUND_NUMBER', 'ROUND_PICK', 'OVERALL_PICK', 'TEAM_ID', 'TEAM_CITY', 'TEAM_NAME', 'TEAM_ABBREVIATION', 'ORGANIZATION', 'ORGANIZATION_TYPE']
+['PERSON_ID', 'PLAYER_NAME', 'SEASON', 'ROUND_NUMBER', 'ROUND_PICK', 'OVERALL_PICK', 'DRAFT_TYPE', 'TEAM_ID', 'TEAM_CITY', 'TEAM_NAME', 'TEAM_ABBREVIATION', 'ORGANIZATION', 'ORGANIZATION_TYPE']
 ```
 
 
@@ -37,6 +37,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
             "ROUND_NUMBER",
             "ROUND_PICK",
             "OVERALL_PICK",
+            "DRAFT_TYPE",
             "TEAM_ID",
             "TEAM_CITY",
             "TEAM_NAME",
@@ -46,7 +47,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "DraftHistory",
-    "last_validated_date": "2019-04-15",
+    "last_validated_date": "2019-11-09",
     "nullable_parameters": [
         "College",
         "OverallPick",
@@ -83,4 +84,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2019-04-15
+Last validated 2019-11-09

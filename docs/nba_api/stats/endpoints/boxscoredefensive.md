@@ -15,7 +15,12 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 ## Data Sets
 #### PlayerDefensiveStats `player_defensive_stats`
 ```text
-['GAME_ID', 'TEAM_ID', 'TEAM_ABBREVIATION', 'TEAM_CITY', 'TEAM_NICKNAME', 'PLAYER_ID', 'PLAYER_NAME', 'START_POSITION', 'COMMENT', 'MIN', 'POSS', 'PLAYER_PTS', 'TEAM_PTS', 'DREB', 'AST', 'TOV', 'STL', 'BLK', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'SFL', 'DEF_FLS', 'CFGM', 'CFGA', 'CFG_PCT', 'CFG3M', 'CFG3A', 'CFG3_PCT']
+['GAME_ID', 'TEAM_ID', 'TEAM_ABBREVIATION', 'TEAM_CITY', 'TEAM_NICKNAME', 'PLAYER_ID', 'PLAYER_NAME', 'START_POSITION', 'COMMENT', 'MATCHUP_MIN', 'PARTIAL_POSS', 'SWITCHES_ON', 'PLAYER_PTS', 'DREB', 'MATCHUP_AST', 'MATCHUP_TOV', 'STL', 'BLK', 'MATCHUP_FGM', 'MATCHUP_FGA', 'MATCHUP_FG_PCT', 'MATCHUP_FG3M', 'MATCHUP_FG3A', 'MATCHUP_FG3_PCT']
+```
+
+#### Table1 `table1`
+```text
+[':1']
 ```
 
 
@@ -33,34 +38,28 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
             "PLAYER_NAME",
             "START_POSITION",
             "COMMENT",
-            "MIN",
-            "POSS",
+            "MATCHUP_MIN",
+            "PARTIAL_POSS",
+            "SWITCHES_ON",
             "PLAYER_PTS",
-            "TEAM_PTS",
             "DREB",
-            "AST",
-            "TOV",
+            "MATCHUP_AST",
+            "MATCHUP_TOV",
             "STL",
             "BLK",
-            "FGM",
-            "FGA",
-            "FG_PCT",
-            "FG3M",
-            "FG3A",
-            "FG3_PCT",
-            "FTM",
-            "SFL",
-            "DEF_FLS",
-            "CFGM",
-            "CFGA",
-            "CFG_PCT",
-            "CFG3M",
-            "CFG3A",
-            "CFG3_PCT"
+            "MATCHUP_FGM",
+            "MATCHUP_FGA",
+            "MATCHUP_FG_PCT",
+            "MATCHUP_FG3M",
+            "MATCHUP_FG3A",
+            "MATCHUP_FG3_PCT"
+        ],
+        "Table1": [
+            ":1"
         ]
     },
     "endpoint": "BoxScoreDefensive",
-    "last_validated_date": "2019-04-15",
+    "last_validated_date": "2019-11-09",
     "nullable_parameters": [],
     "parameter_patterns": {
         "GameID": "^\\d{10}$"
@@ -75,4 +74,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2019-04-15
+Last validated 2019-11-09

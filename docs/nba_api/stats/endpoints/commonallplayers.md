@@ -5,7 +5,7 @@
 >[https://stats.nba.com/stats/commonallplayers](https://stats.nba.com/stats/commonallplayers)
 
 ##### Valid URL
->[https://stats.nba.com/stats/commonallplayers?IsOnlyCurrentSeason=0&LeagueID=00&Season=2018-19](https://stats.nba.com/stats/commonallplayers?IsOnlyCurrentSeason=0&LeagueID=00&Season=2018-19)
+>[https://stats.nba.com/stats/commonallplayers?IsOnlyCurrentSeason=0&LeagueID=00&Season=2019-20](https://stats.nba.com/stats/commonallplayers?IsOnlyCurrentSeason=0&LeagueID=00&Season=2019-20)
 
 ## Parameters
 API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
@@ -17,7 +17,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 ## Data Sets
 #### CommonAllPlayers `common_all_players`
 ```text
-['PERSON_ID', 'DISPLAY_LAST_COMMA_FIRST', 'DISPLAY_FIRST_LAST', 'ROSTERSTATUS', 'FROM_YEAR', 'TO_YEAR', 'PLAYERCODE', 'TEAM_ID', 'TEAM_CITY', 'TEAM_NAME', 'TEAM_ABBREVIATION', 'TEAM_CODE', 'GAMES_PLAYED_FLAG']
+['PERSON_ID', 'DISPLAY_LAST_COMMA_FIRST', 'DISPLAY_FIRST_LAST', 'ROSTERSTATUS', 'FROM_YEAR', 'TO_YEAR', 'PLAYERCODE', 'TEAM_ID', 'TEAM_CITY', 'TEAM_NAME', 'TEAM_ABBREVIATION', 'TEAM_CODE', 'GAMES_PLAYED_FLAG', 'OTHERLEAGUE_EXPERIENCE_CH']
 ```
 
 
@@ -38,11 +38,12 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
             "TEAM_NAME",
             "TEAM_ABBREVIATION",
             "TEAM_CODE",
-            "GAMES_PLAYED_FLAG"
+            "GAMES_PLAYED_FLAG",
+            "OTHERLEAGUE_EXPERIENCE_CH"
         ]
     },
     "endpoint": "CommonAllPlayers",
-    "last_validated_date": "2019-04-15",
+    "last_validated_date": "2019-11-09",
     "nullable_parameters": [],
     "parameter_patterns": {
         "IsOnlyCurrentSeason": null,
@@ -63,4 +64,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2019-04-15
+Last validated 2019-11-09

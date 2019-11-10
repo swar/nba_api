@@ -15,7 +15,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 ## Data Sets
 #### PlayerMatchupsStats `player_matchups_stats`
 ```text
-['GAME_ID', 'OFF_TEAM_ID', 'OFF_TEAM_ABBREVIATION', 'OFF_TEAM_CITY', 'OFF_TEAM_NICKNAME', 'OFF_PLAYER_ID', 'OFF_PLAYER_NAME', 'DEF_TEAM_ID', 'DEF_TEAM_ABBREVIATION', 'DEF_TEAM_CITY', 'DEF_TEAM_NICKNAME', 'DEF_PLAYER_ID', 'DEF_PLAYER_NAME', 'POSS', 'OFF_MATCHUP_PCT', 'PLAYER_PTS', 'TEAM_PTS', 'AST', 'TOV', 'BLK', 'HELP_BLK', 'HELP_BLK_REC', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'SFL', 'DEF_FOULS', 'OFF_FOULS']
+['GAME_ID', 'OFF_TEAM_ID', 'OFF_TEAM_ABBREVIATION', 'OFF_TEAM_CITY', 'OFF_TEAM_NICKNAME', 'OFF_PLAYER_ID', 'OFF_PLAYER_NAME', 'DEF_TEAM_ID', 'DEF_TEAM_ABBREVIATION', 'DEF_TEAM_CITY', 'DEF_TEAM_NICKNAME', 'DEF_PLAYER_ID', 'DEF_PLAYER_NAME', 'MATCHUP_MIN', 'PARTIAL_POSS', 'PCT_DEFENDER_TOTAL_TIME', 'PCT_OFF_TOTAL_TIME', 'PCT_TOTAL_TIME_BOTH_ON', 'SWITCHES_ON', 'PLAYER_PTS', 'TEAM_PTS', 'MATCHUP_AST', 'MATCHUP_POTENTIAL_AST', 'MATCHUP_TOV', 'MATCHUP_BLK', 'MATCHUP_FGM', 'MATCHUP_FGA', 'MATCHUP_FG_PCT', 'MATCHUP_FG3M', 'MATCHUP_FG3A', 'MATCHUP_FG3_PCT', 'HELP_BLK', 'HELP_FGM', 'HELP_FGA', 'HELP_FG_PERC', 'MATCHUP_FTM', 'MATCHUP_FTA', 'SFL']
 ```
 
 
@@ -37,29 +37,35 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
             "DEF_TEAM_NICKNAME",
             "DEF_PLAYER_ID",
             "DEF_PLAYER_NAME",
-            "POSS",
-            "OFF_MATCHUP_PCT",
+            "MATCHUP_MIN",
+            "PARTIAL_POSS",
+            "PCT_DEFENDER_TOTAL_TIME",
+            "PCT_OFF_TOTAL_TIME",
+            "PCT_TOTAL_TIME_BOTH_ON",
+            "SWITCHES_ON",
             "PLAYER_PTS",
             "TEAM_PTS",
-            "AST",
-            "TOV",
-            "BLK",
+            "MATCHUP_AST",
+            "MATCHUP_POTENTIAL_AST",
+            "MATCHUP_TOV",
+            "MATCHUP_BLK",
+            "MATCHUP_FGM",
+            "MATCHUP_FGA",
+            "MATCHUP_FG_PCT",
+            "MATCHUP_FG3M",
+            "MATCHUP_FG3A",
+            "MATCHUP_FG3_PCT",
             "HELP_BLK",
-            "HELP_BLK_REC",
-            "FGM",
-            "FGA",
-            "FG_PCT",
-            "FG3M",
-            "FG3A",
-            "FG3_PCT",
-            "FTM",
-            "SFL",
-            "DEF_FOULS",
-            "OFF_FOULS"
+            "HELP_FGM",
+            "HELP_FGA",
+            "HELP_FG_PERC",
+            "MATCHUP_FTM",
+            "MATCHUP_FTA",
+            "SFL"
         ]
     },
     "endpoint": "BoxScoreMatchups",
-    "last_validated_date": "2019-04-15",
+    "last_validated_date": "2019-11-09",
     "nullable_parameters": [],
     "parameter_patterns": {
         "GameID": "^\\d{10}$"
@@ -74,4 +80,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2019-04-15
+Last validated 2019-11-09

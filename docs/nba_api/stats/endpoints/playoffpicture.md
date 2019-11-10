@@ -5,7 +5,7 @@
 >[https://stats.nba.com/stats/playoffpicture](https://stats.nba.com/stats/playoffpicture)
 
 ##### Valid URL
->[https://stats.nba.com/stats/playoffpicture?LeagueID=00&SeasonID=22018](https://stats.nba.com/stats/playoffpicture?LeagueID=00&SeasonID=22018)
+>[https://stats.nba.com/stats/playoffpicture?LeagueID=00&SeasonID=22019](https://stats.nba.com/stats/playoffpicture?LeagueID=00&SeasonID=22019)
 
 ## Parameters
 API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
@@ -145,7 +145,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "PlayoffPicture",
-    "last_validated_date": "2019-04-15",
+    "last_validated_date": "2019-11-09",
     "nullable_parameters": [],
     "parameter_patterns": {
         "LeagueID": "^\\d{2}$",
@@ -163,4 +163,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2019-04-15
+Last validated 2019-11-09

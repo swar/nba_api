@@ -5,7 +5,7 @@
 >[https://stats.nba.com/stats/fantasywidget](https://stats.nba.com/stats/fantasywidget)
 
 ##### Valid URL
->[https://stats.nba.com/stats/fantasywidget?ActivePlayers=N&DateFrom=&DateTo=&LastNGames=0&LeagueID=00&Location=&Month=&OpponentTeamID=&PORound=&PlayerID=&Position=&Season=2018-19&SeasonSegment=&SeasonType=Regular+Season&TeamID=&TodaysOpponent=0&TodaysPlayers=N&VsConference=&VsDivision=](https://stats.nba.com/stats/fantasywidget?ActivePlayers=N&DateFrom=&DateTo=&LastNGames=0&LeagueID=00&Location=&Month=&OpponentTeamID=&PORound=&PlayerID=&Position=&Season=2018-19&SeasonSegment=&SeasonType=Regular+Season&TeamID=&TodaysOpponent=0&TodaysPlayers=N&VsConference=&VsDivision=)
+>[https://stats.nba.com/stats/fantasywidget?ActivePlayers=N&DateFrom=&DateTo=&LastNGames=0&LeagueID=00&Location=&Month=&OpponentTeamID=&PORound=&PlayerID=&Position=&Season=2019-20&SeasonSegment=&SeasonType=Regular+Season&TeamID=&TodaysOpponent=0&TodaysPlayers=N&VsConference=&VsDivision=](https://stats.nba.com/stats/fantasywidget?ActivePlayers=N&DateFrom=&DateTo=&LastNGames=0&LeagueID=00&Location=&Month=&OpponentTeamID=&PORound=&PlayerID=&Position=&Season=2019-20&SeasonSegment=&SeasonType=Regular+Season&TeamID=&TodaysOpponent=0&TodaysPlayers=N&VsConference=&VsDivision=)
 
 ## Parameters
 API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
@@ -65,7 +65,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "FantasyWidget",
-    "last_validated_date": "2019-04-15",
+    "last_validated_date": "2019-11-09",
     "nullable_parameters": [
         "DateFrom",
         "DateTo",
@@ -135,4 +135,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2019-04-15
+Last validated 2019-11-09

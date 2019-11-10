@@ -5,7 +5,7 @@
 >[https://stats.nba.com/stats/videodetails](https://stats.nba.com/stats/videodetails)
 
 ##### Valid URL
->[https://stats.nba.com/stats/videodetails?AheadBehind=&ClutchTime=&ContextFilter=&ContextMeasure=PTS&DateFrom=&DateTo=&EndPeriod=&EndRange=&GameID=&GameSegment=&LastNGames=0&LeagueID=&Location=&Month=0&OpponentTeamID=0&Outcome=&Period=0&PlayerID=2544&PointDiff=&Position=&RangeType=&RookieYear=&Season=2018-19&SeasonSegment=&SeasonType=Regular+Season&StartPeriod=&StartRange=&TeamID=1610612739&VsConference=&VsDivision=](https://stats.nba.com/stats/videodetails?AheadBehind=&ClutchTime=&ContextFilter=&ContextMeasure=PTS&DateFrom=&DateTo=&EndPeriod=&EndRange=&GameID=&GameSegment=&LastNGames=0&LeagueID=&Location=&Month=0&OpponentTeamID=0&Outcome=&Period=0&PlayerID=2544&PointDiff=&Position=&RangeType=&RookieYear=&Season=2018-19&SeasonSegment=&SeasonType=Regular+Season&StartPeriod=&StartRange=&TeamID=1610612739&VsConference=&VsDivision=)
+>[https://stats.nba.com/stats/videodetails?AheadBehind=&ClutchTime=&ContextFilter=&ContextMeasure=PTS&DateFrom=&DateTo=&EndPeriod=&EndRange=&GameID=&GameSegment=&LastNGames=0&LeagueID=&Location=&Month=0&OpponentTeamID=0&Outcome=&Period=0&PlayerID=2544&PointDiff=&Position=&RangeType=&RookieYear=&Season=2019-20&SeasonSegment=&SeasonType=Regular+Season&StartPeriod=&StartRange=&TeamID=1610612739&VsConference=&VsDivision=](https://stats.nba.com/stats/videodetails?AheadBehind=&ClutchTime=&ContextFilter=&ContextMeasure=PTS&DateFrom=&DateTo=&EndPeriod=&EndRange=&GameID=&GameSegment=&LastNGames=0&LeagueID=&Location=&Month=0&OpponentTeamID=0&Outcome=&Period=0&PlayerID=2544&PointDiff=&Position=&RangeType=&RookieYear=&Season=2019-20&SeasonSegment=&SeasonType=Regular+Season&StartPeriod=&StartRange=&TeamID=1610612739&VsConference=&VsDivision=)
 
 ## Parameters
 API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
@@ -30,7 +30,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 [_**PointDiff**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PointDiff) | point_diff_nullable |  |  | `Y` | 
 [_**Outcome**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Outcome) | outcome_nullable | `^((W)\|(L))?$` | `Y` | `Y` | 
 [_**Location**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Location) | location_nullable | `^((Home)\|(Road))?$` | `Y` | `Y` | 
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable | `^((00)\|(20))?$` | `Y` | `Y` | 
+[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable |  | `Y` | `Y` | 
 [_**GameSegment**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameSegment) | game_segment_nullable |  |  | `Y` | 
 [_**GameID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameID) | game_id_nullable | `^(\d{10})?$` | `Y` | `Y` | 
 [_**EndRange**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#EndRange) | end_range_nullable |  | `Y` | `Y` | 
@@ -49,7 +49,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 {
     "data_sets": {},
     "endpoint": "VideoDetails",
-    "last_validated_date": "2019-04-15",
+    "last_validated_date": "2019-11-09",
     "nullable_parameters": [
         "AheadBehind",
         "ClutchTime",
@@ -85,7 +85,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         "GameID": "^(\\d{10})?$",
         "GameSegment": null,
         "LastNGames": null,
-        "LeagueID": "^((00)|(20))?$",
+        "LeagueID": null,
         "Location": "^((Home)|(Road))?$",
         "Month": null,
         "OpponentTeamID": null,
@@ -166,4 +166,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2019-04-15
+Last validated 2019-11-09

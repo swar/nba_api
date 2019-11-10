@@ -5,7 +5,7 @@
 >[https://stats.nba.com/stats/commonteamroster](https://stats.nba.com/stats/commonteamroster)
 
 ##### Valid URL
->[https://stats.nba.com/stats/commonteamroster?LeagueID=&Season=2018-19&TeamID=1610612739](https://stats.nba.com/stats/commonteamroster?LeagueID=&Season=2018-19&TeamID=1610612739)
+>[https://stats.nba.com/stats/commonteamroster?LeagueID=&Season=2019-20&TeamID=1610612739](https://stats.nba.com/stats/commonteamroster?LeagueID=&Season=2019-20&TeamID=1610612739)
 
 ## Parameters
 API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
@@ -60,7 +60,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "CommonTeamRoster",
-    "last_validated_date": "2019-04-15",
+    "last_validated_date": "2019-11-09",
     "nullable_parameters": [
         "LeagueID"
     ],
@@ -82,4 +82,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2019-04-15
+Last validated 2019-11-09

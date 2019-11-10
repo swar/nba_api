@@ -5,7 +5,7 @@
 >[https://stats.nba.com/stats/draftcombinedrillresults](https://stats.nba.com/stats/draftcombinedrillresults)
 
 ##### Valid URL
->[https://stats.nba.com/stats/draftcombinedrillresults?LeagueID=00&SeasonYear=2018](https://stats.nba.com/stats/draftcombinedrillresults?LeagueID=00&SeasonYear=2018)
+>[https://stats.nba.com/stats/draftcombinedrillresults?LeagueID=00&SeasonYear=2019](https://stats.nba.com/stats/draftcombinedrillresults?LeagueID=00&SeasonYear=2019)
 
 ## Parameters
 API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
@@ -40,7 +40,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "DraftCombineDrillResults",
-    "last_validated_date": "2019-04-15",
+    "last_validated_date": "2019-11-09",
     "nullable_parameters": [],
     "parameter_patterns": {
         "LeagueID": "^(00)|(10)|(20)$",
@@ -58,4 +58,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2019-04-15
+Last validated 2019-11-09
