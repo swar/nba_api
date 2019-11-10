@@ -96,6 +96,7 @@ deferred_endpoints = [
     DeferredEndpoint(ep.PlayerFantasyProfile, player_id='2544'),
     DeferredEndpoint(ep.PlayerFantasyProfileBarGraph, player_id='2544'),
     DeferredEndpoint(ep.PlayerGameLog, player_id='2544'),
+    DeferredEndpoint(ep.PlayerGameLogs, player_id_nullable='2544'),
     DeferredEndpoint(ep.PlayerGameStreakFinder),
     DeferredEndpoint(ep.PlayerNextNGames, player_id='2544'),
     DeferredEndpoint(ep.PlayerProfileV2, player_id='2544'),
