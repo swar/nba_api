@@ -6,12 +6,13 @@ try:
     from nba_api.library.debug.debug import STATS_HEADERS
 except ImportError:
     STATS_HEADERS = {
-        'Host': 'stats.nba.com',
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
-        'Accept': 'application/json, text/plain, */*',
-        'Accept-Language': 'en-US,en;q=0.5',
-        'Accept-Encoding': 'gzip, deflate, br',
-        'Connection': 'keep-alive',
+        'Host': 'stats.nba.com', 
+        'Connection': 'keep-alive', 
+        'Accept': 'application/json, text/plain, */*', 
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 
+        'Referer': 'https://stats.nba.com/', 
+        'Accept-Encoding': 'gzip, deflate, br', 
+        'Accept-Language': 'en-US,en;q=0.9',
     }
 
 
