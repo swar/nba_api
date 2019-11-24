@@ -115,7 +115,7 @@ players = [
     [203507, "Antetokounmpo", "Giannis", "Giannis Antetokounmpo", True],
     [1628961, "Antetokounmpo", "Kostas", "Kostas Antetokounmpo", True],
     [203648, "Antetokounmpo", "Thanasis", "Thanasis Antetokounmpo", True],
-    [2546, "Anthony", "Carmelo", "Carmelo Anthony", False],
+    [2546, "Anthony", "Carmelo", "Carmelo Anthony", True],
     [21, "Anthony", "Greg", "Greg Anthony", False],
     [201202, "Anthony", "Joel", "Joel Anthony", False],
     [203544, "Antic", "Pero", "Pero Antic", False],
