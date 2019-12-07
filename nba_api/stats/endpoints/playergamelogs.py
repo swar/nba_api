@@ -60,7 +60,7 @@ class PlayerGameLogs(Endpoint):
                 'PlayerID': player_id_nullable,
                 'SeasonSegment': season_segment_nullable,
                 'SeasonType': season_type_nullable,
-                'SeasonYear': season_nullable,
+                'Season': season_nullable,
                 'ShotClockRange': shot_clock_range_nullable,
                 'TeamID': team_id_nullable,
                 'VsConference': vs_conference_nullable,
