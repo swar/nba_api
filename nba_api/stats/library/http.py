@@ -13,6 +13,8 @@ except ImportError:
         'Referer': 'https://stats.nba.com/', 
         'Accept-Encoding': 'gzip, deflate, br', 
         'Accept-Language': 'en-US,en;q=0.9',
+        'x-nba-stats-origin': 'stats',
+        'x-nba-stats-token': 'true',
     }
 
 
