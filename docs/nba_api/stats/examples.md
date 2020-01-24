@@ -6,7 +6,7 @@ This is an example of how to call an `stats.nba.com` endpoint and access the dat
 
 Let's say we want to get the player information for `LeBron James (2544)`. I know that I can get this information by calling the [`CommonPlayerInfo`](endpoints/commonplayerinfo.md) stats endpoint.
 
-Once you call the class, the request will be sent an the information will be stored inside the `player_info` variable. 
+Once you call the class, the request will be sent and the information will be stored inside the `player_info` variable. 
 
 As of v1.1.0, we now support custom proxy, header, and timeout settings on every request.
 
