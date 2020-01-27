@@ -91,9 +91,6 @@ class NBAHTTP:
 
         if type(request_proxy) == list:
             request_proxy = random.choice(request_proxy)
-        print(request_proxy)
-        from datetime import datetime
-        print(datetime.now())
 
         proxies = None
         if request_proxy:
