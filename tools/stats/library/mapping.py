@@ -151,6 +151,7 @@ endpoint_list = [
     'TeamFranchiseLeaders',
     'TeamFranchiseLeadersRank',
     'TeamGameLog',
+    'TeamGameLogs',
     'TeamGameSplitsStats',
     'TeamGameStreakFinder',
     'TeamGeneralSplitsStats',
