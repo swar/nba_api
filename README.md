@@ -1,12 +1,13 @@
 [![PyPI](https://img.shields.io/pypi/v/nba_api.svg?longCache=true&style=for-the-badge)](https://pypi.python.org/pypi/nba_api)
 [![CircleCI (all branches)](https://img.shields.io/circleci/project/github/swar/nba_api.svg?style=for-the-badge)](https://circleci.com/gh/swar/nba_api) 
 [![GitHub](https://img.shields.io/github/license/swar/nba_api.svg?style=for-the-badge)](https://pypi.python.org/pypi/nba_api)
+[![GitHub](https://img.shields.io/pypi/dm/nba_api.svg?style=for-the-badge)](https://pepy.tech/project/nba-api)
 
 # nba_api
 
 #### An API Client package to access the APIs for NBA.com
 
-##### Development Version: v1.1.5
+##### Development Version: v1.1.6
 
 `nba_api` is an API Client for `www.nba.com`. This package is meant to make the API Endpoints more accessible and to provide extensive documentation.
 

@@ -1,3 +1,16 @@
+# `v1.1.6`
+#### `2020-01-27`
+`stats.nba.com`
+* Updating Headers for New Requirements [#126](https://github.com/swar/nba_api/pull/126)
+* Updates to Static Players Data 
+* Added Proxy List Support
+* Adding endpoint [#102](https://github.com/swar/nba_api/issues/102)
+  * TeamGameLogs
+
+`Tools`
+* Added Parameter Overrides for Bad Parameter Analysis [#99](https://github.com/swar/nba_api/issues/99)
+
+
 # `v1.1.5`
 #### `2019-11-09`
 `stats.nba.com`
