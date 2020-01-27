@@ -65,6 +65,12 @@ missing_required_parameters = {
 }
 
 
+parameter_override = {
+    'PlayerGameLogs': {'SeasonYear': 'Season'},
+    'TeamGameLogs': {'SeasonYear': 'Season'},
+}
+
+
 def get_patterns_from_response(nba_stats_response):
     parameter_patterns = {}
 
@@ -279,6 +285,28 @@ def invalid_values_test(endpoint, all_params_errors):
     return parameter_patterns
 
 
+def clean_parameters(endpoint, all_parameters, required_parameters, nullable_parameters, parameter_patterns):
+    if endpoint not in parameter_override:
+        return all_parameters, required_parameters, nullable_parameters, parameter_patterns
+
+    parameters = parameter_override[endpoint]
+    for old_parameter, new_parameter in parameters.items():
+        if old_parameter in all_parameters:
+            all_parameters.remove(old_parameter)
+            all_parameters.append(new_parameter)
+        if old_parameter in required_parameters:
+            required_parameters.remove(old_parameter)
+            required_parameters.append(new_parameter)
+        if old_parameter in nullable_parameters:
+            nullable_parameters.remove(old_parameter)
+            nullable_parameters.append(new_parameter)
+        if old_parameter in parameter_patterns:
+            parameter_patterns[new_parameter] = parameter_patterns[old_parameter]
+            del parameter_patterns[old_parameter]
+
+    return all_parameters, required_parameters, nullable_parameters, parameter_patterns
+
+
 def analyze_endpoint(endpoint, pause=1):
     # Testing endpoint with parameters that throw a require flag.
     status, required_parameters, required_params, required_params_errors = required_parameters_test(endpoint=endpoint)
@@ -307,6 +335,14 @@ def analyze_endpoint(endpoint, pause=1):
     if len(parameter_patterns) != len(all_parameters):
         print(endpoint, 'length of patterns does not equal all our parameters', parameter_patterns, all_parameters)
         status = 'invalid'
+
+    all_parameters, required_parameters, nullable_parameters, parameter_patterns = clean_parameters(
+        endpoint=endpoint,
+        all_parameters=all_parameters,
+        required_parameters=required_parameters,
+        nullable_parameters=nullable_parameters,
+        parameter_patterns=parameter_patterns
+    )
 
     all_parameters.sort()
     required_parameters.sort()
