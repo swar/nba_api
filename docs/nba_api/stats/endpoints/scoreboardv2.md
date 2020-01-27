@@ -5,7 +5,7 @@
 >[https://stats.nba.com/stats/scoreboardv2](https://stats.nba.com/stats/scoreboardv2)
 
 ##### Valid URL
->[https://stats.nba.com/stats/scoreboardv2?DayOffset=0&GameDate=2019-11-09&LeagueID=00](https://stats.nba.com/stats/scoreboardv2?DayOffset=0&GameDate=2019-11-09&LeagueID=00)
+>[https://stats.nba.com/stats/scoreboardv2?DayOffset=0&GameDate=2020-01-27&LeagueID=00](https://stats.nba.com/stats/scoreboardv2?DayOffset=0&GameDate=2020-01-27&LeagueID=00)
 
 ## Parameters
 API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
@@ -199,7 +199,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         "WinProbability": []
     },
     "endpoint": "ScoreboardV2",
-    "last_validated_date": "2019-11-09",
+    "last_validated_date": "2020-01-27",
     "nullable_parameters": [],
     "parameter_patterns": {
         "DayOffset": "^-{0,1}\\d+$",
@@ -220,4 +220,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2019-11-09
+Last validated 2020-01-27

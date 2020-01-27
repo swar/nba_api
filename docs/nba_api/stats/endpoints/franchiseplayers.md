@@ -56,7 +56,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "FranchisePlayers",
-    "last_validated_date": "2019-11-09",
+    "last_validated_date": "2020-01-27",
     "nullable_parameters": [],
     "parameter_patterns": {
         "LeagueID": "(00)|(20)|(10)",
@@ -80,4 +80,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2019-11-09
+Last validated 2020-01-27

@@ -17,7 +17,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 ## Data Sets
 #### Coaches `coaches`
 ```text
-['TEAM_ID', 'SEASON', 'COACH_ID', 'FIRST_NAME', 'LAST_NAME', 'COACH_NAME', 'COACH_CODE', 'IS_ASSISTANT', 'COACH_TYPE', 'SCHOOL', 'SORT_SEQUENCE']
+['TEAM_ID', 'SEASON', 'COACH_ID', 'FIRST_NAME', 'LAST_NAME', 'COACH_NAME', 'IS_ASSISTANT', 'COACH_TYPE', 'SORT_SEQUENCE']
 ```
 
 #### CommonTeamRoster `common_team_roster`
@@ -37,10 +37,8 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
             "FIRST_NAME",
             "LAST_NAME",
             "COACH_NAME",
-            "COACH_CODE",
             "IS_ASSISTANT",
             "COACH_TYPE",
-            "SCHOOL",
             "SORT_SEQUENCE"
         ],
         "CommonTeamRoster": [
@@ -60,7 +58,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "CommonTeamRoster",
-    "last_validated_date": "2019-11-09",
+    "last_validated_date": "2020-01-27",
     "nullable_parameters": [
         "LeagueID"
     ],
@@ -82,4 +80,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2019-11-09
+Last validated 2020-01-27

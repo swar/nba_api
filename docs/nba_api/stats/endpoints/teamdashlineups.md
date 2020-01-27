@@ -170,7 +170,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "TeamDashLineups",
-    "last_validated_date": "2019-11-09",
+    "last_validated_date": "2020-01-27",
     "nullable_parameters": [
         "DateFrom",
         "DateTo",
@@ -267,4 +267,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2019-11-09
+Last validated 2020-01-27

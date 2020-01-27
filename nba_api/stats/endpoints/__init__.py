@@ -207,6 +207,7 @@ from .teamdashboardbyteamperformance import TeamDashboardByTeamPerformance
 from .teamdashboardbyyearoveryear import TeamDashboardByYearOverYear
 from .teamdetails import TeamDetails
 from .teamgamelog import TeamGameLog
+from .teamgamelogs import TeamGameLogs
 from .teamgamestreakfinder import TeamGameStreakFinder
 from .teamhistoricalleaders import TeamHistoricalLeaders
 from .teaminfocommon import TeamInfoCommon

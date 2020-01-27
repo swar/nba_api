@@ -136,6 +136,7 @@ deferred_endpoints = [
     DeferredEndpoint(ep.TeamDashboardByYearOverYear, team_id='1610612739'),
     DeferredEndpoint(ep.TeamDetails, team_id='1610612739'),
     DeferredEndpoint(ep.TeamGameLog, team_id='1610612739'),
+    DeferredEndpoint(ep.TeamGameLogs, team_id_nullable='1610612739'),
     DeferredEndpoint(ep.TeamGameStreakFinder),
     DeferredEndpoint(ep.TeamHistoricalLeaders, team_id='1610612739'),
     DeferredEndpoint(ep.TeamInfoCommon, team_id='1610612739'),
