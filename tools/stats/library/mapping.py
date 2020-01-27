@@ -409,12 +409,12 @@ parameter_variations = {
     'GameSegment': {
         'default_py_value': 'GameSegment.default',
         'parameter_value': GameSegment.default,
-        'parameter_error_value': 0,
+        'parameter_error_value': '234',
     },
     'GameSegmentNullable': {
         'default_py_value': 'GameSegmentNullable.default',
         'parameter_value': GameSegmentNullable.default,
-        'parameter_error_value': 0,
+        'parameter_error_value': '234',
     },
     'GeneralRangeNullable': {
         'default_py_value': "''",
