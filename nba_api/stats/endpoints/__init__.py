@@ -96,6 +96,7 @@ __all__ = [
     'teamdashboardbyyearoveryear',
     'teamdetails',
     'teamgamelog',
+    'teamgamelogs',
     'teamgamestreakfinder',
     'teamhistoricalleaders',
     'teaminfocommon',
