@@ -1,4 +1,4 @@
-# `v1.1.7`
+# `v1.1.8`
 #### `2020-01-27`
 `stats.nba.com`
 * Updating Headers for New Requirements [#126](https://github.com/swar/nba_api/pull/126)
@@ -9,6 +9,12 @@
 
 `Tools`
 * Added Parameter Overrides for Bad Parameter Analysis [#99](https://github.com/swar/nba_api/issues/99)
+
+
+# `v1.1.7`
+#### `2020-01-27`
+##### SCRAPPED
+
 
 # `v1.1.6`
 #### `2020-01-27`
