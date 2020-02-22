@@ -25,6 +25,19 @@ Please feel free to contribute and have an open discussion regarding improvement
 1. `stats.nba.com` - `stats`
 
 
+# Have Questions or Need Help?
+
+Please try to avoid sending questions to my personal email that regard researching a solution to your specific problem. I don't mind helping, but the library has been setup with expansive documentation that should be checked first prior to reaching out to me personally. Alternatively, there are other places where you can ask for general advice that has been listed below.
+
+## Slack Channel
+There has been a public slack channel that has been setup for people to chat and receive help.
+- https://join.slack.com/t/nbaapi/shared_invite/enQtOTY0MjIwMTI2ODIwLWIzZGFmMjQ4MDk4MTVmMTA2NWEwYmQzZDRiYTM3NDI4OWY5NGJiY2Q1M2EwZGUzOTQ1MTk4MDEyZGI1NGM2ZDI
+
+## Stack Overflow
+A tag has been set up for people to use when asking for help on Stack Overflow. Please tag posts with the `nba-api` tag.
+- https://stackoverflow.com/questions/tagged/nba-api
+
+
 # Use
 
 ## Installation
