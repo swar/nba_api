@@ -41,6 +41,7 @@ __all__ = [
     'leaguedashptstats',
     'leaguedashptteamdefend',
     'leaguedashteamclutch',
+    'leaguedashoppptshot'
     'leaguedashteamptshot',
     'leaguedashteamshotlocations',
     'leaguedashteamstats',
@@ -146,6 +147,7 @@ from .leaderstiles import LeadersTiles
 from .leaguedashlineups import LeagueDashLineups
 from .leaguedashplayerbiostats import LeagueDashPlayerBioStats
 from .leaguedashplayerclutch import LeagueDashPlayerClutch
+from .leaguedashoppptshot import LeagueDashOppPtShot
 from .leaguedashplayerptshot import LeagueDashPlayerPtShot
 from .leaguedashplayershotlocations import LeagueDashPlayerShotLocations
 from .leaguedashplayerstats import LeagueDashPlayerStats
