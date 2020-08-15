@@ -79,3 +79,11 @@ This function will load the contents of the `file_name` into a dictionary.
 ### `analyze_and_save_all_endpoints`( \[_`endpoints=endpoint_list`_, _`file_path=None`_, _`file_name='analysis.json'`_, _`pause=1`_\] )
 
 This function will analyze and save all endpoints into JSON file at the `file_path`. Please note that this function will potentially initiate 100s of requests. Each test has a maximum of 5 requests and these fetches can add up depending on the amount of endpoints.
+
+### `analyze_endpoint_with_attempts`(_`endpoint`_ \[, _`pause=1`_, _`attempts=5`_\] )
+
+This function will analyze an endpoint up to the amount of attempts specified. It helps when random exceptions are being thrown during this process.
+
+### `analyze_all_endpoints_with_threading`( \[_`endpoints=endpoint_list`_, _`pause=1`_\] )
+
+This function will analyze all endpoints with threading to increase the speed of the analysis. Please note that this function will potentially initiate 100s of requests. Each test has a maximum of 5 requests and these fetches can add up depending on the amount of endpoints.
