@@ -45,7 +45,7 @@ A tag has been set up for people to use when asking for help on Stack Overflow. 
 pip install nba_api
 ```
 Required and Optional Packages:
-- [requests](http://www.python-requests.org/en/latest/)
+- [requests](https://requests.readthedocs.io/en/master/)
 - [pandas](https://pandas.pydata.org/) (optional)
 
 
