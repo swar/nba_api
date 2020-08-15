@@ -10,7 +10,7 @@
 ## Parameters
 API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 ------------ | ------------ | :-----------: | :---: | :---:
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `(00)\|(20)\|(10)` | `Y` |  | 
+[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id |  | `Y` |  | 
 [_**PerMode**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PerMode) | per_mode_simple | `^(Totals)\|(PerGame)$` | `Y` |  | 
 [_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season |  | `Y` |  | 
 [_**SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_all_star | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star)$` | `Y` |  | 
@@ -80,7 +80,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "LeagueDashPlayerBioStats",
-    "last_validated_date": "2020-01-27",
+    "last_validated_date": "2020-08-15",
     "nullable_parameters": [
         "College",
         "Conference",
@@ -123,7 +123,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
         "Height": null,
         "LastNGames": null,
-        "LeagueID": "(00)|(20)|(10)",
+        "LeagueID": null,
         "Location": "^((Home)|(Road))?$",
         "Month": null,
         "OpponentTeamID": null,
@@ -186,4 +186,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2020-01-27
+Last validated 2020-08-15

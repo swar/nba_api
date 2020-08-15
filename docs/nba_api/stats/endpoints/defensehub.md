@@ -139,7 +139,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "DefenseHub",
-    "last_validated_date": "2020-01-27",
+    "last_validated_date": "2020-08-15",
     "nullable_parameters": [],
     "parameter_patterns": {
         "GameScope": "^(Season)|(Last 10)|(Yesterday)|(Finals)$",
@@ -169,4 +169,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2020-01-27
+Last validated 2020-08-15

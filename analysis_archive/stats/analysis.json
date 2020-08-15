@@ -1,13 +1,13 @@
 {
     "AllPlayers": {
         "endpoint": "AllPlayers",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "AllStarBallotPredictor": {
         "data_sets": {},
         "endpoint": "AllStarBallotPredictor",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EastPlayer1": null,
@@ -58,7 +58,7 @@
             ]
         },
         "endpoint": "AssistLeaders",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "LeagueID": "^\\d{2}$",
@@ -90,7 +90,7 @@
             ]
         },
         "endpoint": "AssistTracker",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "College",
             "Conference",
@@ -133,7 +133,7 @@
             "GameScope": "((Yesterday)|(Last 10))?",
             "Height": null,
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "Month": null,
             "OpponentTeamID": null,
@@ -186,12 +186,12 @@
     },
     "AssistTrackerStats": {
         "endpoint": "AssistTrackerStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "BoxScoreAdvanced": {
         "endpoint": "BoxScoreAdvanced",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "BoxScoreAdvancedV2": {
@@ -262,7 +262,7 @@
             ]
         },
         "endpoint": "BoxScoreAdvancedV2",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EndPeriod": null,
@@ -323,7 +323,7 @@
             ]
         },
         "endpoint": "BoxScoreDefensive",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameID": "^\\d{10}$"
@@ -338,7 +338,7 @@
     },
     "BoxScoreFourFactors": {
         "endpoint": "BoxScoreFourFactors",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "BoxScoreFourFactorsV2": {
@@ -380,7 +380,7 @@
             ]
         },
         "endpoint": "BoxScoreFourFactorsV2",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EndPeriod": null,
@@ -452,7 +452,7 @@
             ]
         },
         "endpoint": "BoxScoreMatchups",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameID": "^\\d{10}$"
@@ -467,7 +467,7 @@
     },
     "BoxScoreMisc": {
         "endpoint": "BoxScoreMisc",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "BoxScoreMiscV2": {
@@ -517,7 +517,7 @@
             ]
         },
         "endpoint": "BoxScoreMiscV2",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EndPeriod": null,
@@ -607,7 +607,7 @@
             ]
         },
         "endpoint": "BoxScorePlayerTrackV2",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameID": "^\\d{10}$"
@@ -622,12 +622,12 @@
     },
     "BoxScorePlayerTracking": {
         "endpoint": "BoxScorePlayerTracking",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "BoxScoreScoring": {
         "endpoint": "BoxScoreScoring",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "BoxScoreScoringV2": {
@@ -683,7 +683,7 @@
             ]
         },
         "endpoint": "BoxScoreScoringV2",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EndPeriod": null,
@@ -713,7 +713,7 @@
     },
     "BoxScoreSummary": {
         "endpoint": "BoxScoreSummary",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "BoxScoreSummaryV2": {
@@ -831,7 +831,7 @@
             ]
         },
         "endpoint": "BoxScoreSummaryV2",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameID": "^\\d{10}$"
@@ -846,7 +846,7 @@
     },
     "BoxScoreTraditional": {
         "endpoint": "BoxScoreTraditional",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "BoxScoreTraditionalV2": {
@@ -937,7 +937,7 @@
             ]
         },
         "endpoint": "BoxScoreTraditionalV2",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EndPeriod": null,
@@ -967,7 +967,7 @@
     },
     "BoxScoreUsage": {
         "endpoint": "BoxScoreUsage",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "BoxScoreUsageV2": {
@@ -1029,7 +1029,7 @@
             ]
         },
         "endpoint": "BoxScoreUsageV2",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EndPeriod": null,
@@ -1077,7 +1077,7 @@
             ]
         },
         "endpoint": "CommonAllPlayers",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "IsOnlyCurrentSeason": null,
@@ -1108,6 +1108,7 @@
                 "DISPLAY_FIRST_LAST",
                 "DISPLAY_LAST_COMMA_FIRST",
                 "DISPLAY_FI_LAST",
+                "PLAYER_SLUG",
                 "BIRTHDATE",
                 "SCHOOL",
                 "COUNTRY",
@@ -1144,7 +1145,7 @@
             ]
         },
         "endpoint": "CommonPlayerInfo",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "LeagueID"
         ],
@@ -1172,12 +1173,12 @@
             ]
         },
         "endpoint": "CommonPlayoffSeries",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "SeriesID"
         ],
         "parameter_patterns": {
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Season": null,
             "SeriesID": null
         },
@@ -1210,6 +1211,7 @@
                 "SEASON",
                 "LeagueID",
                 "PLAYER",
+                "PLAYER_SLUG",
                 "NUM",
                 "POSITION",
                 "HEIGHT",
@@ -1222,12 +1224,12 @@
             ]
         },
         "endpoint": "CommonTeamRoster",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "LeagueID"
         ],
         "parameter_patterns": {
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Season": null,
             "TeamID": null
         },
@@ -1253,7 +1255,7 @@
             ]
         },
         "endpoint": "CommonTeamYears",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "LeagueID": "^\\d{2}$"
@@ -1334,7 +1336,7 @@
             ]
         },
         "endpoint": "DefenseHub",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameScope": "^(Season)|(Last 10)|(Yesterday)|(Finals)$",
@@ -1380,10 +1382,10 @@
             ]
         },
         "endpoint": "DraftCombineDrillResults",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
-            "LeagueID": "^(00)|(10)|(20)$",
+            "LeagueID": null,
             "SeasonYear": null
         },
         "parameters": [
@@ -1432,10 +1434,10 @@
             ]
         },
         "endpoint": "DraftCombineNonStationaryShooting",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
-            "LeagueID": "^(00)|(10)|(20)$",
+            "LeagueID": null,
             "SeasonYear": null
         },
         "parameters": [
@@ -1472,10 +1474,10 @@
             ]
         },
         "endpoint": "DraftCombinePlayerAnthro",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
-            "LeagueID": "^(00)|(10)|(20)$",
+            "LeagueID": null,
             "SeasonYear": null
         },
         "parameters": [
@@ -1490,7 +1492,7 @@
     },
     "DraftCombinePlayerMeasurements": {
         "endpoint": "DraftCombinePlayerMeasurements",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "DraftCombineSpotShooting": {
@@ -1550,10 +1552,10 @@
             ]
         },
         "endpoint": "DraftCombineSpotShooting",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
-            "LeagueID": "^(00)|(10)|(20)$",
+            "LeagueID": null,
             "SeasonYear": null
         },
         "parameters": [
@@ -1619,10 +1621,10 @@
             ]
         },
         "endpoint": "DraftCombineStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
-            "LeagueID": "^(00)|(10)|(20)$",
+            "LeagueID": null,
             "SeasonYear": "^(\\d{4}-\\d{2})|(All Time)$"
         },
         "parameters": [
@@ -1654,7 +1656,7 @@
             ]
         },
         "endpoint": "DraftHistory",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "College",
             "OverallPick",
@@ -1715,7 +1717,7 @@
             ]
         },
         "endpoint": "FantasyWidget",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -1821,7 +1823,7 @@
             ]
         },
         "endpoint": "FranchiseHistory",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "LeagueID": "^\\d{2}$"
@@ -1856,12 +1858,12 @@
             ]
         },
         "endpoint": "FranchiseLeaders",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "LeagueID"
         ],
         "parameter_patterns": {
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "TeamID": null
         },
         "parameters": [
@@ -1905,10 +1907,10 @@
             ]
         },
         "endpoint": "FranchisePlayers",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "PerMode": "^(Totals)|(PerGame)|(MinutesPer)|(Per48)|(Per40)|(Per36)|(PerMinute)|(PerPossession)|(PerPlay)|(Per100Possessions)|(Per100Plays)$",
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
             "TeamID": null
@@ -1929,12 +1931,12 @@
     },
     "GLeaguePredictor": {
         "endpoint": "GLeaguePredictor",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "HomePage": {
         "endpoint": "HomePage",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "HomePageLeaders": {
@@ -1972,7 +1974,7 @@
             ]
         },
         "endpoint": "HomePageLeaders",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameScope": "^(Season)|(Last 10)|(Yesterday)|(Finals)$",
@@ -2063,7 +2065,7 @@
             ]
         },
         "endpoint": "HomePageV2",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameScope": "^(Season)|(Last 10)|(Yesterday)|(Finals)$",
@@ -2133,7 +2135,7 @@
             ]
         },
         "endpoint": "InfographicFanDuelPlayer",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameID": "^\\d{10}$"
@@ -2178,7 +2180,7 @@
             ]
         },
         "endpoint": "LeadersTiles",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameScope": "^(Season)|(Last 10)|(Yesterday)|(Finals)$",
@@ -2272,7 +2274,7 @@
             ]
         },
         "endpoint": "LeagueDashLineups",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "Conference",
             "DateFrom",
@@ -2297,7 +2299,7 @@
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "GroupQuantity": null,
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$",
             "Month": null,
@@ -2393,7 +2395,7 @@
             ]
         },
         "endpoint": "LeagueDashOppPtShot",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "CloseDefDistRange",
             "Conference",
@@ -2511,7 +2513,7 @@
             ]
         },
         "endpoint": "LeagueDashPlayerBioStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "College",
             "Conference",
@@ -2554,7 +2556,7 @@
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "Height": null,
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "Month": null,
             "OpponentTeamID": null,
@@ -2687,7 +2689,7 @@
             ]
         },
         "endpoint": "LeagueDashPlayerClutch",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "College",
             "Conference",
@@ -2729,7 +2731,7 @@
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "Height": null,
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$",
             "Month": null,
@@ -2850,7 +2852,7 @@
             ]
         },
         "endpoint": "LeagueDashPlayerPtShot",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "CloseDefDistRange",
             "College",
@@ -3018,7 +3020,7 @@
             ]
         },
         "endpoint": "LeagueDashPlayerShotLocations",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "College",
             "Conference",
@@ -3059,7 +3061,7 @@
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "Height": null,
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Opponent)$",
             "Month": null,
@@ -3220,7 +3222,7 @@
             ]
         },
         "endpoint": "LeagueDashPlayerStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "College",
             "Conference",
@@ -3261,7 +3263,7 @@
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "Height": null,
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$",
             "Month": null,
@@ -3371,7 +3373,7 @@
             ]
         },
         "endpoint": "LeagueDashPtDefend",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "College",
             "Conference",
@@ -3495,7 +3497,7 @@
             ]
         },
         "endpoint": "LeagueDashPtStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "College",
             "Conference",
@@ -3532,7 +3534,7 @@
             "GameScope": "((Yesterday)|(Last 10))?",
             "Height": null,
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "Month": null,
             "OpponentTeamID": null,
@@ -3624,7 +3626,7 @@
             ]
         },
         "endpoint": "LeagueDashPtTeamDefend",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "Conference",
             "DateFrom",
@@ -3760,7 +3762,7 @@
             ]
         },
         "endpoint": "LeagueDashTeamClutch",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "Conference",
             "DateFrom",
@@ -3791,7 +3793,7 @@
             "GameScope": "((Yesterday)|(Last 10))?",
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$",
             "Month": null,
@@ -3903,7 +3905,7 @@
             ]
         },
         "endpoint": "LeagueDashTeamPtShot",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "CloseDefDistRange",
             "Conference",
@@ -4041,7 +4043,7 @@
             ]
         },
         "endpoint": "LeagueDashTeamShotLocations",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "Conference",
             "DateFrom",
@@ -4071,7 +4073,7 @@
             "GameScope": "((Yesterday)|(Last 10))?",
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Opponent)$",
             "Month": null,
@@ -4216,7 +4218,7 @@
             ]
         },
         "endpoint": "LeagueDashTeamStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "Conference",
             "DateFrom",
@@ -4246,7 +4248,7 @@
             "GameScope": "((Yesterday)|(Last 10))?",
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$",
             "Month": null,
@@ -4359,7 +4361,7 @@
             ]
         },
         "endpoint": "LeagueGameFinder",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "Conference",
             "DateFrom",
@@ -4669,7 +4671,7 @@
             ]
         },
         "endpoint": "LeagueGameLog",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo"
@@ -4679,7 +4681,7 @@
             "DateFrom": null,
             "DateTo": null,
             "Direction": "^(ASC)|(DESC)$",
-            "LeagueID": "^(00)|(20)|(10)$",
+            "LeagueID": null,
             "PlayerOrTeam": "^(P)|(T)$",
             "Season": null,
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)|(All-Star)$",
@@ -4740,7 +4742,7 @@
             ]
         },
         "endpoint": "LeagueLeaders",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "ActiveFlag"
         ],
@@ -4837,7 +4839,7 @@
             ]
         },
         "endpoint": "LeaguePlayerOnDetails",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -4854,7 +4856,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$",
             "Month": null,
@@ -4951,7 +4953,7 @@
             ]
         },
         "endpoint": "LeagueSeasonMatchups",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DefPlayerID",
             "DefTeamID",
@@ -5073,7 +5075,7 @@
             ]
         },
         "endpoint": "LeagueStandings",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "SeasonYear"
         ],
@@ -5098,7 +5100,7 @@
     },
     "LineupStats": {
         "endpoint": "LineupStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayByPlay": {
@@ -5122,7 +5124,7 @@
             ]
         },
         "endpoint": "PlayByPlay",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EndPeriod": null,
@@ -5143,7 +5145,7 @@
     },
     "PlayByPlayMini": {
         "endpoint": "PlayByPlayMini",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayByPlayV2": {
@@ -5189,7 +5191,7 @@
             ]
         },
         "endpoint": "PlayByPlayV2",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "EndPeriod": null,
@@ -5228,7 +5230,7 @@
             ]
         },
         "endpoint": "PlayerAwards",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "PlayerID": null
@@ -5243,7 +5245,7 @@
     },
     "PlayerBioStats": {
         "endpoint": "PlayerBioStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayerCareerStats": {
@@ -5528,12 +5530,12 @@
             ]
         },
         "endpoint": "PlayerCareerStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "LeagueID"
         ],
         "parameter_patterns": {
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "PerMode": "^(Totals)|(PerGame)|(Per36)$",
             "PlayerID": null
         },
@@ -5550,7 +5552,7 @@
     },
     "PlayerClutchStats": {
         "endpoint": "PlayerClutchStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayerCompare": {
@@ -5609,7 +5611,7 @@
             ]
         },
         "endpoint": "PlayerCompare",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "Conference",
             "DateFrom",
@@ -5631,7 +5633,7 @@
             "Division": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$",
             "Month": null,
@@ -5705,7 +5707,7 @@
     },
     "PlayerCompareStats": {
         "endpoint": "PlayerCompareStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayerDashPtPass": {
@@ -5758,7 +5760,7 @@
             ]
         },
         "endpoint": "PlayerDashPtPass",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -5772,7 +5774,7 @@
             "DateFrom": null,
             "DateTo": null,
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "Month": null,
             "OpponentTeamID": null,
@@ -5922,7 +5924,7 @@
             ]
         },
         "endpoint": "PlayerDashPtReb",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -5938,7 +5940,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "Month": null,
             "OpponentTeamID": null,
@@ -5997,7 +5999,7 @@
     },
     "PlayerDashPtReboundLogs": {
         "endpoint": "PlayerDashPtReboundLogs",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayerDashPtShotDefend": {
@@ -6016,7 +6018,7 @@
             ]
         },
         "endpoint": "PlayerDashPtShotDefend",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -6032,7 +6034,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "Month": null,
             "OpponentTeamID": null,
@@ -6091,7 +6093,7 @@
     },
     "PlayerDashPtShotlog": {
         "endpoint": "PlayerDashPtShotlog",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayerDashPtShots": {
@@ -6245,7 +6247,7 @@
             ]
         },
         "endpoint": "PlayerDashPtShots",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -6261,7 +6263,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "Month": null,
             "OpponentTeamID": null,
@@ -7026,7 +7028,7 @@
             ]
         },
         "endpoint": "PlayerDashboardByClutch",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -7045,7 +7047,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)$",
             "Month": null,
@@ -7438,7 +7440,7 @@
             ]
         },
         "endpoint": "PlayerDashboardByGameSplits",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -7457,7 +7459,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)$",
             "Month": null,
@@ -7978,7 +7980,7 @@
             ]
         },
         "endpoint": "PlayerDashboardByGeneralSplits",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -7997,7 +7999,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)$",
             "Month": null,
@@ -8454,7 +8456,7 @@
             ]
         },
         "endpoint": "PlayerDashboardByLastNGames",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -8473,7 +8475,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)$",
             "Month": null,
@@ -8802,7 +8804,7 @@
             ]
         },
         "endpoint": "PlayerDashboardByOpponent",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -8821,7 +8823,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)$",
             "Month": null,
@@ -9153,7 +9155,7 @@
             ]
         },
         "endpoint": "PlayerDashboardByShootingSplits",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -9172,7 +9174,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)$",
             "Month": null,
@@ -9507,7 +9509,7 @@
             ]
         },
         "endpoint": "PlayerDashboardByTeamPerformance",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -9526,7 +9528,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)$",
             "Month": null,
@@ -9733,7 +9735,7 @@
             ]
         },
         "endpoint": "PlayerDashboardByYearOverYear",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -9752,7 +9754,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)$",
             "Month": null,
@@ -9823,7 +9825,7 @@
     },
     "PlayerDefenseStats": {
         "endpoint": "PlayerDefenseStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayerFantasyProfile": {
@@ -10001,12 +10003,12 @@
             ]
         },
         "endpoint": "PlayerFantasyProfile",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "LeagueID"
         ],
         "parameter_patterns": {
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "MeasureType": "^(Base)$",
             "PaceAdjust": "^(N)$",
             "PerMode": "^(Totals)|(PerGame)|(Per36)$",
@@ -10077,13 +10079,13 @@
             ]
         },
         "endpoint": "PlayerFantasyProfileBarGraph",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "LeagueID",
             "SeasonType"
         ],
         "parameter_patterns": {
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "PlayerID": null,
             "Season": null,
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$"
@@ -10133,7 +10135,7 @@
             ]
         },
         "endpoint": "PlayerGameLog",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -10142,7 +10144,7 @@
         "parameter_patterns": {
             "DateFrom": null,
             "DateTo": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "PlayerID": null,
             "Season": null,
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All-Star)|(All Star)$"
@@ -10232,7 +10234,7 @@
             ]
         },
         "endpoint": "PlayerGameLogs",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -10307,12 +10309,12 @@
     },
     "PlayerGameLogsStats": {
         "endpoint": "PlayerGameLogsStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayerGameSplitsStats": {
         "endpoint": "PlayerGameSplitsStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayerGameStreakFinder": {
@@ -10330,7 +10332,7 @@
             ]
         },
         "endpoint": "PlayerGameStreakFinder",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "ActiveStreaksOnly",
             "Conference",
@@ -10609,17 +10611,17 @@
     },
     "PlayerGeneralSplitsStats": {
         "endpoint": "PlayerGeneralSplitsStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayerInfo": {
         "endpoint": "PlayerInfo",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayerLastNGamesStats": {
         "endpoint": "PlayerLastNGamesStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayerNextNGames": {
@@ -10641,12 +10643,12 @@
             ]
         },
         "endpoint": "PlayerNextNGames",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "LeagueID"
         ],
         "parameter_patterns": {
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "NumberOfGames": null,
             "PlayerID": null,
             "Season": "^(\\d{4}-\\d{2})|(ALL)$",
@@ -10669,23 +10671,23 @@
     },
     "PlayerOnDetails": {
         "endpoint": "PlayerOnDetails",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayerOpponentStats": {
         "endpoint": "PlayerOpponentStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayerPassesStats": {
         "endpoint": "PlayerPassesStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayerProfile": {
         "data_sets": {},
         "endpoint": "PlayerProfile",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GraphEndSeason": null,
@@ -10720,14 +10722,13 @@
         "data_sets": {
             "CareerHighs": [
                 "PLAYER_ID",
-                "GAME_ID",
                 "GAME_DATE",
                 "VS_TEAM_ID",
                 "VS_TEAM_CITY",
                 "VS_TEAM_NAME",
                 "VS_TEAM_ABBREVIATION",
                 "STAT",
-                "STAT_VALUE",
+                "STATS_VALUE",
                 "STAT_ORDER",
                 "DATE_EST"
             ],
@@ -10877,14 +10878,13 @@
             ],
             "SeasonHighs": [
                 "PLAYER_ID",
-                "GAME_ID",
                 "GAME_DATE",
                 "VS_TEAM_ID",
                 "VS_TEAM_CITY",
                 "VS_TEAM_NAME",
                 "VS_TEAM_ABBREVIATION",
                 "STAT",
-                "STAT_VALUE",
+                "STATS_VALUE",
                 "STAT_ORDER",
                 "DATE_EST"
             ],
@@ -11093,12 +11093,12 @@
             ]
         },
         "endpoint": "PlayerProfileV2",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "LeagueID"
         ],
         "parameter_patterns": {
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "PerMode": "^(Totals)|(PerGame)|(Per36)$",
             "PlayerID": null
         },
@@ -11115,22 +11115,22 @@
     },
     "PlayerReboundsStats": {
         "endpoint": "PlayerReboundsStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayerShotChartDetail": {
         "endpoint": "PlayerShotChartDetail",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayerShotsStats": {
         "endpoint": "PlayerShotsStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayerTeamPerformanceStats": {
         "endpoint": "PlayerTeamPerformanceStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayerVsPlayer": {
@@ -11311,7 +11311,7 @@
             ]
         },
         "endpoint": "PlayerVsPlayer",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -11328,7 +11328,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$",
             "Month": null,
@@ -11398,58 +11398,58 @@
     },
     "PlayerYearOverYearStats": {
         "endpoint": "PlayerYearOverYearStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayersCareerStats": {
         "endpoint": "PlayersCareerStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayersClutchStats": {
         "endpoint": "PlayersClutchStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayersDefenseStats": {
         "endpoint": "PlayersDefenseStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayersGeneralStats": {
         "endpoint": "PlayersGeneralStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayersHustleLeaders": {
         "endpoint": "PlayersHustleLeaders",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayersHustleStats": {
         "endpoint": "PlayersHustleStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayersShotLocationStats": {
         "endpoint": "PlayersShotLocationStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayersShotStats": {
         "endpoint": "PlayersShotStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayersTrackingStats": {
         "endpoint": "PlayersTrackingStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "PlayersVsPlayers": {
         "data_sets": {},
         "endpoint": "PlayersVsPlayers",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "DateFrom": null,
@@ -11576,6 +11576,7 @@
                 "CONFERENCE",
                 "RANK",
                 "TEAM",
+                "TEAM_SLUG",
                 "TEAM_ID",
                 "WINS",
                 "LOSSES",
@@ -11595,8 +11596,43 @@
                 "CLINCHED_PLAYOFFS",
                 "CLINCHED_CONFERENCE",
                 "CLINCHED_DIVISION",
+                "Clinched_Play_In",
                 "ELIMINATED_PLAYOFFS",
-                "SOSA_REMAINING"
+                "SOSA_REMAINING",
+                "ReturnToPlay_East_PI_Flag",
+                "ReturnToPlay_Already_Eliminated",
+                "Seeding_Game_1_Outcome",
+                "Seeding_Game_2_Outcome",
+                "Seeding_Game_3_Outcome",
+                "Seeding_Game_4_Outcome",
+                "Seeding_Game_5_Outcome",
+                "Seeding_Game_6_Outcome",
+                "Seeding_Game_7_Outcome",
+                "Seeding_Game_8_Outcome",
+                "Seeding_Game_1_ID",
+                "Seeding_Game_2_ID",
+                "Seeding_Game_3_ID",
+                "Seeding_Game_4_ID",
+                "Seeding_Game_5_ID",
+                "Seeding_Game_6_ID",
+                "Seeding_Game_7_ID",
+                "Seeding_Game_8_ID",
+                "Seeding_Game_1_Opponent",
+                "Seeding_Game_2_Opponent",
+                "Seeding_Game_3_Opponent",
+                "Seeding_Game_4_Opponent",
+                "Seeding_Game_5_Opponent",
+                "Seeding_Game_6_Opponent",
+                "Seeding_Game_7_Opponent",
+                "Seeding_Game_8_Opponent",
+                "Seeding_Game_1_Label",
+                "Seeding_Game_2_Label",
+                "Seeding_Game_3_Label",
+                "Seeding_Game_4_Label",
+                "Seeding_Game_5_Label",
+                "Seeding_Game_6_Label",
+                "Seeding_Game_7_Label",
+                "Seeding_Game_8_Label"
             ],
             "WestConfPlayoffPicture": [
                 "CONFERENCE",
@@ -11623,6 +11659,7 @@
                 "CONFERENCE",
                 "RANK",
                 "TEAM",
+                "TEAM_SLUG",
                 "TEAM_ID",
                 "WINS",
                 "LOSSES",
@@ -11642,12 +11679,47 @@
                 "CLINCHED_PLAYOFFS",
                 "CLINCHED_CONFERENCE",
                 "CLINCHED_DIVISION",
+                "Clinched_Play_In",
                 "ELIMINATED_PLAYOFFS",
-                "SOSA_REMAINING"
+                "SOSA_REMAINING",
+                "ReturnToPlay_West_PI_Flag",
+                "ReturnToPlay_Already_Eliminated",
+                "Seeding_Game_1_Outcome",
+                "Seeding_Game_2_Outcome",
+                "Seeding_Game_3_Outcome",
+                "Seeding_Game_4_Outcome",
+                "Seeding_Game_5_Outcome",
+                "Seeding_Game_6_Outcome",
+                "Seeding_Game_7_Outcome",
+                "Seeding_Game_8_Outcome",
+                "Seeding_Game_1_ID",
+                "Seeding_Game_2_ID",
+                "Seeding_Game_3_ID",
+                "Seeding_Game_4_ID",
+                "Seeding_Game_5_ID",
+                "Seeding_Game_6_ID",
+                "Seeding_Game_7_ID",
+                "Seeding_Game_8_ID",
+                "Seeding_Game_1_Opponent",
+                "Seeding_Game_2_Opponent",
+                "Seeding_Game_3_Opponent",
+                "Seeding_Game_4_Opponent",
+                "Seeding_Game_5_Opponent",
+                "Seeding_Game_6_Opponent",
+                "Seeding_Game_7_Opponent",
+                "Seeding_Game_8_Opponent",
+                "Seeding_Game_1_Label",
+                "Seeding_Game_2_Label",
+                "Seeding_Game_3_Label",
+                "Seeding_Game_4_Label",
+                "Seeding_Game_5_Label",
+                "Seeding_Game_6_Label",
+                "Seeding_Game_7_Label",
+                "Seeding_Game_8_Label"
             ]
         },
         "endpoint": "PlayoffPicture",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "LeagueID": "^\\d{2}$",
@@ -11665,7 +11737,7 @@
     },
     "PlayoffSeries": {
         "endpoint": "PlayoffSeries",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "Scoreboard": {
@@ -11686,7 +11758,8 @@
                 "L",
                 "W_PCT",
                 "HOME_RECORD",
-                "ROAD_RECORD"
+                "ROAD_RECORD",
+                "RETURNTOPLAY"
             ],
             "GameHeader": [
                 "GAME_DATE_EST",
@@ -11774,7 +11847,7 @@
             ]
         },
         "endpoint": "Scoreboard",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "DayOffset": "^-{0,1}\\d+$",
@@ -11795,7 +11868,7 @@
     },
     "ScoreboardMini": {
         "endpoint": "ScoreboardMini",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "ScoreboardV2": {
@@ -11816,7 +11889,8 @@
                 "L",
                 "W_PCT",
                 "HOME_RECORD",
-                "ROAD_RECORD"
+                "ROAD_RECORD",
+                "RETURNTOPLAY"
             ],
             "GameHeader": [
                 "GAME_DATE_EST",
@@ -11929,7 +12003,7 @@
             "WinProbability": []
         },
         "endpoint": "ScoreboardV2",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "DayOffset": "^-{0,1}\\d+$",
@@ -11987,7 +12061,7 @@
             ]
         },
         "endpoint": "ShotChartDetail",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "AheadBehind",
             "ClutchTime",
@@ -12024,7 +12098,7 @@
             "GameID": "^(\\d{10})?$",
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "Month": null,
             "OpponentTeamID": null,
@@ -12143,7 +12217,7 @@
             ]
         },
         "endpoint": "ShotChartLineupDetail",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "ContextFilter",
             "DateFrom",
@@ -12256,7 +12330,7 @@
             ]
         },
         "endpoint": "SynergyPlayTypes",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "PlayType",
             "TypeGrouping"
@@ -12290,7 +12364,7 @@
     },
     "TeamAndPlayerVsPlayers": {
         "endpoint": "TeamAndPlayerVsPlayers",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamAndPlayersVsPlayers": {
@@ -12434,7 +12508,7 @@
             ]
         },
         "endpoint": "TeamAndPlayersVsPlayers",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "Conference",
             "DateFrom",
@@ -12456,7 +12530,7 @@
             "Division": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$",
             "Month": null,
@@ -12560,7 +12634,7 @@
     },
     "TeamClutchStats": {
         "endpoint": "TeamClutchStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamDashLineups": {
@@ -12683,7 +12757,7 @@
             ]
         },
         "endpoint": "TeamDashLineups",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -12705,7 +12779,7 @@
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "GroupQuantity": null,
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$",
             "Month": null,
@@ -12822,7 +12896,7 @@
             ]
         },
         "endpoint": "TeamDashPtPass",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -12836,7 +12910,7 @@
             "DateFrom": null,
             "DateTo": null,
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "Month": null,
             "OpponentTeamID": null,
@@ -12983,7 +13057,7 @@
             ]
         },
         "endpoint": "TeamDashPtReb",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -12999,7 +13073,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "Month": null,
             "OpponentTeamID": null,
@@ -13177,7 +13251,7 @@
             ]
         },
         "endpoint": "TeamDashPtShots",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -13193,7 +13267,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "Month": null,
             "OpponentTeamID": null,
@@ -13889,7 +13963,7 @@
             ]
         },
         "endpoint": "TeamDashboardByClutch",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -13908,7 +13982,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$",
             "Month": null,
@@ -14271,7 +14345,7 @@
             ]
         },
         "endpoint": "TeamDashboardByGameSplits",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -14290,7 +14364,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$",
             "Month": null,
@@ -14717,7 +14791,7 @@
             ]
         },
         "endpoint": "TeamDashboardByGeneralSplits",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -14736,7 +14810,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$",
             "Month": null,
@@ -15157,7 +15231,7 @@
             ]
         },
         "endpoint": "TeamDashboardByLastNGames",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -15176,7 +15250,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$",
             "Month": null,
@@ -15481,7 +15555,7 @@
             ]
         },
         "endpoint": "TeamDashboardByOpponent",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -15500,7 +15574,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$",
             "Month": null,
@@ -15812,7 +15886,7 @@
             ]
         },
         "endpoint": "TeamDashboardByShootingSplits",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -15831,7 +15905,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$",
             "Month": null,
@@ -16142,7 +16216,7 @@
             ]
         },
         "endpoint": "TeamDashboardByTeamPerformance",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -16161,7 +16235,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$",
             "Month": null,
@@ -16350,7 +16424,7 @@
             ]
         },
         "endpoint": "TeamDashboardByYearOverYear",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -16369,7 +16443,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$",
             "Month": null,
@@ -16494,7 +16568,7 @@
             ]
         },
         "endpoint": "TeamDetails",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "TeamID": null
@@ -16509,12 +16583,12 @@
     },
     "TeamFranchiseLeaders": {
         "endpoint": "TeamFranchiseLeaders",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamFranchiseLeadersRank": {
         "endpoint": "TeamFranchiseLeadersRank",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamGameLog": {
@@ -16550,7 +16624,7 @@
             ]
         },
         "endpoint": "TeamGameLog",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -16559,7 +16633,7 @@
         "parameter_patterns": {
             "DateFrom": null,
             "DateTo": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Season": null,
             "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All-Star)|(All Star)|(Preseason)$",
             "TeamID": null
@@ -16641,7 +16715,7 @@
             ]
         },
         "endpoint": "TeamGameLogs",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -16716,26 +16790,12 @@
     },
     "TeamGameSplitsStats": {
         "endpoint": "TeamGameSplitsStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamGameStreakFinder": {
-        "data_sets": {
-            "TeamGameStreakFinderParametersResults": [
-                "TEAM_NAME",
-                "TEAM_ID",
-                "GAMESTREAK",
-                "STARTDATE",
-                "ENDDATE",
-                "ACTIVESTREAK",
-                "NUMSEASONS",
-                "LASTSEASON",
-                "FIRSTSEASON",
-                "ABBREVIATION"
-            ]
-        },
         "endpoint": "TeamGameStreakFinder",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "ActiveStreaksOnly",
             "ActiveTeamsOnly",
@@ -17307,11 +17367,11 @@
             "WrsOPPTOV"
         ],
         "required_parameters": [],
-        "status": "success"
+        "status": "invalid"
     },
     "TeamGeneralSplitsStats": {
         "endpoint": "TeamGeneralSplitsStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamHistoricalLeaders": {
@@ -17337,7 +17397,7 @@
             ]
         },
         "endpoint": "TeamHistoricalLeaders",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "LeagueID": "^\\d{2}$",
@@ -17358,7 +17418,7 @@
     },
     "TeamInfo": {
         "endpoint": "TeamInfo",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamInfoCommon": {
@@ -17398,7 +17458,7 @@
             ]
         },
         "endpoint": "TeamInfoCommon",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "Season",
             "SeasonType"
@@ -17423,27 +17483,27 @@
     },
     "TeamLastNGamesStats": {
         "endpoint": "TeamLastNGamesStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamLineupStats": {
         "endpoint": "TeamLineupStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamOpponentStats": {
         "endpoint": "TeamOpponentStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamPassesStats": {
         "endpoint": "TeamPassesStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamPerformanceStats": {
         "endpoint": "TeamPerformanceStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamPlayerDashboard": {
@@ -17571,7 +17631,7 @@
             ]
         },
         "endpoint": "TeamPlayerDashboard",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -17590,7 +17650,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$",
             "Month": null,
@@ -17844,7 +17904,7 @@
             ]
         },
         "endpoint": "TeamPlayerOnOffDetails",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -17861,7 +17921,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$",
             "Month": null,
@@ -18019,7 +18079,7 @@
             ]
         },
         "endpoint": "TeamPlayerOnOffSummary",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -18036,7 +18096,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$",
             "Month": null,
@@ -18103,32 +18163,32 @@
     },
     "TeamPlayerStats": {
         "endpoint": "TeamPlayerStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamReboundsStats": {
         "endpoint": "TeamReboundsStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamRoster": {
         "endpoint": "TeamRoster",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamShootingSplitsStats": {
         "endpoint": "TeamShootingSplitsStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamShotChartLineupDetail": {
         "endpoint": "TeamShotChartLineupDetail",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamShotsStats": {
         "endpoint": "TeamShotsStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamVsPlayer": {
@@ -18407,7 +18467,7 @@
             ]
         },
         "endpoint": "TeamVsPlayer",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "DateFrom",
             "DateTo",
@@ -18425,7 +18485,7 @@
             "DateTo": null,
             "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
             "LastNGames": null,
-            "LeagueID": "(00)|(20)|(10)",
+            "LeagueID": null,
             "Location": "^((Home)|(Road))?$",
             "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$",
             "Month": null,
@@ -18535,7 +18595,7 @@
             ]
         },
         "endpoint": "TeamYearByYearStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "LeagueID": "^\\d{2}$",
@@ -18559,58 +18619,58 @@
     },
     "TeamYearOverYearStats": {
         "endpoint": "TeamYearOverYearStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamYears": {
         "endpoint": "TeamYears",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamsClutchStats": {
         "endpoint": "TeamsClutchStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamsDefenseStats": {
         "endpoint": "TeamsDefenseStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamsGeneralStats": {
         "endpoint": "TeamsGeneralStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamsHustleLeaders": {
         "endpoint": "TeamsHustleLeaders",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamsHustleStats": {
         "endpoint": "TeamsHustleStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamsShotLocationStats": {
         "endpoint": "TeamsShotLocationStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamsShotStats": {
         "endpoint": "TeamsShotStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "TeamsYearByYearStats": {
         "endpoint": "TeamsYearByYearStats",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
     "VideoDetails": {
         "data_sets": {},
         "endpoint": "VideoDetails",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [
             "AheadBehind",
             "ClutchTime",
@@ -18728,7 +18788,7 @@
     "VideoEvents": {
         "data_sets": {},
         "endpoint": "VideoEvents",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameEventID": null,
@@ -18764,7 +18824,7 @@
             ]
         },
         "endpoint": "VideoStatus",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameDate": null,
@@ -18811,7 +18871,7 @@
             ]
         },
         "endpoint": "WinProbabilityPBP",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "nullable_parameters": [],
         "parameter_patterns": {
             "GameID": null,
@@ -18829,7 +18889,7 @@
     },
     "WinProbabilityPlayByPlay": {
         "endpoint": "WinProbabilityPlayByPlay",
-        "last_validated_date": "2020-01-27",
+        "last_validated_date": "2020-08-15",
         "status": "deprecated"
     }
 }

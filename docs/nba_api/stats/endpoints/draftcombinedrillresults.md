@@ -10,7 +10,7 @@
 ## Parameters
 API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 ------------ | ------------ | :-----------: | :---: | :---:
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^(00)\|(10)\|(20)$` | `Y` |  | 
+[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id |  | `Y` |  | 
 [_**SeasonYear**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonYear) | season_year |  | `Y` |  | 
 
 ## Data Sets
@@ -40,10 +40,10 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "DraftCombineDrillResults",
-    "last_validated_date": "2020-01-27",
+    "last_validated_date": "2020-08-15",
     "nullable_parameters": [],
     "parameter_patterns": {
-        "LeagueID": "^(00)|(10)|(20)$",
+        "LeagueID": null,
         "SeasonYear": null
     },
     "parameters": [
@@ -58,4 +58,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2020-01-27
+Last validated 2020-08-15

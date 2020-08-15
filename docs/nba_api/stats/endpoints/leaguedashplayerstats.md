@@ -34,7 +34,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 [_**PORound**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PORound) | po_round_nullable |  |  | `Y` | 
 [_**Outcome**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Outcome) | outcome_nullable | `^((W)\|(L))?$` | `Y` | `Y` | 
 [_**Location**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Location) | location_nullable | `^((Home)\|(Road))?$` | `Y` | `Y` | 
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable | `(00)\|(20)\|(10)` |  | `Y` | 
+[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable |  |  | `Y` | 
 [_**Height**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Height) | height_nullable |  |  | `Y` | 
 [_**GameSegment**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameSegment) | game_segment_nullable | `^((First Half)\|(Overtime)\|(Second Half))?$` | `Y` | `Y` | 
 [_**GameScope**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameScope) | game_scope_simple_nullable | `((Yesterday)\|(Last 10))?` | `Y` | `Y` | 
@@ -127,7 +127,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "LeagueDashPlayerStats",
-    "last_validated_date": "2020-01-27",
+    "last_validated_date": "2020-08-15",
     "nullable_parameters": [
         "College",
         "Conference",
@@ -168,7 +168,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
         "Height": null,
         "LastNGames": null,
-        "LeagueID": "(00)|(20)|(10)",
+        "LeagueID": null,
         "Location": "^((Home)|(Road))?$",
         "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$",
         "Month": null,
@@ -260,4 +260,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2020-01-27
+Last validated 2020-08-15

@@ -10,7 +10,7 @@
 ## Parameters
 API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 ------------ | ------------ | :-----------: | :---: | :---:
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `(00)\|(20)\|(10)` | `Y` |  | 
+[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id |  | `Y` |  | 
 [_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season |  | `Y` |  | 
 [_**SeriesID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeriesID) | series_id_nullable |  |  | `Y` | 
 
@@ -34,12 +34,12 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "CommonPlayoffSeries",
-    "last_validated_date": "2020-01-27",
+    "last_validated_date": "2020-08-15",
     "nullable_parameters": [
         "SeriesID"
     ],
     "parameter_patterns": {
-        "LeagueID": "(00)|(20)|(10)",
+        "LeagueID": null,
         "Season": null,
         "SeriesID": null
     },
@@ -56,4 +56,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2020-01-27
+Last validated 2020-08-15

@@ -14,7 +14,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 [_**PlayerID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerID) | player_id |  | `Y` |  | 
 [_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season_all | `^(\d{4}-\d{2})\|(ALL)$` | `Y` |  | 
 [_**SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_all_star | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All-Star)\|(All Star)$` | `Y` |  | 
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable | `(00)\|(20)\|(10)` |  | `Y` | 
+[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable |  |  | `Y` | 
 
 ## Data Sets
 #### NextNGames `next_n_games`
@@ -44,12 +44,12 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "PlayerNextNGames",
-    "last_validated_date": "2020-01-27",
+    "last_validated_date": "2020-08-15",
     "nullable_parameters": [
         "LeagueID"
     ],
     "parameter_patterns": {
-        "LeagueID": "(00)|(20)|(10)",
+        "LeagueID": null,
         "NumberOfGames": null,
         "PlayerID": null,
         "Season": "^(\\d{4}-\\d{2})|(ALL)$",
@@ -72,4 +72,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2020-01-27
+Last validated 2020-08-15

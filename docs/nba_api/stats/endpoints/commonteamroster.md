@@ -12,7 +12,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 ------------ | ------------ | :-----------: | :---: | :---:
 [_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season |  | `Y` |  | 
 [_**TeamID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TeamID) | team_id |  | `Y` |  | 
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable | `(00)\|(20)\|(10)` |  | `Y` | 
+[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable |  |  | `Y` | 
 
 ## Data Sets
 #### Coaches `coaches`
@@ -22,7 +22,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 
 #### CommonTeamRoster `common_team_roster`
 ```text
-['TeamID', 'SEASON', 'LeagueID', 'PLAYER', 'NUM', 'POSITION', 'HEIGHT', 'WEIGHT', 'BIRTH_DATE', 'AGE', 'EXP', 'SCHOOL', 'PLAYER_ID']
+['TeamID', 'SEASON', 'LeagueID', 'PLAYER', 'PLAYER_SLUG', 'NUM', 'POSITION', 'HEIGHT', 'WEIGHT', 'BIRTH_DATE', 'AGE', 'EXP', 'SCHOOL', 'PLAYER_ID']
 ```
 
 
@@ -46,6 +46,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
             "SEASON",
             "LeagueID",
             "PLAYER",
+            "PLAYER_SLUG",
             "NUM",
             "POSITION",
             "HEIGHT",
@@ -58,12 +59,12 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "CommonTeamRoster",
-    "last_validated_date": "2020-01-27",
+    "last_validated_date": "2020-08-15",
     "nullable_parameters": [
         "LeagueID"
     ],
     "parameter_patterns": {
-        "LeagueID": "(00)|(20)|(10)",
+        "LeagueID": null,
         "Season": null,
         "TeamID": null
     },
@@ -80,4 +81,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2020-01-27
+Last validated 2020-08-15

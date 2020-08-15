@@ -12,7 +12,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 ------------ | ------------ | :-----------: | :---: | :---:
 [_**PerMode**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PerMode) | per_mode36 | `^(Totals)\|(PerGame)\|(Per36)$` | `Y` |  | 
 [_**PlayerID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerID) | player_id |  | `Y` |  | 
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable | `(00)\|(20)\|(10)` |  | `Y` | 
+[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable |  |  | `Y` | 
 
 ## Data Sets
 #### CareerTotalsAllStarSeason `career_totals_all_star_season`
@@ -350,12 +350,12 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "PlayerCareerStats",
-    "last_validated_date": "2020-01-27",
+    "last_validated_date": "2020-08-15",
     "nullable_parameters": [
         "LeagueID"
     ],
     "parameter_patterns": {
-        "LeagueID": "(00)|(20)|(10)",
+        "LeagueID": null,
         "PerMode": "^(Totals)|(PerGame)|(Per36)$",
         "PlayerID": null
     },
@@ -372,4 +372,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2020-01-27
+Last validated 2020-08-15

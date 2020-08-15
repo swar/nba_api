@@ -12,12 +12,12 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 ------------ | ------------ | :-----------: | :---: | :---:
 [_**PerMode**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PerMode) | per_mode36 | `^(Totals)\|(PerGame)\|(Per36)$` | `Y` |  | 
 [_**PlayerID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerID) | player_id |  | `Y` |  | 
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable | `(00)\|(20)\|(10)` |  | `Y` | 
+[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable |  |  | `Y` | 
 
 ## Data Sets
 #### CareerHighs `career_highs`
 ```text
-['PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'VS_TEAM_ID', 'VS_TEAM_CITY', 'VS_TEAM_NAME', 'VS_TEAM_ABBREVIATION', 'STAT', 'STAT_VALUE', 'STAT_ORDER', 'DATE_EST']
+['PLAYER_ID', 'GAME_DATE', 'VS_TEAM_ID', 'VS_TEAM_CITY', 'VS_TEAM_NAME', 'VS_TEAM_ABBREVIATION', 'STAT', 'STATS_VALUE', 'STAT_ORDER', 'DATE_EST']
 ```
 
 #### CareerTotalsAllStarSeason `career_totals_all_star_season`
@@ -52,7 +52,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 
 #### SeasonHighs `season_highs`
 ```text
-['PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'VS_TEAM_ID', 'VS_TEAM_CITY', 'VS_TEAM_NAME', 'VS_TEAM_ABBREVIATION', 'STAT', 'STAT_VALUE', 'STAT_ORDER', 'DATE_EST']
+['PLAYER_ID', 'GAME_DATE', 'VS_TEAM_ID', 'VS_TEAM_CITY', 'VS_TEAM_NAME', 'VS_TEAM_ABBREVIATION', 'STAT', 'STATS_VALUE', 'STAT_ORDER', 'DATE_EST']
 ```
 
 #### SeasonRankingsPostSeason `season_rankings_post_season`
@@ -97,14 +97,13 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
     "data_sets": {
         "CareerHighs": [
             "PLAYER_ID",
-            "GAME_ID",
             "GAME_DATE",
             "VS_TEAM_ID",
             "VS_TEAM_CITY",
             "VS_TEAM_NAME",
             "VS_TEAM_ABBREVIATION",
             "STAT",
-            "STAT_VALUE",
+            "STATS_VALUE",
             "STAT_ORDER",
             "DATE_EST"
         ],
@@ -254,14 +253,13 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ],
         "SeasonHighs": [
             "PLAYER_ID",
-            "GAME_ID",
             "GAME_DATE",
             "VS_TEAM_ID",
             "VS_TEAM_CITY",
             "VS_TEAM_NAME",
             "VS_TEAM_ABBREVIATION",
             "STAT",
-            "STAT_VALUE",
+            "STATS_VALUE",
             "STAT_ORDER",
             "DATE_EST"
         ],
@@ -470,12 +468,12 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "PlayerProfileV2",
-    "last_validated_date": "2020-01-27",
+    "last_validated_date": "2020-08-15",
     "nullable_parameters": [
         "LeagueID"
     ],
     "parameter_patterns": {
-        "LeagueID": "(00)|(20)|(10)",
+        "LeagueID": null,
         "PerMode": "^(Totals)|(PerGame)|(Per36)$",
         "PlayerID": null
     },
@@ -492,4 +490,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2020-01-27
+Last validated 2020-08-15

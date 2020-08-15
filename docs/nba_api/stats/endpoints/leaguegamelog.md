@@ -12,7 +12,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 ------------ | ------------ | :-----------: | :---: | :---:
 [_**Counter**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Counter) | counter |  | `Y` |  | 
 [_**Direction**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Direction) | direction | `^(ASC)\|(DESC)$` | `Y` |  | 
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^(00)\|(20)\|(10)$` | `Y` |  | 
+[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id |  | `Y` |  | 
 [_**PlayerOrTeam**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerOrTeam) | player_or_team_abbreviation | `^(P)\|(T)$` | `Y` |  | 
 [_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season |  | `Y` |  | 
 [_**SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_all_star | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star)\|(All-Star)$` | `Y` |  | 
@@ -64,7 +64,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         ]
     },
     "endpoint": "LeagueGameLog",
-    "last_validated_date": "2020-01-27",
+    "last_validated_date": "2020-08-15",
     "nullable_parameters": [
         "DateFrom",
         "DateTo"
@@ -74,7 +74,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         "DateFrom": null,
         "DateTo": null,
         "Direction": "^(ASC)|(DESC)$",
-        "LeagueID": "^(00)|(20)|(10)$",
+        "LeagueID": null,
         "PlayerOrTeam": "^(P)|(T)$",
         "Season": null,
         "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)|(All-Star)$",
@@ -104,4 +104,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2020-01-27
+Last validated 2020-08-15

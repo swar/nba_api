@@ -5,7 +5,7 @@
 >[https://stats.nba.com/stats/scoreboardv2](https://stats.nba.com/stats/scoreboardv2)
 
 ##### Valid URL
->[https://stats.nba.com/stats/scoreboardv2?DayOffset=0&GameDate=2020-01-27&LeagueID=00](https://stats.nba.com/stats/scoreboardv2?DayOffset=0&GameDate=2020-01-27&LeagueID=00)
+>[https://stats.nba.com/stats/scoreboardv2?DayOffset=0&GameDate=2020-08-15&LeagueID=00](https://stats.nba.com/stats/scoreboardv2?DayOffset=0&GameDate=2020-08-15&LeagueID=00)
 
 ## Parameters
 API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
@@ -22,7 +22,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 
 #### EastConfStandingsByDay `east_conf_standings_by_day`
 ```text
-['TEAM_ID', 'LEAGUE_ID', 'SEASON_ID', 'STANDINGSDATE', 'CONFERENCE', 'TEAM', 'G', 'W', 'L', 'W_PCT', 'HOME_RECORD', 'ROAD_RECORD']
+['TEAM_ID', 'LEAGUE_ID', 'SEASON_ID', 'STANDINGSDATE', 'CONFERENCE', 'TEAM', 'G', 'W', 'L', 'W_PCT', 'HOME_RECORD', 'ROAD_RECORD', 'RETURNTOPLAY']
 ```
 
 #### GameHeader `game_header`
@@ -86,7 +86,8 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
             "L",
             "W_PCT",
             "HOME_RECORD",
-            "ROAD_RECORD"
+            "ROAD_RECORD",
+            "RETURNTOPLAY"
         ],
         "GameHeader": [
             "GAME_DATE_EST",
@@ -199,7 +200,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
         "WinProbability": []
     },
     "endpoint": "ScoreboardV2",
-    "last_validated_date": "2020-01-27",
+    "last_validated_date": "2020-08-15",
     "nullable_parameters": [],
     "parameter_patterns": {
         "DayOffset": "^-{0,1}\\d+$",
@@ -220,4 +221,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2020-01-27
+Last validated 2020-08-15
