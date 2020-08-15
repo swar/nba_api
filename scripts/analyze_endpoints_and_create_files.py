@@ -5,7 +5,8 @@ from tools.stats.parameter_documentation_generator import generator as parameter
 
 # Analyze Endpoints
 
-endpoint_analysis.analyze_and_save_all_endpoints()
+endpoint_analysis.analyze_all_endpoints_with_threading()
+endpoint_analysis.analyze_and_save_all_endpoints(pause=0)
 
 # Generate Endpoint Py Files
 

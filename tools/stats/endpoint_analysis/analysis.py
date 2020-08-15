@@ -1,7 +1,7 @@
 import re
 import json
+import threading
 import time
-from datetime import datetime
 
 from nba_api.stats.library.http import NBAStatsHTTP
 from nba_api.stats.library.parameters import *
@@ -381,14 +381,50 @@ def analyze_and_save_all_endpoints(endpoints=endpoint_list, file_path=None, file
     endpoints_information = load_endpoint_file(file_name=file_name, file_path=file_path)
 
     for endpoint in endpoints:
-        if endpoint in endpoints_information and endpoints_information[endpoint]['status'] in ['success', 'deprecated']:
-            print("skipping", endpoints_information[endpoint]['status'], endpoint)
-            continue
+        attempts = 0
+        while attempts < 5:
+            attempts += 1
+            try:
+                if endpoint in endpoints_information and endpoints_information[endpoint]['status'] in ['success', 'deprecated']:
+                    print("skipping", endpoints_information[endpoint]['status'], endpoint)
+                    continue
 
-        endpoint_analysis = analyze_endpoint(endpoint=endpoint, pause=pause)
-        endpoints_information[endpoint] = endpoint_analysis
-        time.sleep(pause)
+                endpoint_analysis = analyze_endpoint(endpoint=endpoint, pause=pause)
+                endpoints_information[endpoint] = endpoint_analysis
+                time.sleep(pause)
 
-        contents = json.dumps(endpoints_information, sort_keys=True, indent=4)
-        save_file(file_path=file_path, file_name=file_name, contents=contents)
-        print(endpoint_analysis['status'], endpoint)
+                contents = json.dumps(endpoints_information, sort_keys=True, indent=4)
+                save_file(file_path=file_path, file_name=file_name, contents=contents)
+                print(endpoint_analysis['status'], endpoint)
+            except:
+                pass
+
+
+def analyze_endpoint_with_attempts(endpoint, pause=1, attempts=5):
+    attempt = 0
+    while attempt <= attempts:
+        attempt += 1
+        try:
+            analyze_endpoint(endpoint=endpoint, pause=pause)
+            return
+        except:
+            pass
+
+
+def analyze_all_endpoints_with_threading(endpoints=endpoint_list, pause=1):
+    threads = {}
+
+    for endpoint in endpoints:
+        t = threading.Thread(target=analyze_endpoint_with_attempts, kwargs=dict(endpoint=endpoint, pause=pause, attempts=10))
+        threads[endpoint] = t
+        t.start()
+
+    is_alive = True
+    while is_alive:
+        print('>'*25)
+        is_alive = False
+        for key, thread in threads.items():
+            if thread.is_alive():
+                print(key, thread.is_alive())
+                is_alive = True
+        time.sleep(1)
