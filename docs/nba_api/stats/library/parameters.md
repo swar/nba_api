@@ -322,6 +322,10 @@ No available information.
 No available information.
 
 
+## _DLeagueTeamID_
+No available information.
+
+
 ## _DateFrom_
 No available information.
 
@@ -638,6 +642,10 @@ No available information.
 No available information.
 
 
+## _GameIDs_
+No available information.
+
+
 ## _GameScope_
 
 #### Class `GameScopeDetailed`
@@ -687,7 +695,7 @@ No available information.
 Variable Name | Value
 ------------ | -------------
 _**none**_ `default` | 
-_**current_datetime**_ | `2020-08-15 19:11:16.370342`
+_**current_datetime**_ | `2020-08-16 17:10:16.971483`
 _**current_season**_ | `2019-20`
 _**current_season_year**_ | `2019`
 
@@ -700,7 +708,7 @@ _**current_season_year**_ | `2019`
 Variable Name | Value
 ------------ | -------------
 _**none**_ `default` | 
-_**current_datetime**_ | `2020-08-15 19:11:16.370342`
+_**current_datetime**_ | `2020-08-16 17:10:16.971483`
 _**current_season**_ | `2019-20`
 _**current_season_year**_ | `2019`
 
@@ -1211,6 +1219,10 @@ No available information.
 No available information.
 
 
+## _MinutesMin_
+No available information.
+
+
 ## _Month_
 
 Variable Name | Value
@@ -1221,6 +1233,10 @@ Variable Name | Value
 ------------ | -------------
 _**none**_ `default` | 
 _**month**_ | `month()`
+
+## _NBATeamID_
+No available information.
+
 
 ## _NumberOfGames_
 
@@ -1342,6 +1358,19 @@ _**none**_ `default` |
 _**per_game**_ | `PerGame`
 _**totals**_ | `Totals`
 
+#### Class `PerModeTime`
+##### Patterns 
+ - `^(Totals)|(PerGame)|(Per48)|(Per40)|(Per36)|(PerMinute)$`
+
+Variable Name | Value
+------------ | -------------
+_**totals**_ `default` | `Totals`
+_**minutes_per**_ | `MinutesPer`
+_**per_36**_ | `Per36`
+_**per_40**_ | `Per40`
+_**per_48**_ | `Per48`
+_**per_game**_ | `PerGame`
+
 ## _Period_
 
 Variable Name | Value
@@ -1364,6 +1393,60 @@ _**overtime**_ | `overtime()`
 _**quarter**_ | `quarter()`
 _**second**_ | `2`
 _**third**_ | `3`
+
+## _Person1Id_
+No available information.
+
+
+## _Person1LeagueId_
+
+Variable Name | Value
+------------ | -------------
+_**nba**_ `default` | `00`
+_**aba**_ | `01`
+_**g_league**_ | `20`
+_**wnba**_ | `10`
+
+## _Person1Season_
+
+Variable Name | Value
+------------ | -------------
+_**current_season_year**_ `default` | `2019`
+_**current_datetime**_ | `2020-08-16 17:10:16.971483`
+
+## _Person1SeasonType_
+
+Variable Name | Value
+------------ | -------------
+_**regular**_ `default` | `Regular Season`
+_**preseason**_ | `Pre Season`
+
+## _Person2Id_
+No available information.
+
+
+## _Person2LeagueId_
+
+Variable Name | Value
+------------ | -------------
+_**nba**_ `default` | `00`
+_**aba**_ | `01`
+_**g_league**_ | `20`
+_**wnba**_ | `10`
+
+## _Person2Season_
+
+Variable Name | Value
+------------ | -------------
+_**current_season_year**_ `default` | `2019`
+_**current_datetime**_ | `2020-08-16 17:10:16.971483`
+
+## _Person2SeasonType_
+
+Variable Name | Value
+------------ | -------------
+_**regular**_ `default` | `Regular Season`
+_**preseason**_ | `Pre Season`
 
 ## _PlayType_
 
@@ -1588,7 +1671,7 @@ _**no**_ `default` | `N`
 Variable Name | Value
 ------------ | -------------
 _**none**_ `default` | 
-_**current_datetime**_ | `2020-08-15 19:11:16.370342`
+_**current_datetime**_ | `2020-08-16 17:10:16.971483`
 _**current_season**_ | `2019-20`
 _**current_season_year**_ | `2019`
 
@@ -1610,6 +1693,10 @@ Variable Name | Value
 
 Variable Name | Value
 ------------ | -------------
+
+
+## _School_
+No available information.
 
 
 ## _Scope_
@@ -1635,7 +1722,7 @@ _**rs**_ | `RS`
 Variable Name | Value
 ------------ | -------------
 _**current_season**_ `default` | `2019-20`
-_**current_datetime**_ | `2020-08-15 19:11:16.370342`
+_**current_datetime**_ | `2020-08-16 17:10:16.971483`
 _**current_season_year**_ | `2019`
 
 #### Class `SeasonAll`
@@ -1646,7 +1733,7 @@ Variable Name | Value
 ------------ | -------------
 _**current_season**_ `default` | `2019-20`
 _**all**_ | `ALL`
-_**current_datetime**_ | `2020-08-15 19:11:16.370342`
+_**current_datetime**_ | `2020-08-16 17:10:16.971483`
 _**current_season_year**_ | `2019`
 
 #### Class `SeasonAllNullable`
@@ -1657,7 +1744,7 @@ Variable Name | Value
 ------------ | -------------
 _**none**_ `default` | 
 _**all**_ | `ALL`
-_**current_datetime**_ | `2020-08-15 19:11:16.370342`
+_**current_datetime**_ | `2020-08-16 17:10:16.971483`
 _**current_season**_ | `2019-20`
 _**current_season_year**_ | `2019`
 
@@ -1669,7 +1756,7 @@ Variable Name | Value
 ------------ | -------------
 _**current_season**_ `default` | `2019-20`
 _**alltime**_ | `ALLTIME`
-_**current_datetime**_ | `2020-08-15 19:11:16.370342`
+_**current_datetime**_ | `2020-08-16 17:10:16.971483`
 _**current_season_year**_ | `2019`
 
 #### Class `SeasonAll_Time`
@@ -1680,7 +1767,7 @@ Variable Name | Value
 ------------ | -------------
 _**current_season**_ `default` | `2019-20`
 _**all_time**_ | `All Time`
-_**current_datetime**_ | `2020-08-15 19:11:16.370342`
+_**current_datetime**_ | `2020-08-16 17:10:16.971483`
 _**current_season_year**_ | `2019`
 
 #### Class `SeasonNullable`
@@ -1690,9 +1777,18 @@ _**current_season_year**_ | `2019`
 Variable Name | Value
 ------------ | -------------
 _**none**_ `default` | 
-_**current_datetime**_ | `2020-08-15 19:11:16.370342`
+_**current_datetime**_ | `2020-08-16 17:10:16.971483`
 _**current_season**_ | `2019-20`
 _**current_season_year**_ | `2019`
+
+#### Class `SeasonYear`
+##### Patterns 
+ - `^\d{4}$`
+
+Variable Name | Value
+------------ | -------------
+_**current_season_year**_ `default` | `2019`
+_**current_datetime**_ | `2020-08-16 17:10:16.971483`
 
 #### Class `SeasonYearNullable`
 ##### Patterns 
@@ -1701,7 +1797,7 @@ _**current_season_year**_ | `2019`
 Variable Name | Value
 ------------ | -------------
 _**none**_ `default` | 
-_**current_datetime**_ | `2020-08-15 19:11:16.370342`
+_**current_datetime**_ | `2020-08-16 17:10:16.971483`
 _**current_season_year**_ | `2019`
 
 ## _SeasonID_
@@ -1713,8 +1809,10 @@ _**current_season_year**_ | `2019`
 Variable Name | Value
 ------------ | -------------
 _**current_season_year**_ `default` | `22019`
-_**current_datetime**_ | `2020-08-15 19:11:16.370342`
+_**current_datetime**_ | `2020-08-16 17:10:16.971483`
 _**get_season_id**_ | `get_season_id()`
+No available information.
+
 
 ## _SeasonSegment_
 
@@ -1794,7 +1892,7 @@ _**preseason**_ | `Pre Season`
 Variable Name | Value
 ------------ | -------------
 _**current_season**_ `default` | `2019-20`
-_**current_datetime**_ | `2020-08-15 19:11:16.370342`
+_**current_datetime**_ | `2020-08-16 17:10:16.971483`
 _**current_season_year**_ | `2019`
 
 #### Class `SeasonAll_Time`
@@ -1805,20 +1903,20 @@ Variable Name | Value
 ------------ | -------------
 _**current_season**_ `default` | `2019-20`
 _**all_time**_ | `All Time`
-_**current_datetime**_ | `2020-08-15 19:11:16.370342`
+_**current_datetime**_ | `2020-08-16 17:10:16.971483`
 _**current_season_year**_ | `2019`
 
 Variable Name | Value
 ------------ | -------------
 _**none**_ `default` | 
-_**current_datetime**_ | `2020-08-15 19:11:16.370342`
+_**current_datetime**_ | `2020-08-16 17:10:16.971483`
 _**current_season**_ | `2019-20`
 _**current_season_year**_ | `2019`
 
 Variable Name | Value
 ------------ | -------------
 _**current_season_year**_ `default` | `2019`
-_**current_datetime**_ | `2020-08-15 19:11:16.370342`
+_**current_datetime**_ | `2020-08-16 17:10:16.971483`
 
 ## _SeriesID_
 No available information.

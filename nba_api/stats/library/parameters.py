@@ -426,9 +426,12 @@ class PerMode48(PerModeSimple):
     per_48 = 'Per48'
 
 
-class PerModeDetailed(PerMode36, PerMode48):
+class PerModeTime(PerMode36, PerMode48):
     minutes_per = 'MinutesPer'
     per_40 = 'Per40'
+
+
+class PerModeDetailed(PerModeTime):
     per_minute = 'PerMinute'
     per_possession = 'PerPossession'
     per_play = 'PerPlay'

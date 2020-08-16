@@ -263,4 +263,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2020-08-15
+Last validated 2020-08-16

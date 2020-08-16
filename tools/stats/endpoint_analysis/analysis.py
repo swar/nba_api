@@ -6,16 +6,46 @@ import time
 from nba_api.stats.library.http import NBAStatsHTTP
 from nba_api.stats.library.parameters import *
 
+from datetime import datetime
+
 from tools.library.file_handler import load_file, save_file, get_file_path
 from tools.stats.library.mapping import endpoint_list, parameter_variations, parameter_map
 
-missing_parameter_regex = r"^\s*?(?:The value '[^']+' is not valid for |The )?([A-z0-9]+( Scope| Category)?)(?: Year)?\s*(?:property is required\.?| is required\.?(?:, pass 0 for default)?|\.)$"
+missing_parameter_regex = r"^\s*?(?:The value '[^']+' is not valid for |The )?([A-z0-9]+( Scope| Category)?)(?: Year)?\s*(?:property (?:is|are) required\.?| (?:is|are) required\.?(?:,? pass 0 for (?:default|all teams))?|\.)$"
 # Season Year -> Season     This only occurs in LeagueDashPtStats
 
 parameter_pattern_regex = r"\s*The field ([A-z]+) must match the regular expression '([^']+)'\.(?:;|$)"
 
 missing_required_parameters = {
+    'AllTimeLeadersGrids': {
+        'TopX': '10',
+        'LeagueID': LeagueID.default,
+        'PerMode': PerModeSimple.default,
+        'SeasonType': SeasonType.default,
+    },
+    'BoxScoreSimilarityScore': {
+        'Person1Id': '2544',
+        'Person2Id': '2544',
+        'Person1LeagueId': LeagueID.default,
+        'Person1Season': SeasonYear.default,
+        'Person1SeasonType': SeasonType.default,
+        'Person2LeagueId': LeagueID.default,
+        'Person2Season': SeasonYear.default,
+        'Person2SeasonType': SeasonType.default,
+    },
+    'CumeStatsTeamGames': {'Season': Season.default},
     'DefenseHub': {'Season': '2017-18'},
+    'DraftBoard': {'Season': SeasonYear.default},
+    'GLAlumBoxScoreSimilarityScore': {
+        'Person1Id': '2544',
+        'Person2Id': '2544',
+        'Person1LeagueId': LeagueID.default,
+        'Person1Season': SeasonYear.default,
+        'Person1SeasonType': SeasonType.default,
+        'Person2LeagueId': LeagueID.default,
+        'Person2Season': SeasonYear.default,
+        'Person2SeasonType': SeasonType.default,
+    },
     'LeagueDashLineups': {'Season': Season.default},
     'LeagueDashPlayerClutch': {'Season': Season.default},
     'LeagueDashPlayerStats': {'Season': Season.default},
@@ -23,9 +53,16 @@ missing_required_parameters = {
     'LeagueDashTeamShotLocations': {'Season': Season.default},
     'LeagueDashTeamStats': {'Season': Season.default},
     'LeagueGameLog': {'Counter': 0, 'Season': Season.default},
+    'LeagueHustleStatsPlayer': {'Season': Season.default},
+    'LeagueHustleStatsPlayerLeaders': {'Season': Season.default},
+    'LeagueHustleStatsTeam': {'Season': Season.default},
+    'LeagueHustleStatsTeamLeaders': {'Season': Season.default},
     'LeagueLeaders': {'Season': Season.default},
+    'LeagueLineupViz': {'Season': Season.default},
     'LeaguePlayerOnDetails': {'Season': Season.default, 'TeamID': '1610612739'},  # Cleveland Cavaliers
     'LeagueStandings': {'Season': Season.default},
+    'LeagueStandingsV3': {'Season': Season.default},
+    'PlayerCareerByCollege': {'College': 'Ohio State'},
     'PlayerCompare': {'Season': Season.default},
     'PlayerDashboardByClutch': {'Season': Season.default},
     'PlayerDashboardByGameSplits': {'Season': Season.default},
@@ -39,10 +76,12 @@ missing_required_parameters = {
     'PlayerDashPtReb': {'LeagueID': LeagueID.default},
     'PlayerDashPtShotDefend': {'LeagueID': LeagueID.default},
     'PlayerDashPtShots': {'LeagueID': LeagueID.default},
+    'PlayerEstimatedMetrics': {'LeagueID': LeagueID.default, 'Season': Season.default, 'SeasonType': SeasonType.default},
     'PlayerFantasyProfile': {'Season': Season.default},
     'PlayerFantasyProfileBarGraph': {'Season': Season.default},
     'PlayerVsPlayer': {'Season': Season.default},
-    'ShotChartDetail': {'ContextMeasure': ContextMeasureSimple.default,'LeagueID': LeagueID.default, 'PlayerPosition': ''},
+    'ShotChartDetail': {'ContextMeasure': ContextMeasureSimple.default, 'LeagueID': LeagueID.default, 'PlayerPosition': ''},
+    'ShotChartLeagueWide': {'LeagueID': LeagueID.default},
     'ShotChartLineupDetail': {'GameID': '', 'TeamID': ''},
     'TeamAndPlayersVsPlayers': {'Season': Season.default},
     'TeamDashboardByClutch': {'Season': Season.default},
@@ -57,6 +96,7 @@ missing_required_parameters = {
     'TeamDashPtPass': {'LeagueID': LeagueID.default},
     'TeamDashPtReb': {'LeagueID': LeagueID.default},
     'TeamDashPtShots': {'LeagueID': LeagueID.default},
+    'TeamEstimatedMetrics': {'LeagueID': LeagueID.default, 'Season': Season.default, 'SeasonType': SeasonType.default},
     'TeamPlayerDashboard': {'Season': Season.default},
     'TeamPlayerOnOffDetails': {'Season': Season.default},
     'TeamPlayerOnOffSummary': {'Season': Season.default},
@@ -66,8 +106,13 @@ missing_required_parameters = {
 
 
 parameter_override = {
+    'PlayerCareerByCollege': {'School': 'College'},
     'PlayerGameLogs': {'SeasonYear': 'Season'},
     'TeamGameLogs': {'SeasonYear': 'Season'},
+}
+
+remove_nullable_parameters = {
+    'PlayerCareerByCollege': ['School']
 }
 
 
@@ -230,7 +275,8 @@ def minimal_requirement_tests(endpoint, required_params, pause=1):
         for parameter in all_parameters:
             if parameter in response_parameters.keys():
                 continue
-            if parameter in missing_required_parameters[endpoint] and missing_required_parameters[endpoint][parameter]:
+            if endpoint in missing_required_parameters and parameter in missing_required_parameters[endpoint] \
+                    and missing_required_parameters[endpoint][parameter]:
                 continue
             nullable_parameters.append(parameter)
 
@@ -241,7 +287,11 @@ def minimal_requirement_tests(endpoint, required_params, pause=1):
 
 def nullable_parameters_test(endpoint, all_parameters):
     skip_endpoints = ['boxscoreadvancedv2', 'boxscorefourfactorsv2', 'boxscoremiscv2', 'boxscorescoringv2',
-                      'boxscoretraditionalv2', 'boxscoreusagev2', 'winprobabilitypbp']
+                      'boxscoretraditionalv2', 'boxscoreusagev2', 'winprobabilitypbp', 'alltimeleadersgrids',
+                      'boxscoresimilarityscore', 'glalumboxscoresimilarityscore', 'playerestimatedmetrics',
+                      'playertrackbucketsimilarityscore', 'playertrackranksimilaritycomp', 'playertracksimilarityscore',
+                      'playertracksimilarityuniqueness', 'synergybucketsimilarityscore', 'synergysimilarityscore',
+                      'teamestimatedmetrics']
 
     if endpoint.lower() in skip_endpoints:
         return []
@@ -270,6 +320,8 @@ def nullable_parameters_test(endpoint, all_parameters):
                 continue
             nullable_parameters.append(parameter)
 
+    print(nullable_parameters)
+
     return nullable_parameters
 
 
@@ -286,8 +338,17 @@ def invalid_values_test(endpoint, all_params_errors):
 
 
 def clean_parameters(endpoint, all_parameters, required_parameters, nullable_parameters, parameter_patterns):
-    if endpoint not in parameter_override:
+    all_parameters = list(set(all_parameters))
+    required_parameters = list(set(required_parameters))
+    nullable_parameters = list(set(nullable_parameters))
+
+    if endpoint not in parameter_override and endpoint not in remove_nullable_parameters:
         return all_parameters, required_parameters, nullable_parameters, parameter_patterns
+
+    parameters = remove_nullable_parameters.get(endpoint, [])
+    for parameter in parameters:
+        if parameter in nullable_parameters:
+            nullable_parameters.remove(parameter)
 
     parameters = parameter_override[endpoint]
     for old_parameter, new_parameter in parameters.items():
@@ -303,6 +364,10 @@ def clean_parameters(endpoint, all_parameters, required_parameters, nullable_par
         if old_parameter in parameter_patterns:
             parameter_patterns[new_parameter] = parameter_patterns[old_parameter]
             del parameter_patterns[old_parameter]
+
+    all_parameters = list(set(all_parameters))
+    required_parameters = list(set(required_parameters))
+    nullable_parameters = list(set(nullable_parameters))
 
     return all_parameters, required_parameters, nullable_parameters, parameter_patterns
 
@@ -396,6 +461,7 @@ def analyze_and_save_all_endpoints(endpoints=endpoint_list, file_path=None, file
                 contents = json.dumps(endpoints_information, sort_keys=True, indent=4)
                 save_file(file_path=file_path, file_name=file_name, contents=contents)
                 print(endpoint_analysis['status'], endpoint)
+                break
             except:
                 pass
 
@@ -405,8 +471,7 @@ def analyze_endpoint_with_attempts(endpoint, pause=1, attempts=5):
     while attempt <= attempts:
         attempt += 1
         try:
-            analyze_endpoint(endpoint=endpoint, pause=pause)
-            return
+            return analyze_endpoint(endpoint=endpoint, pause=pause)
         except:
             pass
 

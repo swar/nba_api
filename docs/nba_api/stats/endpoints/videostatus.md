@@ -5,7 +5,7 @@
 >[https://stats.nba.com/stats/videostatus](https://stats.nba.com/stats/videostatus)
 
 ##### Valid URL
->[https://stats.nba.com/stats/videostatus?GameDate=2020-08-15&LeagueID=00](https://stats.nba.com/stats/videostatus?GameDate=2020-08-15&LeagueID=00)
+>[https://stats.nba.com/stats/videostatus?GameDate=2020-08-16&LeagueID=00](https://stats.nba.com/stats/videostatus?GameDate=2020-08-16&LeagueID=00)
 
 ## Parameters
 API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
@@ -60,4 +60,4 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 }
 ```
 
-Last validated 2020-08-15
+Last validated 2020-08-16

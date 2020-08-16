@@ -1,8 +1,10 @@
 from nba_api.stats.library.parameters import *
 
 endpoint_list = [
+    '2AssistTracker',
     'AllPlayers',
     'AllStarBallotPredictor',
+    'AllTimeLeadersGrids',
     'AssistLeaders',
     'AssistTracker',
     'AssistTrackerStats',
@@ -18,6 +20,7 @@ endpoint_list = [
     'BoxScorePlayerTrackV2',
     'BoxScoreScoring',
     'BoxScoreScoringV2',
+    'BoxScoreSimilarityScore',
     'BoxScoreSummary',
     'BoxScoreSummaryV2',
     'BoxScoreTraditional',
@@ -29,7 +32,13 @@ endpoint_list = [
     'CommonPlayoffSeries',
     'CommonTeamRoster',
     'CommonTeamYears',
+    'CumeStatsPlayer',
+    'CumeStatsPlayerGames',
+    'CumeStatsTeam',
+    'CumeStatsTeamGames',
     'DefenseHub',
+    'DLeaguePredictor',
+    'DraftBoard',
     'DraftCombineDrillResults',
     'DraftCombineNonStationaryShooting',
     'DraftCombinePlayerAnthro',
@@ -41,6 +50,8 @@ endpoint_list = [
     'FranchiseHistory',
     'FranchiseLeaders',
     'FranchisePlayers',
+    'GameRotation',
+    'GLAlumBoxScoreSimilarityScore',
     'GLeaguePredictor',
     'HomePage',
     'HomePageLeaders',
@@ -64,16 +75,25 @@ endpoint_list = [
     'LeagueDashTeamStats',
     'LeagueGameFinder',
     'LeagueGameLog',
+    'LeagueHustleStatsPlayer',
+    'LeagueHustleStatsPlayerLeaders',
+    'LeagueHustleStatsTeam',
+    'LeagueHustleStatsTeamLeaders',
     'LeagueLeaders',
+    'LeagueLineupViz',
     'LeaguePlayerOnDetails',
     'LeagueSeasonMatchups',
     'LeagueStandings',
+    'LeagueStandingsV3',
     'LineupStats',
+    'MatchupsRollup',
     'PlayByPlay',
     'PlayByPlayMini',
     'PlayByPlayV2',
     'PlayerAwards',
     'PlayerBioStats',
+    'PlayerCareerByCollege',
+    'PlayerCareerByCollegeRollup',
     'PlayerCareerStats',
     'PlayerClutchStats',
     'PlayerCompare',
@@ -93,6 +113,7 @@ endpoint_list = [
     'PlayerDashPtShotlog',
     'PlayerDashPtShots',
     'PlayerDefenseStats',
+    'PlayerEstimatedMetrics',
     'PlayerFantasyProfile',
     'PlayerFantasyProfileBarGraph',
     'PlayerGameLog',
@@ -123,6 +144,10 @@ endpoint_list = [
     'PlayersTrackingStats',
     'PlayersVsPlayers',
     'PlayerTeamPerformanceStats',
+    'PlayerTrackBucketSimilarityScore',
+    'PlayerTrackRankSimilarityComp',
+    'PlayerTrackSimilarityScore',
+    'PlayerTrackSimilarityUniqueness',
     'PlayerVsPlayer',
     'PlayerYearOverYearStats',
     'PlayoffPicture',
@@ -131,8 +156,11 @@ endpoint_list = [
     'ScoreboardMini',
     'ScoreboardV2',
     'ShotChartDetail',
+    'ShotChartLeagueWide',
     'ShotChartLineupDetail',
+    'SynergyBucketSimilarityScore',
     'SynergyPlayTypes',
+    'SynergySimilarityScore',
     'TeamAndPlayerVsPlayers',
     'TeamAndPlayersVsPlayers',
     'TeamClutchStats',
@@ -149,6 +177,7 @@ endpoint_list = [
     'TeamDashPtReb',
     'TeamDashPtShots',
     'TeamDetails',
+    'TeamEstimatedMetrics',
     'TeamFranchiseLeaders',
     'TeamFranchiseLeadersRank',
     'TeamGameLog',
@@ -203,9 +232,24 @@ parameter_variations = {
         'parameter_value': '0021700807',  # CLE vs MIN - 2018-02-07
         'parameter_error_value': 'a',
     },
+    'GameIDs': {
+        'default_py_value': None,
+        'parameter_value': '0021700807',  # CLE vs MIN - 2018-02-07
+        'parameter_error_value': 'a',
+    },
     'GameIDNullable': {
         'default_py_value': "''",
         'parameter_value': None,
+        'parameter_error_value': 'a',
+    },
+    'Person1LeagueID': {
+        'default_py_value': 'LeagueID.default',
+        'parameter_value': LeagueID.default,
+        'parameter_error_value': 'a',
+    },
+    'Person2LeagueID': {
+        'default_py_value': 'LeagueID.default',
+        'parameter_value': LeagueID.default,
         'parameter_error_value': 'a',
     },
     'LeagueID': {
@@ -247,6 +291,11 @@ parameter_variations = {
         'default_py_value': 'ClutchTimeNullable.default',
         'parameter_value': ClutchTimeNullable.default,
         'parameter_error_value': 0,
+    },
+    'College': {
+        'default_py_value': None,
+        'parameter_value': 'Ohio State',
+        'parameter_error_value': 1,
     },
     'CollegeNullable': {
         'default_py_value': "''",
@@ -588,6 +637,11 @@ parameter_variations = {
         'parameter_value': PerMode48.default,
         'parameter_error_value': 0,
     },
+    'PerModeTime': {
+        'default_py_value': 'PerModeTime.default',
+        'parameter_value': PerModeTime.default,
+        'parameter_error_value': 0,
+    },
     'PerModeDetailed': {
         'default_py_value': 'PerModeDetailed.default',
         'parameter_value': PerModeDetailed.default,
@@ -636,6 +690,16 @@ parameter_variations = {
     'VsPlayerID': {
         'default_py_value': None,
         'parameter_value': '2544',  # Lebron James
+        'parameter_error_value': 'a',
+    },
+    'Person1ID': {
+        'default_py_value': None,
+        'parameter_value': '202681',  # Kyrie Irving
+        'parameter_error_value': 'a',
+    },
+    'Person2ID': {
+        'default_py_value': None,
+        'parameter_value': '203078',  # Bradley Beal
         'parameter_error_value': 'a',
     },
     'PlayerID1': {
@@ -808,6 +872,11 @@ parameter_variations = {
         'parameter_value': '0',  # Cleveland Cavaliers: 1610612739
         'parameter_error_value': 'a',
     },
+    'DLeagueTeamIDNullable': {
+        'default_py_value': "0",
+        'parameter_value': '0',  # Cleveland Cavaliers: 1610612739
+        'parameter_error_value': 'a',
+    },
     'TodaysOpponent': {
         'default_py_value': 0,
         'parameter_value': '0',
@@ -948,6 +1017,16 @@ parameter_variations = {
         'parameter_value': RunType.default,
         'parameter_error_value': 'a',
     },
+    'Person1SeasonYear': {
+        'default_py_value': 'SeasonYear.default',
+        'parameter_value': SeasonYear.default,
+        'parameter_error_value': 'a',
+    },
+    'Person2SeasonYear': {
+        'default_py_value': 'SeasonYear.default',
+        'parameter_value': SeasonYear.default,
+        'parameter_error_value': 'a',
+    },
     'SeasonYear': {
         'default_py_value': 'SeasonYear.default',
         'parameter_value': SeasonYear.default,
@@ -1021,6 +1100,21 @@ parameter_variations = {
     'SeasonID': {
         'default_py_value': 'SeasonID.default',
         'parameter_value': SeasonID.default,
+        'parameter_error_value': 'a',
+    },
+    'SeasonIDNullable': {
+        'default_py_value': "''",
+        'parameter_value': SeasonID.default,
+        'parameter_error_value': 'a',
+    },
+    'Person1SeasonType': {
+        'default_py_value': 'SeasonType.default',
+        'parameter_value': SeasonType.default,
+        'parameter_error_value': 'a',
+    },
+    'Person2SeasonType': {
+        'default_py_value': 'SeasonType.default',
+        'parameter_value': SeasonType.default,
         'parameter_error_value': 'a',
     },
     'SeasonType': {
@@ -1107,6 +1201,11 @@ parameter_variations = {
         'default_py_value': 'StatType.default',
         'parameter_value': StatType.default,
         'parameter_error_value': 0,
+    },
+    'TopX': {
+        'default_py_value': '10',
+        'parameter_value': 10,
+        'parameter_error_value': 'a',
     },
     'TopXNullable': {
         'default_py_value': "''",
@@ -1787,6 +1886,11 @@ parameter_variations = {
         'parameter_value': '',
         'parameter_error_value': 'a',
     },
+    'MinutesMin': {
+        'default_py_value': None,
+        'parameter_value': '10',
+        'parameter_error_value': 'a',
+    },
     'LtOPPFG3MNullable': {
         'default_py_value': "''",
         'parameter_value': '',
@@ -2059,7 +2163,15 @@ parameter_map = {
             None: 'CollegeNullable'
         },
         'non-nullable': {
+            None: 'College'
+        }
+    },
+    'School': {
+        'nullable': {
 
+        },
+        'non-nullable': {
+            None: 'College'
         }
     },
     'Conference': {
@@ -2279,6 +2391,14 @@ parameter_map = {
             None: 'GameID'
         }
     },
+    'GameIDs': {
+        'nullable': {
+
+        },
+        'non-nullable': {
+            None: 'GameIDs'
+        }
+    },
     'GameScope': {
         'nullable': {
             '((Yesterday)|(Last 10))?': 'GameScopeSimpleNullable'
@@ -2358,6 +2478,22 @@ parameter_map = {
         },
         'non-nullable': {
             None: 'LastNGames'
+        }
+    },
+    'Person1LeagueId': {
+        'nullable': {
+
+        },
+        'non-nullable': {
+            None: 'Person1LeagueID'
+        }
+    },
+    'Person2LeagueId': {
+        'nullable': {
+
+        },
+        'non-nullable': {
+            None: 'Person2LeagueID'
         }
     },
     'LeagueID': {
@@ -2468,9 +2604,11 @@ parameter_map = {
             None: 'PerModeSimpleNullable'
         },
         'non-nullable': {
+            None: 'PerModeSimple',
             '^(Totals)|(PerGame)$': 'PerModeSimple',
             '^(Totals)|(PerGame)|(Per36)$': 'PerMode36',
             '^(Totals)|(PerGame)|(Per48)$': 'PerMode48',
+            '^(Totals)|(PerGame)|(Per48)|(Per40)|(Per36)|(PerMinute)$': 'PerModeTime',
             '^(Totals)|(PerGame)|(MinutesPer)|(Per48)|(Per40)|(Per36)|(PerMinute)|(PerPossession)|(PerPlay)|(Per100Possessions)|(Per100Plays)$': 'PerModeDetailed'
         }
     },
@@ -2513,6 +2651,22 @@ parameter_map = {
         },
         'non-nullable': {
             None: 'PlayerID'
+        }
+    },
+    'Person1Id': {
+        'nullable': {
+
+        },
+        'non-nullable': {
+            None: 'Person1ID'
+        }
+    },
+    'Person2Id': {
+        'nullable': {
+
+        },
+        'non-nullable': {
+            None: 'Person2ID'
         }
     },
     'PlayerID1': {
@@ -2721,6 +2875,22 @@ parameter_map = {
             '^(RS)|(S)|(Rookies)$': 'Scope'
         }
     },
+    'Person1Season': {
+        'nullable': {
+
+        },
+        'non-nullable': {
+            None: 'Person1SeasonYear',
+        }
+    },
+    'Person2Season': {
+        'nullable': {
+
+        },
+        'non-nullable': {
+            None: 'Person2SeasonYear',
+        }
+    },
     'Season': {
         'nullable': {
             '^\\d{4}$': 'SeasonYearNullable',
@@ -2729,10 +2899,11 @@ parameter_map = {
             None: 'SeasonNullable'
         },
         'non-nullable': {
+            None: 'Season',
+            '^\\d{4}$': 'SeasonYear',
             '^(\\d{4}-\\d{2})$': 'Season',
             '^\\d{4}-\\d{2}$': 'Season',
             '^(\\d{4}-\\d{2})?$': 'Season',
-            None: 'Season',
             '^(\\d{4}-\\d{2})|(All Time)$': 'SeasonAll_Time',
             '^(\\d{4}-\\d{2})|(ALLTIME)$': 'SeasonAllTime',
             '^(\\d{4}-\\d{2})|(ALL)$': 'SeasonAll'
@@ -2740,7 +2911,7 @@ parameter_map = {
     },
     'SeasonID': {
         'nullable': {
-
+            None: 'SeasonIDNullable',
         },
         'non-nullable': {
             None: 'SeasonID',
@@ -2756,6 +2927,22 @@ parameter_map = {
 
         }
     },
+    'Person1SeasonType': {
+        'nullable': {
+
+        },
+        'non-nullable': {
+            None: 'Person1SeasonType',
+        }
+    },
+    'Person2SeasonType': {
+        'nullable': {
+
+        },
+        'non-nullable': {
+            None: 'Person2SeasonType',
+        }
+    },
     'SeasonType': {
         'nullable': {
             None: 'SeasonTypeNullable',
@@ -2763,6 +2950,7 @@ parameter_map = {
             '^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$': 'SeasonTypeAllStarNullable'
         },
         'non-nullable': {
+            None: 'SeasonType',
             '^(Regular Season)|(Pre Season)$': 'SeasonType',
             '^(Regular Season)|(Pre Season)|(Playoffs)$': 'SeasonTypePlayoffs',
             '^(Regular Season)|(Pre Season)|(Playoffs)|(Pre-Season)$': 'SeasonTypePlayoffs',
@@ -2868,6 +3056,22 @@ parameter_map = {
             '^(Traditional)|(Advanced)|(Tracking)$': 'StatType'
         }
     },
+    'DLeagueTeamID': {
+        'nullable': {
+            None: 'DLeagueTeamIDNullable'
+        },
+        'non-nullable': {
+
+        }
+    },
+    'NBATeamID': {
+        'nullable': {
+
+        },
+        'non-nullable': {
+            None: 'TeamID'
+        }
+    },
     'TeamID': {
         'nullable': {
             None: 'TeamIDNullable'
@@ -2905,7 +3109,7 @@ parameter_map = {
             None: 'TopXNullable'
         },
         'non-nullable': {
-
+            None: 'TopX'
         }
     },
     'TouchTimeRange': {
@@ -4468,6 +4672,13 @@ parameter_map = {
         },
         'non-nullable': {
 
+        }
+    },
+    'MinutesMin': {
+        'nullable': {
+        },
+        'non-nullable': {
+            None: 'MinutesMin'
         }
     },
 }

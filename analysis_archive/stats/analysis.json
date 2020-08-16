@@ -1,4 +1,9 @@
 {
+    "2AssistTracker": {
+        "endpoint": "2AssistTracker",
+        "last_validated_date": "2020-08-15",
+        "status": "deprecated"
+    },
     "AllPlayers": {
         "endpoint": "AllPlayers",
         "last_validated_date": "2020-08-15",
@@ -46,6 +51,146 @@
             "WestPlayer5"
         ],
         "status": "invalid"
+    },
+    "AllTimeLeadersGrids": {
+        "data_sets": {
+            "ASTLeaders": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "AST",
+                "AST_RANK"
+            ],
+            "BLKLeaders": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "BLK",
+                "BLK_RANK"
+            ],
+            "DREBLeaders": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "DREB",
+                "DREB_RANK"
+            ],
+            "FG3ALeaders": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "FG3A",
+                "FG3A_RANK"
+            ],
+            "FG3MLeaders": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "FG3M",
+                "FG3M_RANK"
+            ],
+            "FG3_PCTLeaders": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "FG3_PCT",
+                "FG3_PCT_RANK"
+            ],
+            "FGALeaders": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "FGA",
+                "FGA_RANK"
+            ],
+            "FGMLeaders": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "FGM",
+                "FGM_RANK"
+            ],
+            "FG_PCTLeaders": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "FG_PCT",
+                "FG_PCT_RANK"
+            ],
+            "FTALeaders": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "FTA",
+                "FTA_RANK"
+            ],
+            "FTMLeaders": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "FTM",
+                "FTM_RANK"
+            ],
+            "FT_PCTLeaders": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "FT_PCT",
+                "FT_PCT_RANK"
+            ],
+            "GPLeaders": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "GP",
+                "GP_RANK"
+            ],
+            "OREBLeaders": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "OREB",
+                "OREB_RANK"
+            ],
+            "PFLeaders": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "PF",
+                "PF_RANK"
+            ],
+            "PTSLeaders": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "PTS",
+                "PTS_RANK"
+            ],
+            "REBLeaders": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "REB",
+                "REB_RANK"
+            ],
+            "STLLeaders": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "STL",
+                "STL_RANK"
+            ],
+            "TOVLeaders": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "TOV",
+                "TOV_RANK"
+            ]
+        },
+        "endpoint": "AllTimeLeadersGrids",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [],
+        "parameter_patterns": {
+            "LeagueID": null,
+            "PerMode": null,
+            "SeasonType": null,
+            "TopX": null
+        },
+        "parameters": [
+            "LeagueID",
+            "PerMode",
+            "SeasonType",
+            "TopX"
+        ],
+        "required_parameters": [
+            "LeagueID",
+            "PerMode",
+            "SeasonType",
+            "TopX"
+        ],
+        "status": "success"
     },
     "AssistLeaders": {
         "data_sets": {
@@ -711,6 +856,50 @@
         ],
         "status": "success"
     },
+    "BoxScoreSimilarityScore": {
+        "data_sets": {
+            "BoxScoreSimilarityScores": [
+                "PERSON_2_ID",
+                "PERSON_2",
+                "PERSON_2_TEAM_ID",
+                "SIMILARITY_SCORE"
+            ]
+        },
+        "endpoint": "BoxScoreSimilarityScore",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [],
+        "parameter_patterns": {
+            "Person1Id": null,
+            "Person1LeagueId": null,
+            "Person1Season": null,
+            "Person1SeasonType": null,
+            "Person2Id": null,
+            "Person2LeagueId": null,
+            "Person2Season": null,
+            "Person2SeasonType": null
+        },
+        "parameters": [
+            "Person1Id",
+            "Person1LeagueId",
+            "Person1Season",
+            "Person1SeasonType",
+            "Person2Id",
+            "Person2LeagueId",
+            "Person2Season",
+            "Person2SeasonType"
+        ],
+        "required_parameters": [
+            "Person1Id",
+            "Person1LeagueId",
+            "Person1Season",
+            "Person1SeasonType",
+            "Person2Id",
+            "Person2LeagueId",
+            "Person2Season",
+            "Person2SeasonType"
+        ],
+        "status": "success"
+    },
     "BoxScoreSummary": {
         "endpoint": "BoxScoreSummary",
         "last_validated_date": "2020-08-15",
@@ -1268,6 +1457,350 @@
         ],
         "status": "success"
     },
+    "CumeStatsPlayer": {
+        "data_sets": {
+            "GameByGameStats": [
+                "DATE_EST",
+                "VISITOR_TEAM",
+                "HOME_TEAM",
+                "GP",
+                "GS",
+                "ACTUAL_MINUTES",
+                "ACTUAL_SECONDS",
+                "FG",
+                "FGA",
+                "FG_PCT",
+                "FG3",
+                "FG3A",
+                "FG3_PCT",
+                "FT",
+                "FTA",
+                "FT_PCT",
+                "OFF_REB",
+                "DEF_REB",
+                "TOT_REB",
+                "AVG_TOT_REB",
+                "AST",
+                "PF",
+                "DQ",
+                "STL",
+                "TURNOVERS",
+                "BLK",
+                "PTS",
+                "AVG_PTS"
+            ],
+            "TotalPlayerStats": [
+                "DISPLAY_FI_LAST",
+                "PERSON_ID",
+                "JERSEY_NUM",
+                "GP",
+                "GS",
+                "ACTUAL_MINUTES",
+                "ACTUAL_SECONDS",
+                "FG",
+                "FGA",
+                "FG_PCT",
+                "FG3",
+                "FG3A",
+                "FG3_PCT",
+                "FT",
+                "FTA",
+                "FT_PCT",
+                "OFF_REB",
+                "DEF_REB",
+                "TOT_REB",
+                "AST",
+                "PF",
+                "DQ",
+                "STL",
+                "TURNOVERS",
+                "BLK",
+                "PTS",
+                "MAX_ACTUAL_MINUTES",
+                "MAX_ACTUAL_SECONDS",
+                "MAX_REB",
+                "MAX_AST",
+                "MAX_STL",
+                "MAX_TURNOVERS",
+                "MAX_BLK",
+                "MAX_PTS",
+                "AVG_ACTUAL_MINUTES",
+                "AVG_ACTUAL_SECONDS",
+                "AVG_TOT_REB",
+                "AVG_AST",
+                "AVG_STL",
+                "AVG_TURNOVERS",
+                "AVG_BLK",
+                "AVG_PTS",
+                "PER_MIN_TOT_REB",
+                "PER_MIN_AST",
+                "PER_MIN_STL",
+                "PER_MIN_TURNOVERS",
+                "PER_MIN_BLK",
+                "PER_MIN_PTS"
+            ]
+        },
+        "endpoint": "CumeStatsPlayer",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [],
+        "parameter_patterns": {
+            "GameIDs": null,
+            "LeagueID": null,
+            "PlayerID": null,
+            "Season": null,
+            "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$"
+        },
+        "parameters": [
+            "GameIDs",
+            "LeagueID",
+            "PlayerID",
+            "Season",
+            "SeasonType"
+        ],
+        "required_parameters": [
+            "GameIDs",
+            "LeagueID",
+            "PlayerID",
+            "Season",
+            "SeasonType"
+        ],
+        "status": "success"
+    },
+    "CumeStatsPlayerGames": {
+        "data_sets": {
+            "CumeStatsPlayerGames": [
+                "MATCHUP",
+                "GAME_ID"
+            ]
+        },
+        "endpoint": "CumeStatsPlayerGames",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [
+            "Location",
+            "Outcome",
+            "VsConference",
+            "VsDivision",
+            "VsTeamID"
+        ],
+        "parameter_patterns": {
+            "LeagueID": null,
+            "Location": null,
+            "Outcome": null,
+            "PlayerID": null,
+            "Season": null,
+            "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
+            "VsConference": null,
+            "VsDivision": null,
+            "VsTeamID": null
+        },
+        "parameters": [
+            "LeagueID",
+            "Location",
+            "Outcome",
+            "PlayerID",
+            "Season",
+            "SeasonType",
+            "VsConference",
+            "VsDivision",
+            "VsTeamID"
+        ],
+        "required_parameters": [
+            "LeagueID",
+            "PlayerID",
+            "Season",
+            "SeasonType"
+        ],
+        "status": "success"
+    },
+    "CumeStatsTeam": {
+        "data_sets": {
+            "GameByGameStats": [
+                "JERSEY_NUM",
+                "PLAYER",
+                "PERSON_ID",
+                "TEAM_ID",
+                "GP",
+                "GS",
+                "ACTUAL_MINUTES",
+                "ACTUAL_SECONDS",
+                "FG",
+                "FGA",
+                "FG_PCT",
+                "FG3",
+                "FG3A",
+                "FG3_PCT",
+                "FT",
+                "FTA",
+                "FT_PCT",
+                "OFF_REB",
+                "DEF_REB",
+                "TOT_REB",
+                "AST",
+                "PF",
+                "DQ",
+                "STL",
+                "TURNOVERS",
+                "BLK",
+                "PTS",
+                "MAX_ACTUAL_MINUTES",
+                "MAX_ACTUAL_SECONDS",
+                "MAX_REB",
+                "MAX_AST",
+                "MAX_STL",
+                "MAX_TURNOVERS",
+                "MAX_BLKP",
+                "MAX_PTS",
+                "AVG_ACTUAL_MINUTES",
+                "AVG_ACTUAL_SECONDS",
+                "AVG_REB",
+                "AVG_AST",
+                "AVG_STL",
+                "AVG_TURNOVERS",
+                "AVG_BLKP",
+                "AVG_PTS",
+                "PER_MIN_REB",
+                "PER_MIN_AST",
+                "PER_MIN_STL",
+                "PER_MIN_TURNOVERS",
+                "PER_MIN_BLK",
+                "PER_MIN_PTS"
+            ],
+            "TotalTeamStats": [
+                "CITY",
+                "NICKNAME",
+                "TEAM_ID",
+                "W",
+                "L",
+                "W_HOME",
+                "L_HOME",
+                "W_ROAD",
+                "L_ROAD",
+                "TEAM_TURNOVERS",
+                "TEAM_REBOUNDS",
+                "GP",
+                "GS",
+                "ACTUAL_MINUTES",
+                "ACTUAL_SECONDS",
+                "FG",
+                "FGA",
+                "FG_PCT",
+                "FG3",
+                "FG3A",
+                "FG3_PCT",
+                "FT",
+                "FTA",
+                "FT_PCT",
+                "OFF_REB",
+                "DEF_REB",
+                "TOT_REB",
+                "AST",
+                "PF",
+                "STL",
+                "TOTAL_TURNOVERS",
+                "BLK",
+                "PTS",
+                "AVG_REB",
+                "AVG_PTS",
+                "DQ"
+            ]
+        },
+        "endpoint": "CumeStatsTeam",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [],
+        "parameter_patterns": {
+            "GameIDs": null,
+            "LeagueID": null,
+            "Season": null,
+            "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
+            "TeamID": null
+        },
+        "parameters": [
+            "GameIDs",
+            "LeagueID",
+            "Season",
+            "SeasonType",
+            "TeamID"
+        ],
+        "required_parameters": [
+            "GameIDs",
+            "LeagueID",
+            "Season",
+            "SeasonType",
+            "TeamID"
+        ],
+        "status": "success"
+    },
+    "CumeStatsTeamGames": {
+        "data_sets": {
+            "CumeStatsTeamGames": [
+                "MATCHUP",
+                "GAME_ID"
+            ]
+        },
+        "endpoint": "CumeStatsTeamGames",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [
+            "Location",
+            "Outcome",
+            "SeasonID",
+            "VsConference",
+            "VsDivision",
+            "VsTeamID"
+        ],
+        "parameter_patterns": {
+            "LeagueID": null,
+            "Location": null,
+            "Outcome": null,
+            "Season": null,
+            "SeasonID": null,
+            "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
+            "TeamID": null,
+            "VsConference": null,
+            "VsDivision": null,
+            "VsTeamID": null
+        },
+        "parameters": [
+            "LeagueID",
+            "Location",
+            "Outcome",
+            "Season",
+            "SeasonID",
+            "SeasonType",
+            "TeamID",
+            "VsConference",
+            "VsDivision",
+            "VsTeamID"
+        ],
+        "required_parameters": [
+            "LeagueID",
+            "Season",
+            "SeasonType",
+            "TeamID"
+        ],
+        "status": "success"
+    },
+    "DLeaguePredictor": {
+        "data_sets": {},
+        "endpoint": "DLeaguePredictor",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [],
+        "parameter_patterns": {
+            "DLeagueTeamID": null,
+            "NBATeamID": null,
+            "Season": "^\\d{4}-\\d{2}$"
+        },
+        "parameters": [
+            "DLeagueTeamID",
+            "NBATeamID",
+            "Season"
+        ],
+        "required_parameters": [
+            "DLeagueTeamID",
+            "NBATeamID",
+            "Season"
+        ],
+        "status": "invalid"
+    },
     "DefenseHub": {
         "data_sets": {
             "DefenseHubStat1": [
@@ -1361,6 +1894,65 @@
             "PlayerScope",
             "Season",
             "SeasonType"
+        ],
+        "status": "success"
+    },
+    "DraftBoard": {
+        "data_sets": {
+            "DraftBoard": [
+                "PERSON_ID",
+                "PLAYER_NAME",
+                "SEASON",
+                "ROUND_NUMBER",
+                "ROUND_PICK",
+                "OVERALL_PICK",
+                "TEAM_ID",
+                "TEAM_CITY",
+                "TEAM_NAME",
+                "TEAM_ABBREVIATION",
+                "ORGANIZATION",
+                "ORGANIZATION_TYPE",
+                "HEIGHT",
+                "WEIGHT",
+                "POSITION",
+                "JERSEY_NUMBER",
+                "BIRTHDATE",
+                "AGE"
+            ]
+        },
+        "endpoint": "DraftBoard",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [
+            "College",
+            "OverallPick",
+            "RoundNum",
+            "RoundPick",
+            "TeamID",
+            "TopX"
+        ],
+        "parameter_patterns": {
+            "College": null,
+            "LeagueID": "^\\d{2}$",
+            "OverallPick": null,
+            "RoundNum": null,
+            "RoundPick": null,
+            "Season": "^\\d{4}$",
+            "TeamID": null,
+            "TopX": null
+        },
+        "parameters": [
+            "College",
+            "LeagueID",
+            "OverallPick",
+            "RoundNum",
+            "RoundPick",
+            "Season",
+            "TeamID",
+            "TopX"
+        ],
+        "required_parameters": [
+            "LeagueID",
+            "Season"
         ],
         "status": "success"
     },
@@ -1929,10 +2521,102 @@
         ],
         "status": "success"
     },
+    "GLAlumBoxScoreSimilarityScore": {
+        "data_sets": {
+            "GLeagueAlumBoxScoreSimilarityScores": [
+                "PERSON_2_ID",
+                "PERSON_2",
+                "TEAM_ID",
+                "SIMILARITY_SCORE"
+            ]
+        },
+        "endpoint": "GLAlumBoxScoreSimilarityScore",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [],
+        "parameter_patterns": {
+            "Person1Id": null,
+            "Person1LeagueId": null,
+            "Person1Season": null,
+            "Person1SeasonType": null,
+            "Person2Id": null,
+            "Person2LeagueId": null,
+            "Person2Season": null,
+            "Person2SeasonType": null
+        },
+        "parameters": [
+            "Person1Id",
+            "Person1LeagueId",
+            "Person1Season",
+            "Person1SeasonType",
+            "Person2Id",
+            "Person2LeagueId",
+            "Person2Season",
+            "Person2SeasonType"
+        ],
+        "required_parameters": [
+            "Person1Id",
+            "Person1LeagueId",
+            "Person1Season",
+            "Person1SeasonType",
+            "Person2Id",
+            "Person2LeagueId",
+            "Person2Season",
+            "Person2SeasonType"
+        ],
+        "status": "success"
+    },
     "GLeaguePredictor": {
         "endpoint": "GLeaguePredictor",
         "last_validated_date": "2020-08-15",
         "status": "deprecated"
+    },
+    "GameRotation": {
+        "data_sets": {
+            "AwayTeam": [
+                "GAME_ID",
+                "TEAM_ID",
+                "TEAM_CITY",
+                "TEAM_NAME",
+                "PERSON_ID",
+                "PLAYER_FIRST",
+                "PLAYER_LAST",
+                "IN_TIME_REAL",
+                "OUT_TIME_REAL",
+                "PLAYER_PTS",
+                "PT_DIFF",
+                "USG_PCT"
+            ],
+            "HomeTeam": [
+                "GAME_ID",
+                "TEAM_ID",
+                "TEAM_CITY",
+                "TEAM_NAME",
+                "PERSON_ID",
+                "PLAYER_FIRST",
+                "PLAYER_LAST",
+                "IN_TIME_REAL",
+                "OUT_TIME_REAL",
+                "PLAYER_PTS",
+                "PT_DIFF",
+                "USG_PCT"
+            ]
+        },
+        "endpoint": "GameRotation",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [],
+        "parameter_patterns": {
+            "GameID": "^\\d{10}$",
+            "LeagueID": null
+        },
+        "parameters": [
+            "GameID",
+            "LeagueID"
+        ],
+        "required_parameters": [
+            "GameID",
+            "LeagueID"
+        ],
+        "status": "success"
     },
     "HomePage": {
         "endpoint": "HomePage",
@@ -4781,6 +5465,525 @@
         ],
         "status": "success"
     },
+    "LeagueHustleStatsPlayer": {
+        "data_sets": {
+            "HustleStatsPlayer": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "TEAM_ID",
+                "TEAM_ABBREVIATION",
+                "AGE",
+                "G",
+                "MIN",
+                "CONTESTED_SHOTS",
+                "CONTESTED_SHOTS_2PT",
+                "CONTESTED_SHOTS_3PT",
+                "DEFLECTIONS",
+                "CHARGES_DRAWN",
+                "SCREEN_ASSISTS",
+                "SCREEN_AST_PTS",
+                "OFF_LOOSE_BALLS_RECOVERED",
+                "DEF_LOOSE_BALLS_RECOVERED",
+                "LOOSE_BALLS_RECOVERED",
+                "PCT_LOOSE_BALLS_RECOVERED_OFF",
+                "PCT_LOOSE_BALLS_RECOVERED_DEF",
+                "OFF_BOXOUTS",
+                "DEF_BOXOUTS",
+                "BOX_OUT_PLAYER_TEAM_REBS",
+                "BOX_OUT_PLAYER_REBS",
+                "BOX_OUTS",
+                "PCT_BOX_OUTS_OFF",
+                "PCT_BOX_OUTS_DEF",
+                "PCT_BOX_OUTS_TEAM_REB",
+                "PCT_BOX_OUTS_REB"
+            ]
+        },
+        "endpoint": "LeagueHustleStatsPlayer",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [
+            "College",
+            "Conference",
+            "Country",
+            "DateFrom",
+            "DateTo",
+            "Division",
+            "DraftPick",
+            "DraftYear",
+            "Height",
+            "LeagueID",
+            "Location",
+            "Month",
+            "OpponentTeamID",
+            "Outcome",
+            "PORound",
+            "PlayerExperience",
+            "PlayerPosition",
+            "SeasonSegment",
+            "TeamID",
+            "VsConference",
+            "VsDivision",
+            "Weight"
+        ],
+        "parameter_patterns": {
+            "College": null,
+            "Conference": null,
+            "Country": null,
+            "DateFrom": null,
+            "DateTo": null,
+            "Division": null,
+            "DraftPick": null,
+            "DraftYear": null,
+            "Height": null,
+            "LeagueID": null,
+            "Location": null,
+            "Month": null,
+            "OpponentTeamID": null,
+            "Outcome": null,
+            "PORound": null,
+            "PerMode": "^(Totals)|(PerGame)|(Per48)|(Per40)|(Per36)|(PerMinute)$",
+            "PlayerExperience": null,
+            "PlayerPosition": null,
+            "Season": null,
+            "SeasonSegment": null,
+            "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
+            "TeamID": null,
+            "VsConference": null,
+            "VsDivision": null,
+            "Weight": null
+        },
+        "parameters": [
+            "College",
+            "Conference",
+            "Country",
+            "DateFrom",
+            "DateTo",
+            "Division",
+            "DraftPick",
+            "DraftYear",
+            "Height",
+            "LeagueID",
+            "Location",
+            "Month",
+            "OpponentTeamID",
+            "Outcome",
+            "PORound",
+            "PerMode",
+            "PlayerExperience",
+            "PlayerPosition",
+            "Season",
+            "SeasonSegment",
+            "SeasonType",
+            "TeamID",
+            "VsConference",
+            "VsDivision",
+            "Weight"
+        ],
+        "required_parameters": [
+            "LeagueID",
+            "PerMode",
+            "Season",
+            "SeasonType"
+        ],
+        "status": "success"
+    },
+    "LeagueHustleStatsPlayerLeaders": {
+        "data_sets": {
+            "PlayerChargesDrawnLeaders": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "TEAM_ID",
+                "TEAM_ABBREVIATION",
+                "AGE",
+                "RANK",
+                "CHARGES_DRAWN"
+            ],
+            "PlayerContestedShotsLeaders": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "TEAM_ID",
+                "TEAM_ABBREVIATION",
+                "AGE",
+                "RANK",
+                "CONTESTED_SHOTS"
+            ],
+            "PlayerDeflectionsLeaders": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "TEAM_ID",
+                "TEAM_ABBREVIATION",
+                "AGE",
+                "RANK",
+                "DEFLECTIONS"
+            ],
+            "PlayerLooseBallLeaders": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "TEAM_ID",
+                "TEAM_ABBREVIATION",
+                "AGE",
+                "RANK",
+                "LOOSE_BALLS_RECOVERED"
+            ],
+            "PlayerScreenAssistLeaders": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "TEAM_ID",
+                "TEAM_ABBREVIATION",
+                "AGE",
+                "RANK",
+                "SCREEN_ASSISTS"
+            ],
+            "Table5": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "TEAM_ID",
+                "TEAM_ABBREVIATION",
+                "AGE",
+                "RANK",
+                "BOX_OUTS"
+            ]
+        },
+        "endpoint": "LeagueHustleStatsPlayerLeaders",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [
+            "College",
+            "Conference",
+            "Country",
+            "DateFrom",
+            "DateTo",
+            "Division",
+            "DraftPick",
+            "DraftYear",
+            "Height",
+            "LeagueID",
+            "Location",
+            "Month",
+            "OpponentTeamID",
+            "Outcome",
+            "PORound",
+            "PlayerExperience",
+            "PlayerPosition",
+            "SeasonSegment",
+            "TeamID",
+            "VsConference",
+            "VsDivision",
+            "Weight"
+        ],
+        "parameter_patterns": {
+            "College": null,
+            "Conference": null,
+            "Country": null,
+            "DateFrom": null,
+            "DateTo": null,
+            "Division": null,
+            "DraftPick": null,
+            "DraftYear": null,
+            "Height": null,
+            "LeagueID": null,
+            "Location": null,
+            "Month": null,
+            "OpponentTeamID": null,
+            "Outcome": null,
+            "PORound": null,
+            "PerMode": "^(Totals)|(PerGame)|(Per48)|(Per40)|(Per36)|(PerMinute)$",
+            "PlayerExperience": null,
+            "PlayerPosition": null,
+            "Season": null,
+            "SeasonSegment": null,
+            "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
+            "TeamID": null,
+            "VsConference": null,
+            "VsDivision": null,
+            "Weight": null
+        },
+        "parameters": [
+            "College",
+            "Conference",
+            "Country",
+            "DateFrom",
+            "DateTo",
+            "Division",
+            "DraftPick",
+            "DraftYear",
+            "Height",
+            "LeagueID",
+            "Location",
+            "Month",
+            "OpponentTeamID",
+            "Outcome",
+            "PORound",
+            "PerMode",
+            "PlayerExperience",
+            "PlayerPosition",
+            "Season",
+            "SeasonSegment",
+            "SeasonType",
+            "TeamID",
+            "VsConference",
+            "VsDivision",
+            "Weight"
+        ],
+        "required_parameters": [
+            "LeagueID",
+            "PerMode",
+            "Season",
+            "SeasonType"
+        ],
+        "status": "success"
+    },
+    "LeagueHustleStatsTeam": {
+        "data_sets": {
+            "HustleStatsTeam": [
+                "TEAM_ID",
+                "TEAM_NAME",
+                "MIN",
+                "CONTESTED_SHOTS",
+                "CONTESTED_SHOTS_2PT",
+                "CONTESTED_SHOTS_3PT",
+                "DEFLECTIONS",
+                "CHARGES_DRAWN",
+                "SCREEN_ASSISTS",
+                "SCREEN_AST_PTS",
+                "OFF_LOOSE_BALLS_RECOVERED",
+                "DEF_LOOSE_BALLS_RECOVERED",
+                "LOOSE_BALLS_RECOVERED",
+                "PCT_LOOSE_BALLS_RECOVERED_OFF",
+                "PCT_LOOSE_BALLS_RECOVERED_DEF",
+                "OFF_BOXOUTS",
+                "DEF_BOXOUTS",
+                "BOX_OUTS",
+                "PCT_BOX_OUTS_OFF",
+                "PCT_BOX_OUTS_DEF"
+            ]
+        },
+        "endpoint": "LeagueHustleStatsTeam",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [
+            "College",
+            "Conference",
+            "Country",
+            "DateFrom",
+            "DateTo",
+            "Division",
+            "DraftPick",
+            "DraftYear",
+            "Height",
+            "LeagueID",
+            "Location",
+            "Month",
+            "OpponentTeamID",
+            "Outcome",
+            "PORound",
+            "PlayerExperience",
+            "PlayerPosition",
+            "SeasonSegment",
+            "TeamID",
+            "VsConference",
+            "VsDivision",
+            "Weight"
+        ],
+        "parameter_patterns": {
+            "College": null,
+            "Conference": null,
+            "Country": null,
+            "DateFrom": null,
+            "DateTo": null,
+            "Division": null,
+            "DraftPick": null,
+            "DraftYear": null,
+            "Height": null,
+            "LeagueID": null,
+            "Location": null,
+            "Month": null,
+            "OpponentTeamID": null,
+            "Outcome": null,
+            "PORound": null,
+            "PerMode": "^(Totals)|(PerGame)|(Per48)|(Per40)|(Per36)|(PerMinute)$",
+            "PlayerExperience": null,
+            "PlayerPosition": null,
+            "Season": null,
+            "SeasonSegment": null,
+            "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
+            "TeamID": null,
+            "VsConference": null,
+            "VsDivision": null,
+            "Weight": null
+        },
+        "parameters": [
+            "College",
+            "Conference",
+            "Country",
+            "DateFrom",
+            "DateTo",
+            "Division",
+            "DraftPick",
+            "DraftYear",
+            "Height",
+            "LeagueID",
+            "Location",
+            "Month",
+            "OpponentTeamID",
+            "Outcome",
+            "PORound",
+            "PerMode",
+            "PlayerExperience",
+            "PlayerPosition",
+            "Season",
+            "SeasonSegment",
+            "SeasonType",
+            "TeamID",
+            "VsConference",
+            "VsDivision",
+            "Weight"
+        ],
+        "required_parameters": [
+            "LeagueID",
+            "PerMode",
+            "Season",
+            "SeasonType"
+        ],
+        "status": "success"
+    },
+    "LeagueHustleStatsTeamLeaders": {
+        "data_sets": {
+            "Table5": [
+                "TEAM_ID",
+                "TEAM_NAME",
+                "TEAM_ABBREVIATION",
+                "RANK",
+                "BOX_OUTS"
+            ],
+            "Table6": [
+                "TEAM_ID",
+                "TEAM_NAME",
+                "TEAM_ABBREVIATION",
+                "RANK",
+                "BOX_OUTS"
+            ],
+            "TeamChargesDrawnLeaders": [
+                "TEAM_ID",
+                "TEAM_NAME",
+                "TEAM_ABBREVIATION",
+                "RANK",
+                "CHARGES_DRAWN"
+            ],
+            "TeamContestedShotsLeaders": [
+                "TEAM_ID",
+                "TEAM_NAME",
+                "TEAM_ABBREVIATION",
+                "RANK",
+                "CONTESTED_SHOTS"
+            ],
+            "TeamDeflectionsLeaders": [
+                "TEAM_ID",
+                "TEAM_NAME",
+                "TEAM_ABBREVIATION",
+                "RANK",
+                "DEFLECTIONS"
+            ],
+            "TeamLooseBallLeaders": [
+                "TEAM_ID",
+                "TEAM_NAME",
+                "TEAM_ABBREVIATION",
+                "RANK",
+                "LOOSE_BALLS_RECOVERED"
+            ],
+            "TeamScreenAssistLeaders": [
+                "TEAM_ID",
+                "TEAM_NAME",
+                "TEAM_ABBREVIATION",
+                "RANK",
+                "SCREEN_ASSISTS"
+            ]
+        },
+        "endpoint": "LeagueHustleStatsTeamLeaders",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [
+            "College",
+            "Conference",
+            "Country",
+            "DateFrom",
+            "DateTo",
+            "Division",
+            "DraftPick",
+            "DraftYear",
+            "Height",
+            "LeagueID",
+            "Location",
+            "Month",
+            "OpponentTeamID",
+            "Outcome",
+            "PORound",
+            "PlayerExperience",
+            "PlayerPosition",
+            "SeasonSegment",
+            "TeamID",
+            "VsConference",
+            "VsDivision",
+            "Weight"
+        ],
+        "parameter_patterns": {
+            "College": null,
+            "Conference": null,
+            "Country": null,
+            "DateFrom": null,
+            "DateTo": null,
+            "Division": null,
+            "DraftPick": null,
+            "DraftYear": null,
+            "Height": null,
+            "LeagueID": null,
+            "Location": null,
+            "Month": null,
+            "OpponentTeamID": null,
+            "Outcome": null,
+            "PORound": null,
+            "PerMode": "^(Totals)|(PerGame)|(Per48)|(Per40)|(Per36)|(PerMinute)$",
+            "PlayerExperience": null,
+            "PlayerPosition": null,
+            "Season": null,
+            "SeasonSegment": null,
+            "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
+            "TeamID": null,
+            "VsConference": null,
+            "VsDivision": null,
+            "Weight": null
+        },
+        "parameters": [
+            "College",
+            "Conference",
+            "Country",
+            "DateFrom",
+            "DateTo",
+            "Division",
+            "DraftPick",
+            "DraftYear",
+            "Height",
+            "LeagueID",
+            "Location",
+            "Month",
+            "OpponentTeamID",
+            "Outcome",
+            "PORound",
+            "PerMode",
+            "PlayerExperience",
+            "PlayerPosition",
+            "Season",
+            "SeasonSegment",
+            "SeasonType",
+            "TeamID",
+            "VsConference",
+            "VsDivision",
+            "Weight"
+        ],
+        "required_parameters": [
+            "LeagueID",
+            "PerMode",
+            "Season",
+            "SeasonType"
+        ],
+        "status": "success"
+    },
     "LeagueLeaders": {
         "data_sets": {
             "LeagueLeaders": [
@@ -4843,6 +6046,136 @@
             "Season",
             "SeasonType",
             "StatCategory"
+        ],
+        "status": "success"
+    },
+    "LeagueLineupViz": {
+        "data_sets": {
+            "LeagueLineupViz": [
+                "GROUP_ID",
+                "GROUP_NAME",
+                "TEAM_ID",
+                "TEAM_ABBREVIATION",
+                "MIN",
+                "OFF_RATING",
+                "DEF_RATING",
+                "NET_RATING",
+                "PACE",
+                "TS_PCT",
+                "FTA_RATE",
+                "TM_AST_PCT",
+                "PCT_FGA_2PT",
+                "PCT_FGA_3PT",
+                "PCT_PTS_2PT_MR",
+                "PCT_PTS_FB",
+                "PCT_PTS_FT",
+                "PCT_PTS_PAINT",
+                "PCT_AST_FGM",
+                "PCT_UAST_FGM",
+                "OPP_FG3_PCT",
+                "OPP_EFG_PCT",
+                "OPP_FTA_RATE",
+                "OPP_TOV_PCT"
+            ]
+        },
+        "endpoint": "LeagueLineupViz",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [
+            "Conference",
+            "DateFrom",
+            "DateTo",
+            "Division",
+            "GameSegment",
+            "LeagueID",
+            "Location",
+            "Outcome",
+            "PORound",
+            "SeasonSegment",
+            "ShotClockRange",
+            "TeamID",
+            "VsConference",
+            "VsDivision"
+        ],
+        "parameter_patterns": {
+            "Conference": "((East)|(West))?",
+            "DateFrom": null,
+            "DateTo": null,
+            "Division": "((Atlantic)|(Central)|(Northwest)|(Pacific)|(Southeast)|(Southwest))?",
+            "GameSegment": "^((First Half)|(Overtime)|(Second Half))?$",
+            "GroupQuantity": null,
+            "LastNGames": null,
+            "LeagueID": null,
+            "Location": "^((Home)|(Road))?$",
+            "MeasureType": "^(Base)|(Advanced)|(Misc)|(Four Factors)|(Scoring)|(Opponent)|(Usage)|(Defense)$",
+            "MinutesMin": null,
+            "Month": null,
+            "OpponentTeamID": null,
+            "Outcome": "^((W)|(L))?$",
+            "PORound": null,
+            "PaceAdjust": "^(Y)|(N)$",
+            "PerMode": "^(Totals)|(PerGame)|(MinutesPer)|(Per48)|(Per40)|(Per36)|(PerMinute)|(PerPossession)|(PerPlay)|(Per100Possessions)|(Per100Plays)$",
+            "Period": null,
+            "PlusMinus": "^(Y)|(N)$",
+            "Rank": "^(Y)|(N)$",
+            "Season": null,
+            "SeasonSegment": "^((Post All-Star)|(Pre All-Star))?$",
+            "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$",
+            "ShotClockRange": "((24-22)|(22-18 Very Early)|(18-15 Early)|(15-7 Average)|(7-4 Late)|(4-0 Very Late)|(ShotClock Off))?",
+            "TeamID": null,
+            "VsConference": "^((East)|(West))?$",
+            "VsDivision": "^((Atlantic)|(Central)|(Northwest)|(Pacific)|(Southeast)|(Southwest)|(East)|(West))?$"
+        },
+        "parameters": [
+            "Conference",
+            "DateFrom",
+            "DateTo",
+            "Division",
+            "GameSegment",
+            "GroupQuantity",
+            "LastNGames",
+            "LeagueID",
+            "Location",
+            "MeasureType",
+            "MinutesMin",
+            "Month",
+            "OpponentTeamID",
+            "Outcome",
+            "PORound",
+            "PaceAdjust",
+            "PerMode",
+            "Period",
+            "PlusMinus",
+            "Rank",
+            "Season",
+            "SeasonSegment",
+            "SeasonType",
+            "ShotClockRange",
+            "TeamID",
+            "VsConference",
+            "VsDivision"
+        ],
+        "required_parameters": [
+            "DateFrom",
+            "DateTo",
+            "GameSegment",
+            "GroupQuantity",
+            "LastNGames",
+            "Location",
+            "MeasureType",
+            "MinutesMin",
+            "Month",
+            "OpponentTeamID",
+            "Outcome",
+            "PaceAdjust",
+            "PerMode",
+            "Period",
+            "PlusMinus",
+            "Rank",
+            "Season",
+            "SeasonSegment",
+            "SeasonType",
+            "VsConference",
+            "VsDivision"
         ],
         "status": "success"
     },
@@ -5170,10 +6503,217 @@
         ],
         "status": "success"
     },
+    "LeagueStandingsV3": {
+        "data_sets": {
+            "Standings": [
+                "LeagueID",
+                "SeasonID",
+                "TeamID",
+                "TeamCity",
+                "TeamName",
+                "TeamSlug",
+                "Conference",
+                "ConferenceRecord",
+                "PlayoffRank",
+                "ClinchIndicator",
+                "Division",
+                "DivisionRecord",
+                "DivisionRank",
+                "WINS",
+                "LOSSES",
+                "WinPCT",
+                "LeagueRank",
+                "Record",
+                "HOME",
+                "ROAD",
+                "L10",
+                "Last10Home",
+                "Last10Road",
+                "OT",
+                "ThreePTSOrLess",
+                "TenPTSOrMore",
+                "LongHomeStreak",
+                "strLongHomeStreak",
+                "LongRoadStreak",
+                "strLongRoadStreak",
+                "LongWinStreak",
+                "LongLossStreak",
+                "CurrentHomeStreak",
+                "strCurrentHomeStreak",
+                "CurrentRoadStreak",
+                "strCurrentRoadStreak",
+                "CurrentStreak",
+                "strCurrentStreak",
+                "ConferenceGamesBack",
+                "DivisionGamesBack",
+                "ClinchedConferenceTitle",
+                "ClinchedDivisionTitle",
+                "ClinchedPlayoffBirth",
+                "EliminatedConference",
+                "EliminatedDivision",
+                "AheadAtHalf",
+                "BehindAtHalf",
+                "TiedAtHalf",
+                "AheadAtThird",
+                "BehindAtThird",
+                "TiedAtThird",
+                "Score100PTS",
+                "OppScore100PTS",
+                "OppOver500",
+                "LeadInFGPCT",
+                "LeadInReb",
+                "FewerTurnovers",
+                "PointsPG",
+                "OppPointsPG",
+                "DiffPointsPG",
+                "vsEast",
+                "vsAtlantic",
+                "vsCentral",
+                "vsSoutheast",
+                "vsWest",
+                "vsNorthwest",
+                "vsPacific",
+                "vsSouthwest",
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec",
+                "ReturnToPlay_East_PI_Flag",
+                "ReturnToPlay_West_PI_Flag",
+                "ReturnToPlay_Already_Eliminated",
+                "Seeding_Game_1_Outcome",
+                "Seeding_Game_2_Outcome",
+                "Seeding_Game_3_Outcome",
+                "Seeding_Game_4_Outcome",
+                "Seeding_Game_5_Outcome",
+                "Seeding_Game_6_Outcome",
+                "Seeding_Game_7_Outcome",
+                "Seeding_Game_8_Outcome",
+                "Seeding_Game_1_ID",
+                "Seeding_Game_2_ID",
+                "Seeding_Game_3_ID",
+                "Seeding_Game_4_ID",
+                "Seeding_Game_5_ID",
+                "Seeding_Game_6_ID",
+                "Seeding_Game_7_ID",
+                "Seeding_Game_8_ID",
+                "Seeding_Game_1_Opponent",
+                "Seeding_Game_2_Opponent",
+                "Seeding_Game_3_Opponent",
+                "Seeding_Game_4_Opponent",
+                "Seeding_Game_5_Opponent",
+                "Seeding_Game_6_Opponent",
+                "Seeding_Game_7_Opponent",
+                "Seeding_Game_8_Opponent",
+                "Seeding_Game_1_Label",
+                "Seeding_Game_2_Label",
+                "Seeding_Game_3_Label",
+                "Seeding_Game_4_Label",
+                "Seeding_Game_5_Label",
+                "Seeding_Game_6_Label",
+                "Seeding_Game_7_Label",
+                "Seeding_Game_8_Label"
+            ]
+        },
+        "endpoint": "LeagueStandingsV3",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [
+            "SeasonYear"
+        ],
+        "parameter_patterns": {
+            "LeagueID": "^\\d{2}$",
+            "Season": null,
+            "SeasonType": "^(Regular Season)|(Pre Season)$",
+            "SeasonYear": null
+        },
+        "parameters": [
+            "LeagueID",
+            "Season",
+            "SeasonType",
+            "SeasonYear"
+        ],
+        "required_parameters": [
+            "LeagueID",
+            "Season",
+            "SeasonType"
+        ],
+        "status": "success"
+    },
     "LineupStats": {
         "endpoint": "LineupStats",
         "last_validated_date": "2020-08-15",
         "status": "deprecated"
+    },
+    "MatchupsRollup": {
+        "data_sets": {
+            "MatchupsRollup": [
+                "SEASON_ID",
+                "POSITION",
+                "PERCENT_OF_TIME",
+                "DEF_PLAYER_ID",
+                "DEF_PLAYER_NAME",
+                "GP",
+                "MATCHUP_MIN",
+                "PARTIAL_POSS",
+                "PLAYER_PTS",
+                "TEAM_PTS",
+                "MATCHUP_AST",
+                "MATCHUP_TOV",
+                "MATCHUP_BLK",
+                "MATCHUP_FGM",
+                "MATCHUP_FGA",
+                "MATCHUP_FG_PCT",
+                "MATCHUP_FG3M",
+                "MATCHUP_FG3A",
+                "MATCHUP_FG3_PCT",
+                "MATCHUP_FTM",
+                "MATCHUP_FTA",
+                "SFL"
+            ]
+        },
+        "endpoint": "MatchupsRollup",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [
+            "DefPlayerID",
+            "DefTeamID",
+            "OffPlayerID",
+            "OffTeamID"
+        ],
+        "parameter_patterns": {
+            "DefPlayerID": null,
+            "DefTeamID": null,
+            "LeagueID": "^\\d{2}$",
+            "OffPlayerID": null,
+            "OffTeamID": null,
+            "PerMode": null,
+            "Season": "^(\\d{4}-\\d{2})$",
+            "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(Pre-Season)$"
+        },
+        "parameters": [
+            "DefPlayerID",
+            "DefTeamID",
+            "LeagueID",
+            "OffPlayerID",
+            "OffTeamID",
+            "PerMode",
+            "Season",
+            "SeasonType"
+        ],
+        "required_parameters": [
+            "LeagueID",
+            "PerMode",
+            "Season",
+            "SeasonType"
+        ],
+        "status": "success"
     },
     "PlayByPlay": {
         "data_sets": {
@@ -5319,6 +6859,192 @@
         "endpoint": "PlayerBioStats",
         "last_validated_date": "2020-08-15",
         "status": "deprecated"
+    },
+    "PlayerCareerByCollege": {
+        "data_sets": {
+            "PlayerCareerByCollege": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "COLLEGE",
+                "GP",
+                "MIN",
+                "FGM",
+                "FGA",
+                "FG_PCT",
+                "FG3M",
+                "FG3A",
+                "FG3_PCT",
+                "FTM",
+                "FTA",
+                "FT_PCT",
+                "OREB",
+                "DREB",
+                "REB",
+                "AST",
+                "STL",
+                "BLK",
+                "TOV",
+                "PF",
+                "PTS"
+            ]
+        },
+        "endpoint": "PlayerCareerByCollege",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [
+            "Season"
+        ],
+        "parameter_patterns": {
+            "College": null,
+            "LeagueID": null,
+            "PerMode": null,
+            "Season": null,
+            "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$"
+        },
+        "parameters": [
+            "College",
+            "LeagueID",
+            "PerMode",
+            "Season",
+            "SeasonType"
+        ],
+        "required_parameters": [
+            "College",
+            "LeagueID",
+            "PerMode",
+            "SeasonType"
+        ],
+        "status": "success"
+    },
+    "PlayerCareerByCollegeRollup": {
+        "data_sets": {
+            "East": [
+                "REGION",
+                "SEED",
+                "COLLEGE",
+                "PLAYERS",
+                "GP",
+                "MIN",
+                "FGM",
+                "FGA",
+                "FG_PCT",
+                "FG3M",
+                "FG3A",
+                "FG3_PCT",
+                "FTM",
+                "FTA",
+                "FT_PCT",
+                "OREB",
+                "DREB",
+                "REB",
+                "AST",
+                "STL",
+                "BLK",
+                "TOV",
+                "PF",
+                "PTS"
+            ],
+            "Midwest": [
+                "REGION",
+                "SEED",
+                "COLLEGE",
+                "PLAYERS",
+                "GP",
+                "MIN",
+                "FGM",
+                "FGA",
+                "FG_PCT",
+                "FG3M",
+                "FG3A",
+                "FG3_PCT",
+                "FTM",
+                "FTA",
+                "FT_PCT",
+                "OREB",
+                "DREB",
+                "REB",
+                "AST",
+                "STL",
+                "BLK",
+                "TOV",
+                "PF",
+                "PTS"
+            ],
+            "South": [
+                "REGION",
+                "SEED",
+                "COLLEGE",
+                "PLAYERS",
+                "GP",
+                "MIN",
+                "FGM",
+                "FGA",
+                "FG_PCT",
+                "FG3M",
+                "FG3A",
+                "FG3_PCT",
+                "FTM",
+                "FTA",
+                "FT_PCT",
+                "OREB",
+                "DREB",
+                "REB",
+                "AST",
+                "STL",
+                "BLK",
+                "TOV",
+                "PF",
+                "PTS"
+            ],
+            "West": [
+                "REGION",
+                "SEED",
+                "COLLEGE",
+                "PLAYERS",
+                "GP",
+                "MIN",
+                "FGM",
+                "FGA",
+                "FG_PCT",
+                "FG3M",
+                "FG3A",
+                "FG3_PCT",
+                "FTM",
+                "FTA",
+                "FT_PCT",
+                "OREB",
+                "DREB",
+                "REB",
+                "AST",
+                "STL",
+                "BLK",
+                "TOV",
+                "PF",
+                "PTS"
+            ]
+        },
+        "endpoint": "PlayerCareerByCollegeRollup",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [
+            "Season"
+        ],
+        "parameter_patterns": {
+            "LeagueID": null,
+            "PerMode": null,
+            "Season": null,
+            "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)$"
+        },
+        "parameters": [
+            "LeagueID",
+            "PerMode",
+            "Season",
+            "SeasonType"
+        ],
+        "required_parameters": [
+            "LeagueID",
+            "PerMode",
+            "SeasonType"
+        ],
+        "status": "success"
     },
     "PlayerCareerStats": {
         "data_sets": {
@@ -9900,6 +11626,63 @@
         "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
+    "PlayerEstimatedMetrics": {
+        "data_sets": {
+            "PlayerEstimatedMetrics": [
+                "PLAYER_ID",
+                "PLAYER_NAME",
+                "GP",
+                "W",
+                "L",
+                "W_PCT",
+                "MIN",
+                "E_OFF_RATING",
+                "E_DEF_RATING",
+                "E_NET_RATING",
+                "E_AST_RATIO",
+                "E_OREB_PCT",
+                "E_DREB_PCT",
+                "E_REB_PCT",
+                "E_TOV_PCT",
+                "E_USG_PCT",
+                "E_PACE",
+                "GP_RANK",
+                "W_RANK",
+                "L_RANK",
+                "W_PCT_RANK",
+                "MIN_RANK",
+                "E_OFF_RATING_RANK",
+                "E_DEF_RATING_RANK",
+                "E_NET_RATING_RANK",
+                "E_AST_RATIO_RANK",
+                "E_OREB_PCT_RANK",
+                "E_DREB_PCT_RANK",
+                "E_REB_PCT_RANK",
+                "E_TOV_PCT_RANK",
+                "E_USG_PCT_RANK",
+                "E_PACE_RANK"
+            ]
+        },
+        "endpoint": "PlayerEstimatedMetrics",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [],
+        "parameter_patterns": {
+            "LeagueID": null,
+            "Season": null,
+            "SeasonType": null
+        },
+        "parameters": [
+            "LeagueID",
+            "Season",
+            "SeasonType"
+        ],
+        "required_parameters": [
+            "LeagueID",
+            "Season",
+            "SeasonType"
+        ],
+        "status": "success"
+    },
     "PlayerFantasyProfile": {
         "data_sets": {
             "DaysRestModified": [
@@ -11205,6 +12988,46 @@
         "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
+    "PlayerTrackBucketSimilarityScore": {
+        "data_sets": {},
+        "endpoint": "PlayerTrackBucketSimilarityScore",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [],
+        "parameter_patterns": {},
+        "parameters": [],
+        "required_parameters": [],
+        "status": "invalid"
+    },
+    "PlayerTrackRankSimilarityComp": {
+        "data_sets": {},
+        "endpoint": "PlayerTrackRankSimilarityComp",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [],
+        "parameter_patterns": {},
+        "parameters": [],
+        "required_parameters": [],
+        "status": "invalid"
+    },
+    "PlayerTrackSimilarityScore": {
+        "data_sets": {},
+        "endpoint": "PlayerTrackSimilarityScore",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [],
+        "parameter_patterns": {},
+        "parameters": [],
+        "required_parameters": [],
+        "status": "invalid"
+    },
+    "PlayerTrackSimilarityUniqueness": {
+        "data_sets": {},
+        "endpoint": "PlayerTrackSimilarityUniqueness",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [],
+        "parameter_patterns": {},
+        "parameters": [],
+        "required_parameters": [],
+        "status": "invalid"
+    },
     "PlayerVsPlayer": {
         "data_sets": {
             "OnOffCourt": [
@@ -12248,6 +14071,35 @@
         ],
         "status": "success"
     },
+    "ShotChartLeagueWide": {
+        "data_sets": {
+            "League_Wide": [
+                "GRID_TYPE",
+                "SHOT_ZONE_BASIC",
+                "SHOT_ZONE_AREA",
+                "SHOT_ZONE_RANGE",
+                "FGA",
+                "FGM",
+                "FG_PCT"
+            ]
+        },
+        "endpoint": "ShotChartLeagueWide",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [],
+        "parameter_patterns": {
+            "LeagueID": null,
+            "Season": null
+        },
+        "parameters": [
+            "LeagueID",
+            "Season"
+        ],
+        "required_parameters": [
+            "LeagueID",
+            "Season"
+        ],
+        "status": "success"
+    },
     "ShotChartLineupDetail": {
         "data_sets": {
             "ShotChartLineupDetail": [
@@ -12374,6 +14226,16 @@
         ],
         "status": "success"
     },
+    "SynergyBucketSimilarityScore": {
+        "data_sets": {},
+        "endpoint": "SynergyBucketSimilarityScore",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [],
+        "parameter_patterns": {},
+        "parameters": [],
+        "required_parameters": [],
+        "status": "invalid"
+    },
     "SynergyPlayTypes": {
         "data_sets": {
             "SynergyPlayType": [
@@ -12433,6 +14295,16 @@
             "SeasonYear"
         ],
         "status": "success"
+    },
+    "SynergySimilarityScore": {
+        "data_sets": {},
+        "endpoint": "SynergySimilarityScore",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [],
+        "parameter_patterns": {},
+        "parameters": [],
+        "required_parameters": [],
+        "status": "invalid"
     },
     "TeamAndPlayerVsPlayers": {
         "endpoint": "TeamAndPlayerVsPlayers",
@@ -16650,6 +18522,61 @@
         ],
         "required_parameters": [
             "TeamID"
+        ],
+        "status": "success"
+    },
+    "TeamEstimatedMetrics": {
+        "data_sets": {
+            "TeamEstimatedMetrics": [
+                "TEAM_NAME",
+                "TEAM_ID",
+                "GP",
+                "W",
+                "L",
+                "W_PCT",
+                "MIN",
+                "E_OFF_RATING",
+                "E_DEF_RATING",
+                "E_NET_RATING",
+                "E_PACE",
+                "E_AST_RATIO",
+                "E_OREB_PCT",
+                "E_DREB_PCT",
+                "E_REB_PCT",
+                "E_TM_TOV_PCT",
+                "GP_RANK",
+                "W_RANK",
+                "L_RANK",
+                "W_PCT_RANK",
+                "MIN_RANK",
+                "E_OFF_RATING_RANK",
+                "E_DEF_RATING_RANK",
+                "E_NET_RATING_RANK",
+                "E_AST_RATIO_RANK",
+                "E_OREB_PCT_RANK",
+                "E_DREB_PCT_RANK",
+                "E_REB_PCT_RANK",
+                "E_TM_TOV_PCT_RANK",
+                "E_PACE_RANK"
+            ]
+        },
+        "endpoint": "TeamEstimatedMetrics",
+        "last_validated_date": "2020-08-15",
+        "nullable_parameters": [],
+        "parameter_patterns": {
+            "LeagueID": null,
+            "Season": null,
+            "SeasonType": null
+        },
+        "parameters": [
+            "LeagueID",
+            "Season",
+            "SeasonType"
+        ],
+        "required_parameters": [
+            "LeagueID",
+            "Season",
+            "SeasonType"
         ],
         "status": "success"
     },
