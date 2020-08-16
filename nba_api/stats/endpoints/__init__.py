@@ -29,6 +29,7 @@ __all__ = [
     'franchiseplayers',
     'homepageleaders',
     'homepagev2',
+    'hustlestatsboxscore',
     'infographicfanduelplayer',
     'leaderstiles',
     'leaguedashlineups',
@@ -141,6 +142,7 @@ from .franchiseleaders import FranchiseLeaders
 from .franchiseplayers import FranchisePlayers
 from .homepageleaders import HomePageLeaders
 from .homepagev2 import HomePageV2
+from .hustlestatsboxscore import HustleStatsBoxScore
 from .infographicfanduelplayer import InfographicFanDuelPlayer
 from .leaderstiles import LeadersTiles
 from .leaguedashlineups import LeagueDashLineups

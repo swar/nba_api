@@ -45,6 +45,7 @@ endpoint_list = [
     'HomePage',
     'HomePageLeaders',
     'HomePageV2',
+    'HustleStatsBoxScore',
     'InfographicFanDuelPlayer',
     'LeadersTiles',
     'LeagueDashLineups',

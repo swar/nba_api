@@ -43,6 +43,7 @@ deferred_endpoints = [
     DeferredEndpoint(ep.FranchisePlayers, team_id='1610612739'),
     DeferredEndpoint(ep.HomePageLeaders),
     DeferredEndpoint(ep.HomePageV2),
+    DeferredEndpoint(ep.HustleStatsBoxScore, game_id='0021700807'),
     DeferredEndpoint(ep.InfographicFanDuelPlayer, game_id='0021700807'),
     DeferredEndpoint(ep.LeadersTiles),
     DeferredEndpoint(ep.LeagueDashLineups),
