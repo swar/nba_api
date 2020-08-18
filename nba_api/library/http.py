@@ -67,7 +67,7 @@ class NBAHTTP:
     def clean_contents(self, contents):
         return contents
 
-    def send_api_request(self, endpoint, parameters, referer=None, proxy=None, headers=None, timeout=None, raise_exception_on_error=False):
+    def send_api_request(self, endpoint, parameters, referer=None, proxy={}, headers=None, timeout=None, raise_exception_on_error=False):
         if not self.base_url:
             raise Exception('Cannot use send_api_request from _HTTP class.')
         base_url = self.base_url.format(endpoint=endpoint)
@@ -82,7 +82,7 @@ class NBAHTTP:
         if referer:
             request_headers['Referer'] = referer
 
-        if proxy is None:
+        if proxy is self.send_api_request.__defaults__[0]:
             request_proxy = PROXY
         elif not proxy:
             request_proxy = None
