@@ -1,3 +1,33 @@
+# `v1.1.9`
+#### `2020-08-18`
+`stats.nba.com`
+* Fixed bug where LeagueDashOppPtShot was missing in tests and __init__.py [#152](https://github.com/swar/nba_api/pull/152)
+* Adding endpoints [#102](https://github.com/swar/nba_api/issues/102)
+  * AllTimeLeadersGrids
+  * BoxScoreSimilarityScore
+  * CumeStatsPlayer
+  * CumeStatsPlayerGames
+  * CumeStatsTeam
+  * CumeStatsTeamGames
+  * DraftBoard
+  * GameRotation
+  * GLAlumBoxScoreSimilarityScore
+  * LeagueHustleStatsPlayer [#144](https://github.com/swar/nba_api/issues/144)
+  * LeagueHustleStatsPlayerLeaders [#144](https://github.com/swar/nba_api/issues/144)
+  * LeagueHustleStatsTeam [#144](https://github.com/swar/nba_api/issues/144), [#147](https://github.com/swar/nba_api/issues/147)
+  * LeagueHustleStatsTeamLeaders [#144](https://github.com/swar/nba_api/issues/144)
+  * LeagueLineupViz
+  * LeagueStandingsV3
+  * MatchupsRollup
+  * PlayerCareerByCollege
+  * PlayerCareerByCollegeRollup
+  * PlayerEstimatedMetrics
+  * ShotChartLeagueWide
+  * TeamEstimatedMetrics
+
+`Tools`
+* Various Changes for New Endpoints including Threading
+
 # `v1.1.8`
 #### `2020-01-27`
 `stats.nba.com`
