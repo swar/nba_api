@@ -28,6 +28,7 @@
 `Tools`
 * Various Changes for New Endpoints including Threading
 
+
 # `v1.1.8`
 #### `2020-01-27`
 `stats.nba.com`
