@@ -56,6 +56,7 @@ deferred_endpoints = [
     DeferredEndpoint(ep.InfographicFanDuelPlayer, game_id='0021700807'),
     DeferredEndpoint(ep.LeadersTiles),
     DeferredEndpoint(ep.LeagueDashLineups),
+    DeferredEndpoint(ep.LeagueDashOppPtShot),
     DeferredEndpoint(ep.LeagueDashPlayerBioStats),
     DeferredEndpoint(ep.LeagueDashPlayerClutch),
     DeferredEndpoint(ep.LeagueDashPlayerPtShot),
