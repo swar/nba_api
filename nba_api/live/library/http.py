@@ -92,9 +92,7 @@ class NBAStatsResponse(http.NBAResponse):
 class NBAStatsHTTP(http.NBAHTTP):
 
     nba_response = NBAStatsResponse
-
     base_url = 'https://nba-dev-us-east-1-mediaops-stats.s3.amazonaws.com/NBA/liveData/playbyplay/{endpoint}'
-
     headers = STATS_HEADERS
 
     def clean_contents(self, contents):
