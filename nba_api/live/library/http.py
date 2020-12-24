@@ -11,7 +11,7 @@ except ImportError:
         'Accept-Language': 'en-US,en;q=0.9',
         'Cache-Control': 'max-age=0',
         'Connection': 'keep-alive',
-        'Host': 'nba-dev-us-east-1-mediaops-stats.s3.amazonaws.com',
+        'Host': 'cdn.nba.com',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36',
     }
 
@@ -92,7 +92,7 @@ class NBAStatsResponse(http.NBAResponse):
 class NBAStatsHTTP(http.NBAHTTP):
 
     nba_response = NBAStatsResponse
-    base_url = 'https://nba-dev-us-east-1-mediaops-stats.s3.amazonaws.com/NBA/liveData/playbyplay/{endpoint}'
+    base_url = 'https://cdn.nba.com/static/json/liveData/{endpoint}'
     headers = STATS_HEADERS
 
     def clean_contents(self, contents):

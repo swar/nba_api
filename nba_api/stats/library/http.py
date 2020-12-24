@@ -81,6 +81,7 @@ class NBAStatsResponse(http.NBAResponse):
 
     def get_data_sets(self):
         raw_dict = self.get_dict()
+        print(raw_dict)
         if 'resultSets' in raw_dict:
             results = raw_dict['resultSets']
         else:
