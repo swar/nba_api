@@ -67,7 +67,10 @@ playbyplay["Substitution"].append({"description" : "SUB: Sefolosha FOR Ingles", 
 #Timeout
 playbyplay["Timeout"].append({"description" : "TRAIL BLAZERS Timeout: Regular (Full 5 Short 0)", "team" : "TRAIL BLAZERS", "timeout_type" : "Regular", "full" : "5", "short" : "0"})
 
-#Timeout
+#Timeout (multiple words in timeout_time)
+playbyplay["Timeout"].append({"description" : "LAKERS Timeout: Coach Challenge (Full 2 Short 0)", "team" : "LAKERS", "timeout_type" : "Coach Challenge", "full" : "2", "short" : "0"})
+
+#Timeout (single word in timeout_time)
 playbyplay["Timeout"].append({"description" : "Magic Timeout: Regular (Reg.4 Short 0)", "team" : "Magic", "timeout_type" : "Regular", "full" : "4", "short" : "0"})
 
 #Turnover Player (Single Name)
@@ -111,3 +114,9 @@ playbyplay["Violation"].append({"description" : "Dieng Violation:Kicked Ball (T.
 
 #Violation (Without Referee)
 playbyplay["Violation"].append({"description" : "Miles Violation:Lane", "player" : "Miles", "violation_type" : "Lane", "referee" : None})
+
+#Violation Team (Single String Team Name)
+playbyplay["ViolationTeam"].append({"description" : "LAKERS Violation: Delay of game Violation", "team" : "LAKERS", "violation_type" : "Delay of game"})
+
+#Violation Team (Double String Team Name)
+playbyplay["ViolationTeam"].append({"description" : "TRAIL BLAZERS Violation: Delay of game Violation", "team" : "TRAIL BLAZERS", "violation_type" : "Delay of game"})
