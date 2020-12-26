@@ -77,10 +77,7 @@ class NBAStatsResponse(http.NBAResponse):
 
     def get_data_sets(self):
         raw_dict = self.get_dict()
-        if 'resultSets' in raw_dict:
-            results = raw_dict['resultSets']
-        else:
-            results = raw_dict['resultSet']
+        results = raw_dict['game']
         if isinstance(results, dict):
             if 'name' not in results:
                 return {}

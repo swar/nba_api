@@ -3,7 +3,7 @@ from nba_api.live.library.http import NBAStatsHTTP
 from nba_api.stats.library.parameters import EndPeriod, StartPeriod
 
 class PlayByPlay(Endpoint):
-    endpoint_url = 'gameodds/{game_id}.json'
+    endpoint_url = 'scoreboard/todaysScoreboard_00.json'
     #expected_data = {'AvailableVideo': ['VIDEO_AVAILABLE_FLAG'], 'PlayByPlay': ['GAME_ID', 'EVENTNUM', 'EVENTMSGTYPE', 'EVENTMSGACTIONTYPE', 'PERIOD', 'WCTIMESTRING', 'PCTIMESTRING', 'HOMEDESCRIPTION', 'NEUTRALDESCRIPTION', 'VISITORDESCRIPTION', 'SCORE', 'SCOREMARGIN']}
     
     nba_response = None
@@ -13,12 +13,10 @@ class PlayByPlay(Endpoint):
     headers = None
 
     def __init__(self,
-                 game_id,
                  proxy=None,
                  headers=None,
                  timeout=30,
                  get_request=True):
-        self.game_id = game_id
         self.proxy = proxy
         if headers is not None:
             self.headers = headers
@@ -28,7 +26,7 @@ class PlayByPlay(Endpoint):
  
     def get_request(self):
         self.nba_response = NBAStatsHTTP().send_api_request(
-            endpoint=self.endpoint_url.format(self.game_id),
+            endpoint=self.endpoint_url,
             parameters=None,
             proxy=self.proxy,
             headers=self.headers,

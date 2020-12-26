@@ -8,7 +8,6 @@
             "name": "Python: Testing",
             "type": "python",
             "request": "test",
-            "console": "integratedTerminal",
             "redirectOutput": true,
         },
         {
