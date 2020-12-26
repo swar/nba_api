@@ -1,4 +1,4 @@
-from nba_api.stats.endpoints._base import Endpoint
+from nba_api.live.endpoints._base import Endpoint
 from nba_api.live.library.http import NBAStatsHTTP
 
 class BoxScore(Endpoint):
