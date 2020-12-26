@@ -1,5 +1,8 @@
 __all__ = [
-    'playbyplay'
+    'playbyplay',
+    'boxscore',
+    'gameodds',
+    'scoreboard'
 ]
 
 from .playbyplay import PlayByPlay
