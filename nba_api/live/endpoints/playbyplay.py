@@ -1,7 +1,5 @@
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.live.library.http import NBAStatsHTTP
-from nba_api.stats.library.parameters import EndPeriod, StartPeriod
-
 class PlayByPlay(Endpoint):
     endpoint_url = 'playbyplay/playbyplay_{game_id}.json'
     #expected_data = {'AvailableVideo': ['VIDEO_AVAILABLE_FLAG'], 'PlayByPlay': ['GAME_ID', 'EVENTNUM', 'EVENTMSGTYPE', 'EVENTMSGACTIONTYPE', 'PERIOD', 'WCTIMESTRING', 'PCTIMESTRING', 'HOMEDESCRIPTION', 'NEUTRALDESCRIPTION', 'VISITORDESCRIPTION', 'SCORE', 'SCOREMARGIN']}
@@ -28,8 +26,8 @@ class PlayByPlay(Endpoint):
  
     def get_request(self):
         self.nba_response = NBAStatsHTTP().send_api_request(
-            endpoint=self.endpoint_url.format(self.game_id),
-            parameters=None,
+            endpoint=self.endpoint_url.format(game_id=self.game_id),
+            parameters = {},
             proxy=self.proxy,
             headers=self.headers,
             timeout=self.timeout
