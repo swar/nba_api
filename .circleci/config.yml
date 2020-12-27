@@ -42,3 +42,5 @@ workflows:
       - Python35
       - Python36
       - Python37
+      - Python38
+      - Python39
