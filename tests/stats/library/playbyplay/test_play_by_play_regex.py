@@ -383,3 +383,21 @@ def test_violation(play):
     #Referee
     referee = search_result.group('referee')
     assert referee == play['referee']
+
+#VIOLATION TEAM
+@pytest.mark.parametrize('play', playbyplay['ViolationTeam'])
+def test_violation(play):
+
+    #Validate Pattern
+    assert re_violation_team.match(play['description'])
+
+    #Get Capture Groups   
+    search_result = re_violation_team.search(play['description'])
+    
+    #Violation
+    violation_type = search_result.group('violation_type')
+    assert violation_type == play['violation_type']
+
+    #Team Name
+    team = search_result.group('team')
+    assert team == play['team']
