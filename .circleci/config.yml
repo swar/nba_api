@@ -12,6 +12,8 @@ flake8-steps: &steps
   #- run: pytest
   - run: pip install --user pytest
   - run: python -m pytest  tests/stats/library/playbyplay/test_play_by_play_regex.py
+  - run: python -m pytest  tests/live/endpoints
+
   
 jobs:
   Python34:

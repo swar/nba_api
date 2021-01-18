@@ -1,8 +1,10 @@
 __all__ = [
     'playbyplay',
     'boxscore',
-    'gameodds',
     'scoreboard'
 ]
 
 from .playbyplay import PlayByPlay
+from .boxscore import BoxScore
+from .scoreboard import ScoreBoard
+
