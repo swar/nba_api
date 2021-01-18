@@ -1,4 +1,3 @@
-from tests.live.endpoints.test_boxscore import test_home_team_dict
 from nba_api.live.nba.endpoints._base import Endpoint
 from nba_api.live.nba.library.http import NBALiveHTTP
 class BoxScore(Endpoint):
