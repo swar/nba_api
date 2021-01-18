@@ -19,8 +19,8 @@ def nba_http_patch(monkeypatch):
 
     monkeypatch.setattr(NBAHTTP, "send_api_request", MockResponse.send_api_request)
 
-def test_get_games_dict(nba_http_patch):
-    assert  scoreboard.ScoreBoard().game_date == '2021-01-16'
+def test_get_score_board_date(nba_http_patch):
+    assert  scoreboard.ScoreBoard().score_board_date == '2021-01-16'
 
 def test_get_games_dict(nba_http_patch):
     assert  scoreboard.ScoreBoard().games.get_dict() == games
