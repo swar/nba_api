@@ -25,20 +25,11 @@ def test_get_games_dict(nba_http_patch):
 def test_get_games_dict(nba_http_patch):
     assert  scoreboard.ScoreBoard().games.get_dict() == games
 
-def test_get_games_dict(nba_http_patch):
-    assert  scoreboard.ScoreBoard().games.get_json() == json.dumps(games)
-
 def test_get_request_url(nba_http_patch):
     assert scoreboard.ScoreBoard().get_request_url() == 'https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json'
 
-def test_get_response(nba_http_patch):
-    assert json.dumps(content) == scoreboard.ScoreBoard().get_response()
-
 def test_get_dict(nba_http_patch):
     assert scoreboard.ScoreBoard().get_dict() == content
-
-def test_get_json(nba_http_patch):
-    assert scoreboard.ScoreBoard().get_json() == json.dumps(content)
 
 
         

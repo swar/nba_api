@@ -29,29 +29,14 @@ def test_get_response(nba_http_patch):
 def test_get_dict(nba_http_patch):
     assert boxscore.BoxScore(game_id).get_dict() == content
 
-def test_get_json(nba_http_patch):
-    assert boxscore.BoxScore(game_id).get_json() == json.dumps(content)
-
-def test_game_json(nba_http_patch):
-    assert boxscore.BoxScore(game_id).game.get_json() == json.dumps(content['game'])
-
 def test_game_dict(nba_http_patch):
     assert boxscore.BoxScore(game_id).game.get_dict() == content['game']
-
-def test_home_team_json(nba_http_patch):
-    assert boxscore.BoxScore(game_id).home_team.get_json() == json.dumps(content['game']['homeTeam'])
 
 def test_home_team_dict(nba_http_patch):
     assert boxscore.BoxScore(game_id).home_team.get_dict() == content['game']['homeTeam']
 
-def test_away_team_json(nba_http_patch):
-    assert boxscore.BoxScore(game_id).away_team.get_json() == json.dumps(content['game']['awayTeam'])
-
 def test_away_team_dict(nba_http_patch):
     assert boxscore.BoxScore(game_id).away_team.get_dict() == content['game']['awayTeam']
-
-def test_officies_json(nba_http_patch):
-    assert boxscore.BoxScore(game_id).officials.get_json() == json.dumps(content['game']['officials'])
 
 def test_officials_dict(nba_http_patch):
     assert boxscore.BoxScore(game_id).officials.get_dict() == content['game']['officials']

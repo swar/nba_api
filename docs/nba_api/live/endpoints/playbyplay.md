@@ -15,10 +15,10 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 ## Data Sets
 #### Actions `actions`
 ```text
-['VIDEO_AVAILABLE_FLAG']
+["actionNumber", "actionType", "assistPersonId", "assistPlayerNameInitial", "assistTotal", "blockPersonId", "blockPlayerName", "clock", "description", "descriptor", "edited", "foulDrawnPersonId", "foulDrawnPlayerName", "foulPersonalTotal", "foulTechnicalTotal", "isFieldGoal", "jumpBallLostPersonId", "jumpBallLostPlayerName", "jumpBallRecoverdPersonId", "jumpBallRecoveredName", "jumpBallWonPersonId", "jumpBallWonPlayerName", "officialId", "orderNumber", "period", "periodType", "personId", "personIdsFilter"[], "playerName", "playerNameI", "pointsTotal", "possession", "qualifiers"[], "reboundDefensiveTotal", "reboundOffensiveTotal", "reboundTotal", "scoreAway", "scoreHome", "shotActionNumber", "shotDistance", "shotResult", "side", "stealPersonId", "stealPlayerName", "subType", "teamId", "teamTricode", "timeActual", "turnoverTotal", "value", "x", "xLegacy", "y", "yLegacy"]
 ```
-## Actions Insights
-This is intended to be a comprehensive list of all possible `actions` availale. Note that not all keys appear on every `action` as it depends on the `action` type
+## About `Actions` Data Set
+This is intended to be a comprehensive list of all possible `actions` available. Note that not all keys appear on every `action` as it depends on the `actionType`
 Key | Class | Sample | Description | AlwaysPresent |
 ------------ | ------------ | :-----------: | :------------------: | :---------:
 `actionNumber`|`<class 'int'>`| `4` | `actionNumber is guaranteed to be sequential but not consectutive ([2, 5, 6, 7, 9, 10])` | `Yes` |

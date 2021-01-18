@@ -23,19 +23,8 @@ def nba_http_patch(monkeypatch):
 def test_get_request_url(nba_http_patch):
     assert playbyplay.PlayByPlay(game_id).get_request_url() == 'https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022000180.json'
 
-def test_response(nba_http_patch):
-    assert json.dumps(content) == playbyplay.PlayByPlay(game_id).get_response()
-
 def test_get_actions_dict(nba_http_patch):
     assert  playbyplay.PlayByPlay(game_id).actions.get_dict() == actions 
 
-def test_get_actions_json(nba_http_patch):
-    assert  playbyplay.PlayByPlay(game_id).actions.get_json() == json.dumps(actions) 
-
-def test_get_response(nba_http_patch):
-    assert playbyplay.PlayByPlay(game_id).get_response() == json.dumps(content) 
 def test_get_dict(nba_http_patch):
     assert playbyplay.PlayByPlay(game_id).get_dict() == content
-
-def test_get_json(nba_http_patch):
-    assert playbyplay.PlayByPlay('0022000180').get_json() == json.dumps(content)
