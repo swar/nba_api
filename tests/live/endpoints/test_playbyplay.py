@@ -1,4 +1,5 @@
 import json
+import pytest
 from nba_api.library.http import NBAHTTP, NBAResponse
 from nba_api.live.nba.endpoints import playbyplay
 from nba_api.live.nba.library.http import NBALiveHTTP
