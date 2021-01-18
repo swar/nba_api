@@ -18,62 +18,63 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 ['VIDEO_AVAILABLE_FLAG']
 ```
 ## Actions Insights
-Key | Class | Sample | Description | Nullable
------------- | ------------ | :-----------: | :---: | :---:
-`actionNumber`|`<class 'int'>`| `4` | `actionNumber is guaranteed to be sequential but not consectutive ([2, 5, 6, 7, 9, 10])` |  |
-`actionType`|`<class 'str'>`| `"period"` | `-` |  |
-`assistPersonId`|`<class 'int'>`| `1627759` | `-` |  |
-`assistPlayerNameInitial`|`<class 'str'>`| `J. Brown` | `-` |  |
-`assistTotal`|`<class 'int'>`| `3` | `-` |  |
-`blockPersonId`|`<class 'int'>`| `1627759` | `-` |  |
-`blockPlayerName`|`<class 'str'>`| `J. Brown` | `-` |  |
-`clock`|`<class 'str'>`| `PT03M59.00S` | `clock is the Period Time in which the play occurred` |  |
-`description`|`<class 'str'>`| `J. Brown 14' pullup Jump Shot (2 PTS)` | `description of the action` |  |
-`descriptor`|`<class 'str'>`| `pullup` | `a key phrase with regards to the play. Examples: ("heldball","technical","pullup","bad pass","driving finger roll"` )   |  |
-`edited`|`<class 'str'>`| `2021-01-16T02:01:02Z` | `The time in which the play was edited` |  |
-`foulDrawnPersonId`|`<class 'int'>`| `1627759` | `-` |  |
-`foulDrawnPlayerName`|`<class 'str'>`| `Brown` | `-` |  |
-`foulPersonalTotal`|`<class 'int'>`| `1` | `-` |  |
-`foulTechnicalTotal`|`<class 'int'>`| `0` | `-` |  |
-`isFieldGoal`|`<class 'int'>`| `0` | `0 | 1` |  |
-`jumpBallLostPersonId`|`<class 'int'>`| `203935` | `-` |  |
-`jumpBallLostPlayerName`|`<class 'str'>`| `Smart` | `-` |  |
-`jumpBallRecoverdPersonId`|`<class 'int'>`| `203932` | `-` |  |
-`jumpBallRecoveredName`|`<class 'str'>`| `A. Gordon` | `-` |  |
-`jumpBallWonPersonId`|`<class 'int'>`| `203920` | `-` |  |
-`jumpBallWonPlayerName`|`<class 'str'>`| `Birch` | `-` |  |
-`officialId`|`<class 'int'>`| `-` | `-` |  |
-`orderNumber`|`<class 'int'>`| `4560000` | `unknown consecutive number` |  |
-`period`|`<class 'int'>`| `3` | `-` |  |
-`periodType`|`<class 'str'>`| `-` | `-` |  |
-`personId`|`<class 'int'>`| `1629109` | `-` |  |
-`personIdsFilter`|`<class 'list'>`| `[203932, 203920, 203935]` | `players involved in the play. In this case ti was a jump ball (recovered, won, lost)` |  |
-`playerName`|`<class 'str'>`| `Clark` | `-` |  |
-`playerNameI`|`<class 'str'>`| `G. Clark` | `-` |  |
-`pointsTotal`|`<class 'int'>`| `6` | `-` |  |
-`possession`|`<class 'int'>`| `1610612753` | `The teamId who has possession` |  |
-`qualifiers`|`<class 'list'>`| `["pointsinthepaint"]` | `-` |  |
-`reboundDefensiveTotal`|`<class 'int'>`| `6` | `-` |  |
-`reboundOffensiveTotal`|`<class 'int'>`| `2` | `-` |  |
-`reboundTotal`|`<class 'int'>`| `8` | `-` |  |
-`scoreAway`|`<class 'str'>`| `68` | `-` |  |
-`scoreHome`|`<class 'str'>`| `83` | `-` |  |
-`shotActionNumber`|`<class 'int'>`| `10` | `shotActionNumber is guaranteed to be sequential but not consectutive ([10, 14, 18, 38])` |  |
-`shotDistance`|`<class 'float'>`| `4.44` | `-` |  |
-`shotResult`|`<class 'str'>`| `"Made" | "Missed"` | `` |  |
-`side`|`<class 'str'>`| `null | "left" | "right"` | `-` |  |
-`stealPersonId`|`<class 'int'>`| `1629750` | `-` |  |
-`stealPlayerName`|`<class 'str'>`| `Green` | `-` |  |
-`subType`|`<class 'str'>`| `"request` | `substitution type` |  |
-`teamId`|`<class 'int'>`| `1610612738` | `-` |  |
-`teamTricode`|`<class 'str'>`| `BOS` | `-` |  |
-`timeActual`|`<class 'str'>`| `2021-01-16T02:14:17.3Z` | `The time in which the play occurred` |  |
-`turnoverTotal`|`<class 'int'>`| `1` | `-` |  |
-`value`|`<class 'str'>`| `"Corrected to Offensive Foul on C. Anthony"` | `Was found to be present on an actionType of "instantreplay" and subType of "challenge" with a descriptor of "overturned"` |  |
-`x`|`<class 'float'>`| `90.22667542706965` | `-` |  |
-`xLegacy`|`<class 'int'>`| `-20` | `-` |  |
-`y`|`<class 'float'>`| `45.90226715686275` | `-` |  |
-`yLegacy`|`<class 'int'>`| `39` | `-` |  |
+This is intended to be a comprehensive list of all possible `actions` availale. Note that not all keys appear on every `action` as it depends on the `action` type
+Key | Class | Sample | Description | AlwaysPresent |
+------------ | ------------ | :-----------: | :------------------: | :---------:
+`actionNumber`|`<class 'int'>`| `4` | `actionNumber is guaranteed to be sequential but not consectutive ([2, 5, 6, 7, 9, 10])` | `Yes` |
+`actionType`|`<class 'str'>`| `"period"` | `-` | `Yes` |
+`assistPersonId`|`<class 'int'>`| `1627759` | `-` | `No` |
+`assistPlayerNameInitial`|`<class 'str'>`| `J. Brown` | `-` | `No` |
+`assistTotal`|`<class 'int'>`| `3` | `-` | `No` |
+`blockPersonId`|`<class 'int'>`| `1627759` | `-` | `No` |
+`blockPlayerName`|`<class 'str'>`| `J. Brown` | `-` | `No` |
+`clock`|`<class 'str'>`| `PT03M59.00S` | `clock is the Period Time in which the play occurred` | `Yes` |
+`description`|`<class 'str'>`| `J. Brown 14' pullup Jump Shot (2 PTS)` | `description of the action` | `No` |
+`descriptor`|`<class 'str'>`| `pullup` | `a key phrase with regards to the play. Examples: ("heldball","technical","pullup","bad pass","driving finger roll"` )  | `No` |
+`edited`|`<class 'str'>`| `2021-01-16T02:01:02Z` | `The time in which the play was edited` | `No` |
+`foulDrawnPersonId`|`<class 'int'>`| `1627759` | `-` | `No` |
+`foulDrawnPlayerName`|`<class 'str'>`| `Brown` | `-` | `No` |
+`foulPersonalTotal`|`<class 'int'>`| `1` | `-` | `No` |
+`foulTechnicalTotal`|`<class 'int'>`| `0` | `-` | `No` |
+`isFieldGoal`|`<class 'int'>`| `0` | `0 | 1` | `Yes` |
+`jumpBallLostPersonId`|`<class 'int'>`| `203935` | `-` | `No` |
+`jumpBallLostPlayerName`|`<class 'str'>`| `Smart` | `-` | `No` |
+`jumpBallRecoverdPersonId`|`<class 'int'>`| `203932` | `-` | `No` |
+`jumpBallRecoveredName`|`<class 'str'>`| `A. Gordon` | `-` | `No` |
+`jumpBallWonPersonId`|`<class 'int'>`| `203920` | `-` | `No` |
+`jumpBallWonPlayerName`|`<class 'str'>`| `Birch` | `-` | `No` |
+`officialId`|`<class 'int'>`| `-` | `-` | `No` |
+`orderNumber`|`<class 'int'>`| `4560000` | `unknown consecutive number` | `Yes` |
+`period`|`<class 'int'>`| `3` | `-` | `Yes` |
+`periodType`|`<class 'str'>`| `-` | `-` | `Yes` |
+`personId`|`<class 'int'>`| `1629109` | `-` | `Yes` |
+`personIdsFilter`|`<class 'list'>`| `[203932, 203920, 203935]` | `players involved in the play. In this case ti was a jump ball (recovered, won, lost)` | `Yes` |
+`playerName`|`<class 'str'>`| `Clark` | `-` | `No` |
+`playerNameI`|`<class 'str'>`| `G. Clark` | `-` | `No` |
+`pointsTotal`|`<class 'int'>`| `6` | `-` | `No` |
+`possession`|`<class 'int'>`| `1610612753` | `The teamId who has possession` | `Yes` |
+`qualifiers`|`<class 'list'>`| `["pointsinthepaint"]` | `-` | `yes` |
+`reboundDefensiveTotal`|`<class 'int'>`| `6` | `-` | `No` |
+`reboundOffensiveTotal`|`<class 'int'>`| `2` | `-` | `No` |
+`reboundTotal`|`<class 'int'>`| `8` | `-` | `No` |
+`scoreAway`|`<class 'str'>`| `68` | `-` | `Yes` |
+`scoreHome`|`<class 'str'>`| `83` | `-` | `Yes` |
+`shotActionNumber`|`<class 'int'>`| `10` | `shotActionNumber is guaranteed to be sequential but not consectutive ([10, 14, 18, 38])` |
+`shotDistance`|`<class 'float'>`| `4.44` | `-` | `No` |
+`shotResult`|`<class 'str'>`| `"Made" | "Missed"` | `-` | `No` |
+`side`|`<class 'str'>`| `null | "left" | "right"` | `-` | `Yes` |
+`stealPersonId`|`<class 'int'>`| `1629750` | `-` | `No` |
+`stealPlayerName`|`<class 'str'>`| `Green` | `-` | `No` |
+`subType`|`<class 'str'>`| `"request` | `subType of the actonType` | `No` |
+`teamId`|`<class 'int'>`| `1610612738` | `-` | `No` |
+`teamTricode`|`<class 'str'>`| `BOS` | `-` | `No` |
+`timeActual`|`<class 'str'>`| `2021-01-16T02:14:17.3Z` | `The time in which the play occurred` | `Yes` |
+`turnoverTotal`|`<class 'int'>`| `1` | `-` | `No` |
+`value`|`<class 'str'>`| `"Corrected to Offensive Foul on C. Anthony"` | `Was found to be present on an actionType of "instantreplay" and subType of "challenge" with a descriptor of "overturned"` | `No` |
+`x`|`<class 'float'>`| `90.22667542706965` | `-` | `Yes` |
+`xLegacy`|`<class 'int'>`| `-20` | `-` | `Yes`  |
+`y`|`<class 'float'>`| `45.90226715686275` | `-` | `Yes`  |
+`yLegacy`|`<class 'int'>`| `39` | `-` | `Yes` |
 
 
 ## JSON
