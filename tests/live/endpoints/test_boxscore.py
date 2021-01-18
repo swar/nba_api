@@ -1,4 +1,3 @@
-import pytest
 import json
 from nba_api.library.http import NBAHTTP, NBAResponse
 from nba_api.live.nba.endpoints import boxscore
