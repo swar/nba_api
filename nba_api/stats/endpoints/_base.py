@@ -33,11 +33,14 @@ class Endpoint:
             
             else: # Multiple levels of column names
                 levels = []
-                for level in self.data['headers']: # Extend column names for level to full length
+                level_names = []
+                for i in range(len(self.data['headers'])): # Extend column names for level to full length
+                    level = self.data['headers'][i]
+                    level_names.append(level['name'] if 'name' in level else "LEVEL_" + str(i))
                     column_names = [""] * level['columnsToSkip'] if 'columnsToSkip' in level else []
                     column_names += list(np.repeat(np.array(level['columnNames']), level['columnSpan'] if 'columnSpan' in level else 1))
                     levels.append(column_names)
-                midx = MultiIndex.from_arrays(levels) # Use MultiIndex for dataframe columns
+                midx = MultiIndex.from_arrays(levels, names=level_names) # Use MultiIndex for dataframe columns
                 return DataFrame(self.data['data'], columns=midx)
 
     def get_request_url(self):
