@@ -1,5 +1,11 @@
 import json
 
+try:
+    from pandas import DataFrame
+    PANDAS = True
+except ImportError:
+    PANDAS = False
+
 
 class Endpoint:
 
@@ -16,6 +22,12 @@ class Endpoint:
         def get_dict(self):
             return self.data
 
+        def get_data_frame(self):
+            if not PANDAS:
+                raise Exception('Import Missing - Failed to import DataFrame from pandas.')
+            return DataFrame(self.data)
+
+
     def get_request_url(self):
         return self.nba_response.get_url()
 
@@ -27,3 +39,6 @@ class Endpoint:
 
     def get_json(self):
         return self.nba_response.get_json()
+
+    def get_data_frames(self):
+        return [data_set.get_data_frame() for data_set in self.data_sets]
