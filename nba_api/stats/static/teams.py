@@ -2,6 +2,7 @@ import re
 from nba_api.stats.library.data import teams
 from nba_api.stats.library.data import team_index_id, team_index_abbreviation, team_index_nickname, team_index_full_name
 from nba_api.stats.library.data import team_index_city, team_index_state, team_index_year_founded
+from nba_api.stats.library.data import team_index_championship_year
 
 
 def _find_teams(regex_pattern, row_id):
@@ -46,6 +47,13 @@ def find_teams_by_year_founded(year):
         if team[team_index_year_founded] == year:
             teams_found.append(_get_team_dict(team))
     return teams_found
+
+
+def find_teams_by_championship_year(year):
+    for team in teams:
+        if year in team[team_index_championship_year]:
+            result = team[team_index_full_name]
+    return result
 
 
 def find_team_by_abbreviation(abbreviation):
