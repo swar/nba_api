@@ -480,16 +480,17 @@ def analyze_all_endpoints_with_threading(endpoints=endpoint_list, pause=1):
     threads = {}
 
     for endpoint in endpoints:
-        t = threading.Thread(target=analyze_endpoint_with_attempts, kwargs=dict(endpoint=endpoint, pause=pause, attempts=10))
-        threads[endpoint] = t
-        t.start()
+        analyze_endpoint_with_attempts(endpoint, pause=1, attempts=1)
+    #     t = threading.Thread(target=analyze_endpoint_with_attempts, kwargs=dict(endpoint=endpoint, pause=pause, attempts=10))
+    #     threads[endpoint] = t
+    #     t.start()
 
-    is_alive = True
-    while is_alive:
-        print('>'*25)
-        is_alive = False
-        for key, thread in threads.items():
-            if thread.is_alive():
-                print(key, thread.is_alive())
-                is_alive = True
-        time.sleep(1)
+    # is_alive = True
+    # while is_alive:
+    #     print('>'*25)
+    #     is_alive = False
+    #     for key, thread in threads.items():
+    #         if thread.is_alive():
+    #             print(key, thread.is_alive())
+    #             is_alive = True
+    #     time.sleep(1)
