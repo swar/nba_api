@@ -20,3 +20,12 @@ def test_get_required_parameters(monkeypatch):
     
     assert required_parameters == ['LeagueID', 'Season']
 
+# test_required_parameters_test
+def test_required_parameters_test():
+    required_parameters = ['LeagueID', 'Season']
+    status, required_parameters, required_params, required_params_errors = required_parameters_test(required_parameters)
+    
+    assert status == 'success'
+    assert required_parameters == ['LeagueID', 'Season']
+    assert required_params == {'LeagueID': '00', 'Season': '2020-21'}
+    assert required_params_errors == {'LeagueID': 'a', 'Season': 'a'}
