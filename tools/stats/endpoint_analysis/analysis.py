@@ -56,7 +56,7 @@ def minimal_requirement_tests(endpoint, required_params, pause=1):
             required_params[parameter] = value
 
     # 1. minimal requirement test with default non-nullable values
-    nba_stats_response = NBAStatsHTTP().send_api_request(endpoint=endpoint, parameters=required_params)
+    nba_stats_response = nba_http.send_api_request(endpoint=endpoint, parameters=required_params)
 
     # 2. minimal requirement test with pattern matching
     if not nba_stats_response.valid_json():
@@ -219,8 +219,7 @@ def analyze_endpoint(endpoint, pause=1):
     required_parameters = get_required_parameters(endpoint, nba_stats_response)
 
     # Testing endpoint with parameters that throw a require flag.
-    status, required_parameters, required_params, required_params_errors = required_parameters_test(endpoint=endpoint, nba_stats_response=nba_stats_response)
-    time.sleep(pause)
+    status, required_parameters, required_params, required_params_errors = required_parameters_test(required_parameters=required_parameters)
 
     # No need to continue if Endpoint is deprecated.
     if status == 'deprecated':
@@ -229,7 +228,6 @@ def analyze_endpoint(endpoint, pause=1):
     # Testing endpoint with the minimal amount of parameters required.
     status_test, all_parameters, data_sets, all_params_errors, nullable_parameters = \
         minimal_requirement_tests(endpoint=endpoint, required_params=required_params)
-    time.sleep(pause)
 
     if status_test == 'invalid':
         status = status_test
@@ -237,11 +235,10 @@ def analyze_endpoint(endpoint, pause=1):
     # Testing endpoint with all parameters with empty values to see which ones are allowed to be nullable.
     nullable_parameters += nullable_parameters_test(endpoint=endpoint, all_parameters=all_parameters)
     nullable_parameters = list(set(nullable_parameters))
-    time.sleep(pause)
 
     # Testing endpoint with invalid values to grab matching patterns.
     parameter_patterns = {}
-    # parameter_patterns = invalid_values_test(endpoint=endpoint, all_params_errors=all_params_errors)
+    parameter_patterns = invalid_values_test(endpoint=endpoint, all_params_errors=all_params_errors)
 
     if len(parameter_patterns) != len(all_parameters):
         print(endpoint, 'length of patterns does not equal all our parameters', parameter_patterns, all_parameters)
