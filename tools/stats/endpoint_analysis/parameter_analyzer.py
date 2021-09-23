@@ -1,26 +1,54 @@
+from nba_api.stats.library.http import NBAStatsHTTP, NBAStatsResponse
 import re
 from tools.stats.endpoint_analysis.data import *
-from tools.stats.library.mapping import endpoint_list, parameter_variations, parameter_map
+from tools.stats.library.mapping import parameter_variations, parameter_map
 
-def get_required_parameters(endpoint, nba_stats_response):
+def get_required_parameters(endpoint, nba_stats_response: NBAStatsResponse):
+
+    # Declare an empty list to hole the required parameters
     required_parameters = []
-    if re.search('<.*?>', nba_stats_response.get_response()):  # Skip if HTML Response
-        required_parameters_matches = []
-    else:
-        required_parameters_matches = nba_stats_response.get_response().split(';')
-        if not required_parameters_matches:
-            raise Exception('Failed to find matches.')
-    for match in required_parameters_matches:
-        required_parameter = re.match(missing_parameter_regex, match)
-        if nba_stats_response.valid_json():
-            continue
-        elif not required_parameter:
-            raise Exception('Failed to find required_parameter in match.', match)
-        required_parameter = required_parameter.group(1).replace(' ', '')
-        # Fix case sensitivity
+    
+    # TODO: Move to a response_validation method
+    # If the response is an HTML the endpoint is likely invalid
+    if re.search('<.*?>', nba_stats_response.get_response()): return required_parameters
+    
+    # Compile regex for parameters
+    re_parameter_regex = re.compile(missing_parameter_regex)
+
+    # Identify the index of the 'required_parameter' capture group
+    # GroupIndexes start at 1 while arrays start at 0
+    required_parameter_index = re_parameter_regex.groupindex['required_parameter'] - 1
+    
+    # Find all matches for the compiled regex
+    matches = re_parameter_regex.findall(nba_stats_response.get_response())
+
+    # Examine all matches selecting only those that have a value in the 'required_parameter' index
+    for match in matches:
+        
+        # Assign value from index
+        required_parameter = match[required_parameter_index]
+        
+        # Check for empty
+        if not required_parameter: continue # value is empty
+        
+        # Check for exeptions (perhaps move to another method)
         if required_parameter == 'Runtype':
             required_parameter = 'RunType'
+
+        # Append required parameter
         required_parameters.append(required_parameter)
+
+# Not sure about this code
+# ------------------
+        # if match:
+        #     raise Exception('Failed to find matches.')
+
+        # if nba_stats_response.valid_json():
+        #     continue
+        # elif not required_parameter:
+        #     raise Exception('Failed to find required_parameter in match.', match)
+        # required_parameter = required_parameter.group(1).replace(' ', '')
+# ------------------
 
     # Adding required parameters that need overriding
     if endpoint in missing_required_parameters:

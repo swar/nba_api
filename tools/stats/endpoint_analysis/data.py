@@ -1,9 +1,13 @@
 from nba_api.stats.library.parameters import *
 
-missing_parameter_regex = r"^\s*?(?:The value '[^']+' is not valid for |The )?([A-z0-9]+( Scope| Category)?)(?: Year)?\s*(?:property (?:is|are) required\.?| (?:is|are) required\.?(?:,? pass 0 for (?:default|all teams))?|\.)$"
+# OLD REGEX FOR MISSING PARAMS
+#missing_parameter_regex = r"^\s*?(?:The value '[^']+' is not valid for |The )?([A-z0-9]+( Scope| Category)?)(?: Year)?\s*(?:property (?:is|are) required\.?| (?:is|are) required\.?(?:,? pass 0 for (?:default|all teams))?|\.)$"
 # Season Year -> Season     This only occurs in LeagueDashPtStats
 
-parameter_pattern_regex = r"\s*The field ([A-z]+) must match the regular expression '([^']+)'\.(?:;|$)"
+#NEW REGEX FOR MISSING PARAMS (Includes Capture Groups + Unit Tests)
+missing_parameter_regex = r"(The value '(?P<invalid_value>[^']+)' is not valid for (?P<invalid_parameter>[A-z0-9]+))|(The (?P<required_parameter>[A-z0-9]+) property (is|are) required.)"
+
+parameter_pattern_regex  = r"\s*The field ([A-z]+) must match the regular expression '([^']+)'\.(?:;|$)"
 
 missing_required_parameters = {
     'AllTimeLeadersGrids': {
