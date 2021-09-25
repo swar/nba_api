@@ -8,10 +8,6 @@ def get_required_parameters(endpoint, nba_stats_response: NBAStatsResponse):
     # Declare an empty list to hole the required parameters
     required_parameters = []
     
-    # TODO: Move to a response_validation method
-    # If the response is an HTML the endpoint is likely invalid
-    if re.search('<.*?>', nba_stats_response.get_response()): return required_parameters
-    
     # Compile regex for parameters
     re_parameter_regex = re.compile(missing_parameter_regex)
 
@@ -31,7 +27,7 @@ def get_required_parameters(endpoint, nba_stats_response: NBAStatsResponse):
         # Check for empty
         if not required_parameter: continue # value is empty
         
-        # Check for exeptions (perhaps move to another method)
+        # Check for exeptions (TODO perhaps move to another method)
         if required_parameter == 'Runtype':
             required_parameter = 'RunType'
 

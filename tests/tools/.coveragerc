@@ -1,0 +1,11 @@
+[run]
+branch = True
+omit = */venv/*
+
+[report]
+omit =  *test_*
+        *__in*
+
+    
+
+
