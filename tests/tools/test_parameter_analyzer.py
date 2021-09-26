@@ -23,7 +23,7 @@ def test_get_required_parameters(monkeypatch):
 # test_required_parameters_test
 def test_required_parameters_test():
     required_parameters = ['LeagueID', 'Season']
-    status, required_parameters, required_params, required_params_errors = required_parameters_test(required_parameters)
+    status, required_parameters, required_params, required_params_errors = populate_required_parameters(required_parameters)
     
     assert status == 'success'
     assert required_parameters == ['LeagueID', 'Season']

@@ -1,11 +1,10 @@
 [run]
 branch = True
 omit = */venv/*
+        *\nba_api\nba_api\*
+        *\tools\library\*
+        *\tools\stats\library\*
 
 [report]
 omit =  *test_*
         *__in*
-
-    
-
-

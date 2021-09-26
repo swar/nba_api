@@ -1,80 +1,49 @@
-import re
 import json
 import threading
 import time
 
+from datetime import datetime
 from nba_api.stats.library.http import NBAStatsHTTP
 from nba_api.stats.library.parameters import *
-
-from datetime import datetime
-
 from tools.library.file_handler import load_file, save_file, get_file_path
-from tools.stats.endpoint_analysis.data import *
-from tools.stats.endpoint_analysis import nba_http
-from tools.stats.endpoint_analysis.nba_http import *
-from tools.stats.endpoint_analysis.parameter_analyzer import *
+from tools.library import nba_http
 from tools.stats.library.mapping import endpoint_list, parameter_variations, parameter_map
+from tools.library.nba_http import *
+from tools.stats.endpoint_analysis.data import *
+from tools.stats.endpoint_analysis.parameter_analyzer import *
+from tools.stats.endpoint_analysis.pattern_analyzer import *
 
-def get_patterns_from_response(nba_stats_response):
-    parameter_patterns = {}
-
-    if re.search('<.*?>', nba_stats_response.get_response()):  # HTML Response
-        matches = []
-    else:
-        matches = nba_stats_response.get_response().split(';')
-    for match in matches:
-        parameter_regex_match = re.match(parameter_pattern_regex, match)
-        invalid_parameter_match = re.match(missing_parameter_regex, match)
-        prop = None
-        pattern = None
-        if parameter_regex_match:
-            prop = parameter_regex_match.group(1)
-            pattern = parameter_regex_match.group(2)
-            prop = prop.replace(' ', '')
-        elif invalid_parameter_match:
-            prop = invalid_parameter_match.group(1)
-            prop = prop.replace(' ', '')
-        elif match in [' Invalid date', '<Error><Message>An error has occurred.</Message></Error>', 'Invalid game date',
-                       ' Invalid game date']:
-            pass
-        elif nba_stats_response.valid_json():
-            pass
-        elif not parameter_regex_match and not invalid_parameter_match and 'Invalid date' not in nba_stats_response.get_response() and 'must be between' not in nba_stats_response.get_response():
-            raise Exception('Failed to match error.', match)
-
-        if prop:
-            parameter_patterns[prop] = pattern
-
-    return parameter_patterns
-
+# def get_patterns_from_response(nba_stats_response): <-- Abstracted to pattern_analyzer.py
+    
 def minimal_requirement_tests(endpoint, required_params, pause=1):
     status = 'success'
     all_parameters = list(required_params.keys())
 
-    if endpoint in missing_required_parameters:
-        for parameter, value in missing_required_parameters[endpoint].items():
-            required_params[parameter] = value
+    # Populate required parameters for endpoints that do not pro
+    required_params = populate_missing_required_parameters(endpoint, required_params)
 
-    # 1. minimal requirement test with default non-nullable values
+    # Send NBA Stats API request with minimum required parameters. The goal is to seek a 200 HTTP Response Code.
     nba_stats_response = nba_http.send_api_request(endpoint=endpoint, parameters=required_params)
 
+    # TODO: Fix Pattern Code 
     # 2. minimal requirement test with pattern matching
-    if not nba_stats_response.valid_json():
-        parameter_patterns = get_patterns_from_response(nba_stats_response=nba_stats_response)
-        # Overwrites param with parameter patterns on mismatches.
-        for prop in required_params.keys():
-            if prop in parameter_patterns:
-                pattern = parameter_patterns[prop]
-                if pattern in parameter_map[prop]['non-nullable']:
-                    map_key = 'non-nullable'
-                else:
-                    map_key = 'nullable'
-                parameter_info_key = parameter_map[prop][map_key][pattern]
-                parameter_info = parameter_variations[parameter_info_key]
-                required_params[prop] = parameter_info['parameter_value']
-        time.sleep(pause)
-        nba_stats_response = NBAStatsHTTP().send_api_request(endpoint=endpoint, parameters=required_params)
+    # if not nba_stats_response.valid_json():
+    #     parameter_patterns = get_patterns_from_response(nba_stats_response=nba_stats_response)
+    #     # Overwrites param with parameter patterns on mismatches.
+    #     for prop in required_params.keys():
+    #         if prop in parameter_patterns:
+    #             pattern = parameter_patterns[prop]
+    #             if pattern in parameter_map[prop]['non-nullable']:
+    #                 map_key = 'non-nullable'
+    #             else:
+    #                 map_key = 'nullable'
+    #             parameter_info_key = parameter_map[prop][map_key][pattern]
+    #             parameter_info = parameter_variations[parameter_info_key]
+    #             required_params[prop] = parameter_info['parameter_value']
+    #     time.sleep(pause)
+    #     nba_stats_response = NBAStatsHTTP().send_api_request(endpoint=endpoint, parameters=required_params)
 
+    # If we receive a valid json response then we can pull the datasets & headers form the return
     if nba_stats_response.valid_json():
         data_sets = nba_stats_response.get_headers_from_data_sets()
         all_parameters += list(nba_stats_response.get_parameters().keys())
@@ -84,24 +53,39 @@ def minimal_requirement_tests(endpoint, required_params, pause=1):
         data_sets = {}
     all_parameters = list(set(all_parameters))
 
+    # populated_parameters = populate_all_parameters(all_parameters)
+
     # Update Parameter Pattern Mapping
     all_params = {}
     all_params_errors = {}
-    for prop in all_parameters:
-        if prop in parameter_map:
-            if len(parameter_map[prop]['non-nullable']):
+
+    # Iterate over every parameter creating a populated dictionary???
+    for parameter in all_parameters:
+
+        # If we find the parater within the known parameter map, populated it
+        # with a known working value 
+        if parameter in parameter_map:
+
+            # If the parameter_map indicates that the value is non-nullable
+            # the indicate this within the map_key
+            if len(parameter_map[parameter]['non-nullable']):
                 map_key = 'non-nullable'
             else:
                 map_key = 'nullable'
-            parameter_info_key = list(parameter_map[prop][map_key].values())[0]
+
+            
+            parameter_info_key = list(parameter_map[parameter][map_key].values())[0]
             parameter_info = parameter_variations[parameter_info_key]
-            all_params[prop] = parameter_info['parameter_value']
-            all_params_errors[prop] = parameter_info['parameter_error_value']
+            all_params[parameter] = parameter_info['parameter_value']
+            all_params_errors[parameter] = parameter_info['parameter_error_value']
+
+        # If we did not locate the parameter in the paramater_map, then this
+        # must be a new parameter type that was previously undiscovered.
         else:
-            print(prop, 'not found in parameter map - minimal test')
+            print(parameter, 'not found in parameter map - minimal test')
             status = 'invalid'
-            all_params[prop] = 'a'
-            all_params_errors[prop] = 'a'
+            all_params[parameter] = 'a'
+            all_params_errors[parameter] = 'a'
 
     nullable_parameters = []
     if nba_stats_response.get_parameters():
@@ -219,7 +203,7 @@ def analyze_endpoint(endpoint, pause=1):
     required_parameters = get_required_parameters(endpoint, nba_stats_response)
 
     # Testing endpoint with parameters that throw a require flag.
-    status, required_parameters, required_params, required_params_errors = required_parameters_test(required_parameters=required_parameters)
+    status, required_parameters, required_params, required_params_errors = populate_required_parameters(required_parameters=required_parameters)
 
     # No need to continue if Endpoint is deprecated.
     if status == 'deprecated':

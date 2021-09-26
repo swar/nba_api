@@ -56,7 +56,7 @@ def get_required_parameters(endpoint, nba_stats_response: NBAStatsResponse):
 
 
 # This Method populates the required parameters for sending a valid GET request.
-def required_parameters_test(required_parameters):
+def populate_required_parameters(required_parameters: dict):
     status = 'success'
 
     required_params = {}
@@ -78,3 +78,47 @@ def required_parameters_test(required_parameters):
             required_params_errors[prop] = 'a'
 
     return status, required_parameters, required_params, required_params_errors
+
+
+def populate_missing_required_parameters(endpoint: str, required_parameters: dict):
+
+    if endpoint in missing_required_parameters:
+        for parameter, value in missing_required_parameters[endpoint].items():
+            required_parameters[parameter] = value
+    
+    return required_parameters
+
+
+def populate_all_parameters(all_parameters):
+       # Update Parameter Pattern Mapping
+    all_params = {}
+    all_params_errors = {}
+
+    # Iterate over every parameter creating a populated dictionary???
+    for parameter in all_parameters:
+
+        # If we find the parater within the known parameter map, populated it
+        # with a known working value 
+        if parameter in parameter_map:
+
+            # If the parameter_map indicates that the value is non-nullable
+            # the indicate this within the map_key
+            if len(parameter_map[parameter]['non-nullable']):
+                map_key = 'non-nullable'
+            else:
+                map_key = 'nullable'
+
+            
+            parameter_info_key = list(parameter_map[parameter][map_key].values())[0]
+            parameter_info = parameter_variations[parameter_info_key]
+            all_params[parameter] = parameter_info['parameter_value']
+            all_params_errors[parameter] = parameter_info['parameter_error_value']
+
+        # If we did not locate the parameter in the paramater_map, then this
+        # must be a new parameter type that was previously undiscovered.
+        else:
+            print(parameter, 'not found in parameter map - minimal test')
+            status = 'invalid'
+            all_params[parameter] = 'a'
+            all_params_errors[parameter] = 'a'
+

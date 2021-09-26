@@ -1,0 +1,84 @@
+{
+    "PlayerIndex": {
+        "data_sets": {
+            "PlayerIndex": [
+                "PERSON_ID",
+                "PLAYER_LAST_NAME",
+                "PLAYER_FIRST_NAME",
+                "PLAYER_SLUG",
+                "TEAM_ID",
+                "TEAM_SLUG",
+                "IS_DEFUNCT",
+                "TEAM_CITY",
+                "TEAM_NAME",
+                "TEAM_ABBREVIATION",
+                "JERSEY_NUMBER",
+                "POSITION",
+                "HEIGHT",
+                "WEIGHT",
+                "COLLEGE",
+                "COUNTRY",
+                "DRAFT_YEAR",
+                "DRAFT_ROUND",
+                "DRAFT_NUMBER",
+                "ROSTER_STATUS",
+                "FROM_YEAR",
+                "TO_YEAR",
+                "PTS",
+                "REB",
+                "AST",
+                "STATS_TIMEFRAME"
+            ]
+        },
+        "endpoint": "PlayerIndex",
+        "last_validated_date": "2021-09-26",
+        "nullable_parameters": [
+            "Active",
+            "AllStar",
+            "College",
+            "Country",
+            "DraftPick",
+            "DraftYear",
+            "Height",
+            "Historical",
+            "PlayerPosition",
+            "TeamID",
+            "Weight"
+        ],
+        "parameter_patterns": {
+            "Active": null,
+            "AllStar": null,
+            "College": null,
+            "Country": null,
+            "DraftPick": null,
+            "DraftYear": null,
+            "Height": null,
+            "Historical": null,
+            "LeagueID": null,
+            "PlayerPosition": null,
+            "Season": null,
+            "TeamID": null,
+            "Weight": null
+        },
+        "parameters": [
+            "Active",
+            "AllStar",
+            "College",
+            "Country",
+            "DraftPick",
+            "DraftYear",
+            "Height",
+            "Historical",
+            "LeagueID",
+            "PlayerPosition",
+            "Season",
+            "TeamID",
+            "Weight"
+        ],
+        "required_parameters": [
+            "LeagueID",
+            "Season"
+        ],
+        "status": "success"
+    }
+}

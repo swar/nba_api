@@ -87,7 +87,7 @@ endpoint_list = [
     # 'LeagueStandingsV3',
     # 'LineupStats',
     # 'MatchupsRollup',
-    'PlayByPlay',
+    # PlayByPlay',
     # 'PlayByPlayMini',
     # 'PlayByPlayV2',
     # 'PlayerAwards',
@@ -122,6 +122,7 @@ endpoint_list = [
     # 'PlayerGameSplitsStats',
     # 'PlayerGameStreakFinder',
     # 'PlayerGeneralSplitsStats',
+    'PlayerIndex'
     # 'PlayerInfo',
     # 'PlayerLastNGamesStats',
     # 'PlayerNextNGames',
@@ -262,6 +263,11 @@ parameter_variations = {
         'parameter_value': LeagueIDNullable.default,
         'parameter_error_value': 'a',
     },
+    'ActiveNullable': {
+        'default_py_value': "''",
+        'parameter_value': '',
+        'parameter_error_value': 'a',
+    },
     'ActiveFlagNullable': {
         'default_py_value': "''",
         'parameter_value': '',
@@ -277,6 +283,11 @@ parameter_variations = {
         'parameter_value': AheadBehindNullable.default,
         'parameter_error_value': 0,
     },
+     'AllStarNullable': {
+        'default_py_value': "''",
+        'parameter_value': '',
+        'parameter_error_value': 'a',
+    },   
     'CloseDefDistRangeNullable': {
         'default_py_value': "''",
         'parameter_value': '',
@@ -412,6 +423,11 @@ parameter_variations = {
         'parameter_value': DivisionNullable.default,
         'parameter_error_value': 0,
     },
+    'HistoricalNullable': {
+        'default_py_value': "''",
+        'parameter_value': '',
+        'parameter_error_value': 'a',
+    },  
     'VsDivision': {
         'default_py_value': 'Division.default',
         'parameter_value': Division.default,
@@ -2124,9 +2140,25 @@ parameter_variations = {
 }
 
 parameter_map = {
+    'Active': {
+        'nullable': {
+            None: 'ActiveNullable'
+        },
+        'non-nullable': {
+
+        }
+    },
     'ActiveFlag': {
         'nullable': {
             None: 'ActiveFlagNullable'
+        },
+        'non-nullable': {
+
+        }
+    },
+    'AllStar': {
+        'nullable': {
+            None: 'AllStarNullable'
         },
         'non-nullable': {
 
@@ -2166,6 +2198,14 @@ parameter_map = {
             None: 'College'
         }
     },
+    'Historical': {
+        'nullable': {
+            None: 'HistoricalNullable'
+        },
+        'non-nullable': {
+
+        }
+    },    
     'School': {
         'nullable': {
 
