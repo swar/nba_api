@@ -614,7 +614,7 @@ class Season(SeasonYear):
     current_season = '{}-{}'.format(current_season_year, str(current_season_year + 1)[2:])
     
     #get last Season
-    prev_season = '{}-{}'.format(current_season_year-1, str(current_season_year)[2:])
+    previous_season = '{}-{}'.format(current_season_year-1, str(current_season_year)[2:])
     
     default = current_season
 
