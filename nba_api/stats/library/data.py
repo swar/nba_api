@@ -4,11 +4,7 @@ player_index_first_name = 2
 player_index_full_name = 3
 player_index_is_active = 4
 
-<<<<<<< HEAD
-# Data last updated: Jan, 09 2021
-=======
 # Data last updated: Oct, 04 2021
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
 
 players = [
     [76001, "Abdelnaby", "Alaa", "Alaa Abdelnaby", False],
@@ -30,7 +26,7 @@ players = [
     [76011, "Adams", "Alvan", "Alvan Adams", False],
     [76012, "Adams", "Don", "Don Adams", False],
     [200801, "Adams", "Hassan", "Hassan Adams", False],
-    [1629121, "Adams", "Jaylen", "Jaylen Adams", True],
+    [1629121, "Adams", "Jaylen", "Jaylen Adams", False],
     [203919, "Adams", "Jordan", "Jordan Adams", False],
     [149, "Adams", "Michael", "Michael Adams", False],
     [203500, "Adams", "Steven", "Steven Adams", True],
@@ -62,11 +58,7 @@ players = [
     [76022, "Alexander", "Gary", "Gary Alexander", False],
     [201570, "Alexander", "Joe", "Joe Alexander", False],
     [1629734, "Alexander", "Kyle", "Kyle Alexander", False],
-<<<<<<< HEAD
-    [1630234, "Alexander", "Ty-Shon", "Ty-Shon Alexander", True],
-=======
     [1630234, "Alexander", "Ty-Shon", "Ty-Shon Alexander", False],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [2349, "Alexander", "Victor", "Victor Alexander", False],
     [1629638, "Alexander-Walker", "Nickeil", "Nickeil Alexander-Walker", True],
     [76024, "Alford", "Steve", "Steve Alford", False],
@@ -302,7 +294,7 @@ players = [
     [201158, "Belinelli", "Marco", "Marco Belinelli", False],
     [2294, "Bell", "Charlie", "Charlie Bell", False],
     [76142, "Bell", "Dennis", "Dennis Bell", False],
-    [1628395, "Bell", "Jordan", "Jordan Bell", False],
+    [1628395, "Bell", "Jordan", "Jordan Bell", True],
     [1952, "Bell", "Raja", "Raja Bell", False],
     [2559, "Bell", "Troy", "Troy Bell", False],
     [76143, "Bell", "William", "William Bell", False],
@@ -505,7 +497,7 @@ players = [
     [76255, "Brindley", "Audley", "Audley Brindley", False],
     [1628515, "Briscoe", "Isaiah", "Isaiah Briscoe", False],
     [76256, "Brisker", "John", "John Brisker", False],
-    [1629052, "Brissett", "Oshae", "Oshae Brissett", False],
+    [1629052, "Brissett", "Oshae", "Oshae Brissett", True],
     [76257, "Bristow", "Allan", "Allan Bristow", False],
     [76258, "Britt", "Tyrone", "Tyrone Britt", False],
     [76259, "Britt", "Wayman", "Wayman Britt", False],
@@ -565,10 +557,7 @@ players = [
     [1628425, "Brown", "Sterling", "Sterling Brown", True],
     [2357, "Brown", "Tierre", "Tierre Brown", False],
     [76268, "Brown", "Tony", "Tony Brown", False],
-<<<<<<< HEAD
-=======
     [1630535, "Brown III", "Greg", "Greg Brown III", True],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [1629718, "Brown Jr.", "Charlie", "Charlie Brown Jr.", False],
     [1628972, "Brown Jr.", "Troy", "Troy Brown Jr.", True],
     [76287, "Browne", "Jim", "Jim Browne", False],
@@ -743,7 +732,7 @@ players = [
     [76384, "Charles", "Lorenzo", "Lorenzo Charles", False],
     [1629147, "Chealey", "Joe", "Joe Chealey", False],
     [384, "Cheaney", "Calbert", "Calbert Cheaney", False],
-    [1629597, "Cheatham", "Zylan", "Zylan Cheatham", False],
+    [1629597, "Cheatham", "Zylan", "Zylan Cheatham", True],
     [76385, "Cheeks", "Maurice", "Maurice Cheeks", False],
     [76386, "Chenier", "Phil", "Phil Chenier", False],
     [203805, "Cherry", "Will", "Will Cherry", False],
@@ -783,11 +772,7 @@ players = [
     [76402, "Cleamons", "Jim", "Jim Cleamons", False],
     [2043, "Cleaves", "Mateen", "Mateen Cleaves", False],
     [76403, "Clemens", "John", "John Clemens", False],
-<<<<<<< HEAD
-    [1629598, "Clemons", "Chris", "Chris Clemons", True],
-=======
     [1629598, "Clemons", "Chris", "Chris Clemons", False],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [1628499, "Cleveland", "Antonius", "Antonius Cleveland", False],
     [76404, "Clifton", "Nat", "Nat Clifton", False],
     [76406, "Closs", "Bill", "Bill Closs", False],
@@ -847,7 +832,7 @@ players = [
     [76437, "Cook", "Norm", "Norm Cook", False],
     [2241, "Cook", "Omar", "Omar Cook", False],
     [1626188, "Cook", "Quinn", "Quinn Cook", True],
-    [1629076, "Cook", "Tyler", "Tyler Cook", False],
+    [1629076, "Cook", "Tyler", "Tyler Cook", True],
     [1628429, "Cooke", "Charles", "Charles Cooke", False],
     [76439, "Cooke", "David", "David Cooke", False],
     [76440, "Cooke", "Joe", "Joe Cooke", False],
@@ -954,11 +939,7 @@ players = [
     [76507, "Darden", "Jimmy", "Jimmy Darden", False],
     [212, "Dare", "Yinka", "Yinka Dare", False],
     [76509, "Dark", "Jesse", "Jesse Dark", False],
-<<<<<<< HEAD
-    [1630268, "Darling", "Nate", "Nate Darling", True],
-=======
     [1630268, "Darling", "Nate", "Nate Darling", False],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [76511, "Darrow", "Jimmy", "Jimmy Darrow", False],
     [203540, "Datome", "Gigi", "Gigi Datome", False],
     [921, "Daugherty", "Brad", "Brad Daugherty", False],
@@ -1023,12 +1004,8 @@ players = [
     [201942, "DeRozan", "DeMar", "DeMar DeRozan", True],
     [76562, "DeZonie", "Hank", "Hank DeZonie", False],
     [76544, "Deane", "Greg", "Greg Deane", False],
-<<<<<<< HEAD
-    [203473, "Dedmon", "Dewayne", "Dewayne Dedmon", False],
-=======
     [1630466, "Deck", "Gabriel", "Gabriel Deck", True],
     [203473, "Dedmon", "Dewayne", "Dewayne Dedmon", True],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [76546, "Dees", "Archie", "Archie Dees", False],
     [143, "Dehere", "Terry", "Terry Dehere", False],
     [76548, "Dehnert", "Red", "Red Dehnert", False],
@@ -1101,12 +1078,8 @@ players = [
     [201595, "Dorsey", "Joey", "Joey Dorsey", False],
     [1628416, "Dorsey", "Tyler", "Tyler Dorsey", False],
     [1629652, "Dort", "Luguentz", "Luguentz Dort", True],
-<<<<<<< HEAD
-    [1628422, "Dotson", "Damyean", "Damyean Dotson", True],
-=======
     [1630245, "Dosunmu", "Ayo", "Ayo Dosunmu", True],
     [1628422, "Dotson", "Damyean", "Damyean Dotson", False],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [1629653, "Dotson", "Devon", "Devon Dotson", True],
     [200763, "Douby", "Quincy", "Quincy Douby", False],
     [76588, "Douglas", "Bruce", "Bruce Douglas", False],
@@ -1387,20 +1360,12 @@ players = [
     [76748, "Frank", "Tellis", "Tellis Frank", False],
     [76749, "Frankel", "Nat", "Nat Frankel", False],
     [203479, "Franklin", "Jamaal", "Jamaal Franklin", False],
-<<<<<<< HEAD
-    [204025, "Frazier", "Tim", "Tim Frazier", True],
-    [76750, "Frazier", "Walt", "Walt Frazier", False],
-    [76751, "Frazier", "Will", "Will Frazier", False],
-    [1626187, "Frazier II", "Michael", "Michael Frazier II", False],
-    [1628982, "Frazier Jr.", "Melvin", "Melvin Frazier Jr.", False],
-=======
     [1629606, "Franks", "Robert", "Robert Franks", False],
     [1628982, "Frazier", "Melvin", "Melvin Frazier", False],
     [204025, "Frazier", "Tim", "Tim Frazier", False],
     [76750, "Frazier", "Walt", "Walt Frazier", False],
     [76751, "Frazier", "Will", "Will Frazier", False],
     [1626187, "Frazier II", "Michael", "Michael Frazier II", False],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [76752, "Frederick", "Anthony", "Anthony Frederick", False],
     [202690, "Fredette", "Jimmer", "Jimmer Fredette", False],
     [76753, "Free", "World", "World Free", False],
@@ -1675,11 +1640,7 @@ players = [
     [76911, "Haffner", "Scott", "Scott Haffner", False],
     [76912, "Hagan", "Cliff", "Cliff Hagan", False],
     [76913, "Hagan", "Glenn", "Glenn Hagan", False],
-<<<<<<< HEAD
-    [1630204, "Hagans", "Ashton", "Ashton Hagans", True],
-=======
     [1630204, "Hagans", "Ashton", "Ashton Hagans", False],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [76914, "Hahn", "Bob", "Bob Hahn", False],
     [76915, "Hairston", "Al", "Al Hairston", False],
     [76916, "Hairston", "Happy", "Happy Hairston", False],
@@ -1695,11 +1656,7 @@ players = [
     [76922, "Halimon", "Shaler", "Shaler Halimon", False],
     [1628985, "Hall", "Devon", "Devon Hall", False],
     [1629743, "Hall", "Donta", "Donta Hall", False],
-<<<<<<< HEAD
-    [1630221, "Hall", "Josh", "Josh Hall", True],
-=======
     [1630221, "Hall", "Josh", "Josh Hall", False],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [200837, "Hall", "Mike", "Mike Hall", False],
     [76923, "Halliburton", "Jeff", "Jeff Halliburton", False],
     [1032, "Ham", "Darvin", "Darvin Ham", False],
@@ -1770,11 +1727,7 @@ players = [
     [2734, "Harris", "Devin", "Devin Harris", False],
     [203548, "Harris", "Elias", "Elias Harris", False],
     [203914, "Harris", "Gary", "Gary Harris", True],
-<<<<<<< HEAD
-    [1630223, "Harris", "Jalen", "Jalen Harris", True],
-=======
     [1630223, "Harris", "Jalen", "Jalen Harris", False],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [203925, "Harris", "Joe", "Joe Harris", True],
     [446, "Harris", "Lucious", "Lucious Harris", False],
     [202412, "Harris", "Manny", "Manny Harris", False],
@@ -2126,18 +2079,14 @@ players = [
     [1630198, "Joe", "Isaiah", "Isaiah Joe", True],
     [2639, "Johnsen", "Britton", "Britton Johnsen", False],
     [200792, "Johnson", "Alexander", "Alexander Johnson", False],
-    [1628993, "Johnson", "Alize", "Alize Johnson", False],
+    [1628993, "Johnson", "Alize", "Alize Johnson", True],
     [101161, "Johnson", "Amir", "Amir Johnson", False],
     [77131, "Johnson", "Andy", "Andy Johnson", False],
     [1533, "Johnson", "Anthony", "Anthony Johnson", False],
     [202356, "Johnson", "Armon", "Armon Johnson", False],
     [77132, "Johnson", "Arnie", "Arnie Johnson", False],
     [422, "Johnson", "Avery", "Avery Johnson", False],
-<<<<<<< HEAD
-    [1629168, "Johnson", "BJ", "BJ Johnson", False],
-=======
     [1629168, "Johnson", "B.J.", "B.J. Johnson", False],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [1627744, "Johnson", "Brice", "Brice Johnson", False],
     [77130, "Johnson", "Buck", "Buck Johnson", False],
     [1629661, "Johnson", "Cameron", "Cameron Johnson", True],
@@ -2244,11 +2193,7 @@ players = [
     [77189, "Jones", "Major", "Major Jones", False],
     [2891, "Jones", "Mark", "Mark Jones", False],
     [90000, "Jones", "Mark", "Mark Jones", False],
-<<<<<<< HEAD
-    [1630222, "Jones", "Mason", "Mason Jones", True],
-=======
     [1630222, "Jones", "Mason", "Mason Jones", False],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [77195, "Jones", "Nick", "Nick Jones", False],
     [77191, "Jones", "Ozell", "Ozell Jones", False],
     [461, "Jones", "Popeye", "Popeye Jones", False],
@@ -2360,7 +2305,7 @@ players = [
     [1562, "King", "Gerard", "Gerard King", False],
     [77270, "King", "Jim", "Jim King", False],
     [728, "King", "Jimmy", "Jimmy King", False],
-    [1629663, "King", "Louis", "Louis King", False],
+    [1629663, "King", "Louis", "Louis King", True],
     [77272, "King", "Maury", "Maury King", False],
     [77273, "King", "Reggie", "Reggie King", False],
     [1101, "King", "Rich", "Rich King", False],
@@ -2555,10 +2500,7 @@ players = [
     [77383, "Lewis", "Ralph", "Ralph Lewis", False],
     [1740, "Lewis", "Rashard", "Rashard Lewis", False],
     [77384, "Lewis", "Reggie", "Reggie Lewis", False],
-<<<<<<< HEAD
-=======
     [1630575, "Lewis", "Scottie", "Scottie Lewis", True],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [1630184, "Lewis Jr.", "Kira", "Kira Lewis Jr.", True],
     [77386, "Liberty", "Marcus", "Marcus Liberty", False],
     [77387, "Lichti", "Todd", "Todd Lichti", False],
@@ -2656,11 +2598,7 @@ players = [
     [1894, "Maggette", "Corey", "Corey Maggette", False],
     [77442, "Magley", "Dave", "Dave Magley", False],
     [2048, "Magloire", "Jamaal", "Jamaal Magloire", False],
-<<<<<<< HEAD
-    [1630266, "Magnay", "Will", "Will Magnay", True],
-=======
     [1630266, "Magnay", "Will", "Will Magnay", False],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [101133, "Mahinmi", "Ian", "Ian Mahinmi", False],
     [77443, "Mahnken", "John", "John Mahnken", False],
     [77444, "Mahoney", "Francis", "Francis Mahoney", False],
@@ -2678,11 +2616,7 @@ players = [
     [1630572, "Mamukelashvili", "Sandro", "Sandro Mamukelashvili", True],
     [77451, "Manakas", "Ted", "Ted Manakas", False],
     [77452, "Mandic", "John", "John Mandic", False],
-<<<<<<< HEAD
-    [1630211, "Mane", "Karim", "Karim Mane", True],
-=======
     [1630211, "Mane", "Karim", "Karim Mane", False],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [77453, "Mangiapane", "Frank", "Frank Mangiapane", False],
     [986, "Mann", "Marcus", "Marcus Mann", False],
     [1629611, "Mann", "Terance", "Terance Mann", True],
@@ -2690,11 +2624,7 @@ players = [
     [330, "Manning", "Danny", "Danny Manning", False],
     [77454, "Manning", "Ed", "Ed Manning", False],
     [316, "Manning", "Richard", "Richard Manning", False],
-<<<<<<< HEAD
-    [1630185, "Mannion", "Nico", "Nico Mannion", True],
-=======
     [1630185, "Mannion", "Nico", "Nico Mannion", False],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [77456, "Mannion", "Pace", "Pace Mannion", False],
     [77457, "Mantis", "Nick", "Nick Mantis", False],
     [77459, "Maravich", "Pete", "Pete Maravich", False],
@@ -2734,10 +2664,7 @@ players = [
     [1626185, "Martin", "Jarell", "Jarell Martin", False],
     [77474, "Martin", "Jeff", "Jeff Martin", False],
     [1629725, "Martin", "Jeremiah", "Jeremiah Martin", False],
-<<<<<<< HEAD
-=======
     [1630231, "Martin", "KJ", "KJ Martin", True],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [1629103, "Martin", "Kelan", "Kelan Martin", True],
     [2030, "Martin", "Kenyon", "Kenyon Martin", False],
     [2755, "Martin", "Kevin", "Kevin Martin", False],
@@ -2746,27 +2673,18 @@ players = [
     [77477, "Martin", "Phil", "Phil Martin", False],
     [77479, "Martin", "Ronald", "Ronald Martin", False],
     [77480, "Martin", "Slater", "Slater Martin", False],
-    [1630231, "Martin Jr.", "Kenyon", "Kenyon Martin Jr.", True],
     [469, "Mashburn", "Jamal", "Jamal Mashburn", False],
     [77482, "Masino", "Al", "Al Masino", False],
     [193, "Mason", "Anthony", "Anthony Mason", False],
     [2046, "Mason", "Desmond", "Desmond Mason", False],
-<<<<<<< HEAD
-    [1628412, "Mason", "Frank", "Frank Mason", False],
-=======
     [1628412, "Mason III", "Frank", "Frank Mason III", False],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [2427, "Mason Jr.", "Roger", "Roger Mason Jr.", False],
     [763, "Massenburg", "Tony", "Tony Massenburg", False],
     [77483, "Mast", "Eddie", "Eddie Mast", False],
     [1628999, "Maten", "Yante", "Yante Maten", False],
     [1629726, "Mathews", "Garrison", "Garrison Mathews", True],
     [1628493, "Mathiang", "Mangok", "Mangok Mathiang", False],
-<<<<<<< HEAD
-    [1629751, "Mathias", "Dakota", "Dakota Mathias", True],
-=======
     [1629751, "Mathias", "Dakota", "Dakota Mathias", False],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [77484, "Matthews", "Wes", "Wes Matthews", False],
     [202083, "Matthews", "Wesley", "Wesley Matthews", False],
     [77485, "Maughan", "Ariel", "Ariel Maughan", False],
@@ -3104,10 +3022,7 @@ players = [
     [939, "Myers", "Pete", "Pete Myers", False],
     [1629004, "Mykhailiuk", "Svi", "Svi Mykhailiuk", True],
     [1823, "N'diaye", "Makhtar", "Makhtar N'diaye", False],
-<<<<<<< HEAD
-=======
     [1626122, "N'diaye", "Makhtar", "Makhtar N'diaye", False],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [2055, "N'diaye", "Mamadou", "Mamadou N'diaye", False],
     [77681, "Naber", "Bob", "Bob Naber", False],
     [77682, "Nachamkin", "Boris", "Boris Nachamkin", False],
@@ -3146,10 +3061,7 @@ players = [
     [2749, "Nelson", "Jameer", "Jameer Nelson", False],
     [77701, "Nelson", "Louie", "Louie Nelson", False],
     [1129, "Nembhard", "Ruben", "Ruben Nembhard", False],
-<<<<<<< HEAD
-=======
     [1630612, "Nembhard Jr.", "RJ", "RJ Nembhard Jr.", True],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [2403, "Nene", "", "Nene", False],
     [1838, "Nesby", "Tyrone", "Tyrone Nesby", False],
     [1630174, "Nesmith", "Aaron", "Aaron Nesmith", True],
@@ -3197,11 +3109,7 @@ players = [
     [77731, "Norris", "Audie", "Audie Norris", False],
     [983, "Norris", "Moochie", "Moochie Norris", False],
     [77732, "Norris", "Sylvester", "Sylvester Norris", False],
-<<<<<<< HEAD
-    [1629668, "Norvell Jr.", "Zach", "Zach Norvell Jr.", False],
-=======
     [1629668, "Norvell", "Zach", "Zach Norvell", False],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [77733, "Norwood", "Willie", "Willie Norwood", False],
     [77734, "Nostrand", "George", "George Nostrand", False],
     [77735, "Noszka", "Stan", "Stan Noszka", False],
@@ -3376,7 +3284,7 @@ players = [
     [203901, "Payton", "Elfrid", "Elfrid Payton", True],
     [56, "Payton", "Gary", "Gary Payton", False],
     [77824, "Payton", "Mel", "Mel Payton", False],
-    [1627780, "Payton II", "Gary", "Gary Payton II", False],
+    [1627780, "Payton II", "Gary", "Gary Payton II", True],
     [77825, "Pearcy", "George", "George Pearcy", False],
     [77826, "Pearcy", "Henry", "Henry Pearcy", False],
     [200762, "Pecherov", "Oleksiy", "Oleksiy Pecherov", False],
@@ -3448,11 +3356,7 @@ players = [
     [77865, "Plummer", "Gary", "Gary Plummer", False],
     [2750, "Podkolzin", "Pavel", "Pavel Podkolzin", False],
     [1627751, "Poeltl", "Jakob", "Jakob Poeltl", True],
-<<<<<<< HEAD
-    [1629738, "Poirier", "Vincent", "Vincent Poirier", True],
-=======
     [1629738, "Poirier", "Vincent", "Vincent Poirier", False],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [1630197, "Pokusevski", "Aleksej", "Aleksej Pokusevski", True],
     [77866, "Polee", "Dwayne", "Dwayne Polee", False],
     [77867, "Pollard", "Jim", "Jim Pollard", False],
@@ -3462,10 +3366,7 @@ players = [
     [77869, "Pondexter", "Cliff", "Cliff Pondexter", False],
     [202347, "Pondexter", "Quincy", "Quincy Pondexter", False],
     [1629044, "Ponds", "Shamorie", "Shamorie Ponds", False],
-<<<<<<< HEAD
-=======
     [1630582, "Pons", "Yves", "Yves Pons", True],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [1629673, "Poole", "Jordan", "Jordan Poole", True],
     [77870, "Pope", "David", "David Pope", False],
     [998, "Pope", "Mark", "Mark Pope", False],
@@ -3473,11 +3374,7 @@ players = [
     [77873, "Poquette", "Ben", "Ben Poquette", False],
     [2084, "Porter", "Chris", "Chris Porter", False],
     [77875, "Porter", "Howard", "Howard Porter", False],
-<<<<<<< HEAD
-    [1629007, "Porter", "Jontay", "Jontay Porter", True],
-=======
     [1629007, "Porter", "Jontay", "Jontay Porter", False],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [77876, "Porter", "Kevin", "Kevin Porter", False],
     [345, "Porter", "Terry", "Terry Porter", False],
     [1629645, "Porter Jr.", "Kevin", "Kevin Porter Jr.", True],
@@ -3688,13 +3585,8 @@ players = [
     [77989, "Robinson", "Jackie", "Jackie Robinson", False],
     [1554, "Robinson", "Jamal", "Jamal Robinson", False],
     [381, "Robinson", "James", "James Robinson", False],
-<<<<<<< HEAD
-    [1629010, "Robinson", "Jerome", "Jerome Robinson", True],
-    [1629620, "Robinson", "Justin", "Justin Robinson", False],
-=======
     [1629010, "Robinson", "Jerome", "Jerome Robinson", False],
     [1629620, "Robinson", "Justin", "Justin Robinson", True],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [1683, "Robinson", "Larry", "Larry Robinson", False],
     [1629011, "Robinson", "Mitchell", "Mitchell Robinson", True],
     [101126, "Robinson", "Nate", "Nate Robinson", False],
@@ -3842,7 +3734,7 @@ players = [
     [78085, "Schnellbacher", "Otto", "Otto Schnellbacher", False],
     [78086, "Schnittker", "Dick", "Dick Schnittker", False],
     [78087, "Schoene", "Russ", "Russ Schoene", False],
-    [1629678, "Schofield", "Admiral", "Admiral Schofield", False],
+    [1629678, "Schofield", "Admiral", "Admiral Schofield", True],
     [78088, "Scholz", "Dave", "Dave Scholz", False],
     [78089, "Schoon", "Milt", "Milt Schoon", False],
     [96, "Schrempf", "Detlef", "Detlef Schrempf", False],
@@ -3967,11 +3859,7 @@ players = [
     [101189, "Singleton", "James", "James Singleton", False],
     [78162, "Singleton", "Mckinley", "Mckinley Singleton", False],
     [78163, "Sinicola", "Zeke", "Zeke Sinicola", False],
-<<<<<<< HEAD
-    [1629686, "Sirvydis", "Deividas", "Deividas Sirvydis", True],
-=======
     [1629686, "Sirvydis", "Deividas", "Deividas Sirvydis", False],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [78164, "Sitton", "Charlie", "Charlie Sitton", False],
     [203491, "Siva", "Peyton", "Peyton Siva", False],
     [101, "Skiles", "Scott", "Scott Skiles", False],
@@ -4233,10 +4121,7 @@ players = [
     [1629150, "Terry", "Emanuel", "Emanuel Terry", True],
     [1891, "Terry", "Jason", "Jason Terry", False],
     [1630179, "Terry", "Tyrell", "Tyrell Terry", True],
-<<<<<<< HEAD
-=======
     [1630257, "Teske", "Jon", "Jon Teske", True],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [201934, "Thabeet", "Hasheem", "Hasheem Thabeet", False],
     [78309, "Thacker", "Tom", "Tom Thacker", False],
     [1628464, "Theis", "Daniel", "Daniel Theis", True],
@@ -4248,10 +4133,7 @@ players = [
     [203519, "Thomas", "Adonis", "Adonis Thomas", False],
     [2873, "Thomas", "Billy", "Billy Thomas", False],
     [1630271, "Thomas", "Brodric", "Brodric Thomas", True],
-<<<<<<< HEAD
-=======
     [1630560, "Thomas", "Cam", "Cam Thomas", True],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [1063, "Thomas", "Carl", "Carl Thomas", False],
     [78316, "Thomas", "Charles", "Charles Thomas", False],
     [2041, "Thomas", "Etan", "Etan Thomas", False],
@@ -4264,7 +4146,7 @@ players = [
     [78321, "Thomas", "Joe", "Joe Thomas", False],
     [1519, "Thomas", "John", "John Thomas", False],
     [1903, "Thomas", "Kenny", "Kenny Thomas", False],
-    [1629017, "Thomas", "Khyri", "Khyri Thomas", False],
+    [1629017, "Thomas", "Khyri", "Khyri Thomas", True],
     [703, "Thomas", "Kurt", "Kurt Thomas", False],
     [202498, "Thomas", "Lance", "Lance Thomas", False],
     [202952, "Thomas", "Malcolm", "Malcolm Thomas", False],
@@ -4297,7 +4179,7 @@ players = [
     [201154, "Thornton", "Al", "Al Thornton", False],
     [738, "Thornton", "Bob", "Bob Thornton", False],
     [201977, "Thornton", "Marcus", "Marcus Thornton", False],
-    [1628414, "Thornwell", "Sindarius", "Sindarius Thornwell", True],
+    [1628414, "Thornwell", "Sindarius", "Sindarius Thornwell", False],
     [901, "Thorpe", "Otis", "Otis Thorpe", False],
     [9, "Threatt", "Sedale", "Sedale Threatt", False],
     [600001, "Thurmond", "Nate", "Nate Thurmond", False],
@@ -4307,11 +4189,7 @@ players = [
     [78342, "Tieman", "Dan", "Dan Tieman", False],
     [1629681, "Tillie", "Killian", "Killian Tillie", True],
     [78343, "Tillis", "Darren", "Darren Tillis", False],
-<<<<<<< HEAD
-    [1630214, "Tillman", "Xavier", "Xavier Tillman", True],
-=======
     [1630214, "Tillman Sr.", "Xavier", "Xavier Tillman Sr.", True],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [78344, "Tingle", "Jack", "Jack Tingle", False],
     [2224, "Tinsley", "Jamaal", "Jamaal Tinsley", False],
     [47, "Tisdale", "Wayman", "Wayman Tisdale", False],
@@ -4464,10 +4342,7 @@ players = [
     [1630532, "Wagner", "Franz", "Franz Wagner", True],
     [78429, "Wagner", "Milt", "Milt Wagner", False],
     [1629021, "Wagner", "Moritz", "Moritz Wagner", True],
-<<<<<<< HEAD
-=======
     [1630688, "Wainright", "Ish", "Ish Wainright", True],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [203079, "Waiters", "Dion", "Dion Waiters", False],
     [78430, "Waiters", "Granville", "Granville Waiters", False],
     [78431, "Wakefield", "Andre", "Andre Wakefield", False],
@@ -4505,13 +4380,8 @@ players = [
     [78450, "Walton", "Bill", "Bill Walton", False],
     [78449, "Walton", "Lloyd", "Lloyd Walton", False],
     [2575, "Walton", "Luke", "Luke Walton", False],
-<<<<<<< HEAD
-    [1628476, "Walton Jr.", "Derrick", "Derrick Walton Jr.", False],
-    [202954, "Wanamaker", "Brad", "Brad Wanamaker", True],
-=======
     [1628476, "Walton Jr.", "Derrick", "Derrick Walton Jr.", True],
     [202954, "Wanamaker", "Brad", "Brad Wanamaker", False],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [78453, "Wanzer", "Bobby", "Bobby Wanzer", False],
     [78454, "Warbington", "Perry", "Perry Warbington", False],
     [369, "Ward", "Charlie", "Charlie Ward", False],
@@ -4630,11 +4500,7 @@ players = [
     [730, "Whitfield", "Dwayne", "Dwayne Whitfield", False],
     [78519, "Whitney", "Charles", "Charles Whitney", False],
     [43, "Whitney", "Chris", "Chris Whitney", False],
-<<<<<<< HEAD
-    [204222, "Whittington", "Greg", "Greg Whittington", True],
-=======
     [204222, "Whittington", "Greg", "Greg Whittington", False],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [203963, "Whittington", "Shayne", "Shayne Whittington", False],
     [78520, "Wicks", "Sidney", "Sidney Wicks", False],
     [78521, "Wier", "Murray", "Murray Wier", False],
@@ -4818,10 +4684,7 @@ players = [
     [1007, "Wright", "Luther", "Luther Wright", False],
     [1630589, "Wright", "Moses", "Moses Wright", True],
     [412, "Wright", "Sharone", "Sharone Wright", False],
-<<<<<<< HEAD
-=======
     [1630593, "Wright IV", "McKinley", "McKinley Wright IV", True],
->>>>>>> 038e42d14621b23a9a4e5b41cab2a690a4277a44
     [1629625, "Wright-Foreman", "Justin", "Justin Wright-Foreman", False],
     [203100, "Wroten", "Tony", "Tony Wroten", False],
     [78627, "Wynder", "A.J.", "A.J. Wynder", False],
