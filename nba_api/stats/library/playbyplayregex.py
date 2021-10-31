@@ -15,7 +15,7 @@ pattern_player = r"(?P<player>{player_name_anomaly}(\w+{player_char}{player_suff
     player_char=pattern_player_char,player_suffix=pattern_player_suffix)
 pattern_rebound_team = r'^(?P<team>\w+( \w+)?) Rebound$'
 pattern_turnover_team = r'^(?P<team>\w+( \w+)?) Turnover: (?P<turnover_type>.*) \(T#(?P<turnovers>\d+)\)$'
-pattern_timeout = r'^(?P<team>\w+( \w+)?) Timeout: ((?P<timeout_type>\w+)) \(\w+( |\.)(?P<full>\d+) \w+ (?P<short>\d+)\)$'
+pattern_timeout = r'^(?P<team>\w+( \w+)?) Timeout: ((?P<timeout_type>.*)) \(\w+( |\.)(?P<full>\d+) \w+ (?P<short>\d+)\)$'
 pattern_block = r"^(?P<player>.+) BLOCK \((?P<blocks>\d+) BLK\)$"                    
 pattern_ejection = r'^(?P<player>.+) Ejection:(?P<ejection_type>.*)$'
 pattern_field_goal_made = r"^(?P<player>.+) (((?P<distance>\d+)\' )| )(?P<field_goal_type>[\w+( |\-)]*) \((?P<points>\d+) PTS\)( \((?P<player_ast>\D+) (?P<assists>\d+) AST\))?$"
@@ -30,6 +30,8 @@ pattern_steal = r"^(?P<player>.+) STEAL \((?P<steals>\d+) STL\)$"
 pattern_substitution = r"^SUB: (?P<player_in>.+) FOR (?P<player_out>.+)$"
 pattern_turnover_player = r"^{player} (?P<turnover_type>[\w+?\-? ]*) (Turnover[ ]?)+ \(P(?P<personal>\d+)\.T(?P<team>\d+)\)$".format(player=pattern_player)
 pattern_violation = r"^(?P<player>.+) Violation:(?P<violation_type>\w+\s?\w+)(\s\((?P<referee>.*)\))?$"
+pattern_violation_team = r'^(?P<team>\w+( \w+)?) Violation: (?P<violation_type>.*) Violation$'
+
 
 # compiled regex for all playbyplay and playbyplayv2 HOMEDESCRIPTION & VISITORDESCRIPTION fields 
 re_block = re.compile(pattern_block)
@@ -49,6 +51,8 @@ re_substitution = re.compile(pattern_substitution)
 re_timeout = re.compile(pattern_timeout)
 re_violation = re.compile(pattern_violation)
 re_jump_ball = re.compile(pattern_jump_ball)
+re_violation_team = re.compile(pattern_violation_team)
+
 
 eventmsgtype_to_re = defaultdict(list, {
     EventMsgType.EJECTION : [re_ejection],
@@ -58,7 +62,7 @@ eventmsgtype_to_re = defaultdict(list, {
     EventMsgType.REBOUND : [re_rebound_player, re_rebound_team],
     EventMsgType.TURNOVER : [re_turnover_player, re_steal, re_turnover_team],
     EventMsgType.FOUL : [re_foul_player, re_foul_team],
-    EventMsgType.VIOLATION : [re_violation],
+    EventMsgType.VIOLATION : [re_violation, re_violation_team],
     EventMsgType.SUBSTITUTION : [re_substitution],
     EventMsgType.TIMEOUT : [re_timeout],
     EventMsgType.JUMP_BALL : [re_jump_ball]})

@@ -12,6 +12,8 @@ flake8-steps: &steps
   #- run: pytest
   - run: pip install --user pytest
   - run: python -m pytest  tests/stats/library/playbyplay/test_play_by_play_regex.py
+  - run: python -m pytest  tests/live/endpoints
+
   
 jobs:
   Python34:
@@ -34,6 +36,16 @@ jobs:
       - image: circleci/python:3.7
     steps: *steps
 
+  Python38:
+    docker:
+      - image: circleci/python:3.8
+    steps: *steps
+
+  Python39:
+    docker:
+      - image: circleci/python:3.9
+    steps: *steps
+
 workflows:
   version: 2
   build:
@@ -42,3 +54,5 @@ workflows:
       - Python35
       - Python36
       - Python37
+      - Python38
+      - Python39
