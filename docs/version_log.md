@@ -1,3 +1,16 @@
+# `v1.1.10`
+#### `2021-10-31`
+`stats.nba.com`
+- Added handling of multiple level column names [#212](https://github.com/swar/nba_api/pull/212)
+- Finding team by championship years [#219](https://github.com/swar/nba_api/pull/219)
+- Updated Static Player and Team Data [#225](https://github.com/swar/nba_api/pull/225)
+- Added `previous_season` attribute for Season Parameter [#226](https://github.com/swar/nba_api/pull/226)
+
+`Live NBA Stats`
+- Randy added some Live NBA endpoints [#184](https://github.com/swar/nba_api/pull/184/files)
+
+Endpoints were unable to be tested due to outdated analyzer.
+
 # `v1.1.9`
 #### `2020-08-18`
 `stats.nba.com`
