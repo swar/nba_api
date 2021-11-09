@@ -1,3 +1,8 @@
+# `v1.1.11`
+#### `2021-11-08`
+`Live NBA Stats`
+- Adding missing live functionality [#231](https://github.com/swar/nba_api/pull/231)
+
 # `v1.1.10`
 #### `2021-10-31`
 `stats.nba.com`
