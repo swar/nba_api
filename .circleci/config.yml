@@ -16,21 +16,6 @@ flake8-steps: &steps
 
   
 jobs:
-  Python34:
-    docker:
-      - image: circleci/python:3.4
-    steps: *steps
-
-  Python35:
-    docker:
-      - image: circleci/python:3.5
-    steps: *steps
-
-  Python36:
-    docker:
-      - image: circleci/python:3.6
-    steps: *steps
-
   Python37:
     docker:
       - image: circleci/python:3.7
@@ -46,13 +31,17 @@ jobs:
       - image: circleci/python:3.9
     steps: *steps
 
+  Python310:
+    docker:
+      - image: circleci/python:3.10
+    steps: *steps
+
 workflows:
   version: 2
   build:
     jobs:
-      - Python34
-      - Python35
-      - Python36
       - Python37
       - Python38
       - Python39
+      - Python39
+      - Python310
