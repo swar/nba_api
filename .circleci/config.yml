@@ -1,7 +1,4 @@
-version: 2.1
-
-orbs: 
-  snyk: snyk/snyk@1.1.2
+version: 2.0
 
 flake8-steps: &steps
   - checkout
@@ -16,10 +13,19 @@ flake8-steps: &steps
   - run: pip install --user pytest
   - run: python -m pytest  tests/stats/library/playbyplay/test_play_by_play_regex.py
   - run: python -m pytest  tests/live/endpoints
-  - snyk/scan:
-      target-file: setup.py
 
+  
 jobs:
+  Python34:
+    docker:
+      - image: circleci/python:3.4
+    steps: *steps
+
+  Python35:
+    docker:
+      - image: circleci/python:3.5
+    steps: *steps
+
   Python36:
     docker:
       - image: circleci/python:3.6
@@ -40,17 +46,13 @@ jobs:
       - image: circleci/python:3.9
     steps: *steps
 
-  Python310:
-    docker:
-      - image: circleci/python:3.10
-    steps: *steps
-
 workflows:
   version: 2
   build:
     jobs:
+      - Python34
+      - Python35
       - Python36
       - Python37
       - Python38
       - Python39
-      - Python310

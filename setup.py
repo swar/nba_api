@@ -1,10 +1,9 @@
 import setuptools
-from setuptools import setup
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
-setup(
+setuptools.setup(
     name="nba_api",
     version="1.1.11",
     author="Swar Patel",
