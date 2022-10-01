@@ -19,7 +19,6 @@ body:
     id: version
     attributes:
       label: NBA API Version
-      description: Please enter the version
       placeholder: ex. V1.1.11
     validations:
       required: true
