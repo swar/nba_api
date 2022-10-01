@@ -37,7 +37,7 @@ body:
   - type: textarea
     id: code
     attributes:
-      label: 
+      label: Code
       description: Code snippet that demonstrates the issue or a link to a code repository that can easily be pull down to recreate the issue locally
     validations:
       required: false
