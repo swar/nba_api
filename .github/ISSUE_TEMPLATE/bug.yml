@@ -1,0 +1,43 @@
+name: Bug Report
+description: File a bug report
+title: "[Bug]: "
+labels: ["bug","triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **STOP** Running on Azure, AWS, or GCP? The NBA blocks calls from cloud providers inclusive of products like [Colab](https://colab.research.google.com/).
+
+        * For questions, ask in [Slack](https://join.slack.com/t/nbaapi/shared_invite/zt-1gwn1du6v-b1oHTZIXcfEp9E06KdBQNw).
+        * Before you file an issue read [Contributing tot he NBA API](https://github.com/swar/nba_api/blob/master/CONTRIBUTING.md).
+        * Check to make sure someone hasn't already opened a similar [issue](https://github.com/microsoft/nba_api/issues).
+        * If you find your issue already exists, make relevant comments and add your reaction. Use a reaction in place of a "+1" comment:
+          * 👍 - upvote
+          * 👎 - downvote
+
+  - type: input
+    id: version
+    attributes:
+      label: NBA API Version
+      description: Please enter the version
+      placeholder: ex. V1.1.11
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: Issue
+      description: |
+        - Give as much detail as you can, including steps to reproduce, actual outcome, and expected outcome.
+      placeholder: Brown beat Thompson to the spot and bodied him up, forcing him to change directions and nearly poking the ball away in the process. Then Brown recovered and used his length to cut off the pass to the corner. Finally, Brown stayed connected as he trailed Thompson on the cut through the lane, then used his athleticism and timing to erase the shot at the rim. Truly remarkable stuff.
+    validations:
+      required: true
+
+  - type: textarea
+    id: code
+    attributes:
+      label: 
+      description: Code snippet that demonstrates the issue or a link to a code repository that can easily be pull down to recreate the issue locally
+    validations:
+      required: false
