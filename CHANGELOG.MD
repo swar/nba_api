@@ -42,6 +42,11 @@
 
 - CircleCI build support for Python 3.4, 3.5, and 3.6
 
+#### Fixed
+
+- [Issue #249](https://github.com/swar/nba_api/issues/249)
+  - `./nba_api/stats/endpoints/_base.py` requires `numpy` to format data for `get_data_frame`. Added `numpy` to `setup.py` `install_requires` directive.
+
 ### v1.1.11
 
 Date: 2021-11-8
