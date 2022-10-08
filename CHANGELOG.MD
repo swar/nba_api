@@ -20,7 +20,7 @@
 
 #### Added
 
-- 2022.10.08 [Player Data](https://github.com/swar/nba_api/blob/master/nba_api/stats/library/data.py)
+- 2022-10-08 [Player Data](https://github.com/swar/nba_api/blob/master/nba_api/stats/library/data.py)
 - Endpoints
   - [VideoEventsAsset](https://github.com/prateekjaipuria/nba_api/blob/master/nba_api/stats/endpoints/videoeventsasset.py) ([#259](https://github.com/swar/nba_api/pull/259) - [prateekjaipuria](https://github.com/prateekjaipuria))
 - [`CONTRIBUTING.MD`](https://github.com/swar/nba_api/blob/master/CONTRIBUTING.md)
@@ -30,7 +30,6 @@
 - GitHub issue template for bugs
 - CircleCI build support for Python 3.10
 
-
 #### Changed
 
 - CircleCI
@@ -39,21 +38,9 @@
   - Moved flake8 and pytest into Commands
   - Parameterized docker images
 
-#### Deprecated
-
-- 
-
 #### Removed
 
 - CircleCI build support for Python 3.4, 3.5, and 3.6
-
-#### Fixed
-
-- 
-
-#### Security
-
-- 
 
 ### v1.1.11
 
@@ -70,13 +57,10 @@ Date: 2021.10-31
 - Merge pull request #226 from mjstamper/master
 - Merge pull request #184 from rsforbes/live
 - updated latest data.py from master
-- Merge branch 'master' into live
-- updating fork
 - changed prev_season to previous_season
 - Merge pull request #1 from mjstamper/prev_season_add
 - Added previous season to the Season parameter
 - Merge pull request #225 from swar/static-data-update
-- Updating static data
 - Added new feauture: User can now find the team who won a championship title for a given year.
 - Added level names for MultiIndex columns of DataSet
 - Add handling of multiple level column names in DataSets
@@ -90,15 +74,13 @@ Date: 2021.10-31
 - Added AlwaysPresent to playbyplay.md
 - Updated info on playbyplay.md
 - major updates for live data (playbyplay, boxscore, and scoreboard)
-- Merged with Master
 - Merge pull request #7 from rsforbes/player_data_file
 - Updated data.py with current player data
 - Merge pull request #187 from rsforbes/playbyplay
 - Merge pull request #188 from rsforbes/version_update
 - Merge pull request #192 from rsforbes/gitignore_upd
 - removed .vscode as it's in .gitignore and should have been checked in
-- Adding Pythong 3.8 & 3.9 to the build
-- Adding Pythong 3.8 & 3.9 to the build
+- Adding Python 3.8 & 3.9 to the build
 - further separated stats from live by moving over _base.py and having live endpoints reference that
 - added fully working examples of live data in  docs/examples/PlayByPlay_Live.ipynb
 - reverting nba_api/status/library/http.py to original
@@ -108,7 +90,6 @@ Date: 2021.10-31
 - Live Data
 - missed library for http.py
 - adding in a new 'live' endpoint on s3 with libraries around playbyplay data. This will allow resutls during a live game
-- Adding line break
 
 ## v1.1.9
 
