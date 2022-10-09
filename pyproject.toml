@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "nba_api"
+version = "1.1.12"
+description = "An API Client package to access the APIs for NBA.com"
+readme = "README.md"
+requires-python = ">=3.7"
+authors = [ 
+    {name = "Swar Patel", email = "swar.m.patel@gmail.com"}
+]
+maintainers = [
+    {name = "Swar Patel", email = "swar.m.patel@gmail.com"},
+    {name = "Randy Forbes", email = "randy.forbes@gmail.com"}
+]
+keywords = ["api", "basketbal", "data", "nba", "sports", "stats"]
+license = { file = "License" }
+classifiers = [
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Software Development"
+]
+dependencies=[
+    "numpy",
+    "requests"
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest"
+]
+
+[project.urls]
+documentation = "https://github.com/swar/nba_api/blob/master/README.md"
+repository = "https://github.com/swar/nba_api"
