@@ -14,11 +14,8 @@ commands:
 
   pytest:
     steps:
-      - run: pip install --user pytest
-      - run: pip install --user requests
-      - run: python -m pytest tests/stats/library/playbyplay/test_play_by_play_regex.py
-      - run: python -m pytest tests/live/endpoints
-
+      - run: pip install --user pytest requests
+      - run: pytest
 jobs:
   main:
     parameters:
