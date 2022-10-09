@@ -17,7 +17,7 @@ maintainers = [
     {name = "Randy Forbes", email = "randy.forbes@gmail.com"}
 ]
 keywords = ["api", "basketbal", "data", "nba", "sports", "stats"]
-license = { file = "License" }
+license = { text = "MIT License" }
 classifiers = [
     "Intended Audience :: Developers",
     "Intended Audience :: Science/Research",

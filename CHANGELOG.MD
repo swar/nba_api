@@ -16,7 +16,9 @@
 
 ## Version History
 
-### Unreleased
+### v1.1.12-rc2
+
+Date: 2022-10-9
 
 #### Added
 
@@ -37,6 +39,7 @@
   - [Config to Version 2.1](https://discuss.circleci.com/t/circleci-2-1-config-overview/26057)
   - Moved flake8 and pytest into Commands
   - Parameterized docker images
+- Refreshed README.md
 
 #### Removed
 
