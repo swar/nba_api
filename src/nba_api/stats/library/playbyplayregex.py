@@ -18,8 +18,8 @@ pattern_turnover_team = r'^(?P<team>\w+( \w+)?) Turnover: (?P<turnover_type>.*) 
 pattern_timeout = r'^(?P<team>\w+( \w+)?) Timeout: ((?P<timeout_type>.*)) \(\w+( |\.)(?P<full>\d+) \w+ (?P<short>\d+)\)$'
 pattern_block = r"^(?P<player>.+) BLOCK \((?P<blocks>\d+) BLK\)$"                    
 pattern_ejection = r'^(?P<player>.+) Ejection:(?P<ejection_type>.*)$'
-pattern_field_goal_made = r"^(?P<player>.+) (((?P<distance>\d+)\' )| )(?P<field_goal_type>[\w+( |\-)]*) \((?P<points>\d+) PTS\)( \((?P<player_ast>\D+) (?P<assists>\d+) AST\))?$"
-pattern_field_goal_missed = r"^MISS (?P<player>.+) (((?P<distance>\d+)\' )| )(?P<field_goal_type>[\w+( |\-)]*)$"
+pattern_field_goal_made = r"^{player} (((?P<distance>\d+)\' )| )?[ ]*(?P<field_goal_type>[\w+( |\-)]*) \((?P<points>\d+) PTS\)( \((?P<player_ast>\D+) (?P<assists>\d+) AST\))?$".format(player=pattern_player)
+pattern_field_goal_missed = r"^MISS {player} ((?P<distance>\d+)\' )?[ ]*(?P<field_goal_type>[\w+( |\-)]*)$".format(player=pattern_player)
 pattern_foul_player = r"^(?P<player>.+) (?P<foul_type>.*)\s(?=(\(\w+(?P<personal>\d+)(\.\w+(?P<team>[\d|\w]+))?\)( \((?P<referee>.*)\))?)$)"
 pattern_foul_team = r"^(?P<team>\w+( \w+)?) T.Foul \((?P<foul_type>.*) (?P<player>.+) \) (\((?P<referee>.*)\))"
 pattern_free_throw_made = r"^(?P<player>.+) Free Throw (?P<free_throw_type>(.* )?(\d of \d)|\w+) \((?P<points>\d+) PTS\)$"
