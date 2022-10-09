@@ -19,11 +19,17 @@ playbyplay["FieldGoalMade"].append({"description" : "Aldridge 6' Turnaround Hook
 #Field Goal Made (Without Distance & With Double Space)
 playbyplay["FieldGoalMade"].append({"description" : "Broekhoff  3PT Jump Shot (3 PTS) (Lee 2 AST)", "player" : "Broekhoff", "distance" : None, "field_goal_type" : "3PT Jump Shot", "points" : "3", "player_ast" : "Lee", "assists" : "2"})
 
+#Field Goal Made (Without Distance & With Single Space)
+playbyplay["FieldGoalMade"].append({"description" : "Portis Tip Layup Shot (5 PTS)", "player" : "Portis", "distance" : None, "field_goal_type" : "Tip Layup Shot", "points" : "5", "player_ast" : None, "assists" : None})
+
 #Field Goal Missed
 playbyplay["FieldGoalMissed"].append({"description" : "MISS O'Quinn 17' Jump Shot", "player" : "O'Quinn", "distance" : "17", "field_goal_type" : "Jump Shot"})
 
 #Field Goal Missed (Without Disstance & With Double Space)
 playbyplay["FieldGoalMissed"].append({"description" : "MISS O'Quinn  3PT Jump Shot", "player" : "O'Quinn", "distance" : None, "field_goal_type" : "3PT Jump Shot"})
+
+#Field Goal Missed (Without Disstance & With Single Space)
+playbyplay["FieldGoalMissed"].append({"description" : "MISS O'Quinn 3PT Jump Shot", "player" : "O'Quinn", "distance" : None, "field_goal_type" : "3PT Jump Shot"})
 
 #Foul Player
 playbyplay["FoulPlayer"].append({"description" : "Collison P.FOUL (P1.TN) (M.Lindsay)", "player" : "Collison", "foul_type" : "P.FOUL", "personal" : "1", "team" : "N", "referee" : "M.Lindsay"})
