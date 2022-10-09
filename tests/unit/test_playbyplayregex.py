@@ -3,7 +3,7 @@ import re
 from collections import defaultdict
 from nba_api.stats.library.eventmsgtype import EventMsgType
 from nba_api.stats.library.playbyplayregex import *
-from play_by_play_data import playbyplay
+from data_playbyplayregex import playbyplay
 
 #BLOCK
 @pytest.mark.parametrize('play', playbyplay['Block'])

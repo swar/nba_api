@@ -44,3 +44,13 @@ test = [
 [project.urls]
 documentation = "https://github.com/swar/nba_api/blob/master/README.md"
 repository = "https://github.com/swar/nba_api"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "src","tests//unit"
+]
+minversion = "7.1"
+addopts = "-ra -q --import-mode=importlib"
+testpaths = [
+    "tests//unit"
+]
