@@ -10,7 +10,7 @@ from nba_api.stats.library.eventmsgtype import EventMsgType
 #   There are likely to be others. If you find one, please open an Issue or create a PR. The regex allows for multiple using the `(name name)|` format.
 pattern_player_name_anomaly = r'(Mark Morris)|'
 pattern_player_char = r'((?#char)(\. \w+)|(\-?\'?\w+))?'
-pattern_player_suffix = r'((?#suffix)([\s](Jr\.|III|II|IV)))?'
+pattern_player_suffix = r'((?#suffix)([\s](Jr\.|Sr\.|III|II|IV)))?'
 pattern_player = r"(?P<player>{player_name_anomaly}(\w+{player_char}{player_suffix}))".format(player_name_anomaly=pattern_player_name_anomaly,
     player_char=pattern_player_char,player_suffix=pattern_player_suffix)
 pattern_rebound_team = r'^(?P<team>\w+( \w+)?) Rebound$'

@@ -97,6 +97,9 @@ playbyplay["TurnoverPlayer"].append({"description" : "S. Hill Backcourt Turnover
 #Turnover Player (Junior)
 playbyplay["TurnoverPlayer"].append({"description" : "Porter Jr. Offensive Goaltending Turnover (P1.T16)", "player" : "Porter Jr.", "turnover_type" : "Offensive Goaltending", "personal" : "1", "team" : "16"})
 
+#Turnover Player (Senior)
+playbyplay["TurnoverPlayer"].append({"description" : "Morris Sr. Lost Ball Turnover (P1.T14)", "player" : "Morris Sr.", "turnover_type" : "Lost Ball", "personal" : "1", "team" : "14"})
+
 #Turnover Player (Second)
 playbyplay["TurnoverPlayer"].append({"description" : "Payton II Lane Violation Turnover (P1.T6)", "player" : "Payton II", "turnover_type" : "Lane Violation", "personal" : "1", "team" : "6"})
 
