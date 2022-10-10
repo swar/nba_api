@@ -23,8 +23,8 @@ pip install nba_api
 ```python
 from nba_api.stats.endpoints import playercareerstats
 
-# Giannis Antetokounmpo
-career = playercareerstats.PlayerCareerStats(player_id='203507') 
+# Nikola Jokić
+career = playercareerstats.PlayerCareerStats(player_id='203999') 
 
 # pandas data frames (optional: pip install pandas)
 career.get_data_frames()[0]
