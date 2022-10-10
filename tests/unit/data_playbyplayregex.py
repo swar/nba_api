@@ -55,6 +55,15 @@ playbyplay["JumpBall"].append({"description" : "Jump Ball Collins vs. O'Quinn: T
 #Jump Ball (Without player_tip)
 playbyplay["JumpBall"].append({"description" : "Jump Ball Green vs. McKinnie: Tip to", "player_home" : "Green", "player_away" : "McKinnie", "player_tip" : None})  
 
+#Jump Ball (With single space in description)
+playbyplay["JumpBall"].append({"description" : " ", "player_home" : None, "player_away" : None, "player_tip" : None})    
+
+#Jump Ball (With multiple spaces in description)
+playbyplay["JumpBall"].append({"description" : "  ", "player_home" : None, "player_away" : None, "player_tip" : None})    
+
+#Jump Ball (With empty description)
+playbyplay["JumpBall"].append({"description" : "", "player_home" : None, "player_away" : None, "player_tip" : None})    
+
 #Rebound Player
 playbyplay["ReboundPlayer"].append({"description" : "Zubac REBOUND (Off:2 Def:4)", "player" : "Zubac", "offensive" : "2", "defensive" : "4"})
 
