@@ -1,12 +1,12 @@
-# Contributing to the NBA-API
+# Contributing to the NBA_API
 
-Welcome, and thank you for your interest in contributing to the NBA-API!
+Welcome, and thank you for your interest in contributing to the NBA_API!
 
 There are many ways in which you can contribute, beyond writing code. The goal of this document is to provide a high-level overview of how you can get involved.
 
 ## Asking Questions
 
-Have a question? Rather than opening an issue, head over to the [NBA-API Slack Workspace](https://join.slack.com/t/nbaapi/shared_invite/enQtOTY0MjIwMTI2ODIwLWIzZGFmMjQ4MDk4MTVmMTA2NWEwYmQzZDRiYTM3NDI4OWY5NGJiY2Q1M2EwZGUzOTQ1MTk4MDEyZGI1NGM2ZDI) to connect with others, chat, and receive help.
+Have a question? Rather than opening an issue, head over to the [Slack](https://join.slack.com/t/nbaapi/shared_invite/zt-1gwn1du6v-b1oHTZIXcfEp9E06KdBQNw) to connect with others, chat, and receive help.
 
 ## Reporting Issues
 
@@ -33,7 +33,7 @@ The more information you can provide, the more likely someone will be successful
 
 Please include the following with each issue:
 
-* Version of the nba-api you are using
+* Version of the nba_api you are using
 
 * Reproducible steps (1... 2... 3...) that cause the issue
 
