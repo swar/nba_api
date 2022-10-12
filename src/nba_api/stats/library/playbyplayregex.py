@@ -21,10 +21,9 @@ pattern_ejection = r'^(?P<player>.+) Ejection:(?P<ejection_type>.*)$'
 pattern_field_goal_made = r"^{player} (((?P<distance>\d+)\' )| )?[ ]*(?P<field_goal_type>[\w+( |\-)]*) \((?P<points>\d+) PTS\)( \((?P<player_ast>\D+) (?P<assists>\d+) AST\))?$".format(player=pattern_player)
 pattern_field_goal_missed = r"^MISS {player} ((?P<distance>\d+)\' )?[ ]*(?P<field_goal_type>[\w+( |\-)]*)$".format(player=pattern_player)
 pattern_foul_player = r"^(?P<player>.+) (?P<foul_type>.*)\s(?=(\(\w+(?P<personal>\d+)(\.\w+(?P<team>[\d|\w]+))?\)( \((?P<referee>.*)\))?)$)"
-pattern_foul_team = r"^(?P<team>\w+( \w+)?) T.Foul \((?P<foul_type>.*) (?P<player>.+) \) (\((?P<referee>.*)\))"
+pattern_foul_team = r"^(?P<team>[A-Z]+( [A-Z]+)?) (T.Foul \()?((?P<foul_type>(.*)))?(?(3)( {player} \) \((?P<referee>.*)\)))$".format(player=pattern_player)
 pattern_free_throw_made = r"^(?P<player>.+) Free Throw (?P<free_throw_type>(.* )?(\d of \d)|\w+) \((?P<points>\d+) PTS\)$"
 pattern_free_throw_miss = r"^MISS (?P<player>.+) Free Throw (?P<free_throw_type>(.* )?(\d of \d)|\w+)$"
-#pattern_jump_ball = r"^Jump Ball (?P<player_home>.+) vs. (?P<player_away>.+): Tip to( (?P<player_tip>.+))?$"
 pattern_jump_ball = r"^(Jump Ball (?P<player_home>.+) vs. (?P<player_away>.+): Tip to( (?P<player_tip>.+))?)|(\s*)$"
 pattern_rebound_player = r"^(?P<player>.+) REBOUND \(Off:(?P<offensive>\d+) Def:(?P<defensive>\d+)\)$"
 pattern_steal = r"^(?P<player>.+) STEAL \((?P<steals>\d+) STL\)$"

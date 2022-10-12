@@ -40,6 +40,12 @@ playbyplay["FoulPlayer"].append({"description" : "Jamison P.FOUL (P4.PN)", "play
 #Foul Team
 playbyplay["FoulTeam"].append({"description" : "BUCKS T.Foul (Def. 3 Sec Lopez ) (M.Callahan)", "team" : "BUCKS", "foul_type" : "Def. 3 Sec", "player" : "Lopez", "referee" : "M.Callahan"})
 
+#Foul Team
+playbyplay["FoulTeam"].append({"description" : "BUCKS T.Foul (Def. 3 Sec Lopez Jr. ) (M.Callahan)", "team" : "BUCKS", "foul_type" : "Def. 3 Sec", "player" : "Lopez Jr.", "referee" : "M.Callahan"})
+
+#Foul Team
+playbyplay["FoulTeam"].append({"description" : "MAVERICKS Delay", "team" : "MAVERICKS", "foul_type" : "Delay", "player" : None, "referee" : None})
+
 #Free Throw Made
 playbyplay["FreeThrowMade"].append({"description" : "Sumner Free Throw 2 of 2 (1 PTS)", "player" : "Sumner", "free_throw_type" : "2 of 2", "points" : "1"})
 
