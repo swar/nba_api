@@ -14,54 +14,58 @@
 - `Fixed` for any bug fixes.
 - `Security` in case of vulnerabilities.
 
-## Version History
+# Version History
 
-### v1.1.12-rc2
+## v1.1.12
 
-Date: 2022-10-9
+Date: 2022-10-11
 
-#### Added
+### Added
 
 - 2022-10-08 [Player Data](https://github.com/swar/nba_api/blob/master/nba_api/stats/library/data.py)
 - Endpoints
   - [VideoEventsAsset](https://github.com/prateekjaipuria/nba_api/blob/master/nba_api/stats/endpoints/videoeventsasset.py) ([#259](https://github.com/swar/nba_api/pull/259) - [prateekjaipuria](https://github.com/prateekjaipuria))
 - [`CONTRIBUTING.MD`](https://github.com/swar/nba_api/blob/master/CONTRIBUTING.md)
-  - Q&A via NBA API Slack
-  - Reporting a Bug
 - [`CHANGELOG.MD`](https://github.com/swar/nba_api/blob/master/CHANGELOG.md)
 - GitHub issue template for bugs
 - CircleCI build support for Python 3.10
-- New Unit Tests for PlayByPlay Regex per fixes.
+- pyproject.toml ([PEP 621](https://peps.python.org/pep-0621/))
 
-#### Changed
+### Changed
 
 - CircleCI
   - [Migrated to next-gen Convenience Images](https://circleci.com/docs/next-gen-migration-guide/)
   - [Config to Version 2.1](https://discuss.circleci.com/t/circleci-2-1-config-overview/26057)
-  - Moved flake8 and pytest into Commands
+  - Moved `flake8` and `pytest` into Commands
   - Parameterized docker images
-- Refreshed README.md
+- README.md
+  - Link to [NBA.com Terms of Use](https://www.nba.com/termsofuse)
+  - Getting started samples at the top
+  - Other edits for improving the reading structure
+- Project Structure
+  - Source code moved from flat-layout to src-layout
+  - Tests were divided into Unit/Integration
 
-#### Removed
+### Removed
 
-- CircleCI build support for Python 3.4, 3.5, and 3.6
+- Support for Python 3.4, 3.5, and 3.6
+- Setup.py file in favor of pyproject.toml ([PEP 621](https://peps.python.org/pep-0621/))
 
-#### Fixed
+### Fixed
 
-- [Issue #249](https://github.com/swar/nba_api/issues/249)
-  - `./nba_api/stats/endpoints/_base.py` requires `numpy` to format data for `get_data_frame`. Added `numpy` to `setup.py` `install_requires` directive.
-- [Issue #278](https://github.com/swar/nba_api/issues/278)
-  - Fixed `playbyplayregex` where
-    - the NBA removed a space that represented `distance` when `distance` was not included in the made/missed shot.
-    - Jump Ball contained a single space in description (regex also supports multiple spaces empty description).
+- [Issue #249](https://github.com/swar/nba_api/issues/249): `./nba_api/stats/endpoints/_base.py` requires `numpy` to format data for `get_data_frame`. `numpy` was not in the list of requirements, but is required.
+- [Issue #278](https://github.com/swar/nba_api/issues/278): Fixed `playbyplayregex`, and included updated unit tests, where
+  - The NBA removed a space that represented `distance` when `distance` was not included in the made/missed shot.
+  - Jump Ball contained a single space in the description (regex now also supports multiple spaces empty description).
+  - Team fouls no longer included Player/Referee, just the Team Name & Foul.
 
-### v1.1.11
+## v1.1.11
 
 Date: 2021-11-8
 
 - Merge pull request #231 from swar/live
 
-### v1.1.10
+## v1.1.10
 
 Date: 2021.10-31
 
@@ -132,8 +136,6 @@ Date: 2020-01-27
 - Forgot to remove debug code... this is why you don't program when you should be sleeping
 
 ## v1.1.7
-
-Date: 
 
 - Forgot to add new endpoint on second section of __init__
 
