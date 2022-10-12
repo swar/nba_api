@@ -31,6 +31,7 @@ Date: 2022-10-9
 - [`CHANGELOG.MD`](https://github.com/swar/nba_api/blob/master/CHANGELOG.md)
 - GitHub issue template for bugs
 - CircleCI build support for Python 3.10
+- New Unit Tests for PlayByPlay Regex per fixes.
 
 #### Changed
 
@@ -50,7 +51,9 @@ Date: 2022-10-9
 - [Issue #249](https://github.com/swar/nba_api/issues/249)
   - `./nba_api/stats/endpoints/_base.py` requires `numpy` to format data for `get_data_frame`. Added `numpy` to `setup.py` `install_requires` directive.
 - [Issue #278](https://github.com/swar/nba_api/issues/278)
-  - Fixed `playbyplayregex` where the NBA removed a space that represented `distance` when `distance` was not included in the made/missed shot.
+  - Fixed `playbyplayregex` where
+    - the NBA removed a space that represented `distance` when `distance` was not included in the made/missed shot.
+    - Jump Ball contained a single space in description (regex also supports multiple spaces empty description).
 
 ### v1.1.11
 

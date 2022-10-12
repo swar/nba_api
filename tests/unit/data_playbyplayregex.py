@@ -40,6 +40,12 @@ playbyplay["FoulPlayer"].append({"description" : "Jamison P.FOUL (P4.PN)", "play
 #Foul Team
 playbyplay["FoulTeam"].append({"description" : "BUCKS T.Foul (Def. 3 Sec Lopez ) (M.Callahan)", "team" : "BUCKS", "foul_type" : "Def. 3 Sec", "player" : "Lopez", "referee" : "M.Callahan"})
 
+#Foul Team
+playbyplay["FoulTeam"].append({"description" : "BUCKS T.Foul (Def. 3 Sec Lopez Jr. ) (M.Callahan)", "team" : "BUCKS", "foul_type" : "Def. 3 Sec", "player" : "Lopez Jr.", "referee" : "M.Callahan"})
+
+#Foul Team
+playbyplay["FoulTeam"].append({"description" : "MAVERICKS Delay", "team" : "MAVERICKS", "foul_type" : "Delay", "player" : None, "referee" : None})
+
 #Free Throw Made
 playbyplay["FreeThrowMade"].append({"description" : "Sumner Free Throw 2 of 2 (1 PTS)", "player" : "Sumner", "free_throw_type" : "2 of 2", "points" : "1"})
 
@@ -54,6 +60,15 @@ playbyplay["JumpBall"].append({"description" : "Jump Ball Collins vs. O'Quinn: T
 
 #Jump Ball (Without player_tip)
 playbyplay["JumpBall"].append({"description" : "Jump Ball Green vs. McKinnie: Tip to", "player_home" : "Green", "player_away" : "McKinnie", "player_tip" : None})  
+
+#Jump Ball (With single space in description)
+playbyplay["JumpBall"].append({"description" : " ", "player_home" : None, "player_away" : None, "player_tip" : None})    
+
+#Jump Ball (With multiple spaces in description)
+playbyplay["JumpBall"].append({"description" : "  ", "player_home" : None, "player_away" : None, "player_tip" : None})    
+
+#Jump Ball (With empty description)
+playbyplay["JumpBall"].append({"description" : "", "player_home" : None, "player_away" : None, "player_tip" : None})    
 
 #Rebound Player
 playbyplay["ReboundPlayer"].append({"description" : "Zubac REBOUND (Off:2 Def:4)", "player" : "Zubac", "offensive" : "2", "defensive" : "4"})
@@ -96,6 +111,9 @@ playbyplay["TurnoverPlayer"].append({"description" : "S. Hill Backcourt Turnover
 
 #Turnover Player (Junior)
 playbyplay["TurnoverPlayer"].append({"description" : "Porter Jr. Offensive Goaltending Turnover (P1.T16)", "player" : "Porter Jr.", "turnover_type" : "Offensive Goaltending", "personal" : "1", "team" : "16"})
+
+#Turnover Player (Senior)
+playbyplay["TurnoverPlayer"].append({"description" : "Morris Sr. Lost Ball Turnover (P1.T14)", "player" : "Morris Sr.", "turnover_type" : "Lost Ball", "personal" : "1", "team" : "14"})
 
 #Turnover Player (Second)
 playbyplay["TurnoverPlayer"].append({"description" : "Payton II Lane Violation Turnover (P1.T6)", "player" : "Payton II", "turnover_type" : "Lane Violation", "personal" : "1", "team" : "6"})
