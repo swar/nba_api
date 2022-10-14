@@ -22,7 +22,7 @@ Date: 2022-10-11
 
 ### Added
 
-- 2022-10-08 [Player Data](https://github.com/swar/nba_api/blob/master/nba_api/stats/library/data.py)
+- 2022-10-08 [Player Data]([https://github.com/swar/nba_api/blob/master/nba_api/stats/library/data.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/library/data.py))
 - Endpoints
   - [VideoEventsAsset](https://github.com/prateekjaipuria/nba_api/blob/master/nba_api/stats/endpoints/videoeventsasset.py) ([#259](https://github.com/swar/nba_api/pull/259) - [prateekjaipuria](https://github.com/prateekjaipuria))
 - [`CONTRIBUTING.MD`](https://github.com/swar/nba_api/blob/master/CONTRIBUTING.md)
