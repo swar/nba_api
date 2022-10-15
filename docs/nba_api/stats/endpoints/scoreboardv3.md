@@ -5,7 +5,7 @@
 >[https://stats.nba.com/stats/scoreboardv3](https://stats.nba.com/stats/scoreboardv3)
 
 ##### Valid URL
->[https://stats.nba.com/stats/scoreboardv3?DayOffset=0&GameDate=2020-08-16&LeagueID=00](https://stats.nba.com/stats/scoreboardv3?GameDate=2020-08-16&LeagueID=00)
+>[https://stats.nba.com/stats/scoreboardv3?GameDate=2020-08-16&LeagueID=00](https://stats.nba.com/stats/scoreboardv3?GameDate=2020-08-16&LeagueID=00)
 
 ## Parameters
 API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
