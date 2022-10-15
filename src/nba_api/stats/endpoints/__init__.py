@@ -99,6 +99,7 @@ __all__ = [
     'playoffpicture',
     'scoreboard',
     'scoreboardv2',
+    'scoreboardv3',
     'shotchartdetail',
     'shotchartleaguewide',
     'shotchartlineupdetail',
@@ -234,6 +235,7 @@ from .playervsplayer import PlayerVsPlayer
 from .playoffpicture import PlayoffPicture
 from .scoreboard import Scoreboard
 from .scoreboardv2 import ScoreboardV2
+from .scoreboardv3 import ScoreboardV3
 from .shotchartdetail import ShotChartDetail
 from .shotchartleaguewide import ShotChartLeagueWide
 from .shotchartlineupdetail import ShotChartLineupDetail
