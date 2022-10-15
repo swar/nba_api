@@ -15,7 +15,6 @@ class ScoreboardV3(Endpoint):
     headers = None
 
     def __init__(self,
-                 day_offset=DayOffset.default,
                  game_date=GameDate.default,
                  league_id=LeagueID.default,
                  proxy=None,
@@ -28,7 +27,6 @@ class ScoreboardV3(Endpoint):
         self.timeout = timeout
 
         self.parameters = {
-            'DayOffset': day_offset,
             'GameDate': game_date,
             'LeagueID': league_id
         }

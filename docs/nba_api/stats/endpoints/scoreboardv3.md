@@ -5,12 +5,11 @@
 >[https://stats.nba.com/stats/scoreboardv3](https://stats.nba.com/stats/scoreboardv3)
 
 ##### Valid URL
->[https://stats.nba.com/stats/scoreboardv3?DayOffset=0&GameDate=2020-08-16&LeagueID=00](https://stats.nba.com/stats/scoreboardv3?DayOffset=0&GameDate=2020-08-16&LeagueID=00)
+>[https://stats.nba.com/stats/scoreboardv3?DayOffset=0&GameDate=2020-08-16&LeagueID=00](https://stats.nba.com/stats/scoreboardv3?GameDate=2020-08-16&LeagueID=00)
 
 ## Parameters
 API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
 ------------ | ------------ | :-----------: | :---: | :---:
-[_**DayOffset**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DayOffset) | day_offset | `^-{0,1}\d+$` | `Y` |  | 
 [_**GameDate**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameDate) | game_date |  | `Y` |  | 
 [_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^\d{2}$` | `Y` |  | 
 
