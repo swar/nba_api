@@ -128,6 +128,7 @@
             - [/PlayoffPicture](nba_api/stats/endpoints/playoffpicture.md)
             - [/Scoreboard](nba_api/stats/endpoints/scoreboard.md)
             - [/ScoreboardV2](nba_api/stats/endpoints/scoreboardv2.md)
+            - [/ScoreboardV3](nba_api/stats/endpoints/scoreboardv3.md)
             - [/ShotChartDetail](nba_api/stats/endpoints/shotchartdetail.md)
             - [/ShotChartLeagueWide](nba_api/stats/endpoints/shotchartleaguewide.md)
             - [/ShotChartLineupDetail](nba_api/stats/endpoints/shotchartlineupdetail.md)
