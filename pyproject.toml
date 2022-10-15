@@ -16,7 +16,7 @@ maintainers = [
     {name = "Swar Patel", email = "swar.m.patel@gmail.com"},
     {name = "Randy Forbes", email = "randy.forbes@gmail.com"}
 ]
-keywords = ["api", "basketbal", "data", "nba", "sports", "stats"]
+keywords = ["api", "basketball", "data", "nba", "sports", "stats"]
 license = { text = "MIT License" }
 classifiers = [
     "Intended Audience :: Developers",
