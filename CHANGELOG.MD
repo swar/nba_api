@@ -16,6 +16,18 @@
 
 # Version History
 
+## v1.1.13
+
+Date: 2022-10-16
+
+### Fixed
+
+Fix team_index_championship_year [#286](https://github.com/swar/nba_api/pull/286)
+
+- add championship years to data-updater template
+- re-add team_index_championship_year to static data
+- add Bucks 2021 championship and GSW 2022
+
 ## v1.1.12
 
 Date: 2022-10-11
