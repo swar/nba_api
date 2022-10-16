@@ -1,0 +1,13 @@
+[flake8]
+min_python_version = 3.7.0
+max-complexity = 10
+max-line-length = 127
+exclude = 
+    # TODO
+    tools,
+    scripts
+
+extend-ignore = 
+    # line too long (> {max-line-length} characters)
+    E501
+
