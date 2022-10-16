@@ -14,7 +14,7 @@ Have you identified a reproducible problem? Have a feature request? Identified a
 
 ### Look For an Existing Issue
 
-Before you create a new issue, please do a search in [open issues](https://github.com/microsoft/nba_api/issues) to see if the issue or feature request has already been filed.
+Before you create a new issue, please do a search in [open issues](https://github.com/swar/nba_api/issues) to see if the issue or feature request has already been filed.
 
 If you find your issue already exists, make relevant comments and add your [reaction](https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments). Use a reaction in place of a "+1" comment:
 
