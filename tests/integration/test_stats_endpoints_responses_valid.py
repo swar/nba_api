@@ -1,7 +1,6 @@
 import time
 import json
 import random
-
 import pytest
 
 from deferred_endpoints import deferred_endpoints
@@ -9,11 +8,12 @@ from deferred_endpoints import deferred_endpoints
 # Once we run the test to call the endpoints, we'll cache the responses here.
 cached_eps = []
 
+
 # Run this test on each endpoint in deferred_endpoints.
 @pytest.mark.parametrize('deferred_endpoint', deferred_endpoints)
 def test_endpoints_run(deferred_endpoint):
     '''Test that each endpoint is callable.
-    
+
     This takes a very, very long time in total (10-20 minutes) because we don't
     want to barrage the NBA site with requests.'''
     # Delay briefly

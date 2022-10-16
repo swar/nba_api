@@ -1,403 +1,417 @@
 import pytest
-import re
-from collections import defaultdict
-from nba_api.stats.library.eventmsgtype import EventMsgType
 from nba_api.stats.library.playbyplayregex import *
 from data_playbyplayregex import playbyplay
 
-#BLOCK
+
+# BLOCK
 @pytest.mark.parametrize('play', playbyplay['Block'])
 def test_block_player(play):
-    
-    #Validate Pattern
+
+    #  Validate Pattern
     assert re_block.match(play['description'])
 
-    #Get Capture Groups
+    #  Get Capture Groups
     search_result = re_block.search(play['description'])
-    
-    #Player Name
+
+    #  Player Name
     player = search_result.group('player')
     assert player == play['player']
 
-    #Player
+    #  Player
     block = search_result.group('blocks')
     assert block == play['blocks']
 
-#EJECTION
+
+# EJECTION
 @pytest.mark.parametrize('play', playbyplay['Ejection'])
 def test_ejection_player(play):
-    
-    #Validate Pattern
+
+    #  Validate Pattern
     assert re_ejection.match(play['description'])
 
-    #Get Capture Groups
+    #  Get Capture Groups
     search_result = re_ejection.search(play['description'])
-    
-    #Player Name
+
+    #  Player Name
     player = search_result.group('player')
     assert player == play['player']
 
-    #Ejection Type
+    # Ejection Type
     ejection_type = search_result.group('ejection_type')
     assert ejection_type == play['ejection_type']
 
-#FIELD GOAL MADE
+
+# FIELD GOAL MADE
 @pytest.mark.parametrize('play', playbyplay['FieldGoalMade'])
 def test_field_goal_made(play):
-    
-    #Validate Pattern
+
+    # Validate Pattern
     assert re_field_goal_made.match(play['description'])
 
-    #Get Capture Groups
+    # Get Capture Groups
     search_result = re_field_goal_made.search(play['description'])
-    
-    #Field Goal Type
+
+    # Field Goal Type
     field_goal_type = search_result.group('field_goal_type')
     assert field_goal_type == play['field_goal_type']
 
-    #Player Name
+    # Player Name
     player = search_result.group('player')
     assert player == play['player']
 
-    #Disatance
+    # Disatance
     distance = search_result.group('distance')
     assert distance == play['distance']
 
-    #Points
+    # Points
     points = search_result.group('points')
     assert points == play['points']
 
-    #Player Name Assist
+    # Player Name Assist
     player = search_result.group('player_ast')
     assert player == play['player_ast']
 
-    #Assists
+    # Assists
     points = search_result.group('assists')
     assert points == play['assists']
 
-#FIELD GOAL MISSED
+
+# FIELD GOAL MISSED
 @pytest.mark.parametrize('play', playbyplay['FieldGoalMissed'])
 def test_field_goal_missed(play):
 
-    #Validate Pattern
+    # Validate Pattern
     assert re_field_goal_missed.match(play['description'])
 
-    #Get Capture Groups
+    # Get Capture Groups
     search_result = re_field_goal_missed.search(play['description'])
-    
-    #Field Goal Type
+
+    # Field Goal Type
     field_goal_type = search_result.group('field_goal_type')
     assert field_goal_type == play['field_goal_type']
 
-    #Player Name
+    # Player Name
     player = search_result.group('player')
     assert player == play['player']
 
-    #Distance
+    # Distance
     distance = search_result.group('distance')
     assert distance == play['distance']
 
-#FOUL PLAYER
+
+# FOUL PLAYER
 @pytest.mark.parametrize('play', playbyplay['FoulPlayer'])
 def test_foul_player(play):
 
-    #Validate Pattern
+    # Validate Pattern
     assert re_foul_player.match(play['description'])
 
-    #Get Capture Groups
+    # Get Capture Groups
     search_result = re_foul_player.search(play['description'])
-    
-    #Player Name
+
+    # Player Name
     player = search_result.group('player')
     assert player == play['player']
 
-    #Foul Type
+    # Foul Type
     foul_type = search_result.group('foul_type')
     assert foul_type == play['foul_type']
 
-    #Player
+    # Player
     player = search_result.group('personal')
     assert player == play['personal']
-    
-    #Team Count
+
+    # Team Count
     team = search_result.group('team')
     assert team == play['team']
 
-    #Referee
+    # Referee
     referee = search_result.group('referee')
     assert referee == play['referee']
 
-#FOUL TEAM
+
+# FOUL TEAM
 @pytest.mark.parametrize('play', playbyplay['FoulTeam'])
 def test_foul_team(play):
 
-    #Validate Pattern
+    # Validate Pattern
     assert re_foul_team.match(play['description'])
 
-    #Get Capture Groups
+    # Get Capture Groups
     search_result = re_foul_team.search(play['description'])
-    
-    #Player Name
+
+    # Player Name
     player = search_result.group('player')
     assert player == play['player']
 
-    #Team Name
+    # Team Name
     player = search_result.group('team')
     assert player == play['team']
 
-    #Foul Type
+    # Foul Type
     foul_type = search_result.group('foul_type')
     assert foul_type == play['foul_type']
 
-    #Referee
+    # Referee
     referee = search_result.group('referee')
     assert referee == play['referee']
 
-#FREE THROW MADE
+
+# FREE THROW MADE
 @pytest.mark.parametrize('play', playbyplay['FreeThrowMade'])
 def test_free_throw_made(play):
 
-    #Validate Pattern
+    # Validate Pattern
     assert re_free_throw_made.match(play['description'])
 
-    #Get Capture Groups
+    # Get Capture Groups
     search_result = re_free_throw_made.search(play['description'])
 
-    #Player Name
+    # Player Name
     player = search_result.group('player')
     assert player == play['player']
 
-    #Free Throw Type
+    # Free Throw Type
     free_throw_type = search_result.group('free_throw_type')
     assert free_throw_type == play['free_throw_type']
 
-
-    #Points
+    # Points
     points = search_result.group('points')
     assert points == play['points']
 
-#FREE THROW MISSED
+
+# FREE THROW MISSED
 @pytest.mark.parametrize('play', playbyplay['FreeThrowMissed'])
 def test_free_throw_missed(play):
 
-    #Validate Pattern
+    # Validate Pattern
     assert re_free_throw_miss.match(play['description'])
 
-    #Get Capture Groups
+    # Get Capture Groups
     search_result = re_free_throw_miss.search(play['description'])
-    
-    #Player Name
+
+    # Player Name
     player = search_result.group('player')
     assert player == play['player']
 
-    #Free Throw Type
+    # Free Throw Type
     free_throw_type = search_result.group('free_throw_type')
     assert free_throw_type == play['free_throw_type']
 
-#JUMP BALL
+
+# JUMP BALL
 @pytest.mark.parametrize('play', playbyplay['JumpBall'])
 def test_jump_ball(play):
-    
-    #Validate Pattern
+
+    # Validate Pattern
     assert re_jump_ball.match(play['description'])
 
-    #Get Capture Groups   
+    # Get Capture Groups
     search_result = re_jump_ball.search(play['description'])
 
-    #Player Name
+    # Player Name
     player = search_result.group('player_home')
     assert player == play['player_home']
 
-    #Player Name
+    # Player Name
     player = search_result.group('player_away')
     assert player == play['player_away']
 
-    #Player Name
+    # Player Name
     player = search_result.group('player_tip')
     assert player == play['player_tip']
-    
-#REBOUND PLAYER
+
+
+# REBOUND PLAYER
 @pytest.mark.parametrize('play', playbyplay['ReboundPlayer'])
 def test_rebound_player(play):
-    
-    #Validate Pattern
+
+    # Validate Pattern
     assert re_rebound_player.match(play['description'])
 
-    #Get Capture Groups   
+    # Get Capture Groups
     search_result = re_rebound_player.search(play['description'])
-    
-    #Player Name
+
+    # Player Name
     player = search_result.group('player')
     assert player == play['player']
 
-    #Offensive
+    # Offensive
     offensive = search_result.group('offensive')
     assert offensive == play['offensive']
 
-    #Defensive
+    # Defensive
     defensive = search_result.group('defensive')
     assert defensive == play['defensive']
 
-#REBOUND TEAM
+
+# REBOUND TEAM
 @pytest.mark.parametrize('play', playbyplay['ReboundTeam'])
 def test_rebound_team(play):
 
-    #Validate Pattern
+    # Validate Pattern
     assert re_rebound_team.match(play['description'])
 
-    #Get Capture Groups   
+    # Get Capture Groups
     search_result = re_rebound_team.search(play['description'])
-    
-    #Team Name
+
+    # Team Name
     team = search_result.group('team')
     assert team == play['team']
-    
-#STEAL
+
+
+# STEAL
 @pytest.mark.parametrize('play', playbyplay['Steal'])
 def test_steal_player(play):
- 
-    #Validate Pattern
+
+    # Validate Pattern
     assert re_steal.match(play['description'])
 
-    #Get Capture Groups   
+    # Get Capture Groups
     search_result = re_steal.search(play['description'])
-    
-    #Player Name
+
+    # Player Name
     player = search_result.group('player')
     assert player == play['player']
 
-    #Steals
+    # Steals
     offensive = search_result.group('steals')
     assert offensive == play['steals']
 
-#SUBSTITUTION
+
+# SUBSTITUTION
 @pytest.mark.parametrize('play', playbyplay['Substitution'])
 def test_substitution(play):
 
-    #Validate Pattern
+    # Validate Pattern
     assert re_substitution.match(play['description'])
 
-    #Get Capture Groups   
+    # Get Capture Groups
     search_result = re_substitution.search(play['description'])
-    
-    #Player In Name
+
+    # Player In Name
     player_in = search_result.group('player_in')
     assert player_in == play['player_in']
 
-    #Player Out Name
+    # Player Out Name
     player_out = search_result.group('player_out')
     assert player_out == play['player_out']
 
-#TIMEOUT
+
+# TIMEOUT
 @pytest.mark.parametrize('play', playbyplay['Timeout'])
 def test_timeout(play):
 
-    #Validate Pattern
+    # Validate Pattern
     assert re_timeout.match(play['description'])
 
-    #Get Capture Groups   
+    # Get Capture Groups
     search_result = re_timeout.search(play['description'])
-    
-    #Team Name
+
+    # Team Name
     team = search_result.group('team')
     assert team == play['team']
 
-    #Timeout type
+    # Timeout type
     timeout_type = search_result.group('timeout_type')
     assert timeout_type == play['timeout_type']
 
-    #Full
+    # Full
     full = search_result.group('full')
     assert full == play['full']
 
-    #Short
+    # Short
     short = search_result.group('short')
     assert short == play['short']
 
-#TURNOVER PLAYER
+
+# TURNOVER PLAYER
 @pytest.mark.parametrize('play', playbyplay['TurnoverPlayer'])
 def test_turnover_player(play):
 
-    #Validate Pattern
+    # Validate Pattern
     assert re_turnover_player.match(play['description'])
 
-    #Get Capture Groups   
+    # Get Capture Groups
     search_result = re_turnover_player.search(play['description'])
-    
-    #Player Name
+
+    # Player Name
     player = search_result.group('player')
     assert player == play['player']
 
-    #Turnover Type
+    # Turnover Type
     turnover_type = search_result.group('turnover_type')
     assert turnover_type == play['turnover_type']
 
-    #Personal
+    # Personal
     personal = search_result.group('personal')
     assert personal == play['personal']
 
-    #Team
+    # Team
     team = search_result.group('team')
     assert team == play['team']
 
-#TURNOVER TEAM
+
+# TURNOVER TEAM
 @pytest.mark.parametrize('play', playbyplay['TurnoverTeam'])
 def test_turnover_team(play):
 
-    #Validate Pattern
+    # Validate Pattern
     assert re_turnover_team.match(play['description'])
 
-    #Get Capture Groups   
+    # Get Capture Groups
     search_result = re_turnover_team.search(play['description'])
-    
-    #Team Name
+
+    # Team Name
     team = search_result.group('team')
     assert team == play['team']
 
-    #Turnover Type
+    # Turnover Type
     team = search_result.group('turnover_type')
     assert team == play['turnover_type']
 
-    #Turnovers
+    # Turnovers
     team = search_result.group('turnovers')
     assert team == play['turnovers']
 
-#VIOLATION
+
+# VIOLATION
 @pytest.mark.parametrize('play', playbyplay['Violation'])
 def test_violation(play):
 
-    #Validate Pattern
+    #  Validate Pattern
     assert re_violation.match(play['description'])
 
-    #Get Capture Groups   
+    #  Get Capture Groups
     search_result = re_violation.search(play['description'])
-    
-    #Violation
+
+    #  Violation
     violation_type = search_result.group('violation_type')
     assert violation_type == play['violation_type']
 
-    #Player Name
+    # Player Name
     player = search_result.group('player')
     assert player == play['player']
 
-    #Referee
+    # Referee
     referee = search_result.group('referee')
     assert referee == play['referee']
 
-#VIOLATION TEAM
-@pytest.mark.parametrize('play', playbyplay['ViolationTeam'])
-def test_violation(play):
 
-    #Validate Pattern
+# VIOLATION TEAM
+@pytest.mark.parametrize('play', playbyplay['ViolationTeam'])
+def test_violation_team(play):
+
+    # Validate Pattern
     assert re_violation_team.match(play['description'])
 
-    #Get Capture Groups   
+    # Get Capture Groups
     search_result = re_violation_team.search(play['description'])
-    
-    #Violation
+
+    # Violation
     violation_type = search_result.group('violation_type')
     assert violation_type == play['violation_type']
 
-    #Team Name
+    # Team Name
     team = search_result.group('team')
     assert team == play['team']

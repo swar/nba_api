@@ -2,21 +2,20 @@ import re
 from collections import defaultdict
 from nba_api.stats.library.eventmsgtype import EventMsgType
 
-# regex patterns for all playbyplay and playbyplayv2 HOMEDESCRIPTION & VISITORDESCRIPTION fields 
+# regex patterns for all playbyplay and playbyplayv2 HOMEDESCRIPTION & VISITORDESCRIPTION fields
 # note: regarding pattern_player_name_anomaly & "Mark Morris"
-#   The majority of player names in the NBA traditionally follow patterns involving last name only with some prefix or suffix. 
-#   In the context of a turnover, there is no solution for dealing with multiple names in conjunction with the turnover type
+#   The majority of player names in the NBA traditionally follow patterns involving last name only with some prefix or suffix.
+#   In the context of a turnover, there is no solution for dealing with multiple names in conjunction with the turnover type.
 #   Example: "Mark Morris Lane Violation Turnover (P1.T6)" could be parsed many ways. While human readable, it's not regex friendly.
 #   There are likely to be others. If you find one, please open an Issue or create a PR. The regex allows for multiple using the `(name name)|` format.
 pattern_player_name_anomaly = r'(Mark Morris)|'
 pattern_player_char = r'((?#char)(\. \w+)|(\-?\'?\w+))?'
 pattern_player_suffix = r'((?#suffix)([\s](Jr\.|Sr\.|III|II|IV)))?'
-pattern_player = r"(?P<player>{player_name_anomaly}(\w+{player_char}{player_suffix}))".format(player_name_anomaly=pattern_player_name_anomaly,
-    player_char=pattern_player_char,player_suffix=pattern_player_suffix)
+pattern_player = r"(?P<player>{player_name_anomaly}(\w+{player_char}{player_suffix}))".format(player_name_anomaly=pattern_player_name_anomaly, player_char=pattern_player_char, player_suffix=pattern_player_suffix)
 pattern_rebound_team = r'^(?P<team>\w+( \w+)?) Rebound$'
 pattern_turnover_team = r'^(?P<team>\w+( \w+)?) Turnover: (?P<turnover_type>.*) \(T#(?P<turnovers>\d+)\)$'
 pattern_timeout = r'^(?P<team>\w+( \w+)?) Timeout: ((?P<timeout_type>.*)) \(\w+( |\.)(?P<full>\d+) \w+ (?P<short>\d+)\)$'
-pattern_block = r"^(?P<player>.+) BLOCK \((?P<blocks>\d+) BLK\)$"                    
+pattern_block = r"^(?P<player>.+) BLOCK \((?P<blocks>\d+) BLK\)$"
 pattern_ejection = r'^(?P<player>.+) Ejection:(?P<ejection_type>.*)$'
 pattern_field_goal_made = r"^{player} (((?P<distance>\d+)\' )| )?[ ]*(?P<field_goal_type>[\w+( |\-)]*) \((?P<points>\d+) PTS\)( \((?P<player_ast>\D+) (?P<assists>\d+) AST\))?$".format(player=pattern_player)
 pattern_field_goal_missed = r"^MISS {player} ((?P<distance>\d+)\' )?[ ]*(?P<field_goal_type>[\w+( |\-)]*)$".format(player=pattern_player)
@@ -33,7 +32,7 @@ pattern_violation = r"^(?P<player>.+) Violation:(?P<violation_type>\w+\s?\w+)(\s
 pattern_violation_team = r'^(?P<team>\w+( \w+)?) Violation: (?P<violation_type>.*) Violation$'
 
 
-# compiled regex for all playbyplay and playbyplayv2 HOMEDESCRIPTION & VISITORDESCRIPTION fields 
+# compiled regex for all playbyplay and playbyplayv2 HOMEDESCRIPTION & VISITORDESCRIPTION fields
 re_block = re.compile(pattern_block)
 re_ejection = re.compile(pattern_ejection)
 re_field_goal_made = re.compile(pattern_field_goal_made)
@@ -55,14 +54,14 @@ re_violation_team = re.compile(pattern_violation_team)
 
 
 eventmsgtype_to_re = defaultdict(list, {
-    EventMsgType.EJECTION : [re_ejection],
-    EventMsgType.FIELD_GOAL_MADE : [re_field_goal_made],
-    EventMsgType.FIELD_GOAL_MISSED : [re_field_goal_missed, re_block],
-    EventMsgType.FREE_THROW : [re_free_throw_made, re_free_throw_miss],
-    EventMsgType.REBOUND : [re_rebound_player, re_rebound_team],
-    EventMsgType.TURNOVER : [re_turnover_player, re_steal, re_turnover_team],
-    EventMsgType.FOUL : [re_foul_player, re_foul_team],
-    EventMsgType.VIOLATION : [re_violation, re_violation_team],
-    EventMsgType.SUBSTITUTION : [re_substitution],
-    EventMsgType.TIMEOUT : [re_timeout],
-    EventMsgType.JUMP_BALL : [re_jump_ball]})
+    EventMsgType.EJECTION: [re_ejection],
+    EventMsgType.FIELD_GOAL_MADE: [re_field_goal_made],
+    EventMsgType.FIELD_GOAL_MISSED: [re_field_goal_missed, re_block],
+    EventMsgType.FREE_THROW: [re_free_throw_made, re_free_throw_miss],
+    EventMsgType.REBOUND: [re_rebound_player, re_rebound_team],
+    EventMsgType.TURNOVER: [re_turnover_player, re_steal, re_turnover_team],
+    EventMsgType.FOUL: [re_foul_player, re_foul_team],
+    EventMsgType.VIOLATION: [re_violation, re_violation_team],
+    EventMsgType.SUBSTITUTION: [re_substitution],
+    EventMsgType.TIMEOUT: [re_timeout],
+    EventMsgType.JUMP_BALL: [re_jump_ball]})

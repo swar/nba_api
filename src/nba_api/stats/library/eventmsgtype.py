@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class EventMsgType(Enum):
     FIELD_GOAL_MADE = 1
     FIELD_GOAL_MISSED = 2
