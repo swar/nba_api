@@ -122,10 +122,10 @@ playbyplay["TurnoverPlayer"].append({"description": "Robinson III Kicked Ball Vi
 # Turnover Player (Fourth)
 playbyplay["TurnoverPlayer"].append({"description": "Walker IV Out of Bounds - Bad Pass Turnover Turnover (P2.T5)", "player": "Walker IV", "turnover_type": "Out of Bounds - Bad Pass Turnover", "personal": "2", "team": "5"})
 
-# Turnover Team (less than 10)
+# Turnover Team (greater than 10)
 playbyplay["TurnoverTeam"].append({"description": "NUGGETS Turnover: Shot Clock (T# 12)", "team": "NUGGETS", "turnover_type": "Shot Clock", "turnovers": "12"})
 
-# Turnover Team (greater than 9)
+# Turnover Team (less than 9)
 playbyplay["TurnoverTeam"].append({"description": "NETS Turnover: Shot Clock (T# 6)", "team": "NETS", "turnover_type": "Shot Clock", "turnovers": "6"})
 
 # Turnover Team (turnover_type starts with digit)

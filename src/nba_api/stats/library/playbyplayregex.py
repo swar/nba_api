@@ -13,7 +13,7 @@ pattern_player_char = r'((?#char)(\. \w+)|(\-?\'?\w+))?'
 pattern_player_suffix = r'((?#suffix)([\s](Jr\.|Sr\.|III|II|IV)))?'
 pattern_player = r"(?P<player>{player_name_anomaly}(\w+{player_char}{player_suffix}))".format(player_name_anomaly=pattern_player_name_anomaly, player_char=pattern_player_char, player_suffix=pattern_player_suffix)
 pattern_rebound_team = r'^(?P<team>\w+( \w+)?) Rebound$'
-pattern_turnover_team = r'^(?P<team>\w+( \w+)?) Turnover: (?P<turnover_type>.*) \(T#(?P<turnovers>\d+)\)$'
+pattern_turnover_team = r'^(?P<team>\w+( \w+)?) Turnover: (?P<turnover_type>.*) \(T# (?P<turnovers>\d+)\)$'
 pattern_timeout = r'^(?P<team>\w+( \w+)?) Timeout: ((?P<timeout_type>.*)) \(\w+( |\.)(?P<full>\d+) \w+ (?P<short>\d+)\)$'
 pattern_block = r"^(?P<player>.+) BLOCK \((?P<blocks>\d+) BLK\)$"
 pattern_ejection = r'^(?P<player>.+) Ejection:(?P<ejection_type>.*)$'
