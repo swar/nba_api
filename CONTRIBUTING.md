@@ -14,7 +14,7 @@ Have you identified a reproducible problem? Have a feature request? Identified a
 
 ## Look For an Existing Issue
 
-Before you create a new issue, please do a search in [open issues](https://github.com/microsoft/nba_api/issues) to see if the issue or feature request has already been filed.
+Before you create a new issue, please do a search in [open issues](https://github.com/swar/nba_api/issues) to see if the issue or feature request has already been filed.
 
 If you find your issue already exists, make relevant comments and add your [reaction](https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments). Use a reaction in place of a "+1" comment:
 
@@ -52,6 +52,7 @@ Please remember to do the following:
 * [ ] Recreate the issue
 
 * [ ] Simplify your code around the issue to better isolate the problem
+<<<<<<< HEAD
 
 # Contributing Code
 
@@ -136,3 +137,5 @@ flake8
 ### 6. When Complete, Open a PR
 
 When you have completed your development and uploaded your changes to GitHub, [create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to have your changes reviewed.
+=======
+>>>>>>> master
