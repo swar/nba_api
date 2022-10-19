@@ -16,6 +16,11 @@
 
 # Version History
 
+## v1.2.0.dev (unreleased)
+
+### Added
+
+- [Poetry](https://python-poetry.org/): Python dependency management and packaging made easy
 ## v1.1.13
 
 Date: 2022-10-16

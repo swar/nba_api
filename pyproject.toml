@@ -1,56 +1,43 @@
 [build-system]
-requires = ["setuptools", "setuptools-scm"]
-build-backend = "setuptools.build_meta"
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
 
-
-[project]
+[tool.poetry]
 name = "nba_api"
-version = "1.1.13"
+version = "1.2.0.dev"
 description = "An API Client package to access the APIs for NBA.com"
-readme = "README.md"
-requires-python = ">=3.7"
+license = "MIT"
 authors = [ 
-    {name = "Swar Patel", email = "swar.m.patel@gmail.com"}
+     "Swar Patel <swar.m.patel@gmail.com>",
 ]
 maintainers = [
-    {name = "Swar Patel", email = "swar.m.patel@gmail.com"},
-    {name = "Randy Forbes", email = "randy.forbes@gmail.com"}
+    "Swar Patel <swar.m.patel@gmail.com>",
+    "Randy Forbes <randy.forbes@gmail.com>",
 ]
+readme = "README.md"
+repository = "https://github.com/swar/nba_api"
+documentation = "https://github.com/swar/nba_api/blob/master/README.md"
 keywords = ["api", "basketball", "data", "nba", "sports", "stats"]
-license = { text = "MIT License" }
 classifiers = [
     "Intended Audience :: Developers",
     "Intended Audience :: Science/Research",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
     "Topic :: Software Development"
 ]
-dependencies=[
-    "numpy",
-    "requests"
-]
 
-[project.optional-dependencies]
-test = [
-  "pytest"
-]
+[tool.poetry.dependencies]
+python = "^3.7,<3.11"
+requests = "*"
+numpy = "*"
 
-[project.urls]
-documentation = "https://github.com/swar/nba_api/blob/master/README.md"
-repository = "https://github.com/swar/nba_api"
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/swar/nba_api/issues"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.1.3"
+pytest-cov = "^4.0"
+flake8 = "^5.0.4"
 
 [tool.pytest.ini_options]
-pythonpath = [
-  "src","tests//unit"
-]
-minversion = "7.1"
-addopts = "-ra -q --import-mode=importlib"
-testpaths = [
-    "tests//unit"
-]
+testpaths = "./tests/unit/"

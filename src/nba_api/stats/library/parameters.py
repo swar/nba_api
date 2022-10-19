@@ -612,10 +612,10 @@ class SeasonYearNullable(_NotRequired, SeasonYear):
 class Season(SeasonYear):
     current_season_year = SeasonYear.current_season_year
     current_season = '{}-{}'.format(current_season_year, str(current_season_year + 1)[2:])
-    
-    #get last Season
+
+    # Get last Season
     previous_season = '{}-{}'.format(current_season_year-1, str(current_season_year)[2:])
-    
+
     default = current_season
 
 
