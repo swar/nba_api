@@ -137,5 +137,3 @@ flake8
 ### 6. When Complete, Open a PR
 
 When you have completed your development and uploaded your changes to GitHub, [create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to have your changes reviewed.
-=======
->>>>>>> master
