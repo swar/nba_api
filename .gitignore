@@ -47,6 +47,9 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 
+# Snyk
+.dccache
+
 # Translations
 *.mo
 *.pot

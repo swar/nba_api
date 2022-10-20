@@ -21,6 +21,24 @@
 ### Added
 
 - [Poetry](https://python-poetry.org/): Python dependency management and packaging made easy
+- [Snyk](https://snyk.io/) for Security Scanning
+- Exclusion to `.gitignore` for `.dccache` files created by Snyk CLI
+
+### Changed
+
+- Minimum Version for NumPy has been set to v1.22.22 due to a security vulnerability in [NumPy v1.21.6](https://security.snyk.io/package/pip/numpy/1.21.6)
+
+### Removed
+
+- Support for Python 3.7 due to a security vulnerability in [NumPy v1.21.6](https://security.snyk.io/package/pip/numpy/1.21.6)
+
+### Security
+
+- Upgraded NumPy from v1.21.6 to v1.22.2 due to three vulnerabilies:
+  - [NULL Pointer Dereference](https://security.snyk.io/vuln/SNYK-PYTHON-NUMPY-2321964)
+  - [Buffer Overflow](https://security.snyk.io/vuln/SNYK-PYTHON-NUMPY-2321966)
+  - [Denial of Service (DOS)](https://security.snyk.io/vuln/SNYK-PYTHON-NUMPY-2321970)
+
 ## v1.1.13
 
 Date: 2022-10-16

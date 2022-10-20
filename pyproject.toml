@@ -27,9 +27,9 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.7,<3.11"
+python = "^3.8,<3.11"
 requests = "*"
-numpy = "*"
+numpy = "^1.22.2"
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/swar/nba_api/issues"
