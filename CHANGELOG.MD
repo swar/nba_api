@@ -27,7 +27,7 @@
 ### Changed
 
 - Minimum Version for NumPy has been set to v1.22.22 due to a security vulnerability in [NumPy v1.21.6](https://security.snyk.io/package/pip/numpy/1.21.6)
-
+ 
 ### Removed
 
 - Support for Python 3.7 due to a security vulnerability in [NumPy v1.21.6](https://security.snyk.io/package/pip/numpy/1.21.6)
