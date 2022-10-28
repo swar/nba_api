@@ -8,6 +8,9 @@ jobs:
     parameters:
       image: 
         type: string
+      circle_pr_number:
+        type: string
+        default: $CIRCLE_PR_NUMBER
     
     docker: 
       - image: <<parameters.image>>
@@ -15,9 +18,8 @@ jobs:
     steps: 
       - checkout
       - run: poetry install
-      - run: echo $CIRCLE_PR_NUMBER
       - unless:
-          condition: $CIRCLE_PR_NUMBER
+          condition: << parameters.circle_pr_number >>
           steps:
             - snyk/scan
       - run: poetry run pytest
