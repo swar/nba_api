@@ -1,7 +1,7 @@
 version: 2.1
       
 orbs:
-  snyk: snyk/snyk@1.2.3
+  snyk: snyk/snyk@1.4.0
   
 jobs:
   main:
@@ -15,7 +15,10 @@ jobs:
     steps: 
       - checkout
       - run: poetry install
-      - snyk/scan
+      - unless:
+          condition: $CIRCLE_PR_NUMBER
+          steps:
+            - snyk/scan
       - run: poetry run pytest
       - run: poetry run flake8
 

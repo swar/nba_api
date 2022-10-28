@@ -16,18 +16,26 @@
 
 # Version History
 
-## v1.2.0.dev (unreleased)
+## v1.1.14
+
+Date: 2022-10-16
+
+### Fixed
+
+- Fixed a team turnover regular expression when working with PlayByPlay data.
 
 ### Added
 
 - [Poetry](https://python-poetry.org/): Python dependency management and packaging made easy
+- Updated CONTRIBUTING.md on how to Contribute Code Using Poetry
 - [Snyk](https://snyk.io/) for Security Scanning
 - Exclusion to `.gitignore` for `.dccache` files created by Snyk CLI
+- Introduced .flake8, resolve a number of style guide issues, added exclusions with future TODOs
 
 ### Changed
 
 - Minimum Version for NumPy has been set to v1.22.22 due to a security vulnerability in [NumPy v1.21.6](https://security.snyk.io/package/pip/numpy/1.21.6)
- 
+
 ### Removed
 
 - Support for Python 3.7 due to a security vulnerability in [NumPy v1.21.6](https://security.snyk.io/package/pip/numpy/1.21.6)
