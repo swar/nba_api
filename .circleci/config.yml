@@ -1,5 +1,8 @@
 version: 2.1
       
+orbs:
+  snyk: snyk/snyk@1.2.3
+  
 jobs:
   main:
     parameters:
@@ -12,6 +15,7 @@ jobs:
     steps: 
       - checkout
       - run: poetry install
+      - snyk/scan
       - run: poetry run pytest
       - run: poetry run flake8
 
@@ -22,7 +26,6 @@ workflows:
           matrix:
             parameters:
               image: [
-                "cimg/python:3.7",
                 "cimg/python:3.8",
                 "cimg/python:3.9",
                 "cimg/python:3.10"
