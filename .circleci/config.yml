@@ -15,6 +15,7 @@ jobs:
     steps: 
       - checkout
       - run: poetry install
+      - run: echo $CIRCLE_PR_NUMBER
       - unless:
           condition: $CIRCLE_PR_NUMBER
           steps:
