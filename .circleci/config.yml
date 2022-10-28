@@ -16,7 +16,7 @@ jobs:
       - checkout
       - run: poetry install
       - run: echo $CIRCLE_PR_NUMBER
-      - when:
+      - unless:
           condition: $CIRCLE_PR_NUMBER
           steps:
             - snyk/scan
