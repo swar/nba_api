@@ -15,10 +15,11 @@ jobs:
     steps: 
       - checkout
       - run: poetry install
+      - run: echo $CIRCLE_PR_NUMBER
       - when:
-          condition: $CIRCLE_PR_NUMBER
-            steps:
-              - snyk/scan
+        condition: $CIRCLE_PR_NUMBER
+          steps:
+            - snyk/scan
       - run: poetry run pytest
       - run: poetry run flake8
 
