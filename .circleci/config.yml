@@ -17,13 +17,15 @@ jobs:
     
     steps: 
       - checkout
-      - run: poetry install
+      # - run: poetry install
+      - run: echo << parameters.circle_pr_number >>
       - unless:
           condition: << parameters.circle_pr_number >>
           steps:
+            - run: echo "snyk"
             - snyk/scan
-      - run: poetry run pytest
-      - run: poetry run flake8
+      # - run: poetry run pytest
+      # - run: poetry run flake8
 
 workflows:
   build:
