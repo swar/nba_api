@@ -20,7 +20,10 @@ jobs:
       # - run: poetry install
       - run: echo <<parameters.circle_pr_number>>
       - when:
-          condition: <<parameters.circle_pr_number>>
+          condition:
+            matches:
+              pattern: \d$
+              value: <<parameters.circle_pr_number>>
           steps:
             - run: echo "snyk"
             # - snyk/scan
