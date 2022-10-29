@@ -22,7 +22,7 @@ jobs:
       - when:
           condition:
             matches:
-              pattern: \d$
+              pattern: \d
               value: <<parameters.circle_pr_number>>
           steps:
             - run: echo "snyk"
