@@ -18,12 +18,12 @@ jobs:
     steps: 
       - checkout
       # - run: poetry install
-      - run: echo << parameters.circle_pr_number >>
-      - unless:
-          condition: << parameters.circle_pr_number >>
+      - run: echo <<parameters.circle_pr_number>>
+      - when:
+          condition: <<parameters.circle_pr_number>>
           steps:
             - run: echo "snyk"
-            - snyk/scan
+            # - snyk/scan
       # - run: poetry run pytest
       # - run: poetry run flake8
 
