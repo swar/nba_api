@@ -2,7 +2,7 @@
 [![Downloads per Month: PyPY](https://img.shields.io/pypi/dm/nba_api.svg?style=for-the-badge)](https://pepy.tech/project/nba-api)
 [![Build: CircleCI](https://img.shields.io/circleci/project/github/swar/nba_api.svg?style=for-the-badge&logo=circleci)](https://circleci.com/gh/swar/nba_api)
 [![License: MIT](https://img.shields.io/github/license/swar/nba_api.svg?style=for-the-badge)](https://github.com/swar/nba_api/blob/master/LICENSE)
-[![Slack](https://img.shields.io/badge/Slack-NBA_API-4A154B?style=for-the-badge&logo=slack)](https://join.slack.com/t/nbaapi/shared_invite/zt-1gwn1du6v-b1oHTZIXcfEp9E06KdBQNw)
+[![Slack](https://img.shields.io/badge/Slack-NBA_API-4A154B?style=for-the-badge&logo=slack)](https://join.slack.com/t/nbaapi/shared_invite/zt-1ipsuai9j-GjZjuP9S2~Uczuny1t74zA)
 
 # nba_api
 
@@ -71,10 +71,9 @@ games.get_dict()
   - [teams.py](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/static/teams.md)
 
 # Join the Community
-
 ## Slack
 
-Join [Slack](https://join.slack.com/t/nbaapi/shared_invite/zt-1gwn1du6v-b1oHTZIXcfEp9E06KdBQNw) to get help, help others, provide feedback, see amazing projects, participates in discussions, and collaborate with others from around the world.
+Join [Slack](https://join.slack.com/t/nbaapi/shared_invite/zt-1ipsuai9j-GjZjuP9S2~Uczuny1t74zA) to get help, help others, provide feedback, see amazing projects, participates in discussions, and collaborate with others from around the world.
 
 ## Stack Overflow
 
