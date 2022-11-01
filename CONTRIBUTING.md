@@ -6,7 +6,7 @@ There are many ways in which you can contribute, beyond writing code. The goal o
 
 # Asking Questions
 
-Have a question? Rather than opening an issue, head over to the [Slack](https://join.slack.com/t/nbaapi/shared_invite/zt-1gwn1du6v-b1oHTZIXcfEp9E06KdBQNw) to connect with others, chat, and receive help.
+Have a question? Rather than opening an issue, head over to the [Slack](https://join.slack.com/t/nbaapi/shared_invite/zt-1ipsuai9j-GjZjuP9S2~Uczuny1t74zA) to connect with others, chat, and receive help.
 
 # Reporting Issues
 
