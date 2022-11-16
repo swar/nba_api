@@ -52,7 +52,7 @@ class PlayerGameLogs(Endpoint):
                 'Location': location_nullable,
                 'MeasureType': measure_type_player_game_logs_nullable,
                 'Month': month_nullable,
-                'OppTeamID': opp_team_id_nullable,
+                'OpponentTeamID': opp_team_id_nullable,
                 'Outcome': outcome_nullable,
                 'PORound': po_round_nullable,
                 'PerMode': per_mode_simple_nullable,
@@ -68,7 +68,7 @@ class PlayerGameLogs(Endpoint):
         }
         if get_request:
             self.get_request()
-    
+
     def get_request(self):
         self.nba_response = NBAStatsHTTP().send_api_request(
             endpoint=self.endpoint,
@@ -78,7 +78,7 @@ class PlayerGameLogs(Endpoint):
             timeout=self.timeout,
         )
         self.load_response()
-        
+
     def load_response(self):
         data_sets = self.nba_response.get_data_sets()
         self.data_sets = [Endpoint.DataSet(data=data_set) for data_set_name, data_set in data_sets.items()]
