@@ -18,11 +18,13 @@
 
 ## v1.1.14
 
-Date: 2022-10-16
+Date: 2022-11-16
 
 ### Fixed
 
 - Fixed a team turnover regular expression when working with PlayByPlay data.
+- Endpoints
+  - Fixed [PlayerGameLogs](https://github.com/FarhanSajid1/nba_api/blob/master/src/nba_api/stats/endpoints/playergamelogs.py) parameter OppTeamID --> OpponentTeamID ([#311](https://github.com/swar/nba_api/pull/311) - [FarhanSajid1](https://github.com/FarhanSajid1)
 
 ### Added
 
@@ -46,6 +48,7 @@ Date: 2022-10-16
   - [NULL Pointer Dereference](https://security.snyk.io/vuln/SNYK-PYTHON-NUMPY-2321964)
   - [Buffer Overflow](https://security.snyk.io/vuln/SNYK-PYTHON-NUMPY-2321966)
   - [Denial of Service (DOS)](https://security.snyk.io/vuln/SNYK-PYTHON-NUMPY-2321970)
+- Integrated [DeepSource](https://deepsource.io/) for code security scanning
 
 ## v1.1.13
 
@@ -67,7 +70,7 @@ Date: 2022-10-11
 
 - 2022-10-08 [Player Data]([https://github.com/swar/nba_api/blob/master/nba_api/stats/library/data.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/library/data.py))
 - Endpoints
-  - [VideoEventsAsset](https://github.com/prateekjaipuria/nba_api/blob/master/nba_api/stats/endpoints/videoeventsasset.py) ([#259](https://github.com/swar/nba_api/pull/259) - [prateekjaipuria](https://github.com/prateekjaipuria))
+  - [VideoEventsAsset](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/videoeventsasset.py) ([#259](https://github.com/swar/nba_api/pull/259) - [prateekjaipuria](https://github.com/prateekjaipuria))
 - [`CONTRIBUTING.MD`](https://github.com/swar/nba_api/blob/master/CONTRIBUTING.md)
 - [`CHANGELOG.MD`](https://github.com/swar/nba_api/blob/master/CHANGELOG.md)
 - GitHub issue template for bugs
