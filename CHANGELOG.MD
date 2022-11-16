@@ -48,6 +48,7 @@ Date: 2022-11-16
   - [NULL Pointer Dereference](https://security.snyk.io/vuln/SNYK-PYTHON-NUMPY-2321964)
   - [Buffer Overflow](https://security.snyk.io/vuln/SNYK-PYTHON-NUMPY-2321966)
   - [Denial of Service (DOS)](https://security.snyk.io/vuln/SNYK-PYTHON-NUMPY-2321970)
+- Integrated [DeepSource](https://deepsource.io/) for code security scanning
 
 ## v1.1.13
 
