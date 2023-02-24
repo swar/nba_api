@@ -129,6 +129,7 @@ __all__ = [
     'teamvsplayer',
     'teamyearbyyearstats',
     'videodetails',
+    'videodetailsasset',
     'videoevents',
     'videostatus',
     'winprobabilitypbp',
@@ -264,6 +265,7 @@ from .teamplayeronoffsummary import TeamPlayerOnOffSummary
 from .teamvsplayer import TeamVsPlayer
 from .teamyearbyyearstats import TeamYearByYearStats
 from .videodetails import VideoDetails
+from .videodetailsasset import VideoDetailsAsset
 from .videoevents import VideoEvents
 from .videostatus import VideoStatus
 from .winprobabilitypbp import WinProbabilityPBP
