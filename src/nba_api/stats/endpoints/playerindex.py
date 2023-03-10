@@ -1,6 +1,6 @@
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
-from nba_api.stats.library.parameters import Season, LeagueID, PlayerPositionAbbreviationNullable
+from nba_api.stats.library.parameters import Season, LeagueID, PlayerPositionAbbreviationNullable, ActiveNullable, AllStarNullable, HistoricalNullable
 
 
 class PlayerIndex(Endpoint):
@@ -14,15 +14,15 @@ class PlayerIndex(Endpoint):
     headers = None
 
     def __init__(self,
-                 active_nullable='',
-                 allstar_nullable='',
+                 active_nullable=ActiveNullable.default,
+                 allstar_nullable=AllStarNullable.default,
                  college_nullable='',
                  country_nullable='',
                  draft_pick_nullable='',
                  draft_year_nullable='',
                  height_nullable='',
                  player_position_abbreviation_nullable=PlayerPositionAbbreviationNullable.default,
-                 historical_nullable='',
+                 historical_nullable=HistoricalNullable.default,
                  league_id=LeagueID.default,
                  season=Season.default,
                  team_id_nullable='',

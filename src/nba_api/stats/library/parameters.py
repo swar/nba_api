@@ -32,6 +32,17 @@ class _YesNo(_No):
     yes = 'Y'
 
 
+class Active:
+    all_player = '0'
+    active_player = '1'
+
+    default = all_player
+
+
+class ActiveNullable(_NotRequired, Active):
+    pass
+
+
 class AheadBehind:
     ahead_or_behind = 'Ahead or Behind'
     behind_or_tied = 'Behind or Tied'
@@ -41,6 +52,17 @@ class AheadBehind:
 
 
 class AheadBehindNullable(_NotRequired, AheadBehind):
+    pass
+
+
+class AllStar:
+    all_player = '0'
+    all_star = '1'
+
+    default = all_player
+
+
+class AllStarNullable(_NotRequired, AllStar):
     pass
 
 
@@ -263,6 +285,17 @@ class GroupQuantity:
         return str(int(i))
 
     default = '5'
+
+
+class Historical:
+    season = '0'
+    all_time = '1'
+
+    default = season
+
+
+class HistoricalNullable(_NotRequired, Historical):
+    pass
 
 
 class LastNGames:
