@@ -1,6 +1,30 @@
 # Endpoint Parameters
 
 
+## _Active_
+
+#### Class `Active`
+##### Patterns
+ - `^(0)|(1)$`
+
+Variable Name | Value
+------------ | -------------
+_**all_player**_ `default` | `0`
+_**active_player**_ | `1`
+
+## _ActiveNullable_
+
+#### Class `ActiveNullable`
+##### Patterns
+ - `^(0)|(1)$`
+
+Variable Name | Value
+------------ | -------------
+_**none**_ `default` | 
+_**all_player**_ | `0`
+_**active_player**_ | `1`
+
+
 ## _ActiveFlag_
 No available information.
 
@@ -46,6 +70,31 @@ _**none**_ `default` |
 _**ahead_or_behind**_ | `Ahead or Behind`
 _**ahead_or_tied**_ | `Ahead or Tied`
 _**behind_or_tied**_ | `Behind or Tied`
+
+
+## _AllStar_
+
+#### class `AllStar`
+##### Patterns
+ -  `^(0)|(1)$`
+
+Variable Name | Value
+------------ | -------------
+_**all_player**_ `default` | `0`
+_**all_star**_ | `1`
+
+## _AllStarNullable_
+
+#### class `AllStarNullable`
+##### Patterns
+ -  `^(0)|(1)$`
+
+Variable Name | Value
+------------ | -------------
+_**none**_ `default` |
+_**all_player**_ | `0`
+_**all_star**_ | `1`
+
 
 ## _BtrOPPAST_
 No available information.
@@ -913,6 +962,29 @@ No available information.
 ## _Height_
 No available information.
 
+
+## _Historical_
+
+#### Class `Historical`
+##### Patterns
+ - `^(0)|(1)$`
+
+Variable Name | Value
+------------ | -------------
+_**season**_ `default` | `0`
+_**all_time**_ | `1`
+
+## _HistoricalNullable_
+
+#### class `HistoricalNullable`
+##### Patterns
+ -  `^(0)|(1)$`
+
+Variable Name | Value
+------------ | -------------
+_**none**_ `default` |
+_**season**_ | `0`
+_**all_time**_ | `1`
 
 ## _IsOnlyCurrentSeason_
 No available information.
