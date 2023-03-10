@@ -119,6 +119,7 @@ deferred_endpoints = [
     DeferredEndpoint(ep.PlayerGameLog, player_id='2544'),
     DeferredEndpoint(ep.PlayerGameLogs, player_id_nullable='2544'),
     DeferredEndpoint(ep.PlayerGameStreakFinder),
+    DeferredEndpoint(ep.PlayerIndex),
     DeferredEndpoint(ep.PlayerNextNGames, player_id='2544'),
     DeferredEndpoint(ep.PlayerProfileV2, player_id='2544'),
     DeferredEndpoint(ep.PlayerVsPlayer, player_id='2544', vs_player_id='202681'),
