@@ -12469,6 +12469,77 @@
         "last_validated_date": "2020-08-15",
         "status": "deprecated"
     },
+    "PlayerIndex": {
+        "data_sets": {
+            "PlayerIndex": [
+                "PERSON_ID",
+                "PLAYER_LAST_NAME",
+                "PLAYER_FIRST_NAME",
+                "PLAYER_SLUG",
+                "TEAM_ID",
+                "TEAM_SLUG",
+                "IS_DEFUNCT",
+                "TEAM_CITY",
+                "TEAM_NAME",
+                "TEAM_ABBREVIATION",
+                "JERSEY_NUMBER",
+                "POSITION",
+                "HEIGHT",
+                "WEIGHT",
+                "COLLEGE",
+                "COUNTRY",
+                "DRAFT_YEAR",
+                "DRAFT_ROUND",
+                "DRAFT_NUMBER",
+                "ROSTER_STATUS",
+                "PTS",
+                "REB",
+                "AST",
+                "STATS_TIMEFRAME",
+                "FROM_YEAR",
+                "TO_YEAR"
+            ]
+        },
+        "endpoint": "PlayerIndex",
+        "last_validated_date": "2023-03-10",
+        "nullable_parameters": [
+            "Active",
+            "AllStar",
+            "College",
+            "Country",
+            "DraftPick",
+            "DraftRound",
+            "DraftYear",
+            "Height",
+            "Historical",
+            "TeamID",
+            "Weight"
+        ],
+        "parameter_patterns": {
+            "LeagueID": "^\\d{2}$",
+            "Season": "^(\\d{4}-\\d{2})$"
+        },
+        "parameters": [
+            "Active",
+            "AllStar",
+            "College",
+            "Country",
+            "DraftPick",
+            "DraftRound",
+            "DraftYear",
+            "Height",
+            "Historical",
+            "LeagueID",
+            "Season",
+            "TeamID",
+            "Weight"
+        ],
+        "required_parameters": [
+            "LeagueID",
+            "Season"
+        ],
+        "status": "success"
+    },
     "PlayerInfo": {
         "endpoint": "PlayerInfo",
         "last_validated_date": "2020-08-15",

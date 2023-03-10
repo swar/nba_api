@@ -66,7 +66,7 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
     "nullable_parameters": [
         "Active",
         "AllStar",
-        "College"
+        "College",
         "Country",
         "DraftPick",
         "DraftRound",
@@ -78,12 +78,12 @@ API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
     ],
     "parameter_patterns": {
         "LeagueID": "^\\d{2}$",
-        "Season": "^(\d{4}-\d{2})$",
+        "Season": "^(\d{4}-\d{2})$"
     },
     "parameters": [
         "Active",
         "AllStar",
-        "College"
+        "College",
         "Country",
         "DraftPick",
         "DraftRound",
