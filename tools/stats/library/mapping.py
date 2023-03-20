@@ -123,6 +123,7 @@ endpoint_list = [
     'PlayerGameStreakFinder',
     'PlayerGeneralSplitsStats',
     'PlayerInfo',
+    'PlayerIndex',
     'PlayerLastNGamesStats',
     'PlayerNextNGames',
     'PlayerOnDetails',
@@ -262,6 +263,16 @@ parameter_variations = {
         'parameter_value': LeagueIDNullable.default,
         'parameter_error_value': 'a',
     },
+    'Active': {
+        'default_py_value': "Active.default",
+        'parameter_value': Active.default,
+        'parameter_error_value': 0,
+    },
+    'ActiveNullable': {
+        'default_py_value': "ActiveNullable.default",
+        'parameter_value': ActiveNullable.default,
+        'parameter_error_value': 0,
+    },
     'ActiveFlagNullable': {
         'default_py_value': "''",
         'parameter_value': '',
@@ -275,6 +286,16 @@ parameter_variations = {
     'AheadBehindNullable': {
         'default_py_value': 'AheadBehindNullable.default',
         'parameter_value': AheadBehindNullable.default,
+        'parameter_error_value': 0,
+    },
+    'AllStar': {
+        'default_py_value': 'AllStar.default',
+        'parameter_value': AllStar.default,
+        'parameter_error_value': 0,
+    },
+    'AllStarNullable': {
+        'default_py_value': 'AllStarNullable.default',
+        'parameter_value': AllStarNullable.default,
         'parameter_error_value': 0,
     },
     'CloseDefDistRangeNullable': {
@@ -491,6 +512,16 @@ parameter_variations = {
         'default_py_value': "''",
         'parameter_value': '',
         'parameter_error_value': 'a',
+    },
+    'Historical': {
+        'default_py_value': 'Historical.default',
+        'parameter_value': Historical.default,
+        'parameter_error_value': 0,
+    },
+    'HistoricalNullable': {
+        'default_py_value': 'HistoricalNullable.default',
+        'parameter_value': HistoricalNullable.default,
+        'parameter_error_value': 0,
     },
     'LastNGames': {
         'default_py_value': 'LastNGames.default',

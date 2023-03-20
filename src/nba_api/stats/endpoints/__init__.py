@@ -93,6 +93,7 @@ __all__ = [
     'playergamelog',
     'playergamelogs',
     'playergamestreakfinder',
+    'playerindex',
     'playernextngames',
     'playerprofilev2',
     'playervsplayer',
@@ -228,6 +229,7 @@ from .playerfantasyprofilebargraph import PlayerFantasyProfileBarGraph
 from .playergamelog import PlayerGameLog
 from .playergamelogs import PlayerGameLogs
 from .playergamestreakfinder import PlayerGameStreakFinder
+from .playerindex import PlayerIndex
 from .playernextngames import PlayerNextNGames
 from .playerprofilev2 import PlayerProfileV2
 from .playervsplayer import PlayerVsPlayer
