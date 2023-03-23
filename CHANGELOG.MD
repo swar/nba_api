@@ -25,8 +25,10 @@ Date: 2023-03-23
 - Python: Support for 3.11 #331
 
 - New Endpoint:
-  - [PlayerIndex](src/nba_api/stats/endpoints/playerindex.py) via #326 - @shufinskiy
-- Jupyter Notebooks (Binary Classification - Home Team Win-Loss Modeling #329  - @TheResearchLab
+  - [PlayerIndex](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/playerindex.py) via #326 - @shufinskiy
+  - [VideoDetailsAsset](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/videodetailsasset.py) via #325 - @OnerInce 
+
+- Jupyter Notebooks (Binary Classification - Home Team Win-Loss Modeling) #329  - @TheResearchLab
   - [Home Team Win-Loss: Data Prep](https://github.com/swar/nba_api/blob/master/docs/examples/Home%20Team%20Win-Loss%20Modeling/Home%20Team%20Win-Loss%20Data%20Prep.ipynb)
   - [Home Team Win-Loss: Modeling](https://github.com/swar/nba_api/blob/master/docs/examples/Home%20Team%20Win-Loss%20Modeling/Home%20Team%20Win-Loss%20Modeling.ipynb)
   - Player Static Data: Updated as of 2023.03.23 #322
