@@ -16,6 +16,35 @@
 
 # Version History
 
+## v1.2.0
+
+Date: 2023-03-23
+
+### Added
+
+- Python: Support for 3.11 #331
+
+- New Endpoint:
+  - [PlayerIndex](src/nba_api/stats/endpoints/playerindex.py) via #326 - @shufinskiy
+- Jupyter Notebooks (Binary Classification - Home Team Win-Loss Modeling #329  - @TheResearchLab
+  - [Home Team Win-Loss: Data Prep](https://github.com/swar/nba_api/blob/master/docs/examples/Home%20Team%20Win-Loss%20Modeling/Home%20Team%20Win-Loss%20Data%20Prep.ipynb)
+  - [Home Team Win-Loss: Modeling](https://github.com/swar/nba_api/blob/master/docs/examples/Home%20Team%20Win-Loss%20Modeling/Home%20Team%20Win-Loss%20Modeling.ipynb)
+  - Player Static Data: Updated as of 2023.03.23 #322
+
+### Changed
+
+- Removed Python max version release dependency to allow for all go-forward versions. Bugs with later Python versions can be addressed as needed. #331 
+
+### Fixed
+
+- Documentation: corrected parameter order on commonteamroster.md [PR#317](https://github.com/swar/nba_api/pull/317) - @JohannPally
+- Corrected Hawks home state from Atlanta to Georgia #332
+- Bug #327: Corrected a missing comma in `src/nba_api/stats/endpoints/__init__.py` #333
+
+### Developer Tools
+
+- Resolved CircleCI build where Poetry and CircleCI Docker images conflicted in how output is managed. #331 
+
 ## v1.1.14
 
 Date: 2022-11-16
