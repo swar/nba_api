@@ -2,7 +2,7 @@ import os
 from datetime import datetime
 
 from nba_api.stats.endpoints.commonallplayers import CommonAllPlayers
-from tools.stats.static_players_update.template import file_template, player_row_template
+from template import file_template, player_row_template
 
 player_adjustments = {
     2775: ["Ha Seung-jin", "", "Ha Seung-jin", False],
@@ -67,3 +67,7 @@ def generate_static_data_file(directory='static_files'):
     file_contents = file_template.format(players_list=players_string, date_updated=datetime.now().strftime('%b, %d %Y'))
 
     write_static_data_file(directory, file_contents)
+
+
+if __name__ == '__main__':
+    generate_static_data_file()
