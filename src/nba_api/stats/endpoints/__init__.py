@@ -51,7 +51,7 @@ __all__ = [
     'leaguedashptstats',
     'leaguedashptteamdefend',
     'leaguedashteamclutch',
-    'leaguedashoppptshot'
+    'leaguedashoppptshot',
     'leaguedashteamptshot',
     'leaguedashteamshotlocations',
     'leaguedashteamstats',
