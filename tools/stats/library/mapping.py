@@ -216,6 +216,7 @@ endpoint_list = [
     'TeamYearOverYearStats',
     'TeamYears',
     'VideoDetails',
+    'VideoDetailsAsset',
     'VideoEvents',
     'VideoStatus',
     'WinProbabilityPlayByPlay',

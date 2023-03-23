@@ -158,6 +158,7 @@
             - [/TeamVsPlayer](nba_api/stats/endpoints/teamvsplayer.md)
             - [/TeamYearByYearStats](nba_api/stats/endpoints/teamyearbyyearstats.md)
             - [/VideoDetails](nba_api/stats/endpoints/videodetails.md)
+            - [/VideoDetailsAsset](nba_api/stats/endpoints/videodetailsasset.md)
             - [/VideoEvents](nba_api/stats/endpoints/videoevents.md)
             - [/VideoStatus](nba_api/stats/endpoints/videostatus.md)
             - [/WinProbabilityPBP](nba_api/stats/endpoints/winprobabilitypbp.md)

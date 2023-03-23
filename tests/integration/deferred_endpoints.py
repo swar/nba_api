@@ -176,6 +176,14 @@ deferred_endpoints = [
         start_period_nullable=1,
         end_period_nullable=1
     ),
+    DeferredEndpoint(
+        ep.VideoDetailsAsset,
+        player_id='2544',
+        game_id_nullable='0021700807',
+        team_id='1610612739',
+        start_period_nullable=1,
+        end_period_nullable=1
+    ),
     DeferredEndpoint(ep.VideoEvents, game_id='0021700807'),
     DeferredEndpoint(ep.VideoStatus),
     DeferredEndpoint(ep.WinProbabilityPBP, game_id='0021700807')
