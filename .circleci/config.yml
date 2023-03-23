@@ -17,7 +17,7 @@ jobs:
     
     steps: 
       - checkout
-      - run: poetry install
+      - run: poetry install --no-ansi
       - unless:
           condition: << parameters.circle_pr_number >>
           steps:
@@ -34,6 +34,7 @@ workflows:
               image: [
                 "cimg/python:3.8",
                 "cimg/python:3.9",
-                "cimg/python:3.10"
+                "cimg/python:3.10",
+                "cimg/python:3.11"
               ]
      
