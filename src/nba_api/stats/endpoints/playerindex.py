@@ -54,16 +54,17 @@ class PlayerIndex(Endpoint):
             self.get_request()
 
     def get_request(self):
-        self.nba_responce = NBAStatsHTTP().send_api_request(
+        self.nba_response = NBAStatsHTTP().send_api_request(
             endpoint=self.endpoint,
             parameters=self.parameters,
             proxy=self.proxy,
             headers=self.headers,
             timeout=self.timeout
         )
-        self.load_responce()
+        self.load_response()
 
-    def load_responce(self):
-        data_sets = self.nba_responce.get_data_sets()
-        self.data_sets = [Endpoint.DataSet(data=data_sets) for data_set_name, data_set in data_sets.items()]
+    def load_response(self):
+        data_sets = self.nba_response.get_data_sets()
+        self.data_sets = [Endpoint.DataSet(data=data_set) for data_set_name, data_set in data_sets.items()]
         self.player_index = Endpoint.DataSet(data=data_sets["PlayerIndex"])
+
