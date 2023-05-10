@@ -5,7 +5,7 @@
 >[https://stats.nba.com/stats/hustlestatsboxscore](https://stats.nba.com/stats/hustlestatsboxscore)
 
 ##### Valid URL
->[https://stats.nba.com/stats/hustlestatsboxscore?GameID=0021700807](https://stats.nba.com/stats/boxscoreadvancedv2?EndPeriod=1&EndRange=0&GameID=0021700807&RangeType=0&StartPeriod=1&StartRange=0)
+>[https://stats.nba.com/stats/hustlestatsboxscore?GameID=0021700807](https://stats.nba.com/stats/hustlestatsboxscore?GameID=0021700807)
 
 ## Parameters
 API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
