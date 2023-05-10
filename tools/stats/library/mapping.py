@@ -13,6 +13,7 @@ endpoint_list = [
     'BoxScoreDefensive',
     'BoxScoreFourFactors',
     'BoxScoreFourFactorsV2',
+    'BoxScoreHustle',
     'BoxScoreMatchups',
     'BoxScoreMisc',
     'BoxScoreMiscV2',
