@@ -5,6 +5,7 @@ __all__ = [
     'boxscoreadvancedv2',
     'boxscoredefensive',
     'boxscorefourfactorsv2',
+    'boxscorehustle',
     'boxscorematchups',
     'boxscoremiscv2',
     'boxscoreplayertrackv2',
@@ -142,6 +143,7 @@ from .assisttracker import AssistTracker
 from .boxscoreadvancedv2 import BoxScoreAdvancedV2
 from .boxscoredefensive import BoxScoreDefensive
 from .boxscorefourfactorsv2 import BoxScoreFourFactorsV2
+from .boxscorehustle import BoxScoreHustle
 from .boxscorematchups import BoxScoreMatchups
 from .boxscoremiscv2 import BoxScoreMiscV2
 from .boxscoreplayertrackv2 import BoxScorePlayerTrackV2
