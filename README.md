@@ -73,7 +73,7 @@ games.get_dict()
 # Join the Community
 ## Slack
 
-Join [Slack](https://join.slack.com/t/nbaapi/shared_invite/zt-1ipsuai9j-GjZjuP9S2~Uczuny1t74zA) to get help, help others, provide feedback, see amazing projects, participates in discussions, and collaborate with others from around the world.
+Join [Slack](https://join.slack.com/t/nbaapi/shared_invite/zt-cayfrnfo-s9rySAmBXxBloL09S6N0KA) to get help, help others, provide feedback, see amazing projects, participates in discussions, and collaborate with others from around the world.
 
 ## Stack Overflow
 
