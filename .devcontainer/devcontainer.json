@@ -1,0 +1,25 @@
+{
+	"containerEnv": {
+		"PYTHON_VERSION": "3.11",
+		"PYTHON_PATH": ""
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/python:latest": {
+			"version": "3.11"
+		},
+		"ghcr.io/devcontainers-contrib/features/poetry:2": {}
+	},
+	"image": "mcr.microsoft.com/devcontainers/base:debian",
+	"name": "nba_data",
+	"postCreateCommand": "bash .devcontainer/postCreateCommand.sh",
+	"remoteEnv": {
+		"PYTHONUTF8": "1"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python"
+			]
+		}
+	}
+}
