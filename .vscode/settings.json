@@ -1,0 +1,14 @@
+{
+    "editor.formatOnSave": true,
+    "python.linting.flake8Enabled": true,
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "88"
+    ],
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportUnboundVariable": "information",
+        "reportImplicitStringConcatenation": "warning",
+        "reportUntypedFunctionDecorator": "information",
+    }
+}
