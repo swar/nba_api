@@ -16,6 +16,22 @@
 
 # Version History
 
+## v1.2.1
+
+Date: 2023-06-13
+
+### Fixed
+
+- Reverted alexfayad@5076fae050ec7d655af300cde7674756c4381943. Change broke materialized url and test. Original URL was found to be valid.
+- Resolved bad url in documentation #322 - @alexfayad
+- Fixed typo in causing src/nba_api/stats/endpoints/playerindex.py to fail #340 - @shufinskiy 
+- Fixed expired Slack URL #347
+
+
+### Developer Tools
+- Support for VS Code Dev Containers (including auto-format via [black](https://github.com/psf/black))
+
+
 ## v1.2.0
 
 Date: 2023-03-23
