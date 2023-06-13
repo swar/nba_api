@@ -20,6 +20,9 @@
 
 Date: 2023-06-13
 
+### Security
+- [requests](https://github.com/psf/requests) bumped from 2.28.2 to 2.31.0 via #344 - @dependabot
+
 ### Fixed
 
 - Reverted alexfayad@5076fae050ec7d655af300cde7674756c4381943. Change broke materialized url and test. Original URL was found to be valid.
