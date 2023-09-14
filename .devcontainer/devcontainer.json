@@ -1,16 +1,13 @@
 {
 	"containerEnv": {
-		"PYTHON_VERSION": "3.11",
-		"PYTHON_PATH": ""
+		"PYTHON_VERSION": "3.11"
 	},
 	"features": {
-		"ghcr.io/devcontainers/features/python:latest": {
-			"version": "3.11"
-		},
+		"ghcr.io/devcontainers/features/python:latest": {},
 		"ghcr.io/devcontainers-contrib/features/poetry:2": {}
 	},
 	"image": "mcr.microsoft.com/devcontainers/base:debian",
-	"name": "nba_data",
+	"name": "nba_api",
 	"postCreateCommand": "bash .devcontainer/postCreateCommand.sh",
 	"remoteEnv": {
 		"PYTHONUTF8": "1"
@@ -18,7 +15,12 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"ms-python.python"
+				"ms-python.python",
+				"ms-toolsai.jupyter-keymap",
+				"ms-python.black-formatter",
+				"ms-toolsai.jupyter",
+				"ms-toolsai.vscode-jupyter-powertoys",
+				"ms-toolsai.jupyter-renderers"
 			]
 		}
 	}
