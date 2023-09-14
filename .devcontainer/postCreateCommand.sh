@@ -1,5 +1,8 @@
-CONSTRAINT_URL=https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt
 pip install --upgrade pip
 poetry install --no-root
-# pip install "apache-airflow==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}"
-#(airflow standalone) &
+
+# Activate poetry environment
+source $(poetry env info --path)/bin/activate
+
+# Update PYTHONPATH to include the virtual environment's Python interpreter
+echo "export PYTHON_PATH=$(poetry env info --path)/bin/python" >> ~/.bashrc
