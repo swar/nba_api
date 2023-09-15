@@ -51,6 +51,9 @@ games.get_json()
 games.get_dict()
 ```
 
+### Note:
+If you want to get matchup data or boxscoredefensive, as well as boxscore data in NBA API version 3 format, you can use [nba_apiv3](https://github.com/shufinskiy/nba_apiv3) package.
+
 ## Additional Examples
 
 - [Requests/Response Options](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/examples.md#endpoint-usage-example)
