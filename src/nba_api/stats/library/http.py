@@ -1,6 +1,24 @@
 import json
 from nba_api.library import http
+from nba_api.stats.library.parserv3 import (NBAStatsBoxscoreParserV3,
+                                            NBAStatsBoxscoreTraditionalParserV3,
+                                            NBAStatsBoxscoreMatchupsParserV3,
+                                            NBAStatsPlayByPlayParserV3)
 
+
+PARSER_DICT = {
+    'boxscoreadvancedv3': NBAStatsBoxscoreParserV3,
+    'boxscoredefensivev2': NBAStatsBoxscoreParserV3,
+    'boxscorefourfactorsv3': NBAStatsBoxscoreParserV3,
+    'boxscorehustlev2': NBAStatsBoxscoreParserV3,
+    'boxscorematchupsv3': NBAStatsBoxscoreMatchupsParserV3,
+    'boxscoremiscv3': NBAStatsBoxscoreParserV3,
+    'boxscoreplayertrackv3': NBAStatsBoxscoreParserV3,
+    'boxscorescoringv3': NBAStatsBoxscoreParserV3,
+    'boxscoretraditionalv3': NBAStatsBoxscoreTraditionalParserV3,
+    'boxscoreusagev3': NBAStatsBoxscoreParserV3,
+    'playbyplayv3': NBAStatsPlayByPlayParserV3
+}
 
 try:
     from nba_api.library.debug.debug import STATS_HEADERS
@@ -18,6 +36,15 @@ except ImportError:
         'Pragma': 'no-cache',
         'Cache-Control': 'no-cache',
     }
+
+
+class NBAStatsParser:
+
+    def __init__(self, nba_dict):
+        self.nba_dict = nba_dict
+
+    def change_parser(self, endpoint):
+        return PARSER_DICT[endpoint](self.nba_dict)
 
 
 class NBAStatsResponse(http.NBAResponse):
@@ -91,6 +118,11 @@ class NBAStatsResponse(http.NBAResponse):
             return {results['name']: {'headers': results['headers'], 'data': results['rowSet']}}
         return {result_set['name']: {'headers': result_set['headers'], 'data': result_set['rowSet']}
                 for result_set in results}
+
+    def get_data_sets_v3(self, endpoint):
+        self.parser = NBAStatsParser(nba_dict=self.get_dict())
+        data = self.parser.change_parser(endpoint)
+        return data.get_data_sets()
 
 
 class NBAStatsHTTP(http.NBAHTTP):
