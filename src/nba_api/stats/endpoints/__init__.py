@@ -164,7 +164,7 @@ from .boxscoremiscv3 import BoxScoreMiscV3
 from .boxscoreplayertrackv2 import BoxScorePlayerTrackV2
 from .boxscoreplayertrackv3 import BoxScorePlayerTrackV3
 from .boxscorescoringv2 import BoxScoreScoringV2
-from .boxscorescoreingv3 import BoxScoreScoringV3
+from .boxscorescoringv3 import BoxScoreScoringV3
 from .boxscoresimilarityscore import BoxScoreSimilarityScore
 from .boxscoresummaryv2 import BoxScoreSummaryV2
 from .boxscoretraditionalv2 import BoxScoreTraditionalV2
