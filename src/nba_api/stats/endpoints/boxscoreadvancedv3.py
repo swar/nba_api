@@ -1,25 +1,89 @@
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
-from nba_api.stats.library.parameters import EndPeriod, EndRange, RangeType, StartPeriod, StartRange
+from nba_api.stats.library.parameters import (
+    EndPeriod,
+    EndRange,
+    RangeType,
+    StartPeriod,
+    StartRange,
+)
 
 
 class BoxScoreAdvancedV3(Endpoint):
-    endpoint = 'boxscoreadvancedv3'
+    endpoint = "boxscoreadvancedv3"
     expected_data = {
-        'PlayerStats': ['gameId', 'teamId', 'teamCity', 'teamName', 'teamTricode', 'teamSlug', 'personId', 'firstName',
-                        'familyName', 'nameI', 'playerSlug', 'position', 'comment', 'jerseyNum', 'minutes',
-                        'estimatedOffensiveRating', 'offensiveRating', 'estimatedDefensiveRating', 'defensiveRating',
-                        'estimatedNetRating', 'netRating', 'assistPercentage', 'assistToTurnover', 'assistRatio',
-                        'offensiveReboundPercentage', 'defensiveReboundPercentage', 'reboundPercentage',
-                        'turnoverRatio', 'effectiveFieldGoalPercentage', 'trueShootingPercentage', 'usagePercentage',
-                        'estimatedUsagePercentage', 'estimatedPace', 'pace', 'pacePer40', 'possessions', 'PIE'],
-        'TeamStats': ['gameId', 'teamId', 'teamCity', 'teamName', 'teamTricode', 'teamSlug', 'minutes',
-                      'estimatedOffensiveRating', 'offensiveRating', 'estimatedDefensiveRating', 'defensiveRating',
-                      'estimatedNetRating', 'netRating', 'assistPercentage', 'assistToTurnover', 'assistRatio',
-                      'offensiveReboundPercentage', 'defensiveReboundPercentage', 'reboundPercentage',
-                      'estimatedTeamTurnoverPercentage', 'turnoverRatio', 'effectiveFieldGoalPercentage',
-                      'trueShootingPercentage', 'usagePercentage', 'estimatedUsagePercentage', 'estimatedPace', 'pace',
-                      'pacePer40', 'possessions', 'PIE']}
+        "PlayerStats": [
+            "gameId",
+            "teamId",
+            "teamCity",
+            "teamName",
+            "teamTricode",
+            "teamSlug",
+            "personId",
+            "firstName",
+            "familyName",
+            "nameI",
+            "playerSlug",
+            "position",
+            "comment",
+            "jerseyNum",
+            "minutes",
+            "estimatedOffensiveRating",
+            "offensiveRating",
+            "estimatedDefensiveRating",
+            "defensiveRating",
+            "estimatedNetRating",
+            "netRating",
+            "assistPercentage",
+            "assistToTurnover",
+            "assistRatio",
+            "offensiveReboundPercentage",
+            "defensiveReboundPercentage",
+            "reboundPercentage",
+            "turnoverRatio",
+            "effectiveFieldGoalPercentage",
+            "trueShootingPercentage",
+            "usagePercentage",
+            "estimatedUsagePercentage",
+            "estimatedPace",
+            "pace",
+            "pacePer40",
+            "possessions",
+            "PIE",
+        ],
+        "TeamStats": [
+            "gameId",
+            "teamId",
+            "teamCity",
+            "teamName",
+            "teamTricode",
+            "teamSlug",
+            "minutes",
+            "estimatedOffensiveRating",
+            "offensiveRating",
+            "estimatedDefensiveRating",
+            "defensiveRating",
+            "estimatedNetRating",
+            "netRating",
+            "assistPercentage",
+            "assistToTurnover",
+            "assistRatio",
+            "offensiveReboundPercentage",
+            "defensiveReboundPercentage",
+            "reboundPercentage",
+            "estimatedTeamTurnoverPercentage",
+            "turnoverRatio",
+            "effectiveFieldGoalPercentage",
+            "trueShootingPercentage",
+            "usagePercentage",
+            "estimatedUsagePercentage",
+            "estimatedPace",
+            "pace",
+            "pacePer40",
+            "possessions",
+            "PIE",
+        ],
+    }
 
     nba_response = None
     data_sets = None
@@ -27,28 +91,30 @@ class BoxScoreAdvancedV3(Endpoint):
     team_stats = None
     headers = None
 
-    def __init__(self,
-                 game_id,
-                 end_period=EndPeriod.default,
-                 end_range=EndRange.default,
-                 range_type=RangeType.default,
-                 start_period=StartPeriod.default,
-                 start_range=StartRange.default,
-                 proxy=None,
-                 headers=None,
-                 timeout=30,
-                 get_request=True):
+    def __init__(
+        self,
+        game_id,
+        end_period=EndPeriod.default,
+        end_range=EndRange.default,
+        range_type=RangeType.default,
+        start_period=StartPeriod.default,
+        start_range=StartRange.default,
+        proxy=None,
+        headers=None,
+        timeout=30,
+        get_request=True,
+    ):
         self.proxy = proxy
         if headers is not None:
             self.headers = headers
         self.timeout = timeout
         self.parameters = {
-            'GameID': game_id,
-            'EndPeriod': end_period,
-            'EndRange': end_range,
-            'RangeType': range_type,
-            'StartPeriod': start_period,
-            'StartRange': start_range
+            "GameID": game_id,
+            "EndPeriod": end_period,
+            "EndRange": end_range,
+            "RangeType": range_type,
+            "StartPeriod": start_period,
+            "StartRange": start_range,
         }
         if get_request:
             self.get_request()
@@ -64,7 +130,10 @@ class BoxScoreAdvancedV3(Endpoint):
         self.load_response()
 
     def load_response(self):
-        data_sets = self.nba_response.get_data_sets_v3(self.endpoint)
-        self.data_sets = [Endpoint.DataSet(data=data_set) for data_set_name, data_set in data_sets.items()]
-        self.player_stats = Endpoint.DataSet(data=data_sets['PlayerStats'])
-        self.team_stats = Endpoint.DataSet(data=data_sets['TeamStats'])
+        data_sets = self.nba_response.get_data_sets(self.endpoint)
+        self.data_sets = [
+            Endpoint.DataSet(data=data_set)
+            for data_set_name, data_set in data_sets.items()
+        ]
+        self.player_stats = Endpoint.DataSet(data=data_sets["PlayerStats"])
+        self.team_stats = Endpoint.DataSet(data=data_sets["TeamStats"])
