@@ -18,7 +18,7 @@
 
 ## v1.3.0
 
-Date: 2023-10-**
+Date: 2023-10-04
 
 ### Added
 
@@ -41,8 +41,10 @@ Eleven new endpoints were added to this release. A massive thank you to @shufins
 #### NBA JSON schema 
 Until recently, the NBA JSON schema followed a tabular strucutre exposing `headers` and `resultSet`. The NBA is now using a nested JSON schema. In addition, the data labels are no longer uppercase (e.g., `PCT_OREB`), are now camelcase and, in many cases, more descriptive (e.g., `percentageReboundsOffensive`).
 
-#### NBA Player & Team Data
-All NBA player and team data has been updated to the date of this release.
+#### Other
+- All NBA player and team data has been updated to the date of this release.
+- Corrected an invalid Slack within the text body to match the link present in the Slack shield.
+- Updated NBA team data to include the Nuggets 2023 championship (#350)
 
 ## Known Issues
 Due to the change in the NBA schema, the following methods will currently return and empty dataframe `{}`
@@ -52,7 +54,11 @@ Due to the change in the NBA schema, the following methods will currently return
 All other calls are expected to work as expected.
 
 ### Security
-- Bumps [urllib3](https://github.com/urllib3/urllib3) from 1.26.15 to 1.26.17. (#373) - @dependabot
+- [urllib3](https://github.com/urllib3/urllib3) from 1.26.15 to 1.26.17. (#373) - @dependabot
+- [certifi](https://github.com/certifi/python-certifi) from 2022.12.7 to 2023.7.22 (#360) - @dependabot
+
+### Developer Tools
+Updated dev container to dynamically set the python path for Poetry. (#369)
 
 ## v1.2.1
 
