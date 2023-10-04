@@ -16,6 +16,44 @@
 
 # Version History
 
+## v1.3.0
+
+Date: 2023-10-**
+
+### Added
+
+#### Endpoints
+Eleven new endpoints were added to this release. A massive thank you to @shufinskiy.
+- [BoxScoreAdvancedv3](docs/nba_api/stats/endpoints/boxscoreadvancedv3.md)
+- [BoxScoreDefensivev2](docs/nba_api/stats/endpoints/boxscoredefensivev2.md)
+- [BoxScoreFourFactorsv3](docs/nba_api/stats/endpoints/boxscorefourfactorsv3.md)
+- [BoxScoreHustlev2](docs/nba_api/stats/endpoints/boxscorehustlev2.md)
+- [BoxScoreMatchupsv3](docs/nba_api/stats/endpoints/boxscorematchupsv3.md)
+- [BoxScoreMiscv3](docs/nba_api/stats/endpoints/boxscoremiscv3.md)
+- [BoxScorePlayerTrackV3](docs/nba_api/stats/endpoints/boxscoreplayertrackv3.md)
+- [BoxScoreScoringV3](docs/nba_api/stats/endpoints/boxscorescoringv3.md)
+- [BoxScoreTraditionalv3](docs/nba_api/stats/endpoints/boxscoretraditionalv3.md)
+- [BoxScoreUsagev3](docs/nba_api/stats/endpoints/boxscoreusagev3.md)
+- [PlaybyPlayv3](docs/nba_api/stats/endpoints/playbyplayv3.md)
+
+### Changed
+
+#### NBA JSON schema 
+Until recently, the NBA JSON schema followed a tabular strucutre exposing `headers` and `resultSet`. The NBA is now using a nested JSON schema. In addition, the data labels are no longer uppercase (e.g., `PCT_OREB`), are now camelcase and, in many cases, more descriptive (e.g., `percentageReboundsOffensive`).
+
+#### NBA Player & Team Data
+All NBA player and team data has been updated to the date of this release.
+
+## Known Issues
+Due to the change in the NBA schema, the following methods will currently return and empty dataframe `{}`
+- `.get_normalized_dict()`
+- `.get_normalized_json()`
+- `.get_headers_from_data_sets()`
+All other calls are expected to work as expected.
+
+### Security
+- Bumps [urllib3](https://github.com/urllib3/urllib3) from 1.26.15 to 1.26.17. (#373) - @dependabot
+
 ## v1.2.1
 
 Date: 2023-06-13
