@@ -54,11 +54,18 @@ Due to the change in the NBA schema, the following methods will currently return
 All other calls are expected to work as expected.
 
 ### Removed
-The following endpoints have been deprecated by the NBA and subsequently removed from this library
-- BoxScoreDefensive --> replaced by [BoxScoreDefensivev2](docs/nba_api/stats/endpoints/boxscoredefensivev2.md)
-- BoxScoreMatchups --> replaced by [BoxScoreMatchupsv3](docs/nba_api/stats/endpoints/boxscorematchupsv3.md)
-- LeagueHustleStatsPlayerLeaders --> no known replacement
-- LeagueHustleStatsTeamLeaders --> no known replacement
+The following eleven endpoints have been deprecated by the NBA and subsequently removed from the library
+- BoxScoreDefensive --> [BoxScoreDefensivev2](docs/nba_api/stats/endpoints/boxscoredefensivev2.md)
+- BoxScoreMatchups --> [BoxScoreMatchupsv3](docs/nba_api/stats/endpoints/boxscorematchupsv3.md)
+- LeagueHustleStatsPlayerLeaders --> unknown
+- LeagueHustleStatsTeamLeaders --> unknown
+- PlayerDashboardByOpponent --> unknown
+- TeamDashboardByClutch --> unknown
+- TeamDashboardByGameSplits
+- TeamDashboardByLastNGames
+- TeamDashboardByOpponent
+- TeamDashboardByTeamPerformance
+- TeamDashboardByYearOverYear
 
 
 ### Security

@@ -98,7 +98,6 @@ missing_required_parameters = {
     "ShotChartLeagueWide": {"LeagueID": LeagueID.default},
     "ShotChartLineupDetail": {"GameID": "", "TeamID": ""},
     "TeamAndPlayersVsPlayers": {"Season": Season.default},
-    "TeamDashboardByClutch": {"Season": Season.default},
     "TeamDashboardByGameSplits": {"Season": Season.default},
     "TeamDashboardByGeneralSplits": {"Season": Season.default},
     "TeamDashboardByLastNGames": {"Season": Season.default},
