@@ -67,7 +67,6 @@ __all__ = [
     "leaguegamelog",
     "leaguehustlestatsplayer",
     "leaguehustlestatsteam",
-    "leaguehustlestatsteamleaders",
     "leagueleaders",
     "leaguelineupviz",
     "leagueplayerondetails",
@@ -210,7 +209,6 @@ from .leaguedashteamshotlocations import LeagueDashTeamShotLocations
 from .leaguedashteamstats import LeagueDashTeamStats
 from .leaguehustlestatsplayer import LeagueHustleStatsPlayer
 from .leaguehustlestatsteam import LeagueHustleStatsTeam
-from .leaguehustlestatsteamleaders import LeagueHustleStatsTeamLeaders
 from .leaguegamefinder import LeagueGameFinder
 from .leaguegamelog import LeagueGameLog
 from .leagueleaders import LeagueLeaders

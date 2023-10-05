@@ -61,7 +61,6 @@ missing_required_parameters = {
     "LeagueGameLog": {"Counter": 0, "Season": Season.default},
     "LeagueHustleStatsPlayer": {"Season": Season.default},
     "LeagueHustleStatsTeam": {"Season": Season.default},
-    "LeagueHustleStatsTeamLeaders": {"Season": Season.default},
     "LeagueLeaders": {"Season": Season.default},
     "LeagueLineupViz": {"Season": Season.default},
     "LeaguePlayerOnDetails": {
