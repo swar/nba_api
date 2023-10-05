@@ -55,8 +55,8 @@ All other calls are expected to work as expected.
 
 ### Removed
 The following endpoints have been deprecated by the NBA and subsequently removed from this library
-- BoxScoreDefensive
-
+- BoxScoreDefensive --> replaced by BoxScoreDefensiveV2
+- BoxScoreMatchups --> replaced by BoxScoreMatchupsV3
 
 
 ### Security

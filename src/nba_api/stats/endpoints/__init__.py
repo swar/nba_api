@@ -8,7 +8,6 @@ __all__ = [
     "boxscorefourfactorsv2",
     "boxscorefourfactorsv3",
     "boxscorehustlev2",
-    "boxscorematchups",
     "boxscorematchupsv3",
     "boxscoremiscv2",
     "boxscoremiscv3",
@@ -155,7 +154,6 @@ from .boxscoredefensivev2 import BoxScoreDefensiveV2
 from .boxscorefourfactorsv2 import BoxScoreFourFactorsV2
 from .boxscorefourfactorsv3 import BoxScoreFourFactorsV3
 from .boxscorehustlev2 import BoxScoreHustleV2
-from .boxscorematchups import BoxScoreMatchups
 from .boxscorematchupsv3 import BoxScoreMatchupsV3
 from .boxscoremiscv2 import BoxScoreMiscV2
 from .boxscoremiscv3 import BoxScoreMiscV3

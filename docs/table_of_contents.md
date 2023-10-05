@@ -33,7 +33,7 @@
             - [/AssistTracker](nba_api/stats/endpoints/assisttracker.md)
             - [/BoxScoreAdvancedV2](nba_api/stats/endpoints/boxscoreadvancedv2.md)
             - [/BoxScoreFourFactorsV2](nba_api/stats/endpoints/boxscorefourfactorsv2.md)
-            - [/BoxScoreMatchups](nba_api/stats/endpoints/boxscorematchups.md)
+            - [/BoxScoreMatchupsV3](nba_api/stats/endpoints/boxscorematchupsv3.md)
             - [/BoxScoreMiscV2](nba_api/stats/endpoints/boxscoremiscv2.md)
             - [/BoxScorePlayerTrackV2](nba_api/stats/endpoints/boxscoreplayertrackv2.md)
             - [/BoxScoreScoringV2](nba_api/stats/endpoints/boxscorescoringv2.md)
