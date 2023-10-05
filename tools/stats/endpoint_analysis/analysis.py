@@ -75,7 +75,6 @@ missing_required_parameters = {
     "PlayerDashboardByGameSplits": {"Season": Season.default},
     "PlayerDashboardByGeneralSplits": {"Season": Season.default},
     "PlayerDashboardByLastNGames": {"Season": Season.default},
-    "PlayerDashboardByOpponent": {"Season": Season.default},
     "PlayerDashboardByShootingSplits": {"Season": Season.default},
     "PlayerDashboardByTeamPerformance": {"Season": Season.default},
     "PlayerDashboardByYearOverYear": {"Season": Season.default},

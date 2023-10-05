@@ -55,9 +55,11 @@ All other calls are expected to work as expected.
 
 ### Removed
 The following endpoints have been deprecated by the NBA and subsequently removed from this library
-- BoxScoreDefensive --> replaced by BoxScoreDefensiveV2
-- BoxScoreMatchups --> replaced by BoxScoreMatchupsV3
+- BoxScoreDefensive --> replaced by [BoxScoreDefensivev2](docs/nba_api/stats/endpoints/boxscoredefensivev2.md)
+- BoxScoreMatchups --> replaced by [BoxScoreMatchupsv3](docs/nba_api/stats/endpoints/boxscorematchupsv3.md)
 - LeagueHustleStatsPlayerLeaders --> no known replacement
+- LeagueHustleStatsTeamLeaders --> no known replacement
+
 
 ### Security
 - [urllib3](https://github.com/urllib3/urllib3) from 1.26.15 to 1.26.17. (#373) - @dependabot

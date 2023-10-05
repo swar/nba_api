@@ -100,7 +100,6 @@ endpoint_list = [
     "PlayerDashboardByGameSplits",
     "PlayerDashboardByGeneralSplits",
     "PlayerDashboardByLastNGames",
-    "PlayerDashboardByOpponent",
     "PlayerDashboardByShootingSplits",
     "PlayerDashboardByTeamPerformance",
     "PlayerDashboardByYearOverYear",

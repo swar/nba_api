@@ -90,7 +90,6 @@ __all__ = [
     "playerdashboardbygamesplits",
     "playerdashboardbygeneralsplits",
     "playerdashboardbylastngames",
-    "playerdashboardbyopponent",
     "playerdashboardbyshootingsplits",
     "playerdashboardbyteamperformance",
     "playerdashboardbyyearoveryear",
@@ -234,7 +233,6 @@ from .playerdashboardbyclutch import PlayerDashboardByClutch
 from .playerdashboardbygamesplits import PlayerDashboardByGameSplits
 from .playerdashboardbygeneralsplits import PlayerDashboardByGeneralSplits
 from .playerdashboardbylastngames import PlayerDashboardByLastNGames
-from .playerdashboardbyopponent import PlayerDashboardByOpponent
 from .playerdashboardbyshootingsplits import PlayerDashboardByShootingSplits
 from .playerdashboardbyteamperformance import PlayerDashboardByTeamPerformance
 from .playerdashboardbyyearoveryear import PlayerDashboardByYearOverYear

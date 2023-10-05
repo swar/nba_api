@@ -109,7 +109,6 @@
             - [/PlayerDashboardByGameSplits](nba_api/stats/endpoints/playerdashboardbygamesplits.md)
             - [/PlayerDashboardByGeneralSplits](nba_api/stats/endpoints/playerdashboardbygeneralsplits.md)
             - [/PlayerDashboardByLastNGames](nba_api/stats/endpoints/playerdashboardbylastngames.md)
-            - [/PlayerDashboardByOpponent](nba_api/stats/endpoints/playerdashboardbyopponent.md)
             - [/PlayerDashboardByShootingSplits](nba_api/stats/endpoints/playerdashboardbyshootingsplits.md)
             - [/PlayerDashboardByTeamPerformance](nba_api/stats/endpoints/playerdashboardbyteamperformance.md)
             - [/PlayerDashboardByYearOverYear](nba_api/stats/endpoints/playerdashboardbyyearoveryear.md)
