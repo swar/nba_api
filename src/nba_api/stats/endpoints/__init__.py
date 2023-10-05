@@ -4,7 +4,6 @@ __all__ = [
     "assisttracker",
     "boxscoreadvancedv2",
     "boxscoreadvancedv3",
-    "boxscoredefensive",
     "boxscoredefensivev2",
     "boxscorefourfactorsv2",
     "boxscorefourfactorsv3",
@@ -152,7 +151,6 @@ from .assistleaders import AssistLeaders
 from .assisttracker import AssistTracker
 from .boxscoreadvancedv2 import BoxScoreAdvancedV2
 from .boxscoreadvancedv3 import BoxScoreAdvancedV3
-from .boxscoredefensive import BoxScoreDefensive
 from .boxscoredefensivev2 import BoxScoreDefensiveV2
 from .boxscorefourfactorsv2 import BoxScoreFourFactorsV2
 from .boxscorefourfactorsv3 import BoxScoreFourFactorsV3

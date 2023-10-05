@@ -435,52 +435,6 @@
         ],
         "status": "success"
     },
-    "BoxScoreDefensive": {
-        "data_sets": {
-            "PlayerDefensiveStats": [
-                "GAME_ID",
-                "TEAM_ID",
-                "TEAM_ABBREVIATION",
-                "TEAM_CITY",
-                "TEAM_NICKNAME",
-                "PLAYER_ID",
-                "PLAYER_NAME",
-                "START_POSITION",
-                "COMMENT",
-                "MATCHUP_MIN",
-                "PARTIAL_POSS",
-                "SWITCHES_ON",
-                "PLAYER_PTS",
-                "DREB",
-                "MATCHUP_AST",
-                "MATCHUP_TOV",
-                "STL",
-                "BLK",
-                "MATCHUP_FGM",
-                "MATCHUP_FGA",
-                "MATCHUP_FG_PCT",
-                "MATCHUP_FG3M",
-                "MATCHUP_FG3A",
-                "MATCHUP_FG3_PCT"
-            ],
-            "Table1": [
-                ":1"
-            ]
-        },
-        "endpoint": "BoxScoreDefensive",
-        "last_validated_date": "2020-08-15",
-        "nullable_parameters": [],
-        "parameter_patterns": {
-            "GameID": "^\\d{10}$"
-        },
-        "parameters": [
-            "GameID"
-        ],
-        "required_parameters": [
-            "GameID"
-        ],
-        "status": "success"
-    },
     "BoxScoreFourFactors": {
         "endpoint": "BoxScoreFourFactors",
         "last_validated_date": "2020-08-15",
