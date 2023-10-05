@@ -100,7 +100,6 @@ missing_required_parameters = {
     "TeamAndPlayersVsPlayers": {"Season": Season.default},
     "TeamDashboardByGeneralSplits": {"Season": Season.default},
     "TeamDashboardByShootingSplits": {"Season": Season.default},
-    "TeamDashboardByTeamPerformance": {"Season": Season.default},
     "TeamDashboardByYearOverYear": {"Season": Season.default},
     "TeamDashLineups": {"Season": Season.default},
     "TeamDashPtPass": {"LeagueID": LeagueID.default},
