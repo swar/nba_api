@@ -4,12 +4,10 @@ __all__ = [
     "assisttracker",
     "boxscoreadvancedv2",
     "boxscoreadvancedv3",
-    "boxscoredefensive",
     "boxscoredefensivev2",
     "boxscorefourfactorsv2",
     "boxscorefourfactorsv3",
     "boxscorehustlev2",
-    "boxscorematchups",
     "boxscorematchupsv3",
     "boxscoremiscv2",
     "boxscoremiscv3",
@@ -68,9 +66,7 @@ __all__ = [
     "leaguegamefinder",
     "leaguegamelog",
     "leaguehustlestatsplayer",
-    "leaguehustlestatsplayerleaders",
     "leaguehustlestatsteam",
-    "leaguehustlestatsteamleaders",
     "leagueleaders",
     "leaguelineupviz",
     "leagueplayerondetails",
@@ -94,7 +90,6 @@ __all__ = [
     "playerdashboardbygamesplits",
     "playerdashboardbygeneralsplits",
     "playerdashboardbylastngames",
-    "playerdashboardbyopponent",
     "playerdashboardbyshootingsplits",
     "playerdashboardbyteamperformance",
     "playerdashboardbyyearoveryear",
@@ -120,14 +115,8 @@ __all__ = [
     "teamdashptpass",
     "teamdashptreb",
     "teamdashptshots",
-    "teamdashboardbyclutch",
-    "teamdashboardbygamesplits",
     "teamdashboardbygeneralsplits",
-    "teamdashboardbylastngames",
-    "teamdashboardbyopponent",
     "teamdashboardbyshootingsplits",
-    "teamdashboardbyteamperformance",
-    "teamdashboardbyyearoveryear",
     "teamdetails",
     "teamestimatedmetrics",
     "teamgamelog",
@@ -152,12 +141,10 @@ from .assistleaders import AssistLeaders
 from .assisttracker import AssistTracker
 from .boxscoreadvancedv2 import BoxScoreAdvancedV2
 from .boxscoreadvancedv3 import BoxScoreAdvancedV3
-from .boxscoredefensive import BoxScoreDefensive
 from .boxscoredefensivev2 import BoxScoreDefensiveV2
 from .boxscorefourfactorsv2 import BoxScoreFourFactorsV2
 from .boxscorefourfactorsv3 import BoxScoreFourFactorsV3
 from .boxscorehustlev2 import BoxScoreHustleV2
-from .boxscorematchups import BoxScoreMatchups
 from .boxscorematchupsv3 import BoxScoreMatchupsV3
 from .boxscoremiscv2 import BoxScoreMiscV2
 from .boxscoremiscv3 import BoxScoreMiscV3
@@ -214,9 +201,7 @@ from .leaguedashteamptshot import LeagueDashTeamPtShot
 from .leaguedashteamshotlocations import LeagueDashTeamShotLocations
 from .leaguedashteamstats import LeagueDashTeamStats
 from .leaguehustlestatsplayer import LeagueHustleStatsPlayer
-from .leaguehustlestatsplayerleaders import LeagueHustleStatsPlayerLeaders
 from .leaguehustlestatsteam import LeagueHustleStatsTeam
-from .leaguehustlestatsteamleaders import LeagueHustleStatsTeamLeaders
 from .leaguegamefinder import LeagueGameFinder
 from .leaguegamelog import LeagueGameLog
 from .leagueleaders import LeagueLeaders
@@ -242,7 +227,6 @@ from .playerdashboardbyclutch import PlayerDashboardByClutch
 from .playerdashboardbygamesplits import PlayerDashboardByGameSplits
 from .playerdashboardbygeneralsplits import PlayerDashboardByGeneralSplits
 from .playerdashboardbylastngames import PlayerDashboardByLastNGames
-from .playerdashboardbyopponent import PlayerDashboardByOpponent
 from .playerdashboardbyshootingsplits import PlayerDashboardByShootingSplits
 from .playerdashboardbyteamperformance import PlayerDashboardByTeamPerformance
 from .playerdashboardbyyearoveryear import PlayerDashboardByYearOverYear
@@ -268,14 +252,8 @@ from .teamdashlineups import TeamDashLineups
 from .teamdashptpass import TeamDashPtPass
 from .teamdashptreb import TeamDashPtReb
 from .teamdashptshots import TeamDashPtShots
-from .teamdashboardbyclutch import TeamDashboardByClutch
-from .teamdashboardbygamesplits import TeamDashboardByGameSplits
 from .teamdashboardbygeneralsplits import TeamDashboardByGeneralSplits
-from .teamdashboardbylastngames import TeamDashboardByLastNGames
-from .teamdashboardbyopponent import TeamDashboardByOpponent
 from .teamdashboardbyshootingsplits import TeamDashboardByShootingSplits
-from .teamdashboardbyteamperformance import TeamDashboardByTeamPerformance
-from .teamdashboardbyyearoveryear import TeamDashboardByYearOverYear
 from .teamdetails import TeamDetails
 from .teamestimatedmetrics import TeamEstimatedMetrics
 from .teamgamelog import TeamGameLog
