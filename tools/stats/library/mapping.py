@@ -76,7 +76,6 @@ endpoint_list = [
     "LeagueGameFinder",
     "LeagueGameLog",
     "LeagueHustleStatsPlayer",
-    "LeagueHustleStatsPlayerLeaders",
     "LeagueHustleStatsTeam",
     "LeagueHustleStatsTeamLeaders",
     "LeagueLeaders",

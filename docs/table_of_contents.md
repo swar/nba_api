@@ -84,7 +84,6 @@
             - [/LeagueDashTeamShotLocations](nba_api/stats/endpoints/leaguedashteamshotlocations.md)
             - [/LeagueDashTeamStats](nba_api/stats/endpoints/leaguedashteamstats.md)
             - [/LeagueHustleStatsPlayer](nba_api/stats/endpoints/leaguehustlestatsplayer.md)
-            - [/LeagueHustleStatsPlayerLeaders](nba_api/stats/endpoints/leaguehustlestatsplayerleaders.md)
             - [/LeagueHustleStatsTeam](nba_api/stats/endpoints/leaguehustlestatsteam.md)
             - [/LeagueHustleStatsTeamLeaders](nba_api/stats/endpoints/leaguehustlestatsteamleaders.md)
             - [/LeagueGameFinder](nba_api/stats/endpoints/leaguegamefinder.md)
