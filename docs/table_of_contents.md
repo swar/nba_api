@@ -133,8 +133,6 @@
             - [/TeamDashPtPass](nba_api/stats/endpoints/teamdashptpass.md)
             - [/TeamDashPtReb](nba_api/stats/endpoints/teamdashptreb.md)
             - [/TeamDashPtShots](nba_api/stats/endpoints/teamdashptshots.md)
-            - [/TeamDashboardByClutch](nba_api/stats/endpoints/teamdashboardbyclutch.md)
-            - [/TeamDashboardByGameSplits](nba_api/stats/endpoints/teamdashboardbygamesplits.md)
             - [/TeamDashboardByGeneralSplits](nba_api/stats/endpoints/teamdashboardbygeneralsplits.md)
             - [/TeamDashboardByLastNGames](nba_api/stats/endpoints/teamdashboardbylastngames.md)
             - [/TeamDashboardByOpponent](nba_api/stats/endpoints/teamdashboardbyopponent.md)

@@ -154,7 +154,6 @@ deferred_endpoints = [
     DeferredEndpoint(ep.TeamDashPtPass, team_id="1610612739"),
     DeferredEndpoint(ep.TeamDashPtReb, team_id="1610612739"),
     DeferredEndpoint(ep.TeamDashPtShots, team_id="1610612739"),
-    DeferredEndpoint(ep.TeamDashboardByGameSplits, team_id="1610612739"),
     DeferredEndpoint(ep.TeamDashboardByGeneralSplits, team_id="1610612739"),
     DeferredEndpoint(ep.TeamDashboardByLastNGames, team_id="1610612739"),
     DeferredEndpoint(ep.TeamDashboardByOpponent, team_id="1610612739"),

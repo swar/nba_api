@@ -61,11 +61,11 @@ The following eleven endpoints have been deprecated by the NBA and subsequently 
 - LeagueHustleStatsTeamLeaders --> unknown
 - PlayerDashboardByOpponent --> unknown
 - TeamDashboardByClutch --> unknown
-- TeamDashboardByGameSplits
-- TeamDashboardByLastNGames
-- TeamDashboardByOpponent
-- TeamDashboardByTeamPerformance
-- TeamDashboardByYearOverYear
+- TeamDashboardByGameSplits --> unknown
+- TeamDashboardByLastNGames --> unknown
+- TeamDashboardByOpponent --> unknown
+- TeamDashboardByTeamPerformance --> unknown
+- TeamDashboardByYearOverYear --> unknown
 
 
 ### Security
