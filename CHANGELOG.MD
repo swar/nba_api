@@ -53,6 +53,12 @@ Due to the change in the NBA schema, the following methods will currently return
 - `.get_headers_from_data_sets()`
 All other calls are expected to work as expected.
 
+### Removed
+The following endpoints have been deprecated by the NBA and subsequently removed from this library
+- BoxScoreDefensive
+
+
+
 ### Security
 - [urllib3](https://github.com/urllib3/urllib3) from 1.26.15 to 1.26.17. (#373) - @dependabot
 - [certifi](https://github.com/certifi/python-certifi) from 2022.12.7 to 2023.7.22 (#360) - @dependabot
