@@ -135,7 +135,6 @@
             - [/TeamDashPtShots](nba_api/stats/endpoints/teamdashptshots.md)
             - [/TeamDashboardByGeneralSplits](nba_api/stats/endpoints/teamdashboardbygeneralsplits.md)
             - [/TeamDashboardByShootingSplits](nba_api/stats/endpoints/teamdashboardbyshootingsplits.md)
-            - [/TeamDashboardByYearOverYear](nba_api/stats/endpoints/teamdashboardbyyearoveryear.md)
             - [/TeamDetails](nba_api/stats/endpoints/teamdetails.md)
             - [/TeamEstimatedMetrics](nba_api/stats/endpoints/teamestimatedmetrics.md)
             - [/TeamGameLog](nba_api/stats/endpoints/teamgamelog.md)

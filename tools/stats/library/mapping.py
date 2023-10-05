@@ -164,7 +164,6 @@ endpoint_list = [
     "TeamClutchStats",
     "TeamDashboardByGeneralSplits",
     "TeamDashboardByShootingSplits",
-    "TeamDashboardByYearOverYear",
     "TeamDashLineups",
     "TeamDashPtPass",
     "TeamDashPtReb",
