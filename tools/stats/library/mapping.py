@@ -163,7 +163,6 @@ endpoint_list = [
     "TeamAndPlayersVsPlayers",
     "TeamClutchStats",
     "TeamDashboardByGeneralSplits",
-    "TeamDashboardByOpponent",
     "TeamDashboardByShootingSplits",
     "TeamDashboardByTeamPerformance",
     "TeamDashboardByYearOverYear",

@@ -116,7 +116,6 @@ __all__ = [
     "teamdashptreb",
     "teamdashptshots",
     "teamdashboardbygeneralsplits",
-    "teamdashboardbyopponent",
     "teamdashboardbyshootingsplits",
     "teamdashboardbyteamperformance",
     "teamdashboardbyyearoveryear",
@@ -256,7 +255,6 @@ from .teamdashptpass import TeamDashPtPass
 from .teamdashptreb import TeamDashPtReb
 from .teamdashptshots import TeamDashPtShots
 from .teamdashboardbygeneralsplits import TeamDashboardByGeneralSplits
-from .teamdashboardbyopponent import TeamDashboardByOpponent
 from .teamdashboardbyshootingsplits import TeamDashboardByShootingSplits
 from .teamdashboardbyteamperformance import TeamDashboardByTeamPerformance
 from .teamdashboardbyyearoveryear import TeamDashboardByYearOverYear
