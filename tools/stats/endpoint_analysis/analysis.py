@@ -99,7 +99,6 @@ missing_required_parameters = {
     "ShotChartLineupDetail": {"GameID": "", "TeamID": ""},
     "TeamAndPlayersVsPlayers": {"Season": Season.default},
     "TeamDashboardByGeneralSplits": {"Season": Season.default},
-    "TeamDashboardByLastNGames": {"Season": Season.default},
     "TeamDashboardByOpponent": {"Season": Season.default},
     "TeamDashboardByShootingSplits": {"Season": Season.default},
     "TeamDashboardByTeamPerformance": {"Season": Season.default},
