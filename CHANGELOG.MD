@@ -20,7 +20,8 @@
 Date: TBD
 
 ### Security
-Set minimum requirement for [requests](https://pypi.org/project/requests/) to 2.31 per [CVE-2023-32681](https://www.cve.org/CVERecord?id=CVE-2023-32681) / [CWE-200](https://cwe.mitre.org/data/definitions/200.html) 
+- Set minimum requirement for [requests](https://pypi.org/project/requests/) to 2.31 per [CVE-2023-32681](https://www.cve.org/CVERecord?id=CVE-2023-32681) / [CWE-200](https://cwe.mitre.org/data/definitions/200.html) 
+- Set minimum requirement for [certifi](https://pypi.org/project/certifi/) to 2022.12.07 per [CVE-2022-23491](https://www.cve.org/CVERecord?id=CVE-2022-23491) / [CWE-345](https://cwe.mitre.org/data/definitions/345.html) 
 
 ## v1.3.0
 
