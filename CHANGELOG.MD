@@ -15,9 +15,9 @@
 - `Security` in case of vulnerabilities.
 
 # Version History
-## v1.3.1 (Draft)
+## v1.3.1
 
-Date: TBD
+Date: 2023.10.07
 
 ### Security
 - Set minimum requirement for [requests](https://pypi.org/project/requests/) to 2.31 per [CVE-2023-32681](https://www.cve.org/CVERecord?id=CVE-2023-32681) / [CWE-200](https://cwe.mitre.org/data/definitions/200.html) 
