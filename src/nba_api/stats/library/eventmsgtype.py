@@ -15,4 +15,4 @@ class EventMsgType(Enum):
     EJECTION = 11
     PERIOD_BEGIN = 12
     PERIOD_END = 13
-    UNKNOWN = 18
+    INSTANT_REPLAY = 18
