@@ -15,6 +15,12 @@
 - `Security` in case of vulnerabilities.
 
 # Version History
+
+## v1.3.2
+
+### Security
+- Set minimum requirement for [certifi](https://pypi.org/project/certifi/) to 2023.7.22 per [CVE-2022-23491](https://www.cve.org/CVERecord?id=CVE-2023-37920) / [CWE-296](https://cwe.mitre.org/data/definitions/296.html) 
+
 ## v1.3.1
 
 Date: 2023.10.07
