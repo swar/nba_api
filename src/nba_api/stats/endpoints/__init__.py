@@ -48,6 +48,7 @@ __all__ = [
     "homepagev2",
     "hustlestatsboxscore",
     "infographicfanduelplayer",
+    "iststandings",
     "leaderstiles",
     "leaguedashlineups",
     "leaguedashplayerbiostats",
@@ -184,6 +185,7 @@ from .glalumboxscoresimilarityscore import GLAlumBoxScoreSimilarityScore
 from .homepageleaders import HomePageLeaders
 from .homepagev2 import HomePageV2
 from .hustlestatsboxscore import HustleStatsBoxScore
+from .iststandings import ISTStandings
 from .infographicfanduelplayer import InfographicFanDuelPlayer
 from .leaderstiles import LeadersTiles
 from .leaguedashlineups import LeagueDashLineups
