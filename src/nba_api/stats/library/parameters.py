@@ -716,6 +716,13 @@ class SeasonSegmentNullable(_NotRequired, SeasonSegment):
     pass
 
 
+class Section:
+    group = 'group'
+    wildcard = 'wildcard'
+
+    default = group
+
+
 class ShotClockRange:
     def calculate_range(self, i):
         i = float(i)
