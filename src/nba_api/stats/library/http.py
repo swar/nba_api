@@ -5,6 +5,7 @@ from nba_api.stats.library.parserv3 import (
     NBAStatsBoxscoreTraditionalParserV3,
     NBAStatsBoxscoreMatchupsParserV3,
     NBAStatsPlayByPlayParserV3,
+    NBAStatsISTStandingsParser
 )
 
 
@@ -20,6 +21,7 @@ PARSER_DICT = {
     "boxscoretraditionalv3": NBAStatsBoxscoreTraditionalParserV3,
     "boxscoreusagev3": NBAStatsBoxscoreParserV3,
     "playbyplayv3": NBAStatsPlayByPlayParserV3,
+    "iststandings": NBAStatsISTStandingsParser
 }
 
 try:
