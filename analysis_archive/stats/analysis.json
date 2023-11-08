@@ -2801,6 +2801,79 @@
         ],
         "status": "success"
     },
+    "ISTStangings": {
+        "data_sets": {
+            "Standings": [
+                "leagueId",
+                "seasonYear",
+                "teamId",
+                "teamCity",
+                "teamName",
+                "teamAbbreviation",
+                "teamSlug",
+                "conference",
+                "istGroup",
+                "clinchIndicator",
+                "clinchedIstKnockout",
+                "clinchedIstGroup",
+                "clinchedIstWildcard",
+                "istWildcardRank",
+                "istGroupRank",
+                "istKnockoutRank",
+                "wins",
+                "losses",
+                "pct",
+                "istGroupGb",
+                "istWildcardGb",
+                "diff",
+                "pts",
+                "oppPts",
+                "gameId1",
+                "opponentTeamAbbreviation1",
+                "location1",
+                "gameStatus1",
+                "gameStatusText1",
+                "outcome1",
+                "gameId2",
+                "opponentTeamAbbreviation2",
+                "location2",
+                "gameStatus2",
+                "gameStatusText2",
+                "outcome2",
+                "gameId3",
+                "opponentTeamAbbreviation3",
+                "location3",
+                "gameStatus3",
+                "gameStatusText3",
+                "outcome3",
+                "gameId4",
+                "opponentTeamAbbreviation4",
+                "location4",
+                "gameStatus4",
+                "gameStatusText4",
+                "outcome4"
+            ]
+        },
+        "endpoint": "ISTStangings",
+        "last_validated_date": "2023-11-08",
+        "nullable_parameters": [],
+        "parameter_patterns": {
+            "GameID": "^\\d{2}$",
+            "Season": "^\\d{4}-\\d{2}$",
+            "Section": "^(group)|(widcard)$"
+        },
+        "parameters": [
+            "LeagueID",
+            "Season",
+            "Section"
+        ],
+        "required_parameters": [
+            "LeagueID",
+            "Season",
+            "Section"
+        ],
+        "status": "success"
+    },
     "LeadersTiles": {
         "data_sets": {
             "AllTimeSeasonHigh": [
