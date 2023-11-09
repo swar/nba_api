@@ -2532,11 +2532,7 @@ parameter_map = {
             "^(\\d{4}-\\d{2})|(\\d{4})$": "Season",
         },
     },
-    "Section": {
-        "non-nullable": {
-            "^(group)|(wildcard)$": "Section"
-        }
-    },
+    "Section": {"non-nullable": {"^(group)|(wildcard)$": "Section"}},
     "SeriesID": {"nullable": {None: "SeriesIDNullable"}, "non-nullable": {}},
     "ShotClockRange": {
         "nullable": {

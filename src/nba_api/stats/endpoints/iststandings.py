@@ -1,8 +1,6 @@
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
-from nba_api.stats.library.parameters import (
-    LeagueID, Season, Section
-)
+from nba_api.stats.library.parameters import LeagueID, Season, Section
 
 
 class ISTStandings(Endpoint):
@@ -56,7 +54,7 @@ class ISTStandings(Endpoint):
             "location4",
             "gameStatus4",
             "gameStatusText4",
-            "outcome4"
+            "outcome4",
         ]
     }
 
@@ -69,7 +67,7 @@ class ISTStandings(Endpoint):
         self,
         league_id=LeagueID.default,
         season=Season.default,
-        section = Section.default,
+        section=Section.default,
         proxy=None,
         headers=None,
         timeout=30,
@@ -80,9 +78,9 @@ class ISTStandings(Endpoint):
             self.headers = headers
         self.timeout = timeout
         self.parameters = {
-            'LeagueID': league_id,
-            'Season': '20' + season,
-            'Section': section
+            "LeagueID": league_id,
+            "Season": "20" + season,
+            "Section": section,
         }
         if get_request:
             self.get_request()
@@ -99,5 +97,8 @@ class ISTStandings(Endpoint):
 
     def load_response(self):
         data_sets = self.nba_response.get_data_sets(self.endpoint)
-        self.data_sets = [Endpoint.DataSet(data=data_set) for data_set_name, data_set in data_sets.items()]
-        self.standings = Endpoint.DataSet(data=data_sets['Standings'])
+        self.data_sets = [
+            Endpoint.DataSet(data=data_set)
+            for data_set_name, data_set in data_sets.items()
+        ]
+        self.standings = Endpoint.DataSet(data=data_sets["Standings"])

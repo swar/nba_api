@@ -20,12 +20,13 @@ except ImportError:
 try:
     from nba_api.library.debug.debug import PROXY
 except ImportError:
-    PROXY = ''
+    PROXY = ""
 
 
 if DEBUG:
     from hashlib import md5
-    print('DEBUG MODE')
+
+    print("DEBUG MODE")
 
 
 class NBAResponse:
@@ -55,7 +56,6 @@ class NBAResponse:
 
 
 class NBAHTTP:
-
     nba_response = NBAResponse
 
     base_url = None
@@ -67,9 +67,18 @@ class NBAHTTP:
     def clean_contents(self, contents):
         return contents
 
-    def send_api_request(self, endpoint, parameters, referer=None, proxy=None, headers=None, timeout=None, raise_exception_on_error=False):
+    def send_api_request(
+        self,
+        endpoint,
+        parameters,
+        referer=None,
+        proxy=None,
+        headers=None,
+        timeout=None,
+        raise_exception_on_error=False,
+    ):
         if not self.base_url:
-            raise Exception('Cannot use send_api_request from _HTTP class.')
+            raise Exception("Cannot use send_api_request from _HTTP class.")
         base_url = self.base_url.format(endpoint=endpoint)
         endpoint = endpoint.lower()
         self.parameters = parameters
@@ -80,7 +89,7 @@ class NBAHTTP:
             request_headers = headers
 
         if referer:
-            request_headers['Referer'] = referer
+            request_headers["Referer"] = referer
 
         if proxy is None:
             request_proxy = PROXY
@@ -110,31 +119,44 @@ class NBAHTTP:
 
         if DEBUG and DEBUG_STORAGE:
             print(endpoint, parameters)
-            directory_name = 'debug_storage'
-            parameter_string = '&'.join('{}={}'.format(key, '' if val is None else quote_plus(str(val))) for key, val in parameters)
+            directory_name = "debug_storage"
+            parameter_string = "&".join(
+                "{}={}".format(key, "" if val is None else quote_plus(str(val)))
+                for key, val in parameters
+            )
             url = "{}?{}".format(base_url, parameter_string)
             print(url)
-            file_name = "{}-{}.txt".format(endpoint, md5(parameter_string.encode('utf-8')).hexdigest())
-            file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'debug', directory_name)
+            file_name = "{}-{}.txt".format(
+                endpoint, md5(parameter_string.encode("utf-8")).hexdigest()
+            )
+            file_path = os.path.join(
+                os.path.dirname(os.path.abspath(__file__)), "debug", directory_name
+            )
             if not os.path.exists(file_path):
                 os.makedirs(file_path)
             file_path = os.path.join(file_path, file_name)
             print(file_name, os.path.isfile(file_path))
             if os.path.isfile(file_path):
-                f = open(file_path, 'r')
+                f = open(file_path, "r")
                 contents = f.read()
                 f.close()
-                print('loading from file...')
+                print("loading from file...")
 
         if not contents:
-            response = requests.get(url=base_url, params=parameters, headers=request_headers, proxies=proxies, timeout=timeout)
+            response = requests.get(
+                url=base_url,
+                params=parameters,
+                headers=request_headers,
+                proxies=proxies,
+                timeout=timeout,
+            )
             url = response.url
             status_code = response.status_code
             contents = response.text
 
         contents = self.clean_contents(contents)
         if DEBUG and DEBUG_STORAGE:
-            f = open(file_path, 'w')
+            f = open(file_path, "w")
             f.write(contents)
             f.close()
             print(url)
@@ -142,6 +164,6 @@ class NBAHTTP:
         data = self.nba_response(response=contents, status_code=status_code, url=url)
 
         if raise_exception_on_error and not data.valid_json():
-            raise Exception('InvalidResponse: Response is not in a valid JSON format.')
+            raise Exception("InvalidResponse: Response is not in a valid JSON format.")
 
         return data

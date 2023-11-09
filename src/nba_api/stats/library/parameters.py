@@ -2,39 +2,39 @@ from datetime import datetime
 
 
 class _NotRequired:
-    none = ''
+    none = ""
 
     default = none
 
 
 class _ContextMeasure:
-    pts = 'PTS'
-    fgm = 'FGM'
-    fga = 'FGA'
-    fg_pct = 'FG_PCT'
-    fg3m = 'FG3M'
-    fg3a = 'FG3A'
-    fg3_pct = 'FG3_PCT'
-    pts_fb = 'PTS_FB'
-    pts_off_tov = 'PTS_OFF_TOV'
-    pts_2nd_chance = 'PTS_2ND_CHANCE'
+    pts = "PTS"
+    fgm = "FGM"
+    fga = "FGA"
+    fg_pct = "FG_PCT"
+    fg3m = "FG3M"
+    fg3a = "FG3A"
+    fg3_pct = "FG3_PCT"
+    pts_fb = "PTS_FB"
+    pts_off_tov = "PTS_OFF_TOV"
+    pts_2nd_chance = "PTS_2ND_CHANCE"
 
     default = pts
 
 
 class _No:
-    no = 'N'
+    no = "N"
 
     default = no
 
 
 class _YesNo(_No):
-    yes = 'Y'
+    yes = "Y"
 
 
 class Active:
-    all_player = '0'
-    active_player = '1'
+    all_player = "0"
+    active_player = "1"
 
     default = all_player
 
@@ -44,9 +44,9 @@ class ActiveNullable(_NotRequired, Active):
 
 
 class AheadBehind:
-    ahead_or_behind = 'Ahead or Behind'
-    behind_or_tied = 'Behind or Tied'
-    ahead_or_tied = 'Ahead or Tied'
+    ahead_or_behind = "Ahead or Behind"
+    behind_or_tied = "Behind or Tied"
+    ahead_or_tied = "Ahead or Tied"
 
     default = ahead_or_behind
 
@@ -56,8 +56,8 @@ class AheadBehindNullable(_NotRequired, AheadBehind):
 
 
 class AllStar:
-    all_player = '0'
-    all_star = '1'
+    all_player = "0"
+    all_star = "1"
 
     default = all_player
 
@@ -67,13 +67,13 @@ class AllStarNullable(_NotRequired, AllStar):
 
 
 class ClutchTime:
-    last_5_minutes = 'Last 5 Minutes'
-    last_4_minutes = 'Last 4 Minutes'
-    last_3_minutes = 'Last 3 Minutes'
-    last_2_minutes = 'Last 2 Minutes'
-    last_1_minute = 'Last 1 Minute'
-    last_30_seconds = 'Last 30 Seconds'
-    last_10_seconds = 'Last 10 Seconds'
+    last_5_minutes = "Last 5 Minutes"
+    last_4_minutes = "Last 4 Minutes"
+    last_3_minutes = "Last 3 Minutes"
+    last_2_minutes = "Last 2 Minutes"
+    last_1_minute = "Last 1 Minute"
+    last_30_seconds = "Last 30 Seconds"
+    last_10_seconds = "Last 10 Seconds"
 
     default = last_5_minutes
 
@@ -83,9 +83,9 @@ class ClutchTimeNullable(_NotRequired, ClutchTime):
 
 
 class Conference:
-    east = 'East'
-    west = 'West'
-    none = ''
+    east = "East"
+    west = "West"
+    none = ""
 
     default = none
 
@@ -95,9 +95,9 @@ class ConferenceNullable(_NotRequired, Conference):
 
 
 class ContextMeasureSimple(_ContextMeasure):
-    pf = 'PF'
-    efg_pct = 'EFG_PCT'
-    ts_pct = 'TS_PCT'
+    pf = "PF"
+    efg_pct = "EFG_PCT"
+    ts_pct = "TS_PCT"
 
 
 class ContextMeasureSimpleNullable(_NotRequired, ContextMeasureSimple):
@@ -105,84 +105,84 @@ class ContextMeasureSimpleNullable(_NotRequired, ContextMeasureSimple):
 
 
 class ContextMeasureDetailed(_ContextMeasure):
-    ftm = 'FTM'
-    fta = 'FTA'
-    oreb = 'OREB'
-    dreb = 'DREB'
-    ast = 'AST'
-    fgm_ast = 'FGM_AST'
-    fg3_ast = 'FG3_AST'
-    stl = 'STL'
-    blk = 'BLK'
-    blka = 'BLKA'
-    tov = 'TOV'
-    poss_end_ft = 'POSS_END_FT'
-    pts_paint = 'PTS_PAINT'
-    reb = 'REB'
-    tm_fgm = 'TM_FGM'
-    tm_fga = 'TM_FGA'
-    tm_fg3m = 'TM_FG3M'
-    tm_fg3a = 'TM_FG3A'
-    tm_ftm = 'TM_FTM'
-    tm_fta = 'TM_FTA'
-    tm_oreb = 'TM_OREB'
-    tm_dreb = 'TM_DREB'
-    tm_reb = 'TM_REB'
-    tm_team_reb = 'TM_TEAM_REB'
-    tm_ast = 'TM_AST'
-    tm_stl = 'TM_STL'
-    tm_blk = 'TM_BLK'
-    tm_blka = 'TM_BLKA'
-    tm_tov = 'TM_TOV'
-    tm_team_tov = 'TM_TEAM_TOV'
-    tm_pf = 'TM_PF'
-    tm_pfd = 'TM_PFD'
-    tm_pts = 'TM_PTS'
-    tm_pts_paint = 'TM_PTS_PAINT'
-    tm_pts_fb = 'TM_PTS_FB'
-    tm_pts_off_tov = 'TM_PTS_OFF_TOV'
-    tm_pts_2nd_chance = 'TM_PTS_2ND_CHANCE'
-    tm_fgm_ast = 'TM_FGM_AST'
-    tm_fg3_ast = 'TM_FG3_AST'
-    tm_poss_end_ft = 'TM_POSS_END_FT'
-    opp_ftm = 'OPP_FTM'
-    opp_fta = 'OPP_FTA'
-    opp_oreb = 'OPP_OREB'
-    opp_dreb = 'OPP_DREB'
-    opp_reb = 'OPP_REB'
-    opp_team_reb = 'OPP_TEAM_REB'
-    opp_ast = 'OPP_AST'
-    opp_stl = 'OPP_STL'
-    opp_blk = 'OPP_BLK'
-    opp_blka = 'OPP_BLKA'
-    opp_tov = 'OPP_TOV'
-    opp_team_tov = 'OPP_TEAM_TOV'
-    opp_pf = 'OPP_PF'
-    opp_pfd = 'OPP_PFD'
-    opp_pts = 'OPP_PTS'
-    opp_pts_paint = 'OPP_PTS_PAINT'
-    opp_pts_fb = 'OPP_PTS_FB'
-    opp_pts_off_tov = 'OPP_PTS_OFF_TOV'
-    opp_pts_2nd_chance = 'OPP_PTS_2ND_CHANCE'
-    opp_fgm_ast = 'OPP_FGM_AST'
-    opp_fg3_ast = 'OPP_FG3_AST'
-    opp_poss_end_ft = 'OPP_POSS_END_FT'
+    ftm = "FTM"
+    fta = "FTA"
+    oreb = "OREB"
+    dreb = "DREB"
+    ast = "AST"
+    fgm_ast = "FGM_AST"
+    fg3_ast = "FG3_AST"
+    stl = "STL"
+    blk = "BLK"
+    blka = "BLKA"
+    tov = "TOV"
+    poss_end_ft = "POSS_END_FT"
+    pts_paint = "PTS_PAINT"
+    reb = "REB"
+    tm_fgm = "TM_FGM"
+    tm_fga = "TM_FGA"
+    tm_fg3m = "TM_FG3M"
+    tm_fg3a = "TM_FG3A"
+    tm_ftm = "TM_FTM"
+    tm_fta = "TM_FTA"
+    tm_oreb = "TM_OREB"
+    tm_dreb = "TM_DREB"
+    tm_reb = "TM_REB"
+    tm_team_reb = "TM_TEAM_REB"
+    tm_ast = "TM_AST"
+    tm_stl = "TM_STL"
+    tm_blk = "TM_BLK"
+    tm_blka = "TM_BLKA"
+    tm_tov = "TM_TOV"
+    tm_team_tov = "TM_TEAM_TOV"
+    tm_pf = "TM_PF"
+    tm_pfd = "TM_PFD"
+    tm_pts = "TM_PTS"
+    tm_pts_paint = "TM_PTS_PAINT"
+    tm_pts_fb = "TM_PTS_FB"
+    tm_pts_off_tov = "TM_PTS_OFF_TOV"
+    tm_pts_2nd_chance = "TM_PTS_2ND_CHANCE"
+    tm_fgm_ast = "TM_FGM_AST"
+    tm_fg3_ast = "TM_FG3_AST"
+    tm_poss_end_ft = "TM_POSS_END_FT"
+    opp_ftm = "OPP_FTM"
+    opp_fta = "OPP_FTA"
+    opp_oreb = "OPP_OREB"
+    opp_dreb = "OPP_DREB"
+    opp_reb = "OPP_REB"
+    opp_team_reb = "OPP_TEAM_REB"
+    opp_ast = "OPP_AST"
+    opp_stl = "OPP_STL"
+    opp_blk = "OPP_BLK"
+    opp_blka = "OPP_BLKA"
+    opp_tov = "OPP_TOV"
+    opp_team_tov = "OPP_TEAM_TOV"
+    opp_pf = "OPP_PF"
+    opp_pfd = "OPP_PFD"
+    opp_pts = "OPP_PTS"
+    opp_pts_paint = "OPP_PTS_PAINT"
+    opp_pts_fb = "OPP_PTS_FB"
+    opp_pts_off_tov = "OPP_PTS_OFF_TOV"
+    opp_pts_2nd_chance = "OPP_PTS_2ND_CHANCE"
+    opp_fgm_ast = "OPP_FGM_AST"
+    opp_fg3_ast = "OPP_FG3_AST"
+    opp_poss_end_ft = "OPP_POSS_END_FT"
 
 
 class DayOffset:
     def days(self, i):
         return str(int(i))
 
-    default = '0'
+    default = "0"
 
 
 class DefenseCategory:
-    overall = 'Overall'
-    threes = '3 Pointers'
-    twos = '2 Pointers'
-    less_than_6ft = 'Less Than 6Ft'
-    less_than_10ft = 'Less Than 10Ft'
-    greater_than_15ft = 'Greater Than 15Ft'
+    overall = "Overall"
+    threes = "3 Pointers"
+    twos = "2 Pointers"
+    less_than_6ft = "Less Than 6Ft"
+    less_than_10ft = "Less Than 10Ft"
+    greater_than_15ft = "Greater Than 15Ft"
 
     default = overall
 
@@ -192,27 +192,27 @@ class DefenseCategoryNullable(_NotRequired, DefenseCategory):
 
 
 class Direction:
-    asc = 'ASC'
-    desc = 'DESC'
+    asc = "ASC"
+    desc = "DESC"
 
     default = asc
 
 
 class DistanceRange:
-    range_5ft = '5ft Range'
-    range_8ft = '8ft Range'
-    by_zone = 'By Zone'
+    range_5ft = "5ft Range"
+    range_8ft = "8ft Range"
+    by_zone = "By Zone"
 
     default = by_zone
 
 
 class DivisionSimple:
-    atlantic = 'Atlantic'
-    central = 'Central'
-    northwest = 'Northwest'
-    pacific = 'Pacific'
-    southeast = 'Southeast'
-    southwest = 'Southwest'
+    atlantic = "Atlantic"
+    central = "Central"
+    northwest = "Northwest"
+    pacific = "Pacific"
+    southeast = "Southeast"
+    southwest = "Southwest"
 
     default = atlantic
 
@@ -222,8 +222,8 @@ class DivisionSimpleNullable(_NotRequired, DivisionSimple):
 
 
 class Division:
-    east = 'East'
-    west = 'West'
+    east = "East"
+    west = "West"
 
     default = east
 
@@ -233,7 +233,7 @@ class DivisionNullable(_NotRequired, Division):
 
 
 class EndRange:
-    default = '0'
+    default = "0"
 
 
 class EndRangeNullable(_NotRequired, EndRange):
@@ -251,8 +251,8 @@ class GameDate:
 
 
 class GameScopeSimple:
-    last_10 = 'Last 10'
-    yesterday = 'Yesterday'
+    last_10 = "Last 10"
+    yesterday = "Yesterday"
 
     default = last_10
 
@@ -262,16 +262,16 @@ class GameScopeSimpleNullable(_NotRequired, GameScopeSimple):
 
 
 class GameScopeDetailed(GameScopeSimple):
-    season = 'Season'
-    finals = 'Finals'
+    season = "Season"
+    finals = "Finals"
 
     default = season
 
 
 class GameSegment:
-    first_half = 'First Half'
-    overtime = 'Overtime'
-    second_half = 'Second Half'
+    first_half = "First Half"
+    overtime = "Overtime"
+    second_half = "Second Half"
 
     default = first_half
 
@@ -284,12 +284,12 @@ class GroupQuantity:
     def players(self, i):
         return str(int(i))
 
-    default = '5'
+    default = "5"
 
 
 class Historical:
-    season = '0'
-    all_time = '1'
+    season = "0"
+    all_time = "1"
 
     default = season
 
@@ -302,7 +302,7 @@ class LastNGames:
     def games(self, i):
         return str(int(i))
 
-    default = '0'
+    default = "0"
 
 
 class LastNGamesNullable(_NotRequired, LastNGames):
@@ -310,10 +310,10 @@ class LastNGamesNullable(_NotRequired, LastNGames):
 
 
 class LeagueID:
-    nba = '00'
-    aba = '01'
-    wnba = '10'
-    g_league = '20'
+    nba = "00"
+    aba = "01"
+    wnba = "10"
+    g_league = "20"
 
     default = nba
 
@@ -323,8 +323,8 @@ class LeagueIDNullable(_NotRequired, LeagueID):
 
 
 class Location:
-    home = 'Home'
-    road = 'Road'
+    home = "Home"
+    road = "Road"
 
     default = home
 
@@ -334,35 +334,35 @@ class LocationNullable(_NotRequired, Location):
 
 
 class MeasureTypeBase:
-    base = 'Base'
+    base = "Base"
 
     default = base
 
 
 class MeasureTypeSimple(MeasureTypeBase):
-    opponent = 'Opponent'
+    opponent = "Opponent"
 
 
 class MeasureTypePlayerGameLogs(MeasureTypeBase):
-    advanced = 'Advanced'
-    misc = 'Misc'
-    scoring = 'Scoring'
-    usage = 'Usage'
+    advanced = "Advanced"
+    misc = "Misc"
+    scoring = "Scoring"
+    usage = "Usage"
 
 
 class MeasureTypeDetailed(MeasureTypeSimple, MeasureTypePlayerGameLogs):
-    four_factors = 'Four Factors'
+    four_factors = "Four Factors"
 
 
 class MeasureTypeDetailedDefense(MeasureTypeDetailed):
-    defense = 'Defense'
+    defense = "Defense"
 
 
 class Month:
     def month(self, i):
         return str(int(i))
 
-    default = '0'
+    default = "0"
 
 
 class MonthNullable(_NotRequired, Month):
@@ -373,12 +373,12 @@ class NumberOfGames:
     def games(self, i):
         return str(int(i))
 
-    default = '2147483647'
+    default = "2147483647"
 
 
 class Outcome:
-    win = 'W'
-    loss = 'L'
+    win = "W"
+    loss = "L"
 
     default = win
 
@@ -404,12 +404,12 @@ class PlusMinusNo(_No):
 
 
 class Period:
-    all = '0'
+    all = "0"
 
-    first = '1'
-    second = '2'
-    third = '3'
-    fourth = '4'
+    first = "1"
+    second = "2"
+    third = "3"
+    fourth = "4"
 
     def quarter(self, i):
         return str(int(i))
@@ -441,8 +441,8 @@ class EndPeriodNullable(_NotRequired, EndPeriod):
 
 
 class PerModeSimple:
-    totals = 'Totals'
-    per_game = 'PerGame'
+    totals = "Totals"
+    per_game = "PerGame"
 
     default = totals
 
@@ -452,30 +452,30 @@ class PerModeSimpleNullable(_NotRequired, PerModeSimple):
 
 
 class PerMode36(PerModeSimple):
-    per_36 = 'Per36'
+    per_36 = "Per36"
 
 
 class PerMode48(PerModeSimple):
-    per_48 = 'Per48'
+    per_48 = "Per48"
 
 
 class PerModeTime(PerMode36, PerMode48):
-    minutes_per = 'MinutesPer'
-    per_40 = 'Per40'
+    minutes_per = "MinutesPer"
+    per_40 = "Per40"
 
 
 class PerModeDetailed(PerModeTime):
-    per_minute = 'PerMinute'
-    per_possession = 'PerPossession'
-    per_play = 'PerPlay'
-    per_100_possessions = 'Per100Possessions'
-    per_100_plays = 'Per100Plays'
+    per_minute = "PerMinute"
+    per_possession = "PerPossession"
+    per_play = "PerPlay"
+    per_100_possessions = "Per100Possessions"
+    per_100_plays = "Per100Plays"
 
 
 class PlayerExperience:
-    rookie = 'Rookie'
-    sophomore = 'Sophomore'
-    veteran = 'Veteran'
+    rookie = "Rookie"
+    sophomore = "Sophomore"
+    veteran = "Veteran"
 
     default = rookie
 
@@ -485,23 +485,23 @@ class PlayerExperienceNullable(_NotRequired, PlayerExperience):
 
 
 class PlayerOrTeam:
-    player = 'Player'
-    team = 'Team'
+    player = "Player"
+    team = "Team"
 
     default = team
 
 
 class PlayerOrTeamAbbreviation:
-    player = 'P'
-    team = 'T'
+    player = "P"
+    team = "T"
 
     default = team
 
 
 class PlayerPosition:
-    forward = 'Forward'
-    center = 'Center'
-    guard = 'Guard'
+    forward = "Forward"
+    center = "Center"
+    guard = "Guard"
 
     default = forward
 
@@ -515,13 +515,13 @@ class PositionNullable(_NotRequired, PlayerPosition):
 
 
 class PlayerPositionAbbreviation:
-    forward = 'F'
-    center = 'C'
-    guard = 'G'
-    center_forward = 'C-F'
-    forward_center = 'F-C'
-    forward_guard = 'F-G'
-    guard_forward = 'G-F'
+    forward = "F"
+    center = "C"
+    guard = "G"
+    center_forward = "C-F"
+    forward_center = "F-C"
+    forward_guard = "F-G"
+    guard_forward = "G-F"
 
     default = forward
 
@@ -531,8 +531,8 @@ class PlayerPositionAbbreviationNullable(_NotRequired, PlayerPositionAbbreviatio
 
 
 class PlayerScope:
-    all_players = 'All Players'
-    rookies = 'Rookies'
+    all_players = "All Players"
+    rookies = "Rookies"
 
     default = all_players
 
@@ -546,17 +546,17 @@ class ActivePlayers(_YesNo):
 
 
 class PlayType:
-    transition = 'Transition'
-    isolation = 'Isolation'
-    pr_ball_handler = 'PRBallHandler'
-    pr_roll_man = 'PRRollman'
-    post_up = 'Postup'
-    spot_up = 'Spotup'
-    handoff = 'Handoff'
-    cut = 'Cut'
-    off_screen = 'OffScreen'
-    putbacks = 'OffRebound'
-    misc = 'Misc'
+    transition = "Transition"
+    isolation = "Isolation"
+    pr_ball_handler = "PRBallHandler"
+    pr_roll_man = "PRRollman"
+    post_up = "Postup"
+    spot_up = "Spotup"
+    handoff = "Handoff"
+    cut = "Cut"
+    off_screen = "OffScreen"
+    putbacks = "OffRebound"
+    misc = "Misc"
 
     default = transition
 
@@ -569,7 +569,7 @@ class PointDiff:
     def points(self, i):
         return str(int(i))
 
-    default = '5'
+    default = "5"
 
 
 class PointDiffNullable(_NotRequired, PointDiff):
@@ -577,24 +577,24 @@ class PointDiffNullable(_NotRequired, PointDiff):
 
 
 class PtMeasureType:
-    speed_distance = 'SpeedDistance'
-    rebounding = 'Rebounding'
-    possessions = 'Possessions'
-    catch_shoot = 'CatchShoot'
-    pull_up_shot = 'PullUpShot'
-    defense = 'Defense'
-    drives = 'Drives'
-    passing = 'Passing'
-    elbowTouch = 'ElbowTouch'
-    postTouch = 'PostTouch'
-    paintTouch = 'PaintTouch'
-    efficiency = 'Efficiency'
+    speed_distance = "SpeedDistance"
+    rebounding = "Rebounding"
+    possessions = "Possessions"
+    catch_shoot = "CatchShoot"
+    pull_up_shot = "PullUpShot"
+    defense = "Defense"
+    drives = "Drives"
+    passing = "Passing"
+    elbowTouch = "ElbowTouch"
+    postTouch = "PostTouch"
+    paintTouch = "PaintTouch"
+    efficiency = "Efficiency"
 
     default = speed_distance
 
 
 class RangeType:
-    default = '0'
+    default = "0"
 
 
 class RangeTypeNullable(_NotRequired, RangeType):
@@ -610,11 +610,11 @@ class RankNo(_No):
 
 
 class RunType:
-    default = 'each second'
+    default = "each second"
 
 
 class StartRange:
-    default = '0'
+    default = "0"
 
 
 class StartRangeNullable(_NotRequired, StartRange):
@@ -622,9 +622,9 @@ class StartRangeNullable(_NotRequired, StartRange):
 
 
 class Scope:
-    rs = 'RS'
-    s = 'S'
-    rookies = 'Rookies'
+    rs = "RS"
+    s = "S"
+    rookies = "Rookies"
 
     default = s
 
@@ -644,10 +644,14 @@ class SeasonYearNullable(_NotRequired, SeasonYear):
 
 class Season(SeasonYear):
     current_season_year = SeasonYear.current_season_year
-    current_season = '{}-{}'.format(current_season_year, str(current_season_year + 1)[2:])
+    current_season = "{}-{}".format(
+        current_season_year, str(current_season_year + 1)[2:]
+    )
 
     # Get last Season
-    previous_season = '{}-{}'.format(current_season_year-1, str(current_season_year)[2:])
+    previous_season = "{}-{}".format(
+        current_season_year - 1, str(current_season_year)[2:]
+    )
 
     default = current_season
 
@@ -657,7 +661,7 @@ class SeasonNullable(_NotRequired, Season):
 
 
 class SeasonAll(Season):
-    all = 'ALL'
+    all = "ALL"
 
 
 class SeasonAllNullable(_NotRequired, SeasonAll):
@@ -665,11 +669,11 @@ class SeasonAllNullable(_NotRequired, SeasonAll):
 
 
 class SeasonAll_Time(Season):
-    all_time = 'All Time'
+    all_time = "All Time"
 
 
 class SeasonAllTime(Season):
-    alltime = 'ALLTIME'
+    alltime = "ALLTIME"
 
 
 class SeasonID(SeasonYear):
@@ -683,14 +687,14 @@ class SeasonID(SeasonYear):
 
 
 class SeasonType:
-    regular = 'Regular Season'
-    preseason = 'Pre Season'
+    regular = "Regular Season"
+    preseason = "Pre Season"
 
     default = regular
 
 
 class SeasonTypePlayoffs(SeasonType):
-    playoffs = 'Playoffs'
+    playoffs = "Playoffs"
 
 
 class SeasonTypeNullable(_NotRequired, SeasonTypePlayoffs):
@@ -698,7 +702,7 @@ class SeasonTypeNullable(_NotRequired, SeasonTypePlayoffs):
 
 
 class SeasonTypeAllStar(SeasonTypePlayoffs):
-    all_star = 'All Star'
+    all_star = "All Star"
 
 
 class SeasonTypeAllStarNullable(_NotRequired, SeasonTypePlayoffs):
@@ -706,8 +710,8 @@ class SeasonTypeAllStarNullable(_NotRequired, SeasonTypePlayoffs):
 
 
 class SeasonSegment:
-    post_all_star = 'Post All-Star'
-    pre_all_star = 'Pre All-Star'
+    post_all_star = "Post All-Star"
+    pre_all_star = "Pre All-Star"
 
     default = post_all_star
 
@@ -717,8 +721,8 @@ class SeasonSegmentNullable(_NotRequired, SeasonSegment):
 
 
 class Section:
-    group = 'group'
-    wildcard = 'wildcard'
+    group = "group"
+    wildcard = "wildcard"
 
     default = group
 
@@ -727,27 +731,27 @@ class ShotClockRange:
     def calculate_range(self, i):
         i = float(i)
         if i > 24 or i <= 0:
-            return ''
+            return ""
         elif 22 < i <= 24:
-            return '24-22'
+            return "24-22"
         elif 18 < i <= 22:
-            return '22-18 Very Early'
+            return "22-18 Very Early"
         elif 15 < i <= 18:
-            return '18-15 Early'
+            return "18-15 Early"
         elif 7 < i <= 15:
-            return '15-7 Average'
+            return "15-7 Average"
         elif 4 < i <= 7:
-            return '7-4 Late'
+            return "7-4 Late"
         elif 0 < i <= 4:
-            return '4-0 Very Late'
+            return "4-0 Very Late"
 
-    range_22_24 = '24-22'
-    range_18_22 = '22-18 Very Early'
-    range_15_18 = '18-15 Early'
-    range_7_15 = '15-7 Average'
-    range_4_7 = '7-4 Late'
-    range_0_4 = '4-0 Very Late'
-    shot_clock_off = 'ShotClock Off'
+    range_22_24 = "24-22"
+    range_18_22 = "22-18 Very Early"
+    range_15_18 = "18-15 Early"
+    range_7_15 = "15-7 Average"
+    range_4_7 = "7-4 Late"
+    range_0_4 = "4-0 Very Late"
+    shot_clock_off = "ShotClock Off"
 
     default = shot_clock_off
 
@@ -757,31 +761,31 @@ class ShotClockRangeNullable(_NotRequired, ShotClockRange):
 
 
 class Sorter:
-    fgm = 'FGM'
-    fga = 'FGA'
-    fg_pct = 'FG_PCT'
-    fg3m = 'FG3M'
-    fg3a = 'FG3A'
-    fg3_pct = 'FG3_PCT'
-    ftm = 'FTM'
-    fta = 'FTA'
-    ft_pct = 'FT_PCT'
-    oreb = 'OREB'
-    dreb = 'DREB'
-    ast = 'AST'
-    stl = 'STL'
-    blk = 'BLK'
-    tov = 'TOV'
-    reb = 'REB'
-    pts = 'PTS'
-    date = 'DATE'
+    fgm = "FGM"
+    fga = "FGA"
+    fg_pct = "FG_PCT"
+    fg3m = "FG3M"
+    fg3a = "FG3A"
+    fg3_pct = "FG3_PCT"
+    ftm = "FTM"
+    fta = "FTA"
+    ft_pct = "FT_PCT"
+    oreb = "OREB"
+    dreb = "DREB"
+    ast = "AST"
+    stl = "STL"
+    blk = "BLK"
+    tov = "TOV"
+    reb = "REB"
+    pts = "PTS"
+    date = "DATE"
 
     default = date
 
 
 class StarterBench:
-    starters = 'Starters'
-    bench = 'Bench'
+    starters = "Starters"
+    bench = "Bench"
 
     default = starters
 
@@ -791,64 +795,64 @@ class StarterBenchNullable(_NotRequired, StarterBench):
 
 
 class Stat:
-    points = 'PTS'
-    rebounds = 'REB'
-    assists = 'AST'
-    field_goal_percent = 'FG_PCT'
-    free_throw_percent = 'FT_PCT'
-    threes_percent = 'FG3_PCT'
-    steals = 'STL'
-    blocks = 'BLK'
+    points = "PTS"
+    rebounds = "REB"
+    assists = "AST"
+    field_goal_percent = "FG_PCT"
+    free_throw_percent = "FT_PCT"
+    threes_percent = "FG3_PCT"
+    steals = "STL"
+    blocks = "BLK"
 
     default = points
 
 
 class StatCategory:
-    points = 'Points'
-    rebounds = 'Rebounds'
-    assists = 'Assists'
-    defense = 'Defense'
-    clutch = 'Clutch'
-    playmaking = 'Playmaking'
-    efficiency = 'Efficiency'
-    fast_break = 'Fast Break'
-    scoring_breakdown = 'Scoring Breakdown'
+    points = "Points"
+    rebounds = "Rebounds"
+    assists = "Assists"
+    defense = "Defense"
+    clutch = "Clutch"
+    playmaking = "Playmaking"
+    efficiency = "Efficiency"
+    fast_break = "Fast Break"
+    scoring_breakdown = "Scoring Breakdown"
 
     default = points
 
 
 class StatCategoryAbbreviation:
-    pts = 'PTS'
-    fgm = 'FGM'
-    fga = 'FGA'
-    fg_pct = 'FG_PCT'
-    fg3m = 'FG3M'
-    fg3a = 'FG3A'
-    fg3_pct = 'FG3_PCT'
-    ftm = 'FTM'
-    fta = 'FTA'
-    oreb = 'OREB'
-    dreb = 'DREB'
-    ast = 'AST'
-    stl = 'STL'
-    blk = 'BLK'
-    tov = 'TOV'
-    reb = 'REB'
+    pts = "PTS"
+    fgm = "FGM"
+    fga = "FGA"
+    fg_pct = "FG_PCT"
+    fg3m = "FG3M"
+    fg3a = "FG3A"
+    fg3_pct = "FG3_PCT"
+    ftm = "FTM"
+    fta = "FTA"
+    oreb = "OREB"
+    dreb = "DREB"
+    ast = "AST"
+    stl = "STL"
+    blk = "BLK"
+    tov = "TOV"
+    reb = "REB"
 
     default = pts
 
 
 class StatType:
-    traditional = 'Traditional'
-    advanced = 'Advanced'
-    tracking = 'Tracking'
+    traditional = "Traditional"
+    advanced = "Advanced"
+    tracking = "Tracking"
 
     default = traditional
 
 
 class TypeGrouping:
-    offensive = 'offensive'
-    defensive = 'defensive'
+    offensive = "offensive"
+    defensive = "defensive"
 
     default = offensive
 
