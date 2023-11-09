@@ -1990,6 +1990,18 @@ Variable Name | Value
 _**current_season_year**_ `default` | `2019`
 _**current_datetime**_ | `2020-08-16 17:10:16.971483`
 
+
+## _Section_
+##### Patterns 
+ - `^(group)|(widcard)$`
+
+Variable Name | Value
+------------ | -------------
+_**none**_ `default` | 
+_**group**_ | `group`
+_**wildcard**_ | `wildcard`
+
+
 ## _SeriesID_
 No available information.
 

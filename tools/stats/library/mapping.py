@@ -58,6 +58,7 @@ endpoint_list = [
     "HomePageV2",
     "HustleStatsBoxScore",
     "InfographicFanDuelPlayer",
+    "ISTStandings",
     "LeadersTiles",
     "LeagueDashLineups",
     "LeagueDashOppPtShot",
@@ -2530,6 +2531,11 @@ parameter_map = {
             "^(\\d{4}-\\d{2})|(All Time)$": "SeasonAll_Time",
             "^(\\d{4}-\\d{2})|(\\d{4})$": "Season",
         },
+    },
+    "Section": {
+        "non-nullable": {
+            "^(group)|(wildcard)$": "Section"
+        }
     },
     "SeriesID": {"nullable": {None: "SeriesIDNullable"}, "non-nullable": {}},
     "ShotClockRange": {
