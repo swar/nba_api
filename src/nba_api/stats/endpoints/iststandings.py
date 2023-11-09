@@ -79,7 +79,7 @@ class ISTStandings(Endpoint):
         self.timeout = timeout
         self.parameters = {
             "LeagueID": league_id,
-            "Season": "20" + season,
+            "Season": season,
             "Section": section,
         }
         if get_request:
