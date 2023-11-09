@@ -2,7 +2,6 @@ import json
 
 
 class Endpoint:
-
     class DataSet:
         key = None
         data = {}

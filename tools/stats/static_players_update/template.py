@@ -1,4 +1,4 @@
-file_template = '''player_index_id = 0
+file_template = """player_index_id = 0
 player_index_last_name = 1
 player_index_first_name = 2
 player_index_full_name = 3
@@ -52,6 +52,8 @@ teams = [
     [1610612765, 'DET', 'Pistons', 1948, 'Detroit', 'Detroit Pistons', 'Michigan', [1989, 1990, 2004]],
     [1610612766, 'CHA', 'Hornets', 1988, 'Charlotte', 'Charlotte Hornets', 'North Carolina', []]
 ]
-'''
+"""
 
-player_row_template ='''    [{id}, "{last_name}", "{first_name}", "{full_name}", {is_active}]'''
+player_row_template = (
+    """    [{id}, "{last_name}", "{first_name}", "{full_name}", {is_active}]"""
+)

@@ -1,6 +1,12 @@
 import re
 from nba_api.stats.library.data import players
-from nba_api.stats.library.data import player_index_id, player_index_full_name, player_index_first_name, player_index_last_name, player_index_is_active
+from nba_api.stats.library.data import (
+    player_index_id,
+    player_index_full_name,
+    player_index_first_name,
+    player_index_last_name,
+    player_index_is_active,
+)
 
 
 def _find_players(regex_pattern, row_id):
@@ -13,11 +19,11 @@ def _find_players(regex_pattern, row_id):
 
 def _get_player_dict(player_row):
     return {
-        'id': player_row[player_index_id],
-        'full_name': player_row[player_index_full_name],
-        'first_name': player_row[player_index_first_name],
-        'last_name': player_row[player_index_last_name],
-        'is_active': player_row[player_index_is_active]
+        "id": player_row[player_index_id],
+        "full_name": player_row[player_index_full_name],
+        "first_name": player_row[player_index_first_name],
+        "last_name": player_row[player_index_last_name],
+        "is_active": player_row[player_index_is_active],
     }
 
 
@@ -34,10 +40,10 @@ def find_players_by_last_name(regex_pattern):
 
 
 def find_player_by_id(player_id):
-    regex_pattern = '^{}$'.format(player_id)
+    regex_pattern = "^{}$".format(player_id)
     players_list = _find_players(regex_pattern, player_index_id)
     if len(players_list) > 1:
-        raise Exception('Found more than 1 id')
+        raise Exception("Found more than 1 id")
     elif not players_list:
         return None
     else:
