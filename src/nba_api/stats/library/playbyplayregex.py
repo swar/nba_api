@@ -20,7 +20,7 @@ pattern_player = (
 )
 pattern_rebound_team = r"^(?P<team>\w+( \w+)?) Rebound$"
 pattern_turnover_team = (
-    r"^(?P<team>\w+( \w+)?) Turnover: (?P<turnover_type>.*) \(T# (?P<turnovers>\d+)\)$"
+    r"^(?P<team>\w+( \w+)?) Turnover: (?P<turnover_type>.*) \(T# ?(?P<turnovers>\d+)\)$"
 )
 pattern_timeout = r"^(?P<team>\w+( \w+)?) Timeout: ((?P<timeout_type>.*)) \(\w+( |\.)(?P<full>\d+) \w+ (?P<short>\d+)\)$"
 pattern_block = r"^(?P<player>.+) BLOCK \((?P<blocks>\d+) BLK\)$"

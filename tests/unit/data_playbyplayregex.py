@@ -406,6 +406,26 @@ playbyplay["TurnoverTeam"].append(
     }
 )
 
+# Turnover Team (greater than 10, no space after #)
+playbyplay["TurnoverTeam"].append(
+    {
+        "description": "PACERS Turnover: Shot Clock (T#12)",
+        "team": "PACERS",
+        "turnover_type": "Shot Clock",
+        "turnovers": "12",
+    }
+)
+
+# Turnover Team (less than 9, no space after #)
+playbyplay["TurnoverTeam"].append(
+    {
+        "description": "HORNETS Turnover: Shot Clock (T#6)",
+        "team": "HORNETS",
+        "turnover_type": "Shot Clock",
+        "turnovers": "6",
+    }
+)
+
 # Turnover Team (less than 9)
 playbyplay["TurnoverTeam"].append(
     {
