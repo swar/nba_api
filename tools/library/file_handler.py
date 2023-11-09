@@ -3,7 +3,7 @@ import os
 
 def load_file(file_path, file_name):
     file_path = os.path.join(file_path, file_name)
-    f = open(file_path, 'r')
+    f = open(file_path, "r")
     contents = f.read()
     f.close()
     return contents
@@ -11,7 +11,7 @@ def load_file(file_path, file_name):
 
 def save_file(file_path, file_name, contents):
     file_path = os.path.join(file_path, file_name)
-    f = open(file_path, 'w')
+    f = open(file_path, "w")
     f.write(contents)
     f.close()
 
