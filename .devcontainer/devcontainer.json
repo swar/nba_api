@@ -6,7 +6,7 @@
 		"ghcr.io/devcontainers/features/python:latest": {},
 		"ghcr.io/devcontainers-contrib/features/poetry:2": {}
 	},
-	"image": "mcr.microsoft.com/devcontainers/base:debian",
+	"image": "mcr.microsoft.com/devcontainers/base:debian-11",
 	"name": "nba_api",
 	"postCreateCommand": "bash .devcontainer/postCreateCommand.sh",
 	"remoteEnv": {
@@ -15,12 +15,14 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"ms-python.python",
-				"ms-toolsai.jupyter-keymap",
 				"ms-python.black-formatter",
+				"ms-python.flake8",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
 				"ms-toolsai.jupyter",
-				"ms-toolsai.vscode-jupyter-powertoys",
-				"ms-toolsai.jupyter-renderers"
+				"ms-toolsai.jupyter-keymap",
+				"ms-toolsai.jupyter-renderers",
+				"ms-toolsai.vscode-jupyter-powertoys"
 			]
 		}
 	}
