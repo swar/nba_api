@@ -7,19 +7,40 @@
 
 ### Types of changes
 
-- `Added` for new features.
-- `Changed` for changes in existing functionality.
-- `Deprecated` for soon-to-be removed features.
-- `Removed` for now removed features.
-- `Fixed` for any bug fixes.
-- `Security` in case of vulnerabilities.
+- `Added` (new features)
+- `Changed` (changes in existing functionality)
+- `Deprecated` (soon-to-be removed functionality)
+- `Removed` (removed functionality).
+- `Fixed` (bug fixes)
+- `Security` (vulnerabilities)
+- `Contributor` (notes on updates to the project)
 
 # Version History
 
-## v1.3.2
+## v1.4.0
+### Added
+- In-Season Tournament Standings[ISTStandings](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/endpoints/iststandings.md). @shufinskiy #396
+- [EventMsgType](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/library/eventmsgtype.py) now contains INSTANT_REPLAY (18). @usharerose #384 
+ 
+### Changed
+- All NBA player and team static data current as of 2023.11.09 #398
+
+### Deprecated
+- [EventMsgType](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/library/eventmsgtype.py) UNKNOWN (18) has been deprecated and will be removed in a future release. #400
+
+### Fixed
+- The [playbyplay][https://github.com/rsforbes/nba_api/blob/master/src/nba_api/stats/library/playbyplayregex.py] regex for TURNOVER was updated to account for a space within the description provided by the NBA. #401
 
 ### Security
-- Set minimum requirement for [certifi](https://pypi.org/project/certifi/) to 2023.7.22 per [CVE-2022-23491](https://www.cve.org/CVERecord?id=CVE-2023-37920) / [CWE-296](https://cwe.mitre.org/data/definitions/296.html) 
+- Set minimum requirement for [certifi](https://pypi.org/project/certifi/) to 2023.7.22 per [CVE-2022-23491](https://www.cve.org/CVERecord?id=CVE-2023-37920) / [CWE-296](https://cwe.mitre.org/data/definitions/296.html) #384
+- Bumped urllib3 from 2.0.6 to 2.0.7 @dependabot #388
+
+### Developer Notes
+- [Black](https://github.com/psf/black) has been implemented project wide and will be required for all PRs. #399
+- DevContainer Changes #402
+  - The VSCode DevContainer was updated to pin Debian-11 due to changes in Debian 12 that have impacted Python development. 
+  - Poetry Shell now includes reference to the project.
+  - the ms-python.flake and ms-python.vscode-pylance extensions are now included
 
 ## v1.3.1
 
