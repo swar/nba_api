@@ -15,13 +15,14 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"ms-python.python",
-				"ms-toolsai.jupyter-keymap",
 				"ms-python.black-formatter",
 				"ms-python.flake8",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
 				"ms-toolsai.jupyter",
-				"ms-toolsai.vscode-jupyter-powertoys",
-				"ms-toolsai.jupyter-renderers"
+				"ms-toolsai.jupyter-keymap",
+				"ms-toolsai.jupyter-renderers",
+				"ms-toolsai.vscode-jupyter-powertoys"
 			]
 		}
 	}
