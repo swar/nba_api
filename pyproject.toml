@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "nba_api"
-version = "1.4"
+version = "1.4.0"
 description = "An API Client package to access the APIs for NBA.com"
 license = "MIT"
 authors = [ 
