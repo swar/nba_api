@@ -1,5 +1,5 @@
 # LeagueLineupViz
-##### [nba_api/stats/endpoints/leaguelineupviz.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/leaguelineupviz.py)
+##### [nba_api/stats/endpoints/leaguelineupviz.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/leaguelineupviz.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/leaguelineupviz](https://stats.nba.com/stats/leaguelineupviz)

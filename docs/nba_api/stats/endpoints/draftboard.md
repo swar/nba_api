@@ -1,5 +1,5 @@
 # DraftBoard
-##### [nba_api/stats/endpoints/draftboard.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/draftboard.py)
+##### [nba_api/stats/endpoints/draftboard.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/draftboard.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/draftboard](https://stats.nba.com/stats/draftboard)

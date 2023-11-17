@@ -1,5 +1,5 @@
 # TeamEstimatedMetrics
-##### [nba_api/stats/endpoints/teamestimatedmetrics.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/teamestimatedmetrics.py)
+##### [nba_api/stats/endpoints/teamestimatedmetrics.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/teamestimatedmetrics.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/teamestimatedmetrics](https://stats.nba.com/stats/teamestimatedmetrics)

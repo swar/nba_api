@@ -1,5 +1,5 @@
 # PlayerIndex
-##### [nba_api/stats/endpoints/playerindex.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/playerindex.py)
+##### [nba_api/stats/endpoints/playerindex.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/playerindex.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/playerindex](https://stats.nba.com/stats/playerindex)

@@ -1,5 +1,5 @@
 # VideoDetails
-##### [nba_api/stats/endpoints/videodetailsasset.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/videodetailsasset.py)
+##### [nba_api/stats/endpoints/videodetailsasset.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/videodetailsasset.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/videodetailsasset](https://stats.nba.com/stats/videodetailsasset)

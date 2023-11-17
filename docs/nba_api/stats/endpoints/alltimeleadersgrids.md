@@ -1,5 +1,5 @@
 # AllTimeLeadersGrids
-##### [nba_api/stats/endpoints/alltimeleadersgrids.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/alltimeleadersgrids.py)
+##### [nba_api/stats/endpoints/alltimeleadersgrids.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/alltimeleadersgrids.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/alltimeleadersgrids](https://stats.nba.com/stats/alltimeleadersgrids)

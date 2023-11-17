@@ -1,5 +1,5 @@
 # BoxScorePlayerTrackV3
-##### [nba_apiv3/stats/endpoints/boxscoreplayertrackv3.py](https://github.com/shufinskiy/nba_apiv3/blob/master/src/nba_api/stats/endpoints/boxscoreplayertrackv3.py)
+##### [nba_apiv3/stats/endpoints/boxscoreplayertrackv3.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/boxscoreplayertrackv3.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/boxscoreplayertrackv3](https://stats.nba.com/stats/boxscoreplayertrackv3)

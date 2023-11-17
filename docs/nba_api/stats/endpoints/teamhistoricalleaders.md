@@ -1,5 +1,5 @@
 # TeamHistoricalLeaders
-##### [nba_api/stats/endpoints/teamhistoricalleaders.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/teamhistoricalleaders.py)
+##### [nba_api/stats/endpoints/teamhistoricalleaders.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/teamhistoricalleaders.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/teamhistoricalleaders](https://stats.nba.com/stats/teamhistoricalleaders)

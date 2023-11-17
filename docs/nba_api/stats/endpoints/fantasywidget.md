@@ -1,5 +1,5 @@
 # FantasyWidget
-##### [nba_api/stats/endpoints/fantasywidget.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/fantasywidget.py)
+##### [nba_api/stats/endpoints/fantasywidget.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/fantasywidget.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/fantasywidget](https://stats.nba.com/stats/fantasywidget)

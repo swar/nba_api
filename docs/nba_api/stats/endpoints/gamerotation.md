@@ -1,5 +1,5 @@
 # GameRotation
-##### [nba_api/stats/endpoints/gamerotation.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/gamerotation.py)
+##### [nba_api/stats/endpoints/gamerotation.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/gamerotation.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/gamerotation](https://stats.nba.com/stats/gamerotation)

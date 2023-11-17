@@ -1,5 +1,5 @@
 # PlayerFantasyProfileBarGraph
-##### [nba_api/stats/endpoints/playerfantasyprofilebargraph.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/playerfantasyprofilebargraph.py)
+##### [nba_api/stats/endpoints/playerfantasyprofilebargraph.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/playerfantasyprofilebargraph.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/playerfantasyprofilebargraph](https://stats.nba.com/stats/playerfantasyprofilebargraph)

@@ -1,5 +1,5 @@
 # ShotChartLineupDetail
-##### [nba_api/stats/endpoints/shotchartlineupdetail.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/shotchartlineupdetail.py)
+##### [nba_api/stats/endpoints/shotchartlineupdetail.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/shotchartlineupdetail.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/shotchartlineupdetail](https://stats.nba.com/stats/shotchartlineupdetail)

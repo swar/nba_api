@@ -1,5 +1,5 @@
 # CommonTeamYears
-##### [nba_api/stats/endpoints/commonteamyears.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/commonteamyears.py)
+##### [nba_api/stats/endpoints/commonteamyears.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/commonteamyears.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/commonteamyears](https://stats.nba.com/stats/commonteamyears)

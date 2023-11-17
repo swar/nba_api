@@ -1,5 +1,5 @@
 # LeagueDashPlayerStats
-##### [nba_api/stats/endpoints/leaguedashplayerstats.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/leaguedashplayerstats.py)
+##### [nba_api/stats/endpoints/leaguedashplayerstats.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/leaguedashplayerstats.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/leaguedashplayerstats](https://stats.nba.com/stats/leaguedashplayerstats)

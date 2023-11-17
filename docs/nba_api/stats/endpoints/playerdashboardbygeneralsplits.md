@@ -1,5 +1,5 @@
 # PlayerDashboardByGeneralSplits
-##### [nba_api/stats/endpoints/playerdashboardbygeneralsplits.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/playerdashboardbygeneralsplits.py)
+##### [nba_api/stats/endpoints/playerdashboardbygeneralsplits.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/playerdashboardbygeneralsplits.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/playerdashboardbygeneralsplits](https://stats.nba.com/stats/playerdashboardbygeneralsplits)

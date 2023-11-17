@@ -1,5 +1,5 @@
 # WinProbabilityPBP
-##### [nba_api/stats/endpoints/winprobabilitypbp.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/winprobabilitypbp.py)
+##### [nba_api/stats/endpoints/winprobabilitypbp.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/winprobabilitypbp.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/winprobabilitypbp](https://stats.nba.com/stats/winprobabilitypbp)

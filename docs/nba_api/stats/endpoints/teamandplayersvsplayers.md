@@ -1,5 +1,5 @@
 # TeamAndPlayersVsPlayers
-##### [nba_api/stats/endpoints/teamandplayersvsplayers.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/teamandplayersvsplayers.py)
+##### [nba_api/stats/endpoints/teamandplayersvsplayers.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/teamandplayersvsplayers.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/teamandplayersvsplayers](https://stats.nba.com/stats/teamandplayersvsplayers)

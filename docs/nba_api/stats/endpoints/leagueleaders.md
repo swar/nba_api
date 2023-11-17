@@ -1,5 +1,5 @@
 # LeagueLeaders
-##### [nba_api/stats/endpoints/leagueleaders.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/leagueleaders.py)
+##### [nba_api/stats/endpoints/leagueleaders.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/leagueleaders.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/leagueleaders](https://stats.nba.com/stats/leagueleaders)

@@ -1,5 +1,5 @@
 # LeagueDashPtDefend
-##### [nba_api/stats/endpoints/leaguedashptdefend.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/leaguedashptdefend.py)
+##### [nba_api/stats/endpoints/leaguedashptdefend.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/leaguedashptdefend.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/leaguedashptdefend](https://stats.nba.com/stats/leaguedashptdefend)

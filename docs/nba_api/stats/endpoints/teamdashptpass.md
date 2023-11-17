@@ -1,5 +1,5 @@
 # TeamDashPtPass
-##### [nba_api/stats/endpoints/teamdashptpass.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/teamdashptpass.py)
+##### [nba_api/stats/endpoints/teamdashptpass.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/teamdashptpass.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/teamdashptpass](https://stats.nba.com/stats/teamdashptpass)

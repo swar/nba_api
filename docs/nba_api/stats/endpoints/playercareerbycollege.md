@@ -1,5 +1,5 @@
 # PlayerCareerByCollege
-##### [nba_api/stats/endpoints/playercareerbycollege.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/playercareerbycollege.py)
+##### [nba_api/stats/endpoints/playercareerbycollege.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/playercareerbycollege.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/playercareerbycollege](https://stats.nba.com/stats/playercareerbycollege)

@@ -1,5 +1,5 @@
 # PlayerGameLogs
-##### [nba_api/stats/endpoints/playergamelogs.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/playergamelogs.py)
+##### [nba_api/stats/endpoints/playergamelogs.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/playergamelogs.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/playergamelogs](https://stats.nba.com/stats/playergamelogs)

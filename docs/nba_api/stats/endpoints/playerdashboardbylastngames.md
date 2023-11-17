@@ -1,5 +1,5 @@
 # PlayerDashboardByLastNGames
-##### [nba_api/stats/endpoints/playerdashboardbylastngames.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/playerdashboardbylastngames.py)
+##### [nba_api/stats/endpoints/playerdashboardbylastngames.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/playerdashboardbylastngames.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/playerdashboardbylastngames](https://stats.nba.com/stats/playerdashboardbylastngames)

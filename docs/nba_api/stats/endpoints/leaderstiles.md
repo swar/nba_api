@@ -1,5 +1,5 @@
 # LeadersTiles
-##### [nba_api/stats/endpoints/leaderstiles.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/leaderstiles.py)
+##### [nba_api/stats/endpoints/leaderstiles.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/leaderstiles.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/leaderstiles](https://stats.nba.com/stats/leaderstiles)

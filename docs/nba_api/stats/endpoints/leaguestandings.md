@@ -1,5 +1,5 @@
 # LeagueStandings
-##### [nba_api/stats/endpoints/leaguestandings.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/leaguestandings.py)
+##### [nba_api/stats/endpoints/leaguestandings.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/leaguestandings.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/leaguestandings](https://stats.nba.com/stats/leaguestandings)

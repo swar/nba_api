@@ -1,5 +1,5 @@
 # BoxScoreHustleV2
-##### [nba_apiv3/stats/endpoints/boxscorehustlev2.py](https://github.com/shufinskiy/nba_apiv3/blob/master/src/nba_api/stats/endpoints/boxscorehustlev2.py)
+##### [nba_apiv3/stats/endpoints/boxscorehustlev2.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/boxscorehustlev2.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/boxscorehustlev2](https://stats.nba.com/stats/boxscorehustlev2)

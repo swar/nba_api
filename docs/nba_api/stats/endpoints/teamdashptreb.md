@@ -1,5 +1,5 @@
 # TeamDashPtReb
-##### [nba_api/stats/endpoints/teamdashptreb.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/teamdashptreb.py)
+##### [nba_api/stats/endpoints/teamdashptreb.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/teamdashptreb.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/teamdashptreb](https://stats.nba.com/stats/teamdashptreb)

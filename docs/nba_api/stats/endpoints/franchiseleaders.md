@@ -1,5 +1,5 @@
 # FranchiseLeaders
-##### [nba_api/stats/endpoints/franchiseleaders.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/franchiseleaders.py)
+##### [nba_api/stats/endpoints/franchiseleaders.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/franchiseleaders.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/franchiseleaders](https://stats.nba.com/stats/franchiseleaders)

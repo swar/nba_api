@@ -1,5 +1,5 @@
 # Scoreboard
-##### [nba_api/stats/endpoints/scoreboard.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/scoreboard.py)
+##### [nba_api/stats/endpoints/scoreboard.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/scoreboard.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/scoreboard](https://stats.nba.com/stats/scoreboard)

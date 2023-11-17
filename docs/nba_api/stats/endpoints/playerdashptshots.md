@@ -1,5 +1,5 @@
 # PlayerDashPtShots
-##### [nba_api/stats/endpoints/playerdashptshots.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/playerdashptshots.py)
+##### [nba_api/stats/endpoints/playerdashptshots.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/playerdashptshots.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/playerdashptshots](https://stats.nba.com/stats/playerdashptshots)

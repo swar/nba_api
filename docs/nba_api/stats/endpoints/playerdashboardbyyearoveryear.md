@@ -1,5 +1,5 @@
 # PlayerDashboardByYearOverYear
-##### [nba_api/stats/endpoints/playerdashboardbyyearoveryear.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/playerdashboardbyyearoveryear.py)
+##### [nba_api/stats/endpoints/playerdashboardbyyearoveryear.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/playerdashboardbyyearoveryear.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/playerdashboardbyyearoveryear](https://stats.nba.com/stats/playerdashboardbyyearoveryear)

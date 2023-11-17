@@ -1,5 +1,5 @@
 # LeagueGameFinder
-##### [nba_api/stats/endpoints/leaguegamefinder.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/leaguegamefinder.py)
+##### [nba_api/stats/endpoints/leaguegamefinder.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/leaguegamefinder.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/leaguegamefinder](https://stats.nba.com/stats/leaguegamefinder)

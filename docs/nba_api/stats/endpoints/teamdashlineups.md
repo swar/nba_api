@@ -1,5 +1,5 @@
 # TeamDashLineups
-##### [nba_api/stats/endpoints/teamdashlineups.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/teamdashlineups.py)
+##### [nba_api/stats/endpoints/teamdashlineups.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/teamdashlineups.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/teamdashlineups](https://stats.nba.com/stats/teamdashlineups)

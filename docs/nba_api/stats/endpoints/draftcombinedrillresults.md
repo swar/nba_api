@@ -1,5 +1,5 @@
 # DraftCombineDrillResults
-##### [nba_api/stats/endpoints/draftcombinedrillresults.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/draftcombinedrillresults.py)
+##### [nba_api/stats/endpoints/draftcombinedrillresults.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/draftcombinedrillresults.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/draftcombinedrillresults](https://stats.nba.com/stats/draftcombinedrillresults)

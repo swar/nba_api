@@ -1,5 +1,5 @@
 # PlayByPlay
-##### [nba_api/stats/endpoints/playbyplay.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/playbyplay.py)
+##### [nba_api/stats/endpoints/playbyplay.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/playbyplay.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/playbyplay](https://stats.nba.com/stats/playbyplay)

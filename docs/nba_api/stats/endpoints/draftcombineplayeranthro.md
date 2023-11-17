@@ -1,5 +1,5 @@
 # DraftCombinePlayerAnthro
-##### [nba_api/stats/endpoints/draftcombineplayeranthro.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/draftcombineplayeranthro.py)
+##### [nba_api/stats/endpoints/draftcombineplayeranthro.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/draftcombineplayeranthro.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/draftcombineplayeranthro](https://stats.nba.com/stats/draftcombineplayeranthro)

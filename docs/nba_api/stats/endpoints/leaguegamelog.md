@@ -1,5 +1,5 @@
 # LeagueGameLog
-##### [nba_api/stats/endpoints/leaguegamelog.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/leaguegamelog.py)
+##### [nba_api/stats/endpoints/leaguegamelog.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/leaguegamelog.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/leaguegamelog](https://stats.nba.com/stats/leaguegamelog)

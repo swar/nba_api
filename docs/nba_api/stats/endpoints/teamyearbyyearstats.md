@@ -1,5 +1,5 @@
 # TeamYearByYearStats
-##### [nba_api/stats/endpoints/teamyearbyyearstats.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/teamyearbyyearstats.py)
+##### [nba_api/stats/endpoints/teamyearbyyearstats.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/teamyearbyyearstats.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/teamyearbyyearstats](https://stats.nba.com/stats/teamyearbyyearstats)

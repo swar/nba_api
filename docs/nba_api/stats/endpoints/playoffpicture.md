@@ -1,5 +1,5 @@
 # PlayoffPicture
-##### [nba_api/stats/endpoints/playoffpicture.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/playoffpicture.py)
+##### [nba_api/stats/endpoints/playoffpicture.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/playoffpicture.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/playoffpicture](https://stats.nba.com/stats/playoffpicture)

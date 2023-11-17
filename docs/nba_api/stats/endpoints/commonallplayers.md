@@ -1,5 +1,5 @@
 # CommonAllPlayers
-##### [nba_api/stats/endpoints/commonallplayers.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/commonallplayers.py)
+##### [nba_api/stats/endpoints/commonallplayers.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/commonallplayers.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/commonallplayers](https://stats.nba.com/stats/commonallplayers)

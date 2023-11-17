@@ -1,5 +1,5 @@
 # BoxScoreSimilarityScore
-##### [nba_api/stats/endpoints/boxscoresimilarityscore.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/boxscoresimilarityscore.py)
+##### [nba_api/stats/endpoints/boxscoresimilarityscore.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/boxscoresimilarityscore.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/boxscoresimilarityscore](https://stats.nba.com/stats/boxscoresimilarityscore)
