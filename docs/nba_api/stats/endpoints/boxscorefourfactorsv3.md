@@ -20,12 +20,12 @@
 ## Data Sets
 #### PlayerStats `player_stats`
 ```text
-['GAME_ID', 'TEAM_ID', 'TEAM_ABBREVIATION', 'TEAM_CITY', 'PLAYER_ID', 'PLAYER_NAME', 'START_POSITION', 'COMMENT', 'MIN', 'EFG_PCT', 'FTA_RATE', 'TM_TOV_PCT', 'OREB_PCT', 'OPP_EFG_PCT', 'OPP_FTA_RATE', 'OPP_TOV_PCT', 'OPP_OREB_PCT']
+["GAME_ID", "TEAM_ID", "TEAM_ABBREVIATION", "TEAM_CITY", "PLAYER_ID", "PLAYER_NAME", "START_POSITION", "COMMENT", "MIN", "EFG_PCT", "FTA_RATE", "TM_TOV_PCT", "OREB_PCT", "OPP_EFG_PCT", "OPP_FTA_RATE", "OPP_TOV_PCT", "OPP_OREB_PCT"]
 ```
 
 #### TeamStats `team_stats`
 ```text
-['GAME_ID', 'TEAM_ID', 'TEAM_NAME', 'TEAM_ABBREVIATION', 'TEAM_CITY', 'MIN', 'EFG_PCT', 'FTA_RATE', 'TM_TOV_PCT', 'OREB_PCT', 'OPP_EFG_PCT', 'OPP_FTA_RATE', 'OPP_TOV_PCT', 'OPP_OREB_PCT']
+["GAME_ID", "TEAM_ID", "TEAM_NAME", "TEAM_ABBREVIATION", "TEAM_CITY", "MIN", "EFG_PCT", "FTA_RATE", "TM_TOV_PCT", "OREB_PCT", "OPP_EFG_PCT", "OPP_FTA_RATE", "OPP_TOV_PCT", "OPP_OREB_PCT"]
 ```
 
 
@@ -34,46 +34,46 @@
 {
     "data_sets": {
         "PlayerStats": [
-            'gameId', 
-            'teamId', 
-            'teamCity', 
-            'teamName', 
-            'teamTricode', 
-            'teamSlug', 
-            'personId', 
-            'firstName', 
-            'familyName', 
-            'nameI', 
-            'playerSlug', 
-            'position', 
-            'comment', 
-            'jerseyNum', 
-            'minutes', 
-            'effectiveFieldGoalPercentage', 
-            'freeThrowAttemptRate', 
-            'teamTurnoverPercentage', 
-            'offensiveReboundPercentage', 
-            'oppEffectiveFieldGoalPercentage', 
-            'oppFreeThrowAttemptRate', 
-            'oppTeamTurnoverPercentage', 
-            'oppOffensiveReboundPercentage'
+            "gameId", 
+            "teamId", 
+            "teamCity", 
+            "teamName", 
+            "teamTricode", 
+            "teamSlug", 
+            "personId", 
+            "firstName", 
+            "familyName", 
+            "nameI", 
+            "playerSlug", 
+            "position", 
+            "comment", 
+            "jerseyNum", 
+            "minutes", 
+            "effectiveFieldGoalPercentage", 
+            "freeThrowAttemptRate", 
+            "teamTurnoverPercentage", 
+            "offensiveReboundPercentage", 
+            "oppEffectiveFieldGoalPercentage", 
+            "oppFreeThrowAttemptRate", 
+            "oppTeamTurnoverPercentage", 
+            "oppOffensiveReboundPercentage"
         ],
         "TeamStats": [
-            'gameId', 
-            'teamId', 
-            'teamCity', 
-            'teamName', 
-            'teamTricode', 
-            'teamSlug', 
-            'minutes', 
-            'effectiveFieldGoalPercentage', 
-            'freeThrowAttemptRate', 
-            'teamTurnoverPercentage', 
-            'offensiveReboundPercentage', 
-            'oppEffectiveFieldGoalPercentage', 
-            'oppFreeThrowAttemptRate', 
-            'oppTeamTurnoverPercentage', 
-            'oppOffensiveReboundPercentage'
+            "gameId", 
+            "teamId", 
+            "teamCity", 
+            "teamName", 
+            "teamTricode", 
+            "teamSlug", 
+            "minutes", 
+            "effectiveFieldGoalPercentage", 
+            "freeThrowAttemptRate", 
+            "teamTurnoverPercentage", 
+            "offensiveReboundPercentage", 
+            "oppEffectiveFieldGoalPercentage", 
+            "oppFreeThrowAttemptRate", 
+            "oppTeamTurnoverPercentage", 
+            "oppOffensiveReboundPercentage"
         ]
     },
     "endpoint": "BoxScoreFourFactorsV3",
