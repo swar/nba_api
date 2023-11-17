@@ -8,10 +8,10 @@
 >[https://stats.nba.com/stats/videostatus?GameDate=2020-08-16&LeagueID=00](https://stats.nba.com/stats/videostatus?GameDate=2020-08-16&LeagueID=00)
 
 ## Parameters
-API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
------------- | ------------ | :-----------: | :---: | :---:
-[_**GameDate**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameDate) | game_date |  | `Y` |  | 
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^\d{2}$` | `Y` |  | 
+| API Parameter Name                                                                                              | Python Parameter Variable |  Pattern  | Required | Nullable |
+|-----------------------------------------------------------------------------------------------------------------|---------------------------|:---------:|:--------:|:--------:|
+| [_**GameDate**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameDate) | game_date                 |           |   `Y`    |          | 
+| [_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id                 | `^\d{2}$` |   `Y`    |          | 
 
 ## Data Sets
 #### VideoStatus `video_status`

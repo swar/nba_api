@@ -8,16 +8,16 @@
 >[https://stats.nba.com/stats/matchupsrollup?DefPlayerID=&DefTeamID=&LeagueID=00&OffPlayerID=&OffTeamID=&PerMode=Totals&Season=2019-20&SeasonType=Regular+Season](https://stats.nba.com/stats/matchupsrollup?DefPlayerID=&DefTeamID=&LeagueID=00&OffPlayerID=&OffTeamID=&PerMode=Totals&Season=2019-20&SeasonType=Regular+Season)
 
 ## Parameters
-API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
------------- | ------------ | :-----------: | :---: | :---:
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^\d{2}$` | `Y` |  | 
-[_**PerMode**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PerMode) | per_mode_simple |  | `Y` |  | 
-[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season | `^(\d{4}-\d{2})$` | `Y` |  | 
-[_**SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_playoffs | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(Pre-Season)$` | `Y` |  | 
-[_**OffTeamID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#OffTeamID) | off_team_id_nullable |  |  | `Y` | 
-[_**OffPlayerID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#OffPlayerID) | off_player_id_nullable |  |  | `Y` | 
-[_**DefTeamID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DefTeamID) | def_team_id_nullable |  |  | `Y` | 
-[_**DefPlayerID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DefPlayerID) | def_player_id_nullable |  |  | `Y` | 
+| API Parameter Name                                                                                                    | Python Parameter Variable |                           Pattern                            | Required | Nullable |
+|-----------------------------------------------------------------------------------------------------------------------|---------------------------|:------------------------------------------------------------:|:--------:|:--------:|
+| [_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID)       | league_id                 |                          `^\d{2}$`                           |   `Y`    |          | 
+| [_**PerMode**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PerMode)         | per_mode_simple           |                                                              |   `Y`    |          | 
+| [_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season)           | season                    |                      `^(\d{4}-\d{2})$`                       |   `Y`    |          | 
+| [_**SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType)   | season_type_playoffs      | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(Pre-Season)$` |   `Y`    |          | 
+| [_**OffTeamID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#OffTeamID)     | off_team_id_nullable      |                                                              |          |   `Y`    | 
+| [_**OffPlayerID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#OffPlayerID) | off_player_id_nullable    |                                                              |          |   `Y`    | 
+| [_**DefTeamID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DefTeamID)     | def_team_id_nullable      |                                                              |          |   `Y`    | 
+| [_**DefPlayerID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DefPlayerID) | def_player_id_nullable    |                                                              |          |   `Y`    | 
 
 ## Data Sets
 #### MatchupsRollup `matchups_rollup`

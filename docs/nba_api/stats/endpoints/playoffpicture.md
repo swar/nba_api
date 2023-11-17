@@ -8,10 +8,10 @@
 >[https://stats.nba.com/stats/playoffpicture?LeagueID=00&SeasonID=22019](https://stats.nba.com/stats/playoffpicture?LeagueID=00&SeasonID=22019)
 
 ## Parameters
-API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
------------- | ------------ | :-----------: | :---: | :---:
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^\d{2}$` | `Y` |  | 
-[_**SeasonID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonID) | season_id |  | `Y` |  | 
+| API Parameter Name                                                                                              | Python Parameter Variable |  Pattern  | Required | Nullable |
+|-----------------------------------------------------------------------------------------------------------------|---------------------------|:---------:|:--------:|:--------:|
+| [_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id                 | `^\d{2}$` |   `Y`    |          | 
+| [_**SeasonID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonID) | season_id                 |           |   `Y`    |          | 
 
 ## Data Sets
 #### EastConfPlayoffPicture `east_conf_playoff_picture`

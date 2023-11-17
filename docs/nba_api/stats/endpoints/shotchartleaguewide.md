@@ -8,10 +8,10 @@
 >[https://stats.nba.com/stats/shotchartleaguewide?LeagueID=00&Season=2019-20](https://stats.nba.com/stats/shotchartleaguewide?LeagueID=00&Season=2019-20)
 
 ## Parameters
-API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
------------- | ------------ | :-----------: | :---: | :---:
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id |  | `Y` |  | 
-[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season |  | `Y` |  | 
+| API Parameter Name                                                                                              | Python Parameter Variable | Pattern | Required | Nullable |
+|-----------------------------------------------------------------------------------------------------------------|---------------------------|:-------:|:--------:|:--------:|
+| [_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id                 |         |   `Y`    |          | 
+| [_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season)     | season                    |         |   `Y`    |          | 
 
 ## Data Sets
 #### League_Wide `league_wide`

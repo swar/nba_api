@@ -8,10 +8,10 @@
 >[https://stats.nba.com/stats/winprobabilitypbp?GameID=0021700807&RunType=each+second](https://stats.nba.com/stats/winprobabilitypbp?GameID=0021700807&RunType=each+second)
 
 ## Parameters
-API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
------------- | ------------ | :-----------: | :---: | :---:
-[_**GameID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameID) | game_id |  | `Y` |  | 
-[_**RunType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#RunType) | run_type |  | `Y` |  | 
+| API Parameter Name                                                                                            | Python Parameter Variable | Pattern | Required | Nullable |
+|---------------------------------------------------------------------------------------------------------------|---------------------------|:-------:|:--------:|:--------:|
+| [_**GameID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameID)   | game_id                   |         |   `Y`    |          | 
+| [_**RunType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#RunType) | run_type                  |         |   `Y`    |          | 
 
 ## Data Sets
 #### GameInfo `game_info`

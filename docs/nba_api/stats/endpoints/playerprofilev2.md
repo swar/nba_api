@@ -8,11 +8,11 @@
 >[https://stats.nba.com/stats/playerprofilev2?LeagueID=&PerMode=Totals&PlayerID=2544](https://stats.nba.com/stats/playerprofilev2?LeagueID=&PerMode=Totals&PlayerID=2544)
 
 ## Parameters
-API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
------------- | ------------ | :-----------: | :---: | :---:
-[_**PerMode**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PerMode) | per_mode36 | `^(Totals)\|(PerGame)\|(Per36)$` | `Y` |  | 
-[_**PlayerID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerID) | player_id |  | `Y` |  | 
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable |  |  | `Y` | 
+| API Parameter Name                                                                                              | Python Parameter Variable |             Pattern              | Required | Nullable |
+|-----------------------------------------------------------------------------------------------------------------|---------------------------|:--------------------------------:|:--------:|:--------:|
+| [_**PerMode**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PerMode)   | per_mode36                | `^(Totals)\|(PerGame)\|(Per36)$` |   `Y`    |          | 
+| [_**PlayerID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerID) | player_id                 |                                  |   `Y`    |          | 
+| [_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable        |                                  |          |   `Y`    | 
 
 ## Data Sets
 #### CareerHighs `career_highs`

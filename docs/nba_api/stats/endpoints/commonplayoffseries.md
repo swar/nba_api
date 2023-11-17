@@ -8,11 +8,11 @@
 >[https://stats.nba.com/stats/commonplayoffseries?LeagueID=00&Season=2019-20&SeriesID=](https://stats.nba.com/stats/commonplayoffseries?LeagueID=00&Season=2019-20&SeriesID=)
 
 ## Parameters
-API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
------------- | ------------ | :-----------: | :---: | :---:
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id |  | `Y` |  | 
-[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season |  | `Y` |  | 
-[_**SeriesID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeriesID) | series_id_nullable |  |  | `Y` | 
+| API Parameter Name                                                                                              | Python Parameter Variable | Pattern | Required | Nullable |
+|-----------------------------------------------------------------------------------------------------------------|---------------------------|:-------:|:--------:|:--------:|
+| [_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id                 |         |   `Y`    |          | 
+| [_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season)     | season                    |         |   `Y`    |          | 
+| [_**SeriesID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeriesID) | series_id_nullable        |         |          |   `Y`    | 
 
 ## Data Sets
 #### PlayoffSeries `playoff_series`
