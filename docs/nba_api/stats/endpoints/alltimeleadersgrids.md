@@ -1,5 +1,5 @@
 # AllTimeLeadersGrids
-##### [nba_api/stats/endpoints/alltimeleadersgrids.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/alltimeleadersgrids.py)
+##### [nba_api/stats/endpoints/alltimeleadersgrids.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/alltimeleadersgrids.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/alltimeleadersgrids](https://stats.nba.com/stats/alltimeleadersgrids)
@@ -8,12 +8,12 @@
 >[https://stats.nba.com/stats/alltimeleadersgrids?LeagueID=00&PerMode=Totals&SeasonType=Regular+Season&TopX=10](https://stats.nba.com/stats/alltimeleadersgrids?LeagueID=00&PerMode=Totals&SeasonType=Regular+Season&TopX=10)
 
 ## Parameters
-API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
------------- | ------------ | :-----------: | :---: | :---:
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id |  | `Y` |  | 
-[_**PerMode**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PerMode) | per_mode_simple |  | `Y` |  | 
-[_**SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type |  | `Y` |  | 
-[_**TopX**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TopX) | topx |  | `Y` |  | 
+| API Parameter Name                                                                                                  | Python Parameter Variable | Pattern | Required | Nullable |
+|---------------------------------------------------------------------------------------------------------------------|---------------------------|:-------:|:--------:|:--------:|
+| [_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID)     | league_id                 |         |   `Y`    |          | 
+| [_**PerMode**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PerMode)       | per_mode_simple           |         |   `Y`    |          | 
+| [_**SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type               |         |   `Y`    |          | 
+| [_**TopX**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TopX)             | topx                      |         |   `Y`    |          | 
 
 ## Data Sets
 #### ASTLeaders `ast_leaders`

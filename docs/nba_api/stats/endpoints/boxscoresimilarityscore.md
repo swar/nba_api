@@ -1,5 +1,5 @@
 # BoxScoreSimilarityScore
-##### [nba_api/stats/endpoints/boxscoresimilarityscore.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/boxscoresimilarityscore.py)
+##### [nba_api/stats/endpoints/boxscoresimilarityscore.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/boxscoresimilarityscore.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/boxscoresimilarityscore](https://stats.nba.com/stats/boxscoresimilarityscore)
@@ -8,16 +8,16 @@
 >[https://stats.nba.com/stats/boxscoresimilarityscore?Person1Id=202681&Person1LeagueId=00&Person1Season=2019&Person1SeasonType=Regular+Season&Person2Id=203078&Person2LeagueId=00&Person2Season=2019&Person2SeasonType=Regular+Season](https://stats.nba.com/stats/boxscoresimilarityscore?Person1Id=202681&Person1LeagueId=00&Person1Season=2019&Person1SeasonType=Regular+Season&Person2Id=203078&Person2LeagueId=00&Person2Season=2019&Person2SeasonType=Regular+Season)
 
 ## Parameters
-API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
------------- | ------------ | :-----------: | :---: | :---:
-[_**Person1Id**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Person1Id) | person1_id |  | `Y` |  | 
-[_**Person1LeagueId**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Person1LeagueId) | person1_league_id |  | `Y` |  | 
-[_**Person1Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Person1Season) | person1_season_year |  | `Y` |  | 
-[_**Person1SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Person1SeasonType) | person1_season_type |  | `Y` |  | 
-[_**Person2Id**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Person2Id) | person2_id |  | `Y` |  | 
-[_**Person2LeagueId**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Person2LeagueId) | person2_league_id |  | `Y` |  | 
-[_**Person2Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Person2Season) | person2_season_year |  | `Y` |  | 
-[_**Person2SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Person2SeasonType) | person2_season_type |  | `Y` |  | 
+| API Parameter Name                                                                                                                | Python Parameter Variable | Pattern | Required | Nullable |
+|-----------------------------------------------------------------------------------------------------------------------------------|---------------------------|:-------:|:--------:|:--------:|
+| [_**Person1Id**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Person1Id)                 | person1_id                |         |   `Y`    |          | 
+| [_**Person1LeagueId**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Person1LeagueId)     | person1_league_id         |         |   `Y`    |          | 
+| [_**Person1Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Person1Season)         | person1_season_year       |         |   `Y`    |          | 
+| [_**Person1SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Person1SeasonType) | person1_season_type       |         |   `Y`    |          | 
+| [_**Person2Id**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Person2Id)                 | person2_id                |         |   `Y`    |          | 
+| [_**Person2LeagueId**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Person2LeagueId)     | person2_league_id         |         |   `Y`    |          | 
+| [_**Person2Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Person2Season)         | person2_season_year       |         |   `Y`    |          | 
+| [_**Person2SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Person2SeasonType) | person2_season_type       |         |   `Y`    |          | 
 
 ## Data Sets
 #### BoxScoreSimilarityScores `box_score_similarity_scores`

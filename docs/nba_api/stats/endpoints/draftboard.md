@@ -1,5 +1,5 @@
 # DraftBoard
-##### [nba_api/stats/endpoints/draftboard.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/draftboard.py)
+##### [nba_api/stats/endpoints/draftboard.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/draftboard.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/draftboard](https://stats.nba.com/stats/draftboard)
@@ -8,16 +8,16 @@
 >[https://stats.nba.com/stats/draftboard?College=&LeagueID=00&OverallPick=&RoundNum=&RoundPick=&Season=2019&TeamID=&TopX=](https://stats.nba.com/stats/draftboard?College=&LeagueID=00&OverallPick=&RoundNum=&RoundPick=&Season=2019&TeamID=&TopX=)
 
 ## Parameters
-API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
------------- | ------------ | :-----------: | :---: | :---:
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^\d{2}$` | `Y` |  | 
-[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season_year | `^\d{4}$` | `Y` |  | 
-[_**TopX**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TopX) | topx_nullable |  |  | `Y` | 
-[_**TeamID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TeamID) | team_id_nullable |  |  | `Y` | 
-[_**RoundPick**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#RoundPick) | round_pick_nullable |  |  | `Y` | 
-[_**RoundNum**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#RoundNum) | round_num_nullable |  |  | `Y` | 
-[_**OverallPick**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#OverallPick) | overall_pick_nullable |  |  | `Y` | 
-[_**College**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#College) | college_nullable |  |  | `Y` | 
+| API Parameter Name                                                                                                    | Python Parameter Variable |  Pattern  | Required | Nullable |
+|-----------------------------------------------------------------------------------------------------------------------|---------------------------|:---------:|:--------:|:--------:|
+| [_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID)       | league_id                 | `^\d{2}$` |   `Y`    |          | 
+| [_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season)           | season_year               | `^\d{4}$` |   `Y`    |          | 
+| [_**TopX**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TopX)               | topx_nullable             |           |          |   `Y`    | 
+| [_**TeamID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TeamID)           | team_id_nullable          |           |          |   `Y`    | 
+| [_**RoundPick**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#RoundPick)     | round_pick_nullable       |           |          |   `Y`    | 
+| [_**RoundNum**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#RoundNum)       | round_num_nullable        |           |          |   `Y`    | 
+| [_**OverallPick**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#OverallPick) | overall_pick_nullable     |           |          |   `Y`    | 
+| [_**College**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#College)         | college_nullable          |           |          |   `Y`    | 
 
 ## Data Sets
 #### DraftBoard `draft_board`

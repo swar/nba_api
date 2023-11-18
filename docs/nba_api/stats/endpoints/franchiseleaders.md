@@ -1,5 +1,5 @@
 # FranchiseLeaders
-##### [nba_api/stats/endpoints/franchiseleaders.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/franchiseleaders.py)
+##### [nba_api/stats/endpoints/franchiseleaders.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/franchiseleaders.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/franchiseleaders](https://stats.nba.com/stats/franchiseleaders)
@@ -8,10 +8,10 @@
 >[https://stats.nba.com/stats/franchiseleaders?LeagueID=&TeamID=1610612739](https://stats.nba.com/stats/franchiseleaders?LeagueID=&TeamID=1610612739)
 
 ## Parameters
-API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
------------- | ------------ | :-----------: | :---: | :---:
-[_**TeamID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TeamID) | team_id |  | `Y` |  | 
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable |  |  | `Y` | 
+| API Parameter Name                                                                                              | Python Parameter Variable | Pattern | Required | Nullable |
+|-----------------------------------------------------------------------------------------------------------------|---------------------------|:-------:|:--------:|:--------:|
+| [_**TeamID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TeamID)     | team_id                   |         |   `Y`    |          | 
+| [_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id_nullable        |         |          |   `Y`    | 
 
 ## Data Sets
 #### FranchiseLeaders `franchise_leaders`

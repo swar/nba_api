@@ -1,5 +1,5 @@
 # PlayerEstimatedMetrics
-##### [nba_api/stats/endpoints/playerestimatedmetrics.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/playerestimatedmetrics.py)
+##### [nba_api/stats/endpoints/playerestimatedmetrics.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/playerestimatedmetrics.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/playerestimatedmetrics](https://stats.nba.com/stats/playerestimatedmetrics)
@@ -8,11 +8,11 @@
 >[https://stats.nba.com/stats/playerestimatedmetrics?LeagueID=00&Season=2019-20&SeasonType=Regular+Season](https://stats.nba.com/stats/playerestimatedmetrics?LeagueID=00&Season=2019-20&SeasonType=Regular+Season)
 
 ## Parameters
-API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
------------- | ------------ | :-----------: | :---: | :---:
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id |  | `Y` |  | 
-[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season |  | `Y` |  | 
-[_**SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type |  | `Y` |  | 
+| API Parameter Name                                                                                                  | Python Parameter Variable | Pattern | Required | Nullable |
+|---------------------------------------------------------------------------------------------------------------------|---------------------------|:-------:|:--------:|:--------:|
+| [_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID)     | league_id                 |         |   `Y`    |          | 
+| [_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season)         | season                    |         |   `Y`    |          | 
+| [_**SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type               |         |   `Y`    |          | 
 
 ## Data Sets
 #### PlayerEstimatedMetrics `player_estimated_metrics`

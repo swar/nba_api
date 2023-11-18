@@ -1,5 +1,5 @@
 # PlayerCareerByCollege
-##### [nba_api/stats/endpoints/playercareerbycollege.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/playercareerbycollege.py)
+##### [nba_api/stats/endpoints/playercareerbycollege.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/playercareerbycollege.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/playercareerbycollege](https://stats.nba.com/stats/playercareerbycollege)
@@ -8,13 +8,13 @@
 >[https://stats.nba.com/stats/playercareerbycollege?College=Ohio+State&LeagueID=00&PerMode=Totals&Season=&SeasonType=Regular+Season](https://stats.nba.com/stats/playercareerbycollege?College=Ohio+State&LeagueID=00&PerMode=Totals&Season=&SeasonType=Regular+Season)
 
 ## Parameters
-API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
------------- | ------------ | :-----------: | :---: | :---:
-[_**College**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#College) | college |  | `Y` |  | 
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id |  | `Y` |  | 
-[_**PerMode**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PerMode) | per_mode_simple |  | `Y` |  | 
-[_**SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_all_star | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star)$` | `Y` |  | 
-[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season_nullable |  |  | `Y` | 
+| API Parameter Name                                                                                                  | Python Parameter Variable |                          Pattern                           | Required | Nullable |
+|---------------------------------------------------------------------------------------------------------------------|---------------------------|:----------------------------------------------------------:|:--------:|:--------:|
+| [_**College**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#College)       | college                   |                                                            |   `Y`    |          | 
+| [_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID)     | league_id                 |                                                            |   `Y`    |          | 
+| [_**PerMode**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PerMode)       | per_mode_simple           |                                                            |   `Y`    |          | 
+| [_**SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_all_star      | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star)$` |   `Y`    |          | 
+| [_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season)         | season_nullable           |                                                            |          |   `Y`    | 
 
 ## Data Sets
 #### PlayerCareerByCollege `player_career_by_college`

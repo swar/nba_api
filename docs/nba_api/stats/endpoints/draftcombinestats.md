@@ -1,5 +1,5 @@
 # DraftCombineStats
-##### [nba_api/stats/endpoints/draftcombinestats.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/draftcombinestats.py)
+##### [nba_api/stats/endpoints/draftcombinestats.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/draftcombinestats.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/draftcombinestats](https://stats.nba.com/stats/draftcombinestats)
@@ -8,10 +8,10 @@
 >[https://stats.nba.com/stats/draftcombinestats?LeagueID=00&SeasonYear=2019-20](https://stats.nba.com/stats/draftcombinestats?LeagueID=00&SeasonYear=2019-20)
 
 ## Parameters
-API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
------------- | ------------ | :-----------: | :---: | :---:
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id |  | `Y` |  | 
-[_**SeasonYear**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonYear) | season_all_time | `^(\d{4}-\d{2})\|(All Time)$` | `Y` |  | 
+| API Parameter Name                                                                                                  | Python Parameter Variable |            Pattern            | Required | Nullable |
+|---------------------------------------------------------------------------------------------------------------------|---------------------------|:-----------------------------:|:--------:|:--------:|
+| [_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID)     | league_id                 |                               |   `Y`    |          | 
+| [_**SeasonYear**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonYear) | season_all_time           | `^(\d{4}-\d{2})\|(All Time)$` |   `Y`    |          | 
 
 ## Data Sets
 #### DraftCombineStats `draft_combine_stats`

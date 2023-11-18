@@ -1,5 +1,5 @@
 # FranchiseHistory
-##### [nba_api/stats/endpoints/franchisehistory.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/franchisehistory.py)
+##### [nba_api/stats/endpoints/franchisehistory.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/franchisehistory.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/franchisehistory](https://stats.nba.com/stats/franchisehistory)
@@ -8,9 +8,9 @@
 >[https://stats.nba.com/stats/franchisehistory?LeagueID=00](https://stats.nba.com/stats/franchisehistory?LeagueID=00)
 
 ## Parameters
-API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
------------- | ------------ | :-----------: | :---: | :---:
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^\d{2}$` | `Y` |  | 
+| API Parameter Name                                                                                              | Python Parameter Variable |  Pattern  | Required | Nullable |
+|-----------------------------------------------------------------------------------------------------------------|---------------------------|:---------:|:--------:|:--------:|
+| [_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id                 | `^\d{2}$` |   `Y`    |          | 
 
 ## Data Sets
 #### DefunctTeams `defunct_teams`

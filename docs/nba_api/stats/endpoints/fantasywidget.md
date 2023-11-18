@@ -1,5 +1,5 @@
 # FantasyWidget
-##### [nba_api/stats/endpoints/fantasywidget.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/fantasywidget.py)
+##### [nba_api/stats/endpoints/fantasywidget.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/fantasywidget.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/fantasywidget](https://stats.nba.com/stats/fantasywidget)
@@ -8,27 +8,27 @@
 >[https://stats.nba.com/stats/fantasywidget?ActivePlayers=N&DateFrom=&DateTo=&LastNGames=0&LeagueID=00&Location=&Month=&OpponentTeamID=&PORound=&PlayerID=&Position=&Season=2019-20&SeasonSegment=&SeasonType=Regular+Season&TeamID=&TodaysOpponent=0&TodaysPlayers=N&VsConference=&VsDivision=](https://stats.nba.com/stats/fantasywidget?ActivePlayers=N&DateFrom=&DateTo=&LastNGames=0&LeagueID=00&Location=&Month=&OpponentTeamID=&PORound=&PlayerID=&Position=&Season=2019-20&SeasonSegment=&SeasonType=Regular+Season&TeamID=&TodaysOpponent=0&TodaysPlayers=N&VsConference=&VsDivision=)
 
 ## Parameters
-API Parameter Name | Python Parameter Variable | Pattern | Required | Nullable
------------- | ------------ | :-----------: | :---: | :---:
-[_**ActivePlayers**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#ActivePlayers) | active_players | `^(Y)\|(N)$` | `Y` |  | 
-[_**LastNGames**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LastNGames) | last_n_games |  | `Y` |  | 
-[_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID) | league_id | `^\d{2}$` | `Y` |  | 
-[_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season) | season |  | `Y` |  | 
-[_**SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType) | season_type_all_star | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star)$` | `Y` |  | 
-[_**TodaysOpponent**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TodaysOpponent) | todays_opponent |  | `Y` |  | 
-[_**TodaysPlayers**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TodaysPlayers) | todays_players | `^(Y)\|(N)$` | `Y` |  | 
-[_**VsDivision**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#VsDivision) | vs_division_nullable | `^((Atlantic)\|(Central)\|(Northwest)\|(Pacific)\|(Southeast)\|(Southwest)\|(East)\|(West))?$` |  | `Y` | 
-[_**VsConference**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#VsConference) | vs_conference_nullable | `^((East)\|(West))?$` |  | `Y` | 
-[_**TeamID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TeamID) | team_id_nullable |  |  | `Y` | 
-[_**SeasonSegment**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonSegment) | season_segment_nullable | `^((Post All-Star)\|(Pre All-Star))?$` |  | `Y` | 
-[_**Position**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Position) | position_nullable | `^(Guard\|Forward\|Center)?$` |  | `Y` | 
-[_**PlayerID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerID) | player_id_nullable |  |  | `Y` | 
-[_**PORound**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PORound) | po_round_nullable |  |  | `Y` | 
-[_**OpponentTeamID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#OpponentTeamID) | opponent_team_id_nullable |  |  | `Y` | 
-[_**Month**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Month) | month_nullable |  |  | `Y` | 
-[_**Location**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Location) | location_nullable | `^((Home)\|(Road))?$` |  | `Y` | 
-[_**DateTo**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DateTo) | date_to_nullable |  |  | `Y` | 
-[_**DateFrom**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DateFrom) | date_from_nullable |  |  | `Y` | 
+| API Parameter Name                                                                                                          | Python Parameter Variable |                                            Pattern                                             | Required | Nullable |
+|-----------------------------------------------------------------------------------------------------------------------------|---------------------------|:----------------------------------------------------------------------------------------------:|:--------:|:--------:|
+| [_**ActivePlayers**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#ActivePlayers)   | active_players            |                                          `^(Y)\|(N)$`                                          |   `Y`    |          | 
+| [_**LastNGames**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LastNGames)         | last_n_games              |                                                                                                |   `Y`    |          | 
+| [_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID)             | league_id                 |                                           `^\d{2}$`                                            |   `Y`    |          | 
+| [_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season)                 | season                    |                                                                                                |   `Y`    |          | 
+| [_**SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType)         | season_type_all_star      |                   `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star)$`                   |   `Y`    |          | 
+| [_**TodaysOpponent**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TodaysOpponent) | todays_opponent           |                                                                                                |   `Y`    |          | 
+| [_**TodaysPlayers**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TodaysPlayers)   | todays_players            |                                          `^(Y)\|(N)$`                                          |   `Y`    |          | 
+| [_**VsDivision**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#VsDivision)         | vs_division_nullable      | `^((Atlantic)\|(Central)\|(Northwest)\|(Pacific)\|(Southeast)\|(Southwest)\|(East)\|(West))?$` |          |   `Y`    | 
+| [_**VsConference**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#VsConference)     | vs_conference_nullable    |                                     `^((East)\|(West))?$`                                      |          |   `Y`    | 
+| [_**TeamID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TeamID)                 | team_id_nullable          |                                                                                                |          |   `Y`    | 
+| [_**SeasonSegment**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonSegment)   | season_segment_nullable   |                             `^((Post All-Star)\|(Pre All-Star))?$`                             |          |   `Y`    | 
+| [_**Position**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Position)             | position_nullable         |                                 `^(Guard\|Forward\|Center)?$`                                  |          |   `Y`    | 
+| [_**PlayerID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerID)             | player_id_nullable        |                                                                                                |          |   `Y`    | 
+| [_**PORound**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PORound)               | po_round_nullable         |                                                                                                |          |   `Y`    | 
+| [_**OpponentTeamID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#OpponentTeamID) | opponent_team_id_nullable |                                                                                                |          |   `Y`    | 
+| [_**Month**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Month)                   | month_nullable            |                                                                                                |          |   `Y`    | 
+| [_**Location**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Location)             | location_nullable         |                                     `^((Home)\|(Road))?$`                                      |          |   `Y`    | 
+| [_**DateTo**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DateTo)                 | date_to_nullable          |                                                                                                |          |   `Y`    | 
+| [_**DateFrom**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DateFrom)             | date_from_nullable        |                                                                                                |          |   `Y`    | 
 
 ## Data Sets
 #### FantasyWidgetResult `fantasy_widget_result`
