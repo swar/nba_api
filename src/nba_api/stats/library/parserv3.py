@@ -224,7 +224,7 @@ class NBAStatsBoxscoreMatchupsParserV3:
         elif level == 2:
             tmp = self.nba_dict[list(self.nba_dict.keys())[1]]["homeTeam"]["players"][0]
             headers = headers + tuple(
-                [header + "Def" for header in tmp.keys() if header != "matchups"]
+                [header + "Off" for header in tmp.keys() if header != "matchups"]
             )
             return self.get_players_headers(headers, level=3)
         elif level == 3:
@@ -232,7 +232,7 @@ class NBAStatsBoxscoreMatchupsParserV3:
                 0
             ]["matchups"][0]
             headers = headers + tuple(
-                [header + "Off" for header in tmp.keys() if header != "statistics"]
+                [header + "Def" for header in tmp.keys() if header != "statistics"]
             )
             return self.get_players_headers(headers, level=4)
         else:
