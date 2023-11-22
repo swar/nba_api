@@ -17,6 +17,13 @@
 
 # Version History
 
+## v1.4.1
+### Changed
+* Update documentation by @shufinskiy in https://github.com/swar/nba_api/pull/406
+
+### Fixed
+* boxscoremathups swapped places Def and Off columns names by @shufinskiy in https://github.com/swar/nba_api/pull/409
+
 ## v1.4.0
 ### Added
 - In-Season Tournament Standings[ISTStandings](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/endpoints/iststandings.md). @shufinskiy #396
