@@ -24,7 +24,7 @@ pip install nba_api
 from nba_api.stats.endpoints import playercareerstats
 
 # Nikola Jokić
-career = playercareerstats.PlayerCareerStats(player_id='203999') 
+career = playercareerstats.PlayerCareerStats(player_id='203999')
 
 # pandas data frames (optional: pip install pandas)
 career.get_data_frames()[0]
@@ -71,6 +71,7 @@ games.get_dict()
   - [teams.py](https://github.com/swar/nba_api/tree/master/docs/nba_api/stats/static/teams.md)
 
 # Join the Community
+
 ## Slack
 
 Join [Slack](https://join.slack.com/t/nbaapi/shared_invite/zt-20mqfii8j-FQDThxBl5gArcL4RBUL4yA) to get help, help others, provide feedback, see amazing projects, participates in discussions, and collaborate with others from around the world.
@@ -79,9 +80,17 @@ Join [Slack](https://join.slack.com/t/nbaapi/shared_invite/zt-20mqfii8j-FQDThxBl
 
 Not a Slack fan? No problem. Head over to [StackOverflow](https://stackoverflow.com/questions/tagged/nba-api). Be sure to tag your post with `nba-api`.
 
+# Example Projects
+
+To get an idea for the use cases of this package, you can check out example projects. They are built using combining some of the endpoints in this package.
+
+- [Bounce Back Sports](https://www.bouncebacksports.net/) - Website dedicated to NBA injuries and a player's road to recovery
+- [NBA Play DB](https://nbaplaydb.com/) - Search engine for NBA play-by-play data with videos
+- [Close Game Alerts](https://www.closegamealerts.com/) - Get a text alert for close NBA games
+
 # Contributing
 
-*See [Contributing to the NBA_API](https://github.com/swar/nba_api/blob/master/CONTRIBUTING.md) for complete details.*
+_See [Contributing to the NBA_API](https://github.com/swar/nba_api/blob/master/CONTRIBUTING.md) for complete details._
 
 ## Endpoints
 
