@@ -8,10 +8,10 @@
 `None`
 
 ## Properties
-#### GameDate `game_date`
+#### GameDate `score_board_date`
 ```text
 #returns a string
-scoreboard.ScoreBoard().game_date
+scoreboard.ScoreBoard().score_board_date
 ```
 
 #### Games `games`
