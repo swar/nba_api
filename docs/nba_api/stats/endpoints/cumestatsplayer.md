@@ -10,7 +10,7 @@
 ## Parameters
 | API Parameter Name                                                                                                  | Python Parameter Variable |                          Pattern                           | Required | Nullable |
 |---------------------------------------------------------------------------------------------------------------------|---------------------------|:----------------------------------------------------------:|:--------:|:--------:|
-| [_**GameIDs**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameIDs)       | game_ids                  | `^(GameID1|GameID2|GameID3)$`                                                           |   `Y`    |          | 
+| [_**GameIDs**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameIDs)       | game_ids                  | `^(GameID1|GameID2|GameID3)$`                              |   `Y`    |          | 
 | [_**LeagueID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#LeagueID)     | league_id                 |                                                            |   `Y`    |          | 
 | [_**PlayerID**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerID)     | player_id                 |                                                            |   `Y`    |          | 
 | [_**Season**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Season)         | season                    |                                                            |   `Y`    |          | 
