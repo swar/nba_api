@@ -638,6 +638,13 @@ class SeasonYear:
     default = current_season_year
 
 
+class WnbaSeasonYear:
+    current_datetime = datetime.now()
+    current_season_year = current_datetime.year
+
+    default = current_season_year
+
+
 class SeasonYearNullable(_NotRequired, SeasonYear):
     pass
 
@@ -652,6 +659,15 @@ class Season(SeasonYear):
     previous_season = "{}-{}".format(
         current_season_year - 1, str(current_season_year)[2:]
     )
+
+    default = current_season
+
+
+class WnbaSeason(WnbaSeasonYear):
+    current_season_year = WnbaSeasonYear.current_season_year
+
+    current_season = "{}".format(current_season_year)
+    previous_season = "{}".format(current_season_year - 1)
 
     default = current_season
 
