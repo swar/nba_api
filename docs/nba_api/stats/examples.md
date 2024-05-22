@@ -92,7 +92,7 @@ lebron_james = {
 }
 ```
 
-All three of these searches will return a list of players.
+All three of these searches will return a list of players. Corresponding functions exist for WNBA players as well.
 
 ```python
 from nba_api.stats.static import players
@@ -108,6 +108,9 @@ players.find_players_by_last_name('^(james|love)$')
 
 # Get all players.
 players.get_players()
+
+# Get all players in the WNBA.
+players.get_wnba_players()
 ```
 
 In addition, you can find players by ID by using `find_player_by_id()`. `get_active_players()` and `get_inactive_players()` will return a list of only active and only inactive players, respectively.
@@ -115,7 +118,7 @@ In addition, you can find players by ID by using `find_player_by_id()`. `get_act
 
 ### Teams
 
-You can also find teams using regex patterns on fields such as full name, state, city, and nickname. As well as finding teams by year founded, abbreviation, and id.
+You can also find teams using regex patterns on fields such as full name, state, city, and nickname. As well as finding teams by year founded, abbreviation, and id. Corresponding functions exist for WNBA players as well.
 
 ```python
 from nba_api.stats.static import teams
@@ -143,4 +146,7 @@ teams.find_team_name_by_id(1610612739)
 
 # Get all teams.
 teams.get_teams()
+
+# Get all WNBA teams.
+teams.get_wnba_teams()
 ```
