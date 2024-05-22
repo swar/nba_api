@@ -10,6 +10,9 @@ players = [
 {players_list}
 ]
 
+wnba_players = [
+{wnba_players_list}
+]
 
 team_index_id = 0
 team_index_abbreviation = 1
