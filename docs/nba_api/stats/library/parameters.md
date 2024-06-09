@@ -692,7 +692,8 @@ No available information.
 
 
 ## _GameIDs_
-No available information.
+##### Patterns 
+ - `^(GameID1|GameID2|GameID3)$`
 
 
 ## _GameScope_
