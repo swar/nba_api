@@ -2,6 +2,7 @@ import os
 from datetime import datetime
 
 from nba_api.stats.endpoints.commonallplayers import CommonAllPlayers
+from nba_api.stats.library.parameters import LeagueID, Season, WnbaSeason
 from template import file_template, player_row_template
 
 player_adjustments = {
@@ -11,10 +12,18 @@ player_adjustments = {
     201180: ["Sun Yue", "", "Sun Yue", False],
 }
 
+wnba_player_adjustments = {}
 
-def create_players_list():
-    all_players = CommonAllPlayers().get_dict()
-    active_players = CommonAllPlayers(is_only_current_season=1).get_dict()
+
+def create_players_list(
+    league_id=LeagueID.default,
+    season=Season.default,
+    player_adjustments=player_adjustments,
+):
+    all_players = CommonAllPlayers(league_id=league_id, season=season).get_dict()
+    active_players = CommonAllPlayers(
+        league_id=league_id, season=season, is_only_current_season=1
+    ).get_dict()
 
     players_dict = {}
     for player in all_players["resultSets"][0]["rowSet"]:
@@ -63,11 +72,19 @@ def write_static_data_file(directory, file_contents):
 
 def generate_static_data_file(directory="static_files"):
     players_list = create_players_list()
+    wnba_players_list = create_players_list(
+        league_id=LeagueID.wnba,
+        season=WnbaSeason.default,
+        player_adjustments=wnba_player_adjustments,
+    )
 
     players_string = format_player_string(players_list)
+    wnba_players_string = format_player_string(wnba_players_list)
 
     file_contents = file_template.format(
-        players_list=players_string, date_updated=datetime.now().strftime("%b, %d %Y")
+        players_list=players_string,
+        wnba_players_list=wnba_players_string,
+        date_updated=datetime.now().strftime("%b, %d %Y"),
     )
 
     write_static_data_file(directory, file_contents)
