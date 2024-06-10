@@ -1,0 +1,14 @@
+Results:
+
+|   TEMP_PLAYER_ID |   PLAYER_ID | FIRST_NAME   | LAST_NAME   | PLAYER_NAME    | POSITION   |   STANDING_VERTICAL_LEAP |   MAX_VERTICAL_LEAP |   LANE_AGILITY_TIME |   MODIFIED_LANE_AGILITY_TIME |   THREE_QUARTER_SPRINT | BENCH_PRESS   |
+|-----------------:|------------:|:-------------|:------------|:---------------|:-----------|-------------------------:|--------------------:|--------------------:|-----------------------------:|-----------------------:|:--------------|
+|          1641725 |     1641725 | Trey         | Alexander   | Trey Alexander | SG         |                     29.5 |                34   |               11.6  |                       nan    |                   3.35 |               |
+|          1641735 |     1641735 | Amari        | Bailey      | Amari Bailey   | SG         |                     28.5 |                35   |               11.34 |                       nan    |                   3.19 |               |
+|          1641734 |     1641734 | Emoni        | Bates       | Emoni Bates    | SF         |                     27   |                32.5 |               11.54 |                       nan    |                   3.49 |               |
+|          1641736 |     1641736 | Reece        | Beekman     | Reece Beekman  | PG         |                     30.5 |                38   |               10.99 |                         3.33 |                   3.14 |               |
+|          1641710 |     1641710 | Anthony      | Black       | Anthony Black  | PG         |                     32   |                39   |               11.04 |                       nan    |                   3.35 |               |
+|          1641737 |     1641737 | Adem         | Bona        | Adem Bona      | C          |                    nan   |               nan   |              nan    |                       nan    |                 nan    |               |
+|          1641738 |     1641738 | Kobe         | Brown       | Kobe Brown     | PF         |                     28.5 |                32   |               11.39 |                         3.23 |                   3.33 |               |
+|          1641723 |     1641723 | Kobe         | Bufkin      | Kobe Bufkin    | SG         |                     29   |                36   |               11.71 |                       nan    |                   3.26 |               |
+|          1641739 |     1641739 | Toumani      | Camara      | Toumani Camara | PF         |                     28.5 |                33   |               10.7  |                         3.19 |                   3.41 |               |
+|          1631321 |     1631321 | Sidy         | Cissoko     | Sidy Cissoko   | SF         |                     30.5 |                35.5 |               11.24 |                       nan    |                   3.31 |               |

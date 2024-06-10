@@ -1,0 +1,14 @@
+PlayerAwards:
+
+|   PERSON_ID | FIRST_NAME   | LAST_NAME   | TEAM           | DESCRIPTION             | ALL_NBA_TEAM_NUMBER   | SEASON   | MONTH    | WEEK                | CONFERENCE   | TYPE   | SUBTYPE1   | SUBTYPE2   | SUBTYPE3   |
+|------------:|:-------------|:------------|:---------------|:------------------------|:----------------------|:---------|:---------|:--------------------|:-------------|:-------|:-----------|:-----------|:-----------|
+|     1628369 | Jayson       | Tatum       | Boston Celtics | All-Rookie Team         | 1                     | 2017-18  |          |                     | East         | Award  | Kia Motors | KIART      |            |
+|     1628369 | Jayson       | Tatum       | Boston Celtics | All-NBA                 | 3                     | 2019-20  |          |                     | East         | Award  | Kia Motors | KIANT      |            |
+|     1628369 | Jayson       | Tatum       | Boston Celtics | NBA Player of the Month |                       | 2019-20  | 2/1/2020 |                     | East         | Award  | Kia Motors | KIPMO      |            |
+|     1628369 | Jayson       | Tatum       | Boston Celtics | NBA Player of the Week  |                       | 2019-20  |          | 2020-02-03T00:00:00 | East         | Award  | Kia Motors | KIPWK      |            |
+|     1628369 | Jayson       | Tatum       | Boston Celtics | NBA Player of the Week  |                       | 2020-21  |          | 2021-01-04T00:00:00 | East         | Award  | Kia Motors | KIPWK      |            |
+|     1628369 | Jayson       | Tatum       | Boston Celtics | NBA Player of the Week  |                       | 2020-21  |          | 2021-04-05T00:00:00 | East         | Award  | Kia Motors | KIPWK      |            |
+|     1628369 | Jayson       | Tatum       | Boston Celtics | NBA Player of the Week  |                       | 2020-21  |          | 2021-04-26T00:00:00 | East         | Award  | Kia Motors | KIPWK      |            |
+|     1628369 | Jayson       | Tatum       | Boston Celtics | NBA Rookie of the Month |                       | 2017-18  | 2/1/2018 | 1900-01-01T12:00:00 | East         | Award  | Kia Motors | KIRMO      |            |
+|     1628369 | Jayson       | Tatum       | Boston Celtics | NBA Player of the Week  |                       | 2021-22  |          | 2021-12-13T00:00:00 | East         | Award  | Kia Motors | KIPWK      |            |
+|     1628369 | Jayson       | Tatum       | Boston Celtics | NBA Player of the Week  |                       | 2021-22  |          | 2022-02-28T00:00:00 | East         | Award  | Kia Motors | KIPWK      |            |
