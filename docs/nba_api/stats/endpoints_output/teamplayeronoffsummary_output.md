@@ -1,0 +1,35 @@
+OverallTeamPlayerOnOffSummary:
+
+| GROUP_SET   | GROUP_VALUE   |    TEAM_ID | TEAM_ABBREVIATION   | TEAM_NAME        |   GP |   W |   L |   W_PCT |   MIN |   FGM |   FGA |   FG_PCT |   FG3M |   FG3A |   FG3_PCT |   FTM |   FTA |   FT_PCT |   OREB |   DREB |   REB |   AST |   TOV |   STL |   BLK |   BLKA |   PF |   PFD |   PTS |   PLUS_MINUS |   GP_RANK |   W_RANK |   L_RANK |   W_PCT_RANK |   MIN_RANK |   FGM_RANK |   FGA_RANK |   FG_PCT_RANK |   FG3M_RANK |   FG3A_RANK |   FG3_PCT_RANK |   FTM_RANK |   FTA_RANK |   FT_PCT_RANK |   OREB_RANK |   DREB_RANK |   REB_RANK |   AST_RANK |   TOV_RANK |   STL_RANK |   BLK_RANK |   BLKA_RANK |   PF_RANK |   PFD_RANK |   PTS_RANK |   PLUS_MINUS_RANK |
+|:------------|:--------------|-----------:|:--------------------|:-----------------|-----:|----:|----:|--------:|------:|------:|------:|---------:|-------:|-------:|----------:|------:|------:|---------:|-------:|-------:|------:|------:|------:|------:|------:|-------:|-----:|------:|------:|-------------:|----------:|---------:|---------:|-------------:|-----------:|-----------:|-----------:|--------------:|------------:|------------:|---------------:|-----------:|-----------:|--------------:|------------:|------------:|-----------:|-----------:|-----------:|-----------:|-----------:|------------:|----------:|-----------:|-----------:|------------------:|
+| Overall     | 2023-24       | 1610612742 | DAL                 | Dallas Mavericks |   82 |  50 |  32 |    0.61 |  3941 |  3535 |  7352 |    0.481 |   1197 |   3242 |     0.369 |  1397 |  1842 |    0.758 |    797 |   2724 |  3521 |  2106 |  1027 |   563 |   406 |    331 | 1500 |  1667 |  9664 |          181 |         1 |        1 |        1 |            1 |          1 |          1 |          1 |             1 |           1 |           1 |              1 |          1 |          1 |             1 |           1 |           1 |          1 |          1 |          1 |          1 |          1 |           1 |         1 |          1 |          1 |                 1 |
+
+PlayersOnCourtTeamPlayerOnOffSummary:
+
+| GROUP_SET    |    TEAM_ID | TEAM_ABBREVIATION   | TEAM_NAME        |   VS_PLAYER_ID | VS_PLAYER_NAME    | COURT_STATUS   |   GP |   MIN |   PLUS_MINUS |   OFF_RATING |   DEF_RATING |   NET_RATING |
+|:-------------|-----------:|:--------------------|:-----------------|---------------:|:------------------|:---------------|-----:|------:|-------------:|-------------:|-------------:|-------------:|
+| On/Off Court | 1610612742 | DAL                 | Dallas Mavericks |        1630535 | Brown III, Greg   | On             |    6 |    40 |        -10.9 |        101.1 |        110.6 |         -9.6 |
+| On/Off Court | 1610612742 | DAL                 | Dallas Mavericks |         203552 | Curry, Seth       | On             |   36 |   457 |          8.9 |        112.9 |        105.6 |          7.3 |
+| On/Off Court | 1610612742 | DAL                 | Dallas Mavericks |        1641926 | Dennis, Dexter    | On             |    4 |    30 |        -14.5 |         89   |        100   |        -11   |
+| On/Off Court | 1610612742 | DAL                 | Dallas Mavericks |        1629029 | Doncic, Luka      | On             |   70 |  2624 |          5.8 |        119.6 |        113.8 |          5.8 |
+| On/Off Court | 1610612742 | DAL                 | Dallas Mavericks |         203957 | Exum, Dante       | On             |   55 |  1088 |         10.5 |        120.7 |        110.5 |         10.3 |
+| On/Off Court | 1610612742 | DAL                 | Dallas Mavericks |        1641788 | Fudge, Alex       | On             |    2 |    26 |        -35.4 |         94.5 |        124.6 |        -30   |
+| On/Off Court | 1610612742 | DAL                 | Dallas Mavericks |        1629655 | Gafford, Daniel   | On             |   29 |   623 |          6.6 |        115.1 |        108.2 |          6.8 |
+| On/Off Court | 1610612742 | DAL                 | Dallas Mavericks |        1630182 | Green, Josh       | On             |   57 |  1505 |         -3.2 |        116.7 |        118.8 |         -2.1 |
+| On/Off Court | 1610612742 | DAL                 | Dallas Mavericks |         203501 | Hardaway Jr., Tim | On             |   79 |  2120 |          0.3 |        115.7 |        115.8 |         -0.1 |
+| On/Off Court | 1610612742 | DAL                 | Dallas Mavericks |        1630702 | Hardy, Jaden      | On             |   73 |   989 |         -6.1 |        108.1 |        114.5 |         -6.5 |
+
+PlayersOffCourtTeamPlayerOnOffSummary:
+
+| GROUP_SET    |    TEAM_ID | TEAM_ABBREVIATION   | TEAM_NAME        |   VS_PLAYER_ID | VS_PLAYER_NAME    | COURT_STATUS   |   GP |   MIN |   PLUS_MINUS |   OFF_RATING |   DEF_RATING |   NET_RATING |
+|:-------------|-----------:|:--------------------|:-----------------|---------------:|:------------------|:---------------|-----:|------:|-------------:|-------------:|-------------:|-------------:|
+| On/Off Court | 1610612742 | DAL                 | Dallas Mavericks |        1630535 | Brown III, Greg   | Off            |   82 |  3901 |          2.3 |        117.1 |        114.9 |          2.2 |
+| On/Off Court | 1610612742 | DAL                 | Dallas Mavericks |         203552 | Curry, Seth       | Off            |   52 |  2039 |         -1.7 |        117.8 |        119.3 |         -1.6 |
+| On/Off Court | 1610612742 | DAL                 | Dallas Mavericks |        1641926 | Dennis, Dexter    | Off            |   31 |  1458 |          1.7 |        118.5 |        116.8 |          1.7 |
+| On/Off Court | 1610612742 | DAL                 | Dallas Mavericks |        1629029 | Doncic, Luka      | Off            |   82 |  1317 |         -5   |        109.1 |        113.4 |         -4.3 |
+| On/Off Court | 1610612742 | DAL                 | Dallas Mavericks |         203957 | Exum, Dante       | Off            |   82 |  2853 |         -1   |        114.1 |        114.8 |         -0.7 |
+| On/Off Court | 1610612742 | DAL                 | Dallas Mavericks |        1641788 | Fudge, Alex       | Off            |   21 |   987 |          7.6 |        115.6 |        108.1 |          7.5 |
+| On/Off Court | 1610612742 | DAL                 | Dallas Mavericks |        1629655 | Gafford, Daniel   | Off            |   30 |   822 |          4.9 |        114   |        109.1 |          4.9 |
+| On/Off Court | 1610612742 | DAL                 | Dallas Mavericks |        1630182 | Green, Josh       | Off            |   82 |  2436 |          5.5 |        115.7 |        110.6 |          5.1 |
+| On/Off Court | 1610612742 | DAL                 | Dallas Mavericks |         203501 | Hardaway Jr., Tim | Off            |   82 |  1821 |          4.4 |        115.3 |        110.7 |          4.6 |
+| On/Off Court | 1610612742 | DAL                 | Dallas Mavericks |        1630702 | Hardy, Jaden      | Off            |   82 |  2952 |          5   |        118.8 |        113.8 |          5   |
