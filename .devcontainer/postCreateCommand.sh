@@ -1,6 +1,5 @@
 pip install --upgrade pip
 poetry install
-
 # Activate poetry environment
 source $(poetry env info --path)/bin/activate
 

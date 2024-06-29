@@ -17,6 +17,19 @@
 
 # Version History
 
+## v1.5.0
+### Added
+- Add WNBA static data. by @cosmicac in https://github.com/swar/nba_api/pull/444
+ 
+### Changed
+- All NBA player and team static data current as of 2023.11.09 #398
+
+### Fixed
+- Update ScoreBoard game_date property name to score_board_date by @brooklynbagel in https://github.com/swar/nba_api/pull/422
+- Update README.md (fixed Slack links) by @rsforbes in https://github.com/swar/nba_api/pull/424
+- Update GameIDs Pattern Documentation by @TylerChasse in https://github.com/swar/nba_api/pull/437
+- Updated docs with example output data by @shufinskiy in https://github.com/swar/nba_api/pull/447
+
 ## v1.4.1
 ### Changed
 * Update documentation by @shufinskiy in https://github.com/swar/nba_api/pull/406
