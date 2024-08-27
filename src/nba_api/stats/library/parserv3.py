@@ -141,24 +141,32 @@ class NBAStatsBoxscoreTraditionalParserV3(NBAStatsBoxscoreParserV3):
             for key, value in raw_dict["homeTeam"].items()
             if key not in ("players", "statistics", "starters", "bench")
         ]
-        home_team_starter_stats = [
-            x for x in raw_dict["homeTeam"]["starters"].values()
-        ] + ["Starters"]
-        home_team_bench_stats = [x for x in raw_dict["homeTeam"]["bench"].values()] + [
-            "Bench"
-        ]
+        home_team_starter = raw_dict["homeTeam"]["starters"]
+        home_team_bench = raw_dict["homeTeam"]["bench"]
+        home_team_starter_stats = (
+            [x for x in home_team_starter.values()] + ["Starters"]
+            if home_team_starter is not None else ["Starters"]
+        )
+        home_team_bench_stats = (
+            [x for x in home_team_bench.values()] + ["Bench"]
+            if home_team_bench is not None else ["Bench"]
+        )
 
         away_team_info = [
             value
             for key, value in raw_dict["awayTeam"].items()
             if key not in ("players", "statistics", "starters", "bench")
         ]
-        away_team_starter_stats = [
-            x for x in raw_dict["awayTeam"]["starters"].values()
-        ] + ["Starters"]
-        away_team_bench_stats = [x for x in raw_dict["awayTeam"]["bench"].values()] + [
-            "Bench"
-        ]
+        away_team_starter = raw_dict["awayTeam"]["starters"]
+        away_team_bench = raw_dict["awayTeam"]["bench"]
+        away_team_starter_stats = (
+            [x for x in away_team_starter.values()] + ["Starters"]
+            if away_team_starter is not None else ["Starters"]
+        )
+        away_team_bench_stats = (
+            [x for x in away_team_bench.values()] + ["Bench"]
+            if away_team_bench is not None else ["Bench"]
+        )
 
         return [
             [raw_dict["gameId"]] + home_team_info + home_team_starter_stats,
