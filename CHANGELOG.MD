@@ -16,6 +16,22 @@
 - `Contributor` (notes on updates to the project)
 
 # Version History
+## v1.5.1
+Date: 2024.08.27
+
+### Fixed
+* Fix BoxScoreTraditionalV3 API Bug(some game stats starters and bench is None, cause 'NoneType' object has no attribute 'values') by @XatMassacrE in https://github.com/swar/nba_api/pull/458
+
+### Changed
+* Bump idna from 3.4 to 3.7 by @dependabot in https://github.com/swar/nba_api/pull/438
+* Bump requests from 2.31.0 to 2.32.0 by @dependabot in https://github.com/swar/nba_api/pull/443
+* Bump certifi from 2023.7.22 to 2024.7.4 by @dependabot in https://github.com/swar/nba_api/pull/454
+* updated static players file by @rsforbes in https://github.com/swar/nba_api/pull/460
+
+### Security
+* updated requests to use version ^2.32.2 by @rsforbes in https://github.com/swar/nba_api/pull/459
+
+**Full Changelog**: https://github.com/swar/nba_api/compare/v1.5.0...v1.5.1
 
 ## v1.5.0
 ### Added
