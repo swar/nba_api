@@ -16,6 +16,12 @@
 - `Contributor` (notes on updates to the project)
 
 # Version History
+## v1.5.2
+Date: 2024.08.28
+
+### Fixed
+* Fixed static data.py file where wnba_teams was missing.
+
 ## v1.5.1
 Date: 2024.08.27
 
