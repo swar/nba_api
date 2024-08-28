@@ -1,4 +1,5 @@
 import os
+import shutil
 from datetime import datetime
 
 from nba_api.stats.endpoints.commonallplayers import CommonAllPlayers
@@ -61,13 +62,14 @@ def format_player_string(players_list):
     return players_string.rstrip(",\n")
 
 
-def write_static_data_file(directory, file_contents):
+def write_static_data_file(directory, file_contents) -> str:
     if not os.path.exists(directory):
         os.makedirs(directory)
     file_name = "data.py"
-    f = open(os.path.join(os.getcwd(), directory, file_name), "w")
+    f = open(file_path := os.path.join(os.getcwd(), directory, file_name), "w")
     f.write(file_contents)
     f.close()
+    return file_path
 
 
 def generate_static_data_file(directory="static_files"):
@@ -87,7 +89,9 @@ def generate_static_data_file(directory="static_files"):
         date_updated=datetime.now().strftime("%b, %d %Y"),
     )
 
-    write_static_data_file(directory, file_contents)
+    src_file_path = write_static_data_file(directory, file_contents)
+
+    shutil.copyfile(src_file_path, 'src/nba_api/stats/library/data.py')
 
 
 if __name__ == "__main__":

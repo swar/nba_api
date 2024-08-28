@@ -6172,3 +6172,18 @@ teams = [
     [1610612765, 'DET', 'Pistons', 1948, 'Detroit', 'Detroit Pistons', 'Michigan', [1989, 1990, 2004]],
     [1610612766, 'CHA', 'Hornets', 1988, 'Charlotte', 'Charlotte Hornets', 'North Carolina', []]
 ]
+
+wnba_teams = [
+    [1611661313, "NYL", "Liberty", 1997, "New York", "New York Liberty", "New York", []],
+    [1611661317, "PHO", "Mercury", 1997, "Phoenix", "Phoenix Mercury", "Arizona", [2007, 2009, 2014]],
+    [1611661319, "LVA", "Aces", 1997, "Las Vegas", "Las Vegas Aces", "Nevada", [2022, 2023]],
+    [1611661320, "LAS", "Sparks", 1997, "Los Angeles", "Los Angeles Sparks", "California", [2001, 2002, 2016]],
+    [1611661321, "DAL", "Wings", 1998, "Dallas", "Dallas Wings", "Texas", [2003, 2006, 2008]],
+    [1611661322, "WAS", "Mystics", 1998, "Washington", "Washington Mystics", "District of Columbia", [2019]],
+    [1611661323, "CON", "Sun", 1999, "Connecticut", "Connecticut Sun", "Connecticut", []],
+    [1611661324, "MIN", "Lynx", 1999, "Minnesota", "Minnesota Lynx", "Minnesota", [2011, 2013, 2015, 2017]],
+    [1611661325, "IND", "Fever", 2000, "Indiana", "Indiana Fever", "Indiana", [2012]],
+    [1611661328, "SEA", "Storm", 2000, "Seattle", "Seattle Storm", "Washington",[2004, 2010, 2018, 2020]],
+    [1611661329, "CHI", "Sky", 2005, "Chicago", "Chicago Sky", "Illinois", [2021]],
+    [1611661330, "ATL", "Dream", 2008, "Atlanta", "Atlanta Dream", "Georgia", []],
+]
