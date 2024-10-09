@@ -27,7 +27,7 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 requests = "^2.31.2"
 numpy = "^1.22.2"
 certifi = ">=2023.7.22,<2025.0.0"
