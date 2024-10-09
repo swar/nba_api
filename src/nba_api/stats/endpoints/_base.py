@@ -29,7 +29,10 @@ class Endpoint:
                     "Import Missing - Failed to import DataFrame from pandas."
                 )
 
-            if isinstance(self.data["headers"][0], str):
+            if "headers" not in self.data or not self.data["headers"]:
+                return DataFrame()
+
+            if isinstance(self.data['headers'][0], str):
                 return DataFrame(self.data["data"], columns=self.data["headers"])
 
             else:  # Multiple levels of column names
