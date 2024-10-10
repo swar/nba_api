@@ -22,6 +22,7 @@ Date: 2024.10.10
 ### Changed
 * Updated .settings.json to recognize pytest tests
 * Reformatted src/nba_api/stats/library/data.py for compliance with Flake8 rules
+* Updated Static Player File
 
 ### Deprecated
 * BoxScoreSimilarityScore (Person1Season & Person2Season no longer support valid values).
