@@ -1,7 +1,7 @@
 import pytest
 import datetime
 import time
-from nba_api.stats.endpoints import Scoreboard
+from nba_api.stats.endpoints import ScoreboardV2
 from nba_api.stats.endpoints import PlayByPlay
 from nba_api.stats.library.parameters import LeagueID
 from nba_api.stats.library.eventmsgtype import EventMsgType
@@ -21,7 +21,7 @@ def pytest_generate_tests(metafunc):
 
 
 def get_game_ids():
-    gamefinder = Scoreboard(
+    gamefinder = ScoreboardV2(
         league_id=LeagueID.nba, day_offset=-1, game_date=datetime.datetime.now()
     )
 

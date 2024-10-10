@@ -130,7 +130,6 @@ deferred_endpoints = [
     DeferredEndpoint(ep.PlayerProfileV2, player_id="2544"),
     DeferredEndpoint(ep.PlayerVsPlayer, player_id="2544", vs_player_id="202681"),
     DeferredEndpoint(ep.PlayoffPicture),
-    DeferredEndpoint(ep.Scoreboard),
     DeferredEndpoint(ep.ScoreboardV2),
     DeferredEndpoint(ep.ShotChartDetail, player_id="2544", team_id="1610612739"),
     DeferredEndpoint(ep.ShotChartLeagueWide),

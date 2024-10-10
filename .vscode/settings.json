@@ -12,5 +12,10 @@
         "reportUnboundVariable": "information",
         "reportImplicitStringConcatenation": "warning",
         "reportUntypedFunctionDecorator": "information",
-    }
+    },
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
 }

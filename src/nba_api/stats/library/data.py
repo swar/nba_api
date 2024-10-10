@@ -6142,16 +6142,19 @@ team_index_championship_year = 7
 
 teams = [
     [1610612737, 'ATL', 'Hawks', 1949, 'Atlanta', 'Atlanta Hawks', 'Georgia', [1958]],
-    [1610612738, 'BOS', 'Celtics', 1946, 'Boston', 'Boston Celtics', 'Massachusetts', [1957, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1968, 1969, 1974, 1976, 1981, 1984, 1986, 2008]],
+    [1610612738, 'BOS', 'Celtics', 1946, 'Boston', 'Boston Celtics', 'Massachusetts', [1957, 1959,
+                                                                                       1960, 1961, 1962, 1963, 1964, 1965, 1966, 1968, 1969, 1974, 1976, 1981, 1984, 1986, 2008]],
     [1610612739, 'CLE', 'Cavaliers', 1970, 'Cleveland', 'Cleveland Cavaliers', 'Ohio', [2016]],
     [1610612740, 'NOP', 'Pelicans', 2002, 'New Orleans', 'New Orleans Pelicans', 'Louisiana', []],
     [1610612741, 'CHI', 'Bulls', 1966, 'Chicago', 'Chicago Bulls', 'Illinois', [1991, 1992, 1993, 1996, 1997, 1998]],
     [1610612742, 'DAL', 'Mavericks', 1980, 'Dallas', 'Dallas Mavericks', 'Texas', [2011]],
     [1610612743, 'DEN', 'Nuggets', 1976, 'Denver', 'Denver Nuggets', 'Colorado', [2023]],
-    [1610612744, 'GSW', 'Warriors', 1946, 'Golden State', 'Golden State Warriors', 'California', [1947, 1956, 1975, 2015, 2017, 2018, 2022]],
+    [1610612744, 'GSW', 'Warriors', 1946, 'Golden State', 'Golden State Warriors',
+        'California', [1947, 1956, 1975, 2015, 2017, 2018, 2022]],
     [1610612745, 'HOU', 'Rockets', 1967, 'Houston', 'Houston Rockets', 'Texas', [1994, 1995]],
     [1610612746, 'LAC', 'Clippers', 1970, 'Los Angeles', 'Los Angeles Clippers', 'California', []],
-    [1610612747, 'LAL', 'Lakers', 1948, 'Los Angeles', 'Los Angeles Lakers', 'California', [1949, 1950, 1952, 1953, 1954, 1972, 1980, 1982, 1985, 1987, 1988, 2000, 2001, 2002, 2009, 2010, 2020]],
+    [1610612747, 'LAL', 'Lakers', 1948, 'Los Angeles', 'Los Angeles Lakers', 'California', [
+        1949, 1950, 1952, 1953, 1954, 1972, 1980, 1982, 1985, 1987, 1988, 2000, 2001, 2002, 2009, 2010, 2020]],
     [1610612748, 'MIA', 'Heat', 1988, 'Miami', 'Miami Heat', 'Florida', [2006, 2012, 2013]],
     [1610612749, 'MIL', 'Bucks', 1968, 'Milwaukee', 'Milwaukee Bucks', 'Wisconsin', [1971, 2021]],
     [1610612750, 'MIN', 'Timberwolves', 1989, 'Minnesota', 'Minnesota Timberwolves', 'Minnesota', []],
@@ -6183,7 +6186,7 @@ wnba_teams = [
     [1611661323, "CON", "Sun", 1999, "Connecticut", "Connecticut Sun", "Connecticut", []],
     [1611661324, "MIN", "Lynx", 1999, "Minnesota", "Minnesota Lynx", "Minnesota", [2011, 2013, 2015, 2017]],
     [1611661325, "IND", "Fever", 2000, "Indiana", "Indiana Fever", "Indiana", [2012]],
-    [1611661328, "SEA", "Storm", 2000, "Seattle", "Seattle Storm", "Washington",[2004, 2010, 2018, 2020]],
+    [1611661328, "SEA", "Storm", 2000, "Seattle", "Seattle Storm", "Washington", [2004, 2010, 2018, 2020]],
     [1611661329, "CHI", "Sky", 2005, "Chicago", "Chicago Sky", "Illinois", [2021]],
     [1611661330, "ATL", "Dream", 2008, "Atlanta", "Atlanta Dream", "Georgia", []],
 ]
