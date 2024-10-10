@@ -16,6 +16,27 @@
 - `Contributor` (notes on updates to the project)
 
 # Version History
+## v1.6.0
+Date: 2024.10.10
+
+### Changed
+* Updated .settings.json to recognize pytest tests
+* Reformatted src/nba_api/stats/library/data.py for compliance with Flake8 rules
+* Updated Static Player File
+
+### Deprecated
+* BoxScoreSimilarityScore (Person1Season & Person2Season no longer support valid values).
+* Removed support for Python 3.8
+
+### Fixed
+* Fixed test for ShotChartLineupDetail.
+* Fixed Bug #464 affecting Scoreboard & ScoreboardV2 endpoints
+
+### Security
+* Upgraded requests to ^2.32.3
+* Upgraded certifi to ^2023.7.22 (CVE-2023-37920)
+* Upgraded idna ^3.7.0 (CVE-2024-3651)
+
 ## v1.5.2
 Date: 2024.08.28
 

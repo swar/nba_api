@@ -753,50 +753,6 @@
         ],
         "status": "success"
     },
-    "BoxScoreSimilarityScore": {
-        "data_sets": {
-            "BoxScoreSimilarityScores": [
-                "PERSON_2_ID",
-                "PERSON_2",
-                "PERSON_2_TEAM_ID",
-                "SIMILARITY_SCORE"
-            ]
-        },
-        "endpoint": "BoxScoreSimilarityScore",
-        "last_validated_date": "2020-08-15",
-        "nullable_parameters": [],
-        "parameter_patterns": {
-            "Person1Id": null,
-            "Person1LeagueId": null,
-            "Person1Season": null,
-            "Person1SeasonType": null,
-            "Person2Id": null,
-            "Person2LeagueId": null,
-            "Person2Season": null,
-            "Person2SeasonType": null
-        },
-        "parameters": [
-            "Person1Id",
-            "Person1LeagueId",
-            "Person1Season",
-            "Person1SeasonType",
-            "Person2Id",
-            "Person2LeagueId",
-            "Person2Season",
-            "Person2SeasonType"
-        ],
-        "required_parameters": [
-            "Person1Id",
-            "Person1LeagueId",
-            "Person1Season",
-            "Person1SeasonType",
-            "Person2Id",
-            "Person2LeagueId",
-            "Person2Season",
-            "Person2SeasonType"
-        ],
-        "status": "success"
-    },
     "BoxScoreSummary": {
         "endpoint": "BoxScoreSummary",
         "last_validated_date": "2020-08-15",

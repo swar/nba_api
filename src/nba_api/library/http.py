@@ -98,7 +98,7 @@ class NBAHTTP:
         else:
             request_proxy = proxy
 
-        if type(request_proxy) == list:
+        if isinstance(request_proxy, list):
             request_proxy = random.choice(request_proxy)
             if DEBUG:
                 print(request_proxy)

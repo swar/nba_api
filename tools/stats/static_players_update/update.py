@@ -89,9 +89,7 @@ def generate_static_data_file(directory="static_files"):
         date_updated=datetime.now().strftime("%b, %d %Y"),
     )
 
-    src_file_path = write_static_data_file(directory, file_contents)
-
-    shutil.copyfile(src_file_path, 'src/nba_api/stats/library/data.py')
+    write_static_data_file(directory, file_contents)
 
 
 if __name__ == "__main__":

@@ -30,7 +30,6 @@ deferred_endpoints = [
     DeferredEndpoint(ep.BoxScorePlayerTrackV3, game_id="0021700807"),
     DeferredEndpoint(ep.BoxScoreScoringV2, game_id="0021700807"),
     DeferredEndpoint(ep.BoxScoreScoringV3, game_id="0021700807"),
-    DeferredEndpoint(ep.BoxScoreSimilarityScore, person1_id="2544", person2_id="2544"),
     DeferredEndpoint(ep.BoxScoreSummaryV2, game_id="0021700807"),
     DeferredEndpoint(ep.BoxScoreTraditionalV2, game_id="0021700807"),
     DeferredEndpoint(ep.BoxScoreTraditionalV3, game_id="0021700807"),
@@ -133,7 +132,9 @@ deferred_endpoints = [
     DeferredEndpoint(ep.ScoreboardV2),
     DeferredEndpoint(ep.ShotChartDetail, player_id="2544", team_id="1610612739"),
     DeferredEndpoint(ep.ShotChartLeagueWide),
-    DeferredEndpoint(ep.ShotChartLineupDetail),
+    DeferredEndpoint(
+        ep.ShotChartLineupDetail, group_id="-202689-203493-203501-1626174-1627827-"
+    ),
     DeferredEndpoint(ep.SynergyPlayTypes),
     DeferredEndpoint(
         ep.TeamAndPlayersVsPlayers,
