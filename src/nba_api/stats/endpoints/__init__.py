@@ -15,7 +15,6 @@ __all__ = [
     "boxscoreplayertrackv3",
     "boxscorescoringv2",
     "boxscorescoringv3",
-    "boxscoresimilarityscore",
     "boxscoresummaryv2",
     "boxscoretraditionalv2",
     "boxscoretraditionalv3",
@@ -152,7 +151,6 @@ from .boxscoreplayertrackv2 import BoxScorePlayerTrackV2
 from .boxscoreplayertrackv3 import BoxScorePlayerTrackV3
 from .boxscorescoringv2 import BoxScoreScoringV2
 from .boxscorescoringv3 import BoxScoreScoringV3
-from .boxscoresimilarityscore import BoxScoreSimilarityScore
 from .boxscoresummaryv2 import BoxScoreSummaryV2
 from .boxscoretraditionalv2 import BoxScoreTraditionalV2
 from .boxscoretraditionalv3 import BoxScoreTraditionalV3
