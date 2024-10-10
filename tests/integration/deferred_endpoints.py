@@ -132,7 +132,9 @@ deferred_endpoints = [
     DeferredEndpoint(ep.ScoreboardV2),
     DeferredEndpoint(ep.ShotChartDetail, player_id="2544", team_id="1610612739"),
     DeferredEndpoint(ep.ShotChartLeagueWide),
-    DeferredEndpoint(ep.ShotChartLineupDetail),
+    DeferredEndpoint(
+        ep.ShotChartLineupDetail, group_id="-202689-203493-203501-1626174-1627827-"
+    ),
     DeferredEndpoint(ep.SynergyPlayTypes),
     DeferredEndpoint(
         ep.TeamAndPlayersVsPlayers,
