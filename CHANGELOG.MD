@@ -33,7 +33,8 @@ Date: 2024.10.10
 
 ### Security
 * Upgraded requests to ^2.32.3
-* Upgraded certifi to ^2023.7.22
+* Upgraded certifi to ^2023.7.22 (CVE-2023-37920)
+* Upgraded idna ^3.7.0 (CVE-2024-3651)
 
 ## v1.5.2
 Date: 2024.08.28
