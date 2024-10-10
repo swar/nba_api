@@ -30,7 +30,7 @@ classifiers = [
 python = "^3.9"
 requests = "^2.32.3"
 numpy = "^1.22.2"
-certifi = ">=2023.7.22,<2025.0.0"
+certifi = "^2023.7.22"
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/swar/nba_api/issues"

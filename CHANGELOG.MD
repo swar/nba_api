@@ -31,6 +31,10 @@ Date: 2024.10.10
 * Fixed test for ShotChartLineupDetail.
 * Fixed Bug #464 affecting Scoreboard & ScoreboardV2 endpoints
 
+### Security
+* Upgraded requests to ^2.32.3
+* Upgraded certifi to ^2023.7.22
+
 ## v1.5.2
 Date: 2024.08.28
 
