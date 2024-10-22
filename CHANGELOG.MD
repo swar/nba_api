@@ -26,6 +26,7 @@ Date: 2024.10.10
 
 ### Deprecated
 * BoxScoreSimilarityScore (Person1Season & Person2Season no longer support valid values).
+* Scoreboard
 * Removed support for Python 3.8
 
 ### Fixed
