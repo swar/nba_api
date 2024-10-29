@@ -16,6 +16,12 @@
 - `Contributor` (notes on updates to the project)
 
 # Version History
+## v1.6.1
+Date: 2024.10.29
+
+### Fixed
+* Resolved Issue #476 related to certifi lib
+
 ## v1.6.0
 Date: 2024.10.10
 

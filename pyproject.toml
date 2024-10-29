@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "nba_api"
-version = "1.6.0"
+version = "1.6.1"
 description = "An API Client package to access the APIs for NBA.com"
 license = "MIT"
 authors = [ 
@@ -30,10 +30,6 @@ classifiers = [
 python = "^3.9"
 requests = "^2.32.3"
 numpy = "^1.22.2"
-certifi = "^2023.7.22"
-idna = "^3.7.0"
-urllib3 = "^2.2.2"
-
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/swar/nba_api/issues"
