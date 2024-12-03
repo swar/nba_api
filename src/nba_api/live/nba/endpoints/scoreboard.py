@@ -1,3 +1,5 @@
+import requests
+
 from nba_api.live.nba.endpoints._base import Endpoint
 from nba_api.live.nba.library.http import NBALiveHTTP
 
@@ -83,7 +85,8 @@ class ScoreBoard(Endpoint):
     games = None
     headers = None
 
-    def __init__(self, proxy=None, headers=None, timeout=30, get_request=True):
+    def __init__(self, proxy=None, headers=None, timeout=30, get_request=True, session: requests.Session | None = None):
+        super().__init__(session=session)
         self.proxy = proxy
         if headers is not None:
             self.headers = headers
@@ -98,6 +101,7 @@ class ScoreBoard(Endpoint):
             proxy=self.proxy,
             headers=self.headers,
             timeout=self.timeout,
+            session=self._session,
         )
         self.load_response()
 

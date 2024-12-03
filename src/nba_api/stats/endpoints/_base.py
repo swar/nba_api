@@ -1,5 +1,6 @@
 import json
 import numpy as np
+import requests
 
 try:
     from pandas import DataFrame, MultiIndex
@@ -61,6 +62,9 @@ class Endpoint:
                     levels, names=level_names
                 )  # Use MultiIndex for dataframe columns
                 return DataFrame(self.data["data"], columns=midx)
+
+    def __init__(self, session: requests.Session|None = None) -> None:
+        self._session = session
 
     def get_request_url(self):
         return self.nba_response.get_url()

@@ -76,6 +76,7 @@ class NBAHTTP:
         headers=None,
         timeout=None,
         raise_exception_on_error=False,
+        session: requests.Session|None = None,
     ):
         if not self.base_url:
             raise Exception("Cannot use send_api_request from _HTTP class.")
@@ -117,6 +118,9 @@ class NBAHTTP:
         # Sort parameters by key... for some reason this matters for some requests...
         parameters = sorted(parameters.items(), key=lambda kv: kv[0])
 
+        if session is None:
+            session = requests.Session()
+
         if DEBUG and DEBUG_STORAGE:
             print(endpoint, parameters)
             directory_name = "debug_storage"
@@ -143,7 +147,7 @@ class NBAHTTP:
                 print("loading from file...")
 
         if not contents:
-            response = requests.get(
+            response = session.get(
                 url=base_url,
                 params=parameters,
                 headers=request_headers,

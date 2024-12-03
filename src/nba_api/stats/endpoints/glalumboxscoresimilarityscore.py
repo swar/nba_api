@@ -1,3 +1,5 @@
+import requests
+
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
 from nba_api.stats.library.parameters import LeagueID, SeasonYear, SeasonType
@@ -34,6 +36,7 @@ class GLAlumBoxScoreSimilarityScore(Endpoint):
         headers=None,
         timeout=30,
         get_request=True,
+        session: requests.Session|None = None,
     ):
         self.proxy = proxy
         if headers is not None:
@@ -59,6 +62,7 @@ class GLAlumBoxScoreSimilarityScore(Endpoint):
             proxy=self.proxy,
             headers=self.headers,
             timeout=self.timeout,
+            session=self._session,
         )
         self.load_response()
 
