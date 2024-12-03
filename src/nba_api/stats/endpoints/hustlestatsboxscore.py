@@ -1,3 +1,5 @@
+import requests
+
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
 
@@ -65,7 +67,8 @@ class HustleStatsBoxScore(Endpoint):
     team_stats = None
     headers = None
 
-    def __init__(self, game_id, proxy=None, headers=None, timeout=30, get_request=True):
+    def __init__(self, game_id, proxy=None, headers=None, timeout=30, get_request=True, session: requests.Session|None = None):
+        super().__init__(session=session)
         self.proxy = proxy
         if headers is not None:
             self.headers = headers
@@ -81,6 +84,7 @@ class HustleStatsBoxScore(Endpoint):
             proxy=self.proxy,
             headers=self.headers,
             timeout=self.timeout,
+            session=self._session,
         )
         self.load_response()
 
