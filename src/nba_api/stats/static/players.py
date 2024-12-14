@@ -7,14 +7,25 @@ from nba_api.stats.library.data import (
     player_index_last_name,
     player_index_is_active,
 )
+import unicodedata
 
 
 def _find_players(regex_pattern, row_id, players=players):
     players_found = []
     for player in players:
-        if re.search(regex_pattern, str(player[row_id]), flags=re.I):
+        if re.search(_strip_accents(regex_pattern), _strip_accents(str(player[row_id])), flags=re.I):
             players_found.append(_get_player_dict(player))
     return players_found
+
+
+def _strip_accents(inputstr: str) -> str:
+    """
+    Normalize and remove accents from string.
+    """
+    # Normalize to decomposed form
+    normalizedstr = unicodedata.normalize('NFD', inputstr)
+    # Filter out accents (Mn = Mark, Nonspacing category)
+    return ''.join(charx for charx in normalizedstr if unicodedata.category(charx) != 'Mn')
 
 
 def _find_player_by_id(player_id, players=players):
