@@ -64,10 +64,10 @@ class NBAHTTP:
 
     headers = None
 
-    _session: requests.Session | None = None
+    _session = None
 
     @classmethod
-    def get_session(cls) -> requests.Session:
+    def get_session(cls):
         session = cls._session
         if session is None:
             session = requests.Session()
@@ -75,7 +75,7 @@ class NBAHTTP:
         return session
 
     @classmethod
-    def set_session(cls, session: requests.Session) -> None:
+    def set_session(cls, session) -> None:
         cls._session = session
 
     def clean_contents(self, contents):
