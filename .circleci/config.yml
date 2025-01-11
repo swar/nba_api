@@ -34,6 +34,7 @@ workflows:
               image: [
                 "cimg/python:3.9",
                 "cimg/python:3.10",
-                "cimg/python:3.11"
+                "cimg/python:3.11",
+                "cimg/python:3.12"
               ]
      
