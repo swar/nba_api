@@ -16,6 +16,18 @@
 - `Contributor` (notes on updates to the project)
 
 # Version History
+## v1.7.0
+### Added
+* Support for User Defined Session to API calls by @8W9aG in https://github.com/swar/nba_api/pull/486
+* Accent Neutral Search for Static Player Data by @mxufc29 in https://github.com/swar/nba_api/pull/488
+
+### Changed
+* Updated CI build by @rsforbes in https://github.com/swar/nba_api/pull/496
+* Updated Static Player Data. by @rsforbes in https://github.com/swar/nba_api/pull/495
+
+### Fixed
+* Updated PlayByPlay Regex File by @rsforbes in https://github.com/swar/nba_api/pull/494
+
 ## v1.6.1
 Date: 2024.10.29
 
