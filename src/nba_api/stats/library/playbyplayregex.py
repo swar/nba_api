@@ -8,6 +8,11 @@ from nba_api.stats.library.eventmsgtype import EventMsgType
 #   In the context of a turnover, there is no solution for dealing with multiple names in conjunction with the turnover type.
 #   Example: "Mark Morris Lane Violation Turnover (P1.T6)" could be parsed many ways. While human readable, it's not regex friendly.
 #   There are likely to be others. If you find one, please open an Issue or create a PR. The regex allows for multiple using the `(name name)|` format.
+
+# Common pattern to reduce repetition across team-related patterns
+TEAM_NAME_PATTERN = r"(?P<team>\w+( \w+)?)"
+
+# Player name components
 pattern_player_name_anomaly = r"(Mark Morris)|da Silva|"
 pattern_player_char = r"((?#char)(\. \w+)|(\-?\'?\w+))?"
 pattern_player_suffix = r"((?#suffix)([\s](Jr\.|Sr\.|III|II|IV)))?"
@@ -18,11 +23,14 @@ pattern_player = (
         player_suffix=pattern_player_suffix,
     )
 )
-pattern_rebound_team = r"^(?P<team>\w+( \w+)?) Rebound$"
+pattern_rebound_team = rf"^{TEAM_NAME_PATTERN} Rebound$"
 pattern_turnover_team = (
-    r"^(?P<team>\w+( \w+)?) Turnover: (?P<turnover_type>.*) \(T# ?(?P<turnovers>\d+)\)$"
+    rf"^{TEAM_NAME_PATTERN} Turnover: (?P<turnover_type>.*) \(T# ?(?P<turnovers>\d+)\)$"
 )
-pattern_timeout = r"^(?P<team>\w+( \w+)?) Timeout: ((?P<timeout_type>.*)) \(\w+( |\.)(?P<full>\d+) \w+ (?P<short>\d+)\)$"
+pattern_timeout = (
+    rf"^{TEAM_NAME_PATTERN} Timeout: (?P<timeout_type>.*) "
+    r"\(\w+( |\.)(?P<full>\d+) \w+ (?P<short>\d+)\)$"
+)
 pattern_block = r"^(?P<player>.+) BLOCK \((?P<blocks>\d+) BLK\)$"
 pattern_ejection = r"^(?P<player>.+) Ejection:(?P<ejection_type>.*)$"
 pattern_field_goal_made = r"^{player} (((?P<distance>\d+)\' )| )?[ ]*(?P<field_goal_type>[\w+( |\-)]*) \((?P<points>\d+) PTS\)( \((?P<player_ast>\D+) (?P<assists>\d+) AST\))?$".format(
@@ -52,7 +60,7 @@ pattern_violation = (
     r"^(?P<player>.+) Violation:(?P<violation_type>\w+\s?\w+)(\s\((?P<referee>.*)\))?$"
 )
 pattern_violation_team = (
-    r"^(?P<team>\w+( \w+)?) Violation: (?P<violation_type>.*) Violation$"
+    rf"^{TEAM_NAME_PATTERN} Violation: (?P<violation_type>.*) Violation$"
 )
 
 
