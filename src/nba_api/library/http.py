@@ -64,6 +64,20 @@ class NBAHTTP:
 
     headers = None
 
+    _session = None
+
+    @classmethod
+    def get_session(cls):
+        session = cls._session
+        if session is None:
+            session = requests.Session()
+            cls._session = session
+        return session
+
+    @classmethod
+    def set_session(cls, session) -> None:
+        cls._session = session
+
     def clean_contents(self, contents):
         return contents
 
@@ -143,7 +157,7 @@ class NBAHTTP:
                 print("loading from file...")
 
         if not contents:
-            response = requests.get(
+            response = self.get_session().get(
                 url=base_url,
                 params=parameters,
                 headers=request_headers,
