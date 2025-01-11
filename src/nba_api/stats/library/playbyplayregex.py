@@ -8,7 +8,7 @@ from nba_api.stats.library.eventmsgtype import EventMsgType
 #   In the context of a turnover, there is no solution for dealing with multiple names in conjunction with the turnover type.
 #   Example: "Mark Morris Lane Violation Turnover (P1.T6)" could be parsed many ways. While human readable, it's not regex friendly.
 #   There are likely to be others. If you find one, please open an Issue or create a PR. The regex allows for multiple using the `(name name)|` format.
-pattern_player_name_anomaly = r"(Mark Morris)|"
+pattern_player_name_anomaly = r"(Mark Morris)|da Silva|"
 pattern_player_char = r"((?#char)(\. \w+)|(\-?\'?\w+))?"
 pattern_player_suffix = r"((?#suffix)([\s](Jr\.|Sr\.|III|II|IV)))?"
 pattern_player = (

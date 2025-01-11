@@ -29,6 +29,19 @@ playbyplay["FieldGoalMade"].append(
     }
 )
 
+# Field Goal Made (First Name Lower Case)
+playbyplay["FieldGoalMade"].append(
+    {
+        "description": "da Silva 25' 3PT Jump Shot (12 PTS) (Black 1 AST)",
+        "player": "da Silva",
+        "distance": "25",
+        "field_goal_type": "3PT Jump Shot",
+        "points": "12",
+        "player_ast": "Black",
+        "assists": "1",
+    }
+)
+
 # Field Goal Made (Without Assist)
 playbyplay["FieldGoalMade"].append(
     {
