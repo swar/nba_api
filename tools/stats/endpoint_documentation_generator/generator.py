@@ -107,6 +107,25 @@ def get_endpoint_documentation(endpoint, endpoints_information):
     return documentation_text
 
 
+def generate_boilerplate_endpoint_documentation(instance, directory="./docs"):
+    endpoint = instance.__class__.__name__
+    endpoints_information = {}
+    endpoints_information[endpoint] = {
+        "parameters": list(instance.parameters.keys()),
+        "required_parameters": [],
+        "nullable_parameters": [],
+        "parameter_patterns": {k: None for k in instance.parameters.keys()},
+        "data_sets": instance.expected_data,
+        "status": "success",
+    }
+    file_path = get_file_path(directory)
+    file_name = "{}.md".format(instance.__class__.__module__.replace(".", "/"))
+    contents = get_endpoint_documentation(
+        endpoint=endpoint, endpoints_information=endpoints_information
+    )
+    save_file(file_path=file_path, file_name=file_name, contents=contents)
+
+
 def generate_all_endpoint_documentation(directory="endpoint_documentation"):
     endpoints_information = load_endpoint_file()
     for endpoint in endpoint_list:
