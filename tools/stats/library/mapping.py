@@ -150,6 +150,8 @@ endpoint_list = [
     "PlayerYearOverYearStats",
     "PlayoffPicture",
     "PlayoffSeries",
+    "ScheduleLeagueV2",
+    "ScheduleLeagueV2Int",
     "Scoreboard",
     "ScoreboardMini",
     "ScoreboardV2",
