@@ -62,11 +62,10 @@
     "parameter_patterns": {
         "LeagueID": "^\\d{2}$",
         "PerMode": "^(Totals)|(PerGame)$",
-        "PlayType": null,
         "PlayerOrTeam": "^(P)|(T)$",
         "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)|(All-Star)$",
         "SeasonYear": "^(\\d{4}-\\d{2})|(\\d{4})$",
-        "TypeGrouping": null
+        "TypeGrouping": "^(offensive)|(defensive)$",
         "PlayType": "^(Cut)|(Handoff)|(Isolation)|(Misc)|(Offscreen)|(Postup)|(PRBallHandler)|(PRRollman)|(OffRebound)|(Spotup)|(Transition)$"
     },
     "parameters": [
@@ -77,14 +76,15 @@
         "SeasonType",
         "SeasonYear",
         "TypeGrouping",
-        "PlayType"
     ],
     "required_parameters": [
         "LeagueID",
         "PerMode",
+        "PlayType",
         "PlayerOrTeam",
         "SeasonType",
-        "SeasonYear"
+        "SeasonYear",
+        "TypeGrouping",
     ],
     "status": "success"
 }
