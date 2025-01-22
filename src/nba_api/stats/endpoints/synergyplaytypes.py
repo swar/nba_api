@@ -53,7 +53,7 @@ class SynergyPlayTypes(Endpoint):
         player_or_team_abbreviation=PlayerOrTeamAbbreviation.default,
         season_type_all_star=SeasonTypeAllStar.default,
         season=Season.default,
-        play_type_nullable=PlayTypeNullable.default,
+        play_type=PlayTypeNullable.default,
         type_grouping_nullable=TypeGroupingNullable.default,
         proxy=None,
         headers=None,
@@ -70,7 +70,7 @@ class SynergyPlayTypes(Endpoint):
             "PlayerOrTeam": player_or_team_abbreviation,
             "SeasonType": season_type_all_star,
             "SeasonYear": season,
-            "PlayType": play_type_nullable,
+            "PlayType": play_type,
             "TypeGrouping": type_grouping_nullable,
         }
         if get_request:
