@@ -15,8 +15,8 @@
 | [_**PlayerOrTeam**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayerOrTeam) | player_or_team_abbreviation |                              `^(P)\|(T)$`                              |   `Y`    |          | 
 | [_**SeasonType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonType)     | season_type_all_star        | `^(Regular Season)\|(Pre Season)\|(Playoffs)\|(All Star)\|(All-Star)$` |   `Y`    |          | 
 | [_**SeasonYear**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#SeasonYear)     | season                      |                       `^(\d{4}-\d{2})\|(\d{4})$`                       |   `Y`    |          | 
-| [_**TypeGrouping**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TypeGrouping) | type_grouping_nullable      |                                                                        |          |   `Y`    | 
-| [_**PlayType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayType)         | play_type_nullable          |                                                                        |          |   `Y`    | 
+| [_**TypeGrouping**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#TypeGrouping) | type_grouping               |                      `^(offensive)|(defensive)$`                       |   `Y`    |          |
+| [_**PlayType**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#PlayType)         | play_type                   |                                                                        |   `Y`    |          | 
 
 ## Data Sets
 #### SynergyPlayType `synergy_play_type`
@@ -55,19 +55,18 @@
         ]
     },
     "endpoint": "SynergyPlayTypes",
-    "last_validated_date": "2020-08-15",
+    "last_validated_date": "2025-01-22",
     "nullable_parameters": [
-        "PlayType",
         "TypeGrouping"
     ],
     "parameter_patterns": {
         "LeagueID": "^\\d{2}$",
         "PerMode": "^(Totals)|(PerGame)$",
-        "PlayType": null,
         "PlayerOrTeam": "^(P)|(T)$",
         "SeasonType": "^(Regular Season)|(Pre Season)|(Playoffs)|(All Star)|(All-Star)$",
         "SeasonYear": "^(\\d{4}-\\d{2})|(\\d{4})$",
-        "TypeGrouping": null
+        "TypeGrouping": "^(offensive)|(defensive)$",
+        "PlayType": "^(Cut)|(Handoff)|(Isolation)|(Misc)|(Offscreen)|(Postup)|(PRBallHandler)|(PRRollman)|(OffRebound)|(Spotup)|(Transition)$"
     },
     "parameters": [
         "LeagueID",
@@ -76,14 +75,16 @@
         "PlayerOrTeam",
         "SeasonType",
         "SeasonYear",
-        "TypeGrouping"
+        "TypeGrouping",
     ],
     "required_parameters": [
         "LeagueID",
         "PerMode",
+        "PlayType",
         "PlayerOrTeam",
         "SeasonType",
-        "SeasonYear"
+        "SeasonYear",
+        "TypeGrouping",
     ],
     "status": "success"
 }
