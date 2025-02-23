@@ -105,6 +105,8 @@ __all__ = [
     "playervsplayer",
     "playoffpicture",
     "scoreboardv2",
+    "scheduleleaguev2",
+    "scheduleleaguev2int",
     "shotchartdetail",
     "shotchartleaguewide",
     "shotchartlineupdetail",
