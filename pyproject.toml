@@ -1,44 +1,61 @@
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
-
-[tool.poetry]
+[project]
 name = "nba_api"
-version = "1.7"
+version = "1.7.0"
 description = "An API Client package to access the APIs for NBA.com"
+requires-python = ">=3.9"
 license = "MIT"
-authors = [ 
-     "Swar Patel <swar.m.patel@gmail.com>",
-]
+authors = [ {name = "Swar Patel", email = "<swar.m.patel@gmail.com>"}]
 maintainers = [
-    "Swar Patel <swar.m.patel@gmail.com>",
-    "Randy Forbes <randy.forbes@gmail.com>",
+    {name = "Swar Patel", email = "<swar.m.patel@gmail.com>"},
+    {name = "Randy Forbes", email="Randy Forbes <randy.forbes@gmail.com>"},
 ]
-readme = "README.md"
-repository = "https://github.com/swar/nba_api"
-documentation = "https://github.com/swar/nba_api/blob/master/README.md"
-keywords = ["api", "basketball", "data", "nba", "sports", "stats"]
+keywords = [
+    "api", 
+    "basketball", 
+    "data", 
+    "nba", 
+    "sports", 
+    "stats"
+]
 classifiers = [
     "Intended Audience :: Developers",
     "Intended Audience :: Science/Research",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
-    "Topic :: Software Development"
+    "Topic :: Software Development",
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
 ]
+dependencies = [
+    "numpy <2.0.0 ; python_version <'3.13'",
+    "numpy >=2.0.0 ; python_version >='3.13'",
+    "requests (>=2.32.3,<3.0.0)"
+]
+readme = "README.md"
 
-[tool.poetry.dependencies]
-python = "^3.9"
-requests = "^2.32.3"
-numpy = "^1.22.2"
+[project.urls]
+    repository = "https://github.com/swar/nba_api"
+    "Bug Tracker" = "https://github.com/swar/nba_api/issues"
+    documentation = "https://github.com/swar/nba_api/blob/master/README.md"
 
-[tool.poetry.urls]
-"Bug Tracker" = "https://github.com/swar/nba_api/issues"
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.3"
 pytest-cov = "^4.0"
 flake8 = "^7.1.1"
-pandas = "^2.2.3"
+pandas = [
+    {version = ">=2.2.0", python = ">=3.12"},
+    {version = "<2.2.0", python = "<3.12"} 
+]
 
 [tool.pytest.ini_options]
 testpaths = "./tests/unit/"

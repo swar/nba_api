@@ -17,13 +17,22 @@ jobs:
     
     steps: 
       - checkout
-      - run: poetry install --no-ansi
+      - run:
+          name: update poetry
+          command: poetry self update
+      - run:
+          name: install dependencies
+          command: poetry install --no-ansi
       - unless:
           condition: << parameters.circle_pr_number >>
           steps:
             - snyk/scan
-      - run: poetry run pytest
-      - run: poetry run flake8
+      - run:
+          name: run tests
+          command: poetry run pytest
+      - run: 
+          name: run flake8
+          command: poetry run flake8
 
 workflows:
   build:
@@ -35,6 +44,7 @@ workflows:
                 "cimg/python:3.9",
                 "cimg/python:3.10",
                 "cimg/python:3.11",
-                "cimg/python:3.12"
+                "cimg/python:3.12",
+                "cimg/python:3.13"
               ]
      
