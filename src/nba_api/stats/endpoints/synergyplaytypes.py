@@ -6,8 +6,8 @@ from nba_api.stats.library.parameters import (
     PlayerOrTeamAbbreviation,
     SeasonTypeAllStar,
     Season,
-    PlayTypeNullable,
-    TypeGroupingNullable,
+    PlayType,
+    TypeGrouping,
 )
 
 
@@ -53,8 +53,8 @@ class SynergyPlayTypes(Endpoint):
         player_or_team_abbreviation=PlayerOrTeamAbbreviation.default,
         season_type_all_star=SeasonTypeAllStar.default,
         season=Season.default,
-        play_type_nullable=PlayTypeNullable.default,
-        type_grouping_nullable=TypeGroupingNullable.default,
+        play_type=PlayType.default,
+        type_grouping=TypeGrouping.default,
         proxy=None,
         headers=None,
         timeout=30,
@@ -70,8 +70,8 @@ class SynergyPlayTypes(Endpoint):
             "PlayerOrTeam": player_or_team_abbreviation,
             "SeasonType": season_type_all_star,
             "SeasonYear": season,
-            "PlayType": play_type_nullable,
-            "TypeGrouping": type_grouping_nullable,
+            "PlayType": play_type,
+            "TypeGrouping": type_grouping,
         }
         if get_request:
             self.get_request()
