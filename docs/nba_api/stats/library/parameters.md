@@ -1603,18 +1603,14 @@ _**player**_ | `P`
 
 #### Class `PlayerPositionAbbreviationNullable`
 ##### Patterns 
- - `((F)|(C)|(G)|(C-F)|(F-C)|(F-G)|(G-F))?`
+ - `((F)|(C)|(G))?`
 
 Variable Name | Value
 ------------ | -------------
 _**none**_ `default` | 
 _**center**_ | `C`
-_**center_forward**_ | `C-F`
 _**forward**_ | `F`
-_**forward_center**_ | `F-C`
-_**forward_guard**_ | `F-G`
 _**guard**_ | `G`
-_**guard_forward**_ | `G-F`
 
 #### Class `PlayerPositionNullable`
 ##### Patterns 
