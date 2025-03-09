@@ -16,6 +16,14 @@
 - `Contributor` (notes on updates to the project)
 
 # Version History
+## v1.8.0
+### Added
+* Support for Python 3.13
+* Two New Endpoints (scheduleleaguev2 & scheduleleaguev2int) by @sreyemnayr in https://github.com/swar/nba_api/pull/499
+
+### Changed
+* Updated Static Player Data by @rsforbes
+
 ## v1.7.0
 ### Added
 * Support for User Defined Session to API calls by @8W9aG in https://github.com/swar/nba_api/pull/486
