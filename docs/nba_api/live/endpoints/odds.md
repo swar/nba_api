@@ -54,13 +54,34 @@ Key | Description | Type | Example
 `spread` | Point spread (spread markets only) | `string/null` | `"-6.5"`
 `opening_spread` | Opening spread (spread markets only) | `number/null` | `-7.5`
 
-> Note: The NBA's Game ID, 0022400913, is a 10-digit code: XXXYYGGGGG, where XXX refers to a season prefix, YY is the season year (e.g. 24 for 2024-25), and GGGGG refers to the game number. \
-> Season prefixes:
+> Note: The NBA's Game ID, i.e. 0022400913, is a 10-digit code:
 ```
-001 : Pre Season
-002 : Regular Season
-003 : All-Star
-004 : Post Season
+GameID Structure (10 digits)
+┌─────────────────────┐
+│ XX │ X │ XX │ XXXXX │
+└─────────────────────┘
+ ▲    ▲    ▲    ▲
+ │    │    │    │
+ │    │    │    └── Game Number (00001-99999)
+ │    │    │
+ │    │    └── Season (24 = 2024-25)
+ │    │
+ │    └── Season Type
+ │        1: Pre-Season
+ │        2: Regular Season
+ │        3: All-Star
+ │        4: Playoffs
+ │        5: Play-In
+ │        6: In-Season Tournament
+ │
+ └── League ID
+     00: National Basketball Association (NBA)
+     01: ABA
+     10: Women's National Basketball Association (WNBA)
+     15: NBA Summer League
+     20: NBA G League
+     12: NBA 2K League (E-Sports)
+     ??: Basketball Africa League (BAL)
 ```
 
 ## JSON
