@@ -519,10 +519,6 @@ class PlayerPositionAbbreviation:
     forward = "F"
     center = "C"
     guard = "G"
-    center_forward = "C-F"
-    forward_center = "F-C"
-    forward_guard = "F-G"
-    guard_forward = "G-F"
 
     default = forward
 
