@@ -119,7 +119,7 @@ Follow GitHub's instructions on how to [fork](https://docs.github.com/en/get-sta
 poetry install
 
 # Once the environment has been created, active the environment for development
-Poetry shell 
+poetry env activate 
 ```
 
 ### 5. Validating Your Environment
