@@ -6356,6 +6356,39 @@
         ],
         "status": "success"
     },
+    "Odds": {
+        "data_sets": {
+            "games": [
+                "gameId",
+                "sr_id",
+                "srMatchId",
+                "homeTeamId",
+                "awayTeamId",
+                "markets"
+            ]
+        },
+        "endpoint": "Odds",
+        "last_validated_date": "2025-03-10",
+        "nullable_parameters": [
+            "proxy",
+            "headers",
+            "timeout"
+        ],
+        "parameter_patterns": {
+            "proxy": null,
+            "headers": null,
+            "timeout": null,
+            "get_request": "^(true|false)$"
+        },
+        "parameters": [
+            "proxy",
+            "headers",
+            "timeout",
+            "get_request"
+        ],
+        "required_parameters": [],
+        "status": "success"
+    },
     "PlayByPlay": {
         "data_sets": {
             "AvailableVideo": [

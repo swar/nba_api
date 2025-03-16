@@ -94,6 +94,7 @@
             - [/LeagueStandings](nba_api/stats/endpoints/leaguestandings.md)
             - [/LeagueStandingsV3](nba_api/stats/endpoints/leaguestandingsv3.md)
             - [/MatchupsRollup](nba_api/stats/endpoints/matchupsrollup.md)
+            - [/Odds](nba_api/live/endpoints/odds.md)
             - [/PlayByPlay](nba_api/stats/endpoints/playbyplay.md)
             - [/PlayByPlayV2](nba_api/stats/endpoints/playbyplayv2.md)
             - [/PlayerAwards](nba_api/stats/endpoints/playerawards.md)
