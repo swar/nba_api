@@ -16,6 +16,13 @@
 - `Contributor` (notes on updates to the project)
 
 # Version History
+## v1.9.0b1
+### Added
+* New endpoint for retrieving live betting odds by @mohithn04 in https://github.com/swar/nba_api/pull/514
+
+### Changed
+* Updated CONTRIBUTING.md adding `poetry env activate` for poetry 2.0
+
 ## v1.8.0
 ### Added
 * Support for Python 3.13
