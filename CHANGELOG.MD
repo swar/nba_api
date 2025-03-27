@@ -20,7 +20,10 @@
 ### Added
 * New endpoint for retrieving live betting odds by @mohithn04 in https://github.com/swar/nba_api/pull/514
 
-### Changed
+### Fixed
+* Numpy failure when using Google Colab
+
+### Contributor
 * Updated CONTRIBUTING.md adding `poetry env activate` for poetry 2.0
 
 ## v1.8.0
