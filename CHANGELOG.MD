@@ -16,9 +16,12 @@
 - `Contributor` (notes on updates to the project)
 
 # Version History
-## v1.9.0b1
+## v1.9.0
 ### Added
 * New endpoint for retrieving live betting odds by @mohithn04 in https://github.com/swar/nba_api/pull/514
+
+### Changed
+* Updated Static Player Data by @rsforbes
 
 ### Fixed
 * Numpy failure when using Google Colab
