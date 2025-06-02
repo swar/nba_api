@@ -18,6 +18,14 @@
 # Version History
 ## v1.9.0
 ### Added
+* https://github.com/swar/nba_api/pull/538
+  * Added information for the new Golden State Valkyries WNBA team.
+  * Updated WNBA player data to include 2025 rookies.
+  * Updated test_static_data.py to check 13 total WNBA teams.
+  * New York Liberty team information now includes 2024 championship year.
+
+## v1.9.0
+### Added
 * New endpoint for retrieving live betting odds by @mohithn04 in https://github.com/swar/nba_api/pull/514
 
 ### Changed
