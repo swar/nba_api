@@ -706,6 +706,7 @@ class SeasonID(SeasonYear):
 class SeasonType:
     regular = "Regular Season"
     preseason = "Pre Season"
+    playin = "PlayIn"
 
     default = regular
 
