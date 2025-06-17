@@ -58,12 +58,48 @@ Please remember to do the following:
 
 The `nba_api` project has been setup in a way to support development across a wide range of operating systems including Linux, macOS, and Windows. Contributions are managed via GitHub [forks](https://docs.github.com/en/get-started/quickstart/fork-a-repo) and [pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
-## Style Guidlines
+## Style Guidelines
 
 * Code submitted should follow the style of the code already found throughout the repository.
 * The structure of data returned to the consumer of the library should align with the data structures already found throughout the library.  
 * Unit tests should accompany your code wherever possible
 * Use `git rebase -i` to organize your commits ([Write Better Commits, Build Better Projects](https://github.blog/2022-06-30-write-better-commits-build-better-projects/))
+
+### Commit Message Format
+
+This project uses [Conventional Commits](https://www.conventionalcommits.org/) for automated changelog generation and semantic versioning. Please format your commit messages as follows:
+
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+#### Commit Types
+- **feat**: A new feature (triggers minor version bump)
+- **fix**: A bug fix (triggers patch version bump)
+- **docs**: Documentation only changes
+- **style**: Changes that do not affect the meaning of the code
+- **refactor**: A code change that neither fixes a bug nor adds a feature
+- **perf**: A code change that improves performance
+- **test**: Adding missing tests or correcting existing tests
+- **build**: Changes that affect the build system or external dependencies
+- **ci**: Changes to CI configuration files and scripts
+- **chore**: Other changes that don't modify src or test files
+
+#### Examples
+```
+feat: add new endpoint for player statistics
+fix: resolve timeout issue in HTTP requests
+docs: update API documentation for new endpoints
+```
+
+**Breaking Changes**: Add `BREAKING CHANGE:` in the commit body or add `!` after the type to trigger a major version bump:
+```
+feat!: remove deprecated endpoint support
+```
 
 ### Collaborating on Open Source
 
@@ -137,3 +173,22 @@ flake8
 ### 6. When Complete, Open a PR
 
 When you have completed your development and uploaded your changes to GitHub, [create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to have your changes reviewed.
+
+## Release Automation
+
+This project uses automated releases based on conventional commit messages. When PRs are merged to the `master` branch, the system automatically:
+
+- Determines the appropriate version bump (patch/minor/major)
+- Updates the changelog
+- Creates a git tag
+- Publishes to PyPI
+- Creates a GitHub release
+
+### Testing Release Changes
+
+If your changes affect the release process or you want to test automation:
+
+- **For maintainers**: See [RELEASE_TESTING.md](RELEASE_TESTING.md) for safe testing methods
+- **For contributors**: Follow the conventional commit format - the automation will handle the rest
+
+The conventional commit format ensures your changes are properly categorized for automatic version management.

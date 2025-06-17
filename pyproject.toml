@@ -55,6 +55,7 @@ build-backend = "poetry.core.masonry.api"
 pytest = "^8.3.3"
 pytest-cov = "^4.0"
 flake8 = "^7.1.1"
+python-semantic-release = "^9.0.0"
 pandas = [
     {version = ">=2.2.0", python = ">=3.12"},
     {version = "<2.2.0", python = "<3.12"} 
@@ -62,3 +63,45 @@ pandas = [
 
 [tool.pytest.ini_options]
 testpaths = "./tests/unit/"
+
+[tool.semantic_release]
+version_toml = ["pyproject.toml:project.version"]
+build_command = "poetry build"
+dist_path = "dist/"
+upload_to_pypi = true
+upload_to_release = true
+commit_subject = "chore: release v{version}"
+commit_message = "chore: release v{version}\n\n{changelog}"
+tag_format = "v{version}"
+changelog_placeholder = "# NBA API Change Log"
+
+[tool.semantic_release.branches.master]
+match = "(master|main)"
+prerelease = false
+
+[tool.semantic_release.branches.test]
+match = "test-release"
+prerelease = true
+prerelease_token = "rc"
+
+[tool.semantic_release.commit_parser_options]
+allowed_tags = ["build", "chore", "ci", "docs", "feat", "fix", "perf", "style", "refactor", "test"]
+minor_tags = ["feat"]
+patch_tags = ["fix", "perf"]
+
+[tool.semantic_release.changelog]
+template_dir = "templates"
+exclude_commit_patterns = []
+
+[tool.semantic_release.changelog.default_templates]
+changelog_file = "CHANGELOG.MD"
+
+[tool.semantic_release.changelog.environment]
+block_start_string = "{%"
+block_end_string = "%}"
+variable_start_string = "{{"
+variable_end_string = "}}"
+comment_start_string = "{#"
+comment_end_string = "#}"
+trim_blocks = false
+lstrip_blocks = false

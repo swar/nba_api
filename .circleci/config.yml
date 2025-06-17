@@ -3,11 +3,6 @@ version: 2.1
 orbs:
   snyk: snyk/snyk@1.4.0
 
-parameters:
-  is_release:
-    type: boolean
-    default: false
-
 references:
   python_images: &python_images
     - "cimg/python:3.9"
@@ -32,9 +27,6 @@ jobs:
     steps: 
       - checkout
       - run:
-          name: update poetry
-          command: poetry self update
-      - run:
           name: install dependencies
           command: poetry install --no-ansi
       - unless:
@@ -48,51 +40,26 @@ jobs:
           name: run flake8
           command: poetry run flake8
 
-  package:
+  release:
     docker:
       - image: *default_image
     steps:
       - checkout
       - run:
-          name: Install Poetry
-          command: |
-            pip install poetry
-            poetry --version
+          name: Install dependencies
+          command: poetry install --no-ansi
       - run:
-          name: Build package
-          command: poetry build
-      - store_artifacts:
-          path: dist/
-          destination: dist
-      - persist_to_workspace:
-          root: .
-          paths:
-            - dist/
-
-  publish:
-    docker:
-      - image: *default_image
-    steps:
-      - when:
-          condition: << pipeline.parameters.is_release >>
-          steps:
-            - checkout
-            - attach_workspace:
-                at: .
-            - run:
-                name: Install Poetry
-                command: pip install poetry
-            - run:
-                name: Publish to PyPI
-                command: |
-                  poetry config pypi-token.pypi $PYPI_TOKEN
-                  poetry publish
-      - unless:
-          condition: << pipeline.parameters.is_release >>
-          steps:
-            - run:
-                name: Skip publishing
-                command: echo "Not a release build, skipping publication"
+          name: Configure git
+          command: |
+            git config user.name "CircleCI"
+            git config user.email "ci@circleci.com"
+      - run:
+          name: Configure PyPI token
+          command: |
+            poetry config pypi-token.pypi $PYPI_TOKEN
+      - run:
+          name: Run semantic release
+          command: poetry run semantic-release publish
 
 workflows:
   build:
@@ -101,12 +68,9 @@ workflows:
           matrix:
             parameters:
               image: *python_images
-      - package:
+      - release:
           requires:
             - main
-      - publish:
-          requires:
-            - package
           filters:
             branches:
               only: master
