@@ -91,7 +91,11 @@ patch_tags = ["fix", "perf"]
 
 [tool.semantic_release.changelog]
 template_dir = "templates"
-exclude_commit_patterns = []
+exclude_commit_patterns = [
+  "^Bump .*",
+  "^Update .*", 
+  "^Merge pull request.*"
+]
 
 [tool.semantic_release.changelog.default_templates]
 changelog_file = "CHANGELOG.MD"
