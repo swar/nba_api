@@ -64,6 +64,7 @@ jobs:
           command: |
             export REPOSITORY_USERNAME=__token__
             export REPOSITORY_PASSWORD=$PYPI_TOKEN
+            export GITHUB_TOKEN=$GITHUB_TOKEN 
             poetry run semantic-release publish
 workflows:
   build:
