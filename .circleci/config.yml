@@ -54,13 +54,17 @@ jobs:
             git config user.name "CircleCI"
             git config user.email "ci@circleci.com"
       - run:
-          name: Configure PyPI token
+          name: Configure authentication
           command: |
+            export REPOSITORY_USERNAME=__token__
+            export REPOSITORY_PASSWORD=$PYPI_TOKEN
             poetry config pypi-token.pypi $PYPI_TOKEN
       - run:
           name: Run semantic release
-          command: poetry run semantic-release publish
-
+          command: |
+            export REPOSITORY_USERNAME=__token__
+            export REPOSITORY_PASSWORD=$PYPI_TOKEN
+            poetry run semantic-release publish
 workflows:
   build:
     jobs:

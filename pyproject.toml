@@ -75,6 +75,10 @@ commit_message = "chore: release v{version}\n\n{changelog}"
 tag_format = "v{version}"
 changelog_placeholder = "# NBA API Change Log"
 
+[tool.semantic_release.remote]
+type = "github"
+token = { env = "GITHUB_TOKEN" }
+
 [tool.semantic_release.branches.master]
 match = "(master|main)"
 prerelease = false
