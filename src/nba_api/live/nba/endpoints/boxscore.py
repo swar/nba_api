@@ -1,5 +1,10 @@
 from nba_api.live.nba.endpoints._base import Endpoint
 from nba_api.live.nba.library.http import NBALiveHTTP
+from nba_api.live.wnba.library.http import WNBALiveHTTP
+
+_LEAGUE_HTTP_CLIENT = {
+    "10": WNBALiveHTTP,  # WNBA
+}
 
 
 class BoxScore(Endpoint):
@@ -321,7 +326,8 @@ class BoxScore(Endpoint):
             self.get_request()
 
     def get_request(self):
-        self.nba_response = NBALiveHTTP().send_api_request(
+        http_client = _LEAGUE_HTTP_CLIENT.get(self.game_id[:2], NBALiveHTTP)
+        self.nba_response = http_client().send_api_request(
             endpoint=self.endpoint_url.format(game_id=self.game_id),
             parameters={},
             proxy=self.proxy,
