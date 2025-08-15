@@ -187,4 +187,5 @@ class ScoreboardV2(Endpoint):
         self.west_conf_standings_by_day = Endpoint.DataSet(
             data=data_sets["WestConfStandingsByDay"]
         )
-        self.win_probability = Endpoint.DataSet(data=data_sets["WinProbability"])
+        if "WinProbability" in data_sets:
+            self.win_probability = Endpoint.DataSet(data=data_sets["WinProbability"])
