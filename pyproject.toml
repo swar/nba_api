@@ -83,6 +83,10 @@ token = { env = "GITHUB_TOKEN" }
 match = "(master|main)"
 prerelease = false
 
+[tool.semantic_release.branches.release]
+match = "(release|release/.*)"
+prerelease = false
+
 [tool.semantic_release.branches.test]
 match = "test-release"
 prerelease = true
@@ -94,14 +98,11 @@ minor_tags = ["feat"]
 patch_tags = ["fix", "perf"]
 
 [tool.semantic_release.changelog]
-template_dir = "templates"
 exclude_commit_patterns = [
   "^Bump .*",
   "^Update .*", 
   "^Merge pull request.*"
 ]
-
-[tool.semantic_release.changelog.default_templates]
 changelog_file = "CHANGELOG.MD"
 
 [tool.semantic_release.changelog.environment]
