@@ -16,6 +16,35 @@
 - `Contributor` (notes on updates to the project)
 
 # Version History
+
+## v1.10.1
+Date: 2025-01-11
+
+### Fixed
+* Handle missing WinProbability data in ScoreboardV2 endpoint ([#560](https://github.com/swar/nba_api/pull/560))
+* Add missing PlayIn season type to parameters ([#544](https://github.com/swar/nba_api/pull/544))
+* Add missing GITHUB_TOKEN environment variable ([#546](https://github.com/swar/nba_api/pull/546))
+
+### Changed
+* **Build System**
+  * Add automated release workflow with semantic-release ([#542](https://github.com/swar/nba_api/pull/542))
+  * Add local release preparation script and workflow ([#566](https://github.com/swar/nba_api/pull/566))
+  * Configure dependabot for conventional commits
+
+### Security
+* Bump urllib3 from 2.2.3 to 2.5.0 ([#547](https://github.com/swar/nba_api/pull/547))
+* Bump requests from 2.32.3 to 2.32.4 ([#541](https://github.com/swar/nba_api/pull/541))
+
+## v1.10.0
+Date: 2025-06-02
+
+### Added
+* Add ScheduleLeagueV2 endpoint to package exports
+
+### Changed
+* Update WNBA team count to 13 teams (Golden State Valkyries)
+* Update WNBA player and team data for 2025 season
+
 ## v1.9.0
 ### Added
 * https://github.com/swar/nba_api/pull/538
