@@ -8,9 +8,23 @@ The NBA API uses [semantic-release](https://semantic-release.gitbook.io/) for au
 
 ## Testing Methods
 
-### 1. Local Testing (Safest)
+### 1. Using the Release Script (Recommended)
 
-Since developers work on branches (not `master`), `semantic-release version --print` will always show "no release will be made". Here are better local testing methods:
+The easiest way to prepare a release is using the provided script:
+
+```bash
+# From project root
+./scripts/gen-release.sh
+```
+
+This script will:
+- Check you're on a release-compatible branch (or offer to create one)
+- Determine the next version based on conventional commits
+- Update version in pyproject.toml and CHANGELOG.MD
+- Create a local commit (but not push)
+- Provide instructions for creating a PR
+
+### 2. Local Testing (Manual)
 
 ```bash
 # Install dependencies
@@ -43,7 +57,7 @@ git checkout your_branch_name
 - Validates conventional commit format
 - Tests actual semantic-release logic (Method 3)
 
-### 2. Fork Testing (Recommended for Full Workflow)
+### 3. Fork Testing (Full Workflow)
 
 For complete workflow testing following the standard fork workflow:
 
@@ -81,7 +95,7 @@ git push origin --delete your_branch_name
 - No disruption to your fork's master branch
 - Tests real workflow that contributors use
 
-### 3. Commit Type Testing
+### 4. Commit Type Testing
 
 Test different conventional commit types to see version impacts:
 
@@ -154,7 +168,8 @@ This message appears when:
 
 ### Testing on Wrong Branch
 Make sure you're on the correct branch:
-- `master` - Production releases  
+- `master` or `main` - Production releases
+- `release`, `prepare-release`, or `release/*` - Local release preparation (supported by gen-release.sh)
 - Other branches - No release jobs run (testing should be done locally or on forks)
 
 ### Version Not Updating Locally
@@ -172,32 +187,37 @@ git log --oneline --grep="feat\|fix\|BREAKING" $(git describe --tags --abbrev=0)
 
 ## Best Practices
 
-1. **Always test locally first** using manual commit analysis
-2. **Use fork workflow** for full workflow validation
-3. **Follow conventional commit format** in your commits
-4. **Clean up test branches** after testing
-5. **Document any issues** you encounter during testing
+1. **Use the gen-release.sh script** for preparing releases locally
+2. **Always test locally first** using manual commit analysis
+3. **Use fork workflow** for full workflow validation
+4. **Follow conventional commit format** in your commits
+5. **Clean up test branches** after testing
+6. **Document any issues** you encounter during testing
 
 ## Example Test Workflow
 
 ```bash
-# 1. Test locally first
+# 1. Use the release script (easiest)
+./scripts/gen-release.sh
+# Follow the prompts to prepare release
+
+# 2. Or test manually:
 git commit -m "feat: add new testing feature" --allow-empty
 git commit -m "fix: resolve testing issue" --allow-empty
 
-# 2. Check what would be released
+# 3. Check what would be released
 poetry run semantic-release version --print
 # Should show: 1.11.0 (minor bump for feat)
 
-# 3. Test version bump without publishing
-poetry run semantic-release version --no-push --no-vcs-release
+# 4. Test version bump without publishing
+poetry run semantic-release version --no-push --no-vcs-release --no-tag
 # Updates local files to show what would happen
 
-# 4. Reset changes and clean up
+# 5. Reset changes and clean up
 git reset --hard HEAD~2
 # Removes test commits
 
-# 5. For full workflow testing, use your fork:
+# 6. For full workflow testing, use your fork:
 # Fork repo → push changes → observe complete automation
 ```
 
