@@ -4,8 +4,6 @@
 # This automates the changelog generation and version bumping process
 # for contributors working on forks
 
-set -e  # Exit on error
-
 # Wrap everything in a function to avoid exit statements
 run_release_prep() {
     echo "NBA API Release Preparation Script"
