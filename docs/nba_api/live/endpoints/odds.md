@@ -1,5 +1,5 @@
 # Betting Odds
-##### [nba_api/live/nba/endpoints/odds.py](https://github.com/swar/nba_api/blob/master/nba_api/live/nba/endpoints/odds.py)
+##### [nba_api/live/nba/endpoints/odds.py](https://github.com/swar/nba_api/blob/master/src/nba_api/live/nba/endpoints/odds.py)
 
 ##### Endpoint URL
 >[https://cdn.nba.com/static/json/liveData/odds/odds_todaysGames.json](https://cdn.nba.com/static/json/liveData/odds/odds_todaysGames.json)
