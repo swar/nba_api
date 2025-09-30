@@ -47,7 +47,7 @@ teams = [
     [1610612757, 'POR', 'Trail Blazers', 1970, 'Portland', 'Portland Trail Blazers', 'Oregon', [1977]],
     [1610612758, 'SAC', 'Kings', 1948, 'Sacramento', 'Sacramento Kings', 'California', [1951]],
     [1610612759, 'SAS', 'Spurs', 1976, 'San Antonio', 'San Antonio Spurs', 'Texas', [1999, 2003, 2005, 2007, 2014]],
-    [1610612760, 'OKC', 'Thunder', 1967, 'Oklahoma City', 'Oklahoma City Thunder', 'Oklahoma', [1979]],
+    [1610612760, 'OKC', 'Thunder', 1967, 'Oklahoma City', 'Oklahoma City Thunder', 'Oklahoma', [1979, 2025]],
     [1610612761, 'TOR', 'Raptors', 1995, 'Toronto', 'Toronto Raptors', 'Ontario', [2019]],
     [1610612762, 'UTA', 'Jazz', 1974, 'Utah', 'Utah Jazz', 'Utah', []],
     [1610612763, 'MEM', 'Grizzlies', 1995, 'Memphis', 'Memphis Grizzlies', 'Tennessee', []],
