@@ -17,6 +17,21 @@
 
 # Version History
 
+## v1.10.2
+Date: 2025-09-30
+
+### Fixed
+* **NBA Stats API Connection Issues** - Updated HTTP headers to resolve connection timeouts
+  * Updated User-Agent to modern Chrome 140 version to match current browser fingerprints
+  * Added the following headers:
+    * [Sec-Ch-Ua](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Sec-Fetch-Dest): allows servers to determine whether to service a request based on whether it is appropriate for how it is expected to be used.
+    * [Sec-Ch-Ua-Mobile](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Sec-CH-UA-Mobile): indicates whether the browser is on a mobile device.
+    * [Sec-Fetch-Dest](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Sec-Fetch-Dest): allows servers to determine whether to service a request based on whether it is appropriate for how it is expected to be used.
+  * Dropped the `x-nba-stats-origin` and `x-nba-stats-token` headers as no longer used.
+
+### Changed
+* Updated Static Player & Team Data
+
 ## v1.10.1
 Date: 2025-01-11
 
