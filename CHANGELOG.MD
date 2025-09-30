@@ -29,6 +29,9 @@ Date: 2025-09-30
     * [Sec-Fetch-Dest](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Sec-Fetch-Dest): allows servers to determine whether to service a request based on whether it is appropriate for how it is expected to be used.
   * Dropped the `x-nba-stats-origin` and `x-nba-stats-token` headers as no longer used.
 
+### Changed
+* Updated Static Player & Team Data
+
 ## v1.10.1
 Date: 2025-01-11
 
