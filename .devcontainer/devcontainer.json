@@ -1,29 +1,71 @@
 {
-	"containerEnv": {
-		"PYTHON_VERSION": "3.11"
-	},
-	"features": {
-		"ghcr.io/devcontainers/features/python:latest": {},
-		"ghcr.io/devcontainers-contrib/features/poetry:2": {}
-	},
-	"image": "mcr.microsoft.com/devcontainers/base:debian-11",
-	"name": "nba_api",
-	"postCreateCommand": "bash .devcontainer/postCreateCommand.sh",
-	"remoteEnv": {
-		"PYTHONUTF8": "1"
-	},
+    // Display name for this dev container configuration
+    "name": "NBA API",
+    
+    // Build configuration for the container
+    "build": {
+        // Path to the Dockerfile relative to the build context
+        "dockerfile": "Dockerfile",
+        // Build context directory - ".." means parent directory of .devcontainer folder
+        // This allows Docker to access project files outside the .devcontainer directory
+        "context": ".."
+    },
+
+	// VS Code specific customizations
 	"customizations": {
 		"vscode": {
+
+			// Extensions to install automatically in the container
+            // These provide Python development tools, linting, and formatting
 			"extensions": [
 				"ms-python.black-formatter",
 				"ms-python.flake8",
+				"ms-python.pylint",
 				"ms-python.python",
 				"ms-python.vscode-pylance",
 				"ms-toolsai.jupyter",
 				"ms-toolsai.jupyter-keymap",
 				"ms-toolsai.jupyter-renderers",
-				"ms-toolsai.vscode-jupyter-powertoys"
-			]
-		}
-	}
+				"ms-toolsai.vscode-jupyter-powertoys",
+                "tamasfe.even-better-toml"
+			],
+
+            // VS Code settings to apply in the container
+            "settings": {
+                
+                // Enable Python linting globally across all Python files
+                // This provides real-time error detection and code quality feedback
+                "python.linting.enabled": true,
+                
+                // Enable pylint as the primary linting tool
+                // Pylint provides comprehensive code analysis and style checking
+                "python.linting.pylintEnabled": true,
+                
+                // Automatically format Python files when saving
+                // This ensures consistent code style across the project
+                "editor.formatOnSave": true,
+                
+                // Use Black as the Python code formatter
+                // Black is an opinionated formatter that enforces consistent style
+                "python.formatting.provider": "black",
+                
+                // Set bash as the default terminal shell in Linux containers
+                // This ensures consistent shell behavior across different environments
+                "terminal.integrated.defaultProfile.linux": "bash"
+            }
+        }
+    },
+
+    // Ports to forward from container to host (empty array = no ports forwarded)
+    // Add port numbers here if your application serves web content (e.g., [8000, 3000])
+    "forwardPorts": [],
+    
+    // User to connect as when attaching to the container
+    // "vscode" user has proper permissions and development tools pre-configured
+    "remoteUser": "vscode",
+
+    // Command to run after the container is created and VS Code connects
+    // This executes the post-create script that sets up Poetry and dependencies
+    // Runs only once when the container is first created, not on every restart
+    "postCreateCommand": "bash .devcontainer/post-create-command.sh"
 }
