@@ -137,8 +137,6 @@
             - [/TeamDashboardByShootingSplits](nba_api/stats/endpoints/teamdashboardbyshootingsplits.md)
             - [/TeamDetails](nba_api/stats/endpoints/teamdetails.md)
             - [/TeamEstimatedMetrics](nba_api/stats/endpoints/teamestimatedmetrics.md)
-            - [/TeamGameLog](nba_api/stats/endpoints/teamgamelog.md)
-            - [/TeamGameLogs](nba_api/stats/endpoints/teamgamelogs.md)
             - [/TeamGameStreakFinder](nba_api/stats/endpoints/teamgamestreakfinder.md)
             - [/TeamHistoricalLeaders](nba_api/stats/endpoints/teamhistoricalleaders.md)
             - [/TeamInfoCommon](nba_api/stats/endpoints/teaminfocommon.md)
