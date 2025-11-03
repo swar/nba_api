@@ -38,6 +38,7 @@ __all__ = [
     "draftcombinespotshooting",
     "draftcombinestats",
     "drafthistory",
+    "dunkscoreleaders",
     "fantasywidget",
     "franchisehistory",
     "franchiseleaders",
@@ -175,6 +176,7 @@ from .draftcombineplayeranthro import DraftCombinePlayerAnthro
 from .draftcombinespotshooting import DraftCombineSpotShooting
 from .draftcombinestats import DraftCombineStats
 from .drafthistory import DraftHistory
+from .dunkscoreleaders import DunkScoreLeaders
 from .fantasywidget import FantasyWidget
 from .franchisehistory import FranchiseHistory
 from .franchiseleaders import FranchiseLeaders
