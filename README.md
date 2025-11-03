@@ -12,7 +12,7 @@
 
 # Getting Started
 
-`nba_api` requires Python 3.7+ along with the `requests` and `numpy` packages. While `pandas` is not required, it is required to work with Pandas DataFrames.
+`nba_api` requires Python 3.10+ along with the `requests` and `numpy` packages. While `pandas` is not required, it is required to work with Pandas DataFrames.
 
 ```bash
 pip install nba_api

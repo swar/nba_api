@@ -9,8 +9,7 @@ references:
     - "cimg/python:3.11"
     - "cimg/python:3.12"
     - "cimg/python:3.13"
-    - "cimg/python:3.14
-  default_image: &default_image cimg/python:3.14
+  default_image: &default_image cimg/python:3.13
 
 jobs:
   main:
