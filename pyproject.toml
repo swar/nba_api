@@ -60,9 +60,23 @@ pandas = [
     {version = ">=2.2.0", python = ">=3.12"},
     {version = "<2.2.0", python = "<3.12"} 
 ]
+isort = "^7.0.0"
 
 [tool.pytest.ini_options]
 testpaths = "./tests/unit/"
+
+[tool.isort]
+profile = "black"
+line_length = 88
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+
+[tool.black]
+line-length = 88
+target-version = ['py310', 'py311', 'py312', 'py313']
 
 [tool.semantic_release]
 version_toml = ["pyproject.toml:project.version"]
