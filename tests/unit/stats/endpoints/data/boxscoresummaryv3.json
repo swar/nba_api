@@ -1,0 +1,961 @@
+{
+    "meta": {
+        "version": 1,
+        "request": "http://nba.cloud/games/0022500142/boxscoresummary?Format=json",
+        "time": "2025-11-02T12:10:08.108Z"
+    },
+    "boxScoreSummary": {
+        "gameId": "0022500142",
+        "gameCode": "20251101/SACMIL",
+        "gameStatus": 3,
+        "gameStatusText": "Final",
+        "period": 4,
+        "gameClock": "PT00M00.00S",
+        "gameTimeUTC": "2025-11-01T21:00:00Z",
+        "gameEt": "2025-11-01T17:00:00Z",
+        "awayTeamId": 1610612758,
+        "homeTeamId": 1610612749,
+        "duration": "2:36",
+        "attendance": 17341,
+        "sellout": 1,
+        "seriesGameNumber": "",
+        "gameLabel": "",
+        "gameSubLabel": "",
+        "seriesText": "",
+        "ifNecessary": false,
+        "isNeutral": false,
+        "arena": {
+            "arenaId": 642,
+            "arenaName": "Fiserv Forum",
+            "arenaCity": "Milwaukee",
+            "arenaState": "WI",
+            "arenaCountry": "US",
+            "arenaTimezone": "Central",
+            "arenaStreetAddress": "",
+            "arenaPostalCode": ""
+        },
+        "officials": [
+            {
+                "personId": 201245,
+                "name": "Marat Kogut",
+                "nameI": "M. Kogut",
+                "firstName": "Marat",
+                "familyName": "Kogut",
+                "jerseyNum": "32  ",
+                "assignment": ""
+            },
+            {
+                "personId": 203591,
+                "name": "Mitchell Ervin",
+                "nameI": "M. Ervin",
+                "firstName": "Mitchell",
+                "familyName": "Ervin",
+                "jerseyNum": "27  ",
+                "assignment": ""
+            },
+            {
+                "personId": 1627519,
+                "name": "John Conley",
+                "nameI": "J. Conley",
+                "firstName": "John",
+                "familyName": "Conley",
+                "jerseyNum": "56  ",
+                "assignment": ""
+            }
+        ],
+        "broadcasters": {
+            "internationalBroadcasters": [
+                {
+                    "broadcasterId": 181,
+                    "broadcastDisplay": "NBAC",
+                    "broadcasterDisplay": "NBA TV Canada",
+                    "broadcasterVideoLink": "",
+                    "broadcasterDescription": "",
+                    "broadcasterTeamId": 1610612761,
+                    "regionId": 2
+                },
+                {
+                    "broadcasterId": 1228,
+                    "broadcastDisplay": "beIN_MENA",
+                    "broadcasterDisplay": "beIN Sports",
+                    "broadcasterVideoLink": "",
+                    "broadcasterDescription": "",
+                    "broadcasterTeamId": -1,
+                    "regionId": 25
+                },
+                {
+                    "broadcasterId": 1235,
+                    "broadcastDisplay": "ESPN_I_Mex",
+                    "broadcasterDisplay": "ESPN",
+                    "broadcasterVideoLink": "",
+                    "broadcasterDescription": "",
+                    "broadcasterTeamId": -1,
+                    "regionId": 22
+                },
+                {
+                    "broadcasterId": 1250,
+                    "broadcastDisplay": "Sport5_Isr",
+                    "broadcasterDisplay": "Sport 5",
+                    "broadcasterVideoLink": "",
+                    "broadcasterDescription": "",
+                    "broadcasterTeamId": -1,
+                    "regionId": 18
+                },
+                {
+                    "broadcasterId": 1276,
+                    "broadcastDisplay": "ESPN_Brazi",
+                    "broadcasterDisplay": "ESPN",
+                    "broadcasterVideoLink": "",
+                    "broadcasterDescription": "",
+                    "broadcasterTeamId": -1,
+                    "regionId": 11
+                },
+                {
+                    "broadcasterId": 1428,
+                    "broadcastDisplay": "Cosmote TV",
+                    "broadcasterDisplay": "Cosmote TV",
+                    "broadcasterVideoLink": "",
+                    "broadcasterDescription": "",
+                    "broadcasterTeamId": -1,
+                    "regionId": 15
+                },
+                {
+                    "broadcasterId": 1440,
+                    "broadcastDisplay": "beIN_FRA",
+                    "broadcasterDisplay": "beIN Sports",
+                    "broadcasterVideoLink": "",
+                    "broadcasterDescription": "",
+                    "broadcasterTeamId": -1,
+                    "regionId": 13
+                },
+                {
+                    "broadcasterId": 1636,
+                    "broadcastDisplay": "S Sport",
+                    "broadcasterDisplay": "S Sport",
+                    "broadcasterVideoLink": "",
+                    "broadcasterDescription": "",
+                    "broadcasterTeamId": -1,
+                    "regionId": 33
+                },
+                {
+                    "broadcasterId": 1000023,
+                    "broadcastDisplay": "SkySportNBA_Italy",
+                    "broadcasterDisplay": "Sky Sport NBA",
+                    "broadcasterVideoLink": "",
+                    "broadcasterDescription": "",
+                    "broadcasterTeamId": -1,
+                    "regionId": 19
+                },
+                {
+                    "broadcasterId": 1000158,
+                    "broadcastDisplay": "Arena Sport",
+                    "broadcasterDisplay": "Arena Sport",
+                    "broadcasterVideoLink": "",
+                    "broadcasterDescription": "",
+                    "broadcasterTeamId": -1,
+                    "regionId": 36
+                },
+                {
+                    "broadcasterId": 1000697,
+                    "broadcastDisplay": "ESPN Netherlands",
+                    "broadcasterDisplay": "ESPN",
+                    "broadcasterVideoLink": "",
+                    "broadcasterDescription": "",
+                    "broadcasterTeamId": -1,
+                    "regionId": 23
+                },
+                {
+                    "broadcasterId": 1000890,
+                    "broadcastDisplay": "Cyta",
+                    "broadcasterDisplay": "Cyta",
+                    "broadcasterVideoLink": "",
+                    "broadcasterDescription": "",
+                    "broadcasterTeamId": -1,
+                    "regionId": 29
+                },
+                {
+                    "broadcasterId": 1000893,
+                    "broadcastDisplay": "All Media",
+                    "broadcasterDisplay": "TV3",
+                    "broadcasterVideoLink": "",
+                    "broadcasterDescription": "",
+                    "broadcasterTeamId": -1,
+                    "regionId": 50
+                },
+                {
+                    "broadcasterId": 1001558,
+                    "broadcastDisplay": "Metro Channel",
+                    "broadcasterDisplay": "Metro Channel",
+                    "broadcasterVideoLink": "",
+                    "broadcasterDescription": "",
+                    "broadcasterTeamId": -1,
+                    "regionId": 27
+                }
+            ],
+            "internationalRadioBroadcasters": [],
+            "internationalOttBroadcasters": [
+                {
+                    "broadcasterId": 1604,
+                    "broadcastDisplay": "DAZN",
+                    "broadcasterDisplay": "DAZN",
+                    "broadcasterVideoLink": "",
+                    "broadcasterDescription": "",
+                    "broadcasterTeamId": -1,
+                    "regionId": 31
+                },
+                {
+                    "broadcasterId": 1001261,
+                    "broadcastDisplay": "DAZN Belgium",
+                    "broadcasterDisplay": "DAZN",
+                    "broadcasterVideoLink": "",
+                    "broadcasterDescription": "",
+                    "broadcasterTeamId": -1,
+                    "regionId": 10
+                },
+                {
+                    "broadcasterId": 1001556,
+                    "broadcastDisplay": "HBO Max Poland",
+                    "broadcasterDisplay": "HBO Max",
+                    "broadcasterVideoLink": "",
+                    "broadcasterDescription": "",
+                    "broadcasterTeamId": -1,
+                    "regionId": 27
+                }
+            ],
+            "nationalBroadcasters": [],
+            "nationalRadioBroadcasters": [],
+            "nationalOttBroadcasters": [],
+            "homeTvBroadcasters": [
+                {
+                    "broadcasterId": 1001241,
+                    "broadcastDisplay": "FDSNWI",
+                    "broadcasterDisplay": "FanDuel Sports Network - Wisconsin",
+                    "broadcasterVideoLink": "https://go.fanduelsportsnetwork.com/uXWAYIAMDXb",
+                    "broadcasterDescription": "",
+                    "broadcasterTeamId": 1610612749,
+                    "regionId": 1
+                }
+            ],
+            "homeRadioBroadcasters": [
+                {
+                    "broadcasterId": 1697,
+                    "broadcastDisplay": "WTMJ-AM/FM",
+                    "broadcasterDisplay": "620 AM/103.3 FM WTMJ",
+                    "broadcasterVideoLink": "",
+                    "broadcasterDescription": "",
+                    "broadcasterTeamId": 1610612749,
+                    "regionId": 1
+                }
+            ],
+            "homeOttBroadcasters": [],
+            "awayTvBroadcasters": [
+                {
+                    "broadcasterId": 1027,
+                    "broadcastDisplay": "NBCSCA",
+                    "broadcasterDisplay": "NBCSCA",
+                    "broadcasterVideoLink": "https://pck.tv/3IZcl7g",
+                    "broadcasterDescription": "",
+                    "broadcasterTeamId": 1610612758,
+                    "regionId": 1
+                }
+            ],
+            "awayRadioBroadcasters": [
+                {
+                    "broadcasterId": 1052,
+                    "broadcastDisplay": "KHTK",
+                    "broadcasterDisplay": "Sactown Sports 1140 AM",
+                    "broadcasterVideoLink": "",
+                    "broadcasterDescription": "",
+                    "broadcasterTeamId": 1610612758,
+                    "regionId": 1
+                }
+            ],
+            "awayOttBroadcasters": []
+        },
+        "homeTeam": {
+            "teamId": 1610612749,
+            "teamName": "Bucks",
+            "teamCity": "Milwaukee",
+            "teamTricode": "MIL",
+            "teamSlug": "bucks",
+            "teamWins": 4,
+            "teamLosses": 2,
+            "score": 133,
+            "inBonus": "",
+            "timeoutsRemaining": 0,
+            "seed": 0,
+            "statistics": {
+                "dummyKey": "dummyValue"
+            },
+            "periods": [
+                {
+                    "period": 1,
+                    "periodType": "REGULAR",
+                    "score": 47
+                },
+                {
+                    "period": 2,
+                    "periodType": "REGULAR",
+                    "score": 24
+                },
+                {
+                    "period": 3,
+                    "periodType": "REGULAR",
+                    "score": 31
+                },
+                {
+                    "period": 4,
+                    "periodType": "REGULAR",
+                    "score": 31
+                }
+            ],
+            "players": [
+                {
+                    "personId": 203507,
+                    "name": "Giannis Antetokounmpo",
+                    "nameI": "G. Antetokounmpo",
+                    "firstName": "Giannis",
+                    "familyName": "Antetokounmpo",
+                    "jerseyNum": "34"
+                },
+                {
+                    "personId": 203648,
+                    "name": "Thanasis Antetokounmpo",
+                    "nameI": "T. Antetokounmpo",
+                    "firstName": "Thanasis",
+                    "familyName": "Antetokounmpo",
+                    "jerseyNum": "43"
+                },
+                {
+                    "personId": 203914,
+                    "name": "Gary Harris",
+                    "nameI": "G. Harris",
+                    "firstName": "Gary",
+                    "familyName": "Harris",
+                    "jerseyNum": "11"
+                },
+                {
+                    "personId": 1626167,
+                    "name": "Myles Turner",
+                    "nameI": "M. Turner",
+                    "firstName": "Myles",
+                    "familyName": "Turner",
+                    "jerseyNum": "3"
+                },
+                {
+                    "personId": 1626171,
+                    "name": "Bobby Portis",
+                    "nameI": "B. Portis",
+                    "firstName": "Bobby",
+                    "familyName": "Portis",
+                    "jerseyNum": "9"
+                },
+                {
+                    "personId": 1627752,
+                    "name": "Taurean Prince",
+                    "nameI": "T. Prince",
+                    "firstName": "Taurean",
+                    "familyName": "Prince",
+                    "jerseyNum": "12"
+                },
+                {
+                    "personId": 1628398,
+                    "name": "Kyle Kuzma",
+                    "nameI": "K. Kuzma",
+                    "firstName": "Kyle",
+                    "familyName": "Kuzma",
+                    "jerseyNum": "18"
+                },
+                {
+                    "personId": 1629018,
+                    "name": "Gary Trent Jr.",
+                    "nameI": "G. Trent Jr.",
+                    "firstName": "Gary",
+                    "familyName": "Trent Jr.",
+                    "jerseyNum": "5"
+                },
+                {
+                    "personId": 1629599,
+                    "name": "Amir Coffey",
+                    "nameI": "A. Coffey",
+                    "firstName": "Amir",
+                    "familyName": "Coffey",
+                    "jerseyNum": "17"
+                },
+                {
+                    "personId": 1630175,
+                    "name": "Cole Anthony",
+                    "nameI": "C. Anthony",
+                    "firstName": "Cole",
+                    "familyName": "Anthony",
+                    "jerseyNum": "50"
+                },
+                {
+                    "personId": 1630579,
+                    "name": "Jericho Sims",
+                    "nameI": "J. Sims",
+                    "firstName": "Jericho",
+                    "familyName": "Sims",
+                    "jerseyNum": "00"
+                },
+                {
+                    "personId": 1631157,
+                    "name": "Ryan Rollins",
+                    "nameI": "R. Rollins",
+                    "firstName": "Ryan",
+                    "familyName": "Rollins",
+                    "jerseyNum": "13"
+                },
+                {
+                    "personId": 1631260,
+                    "name": "AJ Green",
+                    "nameI": "A. Green",
+                    "firstName": "AJ",
+                    "familyName": "Green",
+                    "jerseyNum": "20"
+                },
+                {
+                    "personId": 1641748,
+                    "name": "Andre Jackson Jr.",
+                    "nameI": "A. Jackson Jr.",
+                    "firstName": "Andre",
+                    "familyName": "Jackson Jr.",
+                    "jerseyNum": "44"
+                }
+            ],
+            "inactives": [
+                {
+                    "personId": 1629645,
+                    "firstName": "Kevin",
+                    "familyName": "Porter Jr.",
+                    "jerseyNum": "7   "
+                },
+                {
+                    "personId": 1630828,
+                    "firstName": "Alex",
+                    "familyName": "Antetokounmpo",
+                    "jerseyNum": "29  "
+                },
+                {
+                    "personId": 1631250,
+                    "firstName": "Pete",
+                    "familyName": "Nance",
+                    "jerseyNum": "35  "
+                },
+                {
+                    "personId": 1641813,
+                    "firstName": "Mark",
+                    "familyName": "Sears",
+                    "jerseyNum": "19  "
+                }
+            ]
+        },
+        "awayTeam": {
+            "teamId": 1610612758,
+            "teamName": "Kings",
+            "teamCity": "Sacramento",
+            "teamTricode": "SAC",
+            "teamSlug": "kings",
+            "teamWins": 2,
+            "teamLosses": 4,
+            "score": 135,
+            "inBonus": "",
+            "timeoutsRemaining": 1,
+            "seed": 0,
+            "statistics": {
+                "dummyKey": "dummyValue"
+            },
+            "periods": [
+                {
+                    "period": 1,
+                    "periodType": "REGULAR",
+                    "score": 36
+                },
+                {
+                    "period": 2,
+                    "periodType": "REGULAR",
+                    "score": 34
+                },
+                {
+                    "period": 3,
+                    "periodType": "REGULAR",
+                    "score": 38
+                },
+                {
+                    "period": 4,
+                    "periodType": "REGULAR",
+                    "score": 27
+                }
+            ],
+            "players": [
+                {
+                    "personId": 201566,
+                    "name": "Russell Westbrook",
+                    "nameI": "R. Westbrook",
+                    "firstName": "Russell",
+                    "familyName": "Westbrook",
+                    "jerseyNum": "4"
+                },
+                {
+                    "personId": 201942,
+                    "name": "DeMar DeRozan",
+                    "nameI": "D. DeRozan",
+                    "firstName": "DeMar",
+                    "familyName": "DeRozan",
+                    "jerseyNum": "10"
+                },
+                {
+                    "personId": 203471,
+                    "name": "Dennis Schröder",
+                    "nameI": "D. Schröder",
+                    "firstName": "Dennis",
+                    "familyName": "Schröder",
+                    "jerseyNum": "17"
+                },
+                {
+                    "personId": 203897,
+                    "name": "Zach LaVine",
+                    "nameI": "Z. LaVine",
+                    "firstName": "Zach",
+                    "familyName": "LaVine",
+                    "jerseyNum": "8"
+                },
+                {
+                    "personId": 203926,
+                    "name": "Doug McDermott",
+                    "nameI": "D. McDermott",
+                    "firstName": "Doug",
+                    "familyName": "McDermott",
+                    "jerseyNum": "7"
+                },
+                {
+                    "personId": 203967,
+                    "name": "Dario Šarić",
+                    "nameI": "D. Šarić",
+                    "firstName": "Dario",
+                    "familyName": "Šarić",
+                    "jerseyNum": "9"
+                },
+                {
+                    "personId": 1627734,
+                    "name": "Domantas Sabonis",
+                    "nameI": "D. Sabonis",
+                    "firstName": "Domantas",
+                    "familyName": "Sabonis",
+                    "jerseyNum": "11"
+                },
+                {
+                    "personId": 1629234,
+                    "name": "Drew Eubanks",
+                    "nameI": "D. Eubanks",
+                    "firstName": "Drew",
+                    "familyName": "Eubanks",
+                    "jerseyNum": "19"
+                },
+                {
+                    "personId": 1631165,
+                    "name": "Keon Ellis",
+                    "nameI": "K. Ellis",
+                    "firstName": "Keon",
+                    "familyName": "Ellis",
+                    "jerseyNum": "23"
+                },
+                {
+                    "personId": 1631342,
+                    "name": "Daeqwon Plowden",
+                    "nameI": "D. Plowden",
+                    "firstName": "Daeqwon",
+                    "familyName": "Plowden",
+                    "jerseyNum": "29"
+                },
+                {
+                    "personId": 1642269,
+                    "name": "Devin Carter",
+                    "nameI": "D. Carter",
+                    "firstName": "Devin",
+                    "familyName": "Carter",
+                    "jerseyNum": "22"
+                },
+                {
+                    "personId": 1642363,
+                    "name": "Nique Clifford",
+                    "nameI": "N. Clifford",
+                    "firstName": "Nique",
+                    "familyName": "Clifford",
+                    "jerseyNum": "5"
+                },
+                {
+                    "personId": 1642403,
+                    "name": "Isaac Jones",
+                    "nameI": "I. Jones",
+                    "firstName": "Isaac",
+                    "familyName": "Jones",
+                    "jerseyNum": "3"
+                },
+                {
+                    "personId": 1642875,
+                    "name": "Maxime Raynaud",
+                    "nameI": "M. Raynaud",
+                    "firstName": "Maxime",
+                    "familyName": "Raynaud",
+                    "jerseyNum": "42"
+                },
+                {
+                    "personId": 1642928,
+                    "name": "Dylan Cardwell",
+                    "nameI": "D. Cardwell",
+                    "firstName": "Dylan",
+                    "familyName": "Cardwell",
+                    "jerseyNum": ""
+                }
+            ],
+            "inactives": [
+                {
+                    "personId": 1641815,
+                    "firstName": "Isaiah",
+                    "familyName": "Stevens",
+                    "jerseyNum": "24  "
+                },
+                {
+                    "personId": 1631099,
+                    "firstName": "Keegan",
+                    "familyName": "Murray",
+                    "jerseyNum": "13  "
+                },
+                {
+                    "personId": 1628370,
+                    "firstName": "Malik",
+                    "familyName": "Monk",
+                    "jerseyNum": "0   "
+                }
+            ]
+        },
+        "lastFiveMeetings": {
+            "meetings": [
+                {
+                    "recencyOrder": 1,
+                    "gameId": "0022401027",
+                    "gameTimeUTC": "2025-03-23T02:00:00Z",
+                    "gameEt": "2025-03-22T22:00:00Z",
+                    "gameStatus": 3,
+                    "gameStatusText": "Final",
+                    "gameClock": "PT00M00.00S",
+                    "broadcasterVideoLink": "",
+                    "awayTeam": {
+                        "teamId": 1610612749,
+                        "teamCity": "Milwaukee",
+                        "teamName": "Bucks",
+                        "teamTricode": "MIL",
+                        "teamSlug": "bucks",
+                        "score": 114,
+                        "wins": 40,
+                        "losses": 30
+                    },
+                    "homeTeam": {
+                        "teamId": 1610612758,
+                        "teamCity": "Sacramento",
+                        "teamName": "Kings",
+                        "teamTricode": "SAC",
+                        "teamSlug": "kings",
+                        "score": 108,
+                        "wins": 35,
+                        "losses": 35
+                    }
+                },
+                {
+                    "recencyOrder": 2,
+                    "gameId": "0022400558",
+                    "gameTimeUTC": "2025-01-15T01:00:00Z",
+                    "gameEt": "2025-01-14T20:00:00Z",
+                    "gameStatus": 3,
+                    "gameStatusText": "Final",
+                    "gameClock": "PT00M00.00S",
+                    "broadcasterVideoLink": "",
+                    "awayTeam": {
+                        "teamId": 1610612758,
+                        "teamCity": "Sacramento",
+                        "teamName": "Kings",
+                        "teamTricode": "SAC",
+                        "teamSlug": "kings",
+                        "score": 115,
+                        "wins": 20,
+                        "losses": 20
+                    },
+                    "homeTeam": {
+                        "teamId": 1610612749,
+                        "teamCity": "Milwaukee",
+                        "teamName": "Bucks",
+                        "teamTricode": "MIL",
+                        "teamSlug": "bucks",
+                        "score": 130,
+                        "wins": 21,
+                        "losses": 17
+                    }
+                },
+                {
+                    "recencyOrder": 3,
+                    "gameId": "0022300945",
+                    "gameTimeUTC": "2024-03-13T02:00:00Z",
+                    "gameEt": "2024-03-12T22:00:00Z",
+                    "gameStatus": 3,
+                    "gameStatusText": "Final",
+                    "gameClock": "PT00M00.00S",
+                    "broadcasterVideoLink": "",
+                    "awayTeam": {
+                        "teamId": 1610612749,
+                        "teamCity": "Milwaukee",
+                        "teamName": "Bucks",
+                        "teamTricode": "MIL",
+                        "teamSlug": "bucks",
+                        "score": 94,
+                        "wins": 42,
+                        "losses": 24
+                    },
+                    "homeTeam": {
+                        "teamId": 1610612758,
+                        "teamCity": "Sacramento",
+                        "teamName": "Kings",
+                        "teamTricode": "SAC",
+                        "teamSlug": "kings",
+                        "score": 129,
+                        "wins": 37,
+                        "losses": 27
+                    }
+                },
+                {
+                    "recencyOrder": 4,
+                    "gameId": "0022300552",
+                    "gameTimeUTC": "2024-01-15T00:00:00Z",
+                    "gameEt": "2024-01-14T19:00:00Z",
+                    "gameStatus": 3,
+                    "gameStatusText": "Final/OT",
+                    "gameClock": "PT00M00.00S",
+                    "broadcasterVideoLink": "",
+                    "awayTeam": {
+                        "teamId": 1610612758,
+                        "teamCity": "Sacramento",
+                        "teamName": "Kings",
+                        "teamTricode": "SAC",
+                        "teamSlug": "kings",
+                        "score": 142,
+                        "wins": 23,
+                        "losses": 16
+                    },
+                    "homeTeam": {
+                        "teamId": 1610612749,
+                        "teamCity": "Milwaukee",
+                        "teamName": "Bucks",
+                        "teamTricode": "MIL",
+                        "teamSlug": "bucks",
+                        "score": 143,
+                        "wins": 28,
+                        "losses": 12
+                    }
+                },
+                {
+                    "recencyOrder": 5,
+                    "gameId": "0022201026",
+                    "gameTimeUTC": "2023-03-14T02:00:00Z",
+                    "gameEt": "2023-03-13T22:00:00Z",
+                    "gameStatus": 3,
+                    "gameStatusText": "Final",
+                    "gameClock": "PT00M00.00S",
+                    "broadcasterVideoLink": "",
+                    "awayTeam": {
+                        "teamId": 1610612749,
+                        "teamCity": "Milwaukee",
+                        "teamName": "Bucks",
+                        "teamTricode": "MIL",
+                        "teamSlug": "bucks",
+                        "score": 133,
+                        "wins": 49,
+                        "losses": 19
+                    },
+                    "homeTeam": {
+                        "teamId": 1610612758,
+                        "teamCity": "Sacramento",
+                        "teamName": "Kings",
+                        "teamTricode": "SAC",
+                        "teamSlug": "kings",
+                        "score": 124,
+                        "wins": 40,
+                        "losses": 27
+                    }
+                }
+            ]
+        },
+        "pregameCharts": {
+            "homeTeam": {
+                "teamId": 1610612749,
+                "teamCity": "Milwaukee",
+                "teamName": "Bucks",
+                "teamTricode": "MIL",
+                "statistics": {
+                    "points": 123.7,
+                    "reboundsTotal": 40.5,
+                    "assists": 27.2,
+                    "steals": 8.0,
+                    "blocks": 4.8,
+                    "turnovers": 14.2,
+                    "fieldGoalsPercentage": 0.525,
+                    "threePointersPercentage": 0.406,
+                    "freeThrowsPercentage": 0.707,
+                    "pointsInThePaint": 52.0,
+                    "pointsSecondChance": 10.5,
+                    "pointsFastBreak": 15.3,
+                    "playerPtsLeaderFirstName": "Giannis",
+                    "playerPtsLeaderFamilyName": "Antetokounmpo",
+                    "playerPtsLeaderId": 203507,
+                    "playerPtsLeaderPts": 34.2,
+                    "playerRebLeaderFirstName": "Giannis",
+                    "playerRebLeaderFamilyName": "Antetokounmpo",
+                    "playerRebLeaderId": 203507,
+                    "playerRebLeaderReb": 13.4,
+                    "playerAstLeaderFirstName": "Giannis",
+                    "playerAstLeaderFamilyName": "Antetokounmpo",
+                    "playerAstLeaderId": 203507,
+                    "playerAstLeaderAst": 7.2,
+                    "playerBlkLeaderFirstName": "Myles",
+                    "playerBlkLeaderFamilyName": "Turner",
+                    "playerBlkLeaderId": 1626167,
+                    "playerBlkLeaderBlk": 1.83
+                }
+            },
+            "awayTeam": {
+                "teamId": 1610612758,
+                "teamCity": "Sacramento",
+                "teamName": "Kings",
+                "teamTricode": "SAC",
+                "statistics": {
+                    "points": 115.0,
+                    "reboundsTotal": 37.5,
+                    "assists": 25.5,
+                    "steals": 10.3,
+                    "blocks": 4.0,
+                    "turnovers": 13.2,
+                    "fieldGoalsPercentage": 0.481,
+                    "threePointersPercentage": 0.37,
+                    "freeThrowsPercentage": 0.769,
+                    "pointsInThePaint": 48.7,
+                    "pointsSecondChance": 14.2,
+                    "pointsFastBreak": 13.7,
+                    "playerPtsLeaderFirstName": "Zach",
+                    "playerPtsLeaderFamilyName": "LaVine",
+                    "playerPtsLeaderId": 203897,
+                    "playerPtsLeaderPts": 29.5,
+                    "playerRebLeaderFirstName": "Domantas",
+                    "playerRebLeaderFamilyName": "Sabonis",
+                    "playerRebLeaderId": 1627734,
+                    "playerRebLeaderReb": 13.6,
+                    "playerAstLeaderFirstName": "Dennis",
+                    "playerAstLeaderFamilyName": "Schröder",
+                    "playerAstLeaderId": 203471,
+                    "playerAstLeaderAst": 6.5,
+                    "playerBlkLeaderFirstName": "Drew",
+                    "playerBlkLeaderFamilyName": "Eubanks",
+                    "playerBlkLeaderId": 1629234,
+                    "playerBlkLeaderBlk": 1.17
+                }
+            }
+        },
+        "postgameCharts": {
+            "homeTeam": {
+                "teamId": 1610612749,
+                "teamCity": "Milwaukee",
+                "teamName": "Bucks",
+                "teamTricode": "MIL",
+                "statistics": {
+                    "points": 133.0,
+                    "reboundsTotal": 37.0,
+                    "assists": 30.0,
+                    "steals": 5.0,
+                    "blocks": 2.0,
+                    "turnovers": 11.0,
+                    "fieldGoalsPercentage": 0.598,
+                    "threePointersPercentage": 0.469,
+                    "freeThrowsPercentage": 0.645,
+                    "pointsInThePaint": 50.0,
+                    "pointsSecondChance": 12.0,
+                    "pointsFastBreak": 22.0,
+                    "biggestLead": 15.0,
+                    "leadChanges": 7.0,
+                    "timesTied": 4.0,
+                    "biggestScoringRun": 9.0,
+                    "turnoversTeam": 0.0,
+                    "turnoversTotal": 11.0,
+                    "reboundsTeam": 7.0,
+                    "pointsFromTurnovers": 14.0,
+                    "benchPoints": 48.0,
+                    "playerPtsLeaderFirstName": "Giannis",
+                    "playerPtsLeaderFamilyName": "Antetokounmpo",
+                    "playerPtsLeaderId": 203507,
+                    "playerPtsLeaderPts": 26.0,
+                    "playerRebLeaderFirstName": "Giannis",
+                    "playerRebLeaderFamilyName": "Antetokounmpo",
+                    "playerRebLeaderId": 203507,
+                    "playerRebLeaderReb": 11.0,
+                    "playerAstLeaderFirstName": "Giannis",
+                    "playerAstLeaderFamilyName": "Antetokounmpo",
+                    "playerAstLeaderId": 203507,
+                    "playerAstLeaderAst": 8.0,
+                    "playerBlkLeaderFirstName": "Giannis",
+                    "playerBlkLeaderFamilyName": "Antetokounmpo",
+                    "playerBlkLeaderId": 203507,
+                    "playerBlkLeaderBlk": 1.0
+                }
+            },
+            "awayTeam": {
+                "teamId": 1610612758,
+                "teamCity": "Sacramento",
+                "teamName": "Kings",
+                "teamTricode": "SAC",
+                "statistics": {
+                    "points": 135.0,
+                    "reboundsTotal": 38.0,
+                    "assists": 30.0,
+                    "steals": 8.0,
+                    "blocks": 1.0,
+                    "turnovers": 9.0,
+                    "fieldGoalsPercentage": 0.517,
+                    "threePointersPercentage": 0.357,
+                    "freeThrowsPercentage": 0.875,
+                    "pointsInThePaint": 60.0,
+                    "pointsSecondChance": 16.0,
+                    "pointsFastBreak": 7.0,
+                    "biggestLead": 11.0,
+                    "leadChanges": 7.0,
+                    "timesTied": 4.0,
+                    "biggestScoringRun": 13.0,
+                    "turnoversTeam": 1.0,
+                    "turnoversTotal": 10.0,
+                    "reboundsTeam": 10.0,
+                    "pointsFromTurnovers": 14.0,
+                    "benchPoints": 25.0,
+                    "playerPtsLeaderFirstName": "Zach",
+                    "playerPtsLeaderFamilyName": "LaVine",
+                    "playerPtsLeaderId": 203897,
+                    "playerPtsLeaderPts": 31.0,
+                    "playerRebLeaderFirstName": "Domantas",
+                    "playerRebLeaderFamilyName": "Sabonis",
+                    "playerRebLeaderId": 1627734,
+                    "playerRebLeaderReb": 13.0,
+                    "playerAstLeaderFirstName": "Russell",
+                    "playerAstLeaderFamilyName": "Westbrook",
+                    "playerAstLeaderId": 201566,
+                    "playerAstLeaderAst": 10.0,
+                    "playerBlkLeaderFirstName": "Nique",
+                    "playerBlkLeaderFamilyName": "Clifford",
+                    "playerBlkLeaderId": 1642363,
+                    "playerBlkLeaderBlk": 1.0
+                }
+            }
+        },
+        "videoAvailableFlag": 1,
+        "ptAvailable": 1,
+        "ptXYZAvailable": 0,
+        "whStatus": 1,
+        "hustleStatus": 1,
+        "historicalStatus": 0,
+        "gameSubtype": ""
+    }
+}
