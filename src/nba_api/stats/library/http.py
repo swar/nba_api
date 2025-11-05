@@ -1,34 +1,9 @@
+"""NBA Stats HTTP client and response handling."""
+
 import json
+
 from nba_api.library import http
-from nba_api.stats.endpoints._parsers import (
-    NBAStatsBoxscoreParserV3,
-    NBAStatsBoxscoreTraditionalParserV3,
-    NBAStatsBoxscoreMatchupsParserV3,
-    NBAStatsBoxscoreSummaryParserV3,
-    NBAStatsPlayByPlayParserV3,
-    NBAStatsISTStandingsParser,
-    NBAStatsScheduleLeagueV2Parser,
-    NBAStatsScheduleLeagueV2IntParser,
-)
-
-
-PARSER_DICT = {
-    "boxscoreadvancedv3": NBAStatsBoxscoreParserV3,
-    "boxscoredefensivev2": NBAStatsBoxscoreParserV3,
-    "boxscorefourfactorsv3": NBAStatsBoxscoreParserV3,
-    "boxscorehustlev2": NBAStatsBoxscoreParserV3,
-    "boxscorematchupsv3": NBAStatsBoxscoreMatchupsParserV3,
-    "boxscoremiscv3": NBAStatsBoxscoreParserV3,
-    "boxscoreplayertrackv3": NBAStatsBoxscoreParserV3,
-    "boxscorescoringv3": NBAStatsBoxscoreParserV3,
-    "boxscoresummaryv3": NBAStatsBoxscoreSummaryParserV3,
-    "boxscoretraditionalv3": NBAStatsBoxscoreTraditionalParserV3,
-    "boxscoreusagev3": NBAStatsBoxscoreParserV3,
-    "playbyplayv3": NBAStatsPlayByPlayParserV3,
-    "iststandings": NBAStatsISTStandingsParser,
-    "scheduleleaguev2": NBAStatsScheduleLeagueV2Parser,
-    "scheduleleaguev2int": NBAStatsScheduleLeagueV2IntParser,
-}
+from nba_api.stats.endpoints._parsers import get_parser_for_endpoint
 
 try:
     from nba_api.library.debug.debug import STATS_HEADERS
@@ -49,15 +24,9 @@ except ImportError:
     }
 
 
-class NBAStatsParser:
-    def __init__(self, nba_dict):
-        self.nba_dict = nba_dict
-
-    def change_parser(self, endpoint):
-        return PARSER_DICT[endpoint](self.nba_dict)
-
-
 class NBAStatsResponse(http.NBAResponse):
+    """Response handler for NBA Stats API requests."""
+
     def get_normalized_dict(self):
         raw_data = self.get_dict()
 
@@ -151,13 +120,14 @@ class NBAStatsResponse(http.NBAResponse):
                 for result_set in results
             }
         else:
-            # Process Tabular Json
-            self.parser = NBAStatsParser(nba_dict=self.get_dict())
-            endpoint_parser = self.parser.change_parser(endpoint)
+            # Process V3 endpoint with custom parser
+            endpoint_parser = get_parser_for_endpoint(endpoint, self.get_dict())
             return endpoint_parser.get_data_sets()
 
 
 class NBAStatsHTTP(http.NBAHTTP):
+    """HTTP client for NBA Stats API with custom response handling."""
+
     nba_response = NBAStatsResponse
 
     base_url = "https://stats.nba.com/stats/{endpoint}"

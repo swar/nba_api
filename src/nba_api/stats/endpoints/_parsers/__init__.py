@@ -30,4 +30,43 @@ __all__ = [
     "NBAStatsISTStandingsParser",
     "NBAStatsScheduleLeagueV2Parser",
     "NBAStatsScheduleLeagueV2IntParser",
+    "get_parser_for_endpoint",
 ]
+
+
+# Mapping of endpoint names to their parser classes
+_PARSER_REGISTRY = {
+    "boxscoreadvancedv3": NBAStatsBoxscoreParserV3,
+    "boxscoredefensivev2": NBAStatsBoxscoreParserV3,
+    "boxscorefourfactorsv3": NBAStatsBoxscoreParserV3,
+    "boxscorehustlev2": NBAStatsBoxscoreParserV3,
+    "boxscorematchupsv3": NBAStatsBoxscoreMatchupsParserV3,
+    "boxscoremiscv3": NBAStatsBoxscoreParserV3,
+    "boxscoreplayertrackv3": NBAStatsBoxscoreParserV3,
+    "boxscorescoringv3": NBAStatsBoxscoreParserV3,
+    "boxscoresummaryv3": NBAStatsBoxscoreSummaryParserV3,
+    "boxscoretraditionalv3": NBAStatsBoxscoreTraditionalParserV3,
+    "boxscoreusagev3": NBAStatsBoxscoreParserV3,
+    "playbyplayv3": NBAStatsPlayByPlayParserV3,
+    "iststandings": NBAStatsISTStandingsParser,
+    "scheduleleaguev2": NBAStatsScheduleLeagueV2Parser,
+    "scheduleleaguev2int": NBAStatsScheduleLeagueV2IntParser,
+}
+
+
+def get_parser_for_endpoint(endpoint, nba_dict):
+    """
+    Get the appropriate parser instance for a given endpoint.
+
+    Args:
+        endpoint (str): The endpoint name (e.g., "boxscoresummaryv3").
+        nba_dict (dict): The raw API response dictionary.
+
+    Returns:
+        Parser instance configured with the provided data.
+
+    Raises:
+        KeyError: If the endpoint doesn't have a registered parser.
+    """
+    parser_class = _PARSER_REGISTRY[endpoint]
+    return parser_class(nba_dict)

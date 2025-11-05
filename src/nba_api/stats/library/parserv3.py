@@ -23,14 +23,15 @@ import warnings
 
 # Re-export from new location for backward compatibility
 from nba_api.stats.endpoints._parsers import (  # noqa: F401
-    NBAStatsBoxscoreParserV3,
-    NBAStatsBoxscoreTraditionalParserV3,
     NBAStatsBoxscoreMatchupsParserV3,
+    NBAStatsBoxscoreParserV3,
     NBAStatsBoxscoreSummaryParserV3,
-    NBAStatsPlayByPlayParserV3,
+    NBAStatsBoxscoreTraditionalParserV3,
     NBAStatsISTStandingsParser,
-    NBAStatsScheduleLeagueV2Parser,
+    NBAStatsPlayByPlayParserV3,
     NBAStatsScheduleLeagueV2IntParser,
+    NBAStatsScheduleLeagueV2Parser,
+    get_parser_for_endpoint,
 )
 
 warnings.warn(
