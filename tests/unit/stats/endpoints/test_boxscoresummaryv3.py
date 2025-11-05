@@ -7,7 +7,7 @@ from unittest.mock import Mock, patch
 from pandas import DataFrame
 
 from nba_api.stats.endpoints import BoxScoreSummaryV3
-from nba_api.stats.library.parserv3 import NBAStatsBoxscoreSummaryParserV3
+from nba_api.stats.endpoints._parsers import NBAStatsBoxscoreSummaryParserV3
 
 
 @pytest.fixture

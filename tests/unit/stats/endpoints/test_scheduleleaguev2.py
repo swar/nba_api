@@ -5,7 +5,7 @@ from unittest.mock import Mock, patch
 import pytest
 
 from nba_api.stats.endpoints import ScheduleLeagueV2
-from nba_api.stats.library.parserv3 import NBAStatsScheduleLeagueV2Parser
+from nba_api.stats.endpoints._parsers import NBAStatsScheduleLeagueV2Parser
 
 from .data.scheduleleaguev2 import (
     SCHEDULELEAGUEV2_2015_16,
