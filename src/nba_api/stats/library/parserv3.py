@@ -386,8 +386,24 @@ class NBAStatsScheduleLeagueV2Parser:
         return results
 
     def get_weeks_headers(self):
-        tmp = self.nba_dict[list(self.nba_dict.keys())[1]]["weeks"][0]
-        headers = tuple(["leagueId", "seasonYear"] + [header for header in tmp.keys()])
+        weeks = self.nba_dict[list(self.nba_dict.keys())[1]]["weeks"]
+        if not weeks:
+            # Return default headers when weeks array is empty (e.g., older seasons)
+            headers = tuple(
+                [
+                    "leagueId",
+                    "seasonYear",
+                    "weekNumber",
+                    "weekName",
+                    "startDate",
+                    "endDate",
+                ]
+            )
+        else:
+            tmp = weeks[0]
+            headers = tuple(
+                ["leagueId", "seasonYear"] + [header for header in tmp.keys()]
+            )
         return headers
 
     def get_weeks_data(self):
