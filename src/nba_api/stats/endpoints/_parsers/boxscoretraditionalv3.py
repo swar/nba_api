@@ -1,9 +1,9 @@
 """Parser(s) for boxscoretraditionalv3 endpoint."""
 
-from .boxscoreadvancedv3 import NBAStatsBoxscoreParserV3
+from .boxscoreadvancedv3 import NBAStatsBoxscoreAdvancedV3Parser
 
 
-class NBAStatsBoxscoreTraditionalParserV3(NBAStatsBoxscoreParserV3):
+class NBAStatsBoxscoreTraditionalParserV3(NBAStatsBoxscoreAdvancedV3Parser):
     def __init__(self, nba_dict):
         super().__init__(nba_dict)
 

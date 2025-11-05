@@ -1,0 +1,130 @@
+"""Test data for boxscorescoringv3 endpoint.
+
+Contains minimal fixture representing API response structure.
+
+Full API response available in:
+docs/nba_api/stats/endpoints/responses/boxscorescoringv3.json
+"""
+
+BOXSCORESCORINGV3_SAMPLE = {
+    "meta": {
+        "version": 1,
+        "request": "http://nba.cloud/games/1022500165/boxscorescoringv3?Format=json",
+        "time": "2025-11-05T20:06:02.62Z"
+    },
+    "boxScoreScoring": {
+        "gameId": "1022500165",
+        "awayTeamId": 1611661328,
+        "homeTeamId": 1611661323,
+        "homeTeam": {
+            "teamId": 1611661323,
+            "teamCity": "Connecticut",
+            "teamName": "Sun",
+            "teamTricode": "CON",
+            "teamSlug": "sun",
+            "players": [
+                {
+                    "personId": 1642809,
+                    "firstName": "Saniya",
+                    "familyName": "Rivers",
+                    "nameI": "S. Rivers",
+                    "playerSlug": "saniya-rivers",
+                    "position": "F",
+                    "comment": "",
+                    "jerseyNum": "",
+                    "statistics": {
+                        "minutes": "12:46",
+                        "percentageFieldGoalsAttempted2pt": 0.714,
+                        "percentageFieldGoalsAttempted3pt": 0.286,
+                        "percentagePoints2pt": 0.4,
+                        "percentagePointsMidrange2pt": 0.0,
+                        "percentagePoints3pt": 0.6,
+                        "percentagePointsFastBreak": 0.0,
+                        "percentagePointsFreeThrow": 0.0,
+                        "percentagePointsOffTurnovers": 0.0,
+                        "percentagePointsPaint": 0.4,
+                        "percentageAssisted2pt": 0.0,
+                        "percentageUnassisted2pt": 1.0,
+                        "percentageAssisted3pt": 1.0,
+                        "percentageUnassisted3pt": 0.0,
+                        "percentageAssistedFGM": 0.5,
+                        "percentageUnassistedFGM": 0.5
+                    }
+                }
+            ],
+            "statistics": {
+                "minutes": "200:00",
+                "percentageFieldGoalsAttempted2pt": 0.746,
+                "percentageFieldGoalsAttempted3pt": 0.254,
+                "percentagePoints2pt": 0.447,
+                "percentagePointsMidrange2pt": 0.141,
+                "percentagePoints3pt": 0.282,
+                "percentagePointsFastBreak": 0.153,
+                "percentagePointsFreeThrow": 0.271,
+                "percentagePointsOffTurnovers": 0.212,
+                "percentagePointsPaint": 0.306,
+                "percentageAssisted2pt": 0.737,
+                "percentageUnassisted2pt": 0.263,
+                "percentageAssisted3pt": 0.75,
+                "percentageUnassisted3pt": 0.25,
+                "percentageAssistedFGM": 0.741,
+                "percentageUnassistedFGM": 0.259
+            }
+        },
+        "awayTeam": {
+            "teamId": 1611661328,
+            "teamCity": "Seattle",
+            "teamName": "Storm",
+            "teamTricode": "SEA",
+            "teamSlug": "storm",
+            "players": [
+                {
+                    "personId": 1628931,
+                    "firstName": "Gabby",
+                    "familyName": "Williams",
+                    "nameI": "G. Williams",
+                    "playerSlug": "gabby-williams",
+                    "position": "F",
+                    "comment": "",
+                    "jerseyNum": "",
+                    "statistics": {
+                        "minutes": "24:21",
+                        "percentageFieldGoalsAttempted2pt": 0.818,
+                        "percentageFieldGoalsAttempted3pt": 0.182,
+                        "percentagePoints2pt": 0.875,
+                        "percentagePointsMidrange2pt": 0.125,
+                        "percentagePoints3pt": 0.0,
+                        "percentagePointsFastBreak": 0.313,
+                        "percentagePointsFreeThrow": 0.125,
+                        "percentagePointsOffTurnovers": 0.188,
+                        "percentagePointsPaint": 0.75,
+                        "percentageAssisted2pt": 0.571,
+                        "percentageUnassisted2pt": 0.429,
+                        "percentageAssisted3pt": 0.0,
+                        "percentageUnassisted3pt": 0.0,
+                        "percentageAssistedFGM": 0.571,
+                        "percentageUnassistedFGM": 0.429
+                    }
+                }
+            ],
+            "statistics": {
+                "minutes": "200:00",
+                "percentageFieldGoalsAttempted2pt": 0.71,
+                "percentageFieldGoalsAttempted3pt": 0.29,
+                "percentagePoints2pt": 0.653,
+                "percentagePointsMidrange2pt": 0.119,
+                "percentagePoints3pt": 0.267,
+                "percentagePointsFastBreak": 0.178,
+                "percentagePointsFreeThrow": 0.079,
+                "percentagePointsOffTurnovers": 0.158,
+                "percentagePointsPaint": 0.535,
+                "percentageAssisted2pt": 0.636,
+                "percentageUnassisted2pt": 0.364,
+                "percentageAssisted3pt": 1.0,
+                "percentageUnassisted3pt": 0.0,
+                "percentageAssistedFGM": 0.714,
+                "percentageUnassistedFGM": 0.286
+            }
+        }
+    }
+}

@@ -1,130 +1,215 @@
-"""Parser(s) for boxscoreadvancedv3 endpoint."""
+"""Parser for boxscoreadvancedv3 endpoint.
+
+Parses advanced boxscore statistics including offensive/defensive ratings,
+true shooting percentage, pace, and other advanced metrics.
+
+Structure:
+    {
+        "boxScoreAdvanced": {
+            "gameId": str,
+            "homeTeam": {team_metadata, players[], statistics{}},
+            "awayTeam": {team_metadata, players[], statistics{}}
+        }
+    }
+"""
+
+# Common metadata fields
+TEAM_METADATA_FIELDS = (
+    "teamId",
+    "teamCity",
+    "teamName",
+    "teamTricode",
+    "teamSlug",
+)
+
+PLAYER_METADATA_FIELDS = (
+    "personId",
+    "firstName",
+    "familyName",
+    "nameI",
+    "playerSlug",
+    "position",
+    "comment",
+    "jerseyNum",
+)
+
+# Team statistics (includes estimatedTeamTurnoverPercentage)
+TEAM_STATS_FIELDS = (
+    "minutes",
+    "estimatedOffensiveRating",
+    "offensiveRating",
+    "estimatedDefensiveRating",
+    "defensiveRating",
+    "estimatedNetRating",
+    "netRating",
+    "assistPercentage",
+    "assistToTurnover",
+    "assistRatio",
+    "offensiveReboundPercentage",
+    "defensiveReboundPercentage",
+    "reboundPercentage",
+    "estimatedTeamTurnoverPercentage",  # Team only
+    "turnoverRatio",
+    "effectiveFieldGoalPercentage",
+    "trueShootingPercentage",
+    "usagePercentage",
+    "estimatedUsagePercentage",
+    "estimatedPace",
+    "pace",
+    "pacePer40",
+    "possessions",
+    "PIE",
+)
+
+# Player statistics (no estimatedTeamTurnoverPercentage)
+PLAYER_STATS_FIELDS = (
+    "minutes",
+    "estimatedOffensiveRating",
+    "offensiveRating",
+    "estimatedDefensiveRating",
+    "defensiveRating",
+    "estimatedNetRating",
+    "netRating",
+    "assistPercentage",
+    "assistToTurnover",
+    "assistRatio",
+    "offensiveReboundPercentage",
+    "defensiveReboundPercentage",
+    "reboundPercentage",
+    "turnoverRatio",
+    "effectiveFieldGoalPercentage",
+    "trueShootingPercentage",
+    "usagePercentage",
+    "estimatedUsagePercentage",
+    "estimatedPace",
+    "pace",
+    "pacePer40",
+    "possessions",
+    "PIE",
+)
 
 
-class NBAStatsBoxscoreParserV3:
+class NBAStatsBoxscoreAdvancedV3Parser:
+    """
+    Parser for BoxScoreAdvancedV3 endpoint.
+
+    Extracts advanced statistics for teams and players including:
+    - Offensive/Defensive/Net Ratings
+    - True Shooting Percentage
+    - Effective Field Goal Percentage
+    - Usage Percentage
+    - Pace metrics
+    - PIE (Player Impact Estimate)
+    """
+
     def __init__(self, nba_dict):
+        """
+        Initialize parser with NBA Stats API response.
+
+        Args:
+            nba_dict (dict): Raw API response dictionary
+        """
         self.nba_dict = nba_dict
+        self.boxscore = nba_dict.get("boxScoreAdvanced", {})
 
-    def get_team_headers(self, headers=tuple(), level=0):
-        if level == 0:
-            tmp = self.nba_dict[list(self.nba_dict.keys())[1]]
-            headers = headers + tuple(
-                [header for header in tmp.keys() if header == "gameId"]
-            )
-            return self.get_team_headers(headers, level=1)
-        elif level == 1:
-            tmp = self.nba_dict[list(self.nba_dict.keys())[1]]["homeTeam"]
-            headers = headers + tuple(
-                [
-                    header
-                    for header in tmp.keys()
-                    if header not in ("players", "statistics")
-                ]
-            )
-            return self.get_team_headers(headers, level=2)
-        else:
-            try:
-                tmp = self.nba_dict[list(self.nba_dict.keys())[1]]["homeTeam"][
-                    "statistics"
-                ]
-            except KeyError:
-                return list(headers)
-            headers = headers + tuple([header for header in tmp.keys()])
-            return list(headers)
+    def get_team_headers(self):
+        """
+        Get headers for TeamStats dataset.
 
-    def get_players_headers(self, headers=tuple(), level=0):
-        if level == 0:
-            tmp = self.nba_dict[list(self.nba_dict.keys())[1]]
-            headers = headers + tuple(
-                [header for header in tmp.keys() if header == "gameId"]
-            )
-            return self.get_players_headers(headers, level=1)
-        elif level == 1:
-            tmp = self.nba_dict[list(self.nba_dict.keys())[1]]["homeTeam"]
-            headers = headers + tuple(
-                [
-                    header
-                    for header in tmp.keys()
-                    if header not in ("players", "statistics")
-                ]
-            )
-            return self.get_players_headers(headers, level=2)
-        elif level == 2:
-            tmp = self.nba_dict[list(self.nba_dict.keys())[1]]["homeTeam"]["players"][0]
-            headers = headers + tuple(
-                [header for header in tmp.keys() if header != "statistics"]
-            )
-            return self.get_players_headers(headers, level=3)
-        else:
-            tmp = self.nba_dict[list(self.nba_dict.keys())[1]]["homeTeam"]["players"][
-                0
-            ]["statistics"]
-            headers = headers + tuple([header for header in tmp.keys()])
-            return list(headers)
+        Returns:
+            tuple: Column names for team statistics
+        """
+        return ("gameId",) + TEAM_METADATA_FIELDS + TEAM_STATS_FIELDS
 
-    def get_data_sets(self):
-        results = {"PlayerStats": None, "TeamStats": None}
-        team_head = self.get_team_headers()
-        player_head = self.get_players_headers()
-        team_data = self.get_team_data()
-        pl_data = self.get_player_data()
-        results["TeamStats"] = {"headers": team_head, "data": team_data}
-        results["PlayerStats"] = {"headers": player_head, "data": pl_data}
-        return results
+    def get_player_headers(self):
+        """
+        Get headers for PlayerStats dataset.
+
+        Returns:
+            tuple: Column names for player statistics
+        """
+        return (
+            ("gameId",)
+            + TEAM_METADATA_FIELDS
+            + PLAYER_METADATA_FIELDS
+            + PLAYER_STATS_FIELDS
+        )
 
     def get_team_data(self):
-        raw_dict = self.nba_dict[list(self.nba_dict.keys())[1]]
-        home_team_info = [
-            value
-            for key, value in raw_dict["homeTeam"].items()
-            if key not in ("players", "statistics")
-        ]
-        home_team_stats = [x for x in raw_dict["homeTeam"]["statistics"].values()]
+        """
+        Extract team statistics data for both home and away teams.
 
-        away_team_info = [
-            value
-            for key, value in raw_dict["awayTeam"].items()
-            if key not in ("players", "statistics")
-        ]
-        away_team_stats = [x for x in raw_dict["awayTeam"]["statistics"].values()]
-        return [
-            [raw_dict["gameId"]] + home_team_info + home_team_stats,
-            [raw_dict["gameId"]] + away_team_info + away_team_stats,
-        ]
+        Returns:
+            list: List of two rows [home_team_data, away_team_data]
+        """
+        game_id = self.boxscore.get("gameId")
+        data = []
+
+        for team_key in ["homeTeam", "awayTeam"]:
+            team = self.boxscore.get(team_key, {})
+
+            # Extract team metadata
+            team_metadata = tuple(team.get(field) for field in TEAM_METADATA_FIELDS)
+
+            # Extract team statistics
+            team_stats = team.get("statistics", {})
+            stats_values = tuple(team_stats.get(field) for field in TEAM_STATS_FIELDS)
+
+            # Combine into single row
+            row = (game_id,) + team_metadata + stats_values
+            data.append(list(row))
+
+        return data
 
     def get_player_data(self):
-        raw_dict = self.nba_dict[list(self.nba_dict.keys())[1]]
-        game_id = [raw_dict["gameId"]]
+        """
+        Extract player statistics data for all players on both teams.
+
+        Returns:
+            list: List of player data rows
+        """
+        game_id = self.boxscore.get("gameId")
         data = []
-        for team in ["awayTeam", "homeTeam"]:
-            team_info = [
-                [
-                    value
-                    for key, value in raw_dict[team].items()
-                    if key not in ("players", "statistics")
-                ]
-            ]
-            n_pl = len(raw_dict[team]["players"])
-            play_info = [
-                [
-                    value
-                    for key, value in raw_dict[team]["players"][i].items()
-                    if key != "statistics"
-                ]
-                for i in range(len(raw_dict[team]["players"]))
-            ]
-            play_stats = [
-                [
-                    value
-                    for key, value in raw_dict[team]["players"][i]["statistics"].items()
-                ]
-                for i in range(len(raw_dict[team]["players"]))
-            ]
-            stats = [
-                [x, *y, *z, *w]
-                for x, y, z, w in zip(
-                    game_id * n_pl, team_info * n_pl, play_info, play_stats
+
+        for team_key in ["awayTeam", "homeTeam"]:
+            team = self.boxscore.get(team_key, {})
+
+            # Extract team metadata (same for all players on this team)
+            team_metadata = tuple(team.get(field) for field in TEAM_METADATA_FIELDS)
+
+            # Process each player
+            for player in team.get("players", []):
+                # Extract player metadata
+                player_metadata = tuple(
+                    player.get(field) for field in PLAYER_METADATA_FIELDS
                 )
-            ]
-            data = data + stats
+
+                # Extract player statistics
+                player_stats = player.get("statistics", {})
+                stats_values = tuple(
+                    player_stats.get(field) for field in PLAYER_STATS_FIELDS
+                )
+
+                # Combine into single row
+                row = (game_id,) + team_metadata + player_metadata + stats_values
+                data.append(list(row))
+
         return data
+
+    def get_data_sets(self):
+        """
+        Get all datasets for this endpoint.
+
+        Returns:
+            dict: Dictionary with TeamStats and PlayerStats datasets
+        """
+        return {
+            "TeamStats": {
+                "headers": list(self.get_team_headers()),
+                "data": self.get_team_data(),
+            },
+            "PlayerStats": {
+                "headers": list(self.get_player_headers()),
+                "data": self.get_player_data(),
+            },
+        }

@@ -10,10 +10,17 @@ Each parser is responsible for:
 - Returning data in the format expected by Endpoint.DataSet
 """
 
-from .boxscoreadvancedv3 import NBAStatsBoxscoreParserV3
+from .boxscoreadvancedv3 import NBAStatsBoxscoreAdvancedV3Parser
+from .boxscoredefensivev2 import NBAStatsBoxscoreDefensiveV2Parser
+from .boxscorefourfactorsv3 import NBAStatsBoxscoreFourFactorsV3Parser
+from .boxscorehustlev2 import NBAStatsBoxscoreHustleV2Parser
 from .boxscorematchupsv3 import NBAStatsBoxscoreMatchupsParserV3
+from .boxscoremiscv3 import NBAStatsBoxscoreMiscV3Parser
+from .boxscoreplayertrackv3 import NBAStatsBoxscorePlayerTrackV3Parser
+from .boxscorescoringv3 import NBAStatsBoxscoreScoringV3Parser
 from .boxscoresummaryv3 import NBAStatsBoxscoreSummaryParserV3
 from .boxscoretraditionalv3 import NBAStatsBoxscoreTraditionalParserV3
+from .boxscoreusagev3 import NBAStatsBoxscoreUsageV3Parser
 from .iststandings import NBAStatsISTStandingsParser
 from .playbyplayv3 import NBAStatsPlayByPlayParserV3
 from .scheduleleaguev2 import (
@@ -22,12 +29,19 @@ from .scheduleleaguev2 import (
 )
 
 __all__ = [
-    "NBAStatsBoxscoreParserV3",
-    "NBAStatsBoxscoreTraditionalParserV3",
+    "NBAStatsBoxscoreAdvancedV3Parser",
+    "NBAStatsBoxscoreDefensiveV2Parser",
+    "NBAStatsBoxscoreFourFactorsV3Parser",
+    "NBAStatsBoxscoreHustleV2Parser",
     "NBAStatsBoxscoreMatchupsParserV3",
+    "NBAStatsBoxscoreMiscV3Parser",
+    "NBAStatsBoxscorePlayerTrackV3Parser",
+    "NBAStatsBoxscoreScoringV3Parser",
     "NBAStatsBoxscoreSummaryParserV3",
-    "NBAStatsPlayByPlayParserV3",
+    "NBAStatsBoxscoreTraditionalParserV3",
+    "NBAStatsBoxscoreUsageV3Parser",
     "NBAStatsISTStandingsParser",
+    "NBAStatsPlayByPlayParserV3",
     "NBAStatsScheduleLeagueV2Parser",
     "NBAStatsScheduleLeagueV2IntParser",
     "get_parser_for_endpoint",
@@ -36,17 +50,17 @@ __all__ = [
 
 # Mapping of endpoint names to their parser classes
 _PARSER_REGISTRY = {
-    "boxscoreadvancedv3": NBAStatsBoxscoreParserV3,
-    "boxscoredefensivev2": NBAStatsBoxscoreParserV3,
-    "boxscorefourfactorsv3": NBAStatsBoxscoreParserV3,
-    "boxscorehustlev2": NBAStatsBoxscoreParserV3,
+    "boxscoreadvancedv3": NBAStatsBoxscoreAdvancedV3Parser,
+    "boxscoredefensivev2": NBAStatsBoxscoreDefensiveV2Parser,
+    "boxscorefourfactorsv3": NBAStatsBoxscoreFourFactorsV3Parser,
+    "boxscorehustlev2": NBAStatsBoxscoreHustleV2Parser,
     "boxscorematchupsv3": NBAStatsBoxscoreMatchupsParserV3,
-    "boxscoremiscv3": NBAStatsBoxscoreParserV3,
-    "boxscoreplayertrackv3": NBAStatsBoxscoreParserV3,
-    "boxscorescoringv3": NBAStatsBoxscoreParserV3,
+    "boxscoremiscv3": NBAStatsBoxscoreMiscV3Parser,
+    "boxscoreplayertrackv3": NBAStatsBoxscorePlayerTrackV3Parser,
+    "boxscorescoringv3": NBAStatsBoxscoreScoringV3Parser,
     "boxscoresummaryv3": NBAStatsBoxscoreSummaryParserV3,
     "boxscoretraditionalv3": NBAStatsBoxscoreTraditionalParserV3,
-    "boxscoreusagev3": NBAStatsBoxscoreParserV3,
+    "boxscoreusagev3": NBAStatsBoxscoreUsageV3Parser,
     "playbyplayv3": NBAStatsPlayByPlayParserV3,
     "iststandings": NBAStatsISTStandingsParser,
     "scheduleleaguev2": NBAStatsScheduleLeagueV2Parser,

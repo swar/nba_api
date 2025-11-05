@@ -23,8 +23,8 @@ import warnings
 
 # Re-export from new location for backward compatibility
 from nba_api.stats.endpoints._parsers import (  # noqa: F401
+    NBAStatsBoxscoreAdvancedV3Parser,
     NBAStatsBoxscoreMatchupsParserV3,
-    NBAStatsBoxscoreParserV3,
     NBAStatsBoxscoreSummaryParserV3,
     NBAStatsBoxscoreTraditionalParserV3,
     NBAStatsISTStandingsParser,
@@ -33,6 +33,9 @@ from nba_api.stats.endpoints._parsers import (  # noqa: F401
     NBAStatsScheduleLeagueV2Parser,
     get_parser_for_endpoint,
 )
+
+# Legacy alias for backward compatibility
+NBAStatsBoxscoreParserV3 = NBAStatsBoxscoreAdvancedV3Parser
 
 warnings.warn(
     "nba_api.stats.library.parserv3 is deprecated. "

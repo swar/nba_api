@@ -3,7 +3,6 @@
 import json
 
 from nba_api.library import http
-from nba_api.stats.endpoints._parsers import get_parser_for_endpoint
 
 try:
     from nba_api.library.debug.debug import STATS_HEADERS
@@ -121,6 +120,9 @@ class NBAStatsResponse(http.NBAResponse):
             }
         else:
             # Process V3 endpoint with custom parser
+            # Lazy import to avoid circular dependency
+            from nba_api.stats.endpoints._parsers import get_parser_for_endpoint
+
             endpoint_parser = get_parser_for_endpoint(endpoint, self.get_dict())
             return endpoint_parser.get_data_sets()
 
