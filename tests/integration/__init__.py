@@ -1,1 +1,1 @@
-"""Integration tests for nba_api."""
+"""Endpoint validation tests for nba_api."""

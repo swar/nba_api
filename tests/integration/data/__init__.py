@@ -1,1 +1,1 @@
-"""Integration test data for endpoint parameter testing."""
+"""Test data for endpoint validation."""

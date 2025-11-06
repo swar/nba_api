@@ -1,5 +1,5 @@
 """
-Integration tests for endpoint validation.
+Endpoint validation tests.
 
 These tests validate specific endpoint behaviors reported in GitHub issues:
 - "Season 2020-21 returns empty"
@@ -15,9 +15,6 @@ Usage:
 
     # Test all endpoints
     pytest tests/integration/test_endpoints.py -v
-
-    # Quick smoke tests
-    pytest tests/integration/test_endpoints.py -k smoke -v
 
 Adding test cases from issues:
     1. Create/edit: tests/integration/data/{endpoint}.py
@@ -118,10 +115,10 @@ def test_playerdashptshotdefend(params, expected, description):  # noqa: ARG001
 
 
 # =============================================================================
-# Smoke Tests - Quick sanity check for critical endpoints
+# Common Endpoints - Quick sanity check for critical endpoints
 # =============================================================================
 
-SMOKE_TESTS = [
+COMMON_TESTS = [
     (endpoints.LeagueDashPlayerStats, {}, "LeagueDashPlayerStats"),
     (endpoints.CommonAllPlayers, {}, "CommonAllPlayers"),
     (endpoints.PlayerCareerStats, {"player_id": "2544"}, "PlayerCareerStats"),
@@ -132,11 +129,11 @@ SMOKE_TESTS = [
 
 @pytest.mark.parametrize(
     "endpoint_class,params,description",
-    SMOKE_TESTS,
-    ids=[case[2] for case in SMOKE_TESTS],
+    COMMON_TESTS,
+    ids=[case[2] for case in COMMON_TESTS],
 )
-def test_smoke(endpoint_class, params, description):  # noqa: ARG001
-    """Smoke test to verify endpoint doesn't crash."""
+def test_common(endpoint_class, params, description):  # noqa: ARG001
+    """Verify endpoint doesn't crash."""
     time.sleep(0.6)
 
     try:

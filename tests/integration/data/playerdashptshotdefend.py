@@ -12,7 +12,7 @@ Test case format: (params_dict, expected_result, test_id)
 """
 
 TEST_CASES = [
-    # Basic smoke test - does endpoint work at all?
+    # Basic test - does endpoint work at all?
     (
         {"player_id": "2544"},  # LeBron James
         "has_data",

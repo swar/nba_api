@@ -1,4 +1,4 @@
-# Integration Test Data
+# Endpoint Test Data
 
 This directory contains test cases for validating specific endpoint behaviors reported in GitHub issues.
 
@@ -30,7 +30,7 @@ Test case format: (params_dict, expected_result, test_id)
 """
 
 TEST_CASES = [
-    # Basic smoke test
+    # Basic test
     (
         {"required_param": "value"},
         "has_data",
@@ -82,7 +82,7 @@ def test_endpointname(params, expected, description):  # noqa: ARG001
 # Test your new endpoint
 pytest tests/integration/test_endpoints.py -k endpointname -v
 
-# Or run all integration tests
+# Or run all tests
 pytest tests/integration/test_endpoints.py -v
 ```
 
