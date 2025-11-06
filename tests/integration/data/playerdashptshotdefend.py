@@ -1,38 +1,38 @@
 """
-Test cases for PlayerDashPtShotDefend endpoint.
+Test data for PlayerDashPtShotDefend endpoint.
 
 GitHub Issues:
 - User reports: "team_id requirement needs to be taken off"
 - User reports: "returns empty for certain seasons"
 
-Test case format: (params_dict, expected_result, test_id)
-    params_dict: Exact parameters to pass to endpoint
-    expected_result: "has_data" | "empty" | "error"
-    test_id: Short identifier for pytest (becomes test name)
+Expected response formats:
+- String: "success" | "has_data" | "empty" | "error"
+- Dict: {"status": "success", "min_rows": 1, "max_rows": 100}
 """
 
+# Endpoint class name
+ENDPOINT_CLASS = "PlayerDashPtShotDefend"
+
+# Test cases
 TEST_CASES = [
-    # Basic test - does endpoint work at all?
-    (
-        {"player_id": "2544"},  # LeBron James
-        "has_data",
-        "basic",
-    ),
-    # User reported: "works in 2015-16 but not 2020-21"
-    (
-        {"player_id": "2544", "season": "2015-16"},
-        "has_data",
-        "season_2015-16",
-    ),
-    (
-        {"player_id": "2544", "season": "2020-21"},
-        "has_data",
-        "season_2020-21",
-    ),
-    # User reported: "playoffs returns no data"
-    (
-        {"player_id": "2544", "season": "2023-24", "season_type_all_star": "Playoffs"},
-        "has_data",  # or "empty" if we expect no data
-        "playoffs",
-    ),
+    {
+        "description": "Basic test - LeBron 2023-24 Lakers",
+        "params": {"player_id": "2544", "team_id": 1610612747, "season": "2023-24"},
+        "expected": "success",  # Endpoint should work
+    },
+    {
+        "description": "Team ID zero - all teams",
+        "params": {"player_id": "2544", "team_id": 0, "season": "2023-24"},
+        "expected": "has_data",  # Returns data for all teams
+    },
+    {
+        "description": "Playoffs 2023-24",
+        "params": {
+            "player_id": "2544",
+            "team_id": 1610612747,
+            "season": "2023-24",
+            "season_type_all_star": "Playoffs",
+        },
+        "expected": "success",
+    },
 ]

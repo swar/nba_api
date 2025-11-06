@@ -1,6 +1,6 @@
 # Endpoint Test Data
 
-This directory contains test cases for validating specific endpoint behaviors reported in GitHub issues.
+Test data for validating endpoint behaviors reported in GitHub issues.
 
 ## Purpose
 
@@ -10,82 +10,171 @@ This directory contains test cases for validating specific endpoint behaviors re
 - "This param combo is broken"
 - "Endpoint works with these exact values"
 
-## Adding Test Cases from GitHub Issues
+## File Format
 
-When you get a report like "LeagueGameLog returns empty for playoffs":
+Each endpoint has a Python file: `{endpoint_name}.py` (lowercase)
 
-### 1. Create/edit test data file
-
-**File:** `{endpoint_name}.py` (lowercase, matching endpoint name)
+### Required Constants
 
 ```python
 """
-Test cases for EndpointName endpoint.
+Test data for EndpointName endpoint.
 
 GitHub Issues:
 - #123: User reports "returns empty for playoffs"
-- #456: "Works in 2015 but not 2021"
-
-Test case format: (params_dict, expected_result, test_id)
 """
 
+# Endpoint class name (PascalCase)
+ENDPOINT_CLASS = "EndpointName"
+
+# Test cases
 TEST_CASES = [
-    # Basic test
-    (
-        {"required_param": "value"},
-        "has_data",
-        "basic",
-    ),
-    # From issue #123
-    (
-        {"required_param": "value", "season_type": "Playoffs"},
-        "empty",  # We expect no data for this combo
-        "issue_123_playoffs",
-    ),
-    # From issue #456
-    (
-        {"required_param": "value", "season": "2015-16"},
-        "has_data",
-        "issue_456_season_2015-16",
-    ),
+    {
+        "description": "Brief description of what this tests",
+        "params": {"param1": "value1", "param2": "value2"},
+        "expected": "success"  # or dict for detailed validation
+    },
 ]
 ```
 
-**Expected results:**
-- `"has_data"` - Endpoint returns data (normal success)
-- `"empty"` - Endpoint succeeds but returns no data (document known behavior)
-- `"error"` - Endpoint raises exception (known broken scenario)
+## Expected Response Formats
 
-### 2. Add test function
-
-In `test_endpoints.py`:
+### Simple String Format
 
 ```python
-# Import the data
-from .data import endpointname
-
-# Add test function
-@pytest.mark.parametrize(
-    "params,expected,description",
-    endpointname.TEST_CASES,
-    ids=[case[2] for case in endpointname.TEST_CASES],
-)
-def test_endpointname(params, expected, description):  # noqa: ARG001
-    """Test EndpointName with various parameters."""
-    time.sleep(0.6)
-    run_endpoint_test(endpoints.EndpointName, params, expected)
+"expected": "success"      # Endpoint succeeds (any row count)
+"expected": "has_data"     # Must return rows > 0
+"expected": "empty"        # Must return 0 rows
+"expected": "error"        # Known to fail
 ```
 
-### 3. Run the tests
+### Detailed Dict Format
+
+```python
+"expected": {
+    "status": "success",   # "success" | "has_data" | "empty" | "error"
+    "min_rows": 1,         # Optional: minimum rows
+    "max_rows": 100,       # Optional: maximum rows
+    "exact_rows": 5,       # Optional: exact count
+}
+```
+
+## Complete Example
+
+**File:** `tests/integration/data/playerdashptshotdefend.py`
+
+```python
+"""
+Test data for PlayerDashPtShotDefend endpoint.
+
+GitHub Issues:
+- User reports: "team_id requirement needs to be taken off"
+"""
+
+ENDPOINT_CLASS = "PlayerDashPtShotDefend"
+
+TEST_CASES = [
+    {
+        "description": "Basic test - LeBron 2023-24 Lakers",
+        "params": {
+            "player_id": "2544",
+            "team_id": 1610612747,
+            "season": "2023-24"
+        },
+        "expected": "success",
+    },
+    {
+        "description": "Team ID zero - all teams",
+        "params": {
+            "player_id": "2544",
+            "team_id": 0,
+            "season": "2023-24"
+        },
+        "expected": "has_data",  # Verified: returns 6 rows
+    },
+    {
+        "description": "Known broken - old season times out",
+        "params": {
+            "player_id": "2544",
+            "team_id": 1610612747,
+            "season": "2015-16"
+        },
+        "expected": "error",  # NBA API issue
+    },
+]
+```
+
+## Adding Tests for GitHub Issues
+
+### 1. Create test data file
 
 ```bash
-# Test your new endpoint
-pytest tests/integration/test_endpoints.py -k endpointname -v
-
-# Or run all tests
-pytest tests/integration/test_endpoints.py -v
+# Create file for the endpoint
+touch tests/integration/data/leaguegamelog.py
 ```
 
-## Examples
+### 2. Add test cases
 
-See `playerdashptshotdefend.py` for a complete example.
+```python
+"""Test data for LeagueGameLog endpoint."""
+
+ENDPOINT_CLASS = "LeagueGameLog"
+
+TEST_CASES = [
+    {
+        "description": "Issue #456 - playoffs returns empty",
+        "params": {
+            "season": "2023-24",
+            "season_type_all_star": "Playoffs"
+        },
+        "expected": "empty",  # Document known behavior
+    },
+]
+```
+
+### 3. Add test function
+
+In `tests/integration/test_endpoints.py`:
+
+```python
+from .data import leaguegamelog
+
+@pytest.mark.parametrize(
+    "test_case",
+    leaguegamelog.TEST_CASES,
+    ids=[case["description"] for case in leaguegamelog.TEST_CASES],
+)
+def test_leaguegamelog(test_case):
+    """Test LeagueGameLog with various parameters."""
+    time.sleep(0.6)
+    run_endpoint_test(
+        endpoints.LeagueGameLog,
+        test_case["params"],
+        test_case.get("expected", "success")
+    )
+```
+
+### 4. Run tests
+
+```bash
+# Test with detailed logging
+pytest tests/integration/test_endpoints.py -k leaguegamelog --log-cli-level=INFO
+
+# See actual JSON response
+pytest tests/integration/test_endpoints.py -k leaguegamelog --log-cli-level=DEBUG
+```
+
+**Logging output shows:**
+- Parameters being tested
+- Expected outcome
+- Full URL called
+- Response size
+- Number of data rows
+- JSON response (with DEBUG level)
+
+## Tips
+
+- Link GitHub issue numbers in file docstrings
+- Use descriptive test descriptions (becomes test name in pytest output)
+- Document WHY a test expects empty/error (NBA API bug? Seasonal data?)
+- Test the actual scenario users report, not general parameter validation
