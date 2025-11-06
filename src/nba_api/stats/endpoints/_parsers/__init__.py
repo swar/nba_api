@@ -27,6 +27,7 @@ from .scheduleleaguev2 import (
     NBAStatsScheduleLeagueV2IntParser,
     NBAStatsScheduleLeagueV2Parser,
 )
+from .scoreboardv3 import NBAStatsScoreboardV3Parser
 
 __all__ = [
     "NBAStatsBoxscoreAdvancedV3Parser",
@@ -44,6 +45,7 @@ __all__ = [
     "NBAStatsPlayByPlayParserV3",
     "NBAStatsScheduleLeagueV2Parser",
     "NBAStatsScheduleLeagueV2IntParser",
+    "NBAStatsScoreboardV3Parser",
     "get_parser_for_endpoint",
 ]
 
@@ -65,6 +67,7 @@ _PARSER_REGISTRY = {
     "iststandings": NBAStatsISTStandingsParser,
     "scheduleleaguev2": NBAStatsScheduleLeagueV2Parser,
     "scheduleleaguev2int": NBAStatsScheduleLeagueV2IntParser,
+    "scoreboardv3": NBAStatsScoreboardV3Parser,
 }
 
 

@@ -107,6 +107,7 @@ __all__ = [
     "playervsplayer",
     "playoffpicture",
     "scoreboardv2",
+    "scoreboardv3",
     "scheduleleaguev2",
     "scheduleleaguev2int",
     "shotchartdetail",
@@ -246,6 +247,7 @@ from .playervsplayer import PlayerVsPlayer
 from .playoffpicture import PlayoffPicture
 from .scheduleleaguev2 import ScheduleLeagueV2
 from .scoreboardv2 import ScoreboardV2
+from .scoreboardv3 import ScoreboardV3
 from .shotchartdetail import ShotChartDetail
 from .shotchartleaguewide import ShotChartLeagueWide
 from .shotchartlineupdetail import ShotChartLineupDetail

@@ -33,7 +33,7 @@ import pytest
 from nba_api.stats import endpoints
 
 # Import test case data (one module per endpoint)
-from .data import playerdashptshotdefend
+from .data import playerdashptshotdefend, scoreboardv3
 
 logger = logging.getLogger(__name__)
 
@@ -204,6 +204,26 @@ def test_playerdashptshotdefend(test_case):
     time.sleep(0.6)  # Rate limiting
     run_endpoint_test(
         endpoints.PlayerDashPtShotDefend,
+        test_case["params"],
+        test_case.get("expected", "success")
+    )
+
+
+# =============================================================================
+# ScoreboardV3 Tests
+# =============================================================================
+
+
+@pytest.mark.parametrize(
+    "test_case",
+    scoreboardv3.TEST_CASES,
+    ids=[case["description"] for case in scoreboardv3.TEST_CASES],
+)
+def test_scoreboardv3(test_case):
+    """Test ScoreboardV3 with various parameter combinations."""
+    time.sleep(0.6)  # Rate limiting
+    run_endpoint_test(
+        endpoints.ScoreboardV3,
         test_case["params"],
         test_case.get("expected", "success")
     )
