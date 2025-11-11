@@ -1,21 +1,18 @@
 """Unit tests for BoxScoreSummaryV3 endpoint."""
 
-import json
 import pytest
-from pathlib import Path
 from unittest.mock import Mock, patch
 from pandas import DataFrame
 
 from nba_api.stats.endpoints import BoxScoreSummaryV3
 from nba_api.stats.endpoints._parsers import NBAStatsBoxscoreSummaryParserV3
+from .data.boxscoresummaryv3 import BOXSCORESUMMARYV3_SAMPLE
 
 
 @pytest.fixture
 def json_fixture():
-    """Load the BoxScoreSummaryV3 JSON fixture."""
-    fixture_path = Path(__file__).parent / "data" / "boxscoresummaryv3.json"
-    with open(fixture_path) as f:
-        return json.load(f)
+    """Load the BoxScoreSummaryV3 fixture."""
+    return BOXSCORESUMMARYV3_SAMPLE
 
 
 @pytest.fixture

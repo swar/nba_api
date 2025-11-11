@@ -1,0 +1,191 @@
+"""Test data for BoxScoreSummaryV3 endpoint.
+
+Contains minimal fixture representing API response structure.
+
+Note: No full API response JSON file exists for this endpoint yet.
+"""
+
+BOXSCORESUMMARYV3_SAMPLE = {
+    "meta": {
+        "version": 1,
+        "request": "https://stats.nba.com/stats/boxscoresummaryv3?GameID=0022500142",
+        "time": "2025-11-11T00:00:00.000Z"
+    },
+    "boxScoreSummary": {
+        "gameId": "0022500142",
+        "gameCode": "20251101/SACMIL",
+        "gameStatus": 3,
+        "gameStatusText": "Final",
+        "period": 4,
+        "gameClock": "",
+        "gameTimeUTC": "2025-11-02T00:00:00Z",
+        "gameEt": "2025-11-01T17:00:00Z",
+        "awayTeamId": 1610612756,
+        "homeTeamId": 1610612749,
+        "duration": "2:36",
+        "attendance": 17341,
+        "sellout": 0,
+        "arena": {
+            "arenaId": 642,
+            "arenaName": "Fiserv Forum",
+            "arenaCity": "Milwaukee",
+            "arenaState": "WI",
+            "arenaCountry": "US",
+            "arenaTimezone": "Central"
+        },
+        "officials": [
+            {
+                "personId": 201245,
+                "name": "Marat Kogut",
+                "nameI": "M. Kogut",
+                "firstName": "Marat",
+                "familyName": "Kogut",
+                "jerseyNum": "63",
+                "assignment": "OFFICIAL1"
+            },
+            {
+                "personId": 201634,
+                "name": "Tyler Ford",
+                "nameI": "T. Ford",
+                "firstName": "Tyler",
+                "familyName": "Ford",
+                "jerseyNum": "39",
+                "assignment": "OFFICIAL2"
+            },
+            {
+                "personId": 201629,
+                "name": "Tom Washington",
+                "nameI": "T. Washington",
+                "firstName": "Tom",
+                "familyName": "Washington",
+                "jerseyNum": "49",
+                "assignment": "OFFICIAL3"
+            }
+        ],
+        "postgameCharts": {
+            "teamCharts": [],
+            "playerCharts": []
+        },
+        "homeTeam": {
+            "teamId": 1610612749,
+            "teamName": "Bucks",
+            "teamCity": "Milwaukee",
+            "teamTricode": "MIL",
+            "teamSlug": "bucks",
+            "wins": 2,
+            "losses": 6,
+            "score": 110,
+            "seed": None,
+            "inBonus": None,
+            "timeoutsRemaining": 0,
+            "periods": [
+                {"period": 1, "periodType": "REGULAR", "score": 28},
+                {"period": 2, "periodType": "REGULAR", "score": 27},
+                {"period": 3, "periodType": "REGULAR", "score": 27},
+                {"period": 4, "periodType": "REGULAR", "score": 28}
+            ],
+            "players": [
+                {
+                    "personId": 203507,
+                    "name": "Giannis Antetokounmpo",
+                    "position": "F",
+                    "starter": "1",
+                    "oncourt": "0",
+                    "played": "1",
+                    "statistics": {
+                        "points": 28,
+                        "rebounds": 10,
+                        "assists": 5,
+                        "minutes": "PT35M45.00S"
+                    },
+                    "notPlayingReason": None
+                }
+            ],
+            "statistics": {
+                "points": 110,
+                "fieldGoalsAttempted": 88,
+                "fieldGoalsMade": 42,
+                "fieldGoalsPercentage": 0.477,
+                "threePointersAttempted": 35,
+                "threePointersMade": 13,
+                "threePointersPercentage": 0.371,
+                "freeThrowsAttempted": 22,
+                "freeThrowsMade": 13,
+                "freeThrowsPercentage": 0.591
+            }
+        },
+        "awayTeam": {
+            "teamId": 1610612756,
+            "teamName": "Kings",
+            "teamCity": "Sacramento",
+            "teamTricode": "SAC",
+            "teamSlug": "kings",
+            "wins": 5,
+            "losses": 3,
+            "score": 122,
+            "seed": None,
+            "inBonus": None,
+            "timeoutsRemaining": 1,
+            "periods": [
+                {"period": 1, "periodType": "REGULAR", "score": 32},
+                {"period": 2, "periodType": "REGULAR", "score": 30},
+                {"period": 3, "periodType": "REGULAR", "score": 30},
+                {"period": 4, "periodType": "REGULAR", "score": 30}
+            ],
+            "players": [
+                {
+                    "personId": 1630162,
+                    "name": "De'Aaron Fox",
+                    "position": "G",
+                    "starter": "1",
+                    "oncourt": "0",
+                    "played": "1",
+                    "statistics": {
+                        "points": 32,
+                        "rebounds": 4,
+                        "assists": 9,
+                        "minutes": "PT38M12.00S"
+                    },
+                    "notPlayingReason": None
+                }
+            ],
+            "statistics": {
+                "points": 122,
+                "fieldGoalsAttempted": 92,
+                "fieldGoalsMade": 48,
+                "fieldGoalsPercentage": 0.522,
+                "threePointersAttempted": 38,
+                "threePointersMade": 16,
+                "threePointersPercentage": 0.421,
+                "freeThrowsAttempted": 16,
+                "freeThrowsMade": 10,
+                "freeThrowsPercentage": 0.625
+            }
+        },
+        "gameLeaders": {
+            "homeLeaders": {
+                "personId": 203507,
+                "name": "Giannis Antetokounmpo",
+                "jerseyNum": "34",
+                "position": "F",
+                "teamTricode": "MIL",
+                "playerSlug": "giannis-antetokounmpo",
+                "points": 28,
+                "rebounds": 10,
+                "assists": 5
+            },
+            "awayLeaders": {
+                "personId": 1630162,
+                "name": "De'Aaron Fox",
+                "jerseyNum": "5",
+                "position": "G",
+                "teamTricode": "SAC",
+                "playerSlug": "deaaron-fox",
+                "points": 32,
+                "rebounds": 4,
+                "assists": 9
+            }
+        },
+        "lastFiveGames": []
+    }
+}
