@@ -1,3 +1,12 @@
+"""
+BoxScoreTraditionalV2 endpoint.
+
+.. deprecated:: 2025-26
+    This endpoint is deprecated. Please use BoxScoreTraditionalV3 instead.
+    Data is no longer being published for BoxScoreTraditionalV2 as of the 2025-26 NBA season.
+"""
+import warnings
+
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
 from nba_api.stats.library.parameters import (
@@ -10,6 +19,26 @@ from nba_api.stats.library.parameters import (
 
 
 class BoxScoreTraditionalV2(Endpoint):
+    """
+    BoxScoreTraditionalV2 endpoint.
+
+    .. deprecated:: 2025-26
+        **DEPRECATION WARNING:** This endpoint is deprecated.
+        Please use :class:`~nba_api.stats.endpoints.BoxScoreTraditionalV3` instead.
+        Data is no longer being published for BoxScoreTraditionalV2 as of the 2025-26 NBA season.
+
+    Args:
+        game_id (str): NBA game ID.
+        end_period (int, optional): End period for range.
+        end_range (int, optional): End range value.
+        range_type (int, optional): Range type parameter.
+        start_period (int, optional): Start period for range.
+        start_range (int, optional): Start range value.
+        proxy (str, optional): HTTP/HTTPS proxy for requests.
+        headers (dict, optional): Custom HTTP headers.
+        timeout (int, optional): Request timeout in seconds. Defaults to 30.
+        get_request (bool, optional): Whether to fetch data immediately. Defaults to True.
+    """
     endpoint = "boxscoretraditionalv2"
     expected_data = {
         "PlayerStats": [
@@ -117,6 +146,13 @@ class BoxScoreTraditionalV2(Endpoint):
         timeout=30,
         get_request=True,
     ):
+        warnings.warn(
+            "BoxScoreTraditionalV2 is deprecated and will be removed in a future version. "
+            "Please use BoxScoreTraditionalV3 instead. "
+            "Data is no longer being published for BoxScoreTraditionalV2 as of the 2025-26 NBA season.",
+            DeprecationWarning,
+            stacklevel=2
+        )
         self.proxy = proxy
         if headers is not None:
             self.headers = headers

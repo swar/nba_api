@@ -174,8 +174,6 @@ endpoint_list = [
     "TeamEstimatedMetrics",
     "TeamFranchiseLeaders",
     "TeamFranchiseLeadersRank",
-    "TeamGameLog",
-    "TeamGameLogs",
     "TeamGameSplitsStats",
     "TeamGameStreakFinder",
     "TeamGeneralSplitsStats",
@@ -834,7 +832,8 @@ parameter_variations = {
     },
     "VsPlayerIDList": {
         "default_py_value": None,
-        "parameter_value": "201566,201939,201935,201142,203076",  # Russel Westbrook & Stephen Curry & James Harden & Kevin Durant & Anthony Davis
+        # Russel Westbrook & Stephen Curry & James Harden & Kevin Durant & Anthony Davis
+        "parameter_value": "201566,201939,201935,201142,203076",
         "parameter_error_value": "a",
     },
     "PlayerOrTeam": {

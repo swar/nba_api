@@ -16,6 +16,7 @@ __all__ = [
     "boxscorescoringv2",
     "boxscorescoringv3",
     "boxscoresummaryv2",
+    "boxscoresummaryv3",
     "boxscoretraditionalv2",
     "boxscoretraditionalv3",
     "boxscoreusagev2",
@@ -37,6 +38,7 @@ __all__ = [
     "draftcombinespotshooting",
     "draftcombinestats",
     "drafthistory",
+    "dunkscoreleaders",
     "fantasywidget",
     "franchisehistory",
     "franchiseleaders",
@@ -105,6 +107,7 @@ __all__ = [
     "playervsplayer",
     "playoffpicture",
     "scoreboardv2",
+    "scoreboardv3",
     "scheduleleaguev2",
     "scheduleleaguev2int",
     "shotchartdetail",
@@ -120,8 +123,6 @@ __all__ = [
     "teamdashboardbyshootingsplits",
     "teamdetails",
     "teamestimatedmetrics",
-    "teamgamelog",
-    "teamgamelogs",
     "teamgamestreakfinder",
     "teamhistoricalleaders",
     "teaminfocommon",
@@ -154,6 +155,7 @@ from .boxscoreplayertrackv3 import BoxScorePlayerTrackV3
 from .boxscorescoringv2 import BoxScoreScoringV2
 from .boxscorescoringv3 import BoxScoreScoringV3
 from .boxscoresummaryv2 import BoxScoreSummaryV2
+from .boxscoresummaryv3 import BoxScoreSummaryV3
 from .boxscoretraditionalv2 import BoxScoreTraditionalV2
 from .boxscoretraditionalv3 import BoxScoreTraditionalV3
 from .boxscoreusagev2 import BoxScoreUsageV2
@@ -175,6 +177,7 @@ from .draftcombineplayeranthro import DraftCombinePlayerAnthro
 from .draftcombinespotshooting import DraftCombineSpotShooting
 from .draftcombinestats import DraftCombineStats
 from .drafthistory import DraftHistory
+from .dunkscoreleaders import DunkScoreLeaders
 from .fantasywidget import FantasyWidget
 from .franchisehistory import FranchiseHistory
 from .franchiseleaders import FranchiseLeaders
@@ -244,6 +247,7 @@ from .playervsplayer import PlayerVsPlayer
 from .playoffpicture import PlayoffPicture
 from .scheduleleaguev2 import ScheduleLeagueV2
 from .scoreboardv2 import ScoreboardV2
+from .scoreboardv3 import ScoreboardV3
 from .shotchartdetail import ShotChartDetail
 from .shotchartleaguewide import ShotChartLeagueWide
 from .shotchartlineupdetail import ShotChartLineupDetail
@@ -257,8 +261,6 @@ from .teamdashboardbygeneralsplits import TeamDashboardByGeneralSplits
 from .teamdashboardbyshootingsplits import TeamDashboardByShootingSplits
 from .teamdetails import TeamDetails
 from .teamestimatedmetrics import TeamEstimatedMetrics
-from .teamgamelog import TeamGameLog
-from .teamgamelogs import TeamGameLogs
 from .teamgamestreakfinder import TeamGameStreakFinder
 from .teamhistoricalleaders import TeamHistoricalLeaders
 from .teaminfocommon import TeamInfoCommon

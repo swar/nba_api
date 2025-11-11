@@ -1,8 +1,17 @@
+import warnings
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
 
 
 class BoxScoreSummaryV2(Endpoint):
+    """
+    BoxScoreSummaryV2 endpoint for retrieving box score summary data.
+
+    WARNING: This endpoint has known data availability issues.
+    Data may be missing for games on or after 4/10/2025. Users should consider moving
+    to BoxScoreSummmaryV3 or verify data completeness for their specific use cases 
+    and implement appropriate error handling.
+    """
     endpoint = "boxscoresummaryv2"
     expected_data = {
         "AvailableVideo": [
@@ -116,6 +125,14 @@ class BoxScoreSummaryV2(Endpoint):
     headers = None
 
     def __init__(self, game_id, proxy=None, headers=None, timeout=30, get_request=True):
+        warnings.warn(
+            "BoxScoreSummaryV2 has known data availability issues. Data may be " +
+            "missing for games on or after 4/10/2025. Users should moving to " +
+            "BoxScoreSummaryV3 or verify data completeness for their specific use " +
+            "cases and implement appropriate error handling.",
+            UserWarning,
+            stacklevel=2
+        )
         self.proxy = proxy
         if headers is not None:
             self.headers = headers

@@ -113,7 +113,6 @@ missing_required_parameters = {
 parameter_override = {
     "PlayerCareerByCollege": {"School": "College"},
     "PlayerGameLogs": {"SeasonYear": "Season"},
-    "TeamGameLogs": {"SeasonYear": "Season"},
 }
 
 remove_nullable_parameters = {"PlayerCareerByCollege": ["School"]}

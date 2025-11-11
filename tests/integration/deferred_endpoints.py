@@ -159,8 +159,6 @@ deferred_endpoints = [
     DeferredEndpoint(ep.TeamDashboardByShootingSplits, team_id="1610612739"),
     DeferredEndpoint(ep.TeamDetails, team_id="1610612739"),
     DeferredEndpoint(ep.TeamEstimatedMetrics),
-    DeferredEndpoint(ep.TeamGameLog, team_id="1610612739"),
-    DeferredEndpoint(ep.TeamGameLogs, team_id_nullable="1610612739"),
     DeferredEndpoint(ep.TeamHistoricalLeaders, team_id="1610612739"),
     DeferredEndpoint(ep.TeamInfoCommon, team_id="1610612739"),
     DeferredEndpoint(ep.TeamPlayerDashboard, team_id="1610612739"),

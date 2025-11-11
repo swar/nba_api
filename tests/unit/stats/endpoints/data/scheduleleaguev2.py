@@ -1,0 +1,311 @@
+"""Test data for ScheduleLeagueV2 endpoint.
+
+Contains minimal fixtures representing two different API response formats:
+- SCHEDULELEAGUEV2_2020_21: Response with populated weeks array (newer seasons)
+- SCHEDULELEAGUEV2_2015_16: Response with empty weeks array (older seasons)
+
+Full API responses are available in:
+docs/nba_api/stats/endpoints/responses/scheduleleaguev2_*.json
+"""
+
+# Minimal fixture with weeks data (2020-21 style)
+SCHEDULELEAGUEV2_2020_21 = {
+    "meta": {
+        "version": 1,
+        "request": "http://nba.cloud/league/00/2020-21/scheduleleaguev2",
+        "time": "2025-04-10T14:11:47.1147Z",
+    },
+    "leagueSchedule": {
+        "seasonYear": "2020-21",
+        "leagueId": "00",
+        "gameDates": [
+            {
+                "gameDate": "12/11/2020 00:00:00",
+                "games": [
+                    {
+                        "gameId": "0012000001",
+                        "gameCode": "20201211/ORLATL",
+                        "gameStatus": 3,
+                        "gameStatusText": "Final",
+                        "gameSequence": 1,
+                        "gameDateEst": "2020-12-11T00:00:00Z",
+                        "gameTimeEst": "1900-01-01T19:00:00Z",
+                        "gameDateTimeEst": "2020-12-11T19:00:00Z",
+                        "gameDateUTC": "2020-12-11T05:00:00Z",
+                        "gameTimeUTC": "1900-01-01T00:00:00Z",
+                        "gameDateTimeUTC": "2020-12-12T00:00:00Z",
+                        "awayTeamTime": "2020-12-11T19:00:00Z",
+                        "homeTeamTime": "2020-12-11T19:00:00Z",
+                        "day": "Fri",
+                        "monthNum": 12,
+                        "weekNumber": 0,
+                        "weekName": "",
+                        "ifNecessary": "false",
+                        "seriesGameNumber": "",
+                        "gameLabel": "",
+                        "gameSubLabel": "",
+                        "seriesText": "Preseason",
+                        "arenaName": "State Farm Arena",
+                        "arenaState": "GA",
+                        "arenaCity": "Atlanta",
+                        "postponedStatus": "A",
+                        "branchLink": "",
+                        "gameSubtype": "",
+                        "isNeutral": False,
+                        "broadcasters": {
+                            "nationalBroadcasters": [],
+                            "nationalRadioBroadcasters": [],
+                            "nationalOttBroadcasters": [],
+                            "homeTvBroadcasters": [
+                                {
+                                    "broadcasterScope": "home",
+                                    "broadcasterMedia": "tv",
+                                    "broadcasterId": 1234,
+                                    "broadcasterDisplay": "Bally Sports",
+                                    "broadcasterAbbreviation": "BSSO",
+                                    "tapeDelayComments": "",
+                                    "broadcasterVideoLink": "",
+                                    "broadcasterDescription": "",
+                                    "broadcasterTeamId": 1610612737,
+                                }
+                            ],
+                            "homeRadioBroadcasters": [],
+                            "homeOttBroadcasters": [],
+                            "awayTvBroadcasters": [],
+                            "awayRadioBroadcasters": [],
+                            "awayOttBroadcasters": [],
+                        },
+                        "homeTeam": {
+                            "teamId": 1610612737,
+                            "teamName": "Hawks",
+                            "teamCity": "Atlanta",
+                            "teamTricode": "ATL",
+                            "teamSlug": "hawks",
+                            "wins": 0,
+                            "losses": 0,
+                            "score": 128,
+                            "seed": None,
+                        },
+                        "awayTeam": {
+                            "teamId": 1610612753,
+                            "teamName": "Magic",
+                            "teamCity": "Orlando",
+                            "teamTricode": "ORL",
+                            "teamSlug": "magic",
+                            "wins": 0,
+                            "losses": 0,
+                            "score": 96,
+                            "seed": None,
+                        },
+                        "pointsLeaders": [
+                            {
+                                "personId": 1628973,
+                                "firstName": "Trae",
+                                "lastName": "Young",
+                                "teamId": 1610612737,
+                                "teamCity": "Atlanta",
+                                "teamName": "Hawks",
+                                "teamTricode": "ATL",
+                                "points": 21.0,
+                            }
+                        ],
+                    }
+                ],
+            },
+            {
+                "gameDate": "12/12/2020 00:00:00",
+                "games": [
+                    {
+                        "gameId": "0012000002",
+                        "gameCode": "20201212/DETBKN",
+                        "gameStatus": 3,
+                        "gameStatusText": "Final",
+                        "gameSequence": 1,
+                        "gameDateEst": "2020-12-12T00:00:00Z",
+                        "gameTimeEst": "1900-01-01T19:30:00Z",
+                        "gameDateTimeEst": "2020-12-12T19:30:00Z",
+                        "gameDateUTC": "2020-12-12T05:00:00Z",
+                        "gameTimeUTC": "1900-01-01T00:30:00Z",
+                        "gameDateTimeUTC": "2020-12-13T00:30:00Z",
+                        "awayTeamTime": "2020-12-12T19:30:00Z",
+                        "homeTeamTime": "2020-12-12T19:30:00Z",
+                        "day": "Sat",
+                        "monthNum": 12,
+                        "weekNumber": 0,
+                        "weekName": "",
+                        "ifNecessary": "false",
+                        "seriesGameNumber": "",
+                        "gameLabel": "",
+                        "gameSubLabel": "",
+                        "seriesText": "Preseason",
+                        "arenaName": "Barclays Center",
+                        "arenaState": "NY",
+                        "arenaCity": "Brooklyn",
+                        "postponedStatus": "A",
+                        "branchLink": "",
+                        "gameSubtype": "",
+                        "isNeutral": False,
+                        "broadcasters": {
+                            "nationalBroadcasters": [],
+                            "nationalRadioBroadcasters": [],
+                            "nationalOttBroadcasters": [],
+                            "homeTvBroadcasters": [],
+                            "homeRadioBroadcasters": [],
+                            "homeOttBroadcasters": [],
+                            "awayTvBroadcasters": [],
+                            "awayRadioBroadcasters": [],
+                            "awayOttBroadcasters": [],
+                        },
+                        "homeTeam": {
+                            "teamId": 1610612751,
+                            "teamName": "Nets",
+                            "teamCity": "Brooklyn",
+                            "teamTricode": "BKN",
+                            "teamSlug": "nets",
+                            "wins": 0,
+                            "losses": 0,
+                            "score": 119,
+                            "seed": None,
+                        },
+                        "awayTeam": {
+                            "teamId": 1610612765,
+                            "teamName": "Pistons",
+                            "teamCity": "Detroit",
+                            "teamTricode": "DET",
+                            "teamSlug": "pistons",
+                            "wins": 0,
+                            "losses": 0,
+                            "score": 114,
+                            "seed": None,
+                        },
+                        "pointsLeaders": [],
+                    }
+                ],
+            },
+        ],
+        "weeks": [
+            {
+                "weekNumber": 1,
+                "weekName": "Week 1",
+                "startDate": "2020-12-22T00:00:00Z",
+                "endDate": "2020-12-27T00:00:00Z",
+            },
+            {
+                "weekNumber": 2,
+                "weekName": "Week 2",
+                "startDate": "2020-12-28T00:00:00Z",
+                "endDate": "2021-01-03T00:00:00Z",
+            },
+        ],
+    },
+}
+
+
+# Minimal fixture with EMPTY weeks array (2015-16 style)
+SCHEDULELEAGUEV2_2015_16 = {
+    "meta": {
+        "version": 1,
+        "request": "http://nba.cloud/league/00/2015-16/scheduleleaguev2",
+        "time": "2025-04-10T14:13:53.1353Z",
+    },
+    "leagueSchedule": {
+        "seasonYear": "2015-16",
+        "leagueId": "00",
+        "gameDates": [
+            {
+                "gameDate": "10/02/2015 00:00:00",
+                "games": [
+                    {
+                        "gameId": "0011500001",
+                        "gameCode": "20151002/DENLAC",
+                        "gameStatus": 3,
+                        "gameStatusText": "Final",
+                        "gameSequence": 1,
+                        "gameDateEst": "2015-10-02T00:00:00Z",
+                        "gameTimeEst": "1900-01-01T22:30:00Z",
+                        "gameDateTimeEst": "2015-10-02T22:30:00Z",
+                        "gameDateUTC": "2015-10-02T04:00:00Z",
+                        "gameTimeUTC": "1900-01-01T02:30:00Z",
+                        "gameDateTimeUTC": "2015-10-03T02:30:00Z",
+                        "awayTeamTime": "2015-10-02T20:30:00Z",
+                        "homeTeamTime": "2015-10-02T19:30:00Z",
+                        "day": "Fri",
+                        "monthNum": 10,
+                        "weekNumber": 0,
+                        "weekName": "",
+                        "ifNecessary": "false",
+                        "seriesGameNumber": "",
+                        "gameLabel": "",
+                        "gameSubLabel": "",
+                        "seriesText": "Preseason",
+                        "arenaName": "STAPLES Center",
+                        "arenaState": "CA",
+                        "arenaCity": "Los Angeles",
+                        "postponedStatus": "A",
+                        "branchLink": "",
+                        "gameSubtype": "",
+                        "isNeutral": False,
+                        "broadcasters": {
+                            "nationalBroadcasters": [
+                                {
+                                    "broadcasterScope": "natl",
+                                    "broadcasterMedia": "tv",
+                                    "broadcasterId": 7,
+                                    "broadcasterDisplay": "NBA TV",
+                                    "broadcasterAbbreviation": "NBATV",
+                                    "tapeDelayComments": "",
+                                    "broadcasterVideoLink": "",
+                                    "broadcasterDescription": "",
+                                    "broadcasterTeamId": 0,
+                                }
+                            ],
+                            "nationalRadioBroadcasters": [],
+                            "nationalOttBroadcasters": [],
+                            "homeTvBroadcasters": [],
+                            "homeRadioBroadcasters": [],
+                            "homeOttBroadcasters": [],
+                            "awayTvBroadcasters": [],
+                            "awayRadioBroadcasters": [],
+                            "awayOttBroadcasters": [],
+                        },
+                        "homeTeam": {
+                            "teamId": 1610612747,
+                            "teamName": "Lakers",
+                            "teamCity": "Los Angeles",
+                            "teamTricode": "LAL",
+                            "teamSlug": "lakers",
+                            "wins": 0,
+                            "losses": 0,
+                            "score": 98,
+                            "seed": None,
+                        },
+                        "awayTeam": {
+                            "teamId": 1610612743,
+                            "teamName": "Nuggets",
+                            "teamCity": "Denver",
+                            "teamTricode": "DEN",
+                            "teamSlug": "nuggets",
+                            "wins": 0,
+                            "losses": 0,
+                            "score": 95,
+                            "seed": None,
+                        },
+                        "pointsLeaders": [
+                            {
+                                "personId": 2544,
+                                "firstName": "LeBron",
+                                "lastName": "James",
+                                "teamId": 1610612747,
+                                "teamCity": "Los Angeles",
+                                "teamName": "Lakers",
+                                "teamTricode": "LAL",
+                                "points": 12.0,
+                            }
+                        ],
+                    }
+                ],
+            }
+        ],
+        "weeks": [],
+    },
+}
