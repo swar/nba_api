@@ -17,6 +17,47 @@
 
 # Version History
 
+## v1.11.0
+Date: 2025-11-11
+
+### Added
+* **New Endpoints**
+  * **BoxScoreSummaryV3** - Comprehensive game summary data including game info, arena details, officials, line scores, inactive players, and historical matchups ([7fefb00](https://github.com/swar/nba_api/commit/7fefb00))
+  * **DunkScoreLeaders** - Advanced dunk tracking with 55 metrics including hang time, vertical leap, takeoff distance, biomechanics, and style indicators ([2e2fb8b](https://github.com/swar/nba_api/commit/2e2fb8b))
+  * **ScoreboardV3** - Enhanced scoreboard with 10+ datasets including game info, line scores, series standings, and team leaders ([35e1358](https://github.com/swar/nba_api/commit/35e1358))
+
+* **Testing Infrastructure**
+  * Integration test framework for validating endpoint scenarios with detailed logging ([1dec848](https://github.com/swar/nba_api/commit/1dec848))
+  * Comprehensive unit tests for TeamDashLineups endpoint (96% coverage) ([cfb971d](https://github.com/swar/nba_api/commit/cfb971d))
+  * Python fixture pattern for V3 endpoints replacing JSON files ([cfb971d](https://github.com/swar/nba_api/commit/cfb971d))
+
+### Changed
+* **Parser Architecture**
+  * Refactored V3 parsers to dedicated `_parsers` module with comprehensive test coverage ([8304148](https://github.com/swar/nba_api/commit/8304148))
+  * Moved parser registry to `_parsers` module for better organization ([283e818](https://github.com/swar/nba_api/commit/283e818))
+
+* **Build System**
+  * Added pylint for comprehensive code quality checks ([aed2f96](https://github.com/swar/nba_api/commit/aed2f96))
+  * Updated flake8 max-line-length to 88 characters ([2f1d916](https://github.com/swar/nba_api/commit/2f1d916))
+  * Added Makefile and configured code formatters (isort, black) ([e12240c](https://github.com/swar/nba_api/commit/e12240c))
+  * Modernized DevContainer configuration ([6a344ac](https://github.com/swar/nba_api/commit/6a344ac))
+
+* **Documentation**
+  * Added REFACTORING.md to track technical debt and future improvements ([5121e7f](https://github.com/swar/nba_api/commit/5121e7f))
+  * Updated integration test documentation with validation format examples ([4de365f](https://github.com/swar/nba_api/commit/4de365f))
+
+### Deprecated
+* **Python 3.9 Support** - Python 3.9 is now deprecated and will be removed in a future release ([89b2443](https://github.com/swar/nba_api/commit/89b2443))
+* **BoxScoreTraditionalV2** - Added deprecation warning ([bfe29b5](https://github.com/swar/nba_api/commit/bfe29b5))
+
+### Removed
+* **TeamGameLog and TeamGameLogs Endpoints** - Deprecated by the NBA with no replacement available ([ecb6ae2](https://github.com/swar/nba_api/commit/ecb6ae2), [eb83420](https://github.com/swar/nba_api/commit/eb83420))
+
+### Fixed
+* Handle empty weeks array in ScheduleLeagueV2 parser for older seasons ([f56521a](https://github.com/swar/nba_api/commit/f56521a))
+* Add missing boxscoresummaryv3 Python fixture for unit tests ([707fa09](https://github.com/swar/nba_api/commit/707fa09))
+* Added warning for BoxScoreSummaryV2 regarding data availability after 4/10/2025 with recommendation to use BoxScoreSummaryV3 ([5859506](https://github.com/swar/nba_api/commit/5859506))
+
 ## v1.10.2
 Date: 2025-09-30
 
