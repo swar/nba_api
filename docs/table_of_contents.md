@@ -35,7 +35,6 @@
             - [/BoxScoreFourFactorsV2](nba_api/stats/endpoints/boxscorefourfactorsv2.md)
             - [/BoxScoreMatchupsV3](nba_api/stats/endpoints/boxscorematchupsv3.md)
             - [/BoxScoreMiscV2](nba_api/stats/endpoints/boxscoremiscv2.md)
-            - [/BoxScorePlayerTrackV2](nba_api/stats/endpoints/boxscoreplayertrackv2.md)
             - [/BoxScoreScoringV2](nba_api/stats/endpoints/boxscorescoringv2.md)
             - [/BoxScoreSimilarityScore](nba_api/stats/endpoints/boxscoresimilarityscore.md)
             - [/BoxScoreSummaryV2](nba_api/stats/endpoints/boxscoresummaryv2.md)

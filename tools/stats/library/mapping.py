@@ -17,7 +17,6 @@ endpoint_list = [
     "BoxScoreMisc",
     "BoxScoreMiscV2",
     "BoxScorePlayerTracking",
-    "BoxScorePlayerTrackV2",
     "BoxScoreScoring",
     "BoxScoreScoringV2",
     "BoxScoreSummary",

@@ -26,7 +26,6 @@ deferred_endpoints = [
     DeferredEndpoint(ep.BoxScoreMatchupsV3, game_id="0021700807"),
     DeferredEndpoint(ep.BoxScoreMiscV2, game_id="0021700807"),
     DeferredEndpoint(ep.BoxScoreMiscV3, game_id="0021700807"),
-    DeferredEndpoint(ep.BoxScorePlayerTrackV2, game_id="0021700807"),
     DeferredEndpoint(ep.BoxScorePlayerTrackV3, game_id="0021700807"),
     DeferredEndpoint(ep.BoxScoreScoringV2, game_id="0021700807"),
     DeferredEndpoint(ep.BoxScoreScoringV3, game_id="0021700807"),
