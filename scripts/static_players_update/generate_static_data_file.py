@@ -1,5 +1,4 @@
 import os
-import shutil
 import logging
 from datetime import datetime
 
@@ -14,11 +13,18 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
+# Player adjustments format: {player_id: [last_name, first_name, full_name]}
+# Note: is_active status is preserved from NBA API, not set here
 player_adjustments = {
-    2775: ["Ha Seung-jin", "", "Ha Seung-jin", False],
-    77036: ["Hoffman", "Paul 'The Bear'", "Paul 'The Bear' Hoffman", False],
-    77510: ["McClain", "Ted 'Hound Dog'", "Ted 'Hound Dog' McClain", False],
-    201180: ["Sun Yue", "", "Sun Yue", False],
+    # Asian naming convention (Family name, Given name)
+    2775: ["Ha", "Seung-jin", "Ha Seung-jin"],           # Korean: 하승진
+    201180: ["Sun", "Yue", "Sun Yue"],                   # Chinese: 孙悦
+    2397: ["Yao", "Ming", "Yao Ming"],                   # Chinese: 姚明
+    201146: ["Yi", "Jianlian", "Yi Jianlian"],           # Chinese: 易建联
+    1627753: ["Zhou", "Qi", "Zhou Qi"],                  # Chinese: 周琦
+    # Players with nicknames in official name
+    77036: ["Hoffman", "Paul 'The Bear'", "Paul 'The Bear' Hoffman"],
+    77510: ["McClain", "Ted 'Hound Dog'", "Ted 'Hound Dog' McClain"],
 }
 
 wnba_player_adjustments = {}
@@ -64,7 +70,9 @@ def create_players_list(
     if player_adjustments:
         log.info(f"Applying {len(player_adjustments)} player adjustments")
         for player_id, player_data in player_adjustments.items():
-            players_dict[player_id] = player_data
+            # Preserve is_active status from NBA API when applying name adjustments
+            is_active = players_dict.get(player_id, [None, None, None, False])[-1]
+            players_dict[player_id] = player_data + [is_active]
 
     sorted_list = sorted(players_dict.items(), key=lambda kv: kv[1])
     log.info(f"Created sorted players list with {len(sorted_list)} players")

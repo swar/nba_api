@@ -166,15 +166,16 @@ class NBAStatsBoxscoreMiscV3Parser:
         Get all datasets for this endpoint.
 
         Returns:
-            dict: Dictionary with TeamStats and PlayerStats datasets
+            dict: Dictionary with PlayerStats and TeamStats datasets
+                  Order matches expected_data in boxscoremiscv3.py
         """
         return {
-            "TeamStats": {
-                "headers": list(self.get_team_headers()),
-                "data": self.get_team_data(),
-            },
             "PlayerStats": {
                 "headers": list(self.get_player_headers()),
                 "data": self.get_player_data(),
+            },
+            "TeamStats": {
+                "headers": list(self.get_team_headers()),
+                "data": self.get_team_data(),
             },
         }

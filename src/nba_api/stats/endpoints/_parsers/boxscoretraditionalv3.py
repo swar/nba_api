@@ -189,7 +189,9 @@ class NBAStatsBoxscoreTraditionalParserV3:
             players = team.get("players", [])
             for player in players:
                 # Player metadata
-                player_metadata = [player.get(field) for field in PLAYER_METADATA_FIELDS]
+                player_metadata = [
+                    player.get(field) for field in PLAYER_METADATA_FIELDS
+                ]
 
                 # Player statistics
                 stats = player.get("statistics", {})
@@ -220,7 +222,9 @@ class NBAStatsBoxscoreTraditionalParserV3:
             # Process starters
             starters = team.get("starters")
             if starters is not None:
-                starter_stats = [starters.get(field) for field in STARTER_BENCH_STATS_FIELDS]
+                starter_stats = [
+                    starters.get(field) for field in STARTER_BENCH_STATS_FIELDS
+                ]
             else:
                 starter_stats = [None] * len(STARTER_BENCH_STATS_FIELDS)
 
@@ -246,13 +250,10 @@ class NBAStatsBoxscoreTraditionalParserV3:
         Return all datasets for this endpoint.
 
         Returns:
-            dict: Dictionary with TeamStats, PlayerStats, and TeamStarterBenchStats
+            dict: Dictionary with PlayerStats, TeamStarterBenchStats, and TeamStats
+                  Order matches expected_data in boxscoretraditionalv3.py
         """
         return {
-            "TeamStats": {
-                "headers": self.get_team_headers(),
-                "data": self.get_team_data(),
-            },
             "PlayerStats": {
                 "headers": self.get_player_headers(),
                 "data": self.get_player_data(),
@@ -260,5 +261,9 @@ class NBAStatsBoxscoreTraditionalParserV3:
             "TeamStarterBenchStats": {
                 "headers": self.get_start_bench_headers(),
                 "data": self.get_start_bench_data(),
+            },
+            "TeamStats": {
+                "headers": self.get_team_headers(),
+                "data": self.get_team_data(),
             },
         }
