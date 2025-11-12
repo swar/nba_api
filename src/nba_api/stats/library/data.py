@@ -6314,7 +6314,7 @@ wnba_teams = [
     [1611661323, "CON", "Sun", 1999, "Connecticut", "Connecticut Sun", "Connecticut", []],
     [1611661324, "MIN", "Lynx", 1999, "Minnesota", "Minnesota Lynx", "Minnesota", [2011, 2013, 2015, 2017]],
     [1611661325, "IND", "Fever", 2000, "Indiana", "Indiana Fever", "Indiana", [2012]],
-    [1611661328, "SEA", "Storm", 2000, "Seattle", "Seattle Storm", "Washington",[2004, 2010, 2018, 2020]],
+    [1611661328, "SEA", "Storm", 2000, "Seattle", "Seattle Storm", "Washington", [2004, 2010, 2018, 2020]],
     [1611661329, "CHI", "Sky", 2005, "Chicago", "Chicago Sky", "Illinois", [2021]],
     [1611661330, "ATL", "Dream", 2008, "Atlanta", "Atlanta Dream", "Georgia", []],
     [1611661331, "GSV", "Valkyries", 2025, "Golden State", "Golden State Valkyries", "California", []],

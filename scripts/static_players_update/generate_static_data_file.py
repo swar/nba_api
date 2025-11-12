@@ -146,7 +146,7 @@ def generate_static_data_file(directory="static_files"):
         file_path = write_static_data_file(directory, file_contents)
 
         log.info("=" * 60)
-        log.info(f"Static data file generation completed successfully")
+        log.info("Static data file generation completed successfully")
         log.info(f"File written to: {file_path}")
         log.info("=" * 60)
 
