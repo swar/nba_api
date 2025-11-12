@@ -188,3 +188,22 @@ class TestNBAStatsBoxscoreDefensiveV2Parser:
         # Should have data for all players
         player_count = len(result["PlayerStats"]["data"])
         assert player_count > 0  # At least some players
+
+    def test_dataset_order_matches_expected_data(self, parser):
+        """Test that dataset order matches expected_data in endpoint class.
+
+        This prevents regressions where get_data_frames()[0] returns
+        the wrong dataset (e.g., TeamStats instead of PlayerStats).
+        """
+        from nba_api.stats.endpoints.boxscoredefensivev2 import (
+            BoxScoreDefensiveV2,
+        )
+
+        result = parser.get_data_sets()
+        result_order = list(result.keys())
+        expected_order = list(BoxScoreDefensiveV2.expected_data.keys())
+
+        assert result_order == expected_order, (
+            f"Dataset order mismatch: parser returns {result_order} "
+            f"but expected_data defines {expected_order}"
+        )
