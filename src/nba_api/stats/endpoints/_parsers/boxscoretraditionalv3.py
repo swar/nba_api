@@ -1,88 +1,264 @@
-"""Parser(s) for boxscoretraditionalv3 endpoint."""
+"""Parser for boxscoretraditionalv3 endpoint.
 
-from .boxscoreadvancedv3 import NBAStatsBoxscoreAdvancedV3Parser
+Parses traditional boxscore statistics including field goals, three-pointers,
+free throws, rebounds, assists, steals, blocks, turnovers, fouls, and points.
+
+Structure:
+    {
+        "boxScoreTraditional": {
+            "gameId": str,
+            "homeTeamId": int,
+            "awayTeamId": int,
+            "homeTeam": {team_metadata, players[], statistics{}, starters{}, bench{}},
+            "awayTeam": {team_metadata, players[], statistics{}, starters{}, bench{}}
+        }
+    }
+"""
+
+# Common metadata fields
+TEAM_METADATA_FIELDS = (
+    "teamId",
+    "teamCity",
+    "teamName",
+    "teamTricode",
+    "teamSlug",
+)
+
+PLAYER_METADATA_FIELDS = (
+    "personId",
+    "firstName",
+    "familyName",
+    "nameI",
+    "playerSlug",
+    "position",
+    "comment",
+    "jerseyNum",
+)
+
+# Traditional statistics fields (team and player both have these 20 fields)
+TRADITIONAL_STATS_FIELDS = (
+    "minutes",
+    "fieldGoalsMade",
+    "fieldGoalsAttempted",
+    "fieldGoalsPercentage",
+    "threePointersMade",
+    "threePointersAttempted",
+    "threePointersPercentage",
+    "freeThrowsMade",
+    "freeThrowsAttempted",
+    "freeThrowsPercentage",
+    "reboundsOffensive",
+    "reboundsDefensive",
+    "reboundsTotal",
+    "assists",
+    "steals",
+    "blocks",
+    "turnovers",
+    "foulsPersonal",
+    "points",
+    "plusMinusPoints",
+)
+
+# Starter/Bench statistics (same as traditional but NO plusMinusPoints)
+STARTER_BENCH_STATS_FIELDS = (
+    "minutes",
+    "fieldGoalsMade",
+    "fieldGoalsAttempted",
+    "fieldGoalsPercentage",
+    "threePointersMade",
+    "threePointersAttempted",
+    "threePointersPercentage",
+    "freeThrowsMade",
+    "freeThrowsAttempted",
+    "freeThrowsPercentage",
+    "reboundsOffensive",
+    "reboundsDefensive",
+    "reboundsTotal",
+    "assists",
+    "steals",
+    "blocks",
+    "turnovers",
+    "foulsPersonal",
+    "points",
+)
 
 
-class NBAStatsBoxscoreTraditionalParserV3(NBAStatsBoxscoreAdvancedV3Parser):
+class NBAStatsBoxscoreTraditionalParserV3:
+    """
+    Parser for BoxScoreTraditionalV3 endpoint.
+
+    Extracts traditional statistics for teams and players including:
+    - Field Goals (made, attempted, percentage)
+    - Three-Pointers (made, attempted, percentage)
+    - Free Throws (made, attempted, percentage)
+    - Rebounds (offensive, defensive, total)
+    - Assists, Steals, Blocks, Turnovers, Fouls
+    - Points and Plus/Minus
+    """
+
     def __init__(self, nba_dict):
-        super().__init__(nba_dict)
+        """
+        Initialize parser with NBA Stats API response.
+
+        Args:
+            nba_dict (dict): Raw API response dictionary
+        """
+        self.nba_dict = nba_dict
+        self.boxscore = nba_dict.get("boxScoreTraditional", {})
+
+    def get_team_headers(self):
+        """
+        Get headers for TeamStats dataset.
+
+        Returns:
+            tuple: Column names for team statistics (26 fields)
+        """
+        return ("gameId",) + TEAM_METADATA_FIELDS + TRADITIONAL_STATS_FIELDS
+
+    def get_player_headers(self):
+        """
+        Get headers for PlayerStats dataset.
+
+        Returns:
+            tuple: Column names for player statistics (34 fields)
+        """
+        return (
+            ("gameId",)
+            + TEAM_METADATA_FIELDS
+            + PLAYER_METADATA_FIELDS
+            + TRADITIONAL_STATS_FIELDS
+        )
 
     def get_start_bench_headers(self):
-        return self.get_team_headers() + ["startersBench"]
+        """
+        Get headers for TeamStarterBenchStats dataset.
+
+        Returns:
+            tuple: Column names for starter/bench statistics (26 fields)
+        """
+        return (
+            ("gameId",)
+            + TEAM_METADATA_FIELDS
+            + STARTER_BENCH_STATS_FIELDS
+            + ("startersBench",)
+        )
+
+    def get_team_data(self):
+        """
+        Extract team statistics data for both home and away teams.
+
+        Returns:
+            list: List of two rows [home_team_data, away_team_data]
+        """
+        game_id = self.boxscore.get("gameId")
+        data = []
+
+        for team_key in ["homeTeam", "awayTeam"]:
+            team = self.boxscore.get(team_key, {})
+
+            # Team metadata
+            team_metadata = [team.get(field) for field in TEAM_METADATA_FIELDS]
+
+            # Team statistics
+            stats = team.get("statistics", {})
+            team_stats = [stats.get(field) for field in TRADITIONAL_STATS_FIELDS]
+
+            # Combine: gameId + metadata + stats
+            row = [game_id] + team_metadata + team_stats
+            data.append(row)
+
+        return data
+
+    def get_player_data(self):
+        """
+        Extract player statistics data for all players from both teams.
+
+        Returns:
+            list: List of player data rows
+        """
+        game_id = self.boxscore.get("gameId")
+        data = []
+
+        for team_key in ["homeTeam", "awayTeam"]:
+            team = self.boxscore.get(team_key, {})
+
+            # Team metadata (same for all players on this team)
+            team_metadata = [team.get(field) for field in TEAM_METADATA_FIELDS]
+
+            # Process each player
+            players = team.get("players", [])
+            for player in players:
+                # Player metadata
+                player_metadata = [player.get(field) for field in PLAYER_METADATA_FIELDS]
+
+                # Player statistics
+                stats = player.get("statistics", {})
+                player_stats = [stats.get(field) for field in TRADITIONAL_STATS_FIELDS]
+
+                # Combine: gameId + team_metadata + player_metadata + stats
+                row = [game_id] + team_metadata + player_metadata + player_stats
+                data.append(row)
+
+        return data
 
     def get_start_bench_data(self):
-        raw_dict = self.nba_dict[list(self.nba_dict.keys())[1]]
-        home_team_info = [
-            value
-            for key, value in raw_dict["homeTeam"].items()
-            if key not in ("players", "statistics", "starters", "bench")
-        ]
-        home_team_starter = raw_dict["homeTeam"]["starters"]
-        home_team_bench = raw_dict["homeTeam"]["bench"]
-        home_team_starter_stats = (
-            [x for x in home_team_starter.values()] + ["Starters"]
-            if home_team_starter is not None
-            else ["Starters"]
-        )
-        home_team_bench_stats = (
-            [x for x in home_team_bench.values()] + ["Bench"]
-            if home_team_bench is not None
-            else ["Bench"]
-        )
+        """
+        Extract starter/bench statistics for both teams.
 
-        away_team_info = [
-            value
-            for key, value in raw_dict["awayTeam"].items()
-            if key not in ("players", "statistics", "starters", "bench")
-        ]
-        away_team_starter = raw_dict["awayTeam"]["starters"]
-        away_team_bench = raw_dict["awayTeam"]["bench"]
-        away_team_starter_stats = (
-            [x for x in away_team_starter.values()] + ["Starters"]
-            if away_team_starter is not None
-            else ["Starters"]
-        )
-        away_team_bench_stats = (
-            [x for x in away_team_bench.values()] + ["Bench"]
-            if away_team_bench is not None
-            else ["Bench"]
-        )
+        Returns:
+            list: List of four rows [home_starters, home_bench, away_starters, away_bench]
+        """
+        game_id = self.boxscore.get("gameId")
+        data = []
 
-        return [
-            [raw_dict["gameId"]] + home_team_info + home_team_starter_stats,
-            [raw_dict["gameId"]] + home_team_info + home_team_bench_stats,
-            [raw_dict["gameId"]] + away_team_info + away_team_starter_stats,
-            [raw_dict["gameId"]] + away_team_info + away_team_bench_stats,
-        ]
+        for team_key in ["homeTeam", "awayTeam"]:
+            team = self.boxscore.get(team_key, {})
+
+            # Team metadata
+            team_metadata = [team.get(field) for field in TEAM_METADATA_FIELDS]
+
+            # Process starters
+            starters = team.get("starters")
+            if starters is not None:
+                starter_stats = [starters.get(field) for field in STARTER_BENCH_STATS_FIELDS]
+            else:
+                starter_stats = [None] * len(STARTER_BENCH_STATS_FIELDS)
+
+            # Combine: gameId + metadata + stats + "Starters" label
+            starter_row = [game_id] + team_metadata + starter_stats + ["Starters"]
+            data.append(starter_row)
+
+            # Process bench
+            bench = team.get("bench")
+            if bench is not None:
+                bench_stats = [bench.get(field) for field in STARTER_BENCH_STATS_FIELDS]
+            else:
+                bench_stats = [None] * len(STARTER_BENCH_STATS_FIELDS)
+
+            # Combine: gameId + metadata + stats + "Bench" label
+            bench_row = [game_id] + team_metadata + bench_stats + ["Bench"]
+            data.append(bench_row)
+
+        return data
 
     def get_data_sets(self):
-        results = {
-            "PlayerStats": None,
-            "TeamStarterBenchStats": None,
-            "TeamStats": None,
+        """
+        Return all datasets for this endpoint.
+
+        Returns:
+            dict: Dictionary with TeamStats, PlayerStats, and TeamStarterBenchStats
+        """
+        return {
+            "TeamStats": {
+                "headers": self.get_team_headers(),
+                "data": self.get_team_data(),
+            },
+            "PlayerStats": {
+                "headers": self.get_player_headers(),
+                "data": self.get_player_data(),
+            },
+            "TeamStarterBenchStats": {
+                "headers": self.get_start_bench_headers(),
+                "data": self.get_start_bench_data(),
+            },
         }
-        team_head = [
-            x for x in self.get_team_headers() if x not in ("starters", "bench")
-        ]
-        player_head = [
-            x for x in self.get_players_headers() if x not in ("starters", "bench")
-        ]
-        start_bench_head = [
-            x
-            for x in self.get_start_bench_headers()
-            if x not in ("starters", "bench", "plusMinusPoints")
-        ]
-        team_data = [
-            [y for y in x if not isinstance(y, dict)] for x in self.get_team_data()
-        ]
-        pl_data = [
-            [y for y in x if not isinstance(y, dict)] for x in self.get_player_data()
-        ]
-        start_bench_data = self.get_start_bench_data()
-        results["TeamStats"] = {"headers": team_head, "data": team_data}
-        results["PlayerStats"] = {"headers": player_head, "data": pl_data}
-        results["TeamStarterBenchStats"] = {
-            "headers": start_bench_head,
-            "data": start_bench_data,
-        }
-        return results

@@ -17,6 +17,31 @@
 
 # Version History
 
+## v1.11.1
+Date: 2025-11-12
+
+### Fixed
+* **BoxScoreTraditionalV3 Parser** - Complete rewrite to fix critical bugs
+  * Fixed AttributeError: Renamed `get_players_headers()` to correct method name `get_player_headers()`
+  * Fixed TypeError: Corrected tuple concatenation in `get_start_bench_headers()`
+  * Fixed ValueError: Replaced incorrect advanced stats fields (31 columns) with traditional stats fields (26 columns)
+  * Added comprehensive unit tests with Python fixture pattern
+
+### Added
+* **Parser Test Coverage** - Comprehensive unit tests for 5 previously untested V3 parsers (100% parser coverage)
+  * BoxScoreMatchupsV3 parser tests (9 tests) - Validates nested matchup structure with offensive/defensive player metrics
+  * PlayByPlayV3 parser tests (10 tests) - Validates play-by-play actions and video availability
+  * ISTStandings parser tests (11 tests) - Validates IST tournament standings with flattened game columns
+  * BoxScoreHustleV2 parser tests (11 tests) - Validates hustle statistics (contested shots, deflections, charges, box outs)
+  * ScheduleLeagueV2 parser tests (18 tests) - Validates complex nested game schedule structure
+
+### Changed
+* **Static Player Data** - Updated player and team data to latest roster information
+* **Script Organization** - Reorganized static data generation scripts
+  * Moved `tools/stats/static_players_update/` → `scripts/static_players_update/`
+  * Renamed `update.py` → `generate_static_data_file.py`
+  * Removed redundant `scripts/create_static_data_file.py`
+
 ## v1.11.0
 Date: 2025-11-11
 
