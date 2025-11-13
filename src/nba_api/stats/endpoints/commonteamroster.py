@@ -79,5 +79,8 @@ class CommonTeamRoster(Endpoint):
             Endpoint.DataSet(data=data_set)
             for data_set_name, data_set in data_sets.items()
         ]
-        self.coaches = Endpoint.DataSet(data=data_sets["Coaches"])
+        # Handle cases where Coaches dataset may not be present (#553)
+        self.coaches = Endpoint.DataSet(
+            data=data_sets.get("Coaches", {"headers": self.expected_data["Coaches"], "data": []})
+        )
         self.common_team_roster = Endpoint.DataSet(data=data_sets["CommonTeamRoster"])
