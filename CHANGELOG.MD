@@ -17,6 +17,45 @@
 
 # Version History
 
+## v1.11.2
+Date: 2025-11-12
+
+### Fixed
+* **Parser Dataset Order** - Fixed critical bug where 9 parsers returned datasets in wrong order ([#589](https://github.com/swar/nba_api/issues/589))
+  * **BoxScoreAdvancedV3** - Swapped dataset order: now returns PlayerStats first, TeamStats second
+  * **BoxScoreDefensiveV2** - Swapped dataset order: now returns PlayerStats first, TeamStats second
+  * **BoxScoreFourFactorsV3** - Swapped dataset order: now returns PlayerStats first, TeamStats second
+  * **BoxScoreHustleV2** - Swapped dataset order: now returns PlayerStats first, TeamStats second
+  * **BoxScoreMiscV3** - Swapped dataset order: now returns PlayerStats first, TeamStats second
+  * **BoxScorePlayerTrackV3** - Swapped dataset order: now returns PlayerStats first, TeamStats second
+  * **BoxScoreScoringV3** - Swapped dataset order: now returns PlayerStats first, TeamStats second
+  * **BoxScoreTraditionalV3** - Reordered datasets: now returns PlayerStats, TeamStarterBenchStats, TeamStats (matching expected_data)
+  * **BoxScoreUsageV3** - Swapped dataset order: now returns PlayerStats first, TeamStats second
+  * **Impact**: `get_data_frames()[0]` previously returned TeamStats (7 columns) instead of expected PlayerStats (29+ columns)
+  * **Root Cause**: Parsers created in v1.11.0 had dataset order mismatched with endpoint's `expected_data` definition
+* **Asian Naming Convention** - Fixed improper name parsing for Asian players in static data
+  * **Ha Seung-jin** (Korean: 하승진) - Now properly split: last_name="Ha", first_name="Seung-jin"
+  * **Sun Yue** (Chinese: 孙悦) - Now properly split: last_name="Sun", first_name="Yue"
+  * **Yao Ming** (Chinese: 姚明) - Now properly split: last_name="Yao", first_name="Ming"
+  * **Yi Jianlian** (Chinese: 易建联) - Now properly split: last_name="Yi", first_name="Jianlian"
+  * **Zhou Qi** (Chinese: 周琦) - Now properly split: last_name="Zhou", first_name="Qi"
+  * **Impact**: Enables proper name-based matching and searching, respects Asian naming conventions (family name first)
+  * **Root Cause**: NBA API provides inconsistent data; generation script now uses `player_adjustments` to correct name splits
+* **Static Data Generation** - Fixed bug where `player_adjustments` overwrote `is_active` status from NBA API
+  * Now preserves active/inactive status when applying name corrections
+  * Previous behavior: Adjustments included hardcoded `is_active=False`, losing actual player status
+
+### Changed
+* **Documentation** - Updated README.md example to use named attributes instead of array indices
+  * Replaced `career.get_data_frames()[0]` with `career.season_totals_regular_season.get_data_frame()`
+  * Encourages version-safe approach: use `endpoint.dataset_name.get_data_frame()` instead of `get_data_frames()[index]`
+* **BoxScoreDefensiveV2** - Added module docstring with usage recommendations and named attribute examples
+
+### Added
+* **Regression Test** - Added `test_dataset_order_matches_expected_data()` to BoxScoreDefensiveV2 parser tests
+  * Validates parser dataset order matches endpoint's `expected_data` definition
+  * Prevents future regressions of dataset ordering bugs
+
 ## v1.11.1
 Date: 2025-11-12
 
