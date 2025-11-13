@@ -8,13 +8,14 @@ class PlayerProfileV2(Endpoint):
     expected_data = {
         "CareerHighs": [
             "PLAYER_ID",
+            "GAME_ID",
             "GAME_DATE",
             "VS_TEAM_ID",
             "VS_TEAM_CITY",
             "VS_TEAM_NAME",
             "VS_TEAM_ABBREVIATION",
             "STAT",
-            "STATS_VALUE",
+            "STAT_VALUE",
             "STAT_ORDER",
             "DATE_EST",
         ],

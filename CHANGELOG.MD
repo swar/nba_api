@@ -43,6 +43,11 @@ Date: 2025-11-13
   * These fields are returned by the NBA API but were missing from the expected_data definition
   * Note: The endpoint still does not include `POSITION` field (NBA API limitation). Users needing position data should use `CommonPlayerInfo` or `CommonTeamRoster` endpoints instead
 
+* **PlayerProfileV2 CareerHighs** - Fixed `expected_data` to match actual API response ([#536](https://github.com/swar/nba_api/issues/536))
+  * Added missing `GAME_ID` field
+  * Fixed field name from `STATS_VALUE` to `STAT_VALUE` (singular)
+  * Note: The `CareerHighs` dataset correctly returns **regular season** career highs (not playoff highs as originally reported). All game IDs have "002" prefix indicating regular season games
+
 ## v1.11.2
 Date: 2025-11-12
 
