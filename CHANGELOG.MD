@@ -16,6 +16,23 @@
 - `Contributor` (notes on updates to the project)
 
 # Version History
+## v1.11.3
+Date: 2025-11-13
+
+### Removed
+* **BoxScorePlayerTrackV2** - Endpoint removed due to NBA API returning HTTP 500 errors
+  * The NBA.com API no longer supports this endpoint
+  * Users should migrate to **BoxScorePlayerTrackV3** instead
+  * Removed endpoint class, documentation, tests, and all references
+
+### Fixed
+* **LeagueIDNullable Parameter** - Fixed default value to prevent empty responses ([#562](https://github.com/swar/nba_api/issues/562))
+  * **Root Cause**: `LeagueIDNullable.default` was inheriting `""` (empty string) from `_NotRequired` instead of `"00"` (NBA) from `LeagueID`
+  * **NBA API Change**: Starting around the 2023-24 season (IST introduction), the NBA.com API became stricter and now **requires** an explicit `LeagueID` value rather than accepting empty strings
+  * **Impact**: Endpoints using `LeagueIDNullable` (e.g., `PlayerProfileV2`, `CommonTeamRoster`) returned empty datasets when called without explicitly specifying `league_id_nullable`
+  * **Fix**: Override `LeagueIDNullable.default` to explicitly use `LeagueID.nba` (`"00"`)
+  * **Affected Endpoints**: All endpoints with `league_id_nullable` parameter now default to NBA league instead of empty string
+  * **Possible Breaking Change**: This fixes broken behavior but changes the API semantics - empty LeagueID is no longer sent to NBA.com (which was causing failures)
 
 ## v1.11.2
 Date: 2025-11-12

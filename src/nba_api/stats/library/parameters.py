@@ -320,7 +320,9 @@ class LeagueID:
 
 
 class LeagueIDNullable(_NotRequired, LeagueID):
-    pass
+    # Override default to NBA since empty LeagueID causes issues with IST games
+    # (e.g., returns 87 games instead of 82 for 2023-24 season)
+    default = LeagueID.nba
 
 
 class Location:
