@@ -110,7 +110,6 @@ endpoint_list = [
     "PlayerDashPtShots",
     "PlayerDefenseStats",
     "PlayerEstimatedMetrics",
-    "PlayerFantasyProfile",
     "PlayerFantasyProfileBarGraph",
     "PlayerGameLog",
     "PlayerGameLogs",

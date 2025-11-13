@@ -95,7 +95,6 @@ __all__ = [
     "playerdashboardbyteamperformance",
     "playerdashboardbyyearoveryear",
     "playerestimatedmetrics",
-    "playerfantasyprofile",
     "playerfantasyprofilebargraph",
     "playergamelog",
     "playergamelogs",
@@ -233,7 +232,6 @@ from .playerdashboardbyshootingsplits import PlayerDashboardByShootingSplits
 from .playerdashboardbyteamperformance import PlayerDashboardByTeamPerformance
 from .playerdashboardbyyearoveryear import PlayerDashboardByYearOverYear
 from .playerestimatedmetrics import PlayerEstimatedMetrics
-from .playerfantasyprofile import PlayerFantasyProfile
 from .playerfantasyprofilebargraph import PlayerFantasyProfileBarGraph
 from .playergamelog import PlayerGameLog
 from .playergamelogs import PlayerGameLogs

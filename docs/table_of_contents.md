@@ -113,7 +113,6 @@
             - [/PlayerDashboardByTeamPerformance](nba_api/stats/endpoints/playerdashboardbyteamperformance.md)
             - [/PlayerDashboardByYearOverYear](nba_api/stats/endpoints/playerdashboardbyyearoveryear.md)
             - [/PlayerEstimatedMetrics](nba_api/stats/endpoints/playerestimatedmetrics.md)
-            - [/PlayerFantasyProfile](nba_api/stats/endpoints/playerfantasyprofile.md)
             - [/PlayerFantasyProfileBarGraph](nba_api/stats/endpoints/playerfantasyprofilebargraph.md)
             - [/PlayerGameLog](nba_api/stats/endpoints/playergamelog.md)
             - [/PlayerGameLogs](nba_api/stats/endpoints/playergamelogs.md)

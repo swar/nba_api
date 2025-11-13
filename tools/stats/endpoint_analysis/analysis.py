@@ -77,7 +77,6 @@ missing_required_parameters = {
         "Season": Season.default,
         "SeasonType": SeasonType.default,
     },
-    "PlayerFantasyProfile": {"Season": Season.default},
     "PlayerFantasyProfileBarGraph": {"Season": Season.default},
     "PlayerVsPlayer": {"Season": Season.default},
     "ShotChartDetail": {

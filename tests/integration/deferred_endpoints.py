@@ -118,7 +118,6 @@ deferred_endpoints = [
     DeferredEndpoint(ep.PlayerDashboardByTeamPerformance, player_id="2544"),
     DeferredEndpoint(ep.PlayerDashboardByYearOverYear, player_id="2544"),
     DeferredEndpoint(ep.PlayerEstimatedMetrics),
-    DeferredEndpoint(ep.PlayerFantasyProfile, player_id="2544"),
     DeferredEndpoint(ep.PlayerFantasyProfileBarGraph, player_id="2544"),
     DeferredEndpoint(ep.PlayerGameLog, player_id="2544"),
     DeferredEndpoint(ep.PlayerGameLogs, player_id_nullable="2544"),
