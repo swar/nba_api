@@ -53,6 +53,20 @@ Date: 2025-11-13
   * Updated in both `data.py` and `template.py`
   * The team name remains "Golden State Warriors" (unchanged)
 
+### Refactored
+* **PlayByPlayV3 Parser** - Refactored parser to use defensive coding pattern and explicit field access ([#443](https://github.com/swar/nba_api/issues/443))
+  * **Root Cause**: Parser used fragile dynamic key extraction (`self.nba_dict[list(self.nba_dict.keys())[1]]`) that relied on dictionary key order
+  * **Impact**: Parser could crash if NBA API response structure changed (added/reordered fields, missing meta field, empty actions list)
+  * **Fix**: Rewrote parser following CLAUDE.md V3 parser best practices:
+    * Explicit field access using `self.game = nba_dict.get("game", {})` instead of dynamic key indexing
+    * All 24 action fields explicitly defined in headers tuple (no dynamic extraction)
+    * Defensive `.get()` calls with defaults instead of direct dictionary access
+    * Handles edge cases: missing meta field, empty actions list, missing optional fields
+  * **Added**: Comprehensive unit tests with 11 test cases covering all edge cases
+  * **Added**: Test fixtures (`tests/unit/stats/endpoints/data/playbyplayv3.py`) for unit testing
+  * **Added**: Real API response documentation (`docs/nba_api/stats/endpoints/responses/playbyplayv3.json`)
+  * **Result**: Parser is now resilient to API structure changes and follows project coding standards
+
 ### Changed
 * **TeamDashboardByGeneralSplits** - Added warning and documentation for NBA API bug with `plus_minus='Y'` parameter ([#448](https://github.com/swar/nba_api/issues/448))
   * **NBA API Bug (not nba_api)**: When `plus_minus='Y'`, the NBA API returns incorrect differential/delta values instead of actual statistics
