@@ -30,6 +30,37 @@ Date: 2025-11-13
   * No direct replacement available
   * Removed endpoint class, documentation, tests, and all references
 
+### Added
+* **TeamGameLog** - Endpoint restored after confirming NBA API is working again
+  * Retired in v1.11.0 due to reported NBA API deprecation, but now confirmed to be operational
+  * Returns game-by-game statistics for a specific team
+  * Required parameter: `team_id`
+  * Optional filtering: season, season type, date range
+  * Comprehensive unit tests (6 tests) and integration tests (4 tests) added
+
+* **TeamGameLogs** - Endpoint restored after confirming NBA API is working again
+  * Retired in v1.11.0 due to reported NBA API deprecation, but now confirmed to be operational
+  * Returns game-by-game statistics for one or more teams
+  * All parameters optional (can query all teams)
+  * Includes rank fields for all statistics (_RANK suffix)
+  * Advanced filtering: location, outcome, conference, division, measure type
+  * Comprehensive unit tests (8 tests) and integration tests (5 tests) added
+
+* **Integration Test Validation Infrastructure** - Enhanced validation to prevent false endpoint retirements
+  * **Root Cause**: TeamGameLog/TeamGameLogs were incorrectly retired in v1.11.0 because integration test framework didn't exist yet (created 3 days later)
+  * **New Validation Features**:
+    * `validate_dataset_structure()` - Validates dataset names and column structure match `expected_data` definitions
+    * Per-dataset row count validation and logging (instead of just total rows)
+    * Opt-in strict validation mode via `validate_structure: True` flag (default: False to preserve compatibility)
+    * Helper functions to reduce code complexity: `_count_dataset_rows()`, `_validate_status()`, `_validate_row_counts()`
+  * **Benefits**:
+    * Catches API response structure changes early
+    * Detects `expected_data` definition errors
+    * Prevents false endpoint retirements
+    * Provides detailed per-dataset diagnostics
+  * **Documentation**: Comprehensive guide in `tests/integration/data/README.md` with examples and best practices
+  * **Test Results**: All 37 integration tests passing, all 460 unit tests passing
+
 ### Fixed
 * **LeagueIDNullable Parameter** - Fixed default value to prevent empty responses ([#562](https://github.com/swar/nba_api/issues/562))
   * **Root Cause**: `LeagueIDNullable.default` was inheriting `""` (empty string) from `_NotRequired` instead of `"00"` (NBA) from `LeagueID`

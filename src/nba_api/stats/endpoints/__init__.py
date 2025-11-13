@@ -121,6 +121,8 @@ __all__ = [
     "teamdashboardbyshootingsplits",
     "teamdetails",
     "teamestimatedmetrics",
+    "teamgamelog",
+    "teamgamelogs",
     "teamgamestreakfinder",
     "teamhistoricalleaders",
     "teaminfocommon",
@@ -257,6 +259,8 @@ from .teamdashboardbygeneralsplits import TeamDashboardByGeneralSplits
 from .teamdashboardbyshootingsplits import TeamDashboardByShootingSplits
 from .teamdetails import TeamDetails
 from .teamestimatedmetrics import TeamEstimatedMetrics
+from .teamgamelog import TeamGameLog
+from .teamgamelogs import TeamGameLogs
 from .teamgamestreakfinder import TeamGameStreakFinder
 from .teamhistoricalleaders import TeamHistoricalLeaders
 from .teaminfocommon import TeamInfoCommon
