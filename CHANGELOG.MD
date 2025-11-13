@@ -39,6 +39,15 @@ Date: 2025-11-13
   * **Affected Endpoints**: All endpoints with `league_id_nullable` parameter now default to NBA league instead of empty string
   * **Possible Breaking Change**: This fixes broken behavior but changes the API semantics - empty LeagueID is no longer sent to NBA.com (which was causing failures)
 
+* **LeagueGameFinder** - Documented and added warning for `game_id_nullable` parameter limitation ([#446](https://github.com/swar/nba_api/issues/446))
+  * **NBA API Limitation**: The `game_id_nullable` parameter is ignored by the NBA Stats API and does not filter results
+  * **Impact**: Users passing `game_id_nullable` receive all games matching other criteria instead of the specific game requested
+  * **Fix**: Added runtime `UserWarning` when `game_id_nullable` is used, informing users of the limitation and providing workaround
+  * **Workaround**: Filter results client-side using pandas: `df[df['GAME_ID'] == 'game_id_value']`
+  * **Documentation**: Added comprehensive module docstring with examples and workaround
+  * **Testing**: Added integration tests documenting API behavior and unit tests verifying warning emission
+  * Note: Using `season_nullable` parameter helps reduce result set size before client-side filtering
+
 * **CommonAllPlayers** - Added missing `PLAYER_SLUG` and `TEAM_SLUG` fields to `expected_data` ([#550](https://github.com/swar/nba_api/issues/550))
   * These fields are returned by the NBA API but were missing from the expected_data definition
   * Note: The endpoint still does not include `POSITION` field (NBA API limitation). Users needing position data should use `CommonPlayerInfo` or `CommonTeamRoster` endpoints instead

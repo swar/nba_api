@@ -33,7 +33,13 @@ import pytest
 from nba_api.stats import endpoints
 
 # Import test case data (one module per endpoint)
-from .data import leaguedashteamstats, playerdashptshotdefend, scoreboardv3, teamdashlineups
+from .data import (
+    leaguedashteamstats,
+    leaguegamefinder,
+    playerdashptshotdefend,
+    scoreboardv3,
+    teamdashlineups,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -264,6 +270,26 @@ def test_teamdashlineups(test_case):
     time.sleep(0.6)  # Rate limiting
     run_endpoint_test(
         endpoints.TeamDashLineups,
+        test_case["params"],
+        test_case.get("expected", "success")
+    )
+
+
+# =============================================================================
+# LeagueGameFinder Tests
+# =============================================================================
+
+
+@pytest.mark.parametrize(
+    "test_case",
+    leaguegamefinder.TEST_CASES,
+    ids=[case["description"] for case in leaguegamefinder.TEST_CASES],
+)
+def test_leaguegamefinder(test_case):
+    """Test LeagueGameFinder with various parameter combinations."""
+    time.sleep(0.6)  # Rate limiting
+    run_endpoint_test(
+        endpoints.LeagueGameFinder,
         test_case["params"],
         test_case.get("expected", "success")
     )

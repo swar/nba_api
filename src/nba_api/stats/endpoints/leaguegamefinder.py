@@ -1,3 +1,53 @@
+"""
+LeagueGameFinder endpoint for finding games based on various filters.
+
+Example:
+    >>> from nba_api.stats.endpoints import LeagueGameFinder
+    >>> # Get Lakers games from 2023-24 season
+    >>> games = LeagueGameFinder(
+    ...     player_or_team_abbreviation='T',
+    ...     team_id_nullable='1610612747',
+    ...     season_nullable='2023-24'
+    ... )
+    >>> df = games.league_game_finder_results.get_data_frame()
+
+Important Notes:
+    **Date Filtering (Issue #526):**
+    The date_from_nullable and date_to_nullable parameters work correctly and
+    filter games by date range. Use format 'YYYY-MM-DD'.
+
+    Example - filter by date range:
+        >>> # Get all games in January 2024
+        >>> games = LeagueGameFinder(
+        ...     player_or_team_abbreviation='T',
+        ...     date_from_nullable='2024-01-01',
+        ...     date_to_nullable='2024-01-31'
+        ... )
+        >>> df = games.league_game_finder_results.get_data_frame()
+
+    Note: Do not use 'DateBegin/DateEnd' parameters - these are ignored by the
+    NBA API. The correct parameters are date_from_nullable/date_to_nullable.
+
+    **Known API Limitation (Issue #446):**
+    The game_id_nullable parameter does NOT filter results. The NBA Stats API
+    ignores this parameter and returns all games matching other criteria.
+
+    Workaround - filter results client-side:
+        >>> # API call (game_id_nullable is ignored)
+        >>> games = LeagueGameFinder(
+        ...     player_or_team_abbreviation='T',
+        ...     season_nullable='2023-24',
+        ...     game_id_nullable='0022301181'  # This is ignored by API
+        ... )
+        >>> df = games.league_game_finder_results.get_data_frame()
+        >>> # Filter for specific game
+        >>> specific_game = df[df['GAME_ID'] == '0022301181']
+
+    Using season_nullable helps reduce the result set size before filtering.
+"""
+
+import warnings
+
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
 from nba_api.stats.library.parameters import (
@@ -151,6 +201,17 @@ class LeagueGameFinder(Endpoint):
         timeout=30,
         get_request=True,
     ):
+        # Warn users about game_id_nullable limitation (Issue #446)
+        if game_id_nullable:
+            warnings.warn(
+                "The 'game_id_nullable' parameter is ignored by the NBA Stats API "
+                "(Issue #446). Results will not be filtered by game ID. "
+                "Workaround: Filter client-side using "
+                "df[df['GAME_ID'] == '{}']".format(game_id_nullable),
+                UserWarning,
+                stacklevel=2
+            )
+
         self.proxy = proxy
         if headers is not None:
             self.headers = headers
