@@ -48,6 +48,11 @@ Date: 2025-11-13
   * Fixed field name from `STATS_VALUE` to `STAT_VALUE` (singular)
   * Note: The `CareerHighs` dataset correctly returns **regular season** career highs (not playoff highs as originally reported). All game IDs have "002" prefix indicating regular season games
 
+* **Static Teams Data** - Corrected Golden State Warriors city name ([#434](https://github.com/swar/nba_api/issues/434))
+  * Changed city name from "Golden State" to "San Francisco"
+  * Updated in both `data.py` and `template.py`
+  * The team name remains "Golden State Warriors" (unchanged)
+
 ## v1.11.2
 Date: 2025-11-12
 
