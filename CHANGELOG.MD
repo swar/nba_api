@@ -25,6 +25,11 @@ Date: 2025-11-13
   * Users should migrate to **BoxScorePlayerTrackV3** instead
   * Removed endpoint class, documentation, tests, and all references
 
+* **PlayerFantasyProfile** - Endpoint removed due to NBA API discontinuation
+  * The NBA.com API no longer supports this endpoint
+  * No direct replacement available
+  * Removed endpoint class, documentation, tests, and all references
+
 ### Fixed
 * **LeagueIDNullable Parameter** - Fixed default value to prevent empty responses ([#562](https://github.com/swar/nba_api/issues/562))
   * **Root Cause**: `LeagueIDNullable.default` was inheriting `""` (empty string) from `_NotRequired` instead of `"00"` (NBA) from `LeagueID`
