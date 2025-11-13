@@ -34,6 +34,10 @@ Date: 2025-11-13
   * **Affected Endpoints**: All endpoints with `league_id_nullable` parameter now default to NBA league instead of empty string
   * **Possible Breaking Change**: This fixes broken behavior but changes the API semantics - empty LeagueID is no longer sent to NBA.com (which was causing failures)
 
+* **CommonAllPlayers** - Added missing `PLAYER_SLUG` and `TEAM_SLUG` fields to `expected_data` ([#550](https://github.com/swar/nba_api/issues/550))
+  * These fields are returned by the NBA API but were missing from the expected_data definition
+  * Note: The endpoint still does not include `POSITION` field (NBA API limitation). Users needing position data should use `CommonPlayerInfo` or `CommonTeamRoster` endpoints instead
+
 ## v1.11.2
 Date: 2025-11-12
 

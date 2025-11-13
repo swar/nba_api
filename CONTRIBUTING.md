@@ -154,8 +154,8 @@ Follow GitHub's instructions on how to [fork](https://docs.github.com/en/get-sta
 # Create a isolated virtual environment inclusive of all dependencies
 poetry install
 
-# Once the environment has been created, active the environment for development
-poetry env activate 
+# Once the environment has been created, activate the environment for development
+eval $(poetry env activate) 
 ```
 
 ### 5. Validating Your Environment
