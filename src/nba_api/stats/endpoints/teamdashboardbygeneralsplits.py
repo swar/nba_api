@@ -1,3 +1,4 @@
+import warnings
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
 from nba_api.stats.library.parameters import (
@@ -23,6 +24,43 @@ from nba_api.stats.library.parameters import (
 
 
 class TeamDashboardByGeneralSplits(Endpoint):
+    """
+    TeamDashboardByGeneralSplits endpoint for team statistics broken down by various splits.
+
+    WARNING: Known NBA API Bug with plus_minus='Y'
+    -------------------------------------------------
+    When plus_minus='Y' is used, the NBA API returns incorrect differential/delta values
+    instead of actual statistics, making the data unusable.
+
+    Example of incorrect data with plus_minus='Y':
+        Boston Celtics 2023-24 Playoffs:
+        - FGM: -0.3 (should be 39.3)
+        - FGA: -1.4 (should be 83.8)
+        - FG_PCT: 0.004 (should be 0.469)
+        - PTS: 8.1 (this is actually the plus/minus value, not points!)
+
+    RECOMMENDATION: Always use plus_minus='N' (default)
+        The PLUS_MINUS column will still be included and will contain correct values.
+
+    Example (correct usage):
+        >>> from nba_api.stats.endpoints import TeamDashboardByGeneralSplits
+        >>> result = TeamDashboardByGeneralSplits(
+        ...     team_id='1610612738',
+        ...     season='2023-24',
+        ...     season_type_all_star='Playoffs',
+        ...     plus_minus='N'  # Use 'N' to get correct data
+        ... )
+        >>> df = result.overall_team_dashboard.get_data_frame()
+        >>> # PLUS_MINUS column is available even with plus_minus='N'
+
+    Attributes:
+        days_rest_team_dashboard (DataSet): Stats split by days of rest.
+        location_team_dashboard (DataSet): Stats split by home/away.
+        month_team_dashboard (DataSet): Stats split by month.
+        overall_team_dashboard (DataSet): Overall team stats.
+        pre_post_all_star_team_dashboard (DataSet): Stats split by pre/post All-Star break.
+        wins_losses_team_dashboard (DataSet): Stats split by wins/losses.
+    """
     endpoint = "teamdashboardbygeneralsplits"
     expected_data = {
         "DaysRestTeamDashboard": [
@@ -417,6 +455,17 @@ class TeamDashboardByGeneralSplits(Endpoint):
         timeout=30,
         get_request=True,
     ):
+        # Warn about NBA API bug with plus_minus='Y'
+        if plus_minus == 'Y':
+            warnings.warn(
+                "NBA API Bug: Using plus_minus='Y' returns incorrect data. "
+                "Statistics show differential/delta values instead of actual values "
+                "(e.g., FGM=-0.3 instead of 39.3). Use plus_minus='N' instead. "
+                "The PLUS_MINUS column will still be included with correct values.",
+                UserWarning,
+                stacklevel=2
+            )
+
         self.proxy = proxy
         if headers is not None:
             self.headers = headers

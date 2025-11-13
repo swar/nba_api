@@ -53,6 +53,14 @@ Date: 2025-11-13
   * Updated in both `data.py` and `template.py`
   * The team name remains "Golden State Warriors" (unchanged)
 
+### Changed
+* **TeamDashboardByGeneralSplits** - Added warning and documentation for NBA API bug with `plus_minus='Y'` parameter ([#448](https://github.com/swar/nba_api/issues/448))
+  * **NBA API Bug (not nba_api)**: When `plus_minus='Y'`, the NBA API returns incorrect differential/delta values instead of actual statistics
+  * Example: FGM shows -0.3 instead of 39.3, PTS shows +/- value instead of actual points
+  * **Solution**: Always use `plus_minus='N'` (default). The PLUS_MINUS column is still included and contains correct values
+  * Added runtime warning when `plus_minus='Y'` is used
+  * Added comprehensive documentation in class docstring with examples
+
 ## v1.11.2
 Date: 2025-11-12
 
