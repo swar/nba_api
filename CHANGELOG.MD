@@ -16,6 +16,104 @@
 - `Contributor` (notes on updates to the project)
 
 # Version History
+## v1.11.3
+Date: 2025-11-13
+
+### Removed
+* **BoxScorePlayerTrackV2** - Endpoint removed due to NBA API returning HTTP 500 errors
+  * The NBA.com API no longer supports this endpoint
+  * Users should migrate to **BoxScorePlayerTrackV3** instead
+  * Removed endpoint class, documentation, tests, and all references
+
+* **PlayerFantasyProfile** - Endpoint removed due to NBA API discontinuation
+  * The NBA.com API no longer supports this endpoint
+  * No direct replacement available
+  * Removed endpoint class, documentation, tests, and all references
+
+### Added
+* **TeamGameLog** - Endpoint restored after confirming NBA API is working again
+  * Retired in v1.11.0 due to reported NBA API deprecation, but now confirmed to be operational
+  * Returns game-by-game statistics for a specific team
+  * Required parameter: `team_id`
+  * Optional filtering: season, season type, date range
+  * Comprehensive unit tests (6 tests) and integration tests (4 tests) added
+
+* **TeamGameLogs** - Endpoint restored after confirming NBA API is working again
+  * Retired in v1.11.0 due to reported NBA API deprecation, but now confirmed to be operational
+  * Returns game-by-game statistics for one or more teams
+  * All parameters optional (can query all teams)
+  * Includes rank fields for all statistics (_RANK suffix)
+  * Advanced filtering: location, outcome, conference, division, measure type
+  * Comprehensive unit tests (8 tests) and integration tests (5 tests) added
+
+* **Integration Test Validation Infrastructure** - Enhanced validation to prevent false endpoint retirements
+  * **Root Cause**: TeamGameLog/TeamGameLogs were incorrectly retired in v1.11.0 because integration test framework didn't exist yet (created 3 days later)
+  * **New Validation Features**:
+    * `validate_dataset_structure()` - Validates dataset names and column structure match `expected_data` definitions
+    * Per-dataset row count validation and logging (instead of just total rows)
+    * Opt-in strict validation mode via `validate_structure: True` flag (default: False to preserve compatibility)
+    * Helper functions to reduce code complexity: `_count_dataset_rows()`, `_validate_status()`, `_validate_row_counts()`
+  * **Benefits**:
+    * Catches API response structure changes early
+    * Detects `expected_data` definition errors
+    * Prevents false endpoint retirements
+    * Provides detailed per-dataset diagnostics
+  * **Documentation**: Comprehensive guide in `tests/integration/data/README.md` with examples and best practices
+  * **Test Results**: All 37 integration tests passing, all 460 unit tests passing
+
+### Fixed
+* **LeagueIDNullable Parameter** - Fixed default value to prevent empty responses ([#562](https://github.com/swar/nba_api/issues/562))
+  * **Root Cause**: `LeagueIDNullable.default` was inheriting `""` (empty string) from `_NotRequired` instead of `"00"` (NBA) from `LeagueID`
+  * **NBA API Change**: Starting around the 2023-24 season (IST introduction), the NBA.com API became stricter and now **requires** an explicit `LeagueID` value rather than accepting empty strings
+  * **Impact**: Endpoints using `LeagueIDNullable` (e.g., `PlayerProfileV2`, `CommonTeamRoster`) returned empty datasets when called without explicitly specifying `league_id_nullable`
+  * **Fix**: Override `LeagueIDNullable.default` to explicitly use `LeagueID.nba` (`"00"`)
+  * **Affected Endpoints**: All endpoints with `league_id_nullable` parameter now default to NBA league instead of empty string
+  * **Possible Breaking Change**: This fixes broken behavior but changes the API semantics - empty LeagueID is no longer sent to NBA.com (which was causing failures)
+
+* **LeagueGameFinder** - Documented and added warning for `game_id_nullable` parameter limitation ([#446](https://github.com/swar/nba_api/issues/446))
+  * **NBA API Limitation**: The `game_id_nullable` parameter is ignored by the NBA Stats API and does not filter results
+  * **Impact**: Users passing `game_id_nullable` receive all games matching other criteria instead of the specific game requested
+  * **Fix**: Added runtime `UserWarning` when `game_id_nullable` is used, informing users of the limitation and providing workaround
+  * **Workaround**: Filter results client-side using pandas: `df[df['GAME_ID'] == 'game_id_value']`
+  * **Documentation**: Added comprehensive module docstring with examples and workaround
+  * **Testing**: Added integration tests documenting API behavior and unit tests verifying warning emission
+  * Note: Using `season_nullable` parameter helps reduce result set size before client-side filtering
+
+* **CommonAllPlayers** - Added missing `PLAYER_SLUG` and `TEAM_SLUG` fields to `expected_data` ([#550](https://github.com/swar/nba_api/issues/550))
+  * These fields are returned by the NBA API but were missing from the expected_data definition
+  * Note: The endpoint still does not include `POSITION` field (NBA API limitation). Users needing position data should use `CommonPlayerInfo` or `CommonTeamRoster` endpoints instead
+
+* **PlayerProfileV2 CareerHighs** - Fixed `expected_data` to match actual API response ([#536](https://github.com/swar/nba_api/issues/536))
+  * Added missing `GAME_ID` field
+  * Fixed field name from `STATS_VALUE` to `STAT_VALUE` (singular)
+  * Note: The `CareerHighs` dataset correctly returns **regular season** career highs (not playoff highs as originally reported). All game IDs have "002" prefix indicating regular season games
+
+* **Static Teams Data** - Corrected Golden State Warriors city name ([#434](https://github.com/swar/nba_api/issues/434))
+  * Changed city name from "Golden State" to "San Francisco"
+  * Updated in both `data.py` and `template.py`
+  * The team name remains "Golden State Warriors" (unchanged)
+
+### Refactored
+* **PlayByPlayV3 Parser** - Refactored parser to use defensive coding pattern and explicit field access ([#443](https://github.com/swar/nba_api/issues/443))
+  * **Root Cause**: Parser used fragile dynamic key extraction (`self.nba_dict[list(self.nba_dict.keys())[1]]`) that relied on dictionary key order
+  * **Impact**: Parser could crash if NBA API response structure changed (added/reordered fields, missing meta field, empty actions list)
+  * **Fix**: Rewrote parser following CLAUDE.md V3 parser best practices:
+    * Explicit field access using `self.game = nba_dict.get("game", {})` instead of dynamic key indexing
+    * All 24 action fields explicitly defined in headers tuple (no dynamic extraction)
+    * Defensive `.get()` calls with defaults instead of direct dictionary access
+    * Handles edge cases: missing meta field, empty actions list, missing optional fields
+  * **Added**: Comprehensive unit tests with 11 test cases covering all edge cases
+  * **Added**: Test fixtures (`tests/unit/stats/endpoints/data/playbyplayv3.py`) for unit testing
+  * **Added**: Real API response documentation (`docs/nba_api/stats/endpoints/responses/playbyplayv3.json`)
+  * **Result**: Parser is now resilient to API structure changes and follows project coding standards
+
+### Changed
+* **TeamDashboardByGeneralSplits** - Added warning and documentation for NBA API bug with `plus_minus='Y'` parameter ([#448](https://github.com/swar/nba_api/issues/448))
+  * **NBA API Bug (not nba_api)**: When `plus_minus='Y'`, the NBA API returns incorrect differential/delta values instead of actual statistics
+  * Example: FGM shows -0.3 instead of 39.3, PTS shows +/- value instead of actual points
+  * **Solution**: Always use `plus_minus='N'` (default). The PLUS_MINUS column is still included and contains correct values
+  * Added runtime warning when `plus_minus='Y'` is used
+  * Added comprehensive documentation in class docstring with examples
 
 ## v1.11.2
 Date: 2025-11-12
