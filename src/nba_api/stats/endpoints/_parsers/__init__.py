@@ -21,6 +21,7 @@ from .boxscorescoringv3 import NBAStatsBoxscoreScoringV3Parser
 from .boxscoresummaryv3 import NBAStatsBoxscoreSummaryParserV3
 from .boxscoretraditionalv3 import NBAStatsBoxscoreTraditionalParserV3
 from .boxscoreusagev3 import NBAStatsBoxscoreUsageV3Parser
+from .dunkscoreleaders import NBAStatsDunkScoreLeadersParser
 from .iststandings import NBAStatsISTStandingsParser
 from .playbyplayv3 import NBAStatsPlayByPlayParserV3
 from .scheduleleaguev2 import (
@@ -68,6 +69,7 @@ _PARSER_REGISTRY = {
     "scheduleleaguev2": NBAStatsScheduleLeagueV2Parser,
     "scheduleleaguev2int": NBAStatsScheduleLeagueV2IntParser,
     "scoreboardv3": NBAStatsScoreboardV3Parser,
+    "dunkscoreleaders": NBAStatsDunkScoreLeadersParser,
 }
 
 

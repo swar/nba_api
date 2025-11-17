@@ -140,9 +140,9 @@ class DunkScoreLeaders(Endpoint):
         accessible DataSet object containing all dunk records with detailed
         biomechanics and scoring information.
         """
-        data_sets = self.nba_response.get_data_sets()
+        data_sets = self.nba_response.get_data_sets(self.endpoint)
         self.data_sets = [
             Endpoint.DataSet(data=data_set)
             for data_set_name, data_set in data_sets.items()
         ]
-        self.dunks = Endpoint.DataSet(data=data_sets["Dunks"])
+        self.dunks = Endpoint.DataSet(data=data_sets["DunkScoreLeaders"])
