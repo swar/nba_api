@@ -4,7 +4,7 @@ player_index_first_name = 2
 player_index_full_name = 3
 player_index_is_active = 4
 
-# Data last updated: Nov, 12 2025
+# Data last updated: Nov, 13 2025
 
 players = [
     [76001, "Abdelnaby", "Alaa", "Alaa Abdelnaby", False],
@@ -1764,7 +1764,7 @@ players = [
     [203268, "Gutierrez", "Jorge", "Jorge Gutierrez", False],
     [1629657, "Guy", "Kyle", "Kyle Guy", False],
     [2062, "Guyton", "A.J.", "A.J. Guyton", False],
-    [2775, "Ha Seung-jin", "", "Ha Seung-jin", False],
+    [2775, "Ha", "Seung-jin", "Ha Seung-jin", False],
     [1629060, "Hachimura", "Rui", "Rui Hachimura", True],
     [76910, "Hackett", "Rudy", "Rudy Hackett", False],
     [201632, "Haddadi", "Hamed", "Hamed Haddadi", False],
@@ -3324,7 +3324,7 @@ players = [
     [203094, "Nicholson", "Andrew", "Andrew Nicholson", False],
     [1093, "Nickerson", "Gaylon", "Gaylon Nickerson", False],
     [77715, "Nicks", "Carl", "Carl Nicks", False],
-    [1642949, "Niederhauser", "Yanic Konan", "Yanic Konan Niederhauser", True],
+    [1642949, "Niederhäuser", "Yanic Konan", "Yanic Konan Niederhäuser", True],
     [77716, "Niemann", "Rich", "Rich Niemann", False],
     [77717, "Niemiera", "John", "John Niemiera", False],
     [77718, "Niles", "Mike", "Mike Niles", False],
@@ -4372,7 +4372,7 @@ players = [
     [201969, "Summers", "DaJuan", "DaJuan Summers", False],
     [1628410, "Sumner", "Edmond", "Edmond Sumner", False],
     [78654, "Sumpter", "Barry", "Barry Sumpter", False],
-    [201180, "Sun Yue", "", "Sun Yue", False],
+    [201180, "Sun", "Yue", "Sun Yue", False],
     [78278, "Sunderlage", "Don", "Don Sunderlage", False],
     [1743, "Sundov", "Bruno", "Bruno Sundov", False],
     [78279, "Sundvold", "Jon", "Jon Sundvold", False],
@@ -5061,13 +5061,13 @@ players = [
     [78627, "Wynder", "A.J.", "A.J. Wynder", False],
     [1627824, "Yabusele", "Guerschon", "Guerschon Yabusele", True],
     [1642905, "Yang Hansen", "", "Yang Hansen", True],
-    [2397, "Yao Ming", "", "Yao Ming", False],
+    [2397, "Yao", "Ming", "Yao Ming", False],
     [2428, "Yarbrough", "Vincent", "Vincent Yarbrough", False],
     [78628, "Yardley", "George", "George Yardley", False],
     [78629, "Yates", "Barry", "Barry Yates", False],
     [78630, "Yates", "Wayne", "Wayne Yates", False],
     [78631, "Yelverton", "Charlie", "Charlie Yelverton", False],
-    [201146, "Yi Jianlian", "", "Yi Jianlian", False],
+    [201146, "Yi", "Jianlian", "Yi Jianlian", False],
     [78632, "Yonakor", "Rich", "Rich Yonakor", False],
     [1628221, "York", "Gabe", "Gabe York", False],
     [78633, "Young", "Danny", "Danny Young", False],
@@ -5095,7 +5095,7 @@ players = [
     [78643, "Zeno", "Tony", "Tony Zeno", False],
     [78644, "Zevenbergen", "Phil", "Phil Zevenbergen", False],
     [1917, "Zhi-zhi", "Wang", "Wang Zhi-zhi", False],
-    [1627753, "Zhou Qi", "", "Zhou Qi", False],
+    [1627753, "Zhou", "Qi", "Zhou Qi", False],
     [678, "Zidek", "George", "George Zidek", False],
     [1642911, "Zikarsky", "Rocco", "Rocco Zikarsky", True],
     [2583, "Zimmerman", "Derrick", "Derrick Zimmerman", False],
@@ -6279,7 +6279,7 @@ teams = [
     [1610612741, 'CHI', 'Bulls', 1966, 'Chicago', 'Chicago Bulls', 'Illinois', [1991, 1992, 1993, 1996, 1997, 1998]],
     [1610612742, 'DAL', 'Mavericks', 1980, 'Dallas', 'Dallas Mavericks', 'Texas', [2011]],
     [1610612743, 'DEN', 'Nuggets', 1976, 'Denver', 'Denver Nuggets', 'Colorado', [2023]],
-    [1610612744, 'GSW', 'Warriors', 1946, 'Golden State', 'Golden State Warriors', 'California', [1947, 1956, 1975, 2015, 2017, 2018, 2022]],
+    [1610612744, 'GSW', 'Warriors', 1946, 'San Francisco', 'Golden State Warriors', 'California', [1947, 1956, 1975, 2015, 2017, 2018, 2022]],
     [1610612745, 'HOU', 'Rockets', 1967, 'Houston', 'Houston Rockets', 'Texas', [1994, 1995]],
     [1610612746, 'LAC', 'Clippers', 1970, 'Los Angeles', 'Los Angeles Clippers', 'California', []],
     [1610612747, 'LAL', 'Lakers', 1948, 'Los Angeles', 'Los Angeles Lakers', 'California', [1949, 1950, 1952, 1953, 1954, 1972, 1980, 1982, 1985, 1987, 1988, 2000, 2001, 2002, 2009, 2010, 2020]],

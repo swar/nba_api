@@ -52,10 +52,50 @@ TEST_CASES = [
 
 ```python
 "expected": {
-    "status": "success",   # "success" | "has_data" | "empty" | "error"
-    "min_rows": 1,         # Optional: minimum rows
-    "max_rows": 100,       # Optional: maximum rows
-    "exact_rows": 5,       # Optional: exact count
+    "status": "success",          # "success" | "has_data" | "empty" | "error"
+    "min_rows": 1,                # Optional: minimum rows
+    "max_rows": 100,              # Optional: maximum rows
+    "exact_rows": 5,              # Optional: exact count
+    "validate_structure": True,   # Optional: enable strict validation (default: False)
+}
+```
+
+### Structure Validation (Enhanced Validation)
+
+When `validate_structure: True` is set, the test performs comprehensive validation:
+
+**✅ Validates:**
+- Dataset names match `expected_data` keys
+- All expected datasets are present
+- Column names match `expected_data` field lists for each dataset
+- Per-dataset row counts (logged separately)
+
+**Benefits:**
+- Catches API response changes early
+- Detects `expected_data` definition errors
+- Prevents false retirements (like TeamGameLog/TeamGameLogs)
+- Provides detailed per-dataset diagnostics
+
+**When to enable:**
+- New endpoints (to establish baseline)
+- Recently restored endpoints
+- Endpoints with frequent API changes
+- When debugging unexpected behavior
+
+**Default behavior (False):**
+- Validates total row counts only
+- Compatible with existing tests
+- Less strict, won't break on extra columns
+
+**Example with strict validation:**
+```python
+{
+    "description": "Lakers 2023-24 season",
+    "params": {"team_id": "1610612747", "season": "2023-24"},
+    "expected": {
+        "status": "has_data",
+        "validate_structure": True  # Enable strict validation
+    }
 }
 ```
 

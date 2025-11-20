@@ -1,6 +1,6 @@
 [project]
 name = "nba_api"
-version = "1.11.1"
+version = "1.11.3"
 description = "An API Client package to access the APIs for NBA.com"
 requires-python = ">=3.10"
 license = "MIT"

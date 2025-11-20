@@ -1,41 +1,132 @@
-"""Parser(s) for playbyplayv3 endpoint."""
+"""Parser for playbyplayv3 endpoint.
+
+This parser extracts play-by-play data from the NBA Stats API v3 format,
+which returns nested JSON with game actions and video availability.
+"""
 
 
 class NBAStatsPlayByPlayParserV3:
-    def __init__(self, nba_dict):
-        self.nba_dict = nba_dict
+    """Parser for PlayByPlayV3 endpoint.
 
-    def get_playbyplay_headers(self, headers=tuple(), level=0):
-        if level == 0:
-            tmp = self.nba_dict[list(self.nba_dict.keys())[1]]
-            headers = headers + tuple(
-                [header for header in tmp.keys() if header == "gameId"]
-            )
-            return self.get_playbyplay_headers(headers, level=1)
-        else:
-            tmp = self.nba_dict[list(self.nba_dict.keys())[1]]["actions"][0]
-            headers = headers + tuple([header for header in tmp.keys()])
-            return headers
+    Extracts play-by-play actions and video availability from game data.
+    Uses explicit field access and defensive coding to handle edge cases.
+    """
+
+    def __init__(self, nba_dict):
+        """Initialize parser with API response dictionary.
+
+        Args:
+            nba_dict (dict): Raw API response containing game data.
+        """
+        self.nba_dict = nba_dict
+        self.game = nba_dict.get("game", {})
+
+    def get_playbyplay_headers(self):
+        """Return column headers for the PlayByPlay dataset.
+
+        Returns:
+            tuple: Explicitly defined column names for play-by-play actions.
+        """
+        return (
+            "gameId",
+            "actionNumber",
+            "clock",
+            "period",
+            "teamId",
+            "teamTricode",
+            "personId",
+            "playerName",
+            "playerNameI",
+            "xLegacy",
+            "yLegacy",
+            "shotDistance",
+            "shotResult",
+            "isFieldGoal",
+            "scoreHome",
+            "scoreAway",
+            "pointsTotal",
+            "location",
+            "description",
+            "actionType",
+            "subType",
+            "videoAvailable",
+            "shotValue",
+            "actionId",
+        )
 
     def get_playbyplay_data(self):
-        return [
-            [self.nba_dict["game"]["gameId"]] + list(x.values())
-            for x in self.nba_dict["game"]["actions"]
-        ]
+        """Extract play-by-play actions from the API response.
+
+        Returns:
+            list: List of action rows, each starting with gameId followed by
+                  all action fields in the order defined by headers.
+        """
+        game_id = self.game.get("gameId")
+        actions = self.game.get("actions", [])
+
+        data = []
+        for action in actions:
+            row = [
+                game_id,
+                action.get("actionNumber"),
+                action.get("clock"),
+                action.get("period"),
+                action.get("teamId"),
+                action.get("teamTricode"),
+                action.get("personId"),
+                action.get("playerName"),
+                action.get("playerNameI"),
+                action.get("xLegacy"),
+                action.get("yLegacy"),
+                action.get("shotDistance"),
+                action.get("shotResult"),
+                action.get("isFieldGoal"),
+                action.get("scoreHome"),
+                action.get("scoreAway"),
+                action.get("pointsTotal"),
+                action.get("location"),
+                action.get("description"),
+                action.get("actionType"),
+                action.get("subType"),
+                action.get("videoAvailable"),
+                action.get("shotValue"),
+                action.get("actionId"),
+            ]
+            data.append(row)
+
+        return data
 
     def get_videoavailable_headers(self):
-        return "videoAvailable"
+        """Return column headers for the AvailableVideo dataset.
+
+        Returns:
+            list: Single header for video availability flag.
+        """
+        return ["videoAvailable"]
 
     def get_videoavailable_data(self):
-        return self.nba_dict[list(self.nba_dict.keys())[1]]["videoAvailable"]
+        """Extract video availability flag from the API response.
+
+        Returns:
+            list: Single row with video availability value (0 or 1).
+        """
+        video_available = self.game.get("videoAvailable", 0)
+        return [[video_available]]
 
     def get_data_sets(self):
-        results = {"PlayByPlay": None, "AvailableVideo": None}
-        video_head = self.get_videoavailable_headers()
-        pbp_head = self.get_playbyplay_headers()
+        """Return all datasets for this endpoint.
 
-        pbp_data = self.get_playbyplay_data()
-        video_data = self.get_videoavailable_data()
-        results["PlayByPlay"] = {"headers": pbp_head, "data": pbp_data}
-        results["AvailableVideo"] = {"headers": [video_head], "data": [[video_data]]}
-        return results
+        Returns:
+            dict: Dictionary containing PlayByPlay and AvailableVideo datasets,
+                  each with 'headers' and 'data' keys.
+        """
+        return {
+            "PlayByPlay": {
+                "headers": self.get_playbyplay_headers(),
+                "data": self.get_playbyplay_data(),
+            },
+            "AvailableVideo": {
+                "headers": self.get_videoavailable_headers(),
+                "data": self.get_videoavailable_data(),
+            },
+        }

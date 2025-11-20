@@ -18,17 +18,18 @@
 			// Extensions to install automatically in the container
             // These provide Python development tools, linting, and formatting
 			"extensions": [
-				"ms-python.black-formatter",
-				"ms-python.flake8",
-				"ms-python.pylint",
-				"ms-python.python",
-				"ms-python.vscode-pylance",
-				"ms-toolsai.jupyter",
-				"ms-toolsai.jupyter-keymap",
-				"ms-toolsai.jupyter-renderers",
-				"ms-toolsai.vscode-jupyter-powertoys",
+                "ms-python.black-formatter",
+                "ms-python.flake8",
+                "ms-python.isort",
+                "ms-python.pylint",
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-toolsai.jupyter",
+                "ms-toolsai.jupyter-keymap",
+                "ms-toolsai.jupyter-renderers",
+                "ms-toolsai.vscode-jupyter-powertoys",
                 "tamasfe.even-better-toml"
-			],
+            ],
 
             // VS Code settings to apply in the container
             "settings": {

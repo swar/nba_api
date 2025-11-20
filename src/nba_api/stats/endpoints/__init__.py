@@ -11,7 +11,6 @@ __all__ = [
     "boxscorematchupsv3",
     "boxscoremiscv2",
     "boxscoremiscv3",
-    "boxscoreplayertrackv2",
     "boxscoreplayertrackv3",
     "boxscorescoringv2",
     "boxscorescoringv3",
@@ -96,7 +95,6 @@ __all__ = [
     "playerdashboardbyteamperformance",
     "playerdashboardbyyearoveryear",
     "playerestimatedmetrics",
-    "playerfantasyprofile",
     "playerfantasyprofilebargraph",
     "playergamelog",
     "playergamelogs",
@@ -123,6 +121,8 @@ __all__ = [
     "teamdashboardbyshootingsplits",
     "teamdetails",
     "teamestimatedmetrics",
+    "teamgamelog",
+    "teamgamelogs",
     "teamgamestreakfinder",
     "teamhistoricalleaders",
     "teaminfocommon",
@@ -150,7 +150,6 @@ from .boxscorehustlev2 import BoxScoreHustleV2
 from .boxscorematchupsv3 import BoxScoreMatchupsV3
 from .boxscoremiscv2 import BoxScoreMiscV2
 from .boxscoremiscv3 import BoxScoreMiscV3
-from .boxscoreplayertrackv2 import BoxScorePlayerTrackV2
 from .boxscoreplayertrackv3 import BoxScorePlayerTrackV3
 from .boxscorescoringv2 import BoxScoreScoringV2
 from .boxscorescoringv3 import BoxScoreScoringV3
@@ -235,7 +234,6 @@ from .playerdashboardbyshootingsplits import PlayerDashboardByShootingSplits
 from .playerdashboardbyteamperformance import PlayerDashboardByTeamPerformance
 from .playerdashboardbyyearoveryear import PlayerDashboardByYearOverYear
 from .playerestimatedmetrics import PlayerEstimatedMetrics
-from .playerfantasyprofile import PlayerFantasyProfile
 from .playerfantasyprofilebargraph import PlayerFantasyProfileBarGraph
 from .playergamelog import PlayerGameLog
 from .playergamelogs import PlayerGameLogs
@@ -261,6 +259,8 @@ from .teamdashboardbygeneralsplits import TeamDashboardByGeneralSplits
 from .teamdashboardbyshootingsplits import TeamDashboardByShootingSplits
 from .teamdetails import TeamDetails
 from .teamestimatedmetrics import TeamEstimatedMetrics
+from .teamgamelog import TeamGameLog
+from .teamgamelogs import TeamGameLogs
 from .teamgamestreakfinder import TeamGameStreakFinder
 from .teamhistoricalleaders import TeamHistoricalLeaders
 from .teaminfocommon import TeamInfoCommon

@@ -1,38 +1,40 @@
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
-from nba_api.stats.library.parameters import Season, LeagueIDNullable
+from nba_api.stats.library.parameters import Season, SeasonTypeAllStar, LeagueIDNullable
 
 
-class CommonTeamRoster(Endpoint):
-    endpoint = "commonteamroster"
+class TeamGameLog(Endpoint):
+    endpoint = "teamgamelog"
     expected_data = {
-        "Coaches": [
-            "TEAM_ID",
-            "SEASON",
-            "COACH_ID",
-            "FIRST_NAME",
-            "LAST_NAME",
-            "COACH_NAME",
-            "IS_ASSISTANT",
-            "COACH_TYPE",
-            "SORT_SEQUENCE",
-        ],
-        "CommonTeamRoster": [
-            "TeamID",
-            "SEASON",
-            "LeagueID",
-            "PLAYER",
-            "PLAYER_SLUG",
-            "NUM",
-            "POSITION",
-            "HEIGHT",
-            "WEIGHT",
-            "BIRTH_DATE",
-            "AGE",
-            "EXP",
-            "SCHOOL",
-            "PLAYER_ID",
-        ],
+        "TeamGameLog": [
+            "Team_ID",
+            "Game_ID",
+            "GAME_DATE",
+            "MATCHUP",
+            "WL",
+            "W",
+            "L",
+            "W_PCT",
+            "MIN",
+            "FGM",
+            "FGA",
+            "FG_PCT",
+            "FG3M",
+            "FG3A",
+            "FG3_PCT",
+            "FTM",
+            "FTA",
+            "FT_PCT",
+            "OREB",
+            "DREB",
+            "REB",
+            "AST",
+            "STL",
+            "BLK",
+            "TOV",
+            "PF",
+            "PTS",
+        ]
     }
 
     nba_response = None
@@ -45,6 +47,9 @@ class CommonTeamRoster(Endpoint):
         self,
         team_id,
         season=Season.default,
+        season_type_all_star=SeasonTypeAllStar.default,
+        date_from_nullable="",
+        date_to_nullable="",
         league_id_nullable=LeagueIDNullable.default,
         proxy=None,
         headers=None,
@@ -58,8 +63,15 @@ class CommonTeamRoster(Endpoint):
         self.parameters = {
             "TeamID": team_id,
             "Season": season,
+            "SeasonType": season_type_all_star,
+            "DateFrom": date_from_nullable,
+            "DateTo": date_to_nullable,
             "LeagueID": league_id_nullable,
         }
+
+        # Initialize dataset attributes
+        self.team_game_log = None
+
         if get_request:
             self.get_request()
 
@@ -79,8 +91,4 @@ class CommonTeamRoster(Endpoint):
             Endpoint.DataSet(data=data_set)
             for data_set_name, data_set in data_sets.items()
         ]
-        # Handle cases where Coaches dataset may not be present (#553)
-        self.coaches = Endpoint.DataSet(
-            data=data_sets.get("Coaches", {"headers": self.expected_data["Coaches"], "data": []})
-        )
-        self.common_team_roster = Endpoint.DataSet(data=data_sets["CommonTeamRoster"])
+        self.team_game_log = Endpoint.DataSet(data=data_sets["TeamGameLog"])
