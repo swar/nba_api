@@ -52,7 +52,6 @@ Please remember to do the following:
 * [ ] Recreate the issue
 
 * [ ] Simplify your code around the issue to better isolate the problem
-<<<<<<< HEAD
 
 # Contributing Code
 
@@ -109,7 +108,7 @@ Should you wish to make a significant change within the project, please open a [
 
 #### Code Reviews
 
-GitHub allows developers the ability to draft pull requestes. This is incredibly useful to get feedback early within the development cycle when making large or complex changes.
+GitHub allows developers the ability to draft pull requests. This is incredibly useful to get feedback early within the development cycle when making large or complex changes.
 
 ## Requirements
 
@@ -134,7 +133,7 @@ prefer-active-python = true
 
 ## Setting up your environment
 
-This guide assume familiarity with using GitHub and `git`.
+This guide assumes familiarity with using GitHub and `git`.
 
 ### 1. Install and configure pyenv (optional)
 
