@@ -39,7 +39,21 @@ class NBAResponse:
         return self._response
 
     def get_dict(self):
-        return json.loads(self._response)
+        try:
+            return json.loads(self._response)
+        except json.JSONDecodeError as e:
+            if not self._response or self._response.isspace():
+                raise ValueError(
+                    f"NBA API returned an empty response. "
+                    f"This can happen for various reasons including no data available for the requested parameters. "
+                    f"URL: {self._url}"
+                ) from e
+            else:
+                raise ValueError(
+                    f"NBA API returned an invalid JSON response: {str(e)}. "
+                    f"Response content (first 200 chars): {self._response[:200]}... "
+                    f"URL: {self._url}"
+                ) from e
 
     def get_json(self):
         return json.dumps(self.get_dict())
