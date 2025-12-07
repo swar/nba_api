@@ -28,7 +28,7 @@ class NBAStatsResponse(http.NBAResponse):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self._endpoint = None  # Store endpoint for V3 normalization
+        self._endpoint = None
 
     def get_normalized_dict(self):
         raw_data = self.get_dict()
@@ -60,14 +60,12 @@ class NBAStatsResponse(http.NBAResponse):
                     rows.append(row)
                 data[name] = rows
         elif self._endpoint is not None:
-            # Handle V3 endpoints with custom parsers
             try:
                 from nba_api.stats.endpoints._parsers import get_parser_for_endpoint
 
                 endpoint_parser = get_parser_for_endpoint(self._endpoint, raw_data)
                 data_sets = endpoint_parser.get_data_sets()
 
-                # Normalize the data_sets into the same format as legacy
                 for name, dataset in data_sets.items():
                     headers = dataset["headers"]
                     row_data = dataset["data"]
@@ -80,7 +78,6 @@ class NBAStatsResponse(http.NBAResponse):
                         rows.append(row)
                     data[name] = rows
             except (KeyError, ImportError):
-                # If parser not found or import fails, return empty dict
                 pass
 
         return data
@@ -123,12 +120,10 @@ class NBAStatsResponse(http.NBAResponse):
     def get_data_sets(self, endpoint=None):
         raw_dict = self.get_dict()
 
-        # Store endpoint for use in get_normalized_dict()
         if endpoint is not None:
             self._endpoint = endpoint
 
         if endpoint is None:
-            # Process Tabular Json
             if "resultSets" in raw_dict:
                 results = raw_dict["resultSets"]
             else:
@@ -150,8 +145,6 @@ class NBAStatsResponse(http.NBAResponse):
                 for result_set in results
             }
         else:
-            # Process V3 endpoint with custom parser
-            # Lazy import to avoid circular dependency
             from nba_api.stats.endpoints._parsers import get_parser_for_endpoint
 
             endpoint_parser = get_parser_for_endpoint(endpoint, self.get_dict())
