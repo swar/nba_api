@@ -9,7 +9,7 @@ Example:
     >>> from nba_api.stats.endpoints import DunkScoreLeaders
     >>> dunks = DunkScoreLeaders(season='2024-25')
     >>> df = dunks.dunks.get_data_frame()
-    >>> print(df[['PLAYER_NAME', 'DUNK_SCORE', 'PLAYER_VERTICAL']].head())
+    >>> print(df[['playerName', 'dunkScore', 'playerVertical']].head())
 """
 
 from nba_api.stats.endpoints._base import Endpoint
@@ -57,7 +57,7 @@ class DunkScoreLeaders(Endpoint):
         ...     player_id_nullable='1630168'
         ... )
         >>> df = player_dunks.dunks.get_data_frame()
-        >>> print(df[['PLAYER_NAME', 'DUNK_SCORE', 'PLAYER_VERTICAL', 'HANG_TIME']])
+        >>> print(df[['playerName', 'dunkScore', 'playerVertical', 'hangTime']].head())
     """
 
     endpoint = "dunkscoreleaders"
