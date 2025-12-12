@@ -18,10 +18,11 @@ class NBAStatsDunkScoreLeadersParser:
         self.dunks = nba_dict.get("dunks", [])
 
     def get_dunkscoreleaders_headers(self):
-        """Get headers for scoreboard-level information.
+        """Get headers for dunk score leaders data.
 
         Returns:
-            Tuple of header names for the ScoreboardInfo dataset
+            List of header names for the DunkScoreLeaders dataset
+
         """
         return [
             "gameId",
