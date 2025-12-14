@@ -1,9 +1,35 @@
+"""
+PlayByPlayV2 endpoint.
+
+.. deprecated:: 2024-25
+    This endpoint is deprecated. Please use PlayByPlayV3 instead.
+    The NBA API no longer returns data for PlayByPlayV2 (returns empty JSON).
+"""
+import warnings
+
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
 from nba_api.stats.library.parameters import EndPeriod, StartPeriod
 
 
 class PlayByPlayV2(Endpoint):
+    """
+    PlayByPlayV2 endpoint.
+
+    .. deprecated:: 2024-25
+        **DEPRECATION WARNING:** This endpoint is deprecated.
+        Please use :class:`~nba_api.stats.endpoints.PlayByPlayV3` instead.
+        The NBA API no longer returns data for PlayByPlayV2 (returns empty JSON).
+
+    Args:
+        game_id (str): NBA game ID.
+        end_period (int, optional): End period. Defaults to 10.
+        start_period (int, optional): Start period. Defaults to 0.
+        proxy (str, optional): HTTP/HTTPS proxy for requests.
+        headers (dict, optional): Custom HTTP headers.
+        timeout (int, optional): Request timeout in seconds. Defaults to 30.
+        get_request (bool, optional): Whether to fetch data immediately. Defaults to True.
+    """
     endpoint = "playbyplayv2"
     expected_data = {
         "AvailableVideo": ["VIDEO_AVAILABLE_FLAG"],
@@ -61,6 +87,14 @@ class PlayByPlayV2(Endpoint):
         timeout=30,
         get_request=True,
     ):
+        warnings.warn(
+            "PlayByPlayV2 is deprecated and will be removed in a future version. "
+            "Please use PlayByPlayV3 instead. "
+            "The NBA API no longer returns data for PlayByPlayV2 (returns empty JSON). "
+            "See GitHub issue #591: https://github.com/swar/nba_api/issues/591",
+            DeprecationWarning,
+            stacklevel=2
+        )
         self.proxy = proxy
         if headers is not None:
             self.headers = headers
