@@ -60,7 +60,7 @@ pandas = [
     {version = "<2.2.0", python = "<3.12"} 
 ]
 isort = "^7.0.0"
-pylint = "^4.0.2"
+pylint = "^4.0.4"
 
 [tool.pytest.ini_options]
 testpaths = "./tests/unit/"
