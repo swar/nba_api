@@ -1,9 +1,50 @@
+"""
+ScoreboardV2 endpoint for NBA daily game schedule and scores.
+
+.. deprecated:: 2025-26
+    This endpoint has known issues with line score data for games between
+    2025-10-22 and 2025-12-25. Please use ScoreboardV3 instead.
+    ScoreboardV3 is fully backward compatible with all historical seasons.
+"""
+import warnings
+
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
 from nba_api.stats.library.parameters import DayOffset, GameDate, LeagueID
 
 
 class ScoreboardV2(Endpoint):
+    """
+    ScoreboardV2 endpoint.
+
+    .. deprecated:: 2025-26
+        **DEPRECATION WARNING:** This endpoint has known issues with line score data.
+        Please use :class:`~nba_api.stats.endpoints.ScoreboardV3` instead.
+
+        For 2025-26 season games between October 22, 2025 and December 25, 2025,
+        the line_score dataset returns empty despite games being available.
+
+        ScoreboardV3 is fully backward compatible and resolves this issue.
+        See: https://github.com/swar/nba_api/issues/596
+
+    Args:
+        day_offset (int, optional): Day offset from game_date.
+        game_date (str, optional): Game date in YYYY-MM-DD format.
+        league_id (str, optional): League ID ('00' for NBA).
+        proxy (str, optional): HTTP/HTTPS proxy for requests.
+        headers (dict, optional): Custom HTTP headers.
+        timeout (int, optional): Request timeout in seconds. Defaults to 30.
+        get_request (bool, optional): Whether to fetch data immediately. Defaults to True.
+
+    Example:
+        >>> # Deprecated (has issues with 2025 early season):
+        >>> from nba_api.stats.endpoints import ScoreboardV2
+        >>> scoreboard = ScoreboardV2(game_date='2025-10-22')
+        >>>
+        >>> # Recommended (works for all seasons):
+        >>> from nba_api.stats.endpoints import ScoreboardV3
+        >>> scoreboard = ScoreboardV3(game_date='2025-10-22')
+    """
     endpoint = "scoreboardv2"
     expected_data = {
         "Available": ["GAME_ID", "PT_AVAILABLE"],
@@ -146,6 +187,14 @@ class ScoreboardV2(Endpoint):
         timeout=30,
         get_request=True,
     ):
+        warnings.warn(
+            "ScoreboardV2 has known issues with line score data for 2025-26 season games "
+            "(October 22 - December 25, 2025). Please use ScoreboardV3 instead. "
+            "ScoreboardV3 is fully backward compatible and works for all historical seasons. "
+            "See: https://github.com/swar/nba_api/issues/596",
+            DeprecationWarning,
+            stacklevel=2
+        )
         self.proxy = proxy
         if headers is not None:
             self.headers = headers
