@@ -47,6 +47,7 @@ __all__ = [
     "NBAStatsScheduleLeagueV2Parser",
     "NBAStatsScheduleLeagueV2IntParser",
     "NBAStatsScoreboardV3Parser",
+    "NBAStatsDunkScoreLeadersParser",
     "get_parser_for_endpoint",
 ]
 
