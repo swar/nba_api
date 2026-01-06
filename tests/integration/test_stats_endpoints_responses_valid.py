@@ -3,7 +3,7 @@ import json
 import random
 import pytest
 
-from deferred_endpoints import deferred_endpoints, DeferredEndpoint
+from .deferred_endpoints import deferred_endpoints, DeferredEndpoint
 
 # Once we run the test to call the endpoints, we'll cache the responses here.
 cached_eps = []

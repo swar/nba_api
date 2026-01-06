@@ -4,19 +4,12 @@ version = "1.11.3"
 description = "An API Client package to access the APIs for NBA.com"
 requires-python = ">=3.10"
 license = "MIT"
-authors = [ {name = "Swar Patel", email = "<swar.m.patel@gmail.com>"}]
+authors = [{ name = "Swar Patel", email = "<swar.m.patel@gmail.com>" }]
 maintainers = [
-    {name = "Swar Patel", email = "<swar.m.patel@gmail.com>"},
-    {name = "Randy Forbes", email="Randy Forbes <randy.forbes@gmail.com>"},
+    { name = "Swar Patel", email = "<swar.m.patel@gmail.com>" },
+    { name = "Randy Forbes", email = "Randy Forbes <randy.forbes@gmail.com>" },
 ]
-keywords = [
-    "api", 
-    "basketball", 
-    "data", 
-    "nba", 
-    "sports", 
-    "stats"
-]
+keywords = ["api", "basketball", "data", "nba", "sports", "stats"]
 classifiers = [
     "Intended Audience :: Developers",
     "Intended Audience :: Science/Research",
@@ -36,15 +29,15 @@ dependencies = [
     "numpy >=2.1.0 ; python_version >= '3.13'",
     "pandas >=2.1.0; python_version < '3.12'",
     "pandas >=2.2.0 ; python_version >= '3.12'",
-    "requests (>=2.32.3,<3.0.0)"
+    "requests (>=2.32.3,<3.0.0)",
 ]
 
 readme = "README.md"
 
 [project.urls]
-    repository = "https://github.com/swar/nba_api"
-    "Bug Tracker" = "https://github.com/swar/nba_api/issues"
-    documentation = "https://github.com/swar/nba_api/blob/master/README.md"
+repository = "https://github.com/swar/nba_api"
+"Bug Tracker" = "https://github.com/swar/nba_api/issues"
+documentation = "https://github.com/swar/nba_api/blob/master/README.md"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
@@ -53,11 +46,12 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.3"
 pytest-cov = "^4.0"
+pytest-xdist = "^3.8.0"
 flake8 = "^7.1.1"
 python-semantic-release = "^9.0.0"
 pandas = [
-    {version = ">=2.2.0", python = ">=3.12"},
-    {version = "<2.2.0", python = "<3.12"} 
+    { version = ">=2.2.0", python = ">=3.12" },
+    { version = "<2.2.0", python = "<3.12" },
 ]
 isort = "^7.0.0"
 pylint = "^4.0.2"
@@ -107,16 +101,23 @@ prerelease = true
 prerelease_token = "rc"
 
 [tool.semantic_release.commit_parser_options]
-allowed_tags = ["build", "chore", "ci", "docs", "feat", "fix", "perf", "style", "refactor", "test"]
+allowed_tags = [
+    "build",
+    "chore",
+    "ci",
+    "docs",
+    "feat",
+    "fix",
+    "perf",
+    "style",
+    "refactor",
+    "test",
+]
 minor_tags = ["feat"]
 patch_tags = ["fix", "perf"]
 
 [tool.semantic_release.changelog]
-exclude_commit_patterns = [
-  "^Bump .*",
-  "^Update .*", 
-  "^Merge pull request.*"
-]
+exclude_commit_patterns = ["^Bump .*", "^Update .*", "^Merge pull request.*"]
 changelog_file = "CHANGELOG.MD"
 
 [tool.semantic_release.changelog.environment]
