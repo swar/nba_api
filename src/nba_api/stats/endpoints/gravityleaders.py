@@ -83,6 +83,24 @@ class GravityLeaders(Endpoint):
 
     def load_response(self):
         data_sets = self.nba_response.get_data_sets()
+
+        # Validate response structure
+        if not isinstance(data_sets, dict):
+            raise ValueError(
+                f"Invalid response structure from NBA API: expected dict, "
+                f"got {type(data_sets).__name__}"
+            )
+
+        # Validate required dataset exists
+        if "leaders" not in data_sets:
+            available_keys = list(data_sets.keys())
+            raise ValueError(
+                f"API response missing required 'leaders' dataset. "
+                f"Available datasets: {available_keys}. "
+                f"This may indicate invalid parameters or an API change. "
+                f"Parameters used: {self.parameters}"
+            )
+
         self.data_sets = [
             Endpoint.DataSet(data=data_set)
             for data_set_name, data_set in data_sets.items()

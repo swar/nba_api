@@ -121,6 +121,24 @@ class TestGravityLeadersEndpoint:
         assert hasattr(endpoint, "league_leaders")
         assert endpoint.league_leaders is not None
 
+    @patch("nba_api.stats.library.http.NBAStatsHTTP.send_api_request")
+    def test_endpoint_with_missing_leaders_dataset(self, mock_request):
+        """Test endpoint handles missing 'leaders' dataset gracefully."""
+        # Mock response with empty data_sets (no 'leaders' key)
+        mock_response = Mock()
+        mock_response.get_data_sets.return_value = {}  # Empty dict
+        mock_request.return_value = mock_response
+
+        # Should raise ValueError with descriptive message
+        with pytest.raises(ValueError) as exc_info:
+            GravityLeaders(season="2024-25")
+
+        # Verify error message is helpful
+        error_message = str(exc_info.value)
+        assert "leaders" in error_message.lower()
+        assert "missing" in error_message.lower()
+        assert "2024-25" in error_message  # Should include parameters
+
     def test_dataset_attributes_initialized(self):
         """Test that all dataset attributes are initialized in __init__."""
         endpoint = GravityLeaders(season="2024-25", get_request=False)
