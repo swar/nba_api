@@ -44,6 +44,7 @@ __all__ = [
     "franchiseplayers",
     "gamerotation",
     "glalumboxscoresimilarityscore",
+    "gravityleaders",
     "homepageleaders",
     "homepagev2",
     "hustlestatsboxscore",
@@ -182,6 +183,7 @@ from .franchisehistory import FranchiseHistory
 from .franchiseleaders import FranchiseLeaders
 from .franchiseplayers import FranchisePlayers
 from .gamerotation import GameRotation
+from .gravityleaders import GravityLeaders
 from .glalumboxscoresimilarityscore import GLAlumBoxScoreSimilarityScore
 from .homepageleaders import HomePageLeaders
 from .homepagev2 import HomePageV2
