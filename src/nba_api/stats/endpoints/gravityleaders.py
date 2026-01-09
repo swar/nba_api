@@ -42,6 +42,7 @@ class GravityLeaders(Endpoint):
     }
 
     nba_response = None
+    data_sets = None
     headers = None
 
     def __init__(
@@ -80,7 +81,7 @@ class GravityLeaders(Endpoint):
         )
         self.load_response()
 
-    def load_response(self) -> None:
+    def load_response(self):
         data_sets = self.nba_response.get_data_sets(self.endpoint)
 
         self.data_sets = [
