@@ -9,7 +9,7 @@ Example:
     >>> from nba_api.stats.endpoints import DunkScoreLeaders
     >>> dunks = DunkScoreLeaders(season='2024-25')
     >>> df = dunks.dunks.get_data_frame()
-    >>> print(df[['PLAYER_NAME', 'DUNK_SCORE', 'PLAYER_VERTICAL']].head())
+    >>> print(df[['playerName', 'dunkScore', 'playerVertical']].head())
 """
 
 from nba_api.stats.endpoints._base import Endpoint
@@ -57,7 +57,7 @@ class DunkScoreLeaders(Endpoint):
         ...     player_id_nullable='1630168'
         ... )
         >>> df = player_dunks.dunks.get_data_frame()
-        >>> print(df[['PLAYER_NAME', 'DUNK_SCORE', 'PLAYER_VERTICAL', 'HANG_TIME']])
+        >>> print(df[['playerName', 'dunkScore', 'playerVertical', 'hangTime']].head())
     """
 
     endpoint = "dunkscoreleaders"
@@ -140,9 +140,9 @@ class DunkScoreLeaders(Endpoint):
         accessible DataSet object containing all dunk records with detailed
         biomechanics and scoring information.
         """
-        data_sets = self.nba_response.get_data_sets()
+        data_sets = self.nba_response.get_data_sets(self.endpoint)
         self.data_sets = [
             Endpoint.DataSet(data=data_set)
             for data_set_name, data_set in data_sets.items()
         ]
-        self.dunks = Endpoint.DataSet(data=data_sets["Dunks"])
+        self.dunks = Endpoint.DataSet(data=data_sets["DunkScoreLeaders"])
