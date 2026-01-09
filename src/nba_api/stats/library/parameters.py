@@ -95,7 +95,6 @@ class ConferenceNullable(_NotRequired, Conference):
 
 
 class ContextMeasureSimple(_ContextMeasure):
-    pf = "PF"
     efg_pct = "EFG_PCT"
     ts_pct = "TS_PCT"
 
