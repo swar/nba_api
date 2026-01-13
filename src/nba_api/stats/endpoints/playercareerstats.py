@@ -1,3 +1,4 @@
+from typing import Any, Dict, List, Optional, Union
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
 from nba_api.stats.library.parameters import PerMode36, LeagueIDNullable
@@ -294,14 +295,14 @@ class PlayerCareerStats(Endpoint):
 
     def __init__(
         self,
-        player_id,
-        per_mode36=PerMode36.default,
-        league_id_nullable=LeagueIDNullable.default,
-        proxy=None,
-        headers=None,
-        timeout=30,
-        get_request=True,
-    ):
+        player_id: Union[str, int],
+        per_mode36: str = PerMode36.default,
+        league_id_nullable: str = LeagueIDNullable.default,
+        proxy: Optional[str] = None,
+        headers: Optional[Dict[str, str]] = None,
+        timeout: int = 30,
+        get_request: bool = True,
+    ) -> None:
         self.proxy = proxy
         if headers is not None:
             self.headers = headers
@@ -314,7 +315,7 @@ class PlayerCareerStats(Endpoint):
         if get_request:
             self.get_request()
 
-    def get_request(self):
+    def get_request(self) -> None:
         self.nba_response = NBAStatsHTTP().send_api_request(
             endpoint=self.endpoint,
             parameters=self.parameters,
@@ -324,7 +325,7 @@ class PlayerCareerStats(Endpoint):
         )
         self.load_response()
 
-    def load_response(self):
+    def load_response(self) -> None:
         data_sets = self.nba_response.get_data_sets()
         self.data_sets = [
             Endpoint.DataSet(data=data_set)
