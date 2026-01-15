@@ -1,4 +1,5 @@
 from nba_api.stats.endpoints._base import Endpoint
+from nba_api.stats.endpoints._parsers import NBAStatsGravityLeadersParser
 from nba_api.stats.library.http import NBAStatsHTTP
 from nba_api.stats.library.parameters import (
     LeagueID,
@@ -8,38 +9,14 @@ from nba_api.stats.library.parameters import (
 
 
 class GravityLeaders(Endpoint):
+    """
+    Gravity quantifies how much a player pulls defenders towards them above expected,
+    essentially measuring how much attention they draw compared to what the spacing on
+    the floor predicts.
+    """
+
     endpoint = "gravityleaders"
-    expected_data = {
-        "leaders": [
-            "PLAYERID",
-            "FIRSTNAME",
-            "LASTNAME",
-            "TEAMID",
-            "TEAMABBREVIATION",
-            "TEAMNAME",
-            "TEAMCITY",
-            "FRAMES",
-            "GRAVITYSCORE",
-            "AVGGRAVITYSCORE",
-            "ONBALLPERIMETERFRAMES",
-            "ONBALLPERIMETERGRAVITYSCORE",
-            "AVGONBALLPERIMETERGRAVITYSCORE",
-            "OFFBALLPERIMETERFRAMES",
-            "OFFBALLPERIMETERGRAVITYSCORE",
-            "AVGOFFBALLPERIMETERGRAVITYSCORE",
-            "ONBALLINTERIORFRAMES",
-            "ONBALLINTERIORGRAVITYSCORE",
-            "AVGONBALLINTERIORGRAVITYSCORE",
-            "OFFBALLINTERIORFRAMES",
-            "OFFBALLINTERIORGRAVITYSCORE",
-            "AVGOFFBALLINTERIORGRAVITYSCORE",
-            "GAMESPLAYED",
-            "MINUTES",
-            "PTS",
-            "REB",
-            "AST",
-        ]
-    }
+    expected_data = {"leaders": list(NBAStatsGravityLeadersParser.LEADER_FIELDS)}
 
     nba_response = None
     data_sets = None
@@ -65,9 +42,6 @@ class GravityLeaders(Endpoint):
             "SeasonType": season_type_all_star,
         }
 
-        # Initialize dataset attributes
-        self.league_leaders = None
-
         if get_request:
             self.get_request()
 
@@ -88,4 +62,4 @@ class GravityLeaders(Endpoint):
             Endpoint.DataSet(data=data_set)
             for data_set_name, data_set in data_sets.items()
         ]
-        self.league_leaders = Endpoint.DataSet(data=data_sets["leaders"])
+        self.leaders = Endpoint.DataSet(data=data_sets["leaders"])
