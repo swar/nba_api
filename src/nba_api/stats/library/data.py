@@ -6301,7 +6301,8 @@ teams = [
     [1610612763, 'MEM', 'Grizzlies', 1995, 'Memphis', 'Memphis Grizzlies', 'Tennessee', []],
     [1610612764, 'WAS', 'Wizards', 1961, 'Washington', 'Washington Wizards', 'District of Columbia', [1978]],
     [1610612765, 'DET', 'Pistons', 1948, 'Detroit', 'Detroit Pistons', 'Michigan', [1989, 1990, 2004]],
-    [1610612766, 'CHA', 'Hornets', 1988, 'Charlotte', 'Charlotte Hornets', 'North Carolina', []]
+    [1610612766, 'CHA', 'Hornets', 1988, 'Charlotte', 'Charlotte Hornets', 'North Carolina', []],
+    [1610612701, 'GLL', 'Loong Lions', 2010, 'Guangzhou', 'Guangzhou Loong Lions', 'Guangzhou', []],
 ]
 
 wnba_teams = [
