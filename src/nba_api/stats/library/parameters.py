@@ -708,6 +708,8 @@ class SeasonType:
     regular = "Regular Season"
     preseason = "Pre Season"
     playin = "PlayIn"
+    nba_cup = "NBA Cup"
+    ist = "IST"
 
     default = regular
 
