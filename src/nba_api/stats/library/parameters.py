@@ -296,6 +296,13 @@ class Historical:
 class HistoricalNullable(_NotRequired, Historical):
     pass
 
+class ISTRound(_NotRequired):
+    pass
+
+
+class ISTRoundNullable(_NotRequired, ISTRound):
+    pass
+
 
 class LastNGames:
     def games(self, i):
@@ -389,6 +396,10 @@ class OutcomeNullable(_NotRequired, Outcome):
     pass
 
 
+class PaceAdjustNullable(_NotRequired, PaceAdjust):
+    pass
+
+
 class PaceAdjust(_YesNo):
     pass
 
@@ -402,6 +413,10 @@ class PlusMinus(_YesNo):
 
 
 class PlusMinusNo(_No):
+    pass
+
+
+class PlusMinusNullable(_NotRequired, PlusMinus):
     pass
 
 
@@ -608,6 +623,10 @@ class Rank(_YesNo):
 
 
 class RankNo(_No):
+    pass
+
+
+class RankNullable(_NotRequired, Rank):
     pass
 
 
