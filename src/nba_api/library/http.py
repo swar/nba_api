@@ -98,7 +98,8 @@ class NBAHTTP:
         self.parameters = parameters
 
         if headers is None:
-            request_headers = self.headers
+            request_headers = self.headers.copy()
+
         else:
             request_headers = headers
 

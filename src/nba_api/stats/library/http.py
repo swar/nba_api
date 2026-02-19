@@ -14,12 +14,15 @@ except ImportError:
         "Accept-Language": "en-US,en;q=0.5",
         "Accept-Encoding": "gzip, deflate, br",
         "Connection": "keep-alive",
-        "Referer": "https://stats.nba.com/",
+        "Origin": "https://www.nba.com",
+        "Referer": "https://www.nba.com/",
         "Pragma": "no-cache",
         "Cache-Control": "no-cache",
         "Sec-Ch-Ua": '"Chromium";v="140", "Google Chrome";v="140", "Not;A=Brand";v="24"',
         "Sec-Ch-Ua-Mobile": "?0",
         "Sec-Fetch-Dest": "empty",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "same-site",
     }
 
 
