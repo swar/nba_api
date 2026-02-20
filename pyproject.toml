@@ -50,7 +50,7 @@ requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^8.3.3"
+pytest = "^9.0.2"
 pytest-cov = "^4.0"
 flake8 = "^7.1.1"
 python-semantic-release = "^9.0.0"
