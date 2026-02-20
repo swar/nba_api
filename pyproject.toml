@@ -1,13 +1,12 @@
 [project]
 name = "nba_api"
-version = "1.11.3"
+version = "1.11.4"
 description = "An API Client package to access the APIs for NBA.com"
 requires-python = ">=3.10"
 license = "MIT"
 authors = [ {name = "Swar Patel", email = "<swar.m.patel@gmail.com>"}]
 maintainers = [
     {name = "Swar Patel", email = "<swar.m.patel@gmail.com>"},
-    {name = "Randy Forbes", email="Randy Forbes <randy.forbes@gmail.com>"},
 ]
 keywords = [
     "api", 
