@@ -53,7 +53,7 @@ build-backend = "poetry.core.masonry.api"
 pytest = "^8.3.3"
 pytest-cov = "^4.0"
 flake8 = "^7.1.1"
-python-semantic-release = "^9.0.0"
+python-semantic-release = "^10.3.1"
 pandas = [
     {version = ">=2.2.0", python = ">=3.12"},
     {version = "<2.2.0", python = "<3.12"} 
