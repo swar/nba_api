@@ -16,6 +16,26 @@
 - `Contributor` (notes on updates to the project)
 
 # Version History
+## v1.11.4
+Date: 2026-02-20
+
+### Added
+* **GravityLeaders** - New endpoint added (PR #626)
+* **`__version__` attribute** - Package now exposes a `__version__` attribute using `importlib.metadata` with `pyproject.toml` as the single source of truth (PR #612)
+
+### Fixed
+* **HTTP Headers** - Updated request headers to fix broken NBA.com API requests caused by an outdated user agent (PR #636)
+* **ContextMeasureSimple** - Removed deprecated `PF` (Personal Fouls) parameter; NBA.com API no longer returns data for this context measure on the `shotchartdetail` endpoint (PR #608, fixes #600)
+
+### Deprecated
+* **PlayByPlayV2** - Added deprecation warning; NBA.com API returns empty JSON for this endpoint. Use **PlayByPlayV3** instead (PR #613, fixes #591)
+* **ScoreboardV2** - Added deprecation warning; returns empty line scores for 2025-26 season games. Use **ScoreboardV3** instead, which is 100% backward compatible (PR #609, fixes #596)
+
+### Contributor
+* Added type hints and docstrings to the `Endpoint` base class and `PlayerCareerStats` endpoint for improved code clarity and IDE support (PR #628)
+* Added `CODEOWNERS` file (PR #627)
+* Corrected typos in contributing guide and README (PR #604)
+
 ## v1.11.3
 Date: 2025-11-13
 
