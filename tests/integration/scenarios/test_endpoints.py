@@ -10,6 +10,8 @@ import pytest
 
 from nba_api.stats import endpoints
 
+from ..helpers import assert_endpoint_instantiates, run_endpoint_test
+
 # Import test case data (one module per endpoint)
 from .data import (
     leaguedashteamstats,
@@ -20,7 +22,6 @@ from .data import (
     teamgamelog,
     teamgamelogs,
 )
-from .helpers import assert_endpoint_instantiates, run_endpoint_test
 
 EXPECTED_OPTION_KEYS = ("min_rows", "max_rows", "exact_rows", "validate_structure")
 
@@ -155,7 +156,7 @@ def test_teamgamelogs(test_case):
 # Template for Adding More Endpoints
 # =============================================================================
 
-# Step 1: Create data file tests/integration/data/leaguegamelog.py:
+# Step 1: Create data file tests/integration/scenarios/data/leaguegamelog.py:
 #   TEST_CASES = [
 #       {
 #           "name": "basic",

@@ -9,7 +9,10 @@ import time
 
 import pytest
 
-from tests.integration.deferred_endpoints import DeferredEndpoint, deferred_endpoints
+from tests.integration.catalogs.deferred_endpoints import (
+    DeferredEndpoint,
+    deferred_endpoints,
+)
 
 
 # This method is passed to test_endpoints so console output will be generated with
