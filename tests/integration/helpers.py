@@ -1,7 +1,7 @@
-"""Shared integration test utilities for scenario endpoint checks.
+"""Shared integration assertion helpers for scenario endpoint tests.
 
-These helpers centralize endpoint invocation, response validation, and common
-assertion behavior used by integration tests.
+Reusable response/structure validation utilities for integration tests.
+Not pytest fixture or hook configuration.
 """
 
 import json

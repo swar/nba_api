@@ -1,8 +1,7 @@
-"""Broad live smoke sweep for stats endpoints.
+"""Integration smoke sweep for stats endpoints.
 
-This module performs a coarse integration check that each deferred endpoint
-call succeeds and returns JSON that parses as valid. It is not a detailed
-behavior or contract test.
+Broad live check: each deferred endpoint call succeeds and returns valid JSON.
+Not a detailed behavior or contract test.
 """
 
 import json

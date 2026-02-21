@@ -1,8 +1,7 @@
-"""Scenario/issue-regression cases for LeagueDashTeamStats integration tests.
+"""Integration scenario cases for LeagueDashTeamStats.
 
-These scenarios represent reported behaviors and regression checks. Prefer
-stable presence/range assertions over brittle exact-value assertions unless
-values are reliably stable.
+Issue/regression-style params and coarse expectations for scenario tests.
+Prefer stable presence/range assertions over brittle exact values.
 """
 
 ENDPOINT_CLASS = "LeagueDashTeamStats"

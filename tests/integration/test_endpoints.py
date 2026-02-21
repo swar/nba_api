@@ -1,8 +1,7 @@
-"""Scenario/issue-regression integration tests for selected stats endpoints.
+"""Integration scenario/issue-regression tests for selected stats endpoints.
 
-These tests cover specific parameter combinations reported by users or captured
-as regressions. This module is not the broad smoke sweep; it focuses on
-scenario-level expectations.
+Covers reported parameter combinations and regression scenarios.
+Not the broad live smoke sweep.
 """
 
 import time

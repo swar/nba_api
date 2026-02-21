@@ -1,9 +1,7 @@
-"""Deferred endpoint catalog for integration smoke coverage.
+"""Integration smoke endpoint catalog.
 
-This module is a curated list of deferred stats endpoint invocations used by the
-integration smoke suite. Keep entries as `DeferredEndpoint(...)` calls with
-representative sample parameters, and append new entries in the appropriate
-section to preserve readability.
+Curated deferred endpoint invocations for broad integration smoke coverage.
+Add new `DeferredEndpoint(...)` entries in the appropriate section.
 """
 
 import nba_api.stats.endpoints as ep
