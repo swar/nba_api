@@ -1,12 +1,15 @@
-"""Test data for TeamDashLineups endpoint."""
+"""Scenario/issue-regression cases for TeamDashLineups integration tests.
 
-# Endpoint class name (PascalCase)
+These scenarios represent reported behaviors and regression checks. Prefer
+stable presence/range assertions over brittle exact-value assertions unless
+values are reliably stable.
+"""
+
 ENDPOINT_CLASS = "TeamDashLineups"
 
-# Test cases
 TEST_CASES = [
     {
-        "description": "Cleveland Cavaliers 5-man lineups 2024-25",
+        "name": "Cleveland Cavaliers 5-man lineups 2024-25",
         "params": {
             "team_id": 1610612739,
             "season": "2024-25",
@@ -15,10 +18,10 @@ TEST_CASES = [
             "measure_type_detailed_defense": "Base",
             "per_mode_detailed": "Totals",
         },
-        "expected": "success",
+        "expected_status": "success",
     },
     {
-        "description": "Lakers 2-man lineups 2023-24",
+        "name": "Lakers 2-man lineups 2023-24",
         "params": {
             "team_id": 1610612747,
             "season": "2023-24",
@@ -27,10 +30,10 @@ TEST_CASES = [
             "measure_type_detailed_defense": "Base",
             "per_mode_detailed": "PerGame",
         },
-        "expected": "has_data",
+        "expected_status": "has_data",
     },
     {
-        "description": "Warriors 3-man lineups playoffs 2023-24",
+        "name": "Warriors 3-man lineups playoffs 2023-24",
         "params": {
             "team_id": 1610612744,
             "season": "2023-24",
@@ -39,10 +42,10 @@ TEST_CASES = [
             "measure_type_detailed_defense": "Advanced",
             "per_mode_detailed": "Totals",
         },
-        "expected": "success",
+        "expected_status": "success",
     },
     {
-        "description": "Celtics 4-man lineups with date range",
+        "name": "Celtics 4-man lineups with date range",
         "params": {
             "team_id": 1610612738,
             "season": "2023-24",
@@ -53,6 +56,6 @@ TEST_CASES = [
             "date_from_nullable": "2024-01-01",
             "date_to_nullable": "2024-03-31",
         },
-        "expected": "has_data",
+        "expected_status": "has_data",
     },
 ]

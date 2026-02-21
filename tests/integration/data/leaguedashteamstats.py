@@ -1,43 +1,45 @@
-"""Test data for LeagueDashTeamStats endpoint."""
+"""Scenario/issue-regression cases for LeagueDashTeamStats integration tests.
 
-# Endpoint class name (PascalCase)
+These scenarios represent reported behaviors and regression checks. Prefer
+stable presence/range assertions over brittle exact-value assertions unless
+values are reliably stable.
+"""
+
 ENDPOINT_CLASS = "LeagueDashTeamStats"
 
-# Test cases
 TEST_CASES = [
     {
-        "description": "Atlanta Hawks 2023-24 regular season (IST bug regression test - should return GP=82)",
+        "name": "Atlanta Hawks 2023-24 regular season (IST bug regression test - should return GP=82)",
         "params": {
             "season": "2023-24",
             "team_id_nullable": "1610612737",
             "season_type_all_star": "Regular Season",
         },
-        "expected": {
-            "status": "success",
-            "min_rows": 1,
-        },
+        "expected_status": "success",
+        "min_rows": 1,
     },
     {
-        "description": "All teams 2024-25 regular season base stats",
+        "name": "All teams 2024-25 regular season base stats",
         "params": {
             "season": "2024-25",
             "season_type_all_star": "Regular Season",
             "measure_type_detailed_defense": "Base",
             "per_mode_detailed": "PerGame",
         },
-        "expected": {"status": "success", "min_rows": 30},
+        "expected_status": "success",
+        "min_rows": 30,
     },
     {
-        "description": "Lakers 2023-24 playoffs",
+        "name": "Lakers 2023-24 playoffs",
         "params": {
             "season": "2023-24",
             "team_id_nullable": "1610612747",
             "season_type_all_star": "Playoffs",
         },
-        "expected": "success",
+        "expected_status": "success",
     },
     {
-        "description": "Warriors 2023-24 advanced stats",
+        "name": "Warriors 2023-24 advanced stats",
         "params": {
             "season": "2023-24",
             "team_id_nullable": "1610612744",
@@ -45,15 +47,16 @@ TEST_CASES = [
             "measure_type_detailed_defense": "Advanced",
             "per_mode_detailed": "PerGame",
         },
-        "expected": "has_data",
+        "expected_status": "has_data",
     },
     {
-        "description": "Eastern Conference 2023-24",
+        "name": "Eastern Conference 2023-24",
         "params": {
             "season": "2023-24",
             "season_type_all_star": "Regular Season",
             "conference_nullable": "East",
         },
-        "expected": {"status": "success", "min_rows": 15},
+        "expected_status": "success",
+        "min_rows": 15,
     },
 ]

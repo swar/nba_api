@@ -1,71 +1,57 @@
-"""
-Test data for TeamGameLogs endpoint.
+"""Scenario/issue-regression cases for TeamGameLogs integration tests.
 
-GitHub Issues:
-- Endpoint was retired in v1.11.0 but is now working again (restored in v1.11.3)
-
-Key Differences from TeamGameLog:
-- TeamGameLog: Single team, required team_id parameter
-- TeamGameLogs: Multiple teams, optional team_id_nullable parameter
-- TeamGameLogs: Includes rank fields (_RANK) for all statistics
-- TeamGameLogs: More filtering options (conference, division, measure type)
-
-Expected response formats:
-- String: "success" | "has_data" | "empty" | "error"
-- Dict: {"status": "success", "min_rows": 1, "max_rows": 100}
+These scenarios represent reported behaviors and regression checks. Prefer
+stable presence/range assertions over brittle exact-value assertions unless
+values are reliably stable.
 """
 
-# Endpoint class name
 ENDPOINT_CLASS = "TeamGameLogs"
 
-# Test cases
 TEST_CASES = [
     {
-        "description": "Lakers 2023-24 regular season",
+        "name": "Lakers 2023-24 regular season",
         "params": {
             "team_id_nullable": "1610612747",
             "season_nullable": "2023-24",
             "season_type_nullable": "Regular Season",
         },
-        "expected": {
-            "status": "has_data",
-            "validate_structure": True,  # Enable strict validation
-        },
+        "expected_status": "has_data",
+        "validate_structure": True,
     },
     {
-        "description": "All teams - last game only",
+        "name": "All teams - last game only",
         "params": {
             "season_nullable": "2024-25",
             "season_type_nullable": "Regular Season",
             "last_n_games_nullable": "1",
         },
-        "expected": "has_data",  # Should return ~30 games (one per team)
+        "expected_status": "has_data",
     },
     {
-        "description": "Home games only",
+        "name": "Home games only",
         "params": {
             "team_id_nullable": "1610612747",
             "season_nullable": "2023-24",
             "location_nullable": "Home",
         },
-        "expected": "has_data",  # Should return ~41 home games
+        "expected_status": "has_data",
     },
     {
-        "description": "Wins only",
+        "name": "Wins only",
         "params": {
             "team_id_nullable": "1610612747",
             "season_nullable": "2023-24",
             "outcome_nullable": "W",
         },
-        "expected": "has_data",  # Should return only winning games
+        "expected_status": "has_data",
     },
     {
-        "description": "Eastern Conference opponents",
+        "name": "Eastern Conference opponents",
         "params": {
-            "team_id_nullable": "1610612747",  # Lakers (West)
+            "team_id_nullable": "1610612747",
             "season_nullable": "2023-24",
             "vs_conference_nullable": "East",
         },
-        "expected": "has_data",  # Games vs Eastern Conference
+        "expected_status": "has_data",
     },
 ]

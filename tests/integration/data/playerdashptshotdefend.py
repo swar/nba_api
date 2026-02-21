@@ -1,38 +1,31 @@
-"""
-Test data for PlayerDashPtShotDefend endpoint.
+"""Scenario/issue-regression cases for PlayerDashPtShotDefend integration tests.
 
-GitHub Issues:
-- User reports: "team_id requirement needs to be taken off"
-- User reports: "returns empty for certain seasons"
-
-Expected response formats:
-- String: "success" | "has_data" | "empty" | "error"
-- Dict: {"status": "success", "min_rows": 1, "max_rows": 100}
+These scenarios represent reported behaviors and regression checks. Prefer
+stable presence/range assertions over brittle exact-value assertions unless
+values are reliably stable.
 """
 
-# Endpoint class name
 ENDPOINT_CLASS = "PlayerDashPtShotDefend"
 
-# Test cases
 TEST_CASES = [
     {
-        "description": "Basic test - LeBron 2023-24 Lakers",
+        "name": "Basic test - LeBron 2023-24 Lakers",
         "params": {"player_id": "2544", "team_id": 1610612747, "season": "2023-24"},
-        "expected": "success",  # Endpoint should work
+        "expected_status": "success",
     },
     {
-        "description": "Team ID zero - all teams",
+        "name": "Team ID zero - all teams",
         "params": {"player_id": "2544", "team_id": 0, "season": "2023-24"},
-        "expected": "has_data",  # Returns data for all teams
+        "expected_status": "has_data",
     },
     {
-        "description": "Playoffs 2023-24",
+        "name": "Playoffs 2023-24",
         "params": {
             "player_id": "2544",
             "team_id": 1610612747,
             "season": "2023-24",
             "season_type_all_star": "Playoffs",
         },
-        "expected": "success",
+        "expected_status": "success",
     },
 ]
