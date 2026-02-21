@@ -159,7 +159,7 @@ eval $(poetry env activate)
 
 ### 5. Set Up Pre-Commit Hooks
 
-This project uses [pre-commit](https://pre-commit.com/) to automatically lint and format code before each commit using [ruff](https://docs.astral.sh/ruff/).
+This project uses [pre-commit](https://pre-commit.com/) to automatically lint and format code before each commit using [Ruff](https://docs.astral.sh/ruff/).
 
 ```bash
 # Install the git hooks (only needed once per clone)
