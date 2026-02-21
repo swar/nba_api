@@ -62,6 +62,12 @@ pre-commit = "^4.0.0"
 
 [tool.pytest.ini_options]
 testpaths = "./tests/unit/"
+markers = [
+    "live",
+    "vcr",
+    "canary",
+    "deprecated_endpoint",
+]
 
 [tool.ruff]
 line-length = 88
