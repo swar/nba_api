@@ -35,11 +35,13 @@ class NBAStatsScoreboardV3Parser:
         Returns:
             List containing one row with scoreboard info
         """
-        return [[
-            self.scoreboard.get("gameDate"),
-            self.scoreboard.get("leagueId"),
-            self.scoreboard.get("leagueName"),
-        ]]
+        return [
+            [
+                self.scoreboard.get("gameDate"),
+                self.scoreboard.get("leagueId"),
+                self.scoreboard.get("leagueName"),
+            ]
+        ]
 
     def get_game_header_headers(self):
         """Get headers for game-level information.
@@ -78,26 +80,28 @@ class NBAStatsScoreboardV3Parser:
         data = []
 
         for game in games:
-            data.append([
-                game.get("gameId"),
-                game.get("gameCode"),
-                game.get("gameStatus"),
-                game.get("gameStatusText"),
-                game.get("period"),
-                game.get("gameClock"),
-                game.get("gameTimeUTC"),
-                game.get("gameEt"),
-                game.get("regulationPeriods"),
-                game.get("seriesGameNumber"),
-                game.get("gameLabel"),
-                game.get("gameSubLabel"),
-                game.get("seriesText"),
-                game.get("ifNecessary"),
-                game.get("seriesConference"),
-                game.get("poRoundDesc"),
-                game.get("gameSubtype"),
-                game.get("isNeutral"),
-            ])
+            data.append(
+                [
+                    game.get("gameId"),
+                    game.get("gameCode"),
+                    game.get("gameStatus"),
+                    game.get("gameStatusText"),
+                    game.get("period"),
+                    game.get("gameClock"),
+                    game.get("gameTimeUTC"),
+                    game.get("gameEt"),
+                    game.get("regulationPeriods"),
+                    game.get("seriesGameNumber"),
+                    game.get("gameLabel"),
+                    game.get("gameSubLabel"),
+                    game.get("seriesText"),
+                    game.get("ifNecessary"),
+                    game.get("seriesConference"),
+                    game.get("poRoundDesc"),
+                    game.get("gameSubtype"),
+                    game.get("isNeutral"),
+                ]
+            )
 
         return data
 
@@ -136,37 +140,41 @@ class NBAStatsScoreboardV3Parser:
 
             # Home team
             home_team = game.get("homeTeam", {})
-            data.append([
-                game_id,
-                home_team.get("teamId"),
-                home_team.get("teamCity"),
-                home_team.get("teamName"),
-                home_team.get("teamTricode"),
-                home_team.get("teamSlug"),
-                home_team.get("wins"),
-                home_team.get("losses"),
-                home_team.get("score"),
-                home_team.get("seed"),
-                home_team.get("inBonus"),
-                home_team.get("timeoutsRemaining"),
-            ])
+            data.append(
+                [
+                    game_id,
+                    home_team.get("teamId"),
+                    home_team.get("teamCity"),
+                    home_team.get("teamName"),
+                    home_team.get("teamTricode"),
+                    home_team.get("teamSlug"),
+                    home_team.get("wins"),
+                    home_team.get("losses"),
+                    home_team.get("score"),
+                    home_team.get("seed"),
+                    home_team.get("inBonus"),
+                    home_team.get("timeoutsRemaining"),
+                ]
+            )
 
             # Away team
             away_team = game.get("awayTeam", {})
-            data.append([
-                game_id,
-                away_team.get("teamId"),
-                away_team.get("teamCity"),
-                away_team.get("teamName"),
-                away_team.get("teamTricode"),
-                away_team.get("teamSlug"),
-                away_team.get("wins"),
-                away_team.get("losses"),
-                away_team.get("score"),
-                away_team.get("seed"),
-                away_team.get("inBonus"),
-                away_team.get("timeoutsRemaining"),
-            ])
+            data.append(
+                [
+                    game_id,
+                    away_team.get("teamId"),
+                    away_team.get("teamCity"),
+                    away_team.get("teamName"),
+                    away_team.get("teamTricode"),
+                    away_team.get("teamSlug"),
+                    away_team.get("wins"),
+                    away_team.get("losses"),
+                    away_team.get("score"),
+                    away_team.get("seed"),
+                    away_team.get("inBonus"),
+                    away_team.get("timeoutsRemaining"),
+                ]
+            )
 
         return data
 
@@ -208,39 +216,43 @@ class NBAStatsScoreboardV3Parser:
             home_leader = game_leaders.get("homeLeaders", {})
             if home_leader:
                 home_team = game.get("homeTeam", {})
-                data.append([
-                    game_id,
-                    home_team.get("teamId"),
-                    "home",
-                    home_leader.get("personId"),
-                    home_leader.get("name"),
-                    home_leader.get("playerSlug"),
-                    home_leader.get("jerseyNum"),
-                    home_leader.get("position"),
-                    home_leader.get("teamTricode"),
-                    home_leader.get("points"),
-                    home_leader.get("rebounds"),
-                    home_leader.get("assists"),
-                ])
+                data.append(
+                    [
+                        game_id,
+                        home_team.get("teamId"),
+                        "home",
+                        home_leader.get("personId"),
+                        home_leader.get("name"),
+                        home_leader.get("playerSlug"),
+                        home_leader.get("jerseyNum"),
+                        home_leader.get("position"),
+                        home_leader.get("teamTricode"),
+                        home_leader.get("points"),
+                        home_leader.get("rebounds"),
+                        home_leader.get("assists"),
+                    ]
+                )
 
             # Away leader
             away_leader = game_leaders.get("awayLeaders", {})
             if away_leader:
                 away_team = game.get("awayTeam", {})
-                data.append([
-                    game_id,
-                    away_team.get("teamId"),
-                    "away",
-                    away_leader.get("personId"),
-                    away_leader.get("name"),
-                    away_leader.get("playerSlug"),
-                    away_leader.get("jerseyNum"),
-                    away_leader.get("position"),
-                    away_leader.get("teamTricode"),
-                    away_leader.get("points"),
-                    away_leader.get("rebounds"),
-                    away_leader.get("assists"),
-                ])
+                data.append(
+                    [
+                        game_id,
+                        away_team.get("teamId"),
+                        "away",
+                        away_leader.get("personId"),
+                        away_leader.get("name"),
+                        away_leader.get("playerSlug"),
+                        away_leader.get("jerseyNum"),
+                        away_leader.get("position"),
+                        away_leader.get("teamTricode"),
+                        away_leader.get("points"),
+                        away_leader.get("rebounds"),
+                        away_leader.get("assists"),
+                    ]
+                )
 
         return data
 
@@ -283,41 +295,45 @@ class NBAStatsScoreboardV3Parser:
             home_leader = team_leaders.get("homeLeaders", {})
             if home_leader:
                 home_team = game.get("homeTeam", {})
-                data.append([
-                    game_id,
-                    home_team.get("teamId"),
-                    "home",
-                    home_leader.get("personId"),
-                    home_leader.get("name"),
-                    home_leader.get("playerSlug"),
-                    home_leader.get("jerseyNum"),
-                    home_leader.get("position"),
-                    home_leader.get("teamTricode"),
-                    home_leader.get("points"),
-                    home_leader.get("rebounds"),
-                    home_leader.get("assists"),
-                    team_leaders.get("seasonLeadersFlag"),
-                ])
+                data.append(
+                    [
+                        game_id,
+                        home_team.get("teamId"),
+                        "home",
+                        home_leader.get("personId"),
+                        home_leader.get("name"),
+                        home_leader.get("playerSlug"),
+                        home_leader.get("jerseyNum"),
+                        home_leader.get("position"),
+                        home_leader.get("teamTricode"),
+                        home_leader.get("points"),
+                        home_leader.get("rebounds"),
+                        home_leader.get("assists"),
+                        team_leaders.get("seasonLeadersFlag"),
+                    ]
+                )
 
             # Away team leader
             away_leader = team_leaders.get("awayLeaders", {})
             if away_leader:
                 away_team = game.get("awayTeam", {})
-                data.append([
-                    game_id,
-                    away_team.get("teamId"),
-                    "away",
-                    away_leader.get("personId"),
-                    away_leader.get("name"),
-                    away_leader.get("playerSlug"),
-                    away_leader.get("jerseyNum"),
-                    away_leader.get("position"),
-                    away_leader.get("teamTricode"),
-                    away_leader.get("points"),
-                    away_leader.get("rebounds"),
-                    away_leader.get("assists"),
-                    team_leaders.get("seasonLeadersFlag"),
-                ])
+                data.append(
+                    [
+                        game_id,
+                        away_team.get("teamId"),
+                        "away",
+                        away_leader.get("personId"),
+                        away_leader.get("name"),
+                        away_leader.get("playerSlug"),
+                        away_leader.get("jerseyNum"),
+                        away_leader.get("position"),
+                        away_leader.get("teamTricode"),
+                        away_leader.get("points"),
+                        away_leader.get("rebounds"),
+                        away_leader.get("assists"),
+                        team_leaders.get("seasonLeadersFlag"),
+                    ]
+                )
 
         return data
 
@@ -364,14 +380,16 @@ class NBAStatsScoreboardV3Parser:
             for api_field, broadcaster_type in broadcaster_types:
                 broadcaster_list = broadcasters.get(api_field, [])
                 for broadcaster in broadcaster_list:
-                    data.append([
-                        game_id,
-                        broadcaster_type,
-                        broadcaster.get("broadcasterId"),
-                        broadcaster.get("broadcastDisplay"),
-                        broadcaster.get("broadcasterTeamId"),
-                        broadcaster.get("broadcasterDescription"),
-                    ])
+                    data.append(
+                        [
+                            game_id,
+                            broadcaster_type,
+                            broadcaster.get("broadcasterId"),
+                            broadcaster.get("broadcastDisplay"),
+                            broadcaster.get("broadcasterTeamId"),
+                            broadcaster.get("broadcasterDescription"),
+                        ]
+                    )
 
         return data
 

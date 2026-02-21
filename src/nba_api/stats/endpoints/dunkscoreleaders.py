@@ -7,9 +7,9 @@ scores, and style metrics for every dunk.
 
 Example:
     >>> from nba_api.stats.endpoints import DunkScoreLeaders
-    >>> dunks = DunkScoreLeaders(season='2024-25')
+    >>> dunks = DunkScoreLeaders(season="2024-25")
     >>> df = dunks.dunks.get_data_frame()
-    >>> print(df[['PLAYER_NAME', 'DUNK_SCORE', 'PLAYER_VERTICAL']].head())
+    >>> print(df[["PLAYER_NAME", "DUNK_SCORE", "PLAYER_VERTICAL"]].head())
 """
 
 from nba_api.stats.endpoints._base import Endpoint
@@ -48,16 +48,15 @@ class DunkScoreLeaders(Endpoint):
     Example:
         >>> from nba_api.stats.endpoints import DunkScoreLeaders
         >>> # Get all dunks for 2024-25 season
-        >>> dunks = DunkScoreLeaders(season='2024-25')
+        >>> dunks = DunkScoreLeaders(season="2024-25")
         >>> df = dunks.dunks.get_data_frame()
         >>>
         >>> # Filter by specific player
         >>> player_dunks = DunkScoreLeaders(
-        ...     season='2024-25',
-        ...     player_id_nullable='1630168'
+        ...     season="2024-25", player_id_nullable="1630168"
         ... )
         >>> df = player_dunks.dunks.get_data_frame()
-        >>> print(df[['PLAYER_NAME', 'DUNK_SCORE', 'PLAYER_VERTICAL', 'HANG_TIME']])
+        >>> print(df[["PLAYER_NAME", "DUNK_SCORE", "PLAYER_VERTICAL", "HANG_TIME"]])
     """
 
     endpoint = "dunkscoreleaders"

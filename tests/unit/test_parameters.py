@@ -1,13 +1,14 @@
-from nba_api.stats.library.parameters import (
-    Season, 
-    SeasonType, 
-    SeasonTypePlayoffs, 
-    SeasonTypeAllStar, 
-    SeasonTypeNullable,
-    SeasonTypeAllStarNullable,
-    _NotRequired
-)
 import re
+
+from nba_api.stats.library.parameters import (
+    Season,
+    SeasonType,
+    SeasonTypeAllStar,
+    SeasonTypeAllStarNullable,
+    SeasonTypeNullable,
+    SeasonTypePlayoffs,
+    _NotRequired,
+)
 
 
 def test_season():
@@ -19,11 +20,11 @@ def test_season_type_base():
     assert SeasonType.preseason == "Pre Season"
     assert SeasonType.playin == "PlayIn"
     assert SeasonType.default == "Regular Season"
-    assert hasattr(SeasonType, 'regular')
-    assert hasattr(SeasonType, 'preseason')
-    assert hasattr(SeasonType, 'playin')
-    assert not hasattr(SeasonType, 'playoffs')
-    assert not hasattr(SeasonType, 'all_star')
+    assert hasattr(SeasonType, "regular")
+    assert hasattr(SeasonType, "preseason")
+    assert hasattr(SeasonType, "playin")
+    assert not hasattr(SeasonType, "playoffs")
+    assert not hasattr(SeasonType, "all_star")
 
 
 def test_season_type_playoffs():
@@ -32,11 +33,11 @@ def test_season_type_playoffs():
     assert SeasonTypePlayoffs.playoffs == "Playoffs"
     assert SeasonTypePlayoffs.playin == "PlayIn"
     assert SeasonTypePlayoffs.default == "Regular Season"
-    assert hasattr(SeasonTypePlayoffs, 'regular')
-    assert hasattr(SeasonTypePlayoffs, 'preseason')
-    assert hasattr(SeasonTypePlayoffs, 'playoffs')
-    assert hasattr(SeasonTypePlayoffs, 'playin')
-    assert not hasattr(SeasonTypePlayoffs, 'all_star')
+    assert hasattr(SeasonTypePlayoffs, "regular")
+    assert hasattr(SeasonTypePlayoffs, "preseason")
+    assert hasattr(SeasonTypePlayoffs, "playoffs")
+    assert hasattr(SeasonTypePlayoffs, "playin")
+    assert not hasattr(SeasonTypePlayoffs, "all_star")
 
 
 def test_season_type_all_star():
@@ -46,11 +47,11 @@ def test_season_type_all_star():
     assert SeasonTypeAllStar.playin == "PlayIn"
     assert SeasonTypeAllStar.all_star == "All Star"
     assert SeasonTypeAllStar.default == "Regular Season"
-    assert hasattr(SeasonTypeAllStar, 'regular')
-    assert hasattr(SeasonTypeAllStar, 'preseason')
-    assert hasattr(SeasonTypeAllStar, 'playoffs')
-    assert hasattr(SeasonTypeAllStar, 'playin')
-    assert hasattr(SeasonTypeAllStar, 'all_star')
+    assert hasattr(SeasonTypeAllStar, "regular")
+    assert hasattr(SeasonTypeAllStar, "preseason")
+    assert hasattr(SeasonTypeAllStar, "playoffs")
+    assert hasattr(SeasonTypeAllStar, "playin")
+    assert hasattr(SeasonTypeAllStar, "all_star")
 
 
 def test_season_type_nullable():
@@ -60,12 +61,12 @@ def test_season_type_nullable():
     assert SeasonTypeNullable.playin == "PlayIn"
     assert SeasonTypeNullable.none == ""
     assert SeasonTypeNullable.default == ""
-    assert hasattr(SeasonTypeNullable, 'regular')
-    assert hasattr(SeasonTypeNullable, 'preseason')
-    assert hasattr(SeasonTypeNullable, 'playoffs')
-    assert hasattr(SeasonTypeNullable, 'playin')
-    assert hasattr(SeasonTypeNullable, 'none')
-    assert not hasattr(SeasonTypeNullable, 'all_star')
+    assert hasattr(SeasonTypeNullable, "regular")
+    assert hasattr(SeasonTypeNullable, "preseason")
+    assert hasattr(SeasonTypeNullable, "playoffs")
+    assert hasattr(SeasonTypeNullable, "playin")
+    assert hasattr(SeasonTypeNullable, "none")
+    assert not hasattr(SeasonTypeNullable, "all_star")
 
 
 def test_season_type_all_star_nullable():
@@ -75,12 +76,12 @@ def test_season_type_all_star_nullable():
     assert SeasonTypeAllStarNullable.playin == "PlayIn"
     assert SeasonTypeAllStarNullable.none == ""
     assert SeasonTypeAllStarNullable.default == ""
-    assert hasattr(SeasonTypeAllStarNullable, 'regular')
-    assert hasattr(SeasonTypeAllStarNullable, 'preseason')
-    assert hasattr(SeasonTypeAllStarNullable, 'playoffs')
-    assert hasattr(SeasonTypeAllStarNullable, 'playin')
-    assert hasattr(SeasonTypeAllStarNullable, 'none')
-    assert not hasattr(SeasonTypeAllStarNullable, 'all_star')
+    assert hasattr(SeasonTypeAllStarNullable, "regular")
+    assert hasattr(SeasonTypeAllStarNullable, "preseason")
+    assert hasattr(SeasonTypeAllStarNullable, "playoffs")
+    assert hasattr(SeasonTypeAllStarNullable, "playin")
+    assert hasattr(SeasonTypeAllStarNullable, "none")
+    assert not hasattr(SeasonTypeAllStarNullable, "all_star")
 
 
 def test_season_type_inheritance():

@@ -1,5 +1,7 @@
-import pytest
 import json
+
+import pytest
+
 from nba_api.library.http import NBAHTTP, NBAResponse
 from nba_api.live.nba.endpoints import boxscore
 from nba_api.live.nba.library.http import NBALiveHTTP
@@ -464,7 +466,7 @@ game_id = "0022000180"
 
 @pytest.fixture
 def nba_http_patch(monkeypatch):
-    class MockResponse(object):
+    class MockResponse:
         def __init__(*args, **kwargs):
             pass
 

@@ -15,7 +15,7 @@ TEST_CASES = [
         "expected": {
             "status": "success",
             "min_rows": 1,
-        }
+        },
     },
     {
         "description": "All teams 2024-25 regular season base stats",
@@ -25,10 +25,7 @@ TEST_CASES = [
             "measure_type_detailed_defense": "Base",
             "per_mode_detailed": "PerGame",
         },
-        "expected": {
-            "status": "success",
-            "min_rows": 30
-        }
+        "expected": {"status": "success", "min_rows": 30},
     },
     {
         "description": "Lakers 2023-24 playoffs",
@@ -37,7 +34,7 @@ TEST_CASES = [
             "team_id_nullable": "1610612747",
             "season_type_all_star": "Playoffs",
         },
-        "expected": "success"
+        "expected": "success",
     },
     {
         "description": "Warriors 2023-24 advanced stats",
@@ -48,7 +45,7 @@ TEST_CASES = [
             "measure_type_detailed_defense": "Advanced",
             "per_mode_detailed": "PerGame",
         },
-        "expected": "has_data"
+        "expected": "has_data",
     },
     {
         "description": "Eastern Conference 2023-24",
@@ -57,9 +54,6 @@ TEST_CASES = [
             "season_type_all_star": "Regular Season",
             "conference_nullable": "East",
         },
-        "expected": {
-            "status": "success",
-            "min_rows": 15
-        }
+        "expected": {"status": "success", "min_rows": 15},
     },
 ]

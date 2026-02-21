@@ -1,23 +1,24 @@
-import sys
 import inspect
+import sys
+
+from nba_api.stats.library import parameters
+from tools.library.file_handler import get_file_path, save_file
+from tools.stats.library.mapping import parameter_map, parameter_variations
 
 from .template import (
     header_template,
     regex_pattern_body_template,
     regex_pattern_line_template,
+    variable_body_template,
+    variable_line_template,
 )
-from .template import variable_body_template, variable_line_template
-
-from nba_api.stats.library import parameters
-from tools.library.file_handler import save_file, get_file_path
-from tools.stats.library.mapping import parameter_map, parameter_variations
 
 
 def _get_class_information(cls, variable_names_to_exclude=None):
     if not variable_names_to_exclude:
         variable_names_to_exclude = []
     variables = []
-    default = getattr(cls, "default")
+    default = cls.default
     for var in dir(cls):
         variable = {}
 
@@ -28,7 +29,7 @@ def _get_class_information(cls, variable_names_to_exclude=None):
         is_function = False
         if inspect.isfunction(var):
             is_function = True
-            var_name = "{var_name}()".format(var_name=var_name)
+            var_name = f"{var_name}()"
 
         default_value = getattr(cls, var)
         variable["name"] = var_name
@@ -97,12 +98,9 @@ def _get_variable_table_from_library_class(library_class):
             additional_tags.append("`default` ")
         if is_function:
             additional_tags.append("`function` ")
-        if additional_tags:
-            additional_tags = " ".join(additional_tags)
-        else:
-            additional_tags = ""
+        additional_tags = " ".join(additional_tags) if additional_tags else ""
         if callable(value):
-            value = "{}()".format(name)
+            value = f"{name}()"
         variable_line = variable_line_template.format(
             name=name, value=value, additional_tags=additional_tags
         ).replace("``", "")

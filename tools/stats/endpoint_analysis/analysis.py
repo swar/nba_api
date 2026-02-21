@@ -1,18 +1,23 @@
-import re
 import json
+import re
 import threading
 import time
-
-from nba_api.stats.library.http import NBAStatsHTTP
-from nba_api.stats.library.parameters import *
-
 from datetime import datetime
 
-from tools.library.file_handler import load_file, save_file, get_file_path
+from nba_api.stats.library.http import NBAStatsHTTP
+from nba_api.stats.library.parameters import (
+    ContextMeasureSimple,
+    LeagueID,
+    PerModeSimple,
+    Season,
+    SeasonType,
+    SeasonYear,
+)
+from tools.library.file_handler import get_file_path, load_file, save_file
 from tools.stats.library.mapping import (
     endpoint_list,
-    parameter_variations,
     parameter_map,
+    parameter_variations,
 )
 
 missing_parameter_regex = r"^\s*?(?:The value '[^']+' is not valid for |The )?([A-z0-9]+( Scope| Category)?)(?: Year)?\s*(?:property (?:is|are) required\.?| (?:is|are) required\.?(?:,? pass 0 for (?:default|all teams))?|\.)$"
@@ -136,14 +141,16 @@ def get_patterns_from_response(nba_stats_response):
         elif invalid_parameter_match:
             prop = invalid_parameter_match.group(1)
             prop = prop.replace(" ", "")
-        elif match in [
-            " Invalid date",
-            "<Error><Message>An error has occurred.</Message></Error>",
-            "Invalid game date",
-            " Invalid game date",
-        ]:
-            pass
-        elif nba_stats_response.valid_json():
+        elif (
+            match
+            in [
+                " Invalid date",
+                "<Error><Message>An error has occurred.</Message></Error>",
+                "Invalid game date",
+                " Invalid game date",
+            ]
+            or nba_stats_response.valid_json()
+        ):
             pass
         elif (
             not parameter_regex_match
@@ -216,7 +223,7 @@ def required_parameters_test(endpoint):
             required_params[prop] = parameter_info["parameter_value"]
             required_params_errors[prop] = parameter_info["parameter_error_value"]
         else:
-            print('Property "{prop}" not in parameter_map'.format(prop=prop))
+            print(f'Property "{prop}" not in parameter_map')
             status = "invalid"
             required_params[prop] = "0"
             required_params_errors[prop] = "a"
@@ -243,7 +250,7 @@ def minimal_requirement_tests(endpoint, required_params, pause=1):
             nba_stats_response=nba_stats_response
         )
         # Overwrites param with parameter patterns on mismatches.
-        for prop in required_params.keys():
+        for prop in required_params:
             if prop in parameter_patterns:
                 pattern = parameter_patterns[prop]
                 if pattern in parameter_map[prop]["non-nullable"]:
@@ -294,7 +301,7 @@ def minimal_requirement_tests(endpoint, required_params, pause=1):
                 nullable_parameters.append(parameter)
 
         for parameter in all_parameters:
-            if parameter in response_parameters.keys():
+            if parameter in response_parameters:
                 continue
             if (
                 endpoint in missing_required_parameters
@@ -365,7 +372,7 @@ def nullable_parameters_test(endpoint, all_parameters):
                 nullable_parameters.append(parameter)
 
         for parameter in all_parameters:
-            if parameter in response_parameters.keys():
+            if parameter in response_parameters:
                 continue
             if (
                 parameter in missing_required_parameters[endpoint]
@@ -536,8 +543,8 @@ def load_endpoint_file(file_path=None, file_name="analysis.json"):
         )
     except FileNotFoundError:
         endpoints_information = {}
-    except ValueError:
-        raise Exception("Endpoint file is not in valid a JSON format.")
+    except ValueError as e:
+        raise Exception("Endpoint file is not in valid a JSON format.") from e
 
     return endpoints_information
 
@@ -570,7 +577,7 @@ def analyze_and_save_all_endpoints(
                 save_file(file_path=file_path, file_name=file_name, contents=contents)
                 print(endpoint_analysis["status"], endpoint)
                 break
-            except:
+            except Exception:
                 pass
 
 
@@ -580,7 +587,7 @@ def analyze_endpoint_with_attempts(endpoint, pause=1, attempts=5):
         attempt += 1
         try:
             return analyze_endpoint(endpoint=endpoint, pause=pause)
-        except:
+        except Exception:
             pass
 
 
@@ -590,7 +597,7 @@ def analyze_all_endpoints_with_threading(endpoints=endpoint_list, pause=1):
     for endpoint in endpoints:
         t = threading.Thread(
             target=analyze_endpoint_with_attempts,
-            kwargs=dict(endpoint=endpoint, pause=pause, attempts=10),
+            kwargs={"endpoint": endpoint, "pause": pause, "attempts": 10},
         )
         threads[endpoint] = t
         t.start()

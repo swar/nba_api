@@ -67,10 +67,11 @@ def to_snake_case(name):
         PlayerStats -> player_stats
     """
     import re
+
     # Insert underscore before uppercase letters (except at start)
-    s1 = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', name)
+    s1 = re.sub("(.)([A-Z][a-z]+)", r"\1_\2", name)
     # Insert underscore before uppercase letters followed by lowercase
-    s2 = re.sub('([a-z0-9])([A-Z])', r'\1_\2', s1)
+    s2 = re.sub("([a-z0-9])([A-Z])", r"\1_\2", s1)
     return s2.lower()
 
 
@@ -167,26 +168,19 @@ def _validate_row_counts(expected_dict, total_rows):
     Returns:
         bool: True if validation passed, False otherwise
     """
-    if "min_rows" in expected_dict:
-        if total_rows < expected_dict["min_rows"]:
-            logger.error(
-                f"Expected min {expected_dict['min_rows']} rows, got {total_rows}"
-            )
-            return False
+    if "min_rows" in expected_dict and total_rows < expected_dict["min_rows"]:
+        logger.error(f"Expected min {expected_dict['min_rows']} rows, got {total_rows}")
+        return False
 
-    if "max_rows" in expected_dict:
-        if total_rows > expected_dict["max_rows"]:
-            logger.error(
-                f"Expected max {expected_dict['max_rows']} rows, got {total_rows}"
-            )
-            return False
+    if "max_rows" in expected_dict and total_rows > expected_dict["max_rows"]:
+        logger.error(f"Expected max {expected_dict['max_rows']} rows, got {total_rows}")
+        return False
 
-    if "exact_rows" in expected_dict:
-        if total_rows != expected_dict["exact_rows"]:
-            logger.error(
-                f"Expected exactly {expected_dict['exact_rows']} rows, got {total_rows}"
-            )
-            return False
+    if "exact_rows" in expected_dict and total_rows != expected_dict["exact_rows"]:
+        logger.error(
+            f"Expected exactly {expected_dict['exact_rows']} rows, got {total_rows}"
+        )
+        return False
 
     return True
 
@@ -271,7 +265,7 @@ def validate_dataset_structure(endpoint):
 
     # Gather actual dataset names and columns
     if hasattr(endpoint, "data_sets") and endpoint.data_sets:
-        for dataset_name, expected_columns in expected_datasets.items():
+        for dataset_name, _expected_columns in expected_datasets.items():
             # Try to get the dataset by name (as an attribute)
             # Convert PascalCase/camelCase to snake_case
             dataset_attr_name = to_snake_case(dataset_name)
@@ -296,9 +290,7 @@ def validate_dataset_structure(endpoint):
         # Check for missing columns
         missing_columns = set(expected_columns) - set(actual_columns)
         if missing_columns:
-            logger.error(
-                f"Dataset '{dataset_name}' missing columns: {missing_columns}"
-            )
+            logger.error(f"Dataset '{dataset_name}' missing columns: {missing_columns}")
             return False
 
         # Check for extra columns (warning only, not a failure)
@@ -399,7 +391,7 @@ def test_playerdashptshotdefend(test_case):
     run_endpoint_test(
         endpoints.PlayerDashPtShotDefend,
         test_case["params"],
-        test_case.get("expected", "success")
+        test_case.get("expected", "success"),
     )
 
 
@@ -419,7 +411,7 @@ def test_scoreboardv3(test_case):
     run_endpoint_test(
         endpoints.ScoreboardV3,
         test_case["params"],
-        test_case.get("expected", "success")
+        test_case.get("expected", "success"),
     )
 
 
@@ -439,7 +431,7 @@ def test_leaguedashteamstats(test_case):
     run_endpoint_test(
         endpoints.LeagueDashTeamStats,
         test_case["params"],
-        test_case.get("expected", "success")
+        test_case.get("expected", "success"),
     )
 
 
@@ -459,7 +451,7 @@ def test_teamdashlineups(test_case):
     run_endpoint_test(
         endpoints.TeamDashLineups,
         test_case["params"],
-        test_case.get("expected", "success")
+        test_case.get("expected", "success"),
     )
 
 
@@ -479,7 +471,7 @@ def test_leaguegamefinder(test_case):
     run_endpoint_test(
         endpoints.LeagueGameFinder,
         test_case["params"],
-        test_case.get("expected", "success")
+        test_case.get("expected", "success"),
     )
 
 
@@ -497,9 +489,7 @@ def test_teamgamelog(test_case):
     """Test TeamGameLog with various parameter combinations."""
     time.sleep(0.6)  # Rate limiting
     run_endpoint_test(
-        endpoints.TeamGameLog,
-        test_case["params"],
-        test_case.get("expected", "success")
+        endpoints.TeamGameLog, test_case["params"], test_case.get("expected", "success")
     )
 
 
@@ -519,7 +509,7 @@ def test_teamgamelogs(test_case):
     run_endpoint_test(
         endpoints.TeamGameLogs,
         test_case["params"],
-        test_case.get("expected", "success")
+        test_case.get("expected", "success"),
     )
 
 

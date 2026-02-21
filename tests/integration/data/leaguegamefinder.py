@@ -46,7 +46,7 @@ TEST_CASES = [
         # Despite specifying game_id, API returns all 2023-24 regular season games
         "expected": {"status": "success", "min_rows": 1000},
         "notes": "game_id_nullable parameter is ignored by NBA API. "
-                 "Client-side filtering required: df[df['GAME_ID'] == '0022301181']",
+        "Client-side filtering required: df[df['GAME_ID'] == '0022301181']",
     },
     {
         "description": "Player search - LeBron James",
@@ -84,7 +84,7 @@ TEST_CASES = [
         },
         "expected": {"status": "success", "min_rows": 400, "max_rows": 500},
         "notes": "DateFrom/DateTo parameters correctly filter by date range. "
-                 "Returns ~444 games for January 2021. DateBegin/DateEnd do NOT work.",
+        "Returns ~444 games for January 2021. DateBegin/DateEnd do NOT work.",
     },
     {
         "description": "Date range with season filter",

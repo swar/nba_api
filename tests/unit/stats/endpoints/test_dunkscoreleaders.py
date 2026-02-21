@@ -1,16 +1,17 @@
 """Unit tests for DunkScoreLeaders endpoint."""
 
-from typing import Any, Dict
+from typing import Any
 from unittest.mock import Mock, patch
 
 import pytest
 
 from nba_api.stats.endpoints import DunkScoreLeaders
+
 from .data.dunkscoreleaders import DUNKSCORELEADERS_SAMPLE
 
 
 @pytest.fixture
-def json_fixture() -> Dict[str, Any]:
+def json_fixture() -> dict[str, Any]:
     """Load the DunkScoreLeaders fixture."""
     return DUNKSCORELEADERS_SAMPLE
 

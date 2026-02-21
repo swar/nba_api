@@ -1,11 +1,12 @@
 """Unit tests for BoxScoreSummaryV3 endpoint."""
 
-import pytest
 from unittest.mock import Mock, patch
-from pandas import DataFrame
+
+import pytest
 
 from nba_api.stats.endpoints import BoxScoreSummaryV3
 from nba_api.stats.endpoints._parsers import NBAStatsBoxscoreSummaryParserV3
+
 from .data.boxscoresummaryv3 import BOXSCORESUMMARYV3_SAMPLE
 
 

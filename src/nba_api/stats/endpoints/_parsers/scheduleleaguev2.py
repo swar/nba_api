@@ -22,21 +22,17 @@ class NBAStatsScheduleLeagueV2Parser:
         weeks = self.nba_dict[list(self.nba_dict.keys())[1]]["weeks"]
         if not weeks:
             # Return default headers when weeks array is empty (e.g., older seasons)
-            headers = tuple(
-                [
-                    "leagueId",
-                    "seasonYear",
-                    "weekNumber",
-                    "weekName",
-                    "startDate",
-                    "endDate",
-                ]
+            headers = (
+                "leagueId",
+                "seasonYear",
+                "weekNumber",
+                "weekName",
+                "startDate",
+                "endDate",
             )
         else:
             tmp = weeks[0]
-            headers = tuple(
-                ["leagueId", "seasonYear"] + [header for header in tmp.keys()]
-            )
+            headers = tuple(["leagueId", "seasonYear"] + list(tmp))
         return headers
 
     def get_weeks_data(self):
@@ -52,7 +48,7 @@ class NBAStatsScheduleLeagueV2Parser:
             ["leagueId", "seasonYear", "gameDate"]
             + [
                 header
-                for header in tmp.keys()
+                for header in tmp
                 if header
                 not in ("broadcasters", "awayTeam", "homeTeam", "pointsLeaders")
             ]
@@ -133,7 +129,7 @@ class NBAStatsScheduleLeagueV2Parser:
             ibroadcasters = iter(game_dict["broadcasters"][broadcaster_type])
             for _ in range(max_count):
                 broadcaster = next(
-                    ibroadcasters, {k: None for k in self.get_broadcaster_keys()}
+                    ibroadcasters, dict.fromkeys(self.get_broadcaster_keys())
                 )
                 data.extend(list(broadcaster.values()))
         return data
@@ -175,9 +171,9 @@ class NBAStatsScheduleLeagueV2Parser:
         for _ in range(max_count):
             pointsLeader = next(
                 ipointsLeaders,
-                {
-                    k: None for k in self.get_points_leaders_keys()
-                },  # Default to None for missing points leaders
+                dict.fromkeys(
+                    self.get_points_leaders_keys()
+                ),  # Default to None for missing points leaders
             )
             data.extend(list(pointsLeader.values()))
         return data
@@ -218,7 +214,7 @@ class NBAStatsScheduleLeagueV2IntParser(NBAStatsScheduleLeagueV2Parser):
 
     def get_broadcaster_list_headers(self):
         tmp = self.nba_dict[list(self.nba_dict.keys())[1]]["broadcasterList"][0]
-        return tuple(["leagueId", "seasonYear"] + [header for header in tmp.keys()])
+        return tuple(["leagueId", "seasonYear"] + list(tmp))
 
     def get_broadcaster_list_data(self):
         tmp = self.nba_dict[list(self.nba_dict.keys())[1]]

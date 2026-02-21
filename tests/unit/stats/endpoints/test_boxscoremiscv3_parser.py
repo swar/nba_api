@@ -3,10 +3,10 @@
 import pytest
 
 from nba_api.stats.endpoints._parsers.boxscoremiscv3 import (
-    NBAStatsBoxscoreMiscV3Parser,
-    TEAM_METADATA_FIELDS,
-    PLAYER_METADATA_FIELDS,
     MISC_STATS_FIELDS,
+    PLAYER_METADATA_FIELDS,
+    TEAM_METADATA_FIELDS,
+    NBAStatsBoxscoreMiscV3Parser,
 )
 
 from .data.boxscoremiscv3 import BOXSCOREMISCV3_SAMPLE
@@ -53,8 +53,10 @@ class TestBoxscoreMiscV3Parser:
 
         # Check structure: gameId + team_meta + player_meta + stats
         expected_length = (
-            1 + len(TEAM_METADATA_FIELDS) + len(PLAYER_METADATA_FIELDS) +
-            len(MISC_STATS_FIELDS)
+            1
+            + len(TEAM_METADATA_FIELDS)
+            + len(PLAYER_METADATA_FIELDS)
+            + len(MISC_STATS_FIELDS)
         )
         assert len(headers) == expected_length
 
@@ -71,9 +73,7 @@ class TestBoxscoreMiscV3Parser:
         assert isinstance(team_data[1], list)
 
         # Each row should have correct number of columns
-        expected_cols = (
-            1 + len(TEAM_METADATA_FIELDS) + len(MISC_STATS_FIELDS)
-        )
+        expected_cols = 1 + len(TEAM_METADATA_FIELDS) + len(MISC_STATS_FIELDS)
         assert len(team_data[0]) == expected_cols
         assert len(team_data[1]) == expected_cols
 
@@ -94,8 +94,10 @@ class TestBoxscoreMiscV3Parser:
 
         # Each row should have correct number of columns
         expected_cols = (
-            1 + len(TEAM_METADATA_FIELDS) + len(PLAYER_METADATA_FIELDS) +
-            len(MISC_STATS_FIELDS)
+            1
+            + len(TEAM_METADATA_FIELDS)
+            + len(PLAYER_METADATA_FIELDS)
+            + len(MISC_STATS_FIELDS)
         )
         assert all(len(row) == expected_cols for row in player_data)
 
@@ -130,9 +132,7 @@ class TestBoxscoreMiscV3Parser:
         player_data = parser.get_player_data()
 
         # Stats start after gameId + team metadata + player metadata
-        stats_start = (
-            1 + len(TEAM_METADATA_FIELDS) + len(PLAYER_METADATA_FIELDS)
-        )
+        stats_start = 1 + len(TEAM_METADATA_FIELDS) + len(PLAYER_METADATA_FIELDS)
 
         # Minutes index
         minutes_idx = stats_start

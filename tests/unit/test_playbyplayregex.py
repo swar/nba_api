@@ -1,6 +1,26 @@
 import pytest
-from nba_api.stats.library.playbyplayregex import *
 from data_playbyplayregex import playbyplay
+
+from nba_api.stats.library.playbyplayregex import (
+    re_block,
+    re_ejection,
+    re_field_goal_made,
+    re_field_goal_missed,
+    re_foul_player,
+    re_foul_team,
+    re_free_throw_made,
+    re_free_throw_miss,
+    re_jump_ball,
+    re_rebound_player,
+    re_rebound_team,
+    re_steal,
+    re_substitution,
+    re_timeout,
+    re_turnover_player,
+    re_turnover_team,
+    re_violation,
+    re_violation_team,
+)
 
 
 # BLOCK

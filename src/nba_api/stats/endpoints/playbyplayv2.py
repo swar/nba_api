@@ -5,6 +5,7 @@ PlayByPlayV2 endpoint.
     This endpoint is deprecated. Please use PlayByPlayV3 instead.
     The NBA API no longer returns data for PlayByPlayV2 (returns empty JSON).
 """
+
 import warnings
 
 from nba_api.stats.endpoints._base import Endpoint
@@ -30,6 +31,7 @@ class PlayByPlayV2(Endpoint):
         timeout (int, optional): Request timeout in seconds. Defaults to 30.
         get_request (bool, optional): Whether to fetch data immediately. Defaults to True.
     """
+
     endpoint = "playbyplayv2"
     expected_data = {
         "AvailableVideo": ["VIDEO_AVAILABLE_FLAG"],
@@ -93,7 +95,7 @@ class PlayByPlayV2(Endpoint):
             "The NBA API no longer returns data for PlayByPlayV2 (returns empty JSON). "
             "See GitHub issue #591: https://github.com/swar/nba_api/issues/591",
             DeprecationWarning,
-            stacklevel=2
+            stacklevel=2,
         )
         self.proxy = proxy
         if headers is not None:
