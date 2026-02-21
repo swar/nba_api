@@ -1,3 +1,11 @@
+"""Deferred endpoint catalog for integration smoke coverage.
+
+This module is a curated list of deferred stats endpoint invocations used by the
+integration smoke suite. Keep entries as `DeferredEndpoint(...)` calls with
+representative sample parameters, and append new entries in the appropriate
+section to preserve readability.
+"""
+
 import nba_api.stats.endpoints as ep
 
 
@@ -14,9 +22,11 @@ class DeferredEndpoint:
 
 # Uninstantiated endpoints for testing:
 deferred_endpoints = [
+    # Core/common leaders and trackers
     DeferredEndpoint(ep.AllTimeLeadersGrids),
     DeferredEndpoint(ep.AssistLeaders),
     DeferredEndpoint(ep.AssistTracker),
+    # Box score and game-level breakdown endpoints
     DeferredEndpoint(ep.BoxScoreAdvancedV2, game_id="0021700807"),
     DeferredEndpoint(ep.BoxScoreAdvancedV3, game_id="0021700807"),
     DeferredEndpoint(ep.BoxScoreDefensiveV2, game_id="0021700807"),
@@ -34,6 +44,7 @@ deferred_endpoints = [
     DeferredEndpoint(ep.BoxScoreTraditionalV3, game_id="0021700807"),
     DeferredEndpoint(ep.BoxScoreUsageV2, game_id="0021700807"),
     DeferredEndpoint(ep.BoxScoreUsageV3, game_id="0021700807"),
+    # Core player/team reference and cumulative stat endpoints
     DeferredEndpoint(ep.CommonAllPlayers),
     DeferredEndpoint(ep.CommonPlayerInfo, player_id="2544"),
     DeferredEndpoint(ep.CommonPlayoffSeries),
@@ -44,6 +55,7 @@ deferred_endpoints = [
     DeferredEndpoint(ep.CumeStatsTeam, team_id="1610612739", game_ids="0021700807"),
     DeferredEndpoint(ep.CumeStatsTeamGames, team_id="1610612739"),
     DeferredEndpoint(ep.DefenseHub, season="2017-18"),
+    # Draft, franchise, and league context endpoints
     DeferredEndpoint(ep.DraftBoard),
     DeferredEndpoint(ep.DraftCombineDrillResults),
     DeferredEndpoint(ep.DraftCombineNonStationaryShooting),
@@ -55,6 +67,7 @@ deferred_endpoints = [
     DeferredEndpoint(ep.FranchiseHistory),
     DeferredEndpoint(ep.FranchiseLeaders, team_id="1610612739"),
     DeferredEndpoint(ep.FranchisePlayers, team_id="1610612739"),
+    # Game context, homepage, and event summary endpoints
     DeferredEndpoint(ep.GameRotation, game_id="0021700807"),
     DeferredEndpoint(
         ep.GLAlumBoxScoreSimilarityScore, person1_id="2544", person2_id="2544"
@@ -63,6 +76,7 @@ deferred_endpoints = [
     DeferredEndpoint(ep.HomePageV2),
     DeferredEndpoint(ep.HustleStatsBoxScore, game_id="0021700807"),
     DeferredEndpoint(ep.InfographicFanDuelPlayer, game_id="0021700807"),
+    # League dashboards, matchups, and standings endpoints
     DeferredEndpoint(ep.ISTStandings),
     DeferredEndpoint(ep.LeadersTiles),
     DeferredEndpoint(ep.LeagueDashLineups),
@@ -94,9 +108,11 @@ deferred_endpoints = [
     DeferredEndpoint(ep.LeagueStandings),
     DeferredEndpoint(ep.LeagueStandingsV3),
     DeferredEndpoint(ep.MatchupsRollup),
+    # Play-by-play and possession flow endpoints
     DeferredEndpoint(ep.PlayByPlay, game_id="0021700807"),
     DeferredEndpoint(ep.PlayByPlayV2, game_id="0021700807"),
     DeferredEndpoint(ep.PlayByPlayV3, game_id="0021700807"),
+    # Player profile, comparison, and dashboard endpoints
     DeferredEndpoint(ep.PlayerAwards, player_id="2544"),
     DeferredEndpoint(ep.PlayerCareerByCollege, college="Ohio State"),
     DeferredEndpoint(ep.PlayerCareerByCollegeRollup),
@@ -126,6 +142,7 @@ deferred_endpoints = [
     DeferredEndpoint(ep.PlayerNextNGames, player_id="2544"),
     DeferredEndpoint(ep.PlayerProfileV2, player_id="2544"),
     DeferredEndpoint(ep.PlayerVsPlayer, player_id="2544", vs_player_id="202681"),
+    # Scoreboard, shot, and tracking/advanced endpoints
     DeferredEndpoint(ep.PlayoffPicture),
     DeferredEndpoint(ep.ScoreboardV2),
     DeferredEndpoint(ep.ShotChartDetail, player_id="2544", team_id="1610612739"),
@@ -134,6 +151,7 @@ deferred_endpoints = [
         ep.ShotChartLineupDetail, group_id="-202689-203493-203501-1626174-1627827-"
     ),
     DeferredEndpoint(ep.SynergyPlayTypes),
+    # Team dashboards, lineup/context, and versus endpoints
     DeferredEndpoint(
         ep.TeamAndPlayersVsPlayers,
         team_id=1610612739,
@@ -164,6 +182,7 @@ deferred_endpoints = [
     DeferredEndpoint(ep.TeamPlayerOnOffSummary, team_id="1610612739"),
     DeferredEndpoint(ep.TeamVsPlayer, team_id="1610612739", vs_player_id="2544"),
     DeferredEndpoint(ep.TeamYearByYearStats, team_id="1610612739"),
+    # Video/media endpoints
     DeferredEndpoint(
         ep.VideoDetails,
         player_id="2544",
@@ -182,5 +201,6 @@ deferred_endpoints = [
     ),
     DeferredEndpoint(ep.VideoEvents, game_id="0021700807"),
     DeferredEndpoint(ep.VideoStatus),
+    # Niche/specialized game-state endpoint
     DeferredEndpoint(ep.WinProbabilityPBP, game_id="0021700807"),
 ]
