@@ -1,25 +1,26 @@
 import warnings
+
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
 from nba_api.stats.library.parameters import (
+    ConferenceNullable,
+    DivisionNullable,
+    GameSegmentNullable,
     LastNGames,
+    LeagueIDNullable,
+    LocationNullable,
     MeasureTypeDetailedDefense,
     Month,
+    OutcomeNullable,
     PaceAdjust,
-    PerModeDetailed,
     Period,
+    PerModeDetailed,
     PlusMinus,
     Rank,
     Season,
-    SeasonTypeAllStar,
-    GameSegmentNullable,
-    LeagueIDNullable,
-    LocationNullable,
-    OutcomeNullable,
     SeasonSegmentNullable,
+    SeasonTypeAllStar,
     ShotClockRangeNullable,
-    ConferenceNullable,
-    DivisionNullable,
 )
 
 
@@ -45,10 +46,10 @@ class TeamDashboardByGeneralSplits(Endpoint):
     Example (correct usage):
         >>> from nba_api.stats.endpoints import TeamDashboardByGeneralSplits
         >>> result = TeamDashboardByGeneralSplits(
-        ...     team_id='1610612738',
-        ...     season='2023-24',
-        ...     season_type_all_star='Playoffs',
-        ...     plus_minus='N'  # Use 'N' to get correct data
+        ...     team_id="1610612738",
+        ...     season="2023-24",
+        ...     season_type_all_star="Playoffs",
+        ...     plus_minus="N",  # Use 'N' to get correct data
         ... )
         >>> df = result.overall_team_dashboard.get_data_frame()
         >>> # PLUS_MINUS column is available even with plus_minus='N'
@@ -61,6 +62,7 @@ class TeamDashboardByGeneralSplits(Endpoint):
         pre_post_all_star_team_dashboard (DataSet): Stats split by pre/post All-Star break.
         wins_losses_team_dashboard (DataSet): Stats split by wins/losses.
     """
+
     endpoint = "teamdashboardbygeneralsplits"
     expected_data = {
         "DaysRestTeamDashboard": [
@@ -456,14 +458,14 @@ class TeamDashboardByGeneralSplits(Endpoint):
         get_request=True,
     ):
         # Warn about NBA API bug with plus_minus='Y'
-        if plus_minus == 'Y':
+        if plus_minus == "Y":
             warnings.warn(
                 "NBA API Bug: Using plus_minus='Y' returns incorrect data. "
                 "Statistics show differential/delta values instead of actual values "
                 "(e.g., FGM=-0.3 instead of 39.3). Use plus_minus='N' instead. "
                 "The PLUS_MINUS column will still be included with correct values.",
                 UserWarning,
-                stacklevel=2
+                stacklevel=2,
             )
 
         self.proxy = proxy

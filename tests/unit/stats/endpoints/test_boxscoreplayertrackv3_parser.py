@@ -3,10 +3,10 @@
 import pytest
 
 from nba_api.stats.endpoints._parsers.boxscoreplayertrackv3 import (
-    NBAStatsBoxscorePlayerTrackV3Parser,
-    TEAM_METADATA_FIELDS,
     PLAYER_METADATA_FIELDS,
     PLAYERTRACK_STATS_FIELDS,
+    TEAM_METADATA_FIELDS,
+    NBAStatsBoxscorePlayerTrackV3Parser,
 )
 
 from .data.boxscoreplayertrackv3 import BOXSCOREPLAYERTRACKV3_SAMPLE
@@ -102,9 +102,11 @@ class TestBoxScorePlayerTrackV3ParserHeaders:
         # Should have gameId + team metadata + stats fields
         assert isinstance(headers, tuple)
         assert headers[0] == "gameId"
-        assert TEAM_METADATA_FIELDS == headers[1:6]
-        assert PLAYERTRACK_STATS_FIELDS == headers[6:]
-        assert len(headers) == 1 + len(TEAM_METADATA_FIELDS) + len(PLAYERTRACK_STATS_FIELDS)
+        assert headers[1:6] == TEAM_METADATA_FIELDS
+        assert headers[6:] == PLAYERTRACK_STATS_FIELDS
+        assert len(headers) == 1 + len(TEAM_METADATA_FIELDS) + len(
+            PLAYERTRACK_STATS_FIELDS
+        )
 
     def test_get_player_headers(self, json_fixture):
         """Test player headers are correctly formatted."""
@@ -116,10 +118,15 @@ class TestBoxScorePlayerTrackV3ParserHeaders:
         assert headers[0] == "gameId"
         team_metadata_slice = slice(1, 6)
         player_metadata_slice = slice(6, 14)
-        assert TEAM_METADATA_FIELDS == headers[team_metadata_slice]
-        assert PLAYER_METADATA_FIELDS == headers[player_metadata_slice]
-        assert PLAYERTRACK_STATS_FIELDS == headers[14:]
-        expected_length = 1 + len(TEAM_METADATA_FIELDS) + len(PLAYER_METADATA_FIELDS) + len(PLAYERTRACK_STATS_FIELDS)
+        assert headers[team_metadata_slice] == TEAM_METADATA_FIELDS
+        assert headers[player_metadata_slice] == PLAYER_METADATA_FIELDS
+        assert headers[14:] == PLAYERTRACK_STATS_FIELDS
+        expected_length = (
+            1
+            + len(TEAM_METADATA_FIELDS)
+            + len(PLAYER_METADATA_FIELDS)
+            + len(PLAYERTRACK_STATS_FIELDS)
+        )
         assert len(headers) == expected_length
 
 
@@ -147,7 +154,9 @@ class TestBoxScorePlayerTrackV3ParserTeamData:
 
         for row in team_data:
             assert isinstance(row, list)
-            expected_length = 1 + len(TEAM_METADATA_FIELDS) + len(PLAYERTRACK_STATS_FIELDS)
+            expected_length = (
+                1 + len(TEAM_METADATA_FIELDS) + len(PLAYERTRACK_STATS_FIELDS)
+            )
             assert len(row) == expected_length
 
     def test_get_team_data_contains_game_id(self, json_fixture):
@@ -209,8 +218,10 @@ class TestBoxScorePlayerTrackV3ParserPlayerData:
         player_data = parser.get_player_data()
 
         expected_length = (
-            1 + len(TEAM_METADATA_FIELDS) + len(PLAYER_METADATA_FIELDS) +
-            len(PLAYERTRACK_STATS_FIELDS)
+            1
+            + len(TEAM_METADATA_FIELDS)
+            + len(PLAYER_METADATA_FIELDS)
+            + len(PLAYERTRACK_STATS_FIELDS)
         )
         for row in player_data:
             assert isinstance(row, list)
@@ -292,7 +303,7 @@ class TestBoxScorePlayerTrackV3ParserDataSets:
         parser = NBAStatsBoxscorePlayerTrackV3Parser(json_fixture)
         data_sets = parser.get_data_sets()
 
-        for dataset_name, dataset in data_sets.items():
+        for _dataset_name, dataset in data_sets.items():
             assert isinstance(dataset, dict)
             assert "headers" in dataset
             assert "data" in dataset
@@ -305,7 +316,9 @@ class TestBoxScorePlayerTrackV3ParserDataSets:
         data_sets = parser.get_data_sets()
 
         team_stats = data_sets["TeamStats"]
-        assert len(team_stats["headers"]) == 1 + len(TEAM_METADATA_FIELDS) + len(PLAYERTRACK_STATS_FIELDS)
+        assert len(team_stats["headers"]) == 1 + len(TEAM_METADATA_FIELDS) + len(
+            PLAYERTRACK_STATS_FIELDS
+        )
         assert len(team_stats["data"]) == 2
 
     def test_player_stats_dataset(self, json_fixture):
@@ -314,7 +327,9 @@ class TestBoxScorePlayerTrackV3ParserDataSets:
         data_sets = parser.get_data_sets()
 
         player_stats = data_sets["PlayerStats"]
-        assert len(player_stats["headers"]) == 1 + len(TEAM_METADATA_FIELDS) + len(PLAYER_METADATA_FIELDS) + len(PLAYERTRACK_STATS_FIELDS)
+        assert len(player_stats["headers"]) == 1 + len(TEAM_METADATA_FIELDS) + len(
+            PLAYER_METADATA_FIELDS
+        ) + len(PLAYERTRACK_STATS_FIELDS)
         assert len(player_stats["data"]) == 2  # 1 home + 1 away player
 
 
@@ -342,7 +357,7 @@ class TestBoxScorePlayerTrackV3ParserEdgeCases:
                     "teamTricode": "OKC",
                     "teamSlug": "thunder",
                     "players": [],
-                    "statistics": {}
+                    "statistics": {},
                 },
                 "awayTeam": {
                     "teamId": 1610612740,
@@ -351,8 +366,8 @@ class TestBoxScorePlayerTrackV3ParserEdgeCases:
                     "teamTricode": "NOP",
                     "teamSlug": "pelicans",
                     "players": [],
-                    "statistics": {}
-                }
+                    "statistics": {},
+                },
             }
         }
         parser = NBAStatsBoxscorePlayerTrackV3Parser(response)
@@ -382,13 +397,10 @@ class TestBoxScorePlayerTrackV3ParserEdgeCases:
                             "position": "F",
                             "comment": "",
                             "jerseyNum": "21",
-                            "statistics": {
-                                "minutes": "26:29",
-                                "speed": 4.37
-                            }
+                            "statistics": {"minutes": "26:29", "speed": 4.37},
                         }
                     ],
-                    "statistics": {}
+                    "statistics": {},
                 },
                 "awayTeam": {
                     "teamId": 1610612740,
@@ -397,8 +409,8 @@ class TestBoxScorePlayerTrackV3ParserEdgeCases:
                     "teamTricode": "NOP",
                     "teamSlug": "pelicans",
                     "players": [],
-                    "statistics": {}
-                }
+                    "statistics": {},
+                },
             }
         }
         parser = NBAStatsBoxscorePlayerTrackV3Parser(response)

@@ -1,8 +1,9 @@
 """Unit tests for ISTStandings parser."""
 
 import json
-import pytest
 from pathlib import Path
+
+import pytest
 
 from nba_api.stats.endpoints._parsers.iststandings import (
     NBAStatsISTStandingsParser,

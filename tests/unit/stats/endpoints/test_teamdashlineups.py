@@ -1,16 +1,17 @@
 """Unit tests for TeamDashLineups endpoint."""
 
-from typing import Any, Dict
+from typing import Any
 from unittest.mock import Mock, patch
 
 import pytest
 
 from nba_api.stats.endpoints import TeamDashLineups
+
 from .data.teamdashlineups import TEAMDASHLINEUPS_SAMPLE
 
 
 @pytest.fixture
-def json_fixture() -> Dict[str, Any]:
+def json_fixture() -> dict[str, Any]:
     """Load the TeamDashLineups fixture."""
     return TEAMDASHLINEUPS_SAMPLE
 
@@ -21,9 +22,7 @@ class TestTeamDashLineupsEndpoint:
     def test_endpoint_initialization_without_request(self):
         """Test endpoint initializes without making HTTP request."""
         endpoint = TeamDashLineups(
-            team_id=1610612739,
-            season="2024-25",
-            get_request=False
+            team_id=1610612739, season="2024-25", get_request=False
         )
 
         assert endpoint.parameters["TeamID"] == 1610612739
@@ -174,9 +173,7 @@ class TestTeamDashLineupsEndpoint:
     def test_dataset_attributes_initialized(self):
         """Test that all dataset attributes are initialized in __init__."""
         endpoint = TeamDashLineups(
-            team_id=1610612739,
-            season="2024-25",
-            get_request=False
+            team_id=1610612739, season="2024-25", get_request=False
         )
 
         # Dataset attributes should not exist before request
@@ -199,12 +196,8 @@ class TestTeamDashLineupsEndpoint:
         result_sets = json_fixture["resultSets"]
 
         # Find Lineups and Overall datasets
-        lineups_set = next(
-            (rs for rs in result_sets if rs["name"] == "Lineups"), None
-        )
-        overall_set = next(
-            (rs for rs in result_sets if rs["name"] == "Overall"), None
-        )
+        lineups_set = next((rs for rs in result_sets if rs["name"] == "Lineups"), None)
+        overall_set = next((rs for rs in result_sets if rs["name"] == "Overall"), None)
 
         assert lineups_set is not None
         assert overall_set is not None
@@ -222,12 +215,8 @@ class TestTeamDashLineupsEndpoint:
         """
         result_sets = json_fixture["resultSets"]
 
-        lineups_set = next(
-            (rs for rs in result_sets if rs["name"] == "Lineups"), None
-        )
-        overall_set = next(
-            (rs for rs in result_sets if rs["name"] == "Overall"), None
-        )
+        lineups_set = next((rs for rs in result_sets if rs["name"] == "Lineups"), None)
+        overall_set = next((rs for rs in result_sets if rs["name"] == "Overall"), None)
 
         # Verify fixture has minimum required fields for testing
         assert "GROUP_SET" in lineups_set["headers"]

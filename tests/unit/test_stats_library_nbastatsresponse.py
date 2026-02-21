@@ -1,5 +1,5 @@
-import json
 import pytest
+
 from nba_api.stats.library.http import NBAStatsResponse
 
 responses = [

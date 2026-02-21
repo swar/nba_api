@@ -16,6 +16,11 @@
 - `Contributor` (notes on updates to the project)
 
 # Version History
+## Unreleased
+
+### Infrastructure
+* Replaced `flake8`, `isort`, and `pylint` with `ruff` for linting and formatting; added `pre-commit` hooks to auto-fix on commit
+
 ## v1.11.4
 Date: 2026-02-20
 

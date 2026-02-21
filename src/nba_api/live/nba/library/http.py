@@ -1,6 +1,5 @@
 from nba_api.library import http
 
-
 try:
     from nba_api.library.debug.debug import STATS_HEADERS
 except ImportError:

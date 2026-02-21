@@ -8,7 +8,7 @@ GRAVITYLEADERS_SAMPLE = {
     "params": {
         "leagueId": "00",
         "seasonType": "Regular Season",
-        "seasonYear": "2025-26"
+        "seasonYear": "2025-26",
     },
     "leaders": [
         {
@@ -38,7 +38,7 @@ GRAVITYLEADERS_SAMPLE = {
             "MINUTES": 32.1,
             "PTS": 28.7,
             "REB": 3.9,
-            "AST": 4.4
+            "AST": 4.4,
         },
         {
             "PLAYERID": 201142,
@@ -67,7 +67,7 @@ GRAVITYLEADERS_SAMPLE = {
             "MINUTES": 36.2,
             "PTS": 25.7,
             "REB": 5.1,
-            "AST": 4.6
+            "AST": 4.6,
         },
         {
             "PLAYERID": 1629029,
@@ -96,21 +96,17 @@ GRAVITYLEADERS_SAMPLE = {
             "MINUTES": 36.5,
             "PTS": 33.7,
             "REB": 8.1,
-            "AST": 8.7
-        }
-    ]
+            "AST": 8.7,
+        },
+    ],
 }
 
 # Edge case fixtures for testing lenient error handling
-GRAVITYLEADERS_EMPTY = {
-    "leaders": []
-}
+GRAVITYLEADERS_EMPTY = {"leaders": []}
 
 GRAVITYLEADERS_MISSING_LEADERS = {}
 
-GRAVITYLEADERS_INVALID_LEADERS_TYPE = {
-    "leaders": "not_a_list"
-}
+GRAVITYLEADERS_INVALID_LEADERS_TYPE = {"leaders": "not_a_list"}
 
 GRAVITYLEADERS_MIXED_VALID_INVALID = {
     "leaders": [
@@ -118,7 +114,7 @@ GRAVITYLEADERS_MIXED_VALID_INVALID = {
             "PLAYERID": 12345,
             "FIRSTNAME": "Valid",
             "LASTNAME": "Player",
-            "GRAVITYSCORE": 10.5
+            "GRAVITYSCORE": 10.5,
         },
         "invalid_string_entry",
         None,
@@ -127,8 +123,8 @@ GRAVITYLEADERS_MIXED_VALID_INVALID = {
             "PLAYERID": 67890,
             "FIRSTNAME": "Another",
             "LASTNAME": "Valid",
-            "GRAVITYSCORE": 8.2
-        }
+            "GRAVITYSCORE": 8.2,
+        },
     ]
 }
 
@@ -137,7 +133,7 @@ GRAVITYLEADERS_PARTIAL_FIELDS = {
         {
             "PLAYERID": 11111,
             "FIRSTNAME": "Partial",
-            "LASTNAME": "Fields"
+            "LASTNAME": "Fields",
             # Missing most fields - should return None for missing
         }
     ]

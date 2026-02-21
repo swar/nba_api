@@ -42,7 +42,7 @@ class DeprecatedEnum(Enum, metaclass=OnAccess):
         import warnings
 
         warnings.warn(
-            "%s" % args,
+            f"{args[0] if args else args}",
             DeprecationWarning,
             stacklevel=3,
         )

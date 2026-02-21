@@ -6,7 +6,9 @@ class Endpoint:
         key = None
         data = {}
 
-        def __init__(self, data={}):
+        def __init__(self, data=None):
+            if data is None:
+                data = {}
             self.data = data
 
         def get_json(self):

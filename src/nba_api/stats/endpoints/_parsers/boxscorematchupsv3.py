@@ -5,27 +5,21 @@ class NBAStatsBoxscoreMatchupsParserV3:
     def __init__(self, nba_dict):
         self.nba_dict = nba_dict
 
-    def get_players_headers(self, headers=tuple(), level=0):
+    def get_players_headers(self, headers=(), level=0):
         if level == 0:
             tmp = self.nba_dict[list(self.nba_dict.keys())[1]]
-            headers = headers + tuple(
-                [header for header in tmp.keys() if header == "gameId"]
-            )
+            headers = headers + tuple([header for header in tmp if header == "gameId"])
             return self.get_players_headers(headers, level=1)
         elif level == 1:
             tmp = self.nba_dict[list(self.nba_dict.keys())[1]]["homeTeam"]
             headers = headers + tuple(
-                [
-                    header
-                    for header in tmp.keys()
-                    if header not in ("players", "statistics")
-                ]
+                [header for header in tmp if header not in ("players", "statistics")]
             )
             return self.get_players_headers(headers, level=2)
         elif level == 2:
             tmp = self.nba_dict[list(self.nba_dict.keys())[1]]["homeTeam"]["players"][0]
             headers = headers + tuple(
-                [header + "Off" for header in tmp.keys() if header != "matchups"]
+                [header + "Off" for header in tmp if header != "matchups"]
             )
             return self.get_players_headers(headers, level=3)
         elif level == 3:
@@ -33,14 +27,14 @@ class NBAStatsBoxscoreMatchupsParserV3:
                 0
             ]["matchups"][0]
             headers = headers + tuple(
-                [header + "Def" for header in tmp.keys() if header != "statistics"]
+                [header + "Def" for header in tmp if header != "statistics"]
             )
             return self.get_players_headers(headers, level=4)
         else:
             tmp = self.nba_dict[list(self.nba_dict.keys())[1]]["homeTeam"]["players"][
                 0
             ]["matchups"][0]["statistics"]
-            headers = headers + tuple([header for header in tmp.keys()])
+            headers = headers + tuple(tmp)
             return list(headers)
 
     def get_player_data(self):
@@ -50,8 +44,8 @@ class NBAStatsBoxscoreMatchupsParserV3:
             team_info = [tmp["gameId"]] + [
                 value for key, value in tmp[team].items() if key != "players"
             ]
-            for i, def_pl in enumerate(tmp[team]["players"]):
-                for j, off_pl in enumerate(tmp[team]["players"][i]["matchups"]):
+            for i, _def_pl in enumerate(tmp[team]["players"]):
+                for j, _off_pl in enumerate(tmp[team]["players"][i]["matchups"]):
                     def_data = [
                         value
                         for key, value in tmp[team]["players"][i].items()

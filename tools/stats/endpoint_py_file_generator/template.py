@@ -27,7 +27,7 @@ class {endpoint}(Endpoint):
         }}
         if get_request:
             self.get_request()
-    
+
     def get_request(self):
         self.nba_response = NBAStatsHTTP().send_api_request(
             endpoint=self.endpoint,
@@ -37,7 +37,7 @@ class {endpoint}(Endpoint):
             timeout=self.timeout,
         )
         self.load_response()
-        
+
     def load_response(self):
         data_sets = self.nba_response.get_data_sets()
         self.data_sets = [Endpoint.DataSet(data=data_set) for data_set_name, data_set in data_sets.items()]

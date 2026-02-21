@@ -13,7 +13,7 @@ DUNKSCORELEADERS_SAMPLE = {
         "seasonYear": "2024-25",
         "playerId": None,
         "teamId": None,
-        "gameId": None
+        "gameId": None,
     },
     "dunks": [
         {
@@ -60,7 +60,7 @@ DUNKSCORELEADERS_SAMPLE = {
             "passerId": None,
             "shotDistance": 0.0,
             "shotZone": "",
-            "videoAvailable": True
+            "videoAvailable": True,
         },
         {
             "gameId": "0022500095",
@@ -106,7 +106,7 @@ DUNKSCORELEADERS_SAMPLE = {
             "passerId": 1627742,
             "shotDistance": 0.5,
             "shotZone": "Restricted Area",
-            "videoAvailable": True
-        }
-    ]
+            "videoAvailable": True,
+        },
+    ],
 }

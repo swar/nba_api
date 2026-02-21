@@ -5,6 +5,7 @@ BoxScoreTraditionalV2 endpoint.
     This endpoint is deprecated. Please use BoxScoreTraditionalV3 instead.
     Data is no longer being published for BoxScoreTraditionalV2 as of the 2025-26 NBA season.
 """
+
 import warnings
 
 from nba_api.stats.endpoints._base import Endpoint
@@ -39,6 +40,7 @@ class BoxScoreTraditionalV2(Endpoint):
         timeout (int, optional): Request timeout in seconds. Defaults to 30.
         get_request (bool, optional): Whether to fetch data immediately. Defaults to True.
     """
+
     endpoint = "boxscoretraditionalv2"
     expected_data = {
         "PlayerStats": [
@@ -151,7 +153,7 @@ class BoxScoreTraditionalV2(Endpoint):
             "Please use BoxScoreTraditionalV3 instead. "
             "Data is no longer being published for BoxScoreTraditionalV2 as of the 2025-26 NBA season.",
             DeprecationWarning,
-            stacklevel=2
+            stacklevel=2,
         )
         self.proxy = proxy
         if headers is not None:

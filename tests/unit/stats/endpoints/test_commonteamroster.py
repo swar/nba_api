@@ -1,6 +1,5 @@
 """Unit tests for CommonTeamRoster endpoint."""
 
-import pytest
 from unittest.mock import Mock, patch
 
 from nba_api.stats.endpoints import CommonTeamRoster

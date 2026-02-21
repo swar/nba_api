@@ -1,9 +1,9 @@
-import time
 import json
-import random
+import time
+
 import pytest
 
-from deferred_endpoints import deferred_endpoints, DeferredEndpoint
+from tests.integration.deferred_endpoints import DeferredEndpoint, deferred_endpoints
 
 # Once we run the test to call the endpoints, we'll cache the responses here.
 cached_eps = []
@@ -31,7 +31,7 @@ def test_endpoints(deferred_endpoint):
         response = deferred_endpoint()
     except json.decoder.JSONDecodeError:
         endpoint_class = deferred_endpoint.endpoint_class
-        msg = "Unable to decode response for {}".format(endpoint_class)
+        msg = f"Unable to decode response for {endpoint_class}"
         pytest.fail(msg=msg)
     # We want to hang onto all the responses so we don't need to re-retrieve
     # them later.

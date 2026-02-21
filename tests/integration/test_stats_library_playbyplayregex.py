@@ -1,10 +1,11 @@
-import pytest
 import datetime
 import time
-from nba_api.stats.endpoints import ScoreboardV2
-from nba_api.stats.endpoints import PlayByPlay
-from nba_api.stats.library.parameters import LeagueID
+
+import pytest
+
+from nba_api.stats.endpoints import PlayByPlay, ScoreboardV2
 from nba_api.stats.library.eventmsgtype import EventMsgType
+from nba_api.stats.library.parameters import LeagueID
 from nba_api.stats.library.playbyplayregex import eventmsgtype_to_re
 
 
@@ -63,11 +64,11 @@ def test_play(game, play):
                 if pattern.match(description):
                     match = True
 
-            if match == False:
+            if not match:
                 msg = "EVENTMSGTYPE {eventmsgtype}: [{description}]\n\tAttempted Patterns\n".format(
                     eventmsgtype=play["EVENTMSGTYPE"], description=description
                 )
                 for pattern in dict_patterns:
-                    msg += "\t\t{pattern}\n".format(pattern=pattern.pattern)
+                    msg += f"\t\t{pattern.pattern}\n"
 
-                assert False, msg
+                raise AssertionError(msg)

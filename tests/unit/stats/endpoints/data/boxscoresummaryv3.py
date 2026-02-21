@@ -9,7 +9,7 @@ BOXSCORESUMMARYV3_SAMPLE = {
     "meta": {
         "version": 1,
         "request": "https://stats.nba.com/stats/boxscoresummaryv3?GameID=0022500142",
-        "time": "2025-11-11T00:00:00.000Z"
+        "time": "2025-11-11T00:00:00.000Z",
     },
     "boxScoreSummary": {
         "gameId": "0022500142",
@@ -31,7 +31,7 @@ BOXSCORESUMMARYV3_SAMPLE = {
             "arenaCity": "Milwaukee",
             "arenaState": "WI",
             "arenaCountry": "US",
-            "arenaTimezone": "Central"
+            "arenaTimezone": "Central",
         },
         "officials": [
             {
@@ -41,7 +41,7 @@ BOXSCORESUMMARYV3_SAMPLE = {
                 "firstName": "Marat",
                 "familyName": "Kogut",
                 "jerseyNum": "63",
-                "assignment": "OFFICIAL1"
+                "assignment": "OFFICIAL1",
             },
             {
                 "personId": 201634,
@@ -50,7 +50,7 @@ BOXSCORESUMMARYV3_SAMPLE = {
                 "firstName": "Tyler",
                 "familyName": "Ford",
                 "jerseyNum": "39",
-                "assignment": "OFFICIAL2"
+                "assignment": "OFFICIAL2",
             },
             {
                 "personId": 201629,
@@ -59,13 +59,10 @@ BOXSCORESUMMARYV3_SAMPLE = {
                 "firstName": "Tom",
                 "familyName": "Washington",
                 "jerseyNum": "49",
-                "assignment": "OFFICIAL3"
-            }
+                "assignment": "OFFICIAL3",
+            },
         ],
-        "postgameCharts": {
-            "teamCharts": [],
-            "playerCharts": []
-        },
+        "postgameCharts": {"teamCharts": [], "playerCharts": []},
         "homeTeam": {
             "teamId": 1610612749,
             "teamName": "Bucks",
@@ -82,7 +79,7 @@ BOXSCORESUMMARYV3_SAMPLE = {
                 {"period": 1, "periodType": "REGULAR", "score": 28},
                 {"period": 2, "periodType": "REGULAR", "score": 27},
                 {"period": 3, "periodType": "REGULAR", "score": 27},
-                {"period": 4, "periodType": "REGULAR", "score": 28}
+                {"period": 4, "periodType": "REGULAR", "score": 28},
             ],
             "players": [
                 {
@@ -96,9 +93,9 @@ BOXSCORESUMMARYV3_SAMPLE = {
                         "points": 28,
                         "rebounds": 10,
                         "assists": 5,
-                        "minutes": "PT35M45.00S"
+                        "minutes": "PT35M45.00S",
                     },
-                    "notPlayingReason": None
+                    "notPlayingReason": None,
                 }
             ],
             "statistics": {
@@ -111,8 +108,8 @@ BOXSCORESUMMARYV3_SAMPLE = {
                 "threePointersPercentage": 0.371,
                 "freeThrowsAttempted": 22,
                 "freeThrowsMade": 13,
-                "freeThrowsPercentage": 0.591
-            }
+                "freeThrowsPercentage": 0.591,
+            },
         },
         "awayTeam": {
             "teamId": 1610612756,
@@ -130,7 +127,7 @@ BOXSCORESUMMARYV3_SAMPLE = {
                 {"period": 1, "periodType": "REGULAR", "score": 32},
                 {"period": 2, "periodType": "REGULAR", "score": 30},
                 {"period": 3, "periodType": "REGULAR", "score": 30},
-                {"period": 4, "periodType": "REGULAR", "score": 30}
+                {"period": 4, "periodType": "REGULAR", "score": 30},
             ],
             "players": [
                 {
@@ -144,9 +141,9 @@ BOXSCORESUMMARYV3_SAMPLE = {
                         "points": 32,
                         "rebounds": 4,
                         "assists": 9,
-                        "minutes": "PT38M12.00S"
+                        "minutes": "PT38M12.00S",
                     },
-                    "notPlayingReason": None
+                    "notPlayingReason": None,
                 }
             ],
             "statistics": {
@@ -159,8 +156,8 @@ BOXSCORESUMMARYV3_SAMPLE = {
                 "threePointersPercentage": 0.421,
                 "freeThrowsAttempted": 16,
                 "freeThrowsMade": 10,
-                "freeThrowsPercentage": 0.625
-            }
+                "freeThrowsPercentage": 0.625,
+            },
         },
         "gameLeaders": {
             "homeLeaders": {
@@ -172,7 +169,7 @@ BOXSCORESUMMARYV3_SAMPLE = {
                 "playerSlug": "giannis-antetokounmpo",
                 "points": 28,
                 "rebounds": 10,
-                "assists": 5
+                "assists": 5,
             },
             "awayLeaders": {
                 "personId": 1630162,
@@ -183,9 +180,9 @@ BOXSCORESUMMARYV3_SAMPLE = {
                 "playerSlug": "deaaron-fox",
                 "points": 32,
                 "rebounds": 4,
-                "assists": 9
-            }
+                "assists": 9,
+            },
         },
-        "lastFiveGames": []
-    }
+        "lastFiveGames": [],
+    },
 }

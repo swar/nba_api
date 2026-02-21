@@ -35,9 +35,9 @@ jobs:
       - run:
           name: run tests
           command: poetry run pytest
-      - run: 
-          name: run flake8
-          command: poetry run flake8
+      - run:
+          name: run ruff
+          command: poetry run ruff check && poetry run ruff format --check
 
   release:
     docker:

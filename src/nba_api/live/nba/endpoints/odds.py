@@ -5,7 +5,7 @@ from nba_api.live.nba.library.http import NBALiveHTTP
 class Odds(Endpoint):
     """Endpoint for retrieving live betting odds for NBA games."""
 
-    endpoint_url = "odds/odds_todaysGames.json" # Oddly enough, this doesn't only return today's games
+    endpoint_url = "odds/odds_todaysGames.json"  # Oddly enough, this doesn't only return today's games
     expected_data = {
         "games": [
             {
@@ -30,8 +30,8 @@ class Odds(Endpoint):
                                         "odds": "",
                                         "opening_odds": "",
                                         "odds_trend": "",
-                                        "spread": None,        # For spread markets
-                                        "opening_spread": None # For spread markets
+                                        "spread": None,  # For spread markets
+                                        "opening_spread": None,  # For spread markets
                                     },
                                     {
                                         "odds_field_id": 0,
@@ -39,16 +39,16 @@ class Odds(Endpoint):
                                         "odds": "",
                                         "opening_odds": "",
                                         "odds_trend": "",
-                                        "spread": None,        # For spread markets
-                                        "opening_spread": None # For spread markets
-                                    }
+                                        "spread": None,  # For spread markets
+                                        "opening_spread": None,  # For spread markets
+                                    },
                                 ],
                                 "url": "",
-                                "countryCode": ""
+                                "countryCode": "",
                             }
-                        ]
+                        ],
                     }
-                ]
+                ],
             }
         ]
     }
@@ -61,7 +61,7 @@ class Odds(Endpoint):
     def __init__(self, proxy=None, headers=None, timeout=30, get_request=True):
         """
         Initialize the Odds endpoint.
-        
+
         Args:
             proxy (str, optional): Proxy URL to use for the request
             headers (dict, optional): Custom HTTP headers
@@ -95,7 +95,7 @@ class Odds(Endpoint):
     def get_games(self):
         """
         Get the games data.
-        
+
         Returns:
             Endpoint.DataSet: Dataset containing games and their odds
         """

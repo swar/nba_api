@@ -5,13 +5,14 @@ import pytest
 from nba_api.stats.endpoints._parsers.gravityleaders import (
     NBAStatsGravityLeadersParser,
 )
+
 from .data.gravityleaders import (
-    GRAVITYLEADERS_SAMPLE,
     GRAVITYLEADERS_EMPTY,
-    GRAVITYLEADERS_MISSING_LEADERS,
     GRAVITYLEADERS_INVALID_LEADERS_TYPE,
+    GRAVITYLEADERS_MISSING_LEADERS,
     GRAVITYLEADERS_MIXED_VALID_INVALID,
     GRAVITYLEADERS_PARTIAL_FIELDS,
+    GRAVITYLEADERS_SAMPLE,
 )
 
 

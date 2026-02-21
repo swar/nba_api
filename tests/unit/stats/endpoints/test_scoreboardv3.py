@@ -1,6 +1,5 @@
 """Unit tests for ScoreboardV3 endpoint."""
 
-import pytest
 from unittest.mock import Mock, patch
 
 from nba_api.stats.endpoints import ScoreboardV3
@@ -60,14 +59,16 @@ class TestScoreboardV3Endpoint:
         parser = NBAStatsScoreboardV3Parser(SCOREBOARDV3_SAMPLE)
 
         # Verify headers match
-        assert (
-            parser.get_scoreboard_info_headers() == tuple(_EXPECTED_DATA["ScoreboardInfo"])
+        assert parser.get_scoreboard_info_headers() == tuple(
+            _EXPECTED_DATA["ScoreboardInfo"]
         )
         assert parser.get_game_header_headers() == tuple(_EXPECTED_DATA["GameHeader"])
         assert parser.get_line_score_headers() == tuple(_EXPECTED_DATA["LineScore"])
         assert parser.get_game_leaders_headers() == tuple(_EXPECTED_DATA["GameLeaders"])
         assert parser.get_team_leaders_headers() == tuple(_EXPECTED_DATA["TeamLeaders"])
-        assert parser.get_broadcasters_headers() == tuple(_EXPECTED_DATA["Broadcasters"])
+        assert parser.get_broadcasters_headers() == tuple(
+            _EXPECTED_DATA["Broadcasters"]
+        )
 
     @patch("nba_api.stats.library.http.NBAStatsHTTP.send_api_request")
     def test_endpoint_with_mocked_request(self, mock_request):
@@ -128,9 +129,7 @@ class TestScoreboardV3Endpoint:
 
     def test_endpoint_supports_custom_timeout(self):
         """Test that custom timeout parameter is respected."""
-        endpoint = ScoreboardV3(
-            game_date="2025-11-05", timeout=60, get_request=False
-        )
+        endpoint = ScoreboardV3(game_date="2025-11-05", timeout=60, get_request=False)
 
         assert endpoint.timeout == 60
 

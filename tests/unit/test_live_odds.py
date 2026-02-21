@@ -1,5 +1,7 @@
-import pytest
 import json
+
+import pytest
+
 from nba_api.library.http import NBAHTTP, NBAResponse
 from nba_api.live.nba.endpoints import odds
 from nba_api.live.nba.library.http import NBALiveHTTP
@@ -28,18 +30,18 @@ content = {
                                     "type": "home",
                                     "odds": "1.370",
                                     "opening_odds": "1.360",
-                                    "odds_trend": "up"
+                                    "odds_trend": "up",
                                 },
                                 {
                                     "odds_field_id": 2,
                                     "type": "away",
                                     "odds": "3.220",
                                     "opening_odds": "3.300",
-                                    "odds_trend": "down"
-                                }
+                                    "odds_trend": "down",
+                                },
                             ],
                             "url": "https://ad.doubleclick.net/ddm/clk/594881279;402977564;g;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755}",
-                            "countryCode": "AUS"
+                            "countryCode": "AUS",
                         },
                         {
                             "id": "sr:book:6565",
@@ -50,18 +52,18 @@ content = {
                                     "type": "home",
                                     "odds": "1.370",
                                     "opening_odds": "1.340",
-                                    "odds_trend": "up"
+                                    "odds_trend": "up",
                                 },
                                 {
                                     "odds_field_id": 2,
                                     "type": "away",
                                     "odds": "3.200",
                                     "opening_odds": "3.250",
-                                    "odds_trend": "down"
-                                }
+                                    "odds_trend": "down",
+                                },
                             ],
                             "url": "https://www.novibet.gr/stoixima/mpasket/4372811/united-states/nba/5142827?btag=20045[\u00e2\u20ac\u00a6]ce=2004578_&utm_medium=affiliate&utm_campaign=STOIXIMAGENERIC",
-                            "countryCode": "GR"
+                            "countryCode": "GR",
                         },
                         {
                             "id": "sr:book:6565",
@@ -72,18 +74,18 @@ content = {
                                     "type": "home",
                                     "odds": "1.370",
                                     "opening_odds": "1.340",
-                                    "odds_trend": "up"
+                                    "odds_trend": "up",
                                 },
                                 {
                                     "odds_field_id": 2,
                                     "type": "away",
                                     "odds": "3.200",
                                     "opening_odds": "3.250",
-                                    "odds_trend": "down"
-                                }
+                                    "odds_trend": "down",
+                                },
                             ],
                             "url": "https://www.novibet.gr/stoixima/mpasket/4372811/united-states/nba/5142827?btag=20045[\u00e2\u20ac\u00a6]ce=2004578_&utm_medium=affiliate&utm_campaign=STOIXIMAGENERIC",
-                            "countryCode": "CY"
+                            "countryCode": "CY",
                         },
                         {
                             "id": "sr:book:18186",
@@ -94,18 +96,18 @@ content = {
                                     "type": "home",
                                     "odds": "1.370",
                                     "opening_odds": "1.364",
-                                    "odds_trend": "up"
+                                    "odds_trend": "up",
                                 },
                                 {
                                     "odds_field_id": 2,
                                     "type": "away",
                                     "odds": "3.200",
                                     "opening_odds": "3.250",
-                                    "odds_trend": "down"
-                                }
+                                    "odds_trend": "down",
+                                },
                             ],
                             "url": "https://servedby.flashtalking.com/click/8/246790;8578295;369307;211;0/?ft_width=1&ft_heig[\u00e2\u20ac\u00a6]${GDPR_CONSENT_78}&us_privacy=${US_PRIVACY}&url=39466910",
-                            "countryCode": "US"
+                            "countryCode": "US",
                         },
                         {
                             "id": "sr:book:23879",
@@ -116,18 +118,18 @@ content = {
                                     "type": "home",
                                     "odds": "3.050",
                                     "opening_odds": "1.500",
-                                    "odds_trend": "up"
+                                    "odds_trend": "up",
                                 },
                                 {
                                     "odds_field_id": 2,
                                     "type": "away",
                                     "odds": "1.350",
                                     "opening_odds": "2.500",
-                                    "odds_trend": "down"
-                                }
+                                    "odds_trend": "down",
+                                },
                             ],
                             "url": "https://www.olybet.eu/sports?competition=756&game=20426914&region=50003&type=0&sport=3&",
-                            "countryCode": "EE"
+                            "countryCode": "EE",
                         },
                         {
                             "id": "sr:book:35226",
@@ -138,18 +140,18 @@ content = {
                                     "type": "home",
                                     "odds": "1.370",
                                     "opening_odds": "1.300",
-                                    "odds_trend": "up"
+                                    "odds_trend": "up",
                                 },
                                 {
                                     "odds_field_id": 2,
                                     "type": "away",
                                     "odds": "3.200",
                                     "opening_odds": "3.700",
-                                    "odds_trend": "down"
-                                }
+                                    "odds_trend": "down",
+                                },
                             ],
                             "url": "https://www.tab.com.au/sports/betting/Basketball/competitions/NBA",
-                            "countryCode": "AU"
+                            "countryCode": "AU",
                         },
                         {
                             "id": "sr:book:40165",
@@ -160,20 +162,20 @@ content = {
                                     "type": "home",
                                     "odds": "1.351",
                                     "opening_odds": "1.308",
-                                    "odds_trend": "up"
+                                    "odds_trend": "up",
                                 },
                                 {
                                     "odds_field_id": 2,
                                     "type": "away",
                                     "odds": "3.250",
                                     "opening_odds": "3.600",
-                                    "odds_trend": "down"
-                                }
+                                    "odds_trend": "down",
+                                },
                             ],
                             "url": "https://sports.on.betmgm.ca/en/sports/basketball-7/betting/usa-9/nba-6004",
-                            "countryCode": "CA"
-                        }
-                    ]
+                            "countryCode": "CA",
+                        },
+                    ],
                 },
                 {
                     "name": "spread",
@@ -191,7 +193,7 @@ content = {
                                     "opening_odds": "1.880",
                                     "odds_trend": "up",
                                     "spread": "-6.5",
-                                    "opening_spread": -7.5
+                                    "opening_spread": -7.5,
                                 },
                                 {
                                     "odds_field_id": 12,
@@ -200,11 +202,11 @@ content = {
                                     "opening_odds": "1.920",
                                     "odds_trend": "down",
                                     "spread": "6.5",
-                                    "opening_spread": 7.5
-                                }
+                                    "opening_spread": 7.5,
+                                },
                             ],
                             "url": "https://ad.doubleclick.net/ddm/clk/594881279;402977564;g;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755}",
-                            "countryCode": "AUS"
+                            "countryCode": "AUS",
                         },
                         {
                             "id": "sr:book:5277",
@@ -216,7 +218,7 @@ content = {
                                     "odds": "1.900",
                                     "opening_odds": "1.900",
                                     "spread": "-7.5",
-                                    "opening_spread": -8.5
+                                    "opening_spread": -8.5,
                                 },
                                 {
                                     "odds_field_id": 12,
@@ -224,11 +226,11 @@ content = {
                                     "odds": "1.900",
                                     "opening_odds": "1.900",
                                     "spread": "7.5",
-                                    "opening_spread": 8.5
-                                }
+                                    "opening_spread": 8.5,
+                                },
                             ],
                             "url": "https://www.mozzartbet.com/sr/nba?utm_source=nba&utm_medium=mbet&utm_campaign=nba_match_schedule_mbet",
-                            "countryCode": "RS"
+                            "countryCode": "RS",
                         },
                         {
                             "id": "sr:book:6565",
@@ -241,7 +243,7 @@ content = {
                                     "opening_odds": "1.850",
                                     "odds_trend": "up",
                                     "spread": "-6.5",
-                                    "opening_spread": -7.5
+                                    "opening_spread": -7.5,
                                 },
                                 {
                                     "odds_field_id": 12,
@@ -250,11 +252,11 @@ content = {
                                     "opening_odds": "1.850",
                                     "odds_trend": "down",
                                     "spread": "6.5",
-                                    "opening_spread": 7.5
-                                }
+                                    "opening_spread": 7.5,
+                                },
                             ],
                             "url": "https://www.novibet.gr/stoixima/mpasket/4372811/united-states/nba/5142827?btag=20045[\u00e2\u20ac\u00a6]ce=2004578_&utm_medium=affiliate&utm_campaign=STOIXIMAGENERIC",
-                            "countryCode": "GR"
+                            "countryCode": "GR",
                         },
                         {
                             "id": "sr:book:6565",
@@ -267,7 +269,7 @@ content = {
                                     "opening_odds": "1.850",
                                     "odds_trend": "up",
                                     "spread": "-6.5",
-                                    "opening_spread": -7.5
+                                    "opening_spread": -7.5,
                                 },
                                 {
                                     "odds_field_id": 12,
@@ -276,11 +278,11 @@ content = {
                                     "opening_odds": "1.850",
                                     "odds_trend": "down",
                                     "spread": "6.5",
-                                    "opening_spread": 7.5
-                                }
+                                    "opening_spread": 7.5,
+                                },
                             ],
                             "url": "https://www.novibet.gr/stoixima/mpasket/4372811/united-states/nba/5142827?btag=20045[\u00e2\u20ac\u00a6]ce=2004578_&utm_medium=affiliate&utm_campaign=STOIXIMAGENERIC",
-                            "countryCode": "CY"
+                            "countryCode": "CY",
                         },
                         {
                             "id": "sr:book:18186",
@@ -292,7 +294,7 @@ content = {
                                     "odds": "1.926",
                                     "opening_odds": "1.877",
                                     "spread": "-7",
-                                    "opening_spread": -7.5
+                                    "opening_spread": -7.5,
                                 },
                                 {
                                     "odds_field_id": 12,
@@ -300,11 +302,11 @@ content = {
                                     "odds": "1.893",
                                     "opening_odds": "1.943",
                                     "spread": "7",
-                                    "opening_spread": 7.5
-                                }
+                                    "opening_spread": 7.5,
+                                },
                             ],
                             "url": "https://servedby.flashtalking.com/click/8/246790;8578295;369307;211;0/?ft_width=1&ft_heig[\u00e2\u20ac\u00a6]${GDPR_CONSENT_78}&us_privacy=${US_PRIVACY}&url=39466910",
-                            "countryCode": "US"
+                            "countryCode": "US",
                         },
                         {
                             "id": "sr:book:35226",
@@ -317,7 +319,7 @@ content = {
                                     "opening_odds": "1.900",
                                     "odds_trend": "up",
                                     "spread": "-6.5",
-                                    "opening_spread": -8
+                                    "opening_spread": -8,
                                 },
                                 {
                                     "odds_field_id": 12,
@@ -326,11 +328,11 @@ content = {
                                     "opening_odds": "1.900",
                                     "odds_trend": "down",
                                     "spread": "6.5",
-                                    "opening_spread": 8
-                                }
+                                    "opening_spread": 8,
+                                },
                             ],
                             "url": "https://www.tab.com.au/sports/betting/Basketball/competitions/NBA",
-                            "countryCode": "AU"
+                            "countryCode": "AU",
                         },
                         {
                             "id": "sr:book:38812",
@@ -343,7 +345,7 @@ content = {
                                     "opening_odds": "1.870",
                                     "odds_trend": "up",
                                     "spread": "-17.5",
-                                    "opening_spread": -7.5
+                                    "opening_spread": -7.5,
                                 },
                                 {
                                     "odds_field_id": 12,
@@ -352,11 +354,11 @@ content = {
                                     "opening_odds": "1.952",
                                     "odds_trend": "down",
                                     "spread": "17.5",
-                                    "opening_spread": 7.5
-                                }
+                                    "opening_spread": 7.5,
+                                },
                             ],
                             "url": "https://sports.sportingbet.bet.br/?wm=5507762&utm_source=app-nba-voa&utm_campaign=linkdabioappnba2025&utm_content={{ad.id}}&utm_medium=appnba-{{campaign.id}}_{{adset.id}}_{{ad.id}}&utm_term=5507762-linkdabioappnba2025-sptbet-sprts-br-2025-1-2-pt-app--acq-app&tdpeh=fb-{{ad.id}}{{site_source_name}}{{placement}}",
-                            "countryCode": "BR"
+                            "countryCode": "BR",
                         },
                         {
                             "id": "sr:book:40165",
@@ -369,7 +371,7 @@ content = {
                                     "opening_odds": "1.870",
                                     "odds_trend": "up",
                                     "spread": "-7.5",
-                                    "opening_spread": -7.5
+                                    "opening_spread": -7.5,
                                 },
                                 {
                                     "odds_field_id": 12,
@@ -378,22 +380,23 @@ content = {
                                     "opening_odds": "1.952",
                                     "odds_trend": "down",
                                     "spread": "7.5",
-                                    "opening_spread": 7.5
-                                }
+                                    "opening_spread": 7.5,
+                                },
                             ],
                             "url": "https://sports.on.betmgm.ca/en/sports/basketball-7/betting/usa-9/nba-6004",
-                            "countryCode": "CA"
-                        }
-                    ]
-                }
-            ]
+                            "countryCode": "CA",
+                        },
+                    ],
+                },
+            ],
         }
     ]
 }
 
+
 @pytest.fixture
 def nba_http_patch(monkeypatch):
-    class MockResponse(object):
+    class MockResponse:
         def __init__(*args, **kwargs):
             pass
 
@@ -412,38 +415,50 @@ def nba_http_patch(monkeypatch):
 
     monkeypatch.setattr(NBAHTTP, "send_api_request", MockResponse.send_api_request)
 
+
 def test_get_request_url():
     assert (
         odds.Odds().get_request_url()
         == "https://cdn.nba.com/static/json/liveData/odds/odds_todaysGames.json"
     )
 
+
 def test_get_response(nba_http_patch):
     assert json.dumps(content) == odds.Odds().get_response()
+
 
 def test_get_dict(nba_http_patch):
     assert odds.Odds().get_dict() == content
 
+
 def test_games_dict(nba_http_patch):
     assert odds.Odds().games.get_dict() == content["games"]
+
 
 def test_first_game_markets(nba_http_patch):
     games_data = odds.Odds().games.get_dict()
     assert games_data[0]["markets"] == content["games"][0]["markets"]
 
+
 def test_first_game_book_outcomes(nba_http_patch):
     games_data = odds.Odds().games.get_dict()
-    assert games_data[0]["markets"][0]["books"][0]["outcomes"] == content["games"][0]["markets"][0]["books"][0]["outcomes"]
+    assert (
+        games_data[0]["markets"][0]["books"][0]["outcomes"]
+        == content["games"][0]["markets"][0]["books"][0]["outcomes"]
+    )
+
 
 def test_initialization_with_custom_headers():
     custom_headers = {"User-Agent": "Test"}
     odds_endpoint = odds.Odds(headers=custom_headers, get_request=False)
     assert odds_endpoint.headers == custom_headers
 
+
 def test_initialization_with_custom_timeout():
     custom_timeout = 60
     odds_endpoint = odds.Odds(timeout=custom_timeout, get_request=False)
     assert odds_endpoint.timeout == custom_timeout
+
 
 def test_initialization_with_proxy():
     proxy_url = "http://proxy.example.com"

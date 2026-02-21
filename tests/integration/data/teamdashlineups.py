@@ -15,7 +15,7 @@ TEST_CASES = [
             "measure_type_detailed_defense": "Base",
             "per_mode_detailed": "Totals",
         },
-        "expected": "success"
+        "expected": "success",
     },
     {
         "description": "Lakers 2-man lineups 2023-24",
@@ -27,7 +27,7 @@ TEST_CASES = [
             "measure_type_detailed_defense": "Base",
             "per_mode_detailed": "PerGame",
         },
-        "expected": "has_data"
+        "expected": "has_data",
     },
     {
         "description": "Warriors 3-man lineups playoffs 2023-24",
@@ -39,7 +39,7 @@ TEST_CASES = [
             "measure_type_detailed_defense": "Advanced",
             "per_mode_detailed": "Totals",
         },
-        "expected": "success"
+        "expected": "success",
     },
     {
         "description": "Celtics 4-man lineups with date range",
@@ -53,6 +53,6 @@ TEST_CASES = [
             "date_from_nullable": "2024-01-01",
             "date_to_nullable": "2024-03-31",
         },
-        "expected": "has_data"
+        "expected": "has_data",
     },
 ]

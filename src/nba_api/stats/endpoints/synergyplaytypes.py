@@ -4,9 +4,9 @@ from nba_api.stats.library.parameters import (
     LeagueID,
     PerModeSimple,
     PlayerOrTeamAbbreviation,
-    SeasonTypeAllStar,
-    Season,
     PlayTypeNullable,
+    Season,
+    SeasonTypeAllStar,
     TypeGroupingNullable,
 )
 
