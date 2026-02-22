@@ -1,4 +1,4 @@
-"""Shared models for integration test catalogs."""
+"""Shared models for integration test helpers."""
 
 import inspect
 

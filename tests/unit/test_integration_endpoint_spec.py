@@ -7,8 +7,8 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from tests.integration.catalogs.constants import GAME_ID, PLAYER_ID  # noqa: E402
-from tests.integration.catalogs.models import EndpointSpec  # noqa: E402
+from tests.integration.helpers.constants import GAME_ID, PLAYER_ID  # noqa: E402
+from tests.integration.helpers.models import EndpointSpec  # noqa: E402
 
 
 class DemoEndpoint:

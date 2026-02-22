@@ -8,8 +8,8 @@ import json
 
 import pytest
 
-from ..catalogs.endpoint_specs import endpoint_specs
-from ..catalogs.models import EndpointSpec
+from ..helpers.endpoint_specs import endpoint_specs
+from ..helpers.models import EndpointSpec
 
 pytestmark = [pytest.mark.live]
 

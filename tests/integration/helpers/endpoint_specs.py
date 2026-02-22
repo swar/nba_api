@@ -1,4 +1,4 @@
-"""Integration smoke endpoint catalog.
+"""Integration smoke endpoint helpers.
 
 Curated endpoint specs for broad integration smoke coverage.
 Add new `EndpointSpec(...)` entries in the appropriate section.

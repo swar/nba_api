@@ -29,7 +29,7 @@ def vcr_cassette_dir(request):
 
 
 def pytest_collection_modifyitems(items):
-    """Auto-skip endpoint specs tagged as deprecated in the smoke catalog."""
+    """Auto-skip endpoint specs tagged as deprecated in the smoke helpers."""
     for item in items:
         marker = item.get_closest_marker("deprecated_endpoint")
         if marker:

@@ -2,16 +2,18 @@
 INFRASTRUCTURE_PARAMS = {"proxy", "headers", "timeout", "get_request"}
 
 # Canonical test values.
-GAME_ID = "0021700807"  # Cavaliers vs. Celtics, 2017-18 regular season
-PLAYER_ID = "2544"  # LeBron James
-ALT_PLAYER_ID = "202681"  # Kyrie Irving
+GAME_ID = "0022200552"  # Cavaliers vs. Bulls, 2023-01-03
+PLAYER_ID = "1628378"  # Donovan Mitchell
+ALT_PLAYER_ID = "1630596"  # Evan Mobley
 TEAM_ID = "1610612739"  # Cleveland Cavaliers
-ALT_TEAM_ID = "1610612765"  # New Orleans Pelicans
+ALT_TEAM_ID = "1610612759"  # San Antonio Spurs
 COLLEGE = "Ohio State"
 MINUTES_MIN = 10  # LeagueLineupViz minimum minutes filter
-LINEUP_GROUP_ID = "-202689-203493-203501-1626174-1627827-"  # ShotChartLineupDetail
-PLAYER_ID_LIST = "202681,203078,2544,201567,203954"
-VS_PLAYER_ID_LIST = "201566,201939,201935,201142,203076"
+
+LINEUP = "201935-1628378-1628386-1629731-1630596"  # J. Harden - D. Mitchell - J. Allen - D. Wade - E. Mobley
+LINEUP_GROUP_ID = f"-{LINEUP}-"
+PLAYER_ID_LIST = f"-{LINEUP}-"
+VS_PLAYER_ID_LIST = LINEUP
 
 # Default values for required params, keyed by param name.
 # Only params with no default in __init__ are resolved from here.

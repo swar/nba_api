@@ -7,8 +7,10 @@ Not the broad live smoke sweep.
 import pytest
 
 from nba_api.stats import endpoints
-
-from ..helpers import assert_endpoint_instantiates, run_endpoint_test
+from tests.integration.scenarios.helpers import (
+    assert_endpoint_instantiates,
+    run_endpoint_test,
+)
 
 # Import test case data (one module per endpoint)
 from .data import (
