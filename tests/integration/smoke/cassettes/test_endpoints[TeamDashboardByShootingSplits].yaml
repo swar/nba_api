@@ -1,0 +1,180 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQjmITAnAZ9GicAQAA1Q3agx6X4OjG9L/LBXIByUPKM7BSj/ebgbwmCiytiDA1c5PU1eoiTXY03mTPcN4KUVTckZZvdeGcZ5VCRff78lXsvzusKDB9XrFRY/empjr4J8w6P29Cgy7KZBDzdQMMRDMpQxlmTndNmKoGFA1h3vJlqtoUWi3f0dmGJqM0wXtbeehBiin3oW+2qzKHnOIuB0EYZqj84uOXsEZoEZnERVrXvMlfjQyCYWgCk1DmGLs=~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/teamdashboardbyshootingsplits?DateFrom=&DateTo=&GameSegment=&LastNGames=0&LeagueID=00&Location=&MeasureType=Base&Month=0&OpponentTeamID=0&Outcome=&PORound=&PaceAdjust=N&PerMode=Totals&Period=0&PlusMinus=N&Rank=N&Season=2025-26&SeasonSegment=&SeasonType=Regular+Season&ShotClockRange=&TeamID=1610612739&VsConference=&VsDivision=
+  response:
+    body:
+      string: "{\"resource\":\"teamdashboardbyshootingsplits\",\"parameters\":{\"MeasureType\":\"Base\",\"PerMode\":\"Totals\",\"PlusMinus\":\"N\",\"PaceAdjust\":\"N\",\"Rank\":\"N\",\"LeagueID\":\"00\",\"Season\":\"2025-26\",\"SeasonType\":\"Regular
+        Season\",\"PORound\":0,\"TeamID\":1610612739,\"Outcome\":null,\"Location\":null,\"Month\":0,\"SeasonSegment\":null,\"DateFrom\":null,\"DateTo\":null,\"OpponentTeamID\":0,\"VsConference\":null,\"VsDivision\":null,\"GameSegment\":null,\"Period\":0,\"ShotClockRange\":null,\"LastNGames\":0,\"ISTRound\":null},\"resultSets\":[{\"name\":\"OverallTeamDashboard\",\"headers\":[\"GROUP_SET\",\"GROUP_VALUE\",\"FGM\",\"FGA\",\"FG_PCT\",\"FG3M\",\"FG3A\",\"FG3_PCT\",\"EFG_PCT\",\"BLKA\",\"PCT_AST_2PM\",\"PCT_UAST_2PM\",\"PCT_AST_3PM\",\"PCT_UAST_3PM\",\"PCT_AST_FGM\",\"PCT_UAST_FGM\",\"FGM_RANK\",\"FGA_RANK\",\"FG_PCT_RANK\",\"FG3M_RANK\",\"FG3A_RANK\",\"FG3_PCT_RANK\",\"EFG_PCT_RANK\",\"BLKA_RANK\",\"PCT_AST_2PM_RANK\",\"PCT_UAST_2PM_RANK\",\"PCT_AST_3PM_RANK\",\"PCT_UAST_3PM_RANK\",\"PCT_AST_FGM_RANK\",\"PCT_UAST_FGM_RANK\"],\"rowSet\":[[\"Overall\",\"2025-26\",2484,5203,0.477,831,2314,0.359,0.557,249,0.57,0.43,0.822,0.178,0.654,0.346,1,1,1,1,1,1,1,1,1,1,1,1,1,1]]},{\"name\":\"Shot5FTTeamDashboard\",\"headers\":[\"GROUP_SET\",\"GROUP_VALUE\",\"FGM\",\"FGA\",\"FG_PCT\",\"FG3M\",\"FG3A\",\"FG3_PCT\",\"EFG_PCT\",\"BLKA\",\"PCT_AST_2PM\",\"PCT_UAST_2PM\",\"PCT_AST_3PM\",\"PCT_UAST_3PM\",\"PCT_AST_FGM\",\"PCT_UAST_FGM\",\"FGM_RANK\",\"FGA_RANK\",\"FG_PCT_RANK\",\"FG3M_RANK\",\"FG3A_RANK\",\"FG3_PCT_RANK\",\"EFG_PCT_RANK\",\"BLKA_RANK\",\"PCT_AST_2PM_RANK\",\"PCT_UAST_2PM_RANK\",\"PCT_AST_3PM_RANK\",\"PCT_UAST_3PM_RANK\",\"PCT_AST_FGM_RANK\",\"PCT_UAST_FGM_RANK\"],\"rowSet\":[[\"Shot
+        Distance (5ft)\",\"Less Than 5 ft.\",1058,1614,0.656,0,0,0.0,0.656,176,0.611,0.389,0.0,0.0,0.611,0.389,1,1,1,4,6,4,2,9,1,5,4,4,4,4],[\"Shot
+        Distance (5ft)\",\"5-9 ft.\",311,642,0.484,0,0,0.0,0.484,46,0.505,0.495,0.0,0.0,0.505,0.495,4,4,2,4,6,4,5,8,4,2,4,4,6,2],[\"Shot
+        Distance (5ft)\",\"10-14 ft.\",185,390,0.474,0,0,0.0,0.474,16,0.519,0.481,0.0,0.0,0.519,0.481,5,5,3,4,6,4,6,7,3,3,4,4,5,3],[\"Shot
+        Distance (5ft)\",\"15-19 ft.\",78,180,0.433,0,0,0.0,0.433,1,0.397,0.603,0.0,0.0,0.397,0.603,6,6,5,4,6,4,7,4,5,1,4,4,7,1],[\"Shot
+        Distance (5ft)\",\"20-24 ft.\",316,880,0.359,295,817,0.361,0.527,5,0.571,0.429,0.929,0.071,0.905,0.095,3,3,6,2,2,2,4,5,2,4,1,3,1,7],[\"Shot
+        Distance (5ft)\",\"25-29 ft.\",518,1453,0.357,518,1453,0.357,0.535,5,0.0,0.0,0.763,0.237,0.763,0.237,2,2,7,1,1,3,3,5,6,6,3,1,3,5],[\"Shot
+        Distance (5ft)\",\"30-34 ft.\",18,39,0.462,18,39,0.462,0.692,0,0.0,0.0,0.778,0.222,0.778,0.222,7,7,4,3,3,1,1,1,6,6,2,2,2,6],[\"Shot
+        Distance (5ft)\",\"35-39 ft.\",0,4,0.0,0,4,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,8,8,8,4,4,4,8,1,6,6,4,4,8,8],[\"Shot
+        Distance (5ft)\",\"40+ ft.\",0,1,0.0,0,1,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,8,9,8,4,5,4,8,1,6,6,4,4,8,8]]},{\"name\":\"Shot8FTTeamDashboard\",\"headers\":[\"GROUP_SET\",\"GROUP_VALUE\",\"FGM\",\"FGA\",\"FG_PCT\",\"FG3M\",\"FG3A\",\"FG3_PCT\",\"EFG_PCT\",\"BLKA\",\"PCT_AST_2PM\",\"PCT_UAST_2PM\",\"PCT_AST_3PM\",\"PCT_UAST_3PM\",\"PCT_AST_FGM\",\"PCT_UAST_FGM\",\"FGM_RANK\",\"FGA_RANK\",\"FG_PCT_RANK\",\"FG3M_RANK\",\"FG3A_RANK\",\"FG3_PCT_RANK\",\"EFG_PCT_RANK\",\"BLKA_RANK\",\"PCT_AST_2PM_RANK\",\"PCT_UAST_2PM_RANK\",\"PCT_AST_3PM_RANK\",\"PCT_UAST_3PM_RANK\",\"PCT_AST_FGM_RANK\",\"PCT_UAST_FGM_RANK\"],\"rowSet\":[[\"Shot
+        Distance (8ft)\",\"Less Than 8 ft.\",1240,2012,0.616,0,0,0.0,0.616,212,0.595,0.405,0.0,0.0,0.595,0.405,1,2,1,2,3,2,1,5,1,3,2,2,2,3],[\"Shot
+        Distance (8ft)\",\"8-16 ft.\",335,680,0.493,0,0,0.0,0.493,26,0.493,0.507,0.0,0.0,0.493,0.507,3,3,2,2,3,2,3,4,3,1,2,2,4,1],[\"Shot
+        Distance (8ft)\",\"16-24 ft.\",78,196,0.398,0,0,0.0,0.398,1,0.5,0.5,0.0,0.0,0.5,0.5,4,4,3,2,3,2,4,2,2,2,2,2,3,2],[\"Shot
+        Distance (8ft)\",\"24+ ft.\",831,2314,0.359,831,2313,0.359,0.539,10,0.0,0.0,0.822,0.178,0.822,0.178,2,1,4,1,1,1,2,3,4,4,1,1,1,4],[\"Shot
+        Distance (8ft)\",\"Back Court Shot\",0,1,0.0,0,1,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,5,5,5,2,2,2,5,1,4,4,2,2,5,5]]},{\"name\":\"ShotAreaTeamDashboard\",\"headers\":[\"GROUP_SET\",\"GROUP_VALUE\",\"FGM\",\"FGA\",\"FG_PCT\",\"FG3M\",\"FG3A\",\"FG3_PCT\",\"EFG_PCT\",\"BLKA\",\"PCT_AST_2PM\",\"PCT_UAST_2PM\",\"PCT_AST_3PM\",\"PCT_UAST_3PM\",\"PCT_AST_FGM\",\"PCT_UAST_FGM\",\"FGM_RANK\",\"FGA_RANK\",\"FG_PCT_RANK\",\"FG3M_RANK\",\"FG3A_RANK\",\"FG3_PCT_RANK\",\"EFG_PCT_RANK\",\"BLKA_RANK\",\"PCT_AST_2PM_RANK\",\"PCT_UAST_2PM_RANK\",\"PCT_AST_3PM_RANK\",\"PCT_UAST_3PM_RANK\",\"PCT_AST_FGM_RANK\",\"PCT_UAST_FGM_RANK\"],\"rowSet\":[[\"Shot
+        Area\",\"Restricted Area\",990,1464,0.676,0,0,0.0,0.676,152,0.606,0.394,0.0,0.0,0.606,0.394,1,2,1,4,5,4,1,7,1,3,4,4,4,3],[\"Shot
+        Area\",\"In The Paint (Non-RA)\",472,1015,0.465,0,0,0.0,0.465,81,0.525,0.475,0.0,0.0,0.525,0.475,3,3,3,4,5,4,6,6,2,2,4,4,5,2],[\"Shot
+        Area\",\"Mid-Range\",191,409,0.467,0,0,0.0,0.467,6,0.492,0.508,0.0,0.0,0.492,0.508,4,4,2,4,5,4,5,4,3,1,4,4,6,1],[\"Shot
+        Area\",\"Left Corner 3\",102,263,0.388,102,263,0.388,0.582,3,0.0,0.0,0.99,0.01,0.99,0.01,5,6,4,2,3,1,2,3,4,4,1,3,1,6],[\"Shot
+        Area\",\"Right Corner 3\",100,288,0.347,100,288,0.347,0.521,0,0.0,0.0,0.98,0.02,0.98,0.02,6,5,6,3,2,3,4,1,4,4,2,2,2,5],[\"Shot
+        Area\",\"Above the Break 3\",629,1763,0.357,629,1762,0.357,0.535,7,0.0,0.0,0.769,0.231,0.769,0.231,2,1,5,1,1,2,3,5,4,4,3,1,3,4],[\"Shot
+        Area\",\"Backcourt\",0,1,0.0,0,1,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,7,7,7,4,4,4,7,1,4,4,4,4,7,7]]},{\"name\":\"AssitedShotTeamDashboard\",\"headers\":[\"GROUP_SET\",\"GROUP_VALUE\",\"FGM\",\"FGA\",\"FG_PCT\",\"FG3M\",\"FG3A\",\"FG3_PCT\",\"EFG_PCT\",\"BLKA\",\"PCT_AST_2PM\",\"PCT_UAST_2PM\",\"PCT_AST_3PM\",\"PCT_UAST_3PM\",\"PCT_AST_FGM\",\"PCT_UAST_FGM\",\"FGM_RANK\",\"FGA_RANK\",\"FG_PCT_RANK\",\"FG3M_RANK\",\"FG3A_RANK\",\"FG3_PCT_RANK\",\"EFG_PCT_RANK\",\"BLKA_RANK\",\"PCT_AST_2PM_RANK\",\"PCT_UAST_2PM_RANK\",\"PCT_AST_3PM_RANK\",\"PCT_UAST_3PM_RANK\",\"PCT_AST_FGM_RANK\",\"PCT_UAST_FGM_RANK\"],\"rowSet\":[[\"Assisted
+        Shot\",\"Assisted\",1625,1625,1.0,683,683,1.0,1.21,0,1.0,0.0,1.0,0.0,1.0,0.0,1,1,1,1,1,1,1,1,1,2,1,2,1,2],[\"Assisted
+        Shot\",\"Unassisted\",859,859,1.0,148,148,1.0,1.086,0,0.0,1.0,0.0,1.0,0.0,1.0,2,2,1,2,2,1,2,1,2,1,2,1,2,1]]},{\"name\":\"ShotTypeTeamDashboard\",\"headers\":[\"GROUP_SET\",\"GROUP_VALUE\",\"FGM\",\"FGA\",\"FG_PCT\",\"FG3M\",\"FG3A\",\"FG3_PCT\",\"EFG_PCT\",\"BLKA\",\"PCT_AST_2PM\",\"PCT_UAST_2PM\",\"PCT_AST_3PM\",\"PCT_UAST_3PM\",\"PCT_AST_FGM\",\"PCT_UAST_FGM\",\"FGM_RANK\",\"FGA_RANK\",\"FG_PCT_RANK\",\"FG3M_RANK\",\"FG3A_RANK\",\"FG3_PCT_RANK\",\"EFG_PCT_RANK\",\"BLKA_RANK\",\"PCT_AST_2PM_RANK\",\"PCT_UAST_2PM_RANK\",\"PCT_AST_3PM_RANK\",\"PCT_UAST_3PM_RANK\",\"PCT_AST_FGM_RANK\",\"PCT_UAST_FGM_RANK\"],\"rowSet\":[[\"Shot
+        Type\",\"Alley Oop Dunk Shot\",32,35,0.914,0,0,0.0,0.914,1,1.0,0.0,0.0,0.0,1.0,0.0,21,28,5,7,12,7,5,20,1,34,6,6,1,34],[\"Shot
+        Type\",\"Alley Oop Layup shot\",11,18,0.611,0,0,0.0,0.611,1,1.0,0.0,0.0,0.0,1.0,0.0,33,33,17,7,12,7,17,20,1,34,6,6,1,34],[\"Shot
+        Type\",\"Cutting Dunk Shot\",96,113,0.85,0,0,0.0,0.85,11,1.0,0.0,0.0,0.0,1.0,0.0,6,10,8,7,12,7,8,42,1,34,6,6,1,34],[\"Shot
+        Type\",\"Cutting Finger Roll Layup Shot\",8,13,0.615,0,0,0.0,0.615,1,1.0,0.0,0.0,0.0,1.0,0.0,34,34,16,7,12,7,16,20,1,34,6,6,1,34],[\"Shot
+        Type\",\"Cutting Layup Shot\",89,142,0.627,0,0,0.0,0.627,15,1.0,0.0,0.0,0.0,1.0,0.0,8,9,15,7,12,7,15,44,1,34,6,6,1,34],[\"Shot
+        Type\",\"Driving Bank Hook Shot\",4,8,0.5,0,0,0.0,0.5,0,0.5,0.5,0.0,0.0,0.5,0.5,37,38,29,7,12,7,34,1,28,15,6,6,28,16],[\"Shot
+        Type\",\"Driving Dunk Shot\",44,51,0.863,0,0,0.0,0.863,3,0.636,0.364,0.0,0.0,0.636,0.364,17,22,7,7,12,7,7,31,23,22,6,6,23,22],[\"Shot
+        Type\",\"Driving Finger Roll Layup Shot\",95,159,0.597,0,0,0.0,0.597,7,0.326,0.674,0.0,0.0,0.326,0.674,7,7,20,7,12,7,20,39,39,6,6,6,39,6],[\"Shot
+        Type\",\"Driving Floating Bank Jump Shot\",50,91,0.549,0,0,0.0,0.549,1,0.44,0.56,0.0,0.0,0.44,0.56,14,13,23,7,12,7,24,20,32,13,6,6,31,14],[\"Shot
+        Type\",\"Driving Floating Jump Shot\",205,406,0.505,0,1,0.0,0.505,24,0.376,0.624,0.0,0.0,0.376,0.624,3,3,28,7,9,7,33,45,36,9,6,6,37,8],[\"Shot
+        Type\",\"Driving Hook Shot\",19,42,0.452,0,0,0.0,0.452,1,0.737,0.263,0.0,0.0,0.737,0.263,29,26,31,7,12,7,36,20,19,25,6,6,20,24],[\"Shot
+        Type\",\"Driving Layup Shot\",164,323,0.508,0,0,0.0,0.508,66,0.421,0.579,0.0,0.0,0.421,0.579,4,4,27,7,12,7,30,48,34,11,6,6,33,12],[\"Shot
+        Type\",\"Driving Reverse Dunk Shot\",0,1,0.0,0,0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,45,45,45,7,12,7,45,1,41,34,6,6,41,34],[\"Shot
+        Type\",\"Driving Reverse Layup Shot\",23,36,0.639,0,0,0.0,0.639,4,0.565,0.435,0.0,0.0,0.565,0.435,25,27,14,7,12,7,14,36,25,20,6,6,26,19],[\"Shot
+        Type\",\"Dunk Shot\",52,59,0.881,0,0,0.0,0.881,4,0.942,0.058,0.0,0.0,0.942,0.058,13,20,6,7,12,7,6,36,12,33,6,6,14,31],[\"Shot
+        Type\",\"Fadeaway Bank shot\",2,6,0.333,0,0,0.0,0.333,0,0.5,0.5,0.0,0.0,0.5,0.5,43,40,42,7,12,7,42,1,28,15,6,6,28,16],[\"Shot
+        Type\",\"Fadeaway Jump Shot\",22,51,0.431,0,5,0.0,0.431,0,0.364,0.636,0.0,0.0,0.364,0.636,27,22,34,7,6,7,39,1,38,7,6,6,38,7],[\"Shot
+        Type\",\"Finger Roll Layup Shot\",5,6,0.833,0,0,0.0,0.833,0,0.2,0.8,0.0,0.0,0.2,0.8,36,40,9,7,12,7,9,1,40,5,6,6,40,5],[\"Shot
+        Type\",\"Floating Jump shot\",58,110,0.527,0,0,0.0,0.527,2,0.897,0.103,0.0,0.0,0.897,0.103,12,11,24,7,12,7,27,27,14,31,6,6,15,30],[\"Shot
+        Type\",\"Hook Bank Shot\",1,5,0.2,0,0,0.0,0.2,0,1.0,0.0,0.0,0.0,1.0,0.0,44,42,44,7,12,7,44,1,1,34,6,6,1,34],[\"Shot
+        Type\",\"Hook Shot\",21,45,0.467,0,0,0.0,0.467,3,0.857,0.143,0.0,0.0,0.857,0.143,28,25,30,7,12,7,35,31,15,29,6,6,16,28],[\"Shot
+        Type\",\"Jump Bank Shot\",4,9,0.444,0,1,0.0,0.444,0,1.0,0.0,0.0,0.0,1.0,0.0,37,37,32,7,9,7,37,1,1,34,6,6,1,34],[\"Shot
+        Type\",\"Jump Shot\",553,1533,0.361,532,1460,0.364,0.534,10,0.905,0.095,0.981,0.019,0.978,0.022,1,1,41,1,1,4,26,41,13,32,2,5,12,33],[\"Shot
+        Type\",\"Layup Shot\",50,83,0.602,0,0,0.0,0.602,25,0.78,0.22,0.0,0.0,0.78,0.22,14,14,19,7,12,7,19,46,17,28,6,6,18,27],[\"Shot
+        Type\",\"Pullup Jump shot\",225,572,0.393,129,384,0.336,0.506,7,0.375,0.625,0.434,0.566,0.409,0.591,2,2,36,2,2,6,32,39,37,8,4,3,34,11],[\"Shot
+        Type\",\"Putback Dunk Shot\",19,23,0.826,0,0,0.0,0.826,2,0.0,1.0,0.0,0.0,0.0,1.0,29,31,10,7,12,7,10,27,41,1,6,6,41,1],[\"Shot
+        Type\",\"Putback Layup Shot\",47,78,0.603,0,0,0.0,0.603,12,0.0,1.0,0.0,0.0,0.0,1.0,16,17,18,7,12,7,18,43,41,1,6,6,41,1],[\"Shot
+        Type\",\"Reverse Dunk Shot\",4,4,1.0,0,0,0.0,1.0,0,1.0,0.0,0.0,0.0,1.0,0.0,37,43,1,7,12,7,1,1,1,34,6,6,1,34],[\"Shot
+        Type\",\"Reverse Layup Shot\",19,26,0.731,0,0,0.0,0.731,1,0.737,0.263,0.0,0.0,0.737,0.263,29,29,13,7,12,7,13,20,19,25,6,6,20,24],[\"Shot
+        Type\",\"Running Alley Oop Dunk Shot\",19,19,1.0,0,0,0.0,1.0,0,1.0,0.0,0.0,0.0,1.0,0.0,29,32,1,7,12,7,1,1,1,34,6,6,1,34],[\"Shot
+        Type\",\"Running Alley Oop Layup Shot\",3,4,0.75,0,0,0.0,0.75,0,1.0,0.0,0.0,0.0,1.0,0.0,41,43,11,7,12,7,11,1,1,34,6,6,1,34],[\"Shot
+        Type\",\"Running Dunk Shot\",74,80,0.925,0,0,0.0,0.925,4,0.73,0.27,0.0,0.0,0.73,0.27,10,15,3,7,12,7,3,36,21,24,6,6,22,23],[\"Shot
+        Type\",\"Running Finger Roll Layup Shot\",34,46,0.739,0,0,0.0,0.739,3,0.559,0.441,0.0,0.0,0.559,0.441,20,24,12,7,12,7,12,31,26,19,6,6,27,18],[\"Shot
+        Type\",\"Running Jump Shot\",63,163,0.387,59,156,0.378,0.567,0,0.5,0.5,1.0,0.0,0.968,0.032,11,6,38,4,4,2,23,1,28,15,1,6,13,32],[\"Shot
+        Type\",\"Running Layup Shot\",80,153,0.523,0,0,0.0,0.523,30,0.6,0.4,0.0,0.0,0.6,0.4,9,8,25,7,12,7,28,47,24,21,6,6,24,21],[\"Shot
+        Type\",\"Running Pull-Up Jump Shot\",36,94,0.383,30,83,0.361,0.543,0,0.667,0.333,0.567,0.433,0.583,0.417,19,12,39,5,5,5,25,1,22,23,3,4,25,20],[\"Shot
+        Type\",\"Running Reverse Dunk Shot\",0,0,0.0,0,0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,45,48,45,7,12,7,45,1,41,34,6,6,41,34],[\"Shot
+        Type\",\"Running Reverse Layup Shot\",7,12,0.583,0,0,0.0,0.583,3,0.857,0.143,0.0,0.0,0.857,0.143,35,35,21,7,12,7,21,31,15,29,6,6,16,28],[\"Shot
+        Type\",\"Step Back Bank Jump Shot\",0,1,0.0,0,1,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,45,45,45,7,9,7,45,1,41,34,6,6,41,34],[\"Shot
+        Type\",\"Step Back Jump shot\",100,276,0.362,80,216,0.37,0.507,2,0.55,0.45,0.363,0.638,0.4,0.6,5,5,40,3,3,3,31,27,27,18,5,2,36,9],[\"Shot
+        Type\",\"Tip Dunk Shot\",24,26,0.923,0,0,0.0,0.923,0,0.0,1.0,0.0,0.0,0.0,1.0,23,29,4,7,12,7,4,1,41,1,6,6,41,1],[\"Shot
+        Type\",\"Tip Layup Shot\",41,80,0.513,0,0,0.0,0.513,0,0.0,1.0,0.0,0.0,0.0,1.0,18,15,26,7,12,7,29,1,41,1,6,6,41,1],[\"Shot
+        Type\",\"Turnaround Bank Hook Shot\",3,11,0.273,0,0,0.0,0.273,0,1.0,0.0,0.0,0.0,1.0,0.0,41,36,43,7,12,7,43,1,1,34,6,6,1,34],[\"Shot
+        Type\",\"Turnaround Bank shot\",4,7,0.571,0,0,0.0,0.571,0,0.75,0.25,0.0,0.0,0.75,0.25,37,39,22,7,12,7,22,1,18,27,6,6,19,26],[\"Shot
+        Type\",\"Turnaround Fadeaway Bank Jump Shot\",0,1,0.0,0,0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,45,45,45,7,12,7,45,1,41,34,6,6,41,34],[\"Shot
+        Type\",\"Turnaround Fadeaway shot\",24,62,0.387,1,2,0.5,0.395,1,0.478,0.522,0.0,1.0,0.458,0.542,23,19,37,6,8,1,41,20,31,14,6,1,30,15],[\"Shot
+        Type\",\"Turnaround Hook Shot\",23,52,0.442,0,0,0.0,0.442,2,0.435,0.565,0.0,0.0,0.435,0.565,25,21,33,7,12,7,38,27,33,12,6,6,32,13],[\"Shot
+        Type\",\"Turnaround Jump Shot\",27,68,0.397,0,5,0.0,0.397,3,0.407,0.593,0.0,0.0,0.407,0.593,22,18,35,7,6,7,40,31,35,10,6,6,35,10]]},{\"name\":\"AssistedBy\",\"headers\":[\"GROUP_SET\",\"PLAYER_ID\",\"PLAYER_NAME\",\"FGM\",\"FGA\",\"FG_PCT\",\"FG3M\",\"FG3A\",\"FG3_PCT\",\"EFG_PCT\",\"BLKA\",\"PCT_AST_2PM\",\"PCT_UAST_2PM\",\"PCT_AST_3PM\",\"PCT_UAST_3PM\",\"PCT_AST_FGM\",\"PCT_UAST_FGM\",\"FGM_RANK\",\"FGA_RANK\",\"FG_PCT_RANK\",\"FG3M_RANK\",\"FG3A_RANK\",\"FG3_PCT_RANK\",\"EFG_PCT_RANK\",\"BLKA_RANK\",\"PCT_AST_2PM_RANK\",\"PCT_UAST_2PM_RANK\",\"PCT_AST_3PM_RANK\",\"PCT_UAST_3PM_RANK\",\"PCT_AST_FGM_RANK\",\"PCT_UAST_FGM_RANK\"],\"rowSet\":[[\"Assisted
+        By\",1628386,\"Allen, Jarrett\",88,88,1.0,32,32,1.0,1.182,0,1.0,0.0,1.0,0.0,1.0,0.0,8,8,1,9,9,1,17,1,1,1,1,1,1,1],[\"Assisted
+        By\",1628366,\"Ball, Lonzo\",136,136,1.0,57,57,1.0,1.21,0,1.0,0.0,1.0,0.0,1.0,0.0,5,5,1,5,5,1,11,1,1,1,1,1,1,1],[\"Assisted
+        By\",1628418,\"Bryant, Thomas\",26,26,1.0,11,11,1.0,1.212,0,1.0,0.0,1.0,0.0,1.0,0.0,14,14,1,15,15,1,10,1,1,1,1,1,1,1],[\"Assisted
+        By\",1631165,\"Ellis, Keon\",10,10,1.0,5,5,1.0,1.25,0,1.0,0.0,1.0,0.0,1.0,0.0,17,17,1,17,17,1,2,1,1,1,1,1,1,1],[\"Assisted
+        By\",1642400,\"Enaruna, Tristan\",2,2,1.0,1,1,1.0,1.25,0,1.0,0.0,1.0,0.0,1.0,0.0,19,19,1,19,19,1,2,1,1,1,1,1,1,1],[\"Assisted
+        By\",1629636,\"Garland, Darius\",180,180,1.0,64,64,1.0,1.178,0,1.0,0.0,1.0,0.0,1.0,0.0,2,2,1,3,3,1,18,1,1,1,1,1,1,1],[\"Assisted
+        By\",201935,\"Harden, James\",43,43,1.0,17,17,1.0,1.198,0,1.0,0.0,1.0,0.0,1.0,0.0,12,12,1,13,13,1,14,1,1,1,1,1,1,1],[\"Assisted
+        By\",1629631,\"Hunter, De'Andre\",89,89,1.0,42,42,1.0,1.236,0,1.0,0.0,1.0,0.0,1.0,0.0,7,7,1,7,7,1,7,1,1,1,1,1,1,1],[\"Assisted
+        By\",1641753,\"Livingston, Chris\",1,1,1.0,0,0,0.0,1.0,0,1.0,0.0,0.0,0.0,1.0,0.0,20,20,1,20,20,20,20,1,1,1,20,1,1,1],[\"Assisted
+        By\",1630241,\"Merrill, Sam\",75,75,1.0,29,29,1.0,1.193,0,1.0,0.0,1.0,0.0,1.0,0.0,9,9,1,10,10,1,16,1,1,1,1,1,1,1],[\"Assisted
+        By\",1628378,\"Mitchell, Donovan\",311,311,1.0,126,126,1.0,1.203,0,1.0,0.0,1.0,0.0,1.0,0.0,1,1,1,1,1,1,13,1,1,1,1,1,1,1],[\"Assisted
+        By\",1630596,\"Mobley, Evan\",172,172,1.0,83,83,1.0,1.241,0,1.0,0.0,1.0,0.0,1.0,0.0,3,3,1,2,2,1,5,1,1,1,1,1,1,1],[\"Assisted
+        By\",1626204,\"Nance Jr., Larry\",25,25,1.0,13,13,1.0,1.26,0,1.0,0.0,1.0,0.0,1.0,0.0,15,15,1,14,14,1,1,1,1,1,1,1,1,1],[\"Assisted
+        By\",1641854,\"Porter Jr., Craig\",157,157,1.0,61,61,1.0,1.194,0,1.0,0.0,1.0,0.0,1.0,0.0,4,4,1,4,4,1,15,1,1,1,1,1,1,1],[\"Assisted
+        By\",1642878,\"Proctor, Tyrese\",53,53,1.0,22,22,1.0,1.208,0,1.0,0.0,1.0,0.0,1.0,0.0,11,11,1,11,11,1,12,1,1,1,1,1,1,1],[\"Assisted
+        By\",203471,\"Schr\xF6der, Dennis\",21,21,1.0,9,9,1.0,1.214,0,1.0,0.0,1.0,0.0,1.0,0.0,16,16,1,16,16,1,9,1,1,1,1,1,1,1],[\"Assisted
+        By\",1641772,\"Tomlin, Nae'Qwan\",42,42,1.0,20,20,1.0,1.238,0,1.0,0.0,1.0,0.0,1.0,0.0,13,13,1,12,12,1,6,1,1,1,1,1,1,1],[\"Assisted
+        By\",1631247,\"Travers, Luke\",9,9,1.0,3,3,1.0,1.167,0,1.0,0.0,1.0,0.0,1.0,0.0,18,18,1,18,18,1,19,1,1,1,1,1,1,1],[\"Assisted
+        By\",1642281,\"Tyson, Jaylon\",117,117,1.0,54,54,1.0,1.231,0,1.0,0.0,1.0,0.0,1.0,0.0,6,6,1,6,6,1,8,1,1,1,1,1,1,1],[\"Assisted
+        By\",1629731,\"Wade, Dean\",68,68,1.0,34,34,1.0,1.25,0,1.0,0.0,1.0,0.0,1.0,0.0,10,10,1,8,8,1,2,1,1,1,1,1,1,1]]}]}"
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '4112'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:37:12 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQlWITAlL0b2ecAQAAqxDagx5nyiUlElzqRlPBcZRUZT6wzZ/3FBw3T6cOqsn2gzkajcCq9OgRec4+g06gntd9umdhrCo58Gs/+OuXPgHYaHKL9VkxmxQhfEj4ZsQUbDr9ICgQf/+4eiqA73DUGIQoZkq+WrLx5sSnMTqi9CTWTeKSPltStK9NJP7zoC7n0QeQI7SqAmtop6Npwng40FrhnQEEGCyVLJhF/HWhPImVyzMEZN9nZsvx05DoFgw=~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7092;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-2
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '3600.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '1'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '2182.717'
+      x-varnish:
+      - 39326140 37265710
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

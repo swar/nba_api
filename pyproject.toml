@@ -59,9 +59,15 @@ pandas = [
 ]
 ruff = "^0.15.2"
 pre-commit = "^4.0.0"
+pytest-recording = "^0.13.4"
 
 [tool.pytest.ini_options]
-testpaths = "./tests/unit/"
+markers = [
+    "live: test makes real HTTP requests to the NBA Stats API; skip in CI unless cassettes are present",
+    "vcr: test uses a pre-recorded VCR cassette and does not require network access",
+    "canary: lightweight smoke test suitable for rapid health checks",
+    "deprecated_endpoint: marks a test for an endpoint known to be deprecated or unstable",
+]
 
 [tool.ruff]
 line-length = 88

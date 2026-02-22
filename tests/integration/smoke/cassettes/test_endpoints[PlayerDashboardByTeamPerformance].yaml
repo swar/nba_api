@@ -1,0 +1,114 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAvEdbWicAQAA59LZgx7FigNZO+UutRfvmCL1T0m1+BS6ILSE8a/46DSIYYUCC5AroupKAc7rsi92z73Ygf0jDrBBgQOZJmSJyAPHiWCBBAU6sYC9QrxwAnCVeJ6usbRXSJodpmO/nXSq1Ef5kWkOuxkZCpiof7QQOcTy8F9+XNTZYMBMVf51OYsXih7Br+ramjhhrgHaA6yT6pYnOo3OU5r+89vImUNfFnwSytV5OX/oUM8PDUBNCL8=~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/playerdashboardbyteamperformance?DateFrom=&DateTo=&GameSegment=&LastNGames=0&LeagueID=00&Location=&MeasureType=Base&Month=0&OpponentTeamID=0&Outcome=&PORound=&PaceAdjust=N&PerMode=Totals&Period=0&PlayerID=1628378&PlusMinus=N&Rank=N&Season=2025-26&SeasonSegment=&SeasonType=Regular+Season&ShotClockRange=&VsConference=&VsDivision=
+  response:
+    body:
+      string: '{"resource":"playerdashboardbyteamperformance","parameters":{"MeasureType":"Base","PerMode":"Totals","PlusMinus":"N","PaceAdjust":"N","Rank":"N","LeagueID":"00","Season":"2025-26","SeasonType":"Regular
+        Season","PORound":0,"PlayerID":1628378,"Outcome":null,"Location":null,"Month":0,"SeasonSegment":null,"DateFrom":null,"DateTo":null,"OpponentTeamID":0,"VsConference":null,"VsDivision":null,"GameSegment":null,"Period":0,"ShotClockRange":null,"LastNGames":0,"ISTRound":""},"resultSets":[{"name":"OverallPlayerDashboard","headers":["GROUP_SET","GROUP_VALUE","GP","W","L","W_PCT","MIN","FGM","FGA","FG_PCT","FG3M","FG3A","FG3_PCT","FTM","FTA","FT_PCT","OREB","DREB","REB","AST","TOV","STL","BLK","BLKA","PF","PFD","PTS","PLUS_MINUS","NBA_FANTASY_PTS","DD2","TD3","WNBA_FANTASY_PTS","GP_RANK","W_RANK","L_RANK","W_PCT_RANK","MIN_RANK","FGM_RANK","FGA_RANK","FG_PCT_RANK","FG3M_RANK","FG3A_RANK","FG3_PCT_RANK","FTM_RANK","FTA_RANK","FT_PCT_RANK","OREB_RANK","DREB_RANK","REB_RANK","AST_RANK","TOV_RANK","STL_RANK","BLK_RANK","BLKA_RANK","PF_RANK","PFD_RANK","PTS_RANK","PLUS_MINUS_RANK","NBA_FANTASY_PTS_RANK","DD2_RANK","TD3_RANK","WNBA_FANTASY_PTS_RANK","TEAM_COUNT"],"rowSet":[["Overall","2025-26",53,34,19,0.642,1773.5783333333334,532,1094,0.486,189,503,0.376,274,320,0.856,41,194,235,311,164,81,15,33,130,249,1527,337,2399.5,4,0,2454.0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]]},{"name":"ScoreDifferentialPlayerDashboard","headers":["GROUP_SET","GROUP_VALUE_ORDER","GROUP_VALUE","GROUP_VALUE_2","GP","W","L","W_PCT","MIN","FGM","FGA","FG_PCT","FG3M","FG3A","FG3_PCT","FTM","FTA","FT_PCT","OREB","DREB","REB","AST","TOV","STL","BLK","BLKA","PF","PFD","PTS","PLUS_MINUS","NBA_FANTASY_PTS","DD2","TD3","WNBA_FANTASY_PTS","GP_RANK","W_RANK","L_RANK","W_PCT_RANK","MIN_RANK","FGM_RANK","FGA_RANK","FG_PCT_RANK","FG3M_RANK","FG3A_RANK","FG3_PCT_RANK","FTM_RANK","FTA_RANK","FT_PCT_RANK","OREB_RANK","DREB_RANK","REB_RANK","AST_RANK","TOV_RANK","STL_RANK","BLK_RANK","BLKA_RANK","PF_RANK","PFD_RANK","PTS_RANK","PLUS_MINUS_RANK","NBA_FANTASY_PTS_RANK","DD2_RANK","TD3_RANK","WNBA_FANTASY_PTS_RANK","TEAM_COUNT"],"rowSet":[["Score
+        Differential",0,"W","All",34,34,0,1.0,1115.2533333333333,365,700,0.521,127,312,0.407,190,222,0.856,27,122,149,211,107,52,8,21,83,167,1047,462,1615.3,3,0,1654.0,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,2,2,1,1,1,1,1,1,1,1],["Score
+        Differential",null,"W","11-15 Points",8,8,0,1.0,273.74666666666667,90,167,0.539,28,71,0.394,46,54,0.852,7,31,38,58,23,13,0,8,20,34,254,112,402.6,0,0,404.0,1,1,1,1,1,1,1,3,2,2,4,1,1,5,2,1,2,1,3,1,9,10,9,2,1,2,1,4,1,1,1],["Score
+        Differential",null,"W","16-20 Points",4,4,0,1.0,130.95,47,85,0.553,15,32,0.469,27,33,0.818,5,18,23,26,14,5,2,0,11,25,136,68,209.6,1,0,214.0,8,5,1,1,8,7,8,1,6,8,2,5,5,7,4,6,6,7,7,7,2,1,4,5,7,3,7,2,1,7,1],["Score
+        Differential",null,"W","Over 20 Points",8,8,0,1.0,225.4,80,147,0.544,23,61,0.377,39,41,0.951,6,27,33,44,20,13,1,4,14,32,222,191,349.6,0,0,350.0,1,1,1,1,4,2,3,2,4,4,6,3,4,1,3,3,3,3,5,1,7,6,5,4,2,1,2,4,1,2,1],["Score
+        Differential",null,"W","6-10 Points",7,7,0,1.0,239.945,73,143,0.51,33,77,0.429,41,48,0.854,4,20,24,36,26,11,3,4,24,34,220,68,318.8,0,0,341.0,3,3,1,1,3,4,4,4,1,1,3,2,2,4,6,5,5,4,1,3,1,6,10,2,3,3,4,4,1,4,1],["Score
+        Differential",null,"W","5 Points and Under",7,7,0,1.0,245.21166666666667,75,158,0.475,28,71,0.394,37,46,0.804,5,26,31,47,24,10,2,5,14,42,215,23,334.7,2,0,345.0,3,3,1,1,2,3,2,5,2,2,4,4,3,8,4,4,4,2,2,5,2,8,5,1,4,6,3,1,1,3,1],["Score
+        Differential",0,"L","All",19,0,19,0.0,658.325,167,394,0.424,62,191,0.325,84,98,0.857,14,72,86,100,57,29,7,12,47,82,480,-125,784.2,1,0,800.0,2,2,2,2,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,1,1,2,2,2,2,2,1,2,1],["Score
+        Differential",null,"L","Over 20 Points",1,0,1,0.0,35.016666666666666,5,18,0.278,1,9,0.111,8,11,0.727,1,3,4,3,1,3,0,1,1,7,19,-26,36.3,0,0,33.0,10,6,6,6,10,10,10,10,10,10,10,9,9,9,9,10,10,10,10,9,9,2,1,10,10,8,10,4,1,10,1],["Score
+        Differential",null,"L","6-10 Points",5,0,5,0.0,180.125,51,114,0.447,15,52,0.288,24,26,0.923,3,14,17,25,17,8,2,2,15,20,141,-40,211.9,0,0,218.0,5,6,8,6,6,5,6,6,6,6,9,7,7,3,7,8,8,8,6,6,2,5,7,8,5,9,6,4,1,6,1],["Score
+        Differential",null,"L","11-15 Points",5,0,5,0.0,165.58166666666668,38,94,0.404,15,51,0.294,27,29,0.931,2,16,18,27,21,5,2,1,8,25,118,-77,180.1,0,0,192.0,5,6,8,6,7,8,7,9,6,7,8,5,6,2,8,7,7,6,4,7,2,2,3,5,8,10,8,4,1,8,1],["Score
+        Differential",null,"L","5 Points and Under",5,0,5,0.0,182.68166666666667,50,116,0.431,20,56,0.357,19,23,0.826,8,31,39,28,11,11,1,7,16,22,139,42,252.8,1,0,250.0,5,6,8,6,5,6,5,8,5,5,7,8,8,6,1,1,1,5,8,3,7,9,8,7,6,5,5,2,1,5,1],["Score
+        Differential",null,"L","16-20 Points",3,0,3,0.0,94.92,23,52,0.442,11,23,0.478,6,9,0.667,0,8,8,17,7,2,2,1,7,8,63,-24,103.1,0,0,107.0,9,6,7,6,9,9,9,7,9,9,1,10,10,10,10,9,9,9,9,10,2,2,2,9,9,7,9,4,1,9,1]]},{"name":"PointsScoredPlayerDashboard","headers":["GROUP_SET","GROUP_VALUE_ORDER","GROUP_VALUE","GROUP_VALUE_2","GP","W","L","W_PCT","MIN","FGM","FGA","FG_PCT","FG3M","FG3A","FG3_PCT","FTM","FTA","FT_PCT","OREB","DREB","REB","AST","TOV","STL","BLK","BLKA","PF","PFD","PTS","PLUS_MINUS","NBA_FANTASY_PTS","DD2","TD3","WNBA_FANTASY_PTS","GP_RANK","W_RANK","L_RANK","W_PCT_RANK","MIN_RANK","FGM_RANK","FGA_RANK","FG_PCT_RANK","FG3M_RANK","FG3A_RANK","FG3_PCT_RANK","FTM_RANK","FTA_RANK","FT_PCT_RANK","OREB_RANK","DREB_RANK","REB_RANK","AST_RANK","TOV_RANK","STL_RANK","BLK_RANK","BLKA_RANK","PF_RANK","PFD_RANK","PTS_RANK","PLUS_MINUS_RANK","NBA_FANTASY_PTS_RANK","DD2_RANK","TD3_RANK","WNBA_FANTASY_PTS_RANK","TEAM_COUNT"],"rowSet":[["Points
+        Scored",0,"W","All",34,34,0,1.0,1115.2533333333333,365,700,0.521,127,312,0.407,190,222,0.856,27,122,149,211,107,52,8,21,83,167,1047,462,1615.3,3,0,1654.0,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,2,2,1,1,1,1,1,1,1,1],["Points
+        Scored",null,"W","100+ Points ",33,33,0,1.0,1077.77,357,680,0.525,125,304,0.411,184,215,0.856,26,120,146,205,99,51,8,20,82,162,1023,465,1583.7,3,0,1617.0,1,1,1,1,1,1,1,1,1,1,1,1,1,3,1,1,1,1,1,1,1,4,4,1,1,1,1,1,1,1,1],["Points
+        Scored",null,"W","90-99 Points",1,1,0,1.0,37.483333333333334,8,20,0.4,2,8,0.25,6,7,0.857,1,2,3,6,8,1,0,1,1,5,24,-3,31.6,0,0,37.0,4,2,1,1,4,4,4,3,4,4,4,3,3,2,4,4,4,4,3,3,4,1,1,4,4,2,4,3,1,4,1],["Points
+        Scored",0,"L","All",19,0,19,0.0,658.325,167,394,0.424,62,191,0.325,84,98,0.857,14,72,86,100,57,29,7,12,47,82,480,-125,784.2,1,0,800.0,2,2,2,2,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,1,1,2,2,2,2,2,1,2,1],["Points
+        Scored",null,"L","100+ Points ",17,0,17,0.0,587.3966666666666,150,348,0.431,52,165,0.315,82,96,0.854,12,69,81,89,53,28,6,11,45,76,434,-111,713.7,1,0,724.0,2,3,4,3,2,2,2,2,2,2,3,2,2,4,2,2,2,2,2,2,2,3,3,2,2,4,2,2,1,2,1],["Points
+        Scored",null,"L","90-99 Points",2,0,2,0.0,70.92833333333333,17,46,0.37,10,26,0.385,2,2,1.0,2,3,5,11,4,1,1,1,2,6,46,-14,70.5,0,0,76.0,3,3,3,3,3,3,3,4,3,3,2,4,4,1,3,3,3,3,4,3,3,1,2,3,3,3,3,3,1,3,1]]},{"name":"PontsAgainstPlayerDashboard","headers":["GROUP_SET","GROUP_VALUE_ORDER","GROUP_VALUE","GROUP_VALUE_2","GP","W","L","W_PCT","MIN","FGM","FGA","FG_PCT","FG3M","FG3A","FG3_PCT","FTM","FTA","FT_PCT","OREB","DREB","REB","AST","TOV","STL","BLK","BLKA","PF","PFD","PTS","PLUS_MINUS","NBA_FANTASY_PTS","DD2","TD3","WNBA_FANTASY_PTS","GP_RANK","W_RANK","L_RANK","W_PCT_RANK","MIN_RANK","FGM_RANK","FGA_RANK","FG_PCT_RANK","FG3M_RANK","FG3A_RANK","FG3_PCT_RANK","FTM_RANK","FTA_RANK","FT_PCT_RANK","OREB_RANK","DREB_RANK","REB_RANK","AST_RANK","TOV_RANK","STL_RANK","BLK_RANK","BLKA_RANK","PF_RANK","PFD_RANK","PTS_RANK","PLUS_MINUS_RANK","NBA_FANTASY_PTS_RANK","DD2_RANK","TD3_RANK","WNBA_FANTASY_PTS_RANK","TEAM_COUNT"],"rowSet":[["Points
+        Against",0,"W","All",34,34,0,1.0,1115.2533333333333,365,700,0.521,127,312,0.407,190,222,0.856,27,122,149,211,107,52,8,21,83,167,1047,462,1615.3,3,0,1654.0,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,2,2,1,1,1,1,1,1,1,1],["Points
+        Against",null,"W","80-89 Points",2,2,0,1.0,58.21666666666667,15,32,0.469,4,12,0.333,7,8,0.875,1,5,6,11,10,1,0,2,1,7,41,34,57.7,0,0,64.0,4,3,1,1,4,4,4,3,5,5,4,4,4,2,5,4,4,4,4,4,4,3,1,4,4,3,4,3,1,4,1],["Points
+        Against",null,"W","100+ Points ",28,28,0,1.0,933.6616666666666,303,585,0.518,110,270,0.407,156,184,0.848,24,104,128,180,86,45,8,18,75,138,872,332,1368.6,3,0,1396.0,1,1,1,1,1,1,1,2,1,1,3,1,1,4,1,1,1,1,1,1,1,5,5,1,1,1,1,1,1,1,1],["Points
+        Against",null,"W","90-99 Points",4,4,0,1.0,123.375,47,83,0.566,13,30,0.433,27,30,0.9,2,13,15,20,11,6,0,1,7,22,134,96,189.0,0,0,194.0,3,2,1,1,3,3,3,1,3,3,2,3,3,1,3,3,3,3,3,3,4,1,3,3,3,2,3,3,1,3,1],["Points
+        Against",0,"L","All",19,0,19,0.0,658.325,167,394,0.424,62,191,0.325,84,98,0.857,14,72,86,100,57,29,7,12,47,82,480,-125,784.2,1,0,800.0,2,2,2,2,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,1,1,2,2,2,2,2,1,2,1],["Points
+        Against",null,"L","100+ Points ",18,0,18,0.0,621.1633333333333,156,368,0.424,55,177,0.311,84,98,0.857,12,70,82,97,55,29,6,11,45,80,451,-133,744.9,1,0,755.0,2,4,5,4,2,2,2,4,2,2,5,2,2,3,2,2,2,2,2,2,2,4,4,2,2,5,2,2,1,2,1],["Points
+        Against",null,"L","90-99 Points",1,0,1,0.0,37.16166666666667,11,26,0.423,7,14,0.5,0,0,0.0,2,2,4,3,2,0,1,1,2,2,29,8,39.3,0,0,45.0,5,4,4,4,5,5,5,5,4,4,1,5,5,5,3,5,5,5,5,5,3,1,2,5,5,4,5,3,1,5,1]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '2413'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:36:57 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF/CNeEWcAQAAUtXZgx6ix4IlgqM4mqFh38dZsGJYz46LzfDbByiOBdQ/tnHfm+snbcKEWuKsvgQHR3TdG8TTZBRdEbdhyWVrv/23MmgQL2tG63Td2yXz4oR84IjZ0iEmHi8Qh4yp0EaQk/RGEbdjCmcZsQkimVIiJJpHlChCq50C2CwQGfg66xUqx15eYXm6dBTB936BiD4TecJoCv5mS/91d5o4GpIkUFc6PFPTei3fBVUQ4K3S4rY=~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7107;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-1
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '1'
+      x-full-ttl:
+      - '1800.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '1'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '358.914'
+      x-varnish:
+      - 39228801 36157151
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

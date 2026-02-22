@@ -1,0 +1,88 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAmgYbWicAQAAhhHZgx4MrRgb3gIIZoy7BC5rhHOUlZeznU21rjqfgzzQPHEoVnFFG8zjbdM7fcqJRhl5gppMgk4G6tO3L4j2SpPQ0UkbhaHj+DHBGuZdt/0a+25dvzEGP6UlNfc/biJo7iq78jWu8klviQen7aOjFUR0bTjlP0E/Qd0LtkwIz/hljcrcTVIuHf57cQfv5meNsubSmcOlo3ic7pPF0Skkrl9mLC8VlQts+NEKArpA2Q==~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/commonteamyears?LeagueID=00
+  response:
+    body:
+      string: '{"resource":"commonteamyears","parameters":{"LeagueID":"00"},"resultSets":[{"name":"TeamYears","headers":["LEAGUE_ID","TEAM_ID","MIN_YEAR","MAX_YEAR","ABBREVIATION"],"rowSet":[["00",1610610023,"1949","1949",null],["00",1610610024,"1947","1954",null],["00",1610610025,"1946","1949",null],["00",1610610026,"1946","1946",null],["00",1610610027,"1949","1949",null],["00",1610610028,"1946","1946",null],["00",1610610029,"1948","1948",null],["00",1610610030,"1949","1952",null],["00",1610610031,"1946","1946",null],["00",1610610032,"1946","1948",null],["00",1610610033,"1949","1949",null],["00",1610610034,"1946","1949",null],["00",1610610035,"1946","1946",null],["00",1610610036,"1946","1950",null],["00",1610610037,"1949","1949",null],["00",1610612737,"1949","2025","ATL"],["00",1610612738,"1946","2025","BOS"],["00",1610612739,"1970","2025","CLE"],["00",1610612740,"2002","2025","NOP"],["00",1610612741,"1966","2025","CHI"],["00",1610612742,"1980","2025","DAL"],["00",1610612743,"1976","2025","DEN"],["00",1610612744,"1946","2025","GSW"],["00",1610612745,"1967","2025","HOU"],["00",1610612746,"1970","2025","LAC"],["00",1610612747,"1948","2025","LAL"],["00",1610612748,"1988","2025","MIA"],["00",1610612749,"1968","2025","MIL"],["00",1610612750,"1989","2025","MIN"],["00",1610612751,"1976","2025","BKN"],["00",1610612752,"1946","2025","NYK"],["00",1610612753,"1989","2025","ORL"],["00",1610612754,"1976","2025","IND"],["00",1610612755,"1949","2025","PHI"],["00",1610612756,"1968","2025","PHX"],["00",1610612757,"1970","2025","POR"],["00",1610612758,"1948","2025","SAC"],["00",1610612759,"1976","2025","SAS"],["00",1610612760,"1967","2025","OKC"],["00",1610612761,"1995","2025","TOR"],["00",1610612762,"1974","2025","UTA"],["00",1610612763,"1995","2025","MEM"],["00",1610612764,"1961","2025","WAS"],["00",1610612765,"1948","2025","DET"],["00",1610612766,"1988","2025","CHA"]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '508'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:36:07 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAnEYbWicAQAATxTZgx7eek9Au/659MhLZwMz8c888LvxoCKOqi7HhKhGDdgK9WrZie8W+Dk0F4EXc0j92Pjoo9TX6YZmyyb4auacwHOohhVrZEG9200R/B+KJbpAop3kV/i6ToMx9MXtFbEveWz10DEK9gvgjQ/hxWV6TOHItfw/CChO515paujT2Cg7irKcYxqXEjzCpEn6XxltOxEWr3P/9qv4FiorxIUmpWUXZyZ48y444IxGaQ==~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7157;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-2
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '900.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '1'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '-509.671'
+      x-varnish:
+      - 39197500 36812747
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

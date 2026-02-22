@@ -1,0 +1,186 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDFzWOeEWcAQAAjODZgx528ksFexp7OXKXQiISEg39JAoG5hOWZpu4WG9CqDWnoQ4E5sgi/DAuHUP77privXOX6XhDxN+Lw6mZiUMBRbIEASE6SV1kGoyihwjwext2HjYi1YXYTbnffHKqYJ/MLrqsX2DGPVS2Qn8k1IZKn3e1Q+Qyf3afHrBrkVjD7HLk5ZcbQYoQuU6/ziK1KSKVQ1JZ39vzUowpMcFNqtpYmoGfwHq8V0iDZgcDQ2Y=~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/playergamestreakfinder?ActiveStreaksOnly=&Conference=&DateFrom=&DateTo=&Division=&DraftNumber=&DraftRound=&DraftTeamID=&DraftYear=&EqAST=&EqBLK=&EqDD=&EqDREB=&EqFG3A=&EqFG3M=&EqFG3_PCT=&EqFGA=&EqFGM=&EqFG_PCT=&EqFTA=&EqFTM=&EqFT_PCT=&EqMINUTES=&EqOREB=&EqPF=&EqPTS=&EqREB=&EqSTL=&EqTD=&EqTOV=&GameID=&GtAST=&GtBLK=&GtDD=&GtDREB=&GtFG3A=&GtFG3M=&GtFG3_PCT=&GtFGA=&GtFGM=&GtFG_PCT=&GtFTA=&GtFTM=&GtFT_PCT=&GtMINUTES=&GtOREB=&GtPF=&GtPTS=&GtREB=&GtSTL=&GtTD=&GtTOV=&LeagueID=00&Location=&LtAST=&LtBLK=&LtDD=&LtDREB=&LtFG3A=&LtFG3M=&LtFG3_PCT=&LtFGA=&LtFGM=&LtFG_PCT=&LtFTA=&LtFTM=&LtFT_PCT=&LtMINUTES=&LtOREB=&LtPF=&LtPTS=&LtREB=&LtSTL=&LtTD=&LtTOV=&MinGames=&Outcome=&PORound=&PlayerID=&RookieYear=&Season=&SeasonSegment=&SeasonType=&StarterBench=&TeamID=&VsConference=&VsDivision=&VsTeamID=&YearsExperience=
+  response:
+    body:
+      string: '{"resource":"playergamestreakfinder","parameters":{"MinGames":null,"ActiveStreaksOnly":null,"LeagueID":"00","Season":null,"SeasonType":null,"TeamID":null,"VsTeamID":null,"PlayerID":null,"GameID":null,"Outcome":null,"Location":null,"DateFrom":null,"DateTo":null,"VsConference":null,"VsDivision":null,"Conference":null,"Division":null,"DraftYear":null,"DraftNumber":null,"DraftRound":null,"DraftTeamID":null,"RookieYear":null,"YearsExperience":null,"SeasonSegment":null,"PORound":null,"StarterBench":null,"GtPTS":null,"GtREB":null,"GtAST":null,"GtSTL":null,"GtBLK":null,"GtOREB":null,"GtDREB":null,"GtDD":null,"GtTD":null,"GtMINUTES":null,"GtTOV":null,"GtPF":null,"GtFGM":null,"GtFGA":null,"GtFG_PCT":null,"GtFTM":null,"GtFTA":null,"GtFT_PCT":null,"GtFG3M":null,"GtFG3A":null,"GtFG3_PCT":null,"LtPTS":null,"LtREB":null,"LtAST":null,"LtSTL":null,"LtBLK":null,"LtOREB":null,"LtDREB":null,"LtDD":null,"LtTD":null,"LtMINUTES":null,"LtTOV":null,"LtPF":null,"LtFGM":null,"LtFGA":null,"LtFG_PCT":null,"LtFTM":null,"LtFTA":null,"LtFT_PCT":null,"LtFG3M":null,"LtFG3A":null,"LtFG3_PCT":null,"EqPTS":null,"EqREB":null,"EqAST":null,"EqSTL":null,"EqBLK":null,"EqOREB":null,"EqDREB":null,"EqDD":null,"EqTD":null,"EqMINUTES":null,"EqTOV":null,"EqPF":null,"EqFGM":null,"EqFGA":null,"EqFG_PCT":null,"EqFTM":null,"EqFTA":null,"EqFT_PCT":null,"EqFG3M":null,"EqFG3A":null,"EqFG3_PCT":null},"resultSets":[{"name":"PlayerGameStreakFinderResults","headers":["PLAYER_NAME_LAST_FIRST","PLAYER_ID","GAMESTREAK","STARTDATE","ENDDATE","ACTIVESTREAK","NUMSEASONS","LASTSEASON","FIRSTSEASON"],"rowSet":[["James,
+        LeBron",2544,1599,"2003-10-29T00:00:00","2026-02-20T00:00:00",1,23,"2025-26","2003-04"],["Carter,
+        Vince",1713,1541,"1999-02-05T00:00:00","2020-03-11T00:00:00",1,22,"2019-20","1998-99"],["Nowitzki,
+        Dirk",1717,1522,"1999-02-05T00:00:00","2019-04-10T00:00:00",1,21,"2018-19","1998-99"],["Stockton,
+        John",304,1504,"1984-10-26T00:00:00","2003-04-16T00:00:00",1,19,"2002-03","1984-85"],["Malone,
+        Karl",252,1476,"1985-10-25T00:00:00","2004-04-14T00:00:00",1,19,"2003-04","1985-86"],["Garnett,
+        Kevin",708,1462,"1995-11-03T00:00:00","2016-01-23T00:00:00",1,21,"2015-16","1995-96"],["Willis,
+        Kevin",788,1424,"1984-10-26T00:00:00","2007-04-18T00:00:00",1,21,"2006-07","1984-85"],["Terry,
+        Jason",1891,1410,"1999-11-02T00:00:00","2018-04-11T00:00:00",1,19,"2017-18","1999-00"],["Duncan,
+        Tim",1495,1392,"1997-10-31T00:00:00","2016-04-12T00:00:00",1,19,"2015-16","1997-98"],["Kidd,
+        Jason",467,1391,"1994-11-05T00:00:00","2013-04-15T00:00:00",1,19,"2012-13","1994-95"],["Miller,
+        Reggie",397,1389,"1987-11-06T00:00:00","2005-04-20T00:00:00",1,18,"2004-05","1987-88"],["Robinson,
+        Clifford",361,1380,"1989-11-03T00:00:00","2007-04-16T00:00:00",1,18,"2006-07","1989-90"],["Paul,
+        Chris",101108,1370,"2005-11-01T00:00:00","2025-12-01T00:00:00",1,21,"2025-26","2005-06"],["Bryant,
+        Kobe",977,1346,"1996-11-03T00:00:00","2016-04-13T00:00:00",1,20,"2015-16","1996-97"],["Pierce,
+        Paul",1718,1343,"1999-02-05T00:00:00","2017-04-12T00:00:00",1,19,"2016-17","1998-99"],["Payton,
+        Gary",56,1335,"1990-11-03T00:00:00","2007-04-18T00:00:00",1,17,"2006-07","1990-91"],["Crawford,
+        Jamal",2037,1327,"2000-10-31T00:00:00","2020-08-04T00:00:00",1,20,"2019-20","2000-01"],["Miller,
+        Andre",1889,1304,"1999-11-02T00:00:00","2016-04-13T00:00:00",1,17,"2015-16","1999-00"],["Allen,
+        Ray",951,1300,"1996-11-01T00:00:00","2014-04-16T00:00:00",1,18,"2013-14","1996-97"],["Jackson,
+        Mark",349,1296,"1987-11-06T00:00:00","2004-04-14T00:00:00",1,17,"2003-04","1987-88"],["Westbrook,
+        Russell",201566,1291,"2008-10-29T00:00:00","2026-02-21T00:00:00",1,18,"2025-26","2008-09"],["Fisher,
+        Derek",965,1287,"1996-11-01T00:00:00","2014-04-16T00:00:00",1,18,"2013-14","1996-97"],["Perkins,
+        Sam",64,1286,"1984-10-27T00:00:00","2001-04-11T00:00:00",1,17,"2000-01","1984-85"],["Oakley,
+        Charles",891,1282,"1985-10-25T00:00:00","2004-04-02T00:00:00",1,19,"2003-04","1985-86"],["Green,
+        A.C.",920,1278,"1985-10-26T00:00:00","2001-04-18T00:00:00",1,16,"2000-01","1985-86"],["Johnson,
+        Joe",2207,1277,"2001-10-30T00:00:00","2021-12-22T00:00:00",1,18,"2021-22","2001-02"],["Porter,
+        Terry",345,1274,"1985-10-25T00:00:00","2002-04-17T00:00:00",1,17,"2001-02","1985-86"],["Anthony,
+        Carmelo",2546,1260,"2003-10-29T00:00:00","2022-04-05T00:00:00",1,19,"2021-22","2003-04"],["Thorpe,
+        Otis",901,1257,"1984-10-27T00:00:00","2001-04-18T00:00:00",1,17,"2000-01","1984-85"],["Parker,
+        Tony",2225,1254,"2001-10-30T00:00:00","2019-03-17T00:00:00",1,18,"2018-19","2001-02"],["DeRozan,
+        DeMar",201942,1245,"2009-10-28T00:00:00","2026-02-21T00:00:00",1,17,"2025-26","2009-10"],["Howard,
+        Dwight",2730,1242,"2004-11-03T00:00:00","2022-04-08T00:00:00",1,18,"2021-22","2004-05"],["Olajuwon,
+        Hakeem",165,1238,"1984-10-27T00:00:00","2002-04-17T00:00:00",1,18,"2001-02","1984-85"],["Green,
+        Jeff",201145,1235,"2007-10-31T00:00:00","2026-02-05T00:00:00",1,18,"2025-26","2007-08"],["Korver,
+        Kyle",2594,1232,"2003-10-28T00:00:00","2020-08-13T00:00:00",1,17,"2019-20","2003-04"],["Iguodala,
+        Andre",2738,1231,"2004-11-03T00:00:00","2023-03-13T00:00:00",1,19,"2022-23","2004-05"],["Gasol,
+        Pau",2200,1226,"2001-11-01T00:00:00","2019-03-10T00:00:00",1,18,"2018-19","2001-02"],["Nash,
+        Steve",959,1217,"1996-11-01T00:00:00","2014-04-08T00:00:00",1,18,"2013-14","1996-97"],["Conley,
+        Mike",201144,1216,"2007-11-07T00:00:00","2026-02-02T00:00:00",1,19,"2025-26","2007-08"],["Ellis,
+        Dale",107,1209,"1983-10-29T00:00:00","2000-03-15T00:00:00",1,17,"1999-00","1983-84"],["Howard,
+        Juwan",436,1208,"1994-11-19T00:00:00","2013-04-17T00:00:00",1,19,"2012-13","1994-95"],["O''Neal,
+        Shaquille",406,1207,"1992-11-06T00:00:00","2011-04-03T00:00:00",1,19,"2010-11","1992-93"],["Harden,
+        James",201935,1200,"2009-10-28T00:00:00","2026-02-20T00:00:00",1,17,"2025-26","2009-10"],["Harper,
+        Derek",157,1199,"1983-10-29T00:00:00","1999-05-05T00:00:00",1,16,"1998-99","1983-84"],["Mutombo,
+        Dikembe",87,1196,"1991-11-01T00:00:00","2009-04-10T00:00:00",1,18,"2008-09","1991-92"],["Batum,
+        Nicolas",201587,1184,"2008-10-28T00:00:00","2026-02-20T00:00:00",1,18,"2025-26","2008-09"],["Ewing,
+        Patrick",121,1183,"1985-10-26T00:00:00","2002-04-16T00:00:00",1,17,"2001-02","1985-86"],["Jefferson,
+        Richard",2210,1181,"2001-10-30T00:00:00","2018-03-21T00:00:00",1,17,"2017-18","2001-02"],["Lowry,
+        Kyle",200768,1180,"2006-11-01T00:00:00","2026-02-09T00:00:00",1,20,"2025-26","2006-07"],["Pippen,
+        Scottie",937,1178,"1987-11-07T00:00:00","2004-02-02T00:00:00",1,17,"2003-04","1987-88"],["Durant,
+        Kevin",201142,1175,"2007-10-31T00:00:00","2026-02-21T00:00:00",1,18,"2025-26","2007-08"],["Horford,
+        Al",201143,1173,"2007-11-02T00:00:00","2026-02-19T00:00:00",1,19,"2025-26","2007-08"],["Young,
+        Thaddeus",201152,1172,"2007-11-07T00:00:00","2024-04-14T00:00:00",1,17,"2023-24","2007-08"],["Grant,
+        Horace",270,1165,"1987-11-07T00:00:00","2004-03-12T00:00:00",1,17,"2003-04","1987-88"],["Marion,
+        Shawn",1890,1163,"1999-11-02T00:00:00","2015-04-15T00:00:00",1,16,"2014-15","1999-00"],["Chandler,
+        Tyson",2199,1160,"2001-10-31T00:00:00","2020-02-09T00:00:00",1,19,"2019-20","2001-02"],["Newman,
+        Johnny",271,1159,"1986-11-02T00:00:00","2002-04-17T00:00:00",1,16,"2001-02","1986-87"],["Lopez,
+        Brook",201572,1154,"2008-10-29T00:00:00","2026-02-20T00:00:00",1,18,"2025-26","2008-09"],["Kersey,
+        Jerome",760,1153,"1984-10-27T00:00:00","2001-04-17T00:00:00",1,17,"2000-01","1984-85"],["Williams,
+        Buck",433,1142,"1983-10-28T00:00:00","1998-04-18T00:00:00",1,15,"1997-98","1983-84"],["Cage,
+        Michael",262,1140,"1984-10-27T00:00:00","2000-01-17T00:00:00",1,15,"1999-00","1984-85"],["Schrempf,
+        Detlef",96,1136,"1985-10-26T00:00:00","2001-04-17T00:00:00",1,16,"2000-01","1985-86"],["Divac,
+        Vlade",124,1134,"1989-11-03T00:00:00","2005-04-17T00:00:00",1,16,"2004-05","1989-90"],["Williams,
+        Lou",101150,1123,"2005-11-02T00:00:00","2022-04-05T00:00:00",1,17,"2021-22","2005-06"],["Gay,
+        Rudy",200752,1120,"2006-11-01T00:00:00","2023-03-22T00:00:00",1,17,"2022-23","2006-07"],["Ariza,
+        Trevor",2772,1118,"2004-11-03T00:00:00","2022-03-31T00:00:00",1,18,"2021-22","2004-05"],["Randolph,
+        Zach",2216,1116,"2001-10-30T00:00:00","2018-03-19T00:00:00",1,17,"2017-18","2001-02"],["Jordan,
+        DeAndre",201599,1114,"2008-11-01T00:00:00","2026-02-21T00:00:00",1,18,"2025-26","2008-09"],["Cummings,
+        Terry",187,1113,"1983-10-28T00:00:00","2000-01-25T00:00:00",1,17,"1999-00","1983-84"],["Thomas,
+        Kurt",703,1110,"1995-11-04T00:00:00","2013-03-18T00:00:00",1,18,"2012-13","1995-96"],["Wallace,
+        Rasheed",739,1109,"1995-11-03T00:00:00","2013-04-15T00:00:00",1,16,"2012-13","1995-96"],["Horry,
+        Robert",109,1107,"1992-11-06T00:00:00","2008-03-21T00:00:00",1,16,"2007-08","1992-93"],["Finley,
+        Michael",714,1103,"1995-11-03T00:00:00","2010-04-14T00:00:00",1,15,"2009-10","1995-96"],["Pachulia,
+        Zaza",2585,1098,"2003-11-05T00:00:00","2019-04-10T00:00:00",1,16,"2018-19","2003-04"],["Davis,
+        Dale",905,1094,"1991-11-18T00:00:00","2007-04-18T00:00:00",1,16,"2006-07","1991-92"],["Strickland,
+        Rod",393,1094,"1988-11-04T00:00:00","2005-02-23T00:00:00",1,17,"2004-05","1988-89"],["West,
+        Mark",770,1090,"1983-10-29T00:00:00","2000-03-06T00:00:00",1,17,"1999-00","1983-84"],["Brown,
+        P.J.",136,1089,"1993-11-05T00:00:00","2008-04-16T00:00:00",1,15,"2007-08","1993-94"],["Wallace,
+        Ben",1112,1088,"1996-11-01T00:00:00","2012-04-26T00:00:00",1,16,"2011-12","1996-97"],["Drexler,
+        Clyde",17,1086,"1983-10-28T00:00:00","1998-04-19T00:00:00",1,15,"1997-98","1983-84"],["Millsap,
+        Paul",200794,1085,"2006-11-01T00:00:00","2022-03-29T00:00:00",1,16,"2021-22","2006-07"],["Jamison,
+        Antawn",1712,1083,"1999-02-06T00:00:00","2014-02-09T00:00:00",1,16,"2013-14","1998-99"],["Curry,
+        Dell",209,1083,"1986-10-31T00:00:00","2002-04-17T00:00:00",1,16,"2001-02","1986-87"],["Hornacek,
+        Jeff",204,1077,"1986-10-31T00:00:00","2000-04-19T00:00:00",1,14,"1999-00","1986-87"],["Aldridge,
+        LaMarcus",200746,1076,"2006-11-12T00:00:00","2022-04-06T00:00:00",1,16,"2021-22","2006-07"],["Barkley,
+        Charles",787,1073,"1984-10-26T00:00:00","2000-04-19T00:00:00",1,16,"1999-00","1984-85"],["Scott,
+        Byron",2,1073,"1983-10-28T00:00:00","1997-04-20T00:00:00",1,14,"1996-97","1983-84"],["Williams,
+        Marvin",101107,1072,"2005-11-02T00:00:00","2020-08-13T00:00:00",1,15,"2019-20","2005-06"],["Jordan,
+        Michael",893,1072,"1984-10-26T00:00:00","2003-04-16T00:00:00",1,15,"2002-03","1984-85"],["Holiday,
+        Jrue",201950,1065,"2009-10-30T00:00:00","2026-02-20T00:00:00",1,17,"2025-26","2009-10"],["Curry,
+        Stephen",201939,1065,"2009-10-28T00:00:00","2026-01-30T00:00:00",1,17,"2025-26","2009-10"],["Diaw,
+        Boris",2564,1064,"2003-10-29T00:00:00","2017-04-12T00:00:00",1,14,"2016-17","2003-04"],["Corbin,
+        Tyrone",895,1064,"1985-11-14T00:00:00","2001-01-10T00:00:00",1,16,"2000-01","1985-86"],["Parish,
+        Robert",305,1064,"1983-10-28T00:00:00","1997-04-19T00:00:00",1,14,"1996-97","1983-84"],["Brand,
+        Elton",1882,1058,"1999-11-03T00:00:00","2016-04-10T00:00:00",1,17,"2015-16","1999-00"],["Polynice,
+        Olden",178,1058,"1987-11-06T00:00:00","2003-12-23T00:00:00",1,15,"2003-04","1987-88"],["Ginobili,
+        Manu",1938,1057,"2002-10-29T00:00:00","2018-04-11T00:00:00",1,16,"2017-18","2002-03"],["Wade,
+        Dwyane",2548,1054,"2003-10-28T00:00:00","2019-04-10T00:00:00",1,16,"2018-19","2003-04"],["Johnson,
+        Avery",422,1054,"1988-11-05T00:00:00","2004-04-02T00:00:00",1,16,"2003-04","1988-89"],["Kemp,
+        Shawn",431,1051,"1989-11-03T00:00:00","2003-04-16T00:00:00",1,14,"2002-03","1989-90"]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '3447'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:37:00 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAm4ebWicAQAAWePZgx6Vxp6S+17vL47Ed/Pven5dvQDF0yIjczy8HUwX2cvGOk5h24lvNH+w13MVauUCOA56wWJhcyU2hj26+9rihNPkGKPtXyGma+bxHg9gbXHDLyHCp3h6HMF4nXfxPxuUA6964/2UydBINATZJEiKePAh+39eqzysER2+JS9YLzaEKX59ehL5ZDK7gNBRL8dITaUMWA+oM3BK7ectSsbRkKUlHC5EcRwxXHYFe8Y=~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7104;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '1800.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '3'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '388.400'
+      x-varnish:
+      - 69315864 67973639
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

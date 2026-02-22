@@ -1,0 +1,88 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQjmITApcZ9GicAQAAXBfagx7Lrry8o6N7ojhYiCPqjNFrgtgw9MxYn45skwdPlYQLgaFOCHbqFPNVIeO0Z02ob4JlPFalLvPfBy+O77gFgIoAwM6RRIXu918LY4Ham+MTzA6QWU1Hu0sDwcy+V1jpts4UlE4bTVc0giV7p9Pq04baHSBmUT8knyMDYOFFtqDieo7srFWKuI2BbT8OAMNURqYM7LtJAT342TTujCVNFu10sJApldSAnOTbj04=~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/teaminfocommon?LeagueID=00&Season=&SeasonType=&TeamID=1610612739
+  response:
+    body:
+      string: '{"resource":"teaminfocommon","parameters":{"LeagueID":"00","Season":null,"SeasonType":null,"TeamID":1610612739},"resultSets":[{"name":"TeamInfoCommon","headers":["TEAM_ID","SEASON_YEAR","TEAM_CITY","TEAM_NAME","TEAM_ABBREVIATION","TEAM_CONFERENCE","TEAM_DIVISION","TEAM_CODE","TEAM_SLUG","W","L","PCT","CONF_RANK","DIV_RANK","MIN_YEAR","MAX_YEAR"],"rowSet":[[1610612739,"2025-26","Cleveland","Cavaliers","CLE","East","Central","cavaliers","cavaliers",36,21,0.632,3,2,"1970","2025"]]},{"name":"TeamSeasonRanks","headers":["LEAGUE_ID","SEASON_ID","TEAM_ID","PTS_RANK","PTS_PG","REB_RANK","REB_PG","AST_RANK","AST_PG","OPP_PTS_RANK","OPP_PTS_PG"],"rowSet":[["00","22025",1610612739,2,119.8,12,44.7,8,28.5,16,115.3]]},{"name":"AvailableSeasons","headers":["SEASON_ID"],"rowSet":[["21970"],["21971"],["21972"],["21973"],["21974"],["21975"],["41975"],["21976"],["41976"],["21977"],["41977"],["21978"],["21979"],["21980"],["21981"],["21982"],["21983"],["21984"],["41984"],["21985"],["21986"],["21987"],["41987"],["21988"],["31988"],["41988"],["21989"],["41989"],["21990"],["21991"],["41991"],["21992"],["41992"],["21993"],["41993"],["21994"],["41994"],["21995"],["41995"],["21996"],["11997"],["21997"],["41997"],["11998"],["21998"],["11999"],["21999"],["12000"],["22000"],["12001"],["22001"],["12002"],["22002"],["12003"],["22003"],["12004"],["22004"],["12005"],["22005"],["42005"],["12006"],["22006"],["42006"],["12007"],["22007"],["42007"],["12008"],["22008"],["42008"],["12009"],["22009"],["42009"],["12010"],["22010"],["12011"],["22011"],["12012"],["22012"],["12013"],["22013"],["12014"],["22014"],["42014"],["12015"],["22015"],["42015"],["12016"],["22016"],["42016"],["12017"],["22017"],["42017"],["12018"],["22018"],["12019"],["22019"],["12020"],["22020"],["12021"],["22021"],["52021"],["12022"],["22022"],["42022"],["12023"],["22023"],["42023"],["12024"],["22024"],["42024"],["12025"],["22025"]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '679'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:37:14 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQjmITAqIZ9GicAQAAMBragx4nO9H/zA4B9TflWbLjyEtrC7gYRtoCJbOr1O83xyyQB/JeF0kdtDksE1efY6KUVdqchZfiNYSt7IlPWjYL2gZ4X4Dfq3BuMtVCt2CH6CTWY9MIGUeKnu+pJt//guKtZI+uJiOdOGtqiJgoCVb2l0ToNPYKDGFNEz0Ny3gNjAvIjaEgFYOpsbW3S8WKOUh2wmHCZj+wmSskJdWOv5Y+rFHu63PFwlmbQspqlTA=~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7090;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-0
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - S3
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '900.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '2'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '-518.706'
+      x-varnish:
+      - 38484271 26437470
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1246,6 +1246,26 @@ pytest = ">=4.6"
 testing = ["fields", "hunter", "process-tests", "pytest-xdist", "six", "virtualenv"]
 
 [[package]]
+name = "pytest-recording"
+version = "0.13.4"
+description = "A pytest plugin powered by VCR.py to record and replay HTTP traffic"
+optional = false
+python-versions = ">=3.9"
+groups = ["dev"]
+files = [
+    {file = "pytest_recording-0.13.4-py3-none-any.whl", hash = "sha256:ad49a434b51b1c4f78e85b1e6b74fdcc2a0a581ca16e52c798c6ace971f7f439"},
+    {file = "pytest_recording-0.13.4.tar.gz", hash = "sha256:568d64b2a85992eec4ae0a419c855d5fd96782c5fb016784d86f18053792768c"},
+]
+
+[package.dependencies]
+pytest = ">=3.5.0"
+vcrpy = ">=2.0.1"
+
+[package.extras]
+dev = ["pytest-httpbin", "pytest-mock", "requests", "werkzeug (==3.1.3)"]
+tests = ["pytest-httpbin", "pytest-mock", "requests", "werkzeug (==3.1.3)"]
+
+[[package]]
 name = "python-dateutil"
 version = "2.9.0.post0"
 description = "Extensions to the standard Python datetime module"
@@ -1702,6 +1722,25 @@ socks = ["pysocks (>=1.5.6,!=1.5.7,<2.0)"]
 zstd = ["backports-zstd (>=1.0.0) ; python_version < \"3.14\""]
 
 [[package]]
+name = "vcrpy"
+version = "8.1.1"
+description = "Automatically mock your HTTP interactions to simplify and speed up testing"
+optional = false
+python-versions = ">=3.10"
+groups = ["dev"]
+files = [
+    {file = "vcrpy-8.1.1-py3-none-any.whl", hash = "sha256:2d16f31ad56493efb6165182dd99767207031b0da3f68b18f975545ede8ac4b9"},
+    {file = "vcrpy-8.1.1.tar.gz", hash = "sha256:58e3053e33b423f3594031cb758c3f4d1df931307f1e67928e30cf352df7709f"},
+]
+
+[package.dependencies]
+PyYAML = "*"
+wrapt = "*"
+
+[package.extras]
+tests = ["aiohttp", "boto3", "cryptography", "httpbin", "httpcore", "httplib2", "httpx", "pycurl ; platform_python_implementation != \"PyPy\"", "pytest", "pytest-aiohttp", "pytest-asyncio", "pytest-cov", "pytest-httpbin", "requests (>=2.22.0)", "tornado", "urllib3", "werkzeug (==2.0.3)"]
+
+[[package]]
 name = "virtualenv"
 version = "20.38.0"
 description = "Virtual Python Environment builder"
@@ -1813,4 +1852,4 @@ dev = ["pytest", "setuptools"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10"
-content-hash = "b38e9cb09e65c9496d576722e182ca851ae06284010b0d052a98d14b32d81859"
+content-hash = "517005b7d4694efcee0de57a807735652d4dcc4373aa097cd0b5b634f0643c33"

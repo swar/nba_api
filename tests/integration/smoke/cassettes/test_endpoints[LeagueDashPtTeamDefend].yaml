@@ -1,0 +1,113 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAgwbbWicAQAAy3PZgx6gho8gzYqFw1VdlFG9kanZyT+IupJqbd47q5FTvmVax/GsV7HVQjpg0Dgb0jY6XJmVEkOPE2KKBccRuXeb9vYNcPSQMP+zELYxEYDb0PfWnJFcp5shKQsnlouJ+rMNdnW5g5zHj1YWdxS0ms43+c2NPs4zN3QLAjsvYu4VhbJk68eUNI5kQo40lo9HzzwxZ890/A/pEzBiIqzngXe7WE1AWk6Qd/TEzhrfWA==~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/leaguedashptteamdefend?Conference=&DateFrom=&DateTo=&DefenseCategory=Overall&Division=&GameSegment=&LastNGames=&LeagueID=00&Location=&Month=&OpponentTeamID=&Outcome=&PORound=&PerMode=Totals&Period=&Season=2025-26&SeasonSegment=&SeasonType=Regular+Season&TeamID=&VsConference=&VsDivision=
+  response:
+    body:
+      string: '{"resource":"leaguedashptteamdefend","parameters":{"PerMode":"Totals","LeagueID":"00","Season":"2025-26","SeasonType":"Regular
+        Season","TeamID":null,"Outcome":null,"Location":null,"Month":null,"SeasonSegment":null,"DateFrom":null,"DateTo":null,"OpponentTeamID":null,"VsConference":null,"VsDivision":null,"Conference":null,"Division":null,"GameSegment":null,"Period":null,"LastNGames":null,"PORound":null,"DefenseCategory":"Overall","ISTRound":null},"resultSets":[{"name":"LeagueDashPtTeamDefend","headers":["TEAM_ID","TEAM_NAME","TEAM_ABBREVIATION","GP","G","FREQ","D_FGM","D_FGA","D_FG_PCT","NORMAL_FG_PCT","PCT_PLUSMINUS"],"rowSet":[[1610612760,"Oklahoma
+        City Thunder","OKC",57,57,1.0,2177,5011,0.434,0.467,-0.033],[1610612765,"Detroit
+        Pistons","DET",54,54,1.0,2015,4565,0.441,0.467,-0.025],[1610612738,"Boston
+        Celtics","BOS",55,55,1.0,2118,4772,0.444,0.467,-0.023],[1610612759,"San Antonio
+        Spurs","SAS",55,55,1.0,2255,4967,0.454,0.47,-0.016],[1610612745,"Houston Rockets","HOU",54,54,1.0,2165,4735,0.457,0.469,-0.012],[1610612748,"Miami
+        Heat","MIA",57,57,1.0,2429,5320,0.457,0.469,-0.012],[1610612750,"Minnesota
+        Timberwolves","MIN",57,57,1.0,2362,5118,0.462,0.469,-0.008],[1610612739,"Cleveland
+        Cavaliers","CLE",57,57,1.0,2348,5108,0.46,0.467,-0.007],[1610612752,"New York
+        Knicks","NYK",56,56,1.0,2240,4868,0.46,0.466,-0.006],[1610612761,"Toronto
+        Raptors","TOR",56,56,1.0,2225,4833,0.46,0.467,-0.006],[1610612742,"Dallas
+        Mavericks","DAL",55,55,1.0,2418,5181,0.467,0.47,-0.004],[1610612746,"LA Clippers","LAC",56,56,1.0,2286,4902,0.466,0.469,-0.003],[1610612749,"Milwaukee
+        Bucks","MIL",54,54,1.0,2208,4744,0.465,0.468,-0.002],[1610612763,"Memphis
+        Grizzlies","MEM",54,54,1.0,2305,4913,0.469,0.47,-0.001],[1610612743,"Denver
+        Nuggets","DEN",57,57,1.0,2407,5159,0.467,0.467,-0.001],[1610612756,"Phoenix
+        Suns","PHX",57,57,1.0,2269,4819,0.471,0.471,0.0],[1610612755,"Philadelphia
+        76ers","PHI",55,55,1.0,2313,4918,0.47,0.468,0.002],[1610612744,"Golden State
+        Warriors","GSW",56,56,1.0,2343,4960,0.472,0.469,0.003],[1610612766,"Charlotte
+        Hornets","CHA",57,57,1.0,2401,5067,0.474,0.471,0.003],[1610612757,"Portland
+        Trail Blazers","POR",57,57,1.0,2430,5108,0.476,0.472,0.004],[1610612737,"Atlanta
+        Hawks","ATL",58,58,1.0,2501,5260,0.475,0.469,0.007],[1610612764,"Washington
+        Wizards","WAS",55,55,1.0,2428,5090,0.477,0.468,0.009],[1610612741,"Chicago
+        Bulls","CHI",56,56,1.0,2482,5197,0.478,0.468,0.01],[1610612740,"New Orleans
+        Pelicans","NOP",57,57,1.0,2505,5216,0.48,0.47,0.01],[1610612753,"Orlando Magic","ORL",55,55,1.0,2268,4743,0.478,0.467,0.012],[1610612754,"Indiana
+        Pacers","IND",57,57,1.0,2465,5092,0.484,0.469,0.015],[1610612762,"Utah Jazz","UTA",57,57,1.0,2538,5204,0.488,0.469,0.018],[1610612747,"Los
+        Angeles Lakers","LAL",55,55,1.0,2351,4819,0.488,0.468,0.02],[1610612751,"Brooklyn
+        Nets","BKN",55,55,1.0,2316,4709,0.492,0.47,0.022],[1610612758,"Sacramento
+        Kings","SAC",57,57,1.0,2513,5082,0.494,0.473,0.022]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1324'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:36:33 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDFwOKeEWcAQAADnfZgx77yCs0zZ9HZNv4XveCUagaM9agpQYRbb9iBiCIJXCFKPv8LcD0zQ3XA7ThYJQwg7RCqwGTpIyx0r2qUSJQbCR8NpXDw6xwgNn00YYo0KTaEtuseTmL31AbaZdMzye08sAp2lK/IHpsyrGMJiOqF1rXiGwhB5czSxeqQqMRQ2LNUFImfheZZPSG+7JAa1COwW6r0h/atY0itmkksbwjCZMGAP/WbNN/+OD7dQ==~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7131;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '1800.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '3'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '1500.112'
+      x-varnish:
+      - 38123050 37686680
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,92 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF3OIeEWcAQAAa0DZgx7b4+ZVE9iOUPdb6Q/ghmYsDbNAnvvAoUWiOSXI+vJ99Yuuh40yhWXsTW0rgtX16xNdvDpeV0j/M+xbCEtqi0Z4T3XMoZvThwzCwA6MuwbItCRvCMi1WozqMcsJKMiN2dXNO4/QNCTVaTUH1bWzh9lO4EKLZU2oUKVaSsJUq1V60UWCPm1emJJTwOe4H9X3hkU/N369l38ARrljPKPKoBRIz9fJf1lu4UWH6Q==~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/homepageleaders?GameScope=Season&LeagueID=00&PlayerOrTeam=Team&PlayerScope=All+Players&Season=2025-26&SeasonType=Regular+Season&StatCategory=Points
+  response:
+    body:
+      string: '{"resource":"homepageleaders","parameters":{"LeagueID":"00","Season":"2025-26","SeasonType":"Regular
+        Season","GameScope":"Season","PlayerScope":"All Players","PlayerOrTeam":"Team","StatCategory":"Points"},"resultSets":[{"name":"HomePageLeaders","headers":["RANK","TEAM_ID","TEAM_NAME","TEAM_ABBREVIATION","PTS","FG_PCT","FG3_PCT","FT_PCT","EFG_PCT","TS_PCT","PTS_PER48"],"rowSet":[[1,1610612743,"Denver
+        Nuggets","DEN",120.9,0.496,0.396,0.809,0.575,0.616,119.6],[2,1610612748,"Miami
+        Heat","MIA",120.0,0.463,0.361,0.786,0.535,0.572,119.8],[3,1610612739,"Cleveland
+        Cavaliers","CLE",119.8,0.477,0.359,0.784,0.557,0.591,119.4],[4,1610612750,"Minnesota
+        Timberwolves","MIN",119.7,0.483,0.375,0.744,0.563,0.595,119.1],[5,1610612760,"Oklahoma
+        City Thunder","OKC",119.4,0.486,0.362,0.822,0.562,0.601,118.4]]},{"name":"LeagueAverage","headers":["PTS","FG_PCT","FG3_PCT","FT_PCT","EFG_PCT","TS_PCT","PTS_PER48"],"rowSet":[[115.5,0.469,0.358,0.784,0.543,0.58,114.8]]},{"name":"LeagueMax","headers":["PTS","FG_PCT","FG3_PCT","FT_PCT","EFG_PCT","TS_PCT","PTS_PER48"],"rowSet":[[120.9,0.5,0.396,0.832,0.575,0.616,119.8]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '550'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:36:19 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF4qIeEWcAQAA6ULZgx7Fw4H9nBr+PSSiYVIe5beDFRK2pYB0qey2UVqQV7QlWZ9DH9f+N7vN7gHpGV4MxpB9MK1Q3EFjGfDUVme7lMHAGGm8bdXsXj44MtPmwvU2qkiZYXeP9tOFetK++xrNcTh0561TYwFbXy4MVj1JczIioC1eCvRtqbhk1QVMk8XuMQwubxkc1ZCfxmBActeCOHCMu3FNS/U0xc+6ysAnlYwO/UEOuz6frmbEXQ==~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7145;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '3600.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '3'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '-1410.428'
+      x-varnish:
+      - 69186934 61784712
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -34,7 +34,10 @@ jobs:
             - snyk/scan
       - run:
           name: run tests
-          command: poetry run pytest
+          command: poetry run pytest tests/unit
+      - run:
+          name: run tests
+          command: poetry run pytest tests/integration -m "vcr"
       - run:
           name: run ruff
           command: poetry run ruff check && poetry run ruff format --check

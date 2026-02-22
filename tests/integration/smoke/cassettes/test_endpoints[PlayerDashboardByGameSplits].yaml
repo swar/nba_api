@@ -1,0 +1,114 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF4eNeEWcAQAAecjZgx7wWzp5E4MRzrIxDe65o1dCsTAvBYO5PF5UqdErujiut0ZlbCgnh1/gZtxLNQpwFGv0l4RrkqYGVI3MUzjiKguRgC2Ozyot8b/qYNJVa2UiGP/7lJkLlpd8V89gY7p5Wf2YBTiwEmQx4K4nyej0jjOLW47eTbc1zsSILypyJTqy0/L+AyK4mrpRrN8Eb/pqu9o6fu4YghCfaedIWpZlwJOYgQRLFLIK2m29pkI=~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/playerdashboardbygamesplits?DateFrom=&DateTo=&GameSegment=&LastNGames=0&LeagueID=00&Location=&MeasureType=Base&Month=0&OpponentTeamID=0&Outcome=&PORound=&PaceAdjust=N&PerMode=Totals&Period=0&PlayerID=1628378&PlusMinus=N&Rank=N&Season=2025-26&SeasonSegment=&SeasonType=Regular+Season&ShotClockRange=&VsConference=&VsDivision=
+  response:
+    body:
+      string: '{"resource":"playerdashboardbygamesplits","parameters":{"MeasureType":"Base","PerMode":"Totals","PlusMinus":"N","PaceAdjust":"N","Rank":"N","LeagueID":"00","Season":"2025-26","SeasonType":"Regular
+        Season","PORound":0,"PlayerID":1628378,"Outcome":null,"Location":null,"Month":0,"SeasonSegment":null,"DateFrom":null,"DateTo":null,"OpponentTeamID":0,"VsConference":null,"VsDivision":null,"GameSegment":null,"Period":0,"ShotClockRange":null,"LastNGames":0,"ISTRound":""},"resultSets":[{"name":"OverallPlayerDashboard","headers":["GROUP_SET","GROUP_VALUE","GP","W","L","W_PCT","MIN","FGM","FGA","FG_PCT","FG3M","FG3A","FG3_PCT","FTM","FTA","FT_PCT","OREB","DREB","REB","AST","TOV","STL","BLK","BLKA","PF","PFD","PTS","PLUS_MINUS","NBA_FANTASY_PTS","DD2","TD3","WNBA_FANTASY_PTS","GP_RANK","W_RANK","L_RANK","W_PCT_RANK","MIN_RANK","FGM_RANK","FGA_RANK","FG_PCT_RANK","FG3M_RANK","FG3A_RANK","FG3_PCT_RANK","FTM_RANK","FTA_RANK","FT_PCT_RANK","OREB_RANK","DREB_RANK","REB_RANK","AST_RANK","TOV_RANK","STL_RANK","BLK_RANK","BLKA_RANK","PF_RANK","PFD_RANK","PTS_RANK","PLUS_MINUS_RANK","NBA_FANTASY_PTS_RANK","DD2_RANK","TD3_RANK","WNBA_FANTASY_PTS_RANK","TEAM_COUNT"],"rowSet":[["Overall","2025-26",53,34,19,0.642,1773.5783333333334,532,1094,0.486,189,503,0.376,274,320,0.856,41,194,235,311,164,81,15,33,130,249,1527,337,2399.5,4,0,2454.0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]]},{"name":"ByHalfPlayerDashboard","headers":["GROUP_SET","GROUP_VALUE","GP","W","L","W_PCT","MIN","FGM","FGA","FG_PCT","FG3M","FG3A","FG3_PCT","FTM","FTA","FT_PCT","OREB","DREB","REB","AST","TOV","STL","BLK","BLKA","PF","PFD","PTS","PLUS_MINUS","NBA_FANTASY_PTS","DD2","TD3","WNBA_FANTASY_PTS","GP_RANK","W_RANK","L_RANK","W_PCT_RANK","MIN_RANK","FGM_RANK","FGA_RANK","FG_PCT_RANK","FG3M_RANK","FG3A_RANK","FG3_PCT_RANK","FTM_RANK","FTA_RANK","FT_PCT_RANK","OREB_RANK","DREB_RANK","REB_RANK","AST_RANK","TOV_RANK","STL_RANK","BLK_RANK","BLKA_RANK","PF_RANK","PFD_RANK","PTS_RANK","PLUS_MINUS_RANK","NBA_FANTASY_PTS_RANK","DD2_RANK","TD3_RANK","WNBA_FANTASY_PTS_RANK","TEAM_COUNT"],"rowSet":[["By
+        Half","First Half",53,34,19,0.642,873.7066666666667,219,493,0.444,76,232,0.328,117,136,0.86,14,88,102,157,79,45,5,21,49,104,631,120,1059.9,4,0,1066.0,1,1,2,1,2,2,2,2,2,2,3,2,2,1,2,2,2,1,2,1,2,3,2,2,2,2,2,1,1,2,1],["By
+        Half","Second Half",53,34,19,0.642,889.8716666666667,312,596,0.523,112,268,0.418,156,182,0.857,25,105,130,154,85,36,10,12,81,143,892,227,1332.0,4,0,1380.0,1,1,2,1,1,1,1,1,1,1,1,1,1,2,1,1,1,2,1,2,1,2,3,1,1,1,1,1,1,1,1],["By
+        Half","Overtime",2,0,2,0.0,10.0,1,5,0.2,1,3,0.333,1,2,0.5,2,1,3,0,0,0,0,0,0,2,4,-10,7.6,1,0,8.0,3,3,1,3,3,3,3,3,3,3,2,3,3,3,3,3,3,3,3,3,3,1,1,3,3,3,3,3,1,3,1]]},{"name":"ByPeriodPlayerDashboard","headers":["GROUP_SET","GROUP_VALUE","GP","W","L","W_PCT","MIN","FGM","FGA","FG_PCT","FG3M","FG3A","FG3_PCT","FTM","FTA","FT_PCT","OREB","DREB","REB","AST","TOV","STL","BLK","BLKA","PF","PFD","PTS","PLUS_MINUS","NBA_FANTASY_PTS","DD2","TD3","WNBA_FANTASY_PTS","GP_RANK","W_RANK","L_RANK","W_PCT_RANK","MIN_RANK","FGM_RANK","FGA_RANK","FG_PCT_RANK","FG3M_RANK","FG3A_RANK","FG3_PCT_RANK","FTM_RANK","FTA_RANK","FT_PCT_RANK","OREB_RANK","DREB_RANK","REB_RANK","AST_RANK","TOV_RANK","STL_RANK","BLK_RANK","BLKA_RANK","PF_RANK","PFD_RANK","PTS_RANK","PLUS_MINUS_RANK","NBA_FANTASY_PTS_RANK","DD2_RANK","TD3_RANK","WNBA_FANTASY_PTS_RANK","TEAM_COUNT"],"rowSet":[["By
+        Period",1,53,34,19,0.642,472.7416666666667,127,286,0.444,43,136,0.316,60,73,0.822,7,48,55,89,36,28,2,15,23,57,357,157,610.5,4,0,604.0,1,1,2,1,1,3,2,4,3,2,5,3,3,4,3,3,3,1,4,1,4,5,2,3,3,1,3,1,1,3,1],["By
+        Period",2,53,34,19,0.642,400.965,92,207,0.444,33,96,0.344,57,63,0.905,7,40,47,68,43,17,3,6,26,47,274,-37,449.4,4,0,462.0,1,1,2,1,4,4,4,3,4,4,3,4,4,1,3,4,4,4,2,3,3,3,3,4,4,5,4,1,1,4,1],["By
+        Period",3,53,34,19,0.642,470.39666666666665,173,317,0.546,63,147,0.429,61,74,0.824,13,54,67,78,44,16,6,5,43,63,470,107,689.4,4,0,722.0,1,1,2,1,2,1,1,1,1,1,1,2,2,3,1,1,1,2,1,4,1,2,5,2,1,3,1,1,1,1,1],["By
+        Period",4,51,32,19,0.627,419.475,139,279,0.498,49,121,0.405,95,108,0.88,12,51,63,76,41,20,4,7,38,80,422,120,642.6,4,0,658.0,4,4,2,4,3,2,3,2,2,3,2,1,1,2,2,2,2,3,3,2,2,4,4,1,2,2,2,1,1,2,1],["By
+        Period",5,2,0,2,0.0,10.0,1,5,0.2,1,3,0.333,1,2,0.5,2,1,3,0,0,0,0,0,0,2,4,-10,7.6,1,0,8.0,5,5,1,5,5,5,5,5,5,5,4,5,5,5,5,5,5,5,5,5,5,1,1,5,5,4,5,5,1,5,1]]},{"name":"ByScoreMarginPlayerDashboard","headers":["GROUP_SET","GROUP_VALUE","GP","W","L","W_PCT","MIN","FGM","FGA","FG_PCT","FG3M","FG3A","FG3_PCT","FTM","FTA","FT_PCT","OREB","DREB","REB","AST","TOV","STL","BLK","BLKA","PF","PFD","PTS","PLUS_MINUS","NBA_FANTASY_PTS","DD2","TD3","WNBA_FANTASY_PTS","GP_RANK","W_RANK","L_RANK","W_PCT_RANK","MIN_RANK","FGM_RANK","FGA_RANK","FG_PCT_RANK","FG3M_RANK","FG3A_RANK","FG3_PCT_RANK","FTM_RANK","FTA_RANK","FT_PCT_RANK","OREB_RANK","DREB_RANK","REB_RANK","AST_RANK","TOV_RANK","STL_RANK","BLK_RANK","BLKA_RANK","PF_RANK","PFD_RANK","PTS_RANK","PLUS_MINUS_RANK","NBA_FANTASY_PTS_RANK","DD2_RANK","TD3_RANK","WNBA_FANTASY_PTS_RANK","TEAM_COUNT"],"rowSet":[["By
+        Score Margin","Tied",53,34,19,0.642,101.48166666666667,20,50,0.4,7,21,0.333,9,11,0.818,2,12,14,20,9,3,0,0,6,12,56,55,102.8,4,0,103.0,1,1,3,3,5,6,5,6,6,5,6,6,6,5,5,5,5,4,6,6,6,1,3,5,6,3,6,1,1,6,1],["By
+        Score Margin","1 - 5 Points",53,34,19,0.642,651.58,187,405,0.462,72,201,0.358,86,98,0.878,11,70,81,115,48,29,5,16,53,76,532,19,855.7,4,0,868.0,1,1,3,3,1,1,1,5,1,1,4,1,1,4,2,1,1,1,2,1,1,6,6,1,1,4,1,1,1,1,1],["By
+        Score Margin","6 - 10 Points",53,34,19,0.642,510.73,164,325,0.505,48,140,0.343,71,92,0.772,15,53,68,81,50,23,4,11,37,71,447,132,681.1,4,0,698.0,1,1,3,3,2,2,2,3,2,2,5,2,2,6,1,2,2,2,1,2,2,5,5,2,2,2,2,1,1,2,1],["By
+        Score Margin","11 - 15 Points",52,33,19,0.635,313.1716666666667,93,186,0.5,40,90,0.444,60,67,0.896,7,39,46,62,37,14,3,3,25,57,286,137,448.2,4,0,468.0,4,4,3,6,3,3,3,4,3,3,2,3,3,2,3,3,3,3,3,3,3,4,4,3,3,1,3,1,1,3,1],["By
+        Score Margin","16 - 20 Points",35,23,12,0.657,121.83,43,82,0.524,12,31,0.387,29,33,0.879,4,14,18,20,10,8,1,2,4,22,127,-2,195.6,1,0,195.0,5,5,2,2,4,4,4,2,4,4,3,4,4,3,4,4,4,4,4,4,5,3,1,4,4,5,4,5,1,4,1],["By
+        Score Margin","more than 20 Points",20,15,5,0.75,74.785,25,46,0.543,10,20,0.5,19,19,1.0,2,6,8,13,10,4,2,1,5,11,79,-4,116.1,1,0,122.0,6,6,1,1,6,5,6,1,5,6,1,5,5,1,5,6,6,6,4,5,4,2,2,6,5,6,5,5,1,5,1]]},{"name":"ByActualMarginPlayerDashboard","headers":["GROUP_SET","GROUP_VALUE","GP","W","L","W_PCT","MIN","FGM","FGA","FG_PCT","FG3M","FG3A","FG3_PCT","FTM","FTA","FT_PCT","OREB","DREB","REB","AST","TOV","STL","BLK","BLKA","PF","PFD","PTS","PLUS_MINUS","NBA_FANTASY_PTS","DD2","TD3","WNBA_FANTASY_PTS","GP_RANK","W_RANK","L_RANK","W_PCT_RANK","MIN_RANK","FGM_RANK","FGA_RANK","FG_PCT_RANK","FG3M_RANK","FG3A_RANK","FG3_PCT_RANK","FTM_RANK","FTA_RANK","FT_PCT_RANK","OREB_RANK","DREB_RANK","REB_RANK","AST_RANK","TOV_RANK","STL_RANK","BLK_RANK","BLKA_RANK","PF_RANK","PFD_RANK","PTS_RANK","PLUS_MINUS_RANK","NBA_FANTASY_PTS_RANK","DD2_RANK","TD3_RANK","WNBA_FANTASY_PTS_RANK","TEAM_COUNT"],"rowSet":[["By
+        Actual Margin","Behind more than 20 Points",5,0,5,0.0,10.64,4,8,0.5,3,3,1.0,0,0,0.0,0,1,1,4,1,0,1,0,0,0,11,1,20.2,0,0,21.0,11,11,4,11,11,11,11,5,10,11,1,11,11,11,11,11,11,11,11,11,4,1,1,11,11,8,11,10,1,11,1],["By
+        Actual Margin","Behind 16 - 20 Points",13,2,11,0.154,33.443333333333335,12,24,0.5,3,8,0.375,9,11,0.818,2,5,7,7,3,3,0,1,2,7,36,43,60.9,0,0,59.0,10,10,5,10,10,10,10,5,10,10,6,9,9,7,6,9,9,10,10,9,9,3,2,10,10,4,10,10,1,10,1],["By
+        Actual Margin","Behind 11 - 15 Points",28,10,18,0.357,124.29666666666667,39,81,0.481,17,40,0.425,23,27,0.852,2,12,14,26,15,5,3,1,9,29,118,123,182.8,3,0,191.0,7,9,7,9,6,6,6,9,6,6,3,6,6,5,6,6,6,6,6,6,2,3,6,5,6,1,6,4,1,6,1],["By
+        Actual Margin","Behind 6 - 10 Points",35,17,18,0.486,271.72333333333336,90,182,0.495,29,85,0.341,31,42,0.738,11,25,36,41,29,12,3,3,19,34,240,91,360.7,3,0,376.0,5,7,7,8,3,2,2,7,3,3,10,5,4,10,1,5,3,3,1,2,2,8,9,4,3,2,3,4,1,3,1],["By
+        Actual Margin","Behind 1 - 5 Points",47,28,19,0.596,341.485,102,230,0.443,42,114,0.368,37,44,0.841,7,34,41,60,25,9,4,9,28,39,283,33,436.2,4,0,452.0,3,5,9,7,1,1,1,10,1,1,7,3,3,6,2,2,1,1,2,4,1,11,11,1,1,6,1,1,1,1,1],["By
+        Actual Margin","Tied",53,34,19,0.642,101.48166666666667,20,50,0.4,7,21,0.333,9,11,0.818,2,12,14,20,9,3,0,0,6,12,56,55,102.8,4,0,103.0,1,1,9,5,7,9,8,11,8,8,11,9,9,7,6,6,6,7,7,9,9,1,5,8,9,3,8,1,1,8,1],["By
+        Actual Margin","Ahead 1 - 5 Points",53,34,19,0.642,310.095,85,175,0.486,30,87,0.345,49,54,0.907,4,36,40,55,23,20,1,7,25,37,249,-14,419.5,4,0,416.0,1,1,9,5,2,3,3,8,2,2,9,1,1,4,4,1,2,2,3,1,4,9,10,2,2,10,2,1,1,2,1],["By
+        Actual Margin","Ahead 6 - 10 Points",44,33,11,0.75,239.00666666666666,74,143,0.517,19,55,0.345,40,50,0.8,4,28,32,40,21,11,1,8,18,37,207,41,320.4,3,0,322.0,4,3,5,4,4,4,4,3,5,4,8,2,2,9,4,3,4,4,5,3,4,10,8,2,4,5,4,4,1,4,1],["By
+        Actual Margin","Ahead 11 - 15 Points",30,29,1,0.967,188.875,54,105,0.514,23,50,0.46,37,40,0.925,5,27,32,36,22,9,0,2,16,28,168,14,265.4,1,0,277.0,6,4,2,2,5,5,5,4,4,5,2,3,5,2,3,4,4,5,4,4,9,7,7,6,5,7,5,7,1,5,1],["By
+        Actual Margin","Ahead 16 - 20 Points",22,21,1,0.955,88.38666666666667,31,58,0.534,9,23,0.391,20,22,0.909,2,9,11,13,7,5,1,1,2,15,91,-45,134.7,1,0,136.0,8,6,2,3,8,7,7,2,7,7,5,7,7,3,6,8,8,8,9,6,4,3,2,7,7,11,7,7,1,7,1],["By
+        Actual Margin","Ahead more than 20 Points",15,15,0,1.0,64.145,21,38,0.553,7,17,0.412,19,19,1.0,2,5,7,9,9,4,1,1,5,11,68,-5,95.9,1,0,101.0,9,8,1,1,9,8,9,1,8,9,4,8,8,1,6,9,9,9,7,8,4,3,4,9,8,9,9,7,1,9,1]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '2616'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:36:54 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF6iNeEWcAQAA6MrZgx6zHz+Rzf+BuzMvzoMR7GdcgJmcbVZoY4iySnF8WepkZhN9sRWBjKQyLWJXMJ21E3sdMHv99O6lN9IS6dmmYhHyZDLHYhIj3gibYikZTEr36VIBfw1aDyOahQM/TJ/nDgYQBSHFCELbanbFC7Otw5A7JTovNy+VWfWQG8DRAAY/xs4vQQUH2/a2aDzChrWYFHhhOO6JrMtrR0HtBEQue8ARqhvlWqtAInQ6jww=~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7110;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-2
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '1800.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '1'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '371.572'
+      x-varnish:
+      - 38455880 36142748
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

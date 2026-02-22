@@ -1,0 +1,148 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAqIebWicAQAA1OvZgx5LhkjslRboliK+Cil61kDbPw6sD+KXbeGI0RVSyX1xaCDvAWfwFyom5gRTpWIrkn2Qx4KTAlNEw8QQkTinhOsF09FMqiKyXyBZQ06qqKJ53fG2HWNEsP5UJSkfU1blxpX/w9KwmrGOBFDs75+575jmiEh41JEWftzI9v5vk7FbqG0c4oCGfJwHLUTVi/51XgL75Ep+vGoOL4Hv3PnVOP2+K/y/wKayWmWzgBM=~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/playervsplayer?DateFrom=&DateTo=&GameSegment=&LastNGames=0&LeagueID=00&Location=&MeasureType=Base&Month=0&OpponentTeamID=0&Outcome=&PaceAdjust=N&PerMode=Totals&Period=0&PlayerID=1628378&PlusMinus=N&Rank=N&Season=2025-26&SeasonSegment=&SeasonType=Regular+Season&VsConference=&VsDivision=&VsPlayerID=1630596
+  response:
+    body:
+      string: '{"resource":"playervsplayer","parameters":{"MeasureType":"Base","PerMode":"Totals","PlusMinus":"N","PaceAdjust":"N","Rank":"N","LeagueID":"00","Season":"2025-26","SeasonType":"Regular
+        Season","PlayerID":1628378,"Outcome":null,"Location":null,"Month":0,"SeasonSegment":null,"DateFrom":null,"DateTo":null,"OpponentTeamID":0,"VsConference":null,"VsDivision":null,"GameSegment":null,"Period":0,"LastNGames":0,"VsPlayerID":1630596},"resultSets":[{"name":"Overall","headers":["GROUP_SET","GROUP_VALUE","PLAYER_ID","PLAYER_NAME","GP","W","L","W_PCT","MIN","FGM","FGA","FG_PCT","FG3M","FG3A","FG3_PCT","FTM","FTA","FT_PCT","OREB","DREB","REB","AST","TOV","STL","BLK","BLKA","PF","PFD","PTS","PLUS_MINUS","NBA_FANTASY_PTS"],"rowSet":[["Overall","Donovan
+        Mitchell",1628378,"Donovan Mitchell",53,34,19,0.642,1773.5783333333334,532,1094,0.486,189,503,0.376,274,320,0.856,41,194,235,311,164,81,15,33,130,249,1527,337,2399.5],["Overall","Evan
+        Mobley",1630596,"Evan Mobley",43,26,17,0.605,1420.2666666666667,296,577,0.513,48,159,0.302,122,192,0.635,98,279,377,172,90,38,83,32,107,143,762,165,1745.4]]},{"name":"OnOffCourt","headers":["GROUP_SET","PLAYER_ID","PLAYER_NAME","VS_PLAYER_ID","VS_PLAYER_NAME","COURT_STATUS","GP","W","L","W_PCT","MIN","FGM","FGA","FG_PCT","FG3M","FG3A","FG3_PCT","FTM","FTA","FT_PCT","OREB","DREB","REB","AST","TOV","STL","BLK","BLKA","PF","PFD","PTS","PLUS_MINUS","NBA_FANTASY_PTS"],"rowSet":[["Vs.
+        Player",1628378,"Donovan Mitchell",1630596,"Mobley, Evan","On",41,25,16,0.61,1106.225,311,637,0.488,115,298,0.386,155,184,0.842,31,136,167,197,101,48,6,19,69,140,892,171,1448.9],["Vs.
+        Player",1628378,"Donovan Mitchell",1630596,"Mobley, Evan","Off",53,34,19,0.642,667.3533333333334,221,457,0.484,74,205,0.361,119,136,0.875,10,58,68,114,63,33,9,14,61,109,635,166,950.6]]},{"name":"ShotDistanceOverall","headers":["GROUP_SET","GROUP_VALUE","PLAYER_ID","PLAYER_NAME","FGM","FGA","FG_PCT"],"rowSet":[["Shot
+        Distance (5ft)","Less Than 5 ft.",1628378,"Donovan Mitchell",170,258,0.659],["Shot
+        Distance (5ft)","5-9 ft.",1628378,"Donovan Mitchell",77,140,0.55],["Shot Distance
+        (5ft)","10-14 ft.",1628378,"Donovan Mitchell",56,104,0.538],["Shot Distance
+        (5ft)","15-19 ft.",1628378,"Donovan Mitchell",28,55,0.509],["Shot Distance
+        (5ft)","20-24 ft.",1628378,"Donovan Mitchell",49,134,0.366],["Shot Distance
+        (5ft)","25-29 ft.",1628378,"Donovan Mitchell",147,384,0.383],["Shot Distance
+        (5ft)","30-34 ft.",1628378,"Donovan Mitchell",5,15,0.333],["Shot Distance
+        (5ft)","35-39 ft.",1628378,"Donovan Mitchell",0,4,0.0],["Shot Distance (5ft)","40+
+        ft.",1628378,"Donovan Mitchell",0,0,0.0]]},{"name":"ShotDistanceOnCourt","headers":["GROUP_SET","PLAYER_ID","PLAYER_NAME","VS_PLAYER_ID","VS_PLAYER_NAME","COURT_STATUS","GROUP_VALUE","FGM","FGA","FG_PCT"],"rowSet":[["Vs.
+        Player",1628378,"Donovan Mitchell",1630596,"Mobley, Evan","On","Less Than
+        5 ft.",94,148,0.635],["Vs. Player",1628378,"Donovan Mitchell",1630596,"Mobley,
+        Evan","On","5-9 ft.",45,78,0.577],["Vs. Player",1628378,"Donovan Mitchell",1630596,"Mobley,
+        Evan","On","10-14 ft.",33,60,0.55],["Vs. Player",1628378,"Donovan Mitchell",1630596,"Mobley,
+        Evan","On","15-19 ft.",18,33,0.545],["Vs. Player",1628378,"Donovan Mitchell",1630596,"Mobley,
+        Evan","On","20-24 ft.",33,83,0.398],["Vs. Player",1628378,"Donovan Mitchell",1630596,"Mobley,
+        Evan","On","25-29 ft.",86,224,0.384],["Vs. Player",1628378,"Donovan Mitchell",1630596,"Mobley,
+        Evan","On","30-34 ft.",2,7,0.286],["Vs. Player",1628378,"Donovan Mitchell",1630596,"Mobley,
+        Evan","On","35-39 ft.",0,4,0.0],["Vs. Player",1628378,"Donovan Mitchell",1630596,"Mobley,
+        Evan","On","40+ ft.",0,0,0.0]]},{"name":"ShotDistanceOffCourt","headers":["GROUP_SET","PLAYER_ID","PLAYER_NAME","VS_PLAYER_ID","VS_PLAYER_NAME","COURT_STATUS","GROUP_VALUE","FGM","FGA","FG_PCT"],"rowSet":[["Vs.
+        Player",1628378,"Donovan Mitchell",1630596,"Mobley, Evan","Off","Less Than
+        5 ft.",76,110,0.691],["Vs. Player",1628378,"Donovan Mitchell",1630596,"Mobley,
+        Evan","Off","5-9 ft.",32,62,0.516],["Vs. Player",1628378,"Donovan Mitchell",1630596,"Mobley,
+        Evan","Off","10-14 ft.",23,44,0.523],["Vs. Player",1628378,"Donovan Mitchell",1630596,"Mobley,
+        Evan","Off","15-19 ft.",10,22,0.455],["Vs. Player",1628378,"Donovan Mitchell",1630596,"Mobley,
+        Evan","Off","20-24 ft.",16,51,0.314],["Vs. Player",1628378,"Donovan Mitchell",1630596,"Mobley,
+        Evan","Off","25-29 ft.",61,160,0.381],["Vs. Player",1628378,"Donovan Mitchell",1630596,"Mobley,
+        Evan","Off","30-34 ft.",3,8,0.375],["Vs. Player",1628378,"Donovan Mitchell",1630596,"Mobley,
+        Evan","Off","35-39 ft.",0,0,0.0],["Vs. Player",1628378,"Donovan Mitchell",1630596,"Mobley,
+        Evan","Off","40+ ft.",0,0,0.0]]},{"name":"ShotAreaOverall","headers":["GROUP_SET","GROUP_VALUE","PLAYER_ID","PLAYER_NAME","FGM","FGA","FG_PCT"],"rowSet":[["Shot
+        Area","Restricted Area",1628378,"Donovan Mitchell",158,235,0.672],["Shot Area","In
+        The Paint (Non-RA)",1628378,"Donovan Mitchell",116,224,0.518],["Shot Area","Mid-Range",1628378,"Donovan
+        Mitchell",69,132,0.523],["Shot Area","Left Corner 3",1628378,"Donovan Mitchell",13,29,0.448],["Shot
+        Area","Right Corner 3",1628378,"Donovan Mitchell",10,30,0.333],["Shot Area","Above
+        the Break 3",1628378,"Donovan Mitchell",166,444,0.374],["Shot Area","Backcourt",1628378,"Donovan
+        Mitchell",0,0,0.0]]},{"name":"ShotAreaOnCourt","headers":["GROUP_SET","PLAYER_ID","PLAYER_NAME","VS_PLAYER_ID","VS_PLAYER_NAME","COURT_STATUS","GROUP_VALUE","FGM","FGA","FG_PCT"],"rowSet":[["Vs.
+        Player",1628378,"Donovan Mitchell",1630596,"Mobley, Evan","On","Restricted
+        Area",88,139,0.633],["Vs. Player",1628378,"Donovan Mitchell",1630596,"Mobley,
+        Evan","On","In The Paint (Non-RA)",67,123,0.545],["Vs. Player",1628378,"Donovan
+        Mitchell",1630596,"Mobley, Evan","On","Mid-Range",41,77,0.532],["Vs. Player",1628378,"Donovan
+        Mitchell",1630596,"Mobley, Evan","On","Left Corner 3",10,19,0.526],["Vs. Player",1628378,"Donovan
+        Mitchell",1630596,"Mobley, Evan","On","Right Corner 3",7,19,0.368],["Vs. Player",1628378,"Donovan
+        Mitchell",1630596,"Mobley, Evan","On","Above the Break 3",98,260,0.377],["Vs.
+        Player",1628378,"Donovan Mitchell",1630596,"Mobley, Evan","On","Backcourt",0,0,0.0]]},{"name":"ShotAreaOffCourt","headers":["GROUP_SET","PLAYER_ID","PLAYER_NAME","VS_PLAYER_ID","VS_PLAYER_NAME","COURT_STATUS","GROUP_VALUE","FGM","FGA","FG_PCT"],"rowSet":[["Vs.
+        Player",1628378,"Donovan Mitchell",1630596,"Mobley, Evan","Off","Restricted
+        Area",70,96,0.729],["Vs. Player",1628378,"Donovan Mitchell",1630596,"Mobley,
+        Evan","Off","In The Paint (Non-RA)",49,101,0.485],["Vs. Player",1628378,"Donovan
+        Mitchell",1630596,"Mobley, Evan","Off","Mid-Range",28,55,0.509],["Vs. Player",1628378,"Donovan
+        Mitchell",1630596,"Mobley, Evan","Off","Left Corner 3",3,10,0.3],["Vs. Player",1628378,"Donovan
+        Mitchell",1630596,"Mobley, Evan","Off","Right Corner 3",3,11,0.273],["Vs.
+        Player",1628378,"Donovan Mitchell",1630596,"Mobley, Evan","Off","Above the
+        Break 3",68,184,0.37],["Vs. Player",1628378,"Donovan Mitchell",1630596,"Mobley,
+        Evan","Off","Backcourt",0,0,0.0]]},{"name":"PlayerInfo","headers":["PERSON_ID","FIRST_NAME","LAST_NAME","DISPLAY_FIRST_LAST","DISPLAY_LAST_COMMA_FIRST","DISPLAY_FI_LAST","BIRTHDATE","SCHOOL","COUNTRY","LAST_AFFILIATION"],"rowSet":[[1628378,"Donovan","Mitchell","Donovan
+        Mitchell","Mitchell, Donovan","D. Mitchell","1996-09-07T00:00:00","Louisville","USA","Louisville/USA"]]},{"name":"VsPlayerInfo","headers":["PERSON_ID","FIRST_NAME","LAST_NAME","DISPLAY_FIRST_LAST","DISPLAY_LAST_COMMA_FIRST","DISPLAY_FI_LAST","BIRTHDATE","SCHOOL","COUNTRY","LAST_AFFILIATION"],"rowSet":[[1630596,"Evan","Mobley","Evan
+        Mobley","Mobley, Evan","E. Mobley","2001-06-18T00:00:00","Southern California","USA","Southern
+        California/USA"]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1681'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:37:03 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAsQebWicAQAA8e7Zgx5HUFFmPdQAO/V8MVWST8ixvXWaVoDHsft7tDOCkqD+9Tjm2p0aVkj54HyrqxEUC76Y+W+u7GVeXo0tb9+5MozAxfXBiWhmiW+c9NLM0nFPcrkW4M2jyMsB9+vhGqJD8DAxulWArP4BPeoTFXoLmj1E4MuFqFy8zWLl+yATUxdmx1OG+E/IceIDAJLPQZ3vyalxakYsg5f9iMYfgDjNgFpGxmm0sjII5sTKzac=~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7101;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-0
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '1800.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '1'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '376.384'
+      x-varnish:
+      - 37445451 36324590
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,99 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQlWITApT0b2ecAQAAMi3agx7RuGAmECO0W8hgZh8cwd93fcC+WlmPELa6sdgAlzcO+PecFO+EWlPVf4C0BY2QmB7lk380X1rx5IQj+isIBgg5xsfvhATq/cAI3YlRXkNT6hYKI7xbo4h3ZO2HvZzjOsUi0P5wXSDFxqd5yvnA671264p5zO3zAwi63srEUHay/2PQoJ0RW9n+oCVHXUU6BrjgEMtk3iPPJsIk8UTanSMLw1fCT7pjw1+xJ/8=~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/videostatus?GameDate=2026-02-22&LeagueID=00
+  response:
+    body:
+      string: '{"resource":"videostatus","parameters":{"LeagueID":"00","GameDate":"02/22/2026"},"resultSets":[{"name":"VideoStatus","headers":["GAME_ID","GAME_DATE","VISITOR_TEAM_ID","VISITOR_TEAM_CITY","VISITOR_TEAM_NAME","VISITOR_TEAM_ABBREVIATION","HOME_TEAM_ID","HOME_TEAM_CITY","HOME_TEAM_NAME","HOME_TEAM_ABBREVIATION","GAME_STATUS","GAME_STATUS_TEXT","IS_AVAILABLE","PT_XYZ_AVAILABLE"],"rowSet":[["0022500817","02/22/2026",1610612739,"Cleveland","Cavaliers","CLE",1610612760,"Oklahoma
+        City","Thunder","OKC",1,"1:00 pm ET",0,0],["0022500818","02/22/2026",1610612751,"Brooklyn","Nets","BKN",1610612737,"Atlanta","Hawks","ATL",1,"3:30
+        pm ET",0,0],["0022500819","02/22/2026",1610612761,"Toronto","Raptors","TOR",1610612749,"Milwaukee","Bucks","MIL",1,"3:30
+        pm ET",0,0],["0022500820","02/22/2026",1610612743,"Denver","Nuggets","DEN",1610612744,"Golden
+        State","Warriors","GSW",1,"3:30 pm ET",0,0],["0022500821","02/22/2026",1610612742,"Dallas","Mavericks","DAL",1610612754,"Indiana","Pacers","IND",1,"5:00
+        pm ET",0,0],["0022500822","02/22/2026",1610612766,"Charlotte","Hornets","CHA",1610612764,"Washington","Wizards","WAS",1,"6:00
+        pm ET",0,0],["0022500823","02/22/2026",1610612738,"Boston","Celtics","BOS",1610612747,"Los
+        Angeles","Lakers","LAL",1,"6:30 pm ET",0,0],["0022500824","02/22/2026",1610612755,"Philadelphia","76ers","PHI",1610612750,"Minnesota","Timberwolves","MIN",1,"7:00
+        pm ET",0,0],["0022500825","02/22/2026",1610612752,"New York","Knicks","NYK",1610612741,"Chicago","Bulls","CHI",1,"8:00
+        pm ET",0,0],["0022500826","02/22/2026",1610612757,"Portland","Trail Blazers","POR",1610612756,"Phoenix","Suns","PHX",1,"8:00
+        pm ET",0,0],["0022500827","02/22/2026",1610612753,"Orlando","Magic","ORL",1610612746,"LA","Clippers","LAC",1,"9:00
+        pm ET",0,0]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '751'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:37:20 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQlWITApv0b2ecAQAA0y/agx6D3wnYf43Evbq31VQB0sdHlzX89MoCiPVIdYMIYzjqZHk/UiO+uAM2w17/SSOQ1t9+UtUh0+tIgW4qGY88Hl+BTcOviM7/qugxR8hI6vQWerXEDSiwm0bVYQnGGmbbUiCspXesfW2Siq9U6luwHT5ikunyN8ecQfll2auItr5GUZHCN+/aY3Y/H5woJzLX8LF71zHl0iE4uEkfg2IHE6rKOV1MGHr/W8I7CJ4=~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7084;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-0
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '1800.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '1'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '381.739'
+      x-varnish:
+      - 69117604 68084674
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

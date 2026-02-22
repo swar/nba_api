@@ -1,0 +1,117 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF1GGeEWcAQAAifLYgx5IqF4WkM4uCkilCzqFx1lC4pB0uFp5rYY0ochA5xy/addpZ08+XtuieWFq1oBUxivFN/D9N/Pk8kIFTEKO8i9Vsr0NlhafKkfROs2QlYhrV/f0rAqk5KKOB2biCDe4RqFEFl9ZnBronAEyXZJGFv1yZK+UOdmTU38W+s0ooKBGKUWsEa7TsjqCU1sFQILgjKj6b5k81H8a2o6ethi1hZ4mFbe6PzOMbWKyBg==~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/boxscoreplayertrackv3?GameID=0022200552
+  response:
+    body:
+      string: "{\"meta\":{\"version\":1,\"request\":\"http://nba.cloud/games/0022200552/boxscoreplayertrack?Format=json\",\"time\":\"2026-02-22T05:12:33.1233Z\"},\"boxScorePlayerTrack\":{\"gameId\":\"0022200552\",\"awayTeamId\":1610612741,\"homeTeamId\":1610612739,\"homeTeam\":{\"teamId\":1610612739,\"teamCity\":\"Cleveland\",\"teamName\":\"Cavaliers\",\"teamTricode\":\"CLE\",\"teamSlug\":\"cavaliers\",\"players\":[{\"personId\":1630205,\"firstName\":\"Lamar\",\"familyName\":\"Stevens\",\"nameI\":\"L.
+        Stevens\",\"playerSlug\":\"lamar-stevens\",\"position\":\"F\",\"comment\":\"\",\"jerseyNum\":\"8\",\"statistics\":{\"minutes\":\"19:09\",\"speed\":4.56,\"distance\":1.54,\"reboundChancesOffensive\":2,\"reboundChancesDefensive\":2,\"reboundChancesTotal\":4,\"touches\":30,\"secondaryAssists\":1,\"freeThrowAssists\":0,\"passes\":25,\"assists\":2,\"contestedFieldGoalsMade\":1,\"contestedFieldGoalsAttempted\":2,\"contestedFieldGoalPercentage\":0.5,\"uncontestedFieldGoalsMade\":1,\"uncontestedFieldGoalsAttempted\":3,\"uncontestedFieldGoalsPercentage\":0.333,\"fieldGoalPercentage\":0.4,\"defendedAtRimFieldGoalsMade\":3,\"defendedAtRimFieldGoalsAttempted\":3,\"defendedAtRimFieldGoalPercentage\":1.0}},{\"personId\":201567,\"firstName\":\"Kevin\",\"familyName\":\"Love\",\"nameI\":\"K.
+        Love\",\"playerSlug\":\"kevin-love\",\"position\":\"F\",\"comment\":\"\",\"jerseyNum\":\"0\",\"statistics\":{\"minutes\":\"37:48\",\"speed\":3.7,\"distance\":2.5,\"reboundChancesOffensive\":6,\"reboundChancesDefensive\":18,\"reboundChancesTotal\":22,\"touches\":67,\"secondaryAssists\":0,\"freeThrowAssists\":0,\"passes\":55,\"assists\":2,\"contestedFieldGoalsMade\":1,\"contestedFieldGoalsAttempted\":1,\"contestedFieldGoalPercentage\":1.0,\"uncontestedFieldGoalsMade\":3,\"uncontestedFieldGoalsAttempted\":9,\"uncontestedFieldGoalsPercentage\":0.333,\"fieldGoalPercentage\":0.4,\"defendedAtRimFieldGoalsMade\":2,\"defendedAtRimFieldGoalsAttempted\":4,\"defendedAtRimFieldGoalPercentage\":0.5}},{\"personId\":1628386,\"firstName\":\"Jarrett\",\"familyName\":\"Allen\",\"nameI\":\"J.
+        Allen\",\"playerSlug\":\"jarrett-allen\",\"position\":\"C\",\"comment\":\"\",\"jerseyNum\":\"31\",\"statistics\":{\"minutes\":\"38:35\",\"speed\":4.03,\"distance\":2.78,\"reboundChancesOffensive\":9,\"reboundChancesDefensive\":4,\"reboundChancesTotal\":13,\"touches\":40,\"secondaryAssists\":0,\"freeThrowAssists\":1,\"passes\":27,\"assists\":2,\"contestedFieldGoalsMade\":9,\"contestedFieldGoalsAttempted\":10,\"contestedFieldGoalPercentage\":0.9,\"uncontestedFieldGoalsMade\":0,\"uncontestedFieldGoalsAttempted\":0,\"uncontestedFieldGoalsPercentage\":0.0,\"fieldGoalPercentage\":0.9,\"defendedAtRimFieldGoalsMade\":2,\"defendedAtRimFieldGoalsAttempted\":4,\"defendedAtRimFieldGoalPercentage\":0.5}},{\"personId\":1627747,\"firstName\":\"Caris\",\"familyName\":\"LeVert\",\"nameI\":\"C.
+        LeVert\",\"playerSlug\":\"caris-levert\",\"position\":\"G\",\"comment\":\"\",\"jerseyNum\":\"3\",\"statistics\":{\"minutes\":\"39:09\",\"speed\":4.22,\"distance\":2.97,\"reboundChancesOffensive\":2,\"reboundChancesDefensive\":6,\"reboundChancesTotal\":7,\"touches\":71,\"secondaryAssists\":0,\"freeThrowAssists\":1,\"passes\":54,\"assists\":3,\"contestedFieldGoalsMade\":1,\"contestedFieldGoalsAttempted\":4,\"contestedFieldGoalPercentage\":0.25,\"uncontestedFieldGoalsMade\":1,\"uncontestedFieldGoalsAttempted\":9,\"uncontestedFieldGoalsPercentage\":0.111,\"fieldGoalPercentage\":0.154,\"defendedAtRimFieldGoalsMade\":2,\"defendedAtRimFieldGoalsAttempted\":2,\"defendedAtRimFieldGoalPercentage\":1.0}},{\"personId\":1628378,\"firstName\":\"Donovan\",\"familyName\":\"Mitchell\",\"nameI\":\"D.
+        Mitchell\",\"playerSlug\":\"donovan-mitchell\",\"position\":\"G\",\"comment\":\"\",\"jerseyNum\":\"45\",\"statistics\":{\"minutes\":\"49:48\",\"speed\":3.86,\"distance\":3.48,\"reboundChancesOffensive\":4,\"reboundChancesDefensive\":8,\"reboundChancesTotal\":11,\"touches\":122,\"secondaryAssists\":2,\"freeThrowAssists\":0,\"passes\":65,\"assists\":11,\"contestedFieldGoalsMade\":9,\"contestedFieldGoalsAttempted\":10,\"contestedFieldGoalPercentage\":0.9,\"uncontestedFieldGoalsMade\":13,\"uncontestedFieldGoalsAttempted\":24,\"uncontestedFieldGoalsPercentage\":0.542,\"fieldGoalPercentage\":0.647,\"defendedAtRimFieldGoalsMade\":1,\"defendedAtRimFieldGoalsAttempted\":1,\"defendedAtRimFieldGoalPercentage\":1.0}},{\"personId\":1626224,\"firstName\":\"Cedi\",\"familyName\":\"Osman\",\"nameI\":\"C.
+        Osman\",\"playerSlug\":\"cedi-osman\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"16\",\"statistics\":{\"minutes\":\"36:15\",\"speed\":4.05,\"distance\":2.68,\"reboundChancesOffensive\":0,\"reboundChancesDefensive\":8,\"reboundChancesTotal\":8,\"touches\":49,\"secondaryAssists\":0,\"freeThrowAssists\":0,\"passes\":32,\"assists\":4,\"contestedFieldGoalsMade\":1,\"contestedFieldGoalsAttempted\":1,\"contestedFieldGoalPercentage\":1.0,\"uncontestedFieldGoalsMade\":5,\"uncontestedFieldGoalsAttempted\":12,\"uncontestedFieldGoalsPercentage\":0.417,\"fieldGoalPercentage\":0.462,\"defendedAtRimFieldGoalsMade\":1,\"defendedAtRimFieldGoalsAttempted\":2,\"defendedAtRimFieldGoalPercentage\":0.5}},{\"personId\":1630171,\"firstName\":\"Isaac\",\"familyName\":\"Okoro\",\"nameI\":\"I.
+        Okoro\",\"playerSlug\":\"isaac-okoro\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"35\",\"statistics\":{\"minutes\":\"19:34\",\"speed\":4.03,\"distance\":1.43,\"reboundChancesOffensive\":4,\"reboundChancesDefensive\":3,\"reboundChancesTotal\":7,\"touches\":17,\"secondaryAssists\":0,\"freeThrowAssists\":0,\"passes\":13,\"assists\":1,\"contestedFieldGoalsMade\":0,\"contestedFieldGoalsAttempted\":1,\"contestedFieldGoalPercentage\":0.0,\"uncontestedFieldGoalsMade\":1,\"uncontestedFieldGoalsAttempted\":2,\"uncontestedFieldGoalsPercentage\":0.5,\"fieldGoalPercentage\":0.333,\"defendedAtRimFieldGoalsMade\":4,\"defendedAtRimFieldGoalsAttempted\":5,\"defendedAtRimFieldGoalPercentage\":0.8}},{\"personId\":203526,\"firstName\":\"Raul\",\"familyName\":\"Neto\",\"nameI\":\"R.
+        Neto\",\"playerSlug\":\"raul-neto\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"19\",\"statistics\":{\"minutes\":\"17:27\",\"speed\":4.48,\"distance\":1.43,\"reboundChancesOffensive\":1,\"reboundChancesDefensive\":2,\"reboundChancesTotal\":3,\"touches\":26,\"secondaryAssists\":0,\"freeThrowAssists\":0,\"passes\":21,\"assists\":2,\"contestedFieldGoalsMade\":1,\"contestedFieldGoalsAttempted\":1,\"contestedFieldGoalPercentage\":1.0,\"uncontestedFieldGoalsMade\":1,\"uncontestedFieldGoalsAttempted\":2,\"uncontestedFieldGoalsPercentage\":0.5,\"fieldGoalPercentage\":0.667,\"defendedAtRimFieldGoalsMade\":3,\"defendedAtRimFieldGoalsAttempted\":3,\"defendedAtRimFieldGoalPercentage\":1.0}},{\"personId\":201577,\"firstName\":\"Robin\",\"familyName\":\"Lopez\",\"nameI\":\"R.
+        Lopez\",\"playerSlug\":\"robin-lopez\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"33\",\"statistics\":{\"minutes\":\"7:15\",\"speed\":3.93,\"distance\":0.52,\"reboundChancesOffensive\":1,\"reboundChancesDefensive\":2,\"reboundChancesTotal\":3,\"touches\":10,\"secondaryAssists\":0,\"freeThrowAssists\":0,\"passes\":7,\"assists\":0,\"contestedFieldGoalsMade\":0,\"contestedFieldGoalsAttempted\":1,\"contestedFieldGoalPercentage\":0.0,\"uncontestedFieldGoalsMade\":0,\"uncontestedFieldGoalsAttempted\":0,\"uncontestedFieldGoalsPercentage\":0.0,\"fieldGoalPercentage\":0.0,\"defendedAtRimFieldGoalsMade\":2,\"defendedAtRimFieldGoalsAttempted\":3,\"defendedAtRimFieldGoalPercentage\":0.667}},{\"personId\":1630596,\"firstName\":\"Evan\",\"familyName\":\"Mobley\",\"nameI\":\"E.
+        Mobley\",\"playerSlug\":\"evan-mobley\",\"position\":\"\",\"comment\":\"DNP
+        - Injury/Illness\",\"jerseyNum\":\"4\",\"statistics\":{\"minutes\":\"0:00\",\"speed\":0.0,\"distance\":0.0,\"reboundChancesOffensive\":0,\"reboundChancesDefensive\":0,\"reboundChancesTotal\":0,\"touches\":0,\"secondaryAssists\":0,\"freeThrowAssists\":0,\"passes\":0,\"assists\":0,\"contestedFieldGoalsMade\":0,\"contestedFieldGoalsAttempted\":0,\"contestedFieldGoalPercentage\":0.0,\"uncontestedFieldGoalsMade\":0,\"uncontestedFieldGoalsAttempted\":0,\"uncontestedFieldGoalsPercentage\":0.0,\"fieldGoalPercentage\":0.0,\"defendedAtRimFieldGoalsMade\":0,\"defendedAtRimFieldGoalsAttempted\":0,\"defendedAtRimFieldGoalPercentage\":0.0}},{\"personId\":1630600,\"firstName\":\"Isaiah\",\"familyName\":\"Mobley\",\"nameI\":\"I.
+        Mobley\",\"playerSlug\":\"isaiah-mobley\",\"position\":\"\",\"comment\":\"DNP
+        - Coach's Decision\",\"jerseyNum\":\"15\",\"statistics\":{\"minutes\":\"0:00\",\"speed\":0.0,\"distance\":0.0,\"reboundChancesOffensive\":0,\"reboundChancesDefensive\":0,\"reboundChancesTotal\":0,\"touches\":0,\"secondaryAssists\":0,\"freeThrowAssists\":0,\"passes\":0,\"assists\":0,\"contestedFieldGoalsMade\":0,\"contestedFieldGoalsAttempted\":0,\"contestedFieldGoalPercentage\":0.0,\"uncontestedFieldGoalsMade\":0,\"uncontestedFieldGoalsAttempted\":0,\"uncontestedFieldGoalsPercentage\":0.0,\"fieldGoalPercentage\":0.0,\"defendedAtRimFieldGoalsMade\":0,\"defendedAtRimFieldGoalsAttempted\":0,\"defendedAtRimFieldGoalPercentage\":0.0}}],\"statistics\":{\"minutes\":\"265:00\",\"distance\":19.33,\"reboundChancesOffensive\":29,\"reboundChancesDefensive\":53,\"reboundChancesTotal\":78,\"touches\":432,\"secondaryAssists\":3,\"freeThrowAssists\":2,\"passes\":299,\"assists\":27,\"contestedFieldGoalsMade\":23,\"contestedFieldGoalsAttempted\":31,\"contestedFieldGoalPercentage\":0.742,\"uncontestedFieldGoalsMade\":25,\"uncontestedFieldGoalsAttempted\":61,\"uncontestedFieldGoalsPercentage\":0.41,\"fieldGoalPercentage\":0.522,\"defendedAtRimFieldGoalsMade\":20,\"defendedAtRimFieldGoalsAttempted\":27,\"defendedAtRimFieldGoalPercentage\":0.741}},\"awayTeam\":{\"teamId\":1610612741,\"teamCity\":\"Chicago\",\"teamName\":\"Bulls\",\"teamTricode\":\"CHI\",\"teamSlug\":\"bulls\",\"players\":[{\"personId\":201942,\"firstName\":\"DeMar\",\"familyName\":\"DeRozan\",\"nameI\":\"D.
+        DeRozan\",\"playerSlug\":\"demar-derozan\",\"position\":\"F\",\"comment\":\"\",\"jerseyNum\":\"11\",\"statistics\":{\"minutes\":\"45:55\",\"speed\":3.77,\"distance\":3.13,\"reboundChancesOffensive\":3,\"reboundChancesDefensive\":5,\"reboundChancesTotal\":8,\"touches\":83,\"secondaryAssists\":1,\"freeThrowAssists\":0,\"passes\":39,\"assists\":4,\"contestedFieldGoalsMade\":7,\"contestedFieldGoalsAttempted\":15,\"contestedFieldGoalPercentage\":0.467,\"uncontestedFieldGoalsMade\":9,\"uncontestedFieldGoalsAttempted\":17,\"uncontestedFieldGoalsPercentage\":0.529,\"fieldGoalPercentage\":0.5,\"defendedAtRimFieldGoalsMade\":6,\"defendedAtRimFieldGoalsAttempted\":7,\"defendedAtRimFieldGoalPercentage\":0.857}},{\"personId\":1630172,\"firstName\":\"Patrick\",\"familyName\":\"Williams\",\"nameI\":\"P.
+        Williams\",\"playerSlug\":\"patrick-williams\",\"position\":\"F\",\"comment\":\"\",\"jerseyNum\":\"44\",\"statistics\":{\"minutes\":\"30:08\",\"speed\":4.3,\"distance\":2.31,\"reboundChancesOffensive\":0,\"reboundChancesDefensive\":6,\"reboundChancesTotal\":6,\"touches\":43,\"secondaryAssists\":0,\"freeThrowAssists\":0,\"passes\":32,\"assists\":2,\"contestedFieldGoalsMade\":0,\"contestedFieldGoalsAttempted\":0,\"contestedFieldGoalPercentage\":0.0,\"uncontestedFieldGoalsMade\":4,\"uncontestedFieldGoalsAttempted\":10,\"uncontestedFieldGoalsPercentage\":0.4,\"fieldGoalPercentage\":0.4,\"defendedAtRimFieldGoalsMade\":2,\"defendedAtRimFieldGoalsAttempted\":2,\"defendedAtRimFieldGoalPercentage\":1.0}},{\"personId\":202696,\"firstName\":\"Nikola\",\"familyName\":\"Vu\u010Devi\u0107\",\"nameI\":\"N.
+        Vu\u010Devi\u0107\",\"playerSlug\":\"nikola-vu\u010Devi\u0107\",\"position\":\"C\",\"comment\":\"\",\"jerseyNum\":\"9\",\"statistics\":{\"minutes\":\"43:31\",\"speed\":3.71,\"distance\":2.92,\"reboundChancesOffensive\":11,\"reboundChancesDefensive\":22,\"reboundChancesTotal\":27,\"touches\":66,\"secondaryAssists\":0,\"freeThrowAssists\":1,\"passes\":54,\"assists\":2,\"contestedFieldGoalsMade\":2,\"contestedFieldGoalsAttempted\":2,\"contestedFieldGoalPercentage\":1.0,\"uncontestedFieldGoalsMade\":4,\"uncontestedFieldGoalsAttempted\":6,\"uncontestedFieldGoalsPercentage\":0.667,\"fieldGoalPercentage\":0.75,\"defendedAtRimFieldGoalsMade\":3,\"defendedAtRimFieldGoalsAttempted\":5,\"defendedAtRimFieldGoalPercentage\":0.6}},{\"personId\":203897,\"firstName\":\"Zach\",\"familyName\":\"LaVine\",\"nameI\":\"Z.
+        LaVine\",\"playerSlug\":\"zach-lavine\",\"position\":\"G\",\"comment\":\"\",\"jerseyNum\":\"8\",\"statistics\":{\"minutes\":\"40:22\",\"speed\":4.08,\"distance\":2.97,\"reboundChancesOffensive\":2,\"reboundChancesDefensive\":12,\"reboundChancesTotal\":14,\"touches\":68,\"secondaryAssists\":1,\"freeThrowAssists\":0,\"passes\":42,\"assists\":6,\"contestedFieldGoalsMade\":2,\"contestedFieldGoalsAttempted\":5,\"contestedFieldGoalPercentage\":0.4,\"uncontestedFieldGoalsMade\":5,\"uncontestedFieldGoalsAttempted\":13,\"uncontestedFieldGoalsPercentage\":0.385,\"fieldGoalPercentage\":0.389,\"defendedAtRimFieldGoalsMade\":2,\"defendedAtRimFieldGoalsAttempted\":2,\"defendedAtRimFieldGoalPercentage\":1.0}},{\"personId\":1630245,\"firstName\":\"Ayo\",\"familyName\":\"Dosunmu\",\"nameI\":\"A.
+        Dosunmu\",\"playerSlug\":\"ayo-dosunmu\",\"position\":\"G\",\"comment\":\"\",\"jerseyNum\":\"12\",\"statistics\":{\"minutes\":\"32:46\",\"speed\":4.17,\"distance\":2.43,\"reboundChancesOffensive\":0,\"reboundChancesDefensive\":3,\"reboundChancesTotal\":3,\"touches\":48,\"secondaryAssists\":0,\"freeThrowAssists\":0,\"passes\":36,\"assists\":5,\"contestedFieldGoalsMade\":2,\"contestedFieldGoalsAttempted\":3,\"contestedFieldGoalPercentage\":0.667,\"uncontestedFieldGoalsMade\":2,\"uncontestedFieldGoalsAttempted\":5,\"uncontestedFieldGoalsPercentage\":0.4,\"fieldGoalPercentage\":0.5,\"defendedAtRimFieldGoalsMade\":1,\"defendedAtRimFieldGoalsAttempted\":2,\"defendedAtRimFieldGoalPercentage\":0.5}},{\"personId\":1627884,\"firstName\":\"Derrick\",\"familyName\":\"Jones
+        Jr.\",\"nameI\":\"D. Jones Jr.\",\"playerSlug\":\"derrick-jones-jr\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"5\",\"statistics\":{\"minutes\":\"21:53\",\"speed\":4.2,\"distance\":1.69,\"reboundChancesOffensive\":2,\"reboundChancesDefensive\":6,\"reboundChancesTotal\":8,\"touches\":21,\"secondaryAssists\":0,\"freeThrowAssists\":0,\"passes\":15,\"assists\":0,\"contestedFieldGoalsMade\":2,\"contestedFieldGoalsAttempted\":2,\"contestedFieldGoalPercentage\":1.0,\"uncontestedFieldGoalsMade\":1,\"uncontestedFieldGoalsAttempted\":2,\"uncontestedFieldGoalsPercentage\":0.5,\"fieldGoalPercentage\":0.75,\"defendedAtRimFieldGoalsMade\":2,\"defendedAtRimFieldGoalsAttempted\":2,\"defendedAtRimFieldGoalPercentage\":1.0}},{\"personId\":1627936,\"firstName\":\"Alex\",\"familyName\":\"Caruso\",\"nameI\":\"A.
+        Caruso\",\"playerSlug\":\"alex-caruso\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"6\",\"statistics\":{\"minutes\":\"22:20\",\"speed\":4.25,\"distance\":1.72,\"reboundChancesOffensive\":1,\"reboundChancesDefensive\":1,\"reboundChancesTotal\":2,\"touches\":35,\"secondaryAssists\":1,\"freeThrowAssists\":1,\"passes\":27,\"assists\":1,\"contestedFieldGoalsMade\":1,\"contestedFieldGoalsAttempted\":4,\"contestedFieldGoalPercentage\":0.25,\"uncontestedFieldGoalsMade\":2,\"uncontestedFieldGoalsAttempted\":4,\"uncontestedFieldGoalsPercentage\":0.5,\"fieldGoalPercentage\":0.286,\"defendedAtRimFieldGoalsMade\":1,\"defendedAtRimFieldGoalsAttempted\":1,\"defendedAtRimFieldGoalPercentage\":1.0}},{\"personId\":1629632,\"firstName\":\"Coby\",\"familyName\":\"White\",\"nameI\":\"C.
+        White\",\"playerSlug\":\"coby-white\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"0\",\"statistics\":{\"minutes\":\"10:22\",\"speed\":4.11,\"distance\":0.79,\"reboundChancesOffensive\":0,\"reboundChancesDefensive\":0,\"reboundChancesTotal\":0,\"touches\":14,\"secondaryAssists\":0,\"freeThrowAssists\":0,\"passes\":8,\"assists\":1,\"contestedFieldGoalsMade\":0,\"contestedFieldGoalsAttempted\":0,\"contestedFieldGoalPercentage\":0.0,\"uncontestedFieldGoalsMade\":1,\"uncontestedFieldGoalsAttempted\":2,\"uncontestedFieldGoalsPercentage\":0.5,\"fieldGoalPercentage\":0.5,\"defendedAtRimFieldGoalsMade\":1,\"defendedAtRimFieldGoalsAttempted\":1,\"defendedAtRimFieldGoalPercentage\":1.0}},{\"personId\":203083,\"firstName\":\"Andre\",\"familyName\":\"Drummond\",\"nameI\":\"A.
+        Drummond\",\"playerSlug\":\"andre-drummond\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"3\",\"statistics\":{\"minutes\":\"6:48\",\"speed\":4.04,\"distance\":0.49,\"reboundChancesOffensive\":4,\"reboundChancesDefensive\":4,\"reboundChancesTotal\":7,\"touches\":11,\"secondaryAssists\":0,\"freeThrowAssists\":0,\"passes\":8,\"assists\":0,\"contestedFieldGoalsMade\":3,\"contestedFieldGoalsAttempted\":3,\"contestedFieldGoalPercentage\":1.0,\"uncontestedFieldGoalsMade\":0,\"uncontestedFieldGoalsAttempted\":0,\"uncontestedFieldGoalsPercentage\":0.0,\"fieldGoalPercentage\":1.0,\"defendedAtRimFieldGoalsMade\":0,\"defendedAtRimFieldGoalsAttempted\":0,\"defendedAtRimFieldGoalPercentage\":0.0}},{\"personId\":201609,\"firstName\":\"Goran\",\"familyName\":\"Dragic\",\"nameI\":\"G.
+        Dragic\",\"playerSlug\":\"goran-dragic\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"7\",\"statistics\":{\"minutes\":\"10:56\",\"speed\":4.38,\"distance\":0.86,\"reboundChancesOffensive\":0,\"reboundChancesDefensive\":1,\"reboundChancesTotal\":1,\"touches\":23,\"secondaryAssists\":0,\"freeThrowAssists\":1,\"passes\":20,\"assists\":1,\"contestedFieldGoalsMade\":0,\"contestedFieldGoalsAttempted\":1,\"contestedFieldGoalPercentage\":0.0,\"uncontestedFieldGoalsMade\":1,\"uncontestedFieldGoalsAttempted\":2,\"uncontestedFieldGoalsPercentage\":0.5,\"fieldGoalPercentage\":0.333,\"defendedAtRimFieldGoalsMade\":0,\"defendedAtRimFieldGoalsAttempted\":0,\"defendedAtRimFieldGoalPercentage\":0.0}},{\"personId\":1630792,\"firstName\":\"Malcolm\",\"familyName\":\"Hill\",\"nameI\":\"M.
+        Hill\",\"playerSlug\":\"malcolm-hill\",\"position\":\"\",\"comment\":\"DNP
+        - Coach's Decision\",\"jerseyNum\":\"14\",\"statistics\":{\"minutes\":\"0:00\",\"speed\":0.0,\"distance\":0.0,\"reboundChancesOffensive\":0,\"reboundChancesDefensive\":0,\"reboundChancesTotal\":0,\"touches\":0,\"secondaryAssists\":0,\"freeThrowAssists\":0,\"passes\":0,\"assists\":0,\"contestedFieldGoalsMade\":0,\"contestedFieldGoalsAttempted\":0,\"contestedFieldGoalPercentage\":0.0,\"uncontestedFieldGoalsMade\":0,\"uncontestedFieldGoalsAttempted\":0,\"uncontestedFieldGoalsPercentage\":0.0,\"fieldGoalPercentage\":0.0,\"defendedAtRimFieldGoalsMade\":0,\"defendedAtRimFieldGoalsAttempted\":0,\"defendedAtRimFieldGoalPercentage\":0.0}},{\"personId\":1631207,\"firstName\":\"Dalen\",\"familyName\":\"Terry\",\"nameI\":\"D.
+        Terry\",\"playerSlug\":\"dalen-terry\",\"position\":\"\",\"comment\":\"DNP
+        - Coach's Decision\",\"jerseyNum\":\"25\",\"statistics\":{\"minutes\":\"0:00\",\"speed\":0.0,\"distance\":0.0,\"reboundChancesOffensive\":0,\"reboundChancesDefensive\":0,\"reboundChancesTotal\":0,\"touches\":0,\"secondaryAssists\":0,\"freeThrowAssists\":0,\"passes\":0,\"assists\":0,\"contestedFieldGoalsMade\":0,\"contestedFieldGoalsAttempted\":0,\"contestedFieldGoalPercentage\":0.0,\"uncontestedFieldGoalsMade\":0,\"uncontestedFieldGoalsAttempted\":0,\"uncontestedFieldGoalsPercentage\":0.0,\"fieldGoalPercentage\":0.0,\"defendedAtRimFieldGoalsMade\":0,\"defendedAtRimFieldGoalsAttempted\":0,\"defendedAtRimFieldGoalPercentage\":0.0}}],\"statistics\":{\"minutes\":\"265:00\",\"distance\":19.3,\"reboundChancesOffensive\":23,\"reboundChancesDefensive\":60,\"reboundChancesTotal\":76,\"touches\":412,\"secondaryAssists\":3,\"freeThrowAssists\":3,\"passes\":281,\"assists\":22,\"contestedFieldGoalsMade\":19,\"contestedFieldGoalsAttempted\":35,\"contestedFieldGoalPercentage\":0.543,\"uncontestedFieldGoalsMade\":29,\"uncontestedFieldGoalsAttempted\":61,\"uncontestedFieldGoalsPercentage\":0.475,\"fieldGoalPercentage\":0.495,\"defendedAtRimFieldGoalsMade\":18,\"defendedAtRimFieldGoalsAttempted\":22,\"defendedAtRimFieldGoalPercentage\":0.818}}}}"
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '2741'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:35:59 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF1+GeEWcAQAA/fTYgx53YQBq3AGthDAtUN26J58pKtUVT4uUfXMT+992EwAxiENDM1PHW6jgmQtZb5U+klrCh79fUiDyl6amjU53G8ElHbwRkhtp6JHljz1+sZwzJy1th9GRIkiuQUTqnx2pBWDCZsIz+1w9EEbb4KR3aJBuIW2M3JvnumQb6/5TzUnEDletWhodAAdITDi4DpgJtAgdPrgBm0GyYEA8MotGchQT1caoepw0oYWE+A==~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7165;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      ttl:
+      - '31536000'
+      vha6-origin:
+      - varnish-0
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '300.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '1'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '-1106.658'
+      x-varnish:
+      - 69186820 68008325
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1
