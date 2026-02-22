@@ -1,6 +1,6 @@
 """Integration smoke sweep for stats endpoints.
 
-Broad live check: each deferred endpoint call succeeds and returns valid JSON.
+Broad live check: each endpoint spec call succeeds and returns valid JSON.
 Not a detailed behavior or contract test.
 """
 
@@ -8,27 +8,25 @@ import json
 
 import pytest
 
-from ..catalogs.deferred_endpoints import (
-    DeferredEndpoint,
-    deferred_endpoints,
-)
+from ..catalogs.endpoint_specs import endpoint_specs
+from ..catalogs.models import EndpointSpec
 
 pytestmark = [pytest.mark.live]
 
 
 # This method is passed to test_endpoints so console output will be generated with
-# the class name rather than path::test_name[deferred_endpoint12]`
+# the class name rather than path::test_name[endpoint_spec12]`
 def endpoint_id_func(param):
-    if isinstance(param, DeferredEndpoint):
+    if isinstance(param, EndpointSpec):
         return param.endpoint_class.__name__
     return None
 
 
-def call_endpoint_and_assert_valid_json(deferred_endpoint):
-    endpoint_name = deferred_endpoint.endpoint_class.__name__
+def call_endpoint_and_assert_valid_json(endpoint_spec):
+    endpoint_name = endpoint_spec.endpoint_class.__name__
 
     try:
-        response = deferred_endpoint()
+        response = endpoint_spec()
     except json.decoder.JSONDecodeError:
         pytest.fail(msg=f"Unable to decode response for {endpoint_name}")
 
@@ -37,8 +35,8 @@ def call_endpoint_and_assert_valid_json(deferred_endpoint):
     )
 
 
-# Run this test on each endpoint in deferred_endpoints.
-@pytest.mark.parametrize("deferred_endpoint", deferred_endpoints, ids=endpoint_id_func)
-def test_endpoints(deferred_endpoint):
+# Run this test on each endpoint in endpoint_specs.
+@pytest.mark.parametrize("endpoint_spec", endpoint_specs, ids=endpoint_id_func)
+def test_endpoints(endpoint_spec):
     """Smoke test each endpoint call and JSON validity with pacing."""
-    call_endpoint_and_assert_valid_json(deferred_endpoint)
+    call_endpoint_and_assert_valid_json(endpoint_spec)
