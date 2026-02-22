@@ -8,6 +8,14 @@ from nba_api.stats.library.eventmsgtype import EventMsgType
 from nba_api.stats.library.parameters import LeagueID
 from nba_api.stats.library.playbyplayregex import eventmsgtype_to_re
 
+# TODO: Re-enable this file once PlayByPlayV3 is set up for normalization.
+pytest.skip(
+    "PlayByPlay endpoint is likely deprecated in favor of PlayByPlayV3; skipping entire file for now. Fix later by "
+    "updating to PlayByPlayV3 and ensuring normalization is working correctly.",
+    allow_module_level=True,
+)
+
+
 pytestmark = [pytest.mark.live]
 
 
