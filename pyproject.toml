@@ -62,7 +62,6 @@ pre-commit = "^4.0.0"
 pytest-recording = "^0.13.4"
 
 [tool.pytest.ini_options]
-testpaths = "./tests/unit/"
 markers = [
     "live: test makes real HTTP requests to the NBA Stats API; skip in CI unless cassettes are present",
     "vcr: test uses a pre-recorded VCR cassette and does not require network access",
