@@ -4,8 +4,6 @@ Issue/regression-style params and coarse expectations for scenario tests.
 Prefer stable presence/range assertions over brittle exact values.
 """
 
-ENDPOINT_CLASS = "TeamDashLineups"
-
 TEST_CASES = [
     {
         "name": "Cleveland Cavaliers 5-man lineups 2024-25",

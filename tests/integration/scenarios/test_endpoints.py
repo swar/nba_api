@@ -4,8 +4,6 @@ Covers reported parameter combinations and regression scenarios.
 Not the broad live smoke sweep.
 """
 
-import time
-
 import pytest
 
 from nba_api.stats import endpoints
@@ -22,6 +20,8 @@ from .data import (
     teamgamelog,
     teamgamelogs,
 )
+
+pytestmark = [pytest.mark.live]
 
 EXPECTED_OPTION_KEYS = ("min_rows", "max_rows", "exact_rows", "validate_structure")
 
@@ -52,7 +52,6 @@ def run_scenario_case(endpoint_class, test_case):
 )
 def test_playerdashptshotdefend(test_case):
     """Test PlayerDashPtShotDefend with various parameter combinations."""
-    time.sleep(0.6)  # Rate limiting
     run_scenario_case(endpoints.PlayerDashPtShotDefend, test_case)
 
 
@@ -68,7 +67,6 @@ def test_playerdashptshotdefend(test_case):
 )
 def test_scoreboardv3(test_case):
     """Test ScoreboardV3 with various parameter combinations."""
-    time.sleep(0.6)  # Rate limiting
     run_scenario_case(endpoints.ScoreboardV3, test_case)
 
 
@@ -84,7 +82,6 @@ def test_scoreboardv3(test_case):
 )
 def test_leaguedashteamstats(test_case):
     """Test LeagueDashTeamStats with various parameter combinations."""
-    time.sleep(0.6)  # Rate limiting
     run_scenario_case(endpoints.LeagueDashTeamStats, test_case)
 
 
@@ -100,7 +97,6 @@ def test_leaguedashteamstats(test_case):
 )
 def test_teamdashlineups(test_case):
     """Test TeamDashLineups with various parameter combinations."""
-    time.sleep(0.6)  # Rate limiting
     run_scenario_case(endpoints.TeamDashLineups, test_case)
 
 
@@ -116,7 +112,6 @@ def test_teamdashlineups(test_case):
 )
 def test_leaguegamefinder(test_case):
     """Test LeagueGameFinder with various parameter combinations."""
-    time.sleep(0.6)  # Rate limiting
     run_scenario_case(endpoints.LeagueGameFinder, test_case)
 
 
@@ -132,7 +127,6 @@ def test_leaguegamefinder(test_case):
 )
 def test_teamgamelog(test_case):
     """Test TeamGameLog with various parameter combinations."""
-    time.sleep(0.6)  # Rate limiting
     run_scenario_case(endpoints.TeamGameLog, test_case)
 
 
@@ -148,7 +142,6 @@ def test_teamgamelog(test_case):
 )
 def test_teamgamelogs(test_case):
     """Test TeamGameLogs with various parameter combinations."""
-    time.sleep(0.6)  # Rate limiting
     run_scenario_case(endpoints.TeamGameLogs, test_case)
 
 
@@ -181,7 +174,6 @@ def test_teamgamelogs(test_case):
 #   )
 #   def test_leaguegamelog(test_case):
 #       """Test LeagueGameLog with reported scenarios."""
-#       time.sleep(0.6)
 #       run_scenario_case(endpoints.LeagueGameLog, test_case)
 
 
@@ -205,5 +197,4 @@ COMMON_TESTS = [
 )
 def test_common(endpoint_class, params, description):  # noqa: ARG001
     """Verify endpoint doesn't crash."""
-    time.sleep(0.6)
     assert_endpoint_instantiates(endpoint_class, params, description)

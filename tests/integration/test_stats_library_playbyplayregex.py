@@ -8,6 +8,8 @@ from nba_api.stats.library.eventmsgtype import EventMsgType
 from nba_api.stats.library.parameters import LeagueID
 from nba_api.stats.library.playbyplayregex import eventmsgtype_to_re
 
+pytestmark = [pytest.mark.live]
+
 
 def pytest_generate_tests(metafunc):
     if "game" in metafunc.fixturenames and "play" in metafunc.fixturenames:

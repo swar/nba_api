@@ -5,14 +5,15 @@ Not a detailed behavior or contract test.
 """
 
 import json
-import time
 
 import pytest
 
-from tests.integration.catalogs.deferred_endpoints import (
+from ..catalogs.deferred_endpoints import (
     DeferredEndpoint,
     deferred_endpoints,
 )
+
+pytestmark = [pytest.mark.live]
 
 
 # This method is passed to test_endpoints so console output will be generated with
@@ -25,9 +26,6 @@ def endpoint_id_func(param):
 
 def call_endpoint_and_assert_valid_json(deferred_endpoint):
     endpoint_name = deferred_endpoint.endpoint_class.__name__
-
-    # Delay briefly
-    time.sleep(0.600)
 
     try:
         response = deferred_endpoint()

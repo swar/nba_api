@@ -18,15 +18,6 @@ def to_snake_case(name):
     return s2.lower()
 
 
-def has_data(endpoint):
-    """Check if endpoint returned any data."""
-    for dataset in endpoint.data_sets:
-        df = dataset.get_data_frame()
-        if not df.empty:
-            return True
-    return False
-
-
 def _count_dataset_rows(endpoint):
     """Count rows per dataset and return total and per-dataset counts."""
     total_rows = 0
@@ -165,6 +156,7 @@ def validate_dataset_structure(endpoint):
 def run_endpoint_test(endpoint_class, params, expected="success"):
     """Run a scenario endpoint test and raise AssertionError on failure."""
     endpoint_name = endpoint_class.__name__
+    logger.info(f"Testing endpoint: {endpoint_name}")
 
     logger.info("Parameters:")
     for key, value in params.items():
