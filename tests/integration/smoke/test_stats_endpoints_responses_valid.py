@@ -28,7 +28,7 @@ def call_endpoint_and_assert_valid_json(endpoint_spec):
     try:
         response = endpoint_spec()
     except json.decoder.JSONDecodeError:
-        pytest.fail(msg=f"Unable to decode response for {endpoint_name}")
+        pytest.fail(reason=f"Unable to decode response for {endpoint_name}")
 
     assert response.nba_response.valid_json(), (
         f"Endpoint returned non-valid JSON: {endpoint_name}"
