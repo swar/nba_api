@@ -17,22 +17,24 @@ endpoint_specs = [
     EndpointSpec(ep.AssistLeaders),
     EndpointSpec(ep.AssistTracker),
     # Box score and game-level breakdown endpoints
-    EndpointSpec(ep.BoxScoreAdvancedV2),
+    EndpointSpec(ep.BoxScoreAdvancedV2, deprecated="Likely deprecated in favor of V3"),
     EndpointSpec(ep.BoxScoreAdvancedV3),
     EndpointSpec(ep.BoxScoreDefensiveV2),
-    EndpointSpec(ep.BoxScoreFourFactorsV2),
+    EndpointSpec(
+        ep.BoxScoreFourFactorsV2, deprecated="Likely deprecated in favor of V3"
+    ),
     EndpointSpec(ep.BoxScoreFourFactorsV3),
     EndpointSpec(ep.BoxScoreHustleV2),
     EndpointSpec(ep.BoxScoreMatchupsV3),
-    EndpointSpec(ep.BoxScoreMiscV2),
+    EndpointSpec(ep.BoxScoreMiscV2, deprecated="Likely deprecated in favor of V3"),
     EndpointSpec(ep.BoxScoreMiscV3),
     EndpointSpec(ep.BoxScorePlayerTrackV3),
-    EndpointSpec(ep.BoxScoreScoringV2),
+    EndpointSpec(ep.BoxScoreScoringV2, deprecated="Likely deprecated in favor of V3"),
     EndpointSpec(ep.BoxScoreScoringV3),
     EndpointSpec(ep.BoxScoreSummaryV2),
     EndpointSpec(ep.BoxScoreTraditionalV2),
     EndpointSpec(ep.BoxScoreTraditionalV3),
-    EndpointSpec(ep.BoxScoreUsageV2),
+    EndpointSpec(ep.BoxScoreUsageV2, deprecated="Likely deprecated in favor of V3"),
     EndpointSpec(ep.BoxScoreUsageV3),
     # Core player/team reference and cumulative stat endpoints
     EndpointSpec(ep.CommonAllPlayers),
@@ -44,9 +46,15 @@ endpoint_specs = [
     EndpointSpec(ep.CumeStatsPlayerGames),
     EndpointSpec(ep.CumeStatsTeam),
     EndpointSpec(ep.CumeStatsTeamGames),
-    EndpointSpec(ep.DefenseHub, season="2017-18"),
+    EndpointSpec(
+        ep.DefenseHub,
+        season="2017-18",
+        skip="Unable to construct valid request, maybe deprecated.",
+    ),
     # Draft, franchise, and league context endpoints
-    EndpointSpec(ep.DraftBoard),
+    EndpointSpec(
+        ep.DraftBoard, skip="Unable to construct valid request, maybe deprecated."
+    ),
     EndpointSpec(ep.DraftCombineDrillResults),
     EndpointSpec(ep.DraftCombineNonStationaryShooting),
     EndpointSpec(ep.DraftCombinePlayerAnthro),
@@ -59,7 +67,10 @@ endpoint_specs = [
     EndpointSpec(ep.FranchisePlayers),
     # Game context, homepage, and event summary endpoints
     EndpointSpec(ep.GameRotation),
-    EndpointSpec(ep.GLAlumBoxScoreSimilarityScore),
+    EndpointSpec(
+        ep.GLAlumBoxScoreSimilarityScore,
+        skip="Unable to construct valid request, maybe deprecated.",
+    ),
     EndpointSpec(ep.HomePageLeaders),
     EndpointSpec(ep.HomePageV2),
     EndpointSpec(ep.HustleStatsBoxScore),
@@ -97,12 +108,19 @@ endpoint_specs = [
     EndpointSpec(ep.LeagueStandingsV3),
     EndpointSpec(ep.MatchupsRollup),
     # Play-by-play and possession flow endpoints
-    EndpointSpec(ep.PlayByPlay),
-    EndpointSpec(ep.PlayByPlayV2),
+    EndpointSpec(
+        ep.PlayByPlay, deprecated="Likely deprecated in favor of PlayByPlayV3"
+    ),
+    EndpointSpec(
+        ep.PlayByPlayV2, deprecated="Likely deprecated in favor of PlayByPlayV3"
+    ),
     EndpointSpec(ep.PlayByPlayV3),
     # Player profile, comparison, and dashboard endpoints
     EndpointSpec(ep.PlayerAwards),
-    EndpointSpec(ep.PlayerCareerByCollege),
+    EndpointSpec(
+        ep.PlayerCareerByCollege,
+        skip="Unable to construct valid request, maybe deprecated.",
+    ),
     EndpointSpec(ep.PlayerCareerByCollegeRollup),
     EndpointSpec(ep.PlayerCareerStats),
     EndpointSpec(ep.PlayerCompare),
@@ -120,7 +138,11 @@ endpoint_specs = [
     EndpointSpec(ep.PlayerEstimatedMetrics),
     EndpointSpec(ep.PlayerFantasyProfileBarGraph),
     EndpointSpec(ep.PlayerGameLog),
-    EndpointSpec(ep.PlayerGameLogs, player_id_nullable=PLAYER_ID),
+    EndpointSpec(
+        ep.PlayerGameLogs,
+        player_id_nullable=PLAYER_ID,
+        skip="Unable to construct valid request, maybe deprecated.",
+    ),
     EndpointSpec(ep.PlayerGameStreakFinder),
     EndpointSpec(ep.PlayerIndex),
     EndpointSpec(ep.PlayerNextNGames),
@@ -148,6 +170,7 @@ endpoint_specs = [
         vs_player_id3="203507",
         vs_player_id4="203078",
         vs_player_id5="202681",
+        skip="Unable to construct valid request, maybe deprecated.",
     ),
     EndpointSpec(ep.TeamDashLineups),
     EndpointSpec(ep.TeamDashPtPass),
@@ -157,7 +180,10 @@ endpoint_specs = [
     EndpointSpec(ep.TeamDashboardByShootingSplits),
     EndpointSpec(ep.TeamDetails),
     EndpointSpec(ep.TeamEstimatedMetrics),
-    EndpointSpec(ep.TeamHistoricalLeaders),
+    EndpointSpec(
+        ep.TeamHistoricalLeaders,
+        skip="Unable to construct valid request, maybe deprecated.",
+    ),
     EndpointSpec(ep.TeamInfoCommon),
     EndpointSpec(ep.TeamPlayerDashboard),
     EndpointSpec(ep.TeamPlayerOnOffDetails),
@@ -170,6 +196,7 @@ endpoint_specs = [
         game_id_nullable=GAME_ID,
         start_period_nullable=1,
         end_period_nullable=1,
+        skip="Unable to construct valid request, maybe deprecated.",
     ),
     EndpointSpec(
         ep.VideoDetailsAsset,
@@ -180,5 +207,8 @@ endpoint_specs = [
     EndpointSpec(ep.VideoEvents),
     EndpointSpec(ep.VideoStatus),
     # Niche/specialized game-state endpoint
-    EndpointSpec(ep.WinProbabilityPBP),
+    EndpointSpec(
+        ep.WinProbabilityPBP,
+        skip="Unable to construct valid request, maybe deprecated.",
+    ),
 ]

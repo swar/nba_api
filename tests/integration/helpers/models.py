@@ -15,9 +15,10 @@ class EndpointSpec:
     Any kwargs passed at construction time override ``PARAM_DEFAULTS``.
     """
 
-    def __init__(self, endpoint_class, deprecated=None, **overrides):
+    def __init__(self, endpoint_class, deprecated=None, skip=None, **overrides):
         self.endpoint_class = endpoint_class
         self.deprecated = deprecated
+        self.skip = skip
         self.overrides = overrides
         self.kwargs = overrides
 

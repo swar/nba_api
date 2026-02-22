@@ -1,0 +1,87 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQjmITAjIZ9GicAQAAsvzZgx5bMWWWRdgITaImT90Zect7A2LbR3S0dpq4cduzHqsXSzHzObMHhU9pf0VXs2DqNV6R0gmX/hBm+oMmgc8tJe/zBawgCwAjkpR4EcG32b4HfAw8A7XtrT4OadoSPy4YLaNRZQtkewdsnzIPIhEHSbUNMCDs9RpwN4XcK9Z1yJp/pTRMwt7ePFPVqpeqibwyoss/jD0lnmYeF6GbY4Yhx/VcLMHOWnn2lqQLFoo=~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/synergyplaytypes?LeagueID=00&PerMode=Totals&PlayType=&PlayerOrTeam=T&SeasonType=Regular+Season&SeasonYear=2025-26&TypeGrouping=
+  response:
+    body:
+      string: '{"resource":"synergyplaytype","parameters":{"LeagueID":"00","SeasonYear":"2025-26","SeasonType":"Regular
+        Season","PerMode":"Totals","PlayerOrTeam":"T","PlayType":null,"TypeGrouping":null},"resultSets":[{"name":"SynergyPlayType","headers":["SEASON_ID","TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","PLAY_TYPE","TYPE_GROUPING","PERCENTILE","GP","POSS_PCT","PPP","FG_PCT","FT_POSS_PCT","TOV_POSS_PCT","SF_POSS_PCT","PLUSONE_POSS_PCT","SCORE_POSS_PCT","EFG_PCT","POSS","PTS","FGM","FGA","FGMX"],"rowSet":[]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '316'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:37:07 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQjmITAj8Z9GicAQAAZ//Zgx5YalLeCHFzrNk/cPyNIkHfdkoSDr5NaTz+P5Idj30sFKTNfAvOsHTcjICUmr4mXu18H+HFwrDkyP5Q+981zKiZau6pGIqkJTMIEa7ImIpwcVHNxq7/lkkU3bCBnjsENeNXtlfwZR0sS/R1sUKYrR1/GRMStH8oWDtNsvXizF3RB3Ie+ihSz7K4CTUWFBdY5/Eax+XFHO6UCjlLz2rezBaAbSBEw1otmDl23nQ=~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7097;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '1'
+      x-full-ttl:
+      - '300.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '3'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '-1115.751'
+      x-varnish:
+      - 69451363 66795237
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

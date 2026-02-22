@@ -11,7 +11,7 @@ import pytest
 from ..helpers.endpoint_specs import endpoint_specs
 from ..helpers.models import EndpointSpec
 
-pytestmark = [pytest.mark.live]
+pytestmark = [pytest.mark.live, pytest.mark.vcr]
 
 
 # This method is passed to test_endpoints so console output will be generated with
@@ -40,6 +40,11 @@ def _to_pytest_param(spec):
         return pytest.param(
             spec,
             marks=pytest.mark.deprecated_endpoint(spec.deprecated),
+        )
+    if spec.skip:
+        return pytest.param(
+            spec,
+            marks=pytest.mark.skip(spec.skip),
         )
     return spec
 

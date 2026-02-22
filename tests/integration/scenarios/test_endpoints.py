@@ -23,7 +23,7 @@ from .data import (
     teamgamelogs,
 )
 
-pytestmark = [pytest.mark.live]
+pytestmark = [pytest.mark.live, pytest.mark.vcr]
 
 EXPECTED_OPTION_KEYS = ("min_rows", "max_rows", "exact_rows", "validate_structure")
 

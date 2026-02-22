@@ -1,0 +1,134 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQlWITAoH0b2ecAQAAbx/agx4TGCn1/R5OSMn9ViIKg2uZ9+cGlJQt+OWVhuX8vmCV/w5qJDdembqcwqwkpFGSt6EltTIlDMoirLHOvyRZUvWRz8clEYs/TQobzfhN4HLS6hjTb1I67msD6GGvAK/RMYzLGiJ/PdLhkRSPPCjRMARrsfx52rfGnkTwf5IN3y692eskgWzaMhm/b1hPOi51xCvm7SVlks8J8AIPk5KMiMr4E34lzS8q7/9Ejuo=~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/teamplayeronoffsummary?DateFrom=&DateTo=&GameSegment=&LastNGames=0&LeagueID=00&Location=&MeasureType=Base&Month=0&OpponentTeamID=0&Outcome=&PaceAdjust=N&PerMode=Totals&Period=0&PlusMinus=N&Rank=N&Season=2025-26&SeasonSegment=&SeasonType=Regular+Season&TeamID=1610612739&VsConference=&VsDivision=
+  response:
+    body:
+      string: "{\"resource\":\"teamplayeronoffsummary\",\"parameters\":{\"MeasureType\":\"Base\",\"PerMode\":\"Totals\",\"PlusMinus\":\"N\",\"PaceAdj\":\"N\",\"Rank\":\"N\",\"LeagueID\":\"00\",\"Season\":\"2025-26\",\"SeasonType\":\"Regular
+        Season\",\"TeamID\":1610612739,\"Outcome\":null,\"Location\":null,\"MonthNum\":0,\"SeasonSegment\":null,\"DateFrom\":null,\"DateTo\":null,\"OpponentTeamID\":0,\"VsConference\":null,\"VsDivision\":null,\"GameSegment\":null,\"Period\":0,\"LastNGames\":0,\"ISTRound\":null},\"resultSets\":[{\"name\":\"OverallTeamPlayerOnOffSummary\",\"headers\":[\"GROUP_SET\",\"GROUP_VALUE\",\"TEAM_ID\",\"TEAM_ABBREVIATION\",\"TEAM_NAME\",\"GP\",\"W\",\"L\",\"W_PCT\",\"MIN\",\"FGM\",\"FGA\",\"FG_PCT\",\"FG3M\",\"FG3A\",\"FG3_PCT\",\"FTM\",\"FTA\",\"FT_PCT\",\"OREB\",\"DREB\",\"REB\",\"AST\",\"TOV\",\"STL\",\"BLK\",\"BLKA\",\"PF\",\"PFD\",\"PTS\",\"PLUS_MINUS\",\"GP_RANK\",\"W_RANK\",\"L_RANK\",\"W_PCT_RANK\",\"MIN_RANK\",\"FGM_RANK\",\"FGA_RANK\",\"FG_PCT_RANK\",\"FG3M_RANK\",\"FG3A_RANK\",\"FG3_PCT_RANK\",\"FTM_RANK\",\"FTA_RANK\",\"FT_PCT_RANK\",\"OREB_RANK\",\"DREB_RANK\",\"REB_RANK\",\"AST_RANK\",\"TOV_RANK\",\"STL_RANK\",\"BLK_RANK\",\"BLKA_RANK\",\"PF_RANK\",\"PFD_RANK\",\"PTS_RANK\",\"PLUS_MINUS_RANK\"],\"rowSet\":[[\"Overall\",\"2025-26\",1610612739,\"CLE\",\"Cleveland
+        Cavaliers\",57,36,21,0.632,2746.0,2484,5203,0.477,831,2314,0.359,1030,1314,0.784,689,1858,2547,1625,821.0,513,294,249,1134,1150,6829,257.0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]]},{\"name\":\"PlayersOnCourtTeamPlayerOnOffSummary\",\"headers\":[\"GROUP_SET\",\"TEAM_ID\",\"TEAM_ABBREVIATION\",\"TEAM_NAME\",\"VS_PLAYER_ID\",\"VS_PLAYER_NAME\",\"COURT_STATUS\",\"GP\",\"MIN\",\"PLUS_MINUS\",\"OFF_RATING\",\"DEF_RATING\",\"NET_RATING\"],\"rowSet\":[[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1628386,\"Allen, Jarrett\",\"On\",45,1231.0,7.7,120.2,112.9,7.2],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1628366,\"Ball, Lonzo\",\"On\",35,728.0,2.1,111.0,109.7,1.3],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1628418,\"Bryant, Thomas\",\"On\",40,424.0,2.4,111.5,107.5,4.0],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1631165,\"Ellis, Keon\",\"On\",6,126.0,19.8,119.4,100.0,19.4],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1642400,\"Enaruna, Tristan\",\"On\",4,23.0,22.5,104.4,81.8,22.6],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1629636,\"Garland, Darius\",\"On\",26,792.0,-2.4,114.7,117.7,-3.0],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",201935,\"Harden, James\",\"On\",5,159.0,12.4,128.9,118.0,10.9],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1629631,\"Hunter, De'Andre\",\"On\",43,1125.0,-0.9,114.2,115.1,-0.9],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1641753,\"Livingston, Chris\",\"On\",3,17.0,22.0,113.9,86.8,27.0],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1630241,\"Merrill, Sam\",\"On\",33,832.0,9.6,119.9,111.1,8.8],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1628378,\"Mitchell, Donovan\",\"On\",53,1774.0,9.1,118.9,110.3,8.6],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1630596,\"Mobley, Evan\",\"On\",43,1420.0,5.6,116.5,110.4,6.1],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1626204,\"Nance Jr., Larry\",\"On\",26,334.0,-1.0,107.6,110.2,-2.7],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1641854,\"Porter Jr., Craig\",\"On\",50,893.0,3.4,114.9,111.3,3.6],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1642878,\"Proctor, Tyrese\",\"On\",40,414.0,-4.9,109.1,112.7,-3.6],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",203471,\"Schr\xF6der, Dennis\",\"On\",6,119.0,21.7,120.0,97.6,22.4],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1641772,\"Tomlin, Nae'Qwan\",\"On\",45,763.0,2.6,113.9,109.8,4.0],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1631247,\"Travers, Luke\",\"On\",12,103.0,-14.9,97.3,110.5,-13.2],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1642281,\"Tyson, Jaylon\",\"On\",52,1429.0,4.3,118.4,113.0,5.4],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1629731,\"Wade, Dean\",\"On\",45,1023.0,5.1,115.7,109.5,6.2]]},{\"name\":\"PlayersOffCourtTeamPlayerOnOffSummary\",\"headers\":[\"GROUP_SET\",\"TEAM_ID\",\"TEAM_ABBREVIATION\",\"TEAM_NAME\",\"VS_PLAYER_ID\",\"VS_PLAYER_NAME\",\"COURT_STATUS\",\"GP\",\"MIN\",\"PLUS_MINUS\",\"OFF_RATING\",\"DEF_RATING\",\"NET_RATING\"],\"rowSet\":[[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1628386,\"Allen, Jarrett\",\"Off\",57,1515.0,1.9,113.3,110.5,2.8],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1628366,\"Ball, Lonzo\",\"Off\",52,1778.0,4.3,118.2,113.1,5.1],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1642468,\"Brown, Darius\",\"Off\",1,48.0,5.0,129.7,122.8,6.8],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1628418,\"Bryant, Thomas\",\"Off\",57,2322.0,4.9,118.2,113.1,5.1],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1631165,\"Ellis, Keon\",\"Off\",7,210.0,15.1,127.6,111.5,16.1],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1642400,\"Enaruna, Tristan\",\"Off\",9,409.0,14.6,125.2,110.0,15.2],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1629636,\"Garland, Darius\",\"Off\",51,1666.0,5.7,116.6,110.7,5.9],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",201935,\"Harden, James\",\"Off\",6,129.0,21.6,117.1,94.8,22.3],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1629631,\"Hunter, De'Andre\",\"Off\",50,1285.0,5.9,116.6,110.1,6.5],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1641753,\"Livingston, Chris\",\"Off\",42,2009.0,2.9,117.1,114.2,3.0],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1630241,\"Merrill, Sam\",\"Off\",57,1914.0,2.3,115.3,112.7,2.6],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1641801,\"Miller, Emanuel\",\"Off\",7,336.0,16.9,125.4,107.9,17.6],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1642434,\"Minix, Riley\",\"Off\",2,96.0,16.5,122.3,103.7,18.7],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1628378,\"Mitchell, Donovan\",\"Off\",57,972.0,-3.9,109.0,111.6,-2.6],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1630596,\"Mobley, Evan\",\"Off\",57,1326.0,3.3,115.7,112.4,3.3],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1626204,\"Nance Jr., Larry\",\"Off\",57,2412.0,5.3,118.6,113.1,5.5],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1641854,\"Porter Jr., Craig\",\"Off\",57,1853.0,5.0,116.9,112.2,4.8],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1642878,\"Proctor, Tyrese\",\"Off\",57,2332.0,6.2,118.5,112.4,6.1],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",203471,\"Schr\xF6der, Dennis\",\"Off\",7,217.0,14.2,125.7,111.4,14.3],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1629622,\"Strus, Max\",\"Off\",57,2746.0,4.5,117.6,113.0,4.6],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1641772,\"Tomlin, Nae'Qwan\",\"Off\",57,1983.0,5.2,117.9,112.8,5.1],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1631247,\"Travers, Luke\",\"Off\",50,2307.0,3.6,117.2,113.7,3.5],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1642281,\"Tyson, Jaylon\",\"Off\",57,1317.0,4.7,114.0,110.0,4.0],[\"On/Off
+        Court\",1610612739,\"CLE\",\"Cleveland Cavaliers\",1629731,\"Wade, Dean\",\"Off\",57,1723.0,4.1,116.4,113.0,3.4]]}]}"
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1900'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:37:16 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQlWITAoT0b2ecAQAATyLagx73nb84pPS9/6Ua1awRtnWl2n13r3yr5oHAgFvp+0E1SPVtQflSPNJyB/QihKBpshv1yb1vHAtmELtF35LoH9hjVWKwrpI7n5wXa2FTDgfhDLHQoh/vDETmltM6aBAY1ND7wOTXPIynlnyolFd1Bpb38sGgtaWIj6KZLXA5wzMkqJWLMCNZ7ELH5QPYJGMxH5H5Vo390LuDkyKtJD009vvuSydfszA1bL7bEqc=~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7088;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-2
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '3600.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '1'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '2184.215'
+      x-varnish:
+      - 39076201 37125724
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

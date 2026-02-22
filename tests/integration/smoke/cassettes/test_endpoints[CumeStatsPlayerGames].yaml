@@ -1,0 +1,114 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF1+HeEWcAQAAxxbZgx4RrBfG3mLYsMHvQ/sj+SOa6Cn5e+fEYg+mtcACy6n768vdzDLtTjBukOTVUgMNYPNsLClAASWARywRZlqWvGMHeelm+WUEpFoV5rxdnjBpQOK1Rv1n3MaI0eH9FSV9YbuaGB+MVS8HYNkwLFno8sDjZE43qm8+fxfGsH26JeBjgdZunnwCt72az6AlJEzgyxF9uSTnsePMEgg5YKJiWLc9CqPH4PQbDWHZVg==~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/cumestatsplayergames?LeagueID=00&Location=&Outcome=&PlayerID=1628378&Season=2025-26&SeasonType=Regular+Season&VsConference=&VsDivision=&VsTeamID=
+  response:
+    body:
+      string: '{"resource":"cumestatsplayergames","parameters":{"LeagueID":"00","Season":"2025-26","SeasonType":"Regular
+        Season","PlayerID":1628378,"Location":null,"Outcome":null,"VsTeamID":0,"VsDivision":null,"VsConference":null},"resultSets":[{"name":"CumeStatsPlayerGames","headers":["MATCHUP","GAME_ID"],"rowSet":[["02/20/2026
+        Cavaliers at Hornets","0022500802"],["02/19/2026 Nets at Cavaliers","0022500793"],["02/11/2026
+        Wizards at Cavaliers","0022500776"],["02/09/2026 Cavaliers at Nuggets","0022500767"],["02/07/2026
+        Cavaliers at Kings","0022500756"],["02/04/2026 Cavaliers at Clippers","0022500732"],["02/01/2026
+        Cavaliers at Trail Blazers","0022500710"],["01/30/2026 Cavaliers at Suns","0022500693"],["01/28/2026
+        Lakers at Cavaliers","0022500671"],["01/26/2026 Magic at Cavaliers","0022500658"],["01/24/2026
+        Cavaliers at Magic","0022500646"],["01/23/2026 Kings at Cavaliers","0022500638"],["01/21/2026
+        Cavaliers at Hornets","0022500620"],["01/19/2026 Thunder at Cavaliers","0022500015"],["01/16/2026
+        Cavaliers at 76ers","0022500589"],["01/14/2026 Cavaliers at 76ers","0022500572"],["01/12/2026
+        Jazz at Cavaliers","0022500558"],["01/10/2026 Timberwolves at Cavaliers","0022500542"],["01/08/2026
+        Cavaliers at Timberwolves","0022500530"],["01/04/2026 Pistons at Cavaliers","0022500494"],["01/02/2026
+        Nuggets at Cavaliers","0022500478"],["12/31/2025 Suns at Cavaliers","0022500465"],["12/29/2025
+        Cavaliers at Spurs","0022500456"],["12/27/2025 Cavaliers at Rockets","0022500438"],["12/25/2025
+        Cavaliers at Knicks","0022500009"],["12/23/2025 Pelicans at Cavaliers","0022500412"],["12/22/2025
+        Hornets at Cavaliers","0022500402"],["12/17/2025 Cavaliers at Bulls","0022500367"],["12/14/2025
+        Hornets at Cavaliers","0022501218"],["12/12/2025 Cavaliers at Wizards","0022501212"],["12/06/2025
+        Warriors at Cavaliers","0022500352"],["12/05/2025 Spurs at Cavaliers","0022500341"],["12/03/2025
+        Trail Blazers at Cavaliers","0022500324"],["12/01/2025 Cavaliers at Pacers","0022500310"],["11/30/2025
+        Celtics at Cavaliers","0022500302"],["11/28/2025 Cavaliers at Hawks","0022500069"],["11/24/2025
+        Cavaliers at Raptors","0022500284"],["11/23/2025 Clippers at Cavaliers","0022500278"],["11/21/2025
+        Pacers at Cavaliers","0022500048"],["11/19/2025 Rockets at Cavaliers","0022500255"],["11/17/2025
+        Bucks at Cavaliers","0022500241"],["11/15/2025 Grizzlies at Cavaliers","0022500228"],["11/13/2025
+        Raptors at Cavaliers","0022500225"],["11/10/2025 Cavaliers at Heat","0022500201"],["11/08/2025
+        Bulls at Cavaliers","0022500186"],["11/07/2025 Cavaliers at Wizards","0022500029"],["11/05/2025
+        76ers at Cavaliers","0022500171"],["11/02/2025 Hawks at Cavaliers","0022500151"],["10/29/2025
+        Cavaliers at Celtics","0022500128"],["10/27/2025 Cavaliers at Pistons","0022500007"],["10/26/2025
+        Bucks at Cavaliers","0022500107"],["10/24/2025 Cavaliers at Nets","0022500091"],["10/22/2025
+        Cavaliers at Knicks","0022500003"]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '842'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:36:09 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF3GHeEWcAQAAdhnZgx5IFVJZR3JzrPdRwJ26ggn4XVjZJUwLC/nwSLOzrB8kh8MR4soFHlOY7qlYaYAcuWrjkAAiu2VBkes2yR0c2XfFQigGcfKZlMmKe3JqDxabwnBUhU8VXGi0eXRq/vcztZ+shY2HXpzK9d3o/u8tXv/ah24gHSouNsJHyJ1/NF5KmCZ9LeEfwNc3FLP2vDwdkGqGMs0NN+LSh2qgXxaqlXNUiRVQDm2kjeAOrA==~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7155;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '120.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '3'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '-1272.718'
+      x-varnish:
+      - 39224077 36828735
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

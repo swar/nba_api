@@ -1,0 +1,108 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAhcfbWicAQAAufnZgx6t3LUbNfYwe102V59fNLSttdFuQiMv6tr7gaN1YAsli3db21zql7WIadDW5/0jnBP4SnqG9ijBEUgWyNPOATAAMeyR8i+rNlI32NOfnrkBoX8CU0nJXs+zU4C+GbViuvrjxB2hQ3KCzX+ug8rqeebNQj6dDAhhqBoybhxnJ82LOta6ID4GwWuqCtpHNoqFOYiYkbWThi1pGhp8Zak9RCkogYwcVym5qJlrhYE=~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/shotchartlineupdetail?ContextFilter=&ContextMeasure=PTS&DateFrom=&DateTo=&GROUP_ID=-202689-203493-203501-1626174-1627827-&GameID=&GameSegment=&LastNGames=&LeagueID=00&Location=&Month=&OpponentTeamID=&Outcome=&Period=0&Season=2025-26&SeasonSegment=&SeasonType=Regular+Season&TeamID=&VsConference=&VsDivision=
+  response:
+    body:
+      string: '{"resource":"shotchartlineupdetail","parameters":{"LeagueID":"00","Season":"2025-26","SeasonType":"Regular
+        Season","TeamID":null,"Outcome":null,"Location":null,"Month":null,"SeasonSegment":null,"DateFrom":null,"DateTo":null,"OpponentTeamID":null,"VsConference":null,"VsDivision":null,"GameSegment":null,"Period":0,"LastNGames":null,"GameID":null,"GroupID":"-202689-203493-203501-1626174-1627827-","ContextFilter":null,"ContextMeasure":"PTS"},"resultSets":[{"name":"ShotChartLineupDetail","headers":["GRID_TYPE","GAME_ID","GAME_EVENT_ID","GROUP_ID","GROUP_NAME","PLAYER_ID","PLAYER_NAME","TEAM_ID","TEAM_NAME","PERIOD","MINUTES_REMAINING","SECONDS_REMAINING","EVENT_TYPE","ACTION_TYPE","SHOT_TYPE","SHOT_ZONE_BASIC","SHOT_ZONE_AREA","SHOT_ZONE_RANGE","SHOT_DISTANCE","LOC_X","LOC_Y","SHOT_ATTEMPTED_FLAG","SHOT_MADE_FLAG","GAME_DATE","HTM","VTM"],"rowSet":[]},{"name":"ShotChartLineupLeagueAverage","headers":["GRID_TYPE","SHOT_ZONE_BASIC","SHOT_ZONE_AREA","SHOT_ZONE_RANGE","FGA","FGM","FG_PCT"],"rowSet":[["League
+        Averages","Above the Break 3","Back Court(BC)","Back Court Shot",3,3,1.0],["League
+        Averages","Above the Break 3","Center(C)","24+ ft.",4144,4144,1.0],["League
+        Averages","Above the Break 3","Left Side Center(LC)","24+ ft.",6398,6398,1.0],["League
+        Averages","Above the Break 3","Right Side Center(RC)","24+ ft.",5629,5629,1.0],["League
+        Averages","Backcourt","Back Court(BC)","Back Court Shot",11,11,1.0],["League
+        Averages","In The Paint (Non-RA)","Center(C)","8-16 ft.",4371,4371,1.0],["League
+        Averages","In The Paint (Non-RA)","Center(C)","Less Than 8 ft.",7735,7735,1.0],["League
+        Averages","In The Paint (Non-RA)","Left Side(L)","8-16 ft.",683,683,1.0],["League
+        Averages","In The Paint (Non-RA)","Right Side(R)","8-16 ft.",792,792,1.0],["League
+        Averages","Left Corner 3","Left Side(L)","24+ ft.",3199,3199,1.0],["League
+        Averages","Mid-Range","Center(C)","8-16 ft.",584,584,1.0],["League Averages","Mid-Range","Center(C)","16-24
+        ft.",814,814,1.0],["League Averages","Mid-Range","Left Side Center(LC)","16-24
+        ft.",772,772,1.0],["League Averages","Mid-Range","Left Side(L)","16-24 ft.",323,323,1.0],["League
+        Averages","Mid-Range","Left Side(L)","8-16 ft.",1323,1323,1.0],["League Averages","Mid-Range","Right
+        Side Center(RC)","16-24 ft.",805,805,1.0],["League Averages","Mid-Range","Right
+        Side(R)","8-16 ft.",1434,1434,1.0],["League Averages","Mid-Range","Right Side(R)","16-24
+        ft.",307,307,1.0],["League Averages","Restricted Area","Center(C)","Less Than
+        8 ft.",28296,28296,1.0],["League Averages","Right Corner 3","Right Side(R)","24+
+        ft.",3018,3018,1.0]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '853'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:37:07 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQjmITAjIZ9GicAQAAsvzZgx5bMWWWRdgITaImT90Zect7A2LbR3S0dpq4cduzHqsXSzHzObMHhU9pf0VXs2DqNV6R0gmX/hBm+oMmgc8tJe/zBawgCwAjkpR4EcG32b4HfAw8A7XtrT4OadoSPy4YLaNRZQtkewdsnzIPIhEHSbUNMCDs9RpwN4XcK9Z1yJp/pTRMwt7ePFPVqpeqibwyoss/jD0lnmYeF6GbY4Yhx/VcLMHOWnn2lqQLFoo=~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7097;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-0
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '300.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '1'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '-303.046'
+      x-varnish:
+      - 69217309 65168420
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

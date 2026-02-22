@@ -1,0 +1,254 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF6+DeEWcAQAAd5nYgx7NWR/V1FnUtIFcl924EZ9nriUlk06eDN8ml6ioCKXTDBysyvtO4yMNNKqRLnO+hslQd4Zwbb7KG+++nmXOpAt7e4l3dzqYIQmNGtrJEOPWP7SncyY/aIWITtnhHTDQr3VXpZVgjY3KbVhCRvuQ7RZUWNQVIGOHWAkJkYHqapUajWKyYmRt/bOFGaKLny0uJK8z4+neVCt06FCl60WELy4CvaPon9JqzJY86g==~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/leaguegamefinder?Conference=&DateFrom=&DateTo=&Division=&DraftNumber=&DraftRound=&DraftTeamID=&DraftYear=&EqAST=&EqBLK=&EqDD=&EqDREB=&EqFG3A=&EqFG3M=&EqFG3_PCT=&EqFGA=&EqFGM=&EqFG_PCT=&EqFTA=&EqFTM=&EqFT_PCT=&EqMINUTES=&EqOREB=&EqPF=&EqPTS=&EqREB=&EqSTL=&EqTD=&EqTOV=&GameID=&GtAST=&GtBLK=&GtDD=&GtDREB=&GtFG3A=&GtFG3M=&GtFG3_PCT=&GtFGA=&GtFGM=&GtFG_PCT=&GtFTA=&GtFTM=&GtFT_PCT=&GtMINUTES=&GtOREB=&GtPF=&GtPTS=&GtREB=&GtSTL=&GtTD=&GtTOV=&LeagueID=00&Location=&LtAST=&LtBLK=&LtDD=&LtDREB=&LtFG3A=&LtFG3M=&LtFG3_PCT=&LtFGA=&LtFGM=&LtFG_PCT=&LtFTA=&LtFTM=&LtFT_PCT=&LtMINUTES=&LtOREB=&LtPF=&LtPTS=&LtREB=&LtSTL=&LtTD=&LtTOV=&Outcome=&PORound=&PlayerID=2544&PlayerOrTeam=P&RookieYear=&Season=2023-24&SeasonSegment=&SeasonType=&StarterBench=&TeamID=&VsConference=&VsDivision=&VsTeamID=&YearsExperience=
+  response:
+    body:
+      string: '{"resource":"leaguegamefinderparameters","parameters":{"PlayerOrTeam":"P","LeagueID":"00","Season":"2023-24","SeasonType":null,"DateFrom":null,"DateTo":null,"TeamID":null,"VsTeamID":null,"PlayerID":"2544","GameID":null,"Outcome":null,"Location":null,"VsConference":null,"VsDivision":null,"Conference":null,"Division":null,"DraftYear":null,"DraftNumber":null,"DraftRound":null,"DraftTeam":"","RookieYear":null,"YearsExperience":null,"SeasonSegment":null,"PORound":null,"StarterBench":null,"GtPts":null,"GtReb":null,"GtAst":null,"GtStl":null,"GtBlk":null,"GtOreb":null,"GtDreb":null,"GtDd":null,"GtTd":null,"GtMinutes":null,"GtTov":null,"GtPf":null,"GtFgm":null,"GtFga":null,"GtFgPct":null,"GtFtm":null,"GtFta":null,"GtFtPct":null,"GtFg3m":null,"GtFg3a":null,"GtFg3Pct":null,"LtPts":null,"LtReb":null,"LtAst":null,"LtStl":null,"LtBlk":null,"LtOreb":null,"LtDreb":null,"LtDd":null,"LtTd":null,"LtMinutes":null,"LtTov":null,"LtPf":null,"LtFgm":null,"LtFga":null,"LtFgPct":null,"LtFtm":null,"LtFta":null,"LtFtPct":null,"LtFg3m":null,"LtFg3a":null,"LtFg3Pct":null,"EqPts":null,"EqReb":null,"EqAst":null,"EqStl":null,"EqBlk":null,"EqOreb":null,"EqDreb":null,"EqDd":null,"EqTd":null,"EqMinutes":null,"EqTov":null,"EqPf":null,"EqFgm":null,"EqFga":null,"EqFgPct":null,"EqFtm":null,"EqFta":null,"EqFtPct":null,"EqFg3m":null,"EqFg3a":null,"EqFg3Pct":null,"ActivePlayersOnly":""},"resultSets":[{"name":"LeagueGameFinderResults","headers":["SEASON_ID","PLAYER_ID","PLAYER_NAME","TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","GAME_ID","GAME_DATE","MATCHUP","WL","MIN","PTS","FGM","FGA","FG_PCT","FG3M","FG3A","FG3_PCT","FTM","FTA","FT_PCT","OREB","DREB","REB","AST","STL","BLK","TOV","PF","PLUS_MINUS"],"rowSet":[["42023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0042300155","2024-04-29","LAL
+        @ DEN","L",44,30,11,21,0.524,3,7,0.429,5,7,0.714,1,8,9,11,4,0,1,4,3],["42023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0042300154","2024-04-27","LAL
+        vs. DEN","W",39,30,14,23,0.609,0,2,0.0,2,2,1.0,1,4,5,4,3,1,6,0,1],["42023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0042300153","2024-04-25","LAL
+        vs. DEN","L",42,26,12,20,0.6,1,6,0.167,1,2,0.5,0,6,6,9,2,1,3,3,-8],["42023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0042300152","2024-04-22","LAL
+        @ DEN","L",38,26,9,19,0.474,3,6,0.5,5,7,0.714,0,8,8,12,2,2,2,3,2],["42023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0042300151","2024-04-20","LAL
+        @ DEN","L",41,27,10,16,0.625,3,5,0.6,4,5,0.8,2,4,6,8,1,1,7,1,-9],["52023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0052300121","2024-04-16","LAL
+        @ NOP","W",41,23,6,20,0.3,1,5,0.2,10,10,1.0,0,9,9,9,3,2,2,0,11],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022301195","2024-04-14","LAL
+        @ NOP","W",38,28,11,20,0.55,0,2,0.0,6,6,1.0,2,9,11,17,5,1,4,0,19],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022301177","2024-04-12","LAL
+        @ MEM","W",41,37,13,20,0.65,3,7,0.429,8,11,0.727,2,7,9,5,2,0,8,1,-3],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022301155","2024-04-09","LAL
+        vs. GSW","L",36,33,14,22,0.636,1,3,0.333,4,5,0.8,1,6,7,11,2,0,4,0,-6],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022301127","2024-04-06","LAL
+        vs. CLE","W",36,24,10,18,0.556,1,5,0.2,3,5,0.6,0,5,5,12,1,1,5,1,10],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022301103","2024-04-03","LAL
+        @ WAS","W",36,25,9,18,0.5,0,1,0.0,7,9,0.778,2,5,7,9,3,0,4,2,9],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022301094","2024-04-02","LAL
+        @ TOR","W",29,23,10,12,0.833,1,1,1.0,2,5,0.4,0,4,4,9,0,0,1,0,13],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022301078","2024-03-31","LAL
+        @ BKN","W",37,40,13,17,0.765,9,10,0.9,5,6,0.833,1,6,7,5,0,0,4,0,22],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022301063","2024-03-29","LAL
+        @ IND","L",35,16,6,12,0.5,0,3,0.0,4,4,1.0,1,9,10,8,0,0,5,1,-13],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022301055","2024-03-27","LAL
+        @ MEM","W",35,23,8,14,0.571,0,1,0.0,7,11,0.636,0,14,14,12,1,0,4,1,33],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022301032","2024-03-24","LAL
+        vs. IND","W",38,26,8,19,0.421,2,4,0.5,8,8,1.0,1,4,5,10,1,1,3,1,12],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022301018","2024-03-22","LAL
+        vs. PHI","W",38,20,7,15,0.467,1,3,0.333,5,7,0.714,0,8,8,6,0,1,8,1,7],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300990","2024-03-18","LAL
+        vs. ATL","W",29,25,10,14,0.714,2,5,0.4,3,3,1.0,0,7,7,10,0,0,2,0,20],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300973","2024-03-16","LAL
+        vs. GSW","L",38,40,15,23,0.652,3,5,0.6,7,8,0.875,3,5,8,9,1,1,4,1,-6],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300954","2024-03-13","LAL
+        @ SAC","L",40,18,6,16,0.375,2,8,0.25,4,6,0.667,1,12,13,9,2,0,5,3,-10],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300932","2024-03-10","LAL
+        vs. MIN","W",38,29,10,16,0.625,2,4,0.5,7,9,0.778,0,8,8,9,0,0,4,1,14],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300901","2024-03-06","LAL
+        vs. SAC","L",36,31,10,16,0.625,1,4,0.25,10,10,1.0,0,5,5,13,1,0,3,0,-3],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300884","2024-03-04","LAL
+        vs. OKC","W",31,19,7,14,0.5,1,3,0.333,4,5,0.8,1,10,11,8,1,0,3,1,14],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300869","2024-03-02","LAL
+        vs. DEN","L",37,26,12,20,0.6,2,5,0.4,0,2,0.0,0,4,4,9,3,0,3,1,-1],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300856","2024-02-29","LAL
+        vs. WAS","W",39,31,12,24,0.5,2,5,0.4,5,7,0.714,0,4,4,9,1,1,4,1,-5],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300848","2024-02-28","LAL
+        @ LAC","W",37,34,13,21,0.619,7,12,0.583,1,1,1.0,1,5,6,8,0,2,3,2,11],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300818","2024-02-25","LAL
+        @ PHX","L",37,28,12,19,0.632,3,6,0.5,1,4,0.25,1,6,7,12,2,1,3,3,-8],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300813","2024-02-23","LAL
+        vs. SAS","W",34,30,13,22,0.591,2,3,0.667,2,2,1.0,1,6,7,9,1,0,2,0,21],["32023",2544,"LeBron
+        James",1610616834,"WST","West NBA All Stars West","0032300001","2024-02-18","WST
+        @ EST","L",14,8,4,10,0.4,0,3,0.0,0,0,null,0,4,4,3,0,0,1,0,-13],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300776","2024-02-13","LAL
+        vs. DET","W",31,25,9,15,0.6,3,6,0.5,4,4,1.0,0,1,1,8,0,0,4,0,9],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300747","2024-02-09","LAL
+        vs. NOP","W",38,21,6,13,0.462,2,2,1.0,7,8,0.875,1,3,4,14,1,1,2,2,15],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300740","2024-02-08","LAL
+        vs. DEN","L",35,25,9,20,0.45,2,6,0.333,5,5,1.0,1,8,9,7,1,1,2,0,-6],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300713","2024-02-05","LAL
+        @ CHA","W",40,26,12,22,0.545,0,5,0.0,2,3,0.667,0,4,4,7,1,1,4,2,2],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300701","2024-02-03","LAL
+        @ NYK","W",40,24,10,19,0.526,2,5,0.4,2,2,1.0,1,4,5,5,2,1,1,1,11],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300669","2024-01-30","LAL
+        @ ATL","L",36,20,7,17,0.412,2,6,0.333,4,9,0.444,2,7,9,8,1,1,3,1,-6],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300662","2024-01-29","LAL
+        @ HOU","L",37,23,9,15,0.6,2,5,0.4,3,8,0.375,0,6,6,10,1,1,1,4,-11],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300650","2024-01-27","LAL
+        @ GSW","W",48,36,14,25,0.56,2,4,0.5,6,6,1.0,1,19,20,12,0,0,3,2,-6],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300633","2024-01-25","LAL
+        vs. CHI","W",36,25,10,19,0.526,3,4,0.75,2,2,1.0,0,4,4,12,2,0,5,2,14],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300605","2024-01-21","LAL
+        vs. POR","W",31,28,8,16,0.5,3,8,0.375,9,10,0.9,0,5,5,5,0,0,3,2,28],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300591","2024-01-19","LAL
+        vs. BKN","L",34,24,9,22,0.409,2,5,0.4,4,5,0.8,5,6,11,5,0,0,4,1,-13],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300577","2024-01-17","LAL
+        vs. DAL","W",33,25,10,19,0.526,3,7,0.429,2,2,1.0,1,7,8,8,1,0,3,1,20],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300565","2024-01-15","LAL
+        vs. OKC","W",39,25,12,20,0.6,1,2,0.5,0,1,0.0,0,7,7,6,0,0,5,1,2],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300531","2024-01-11","LAL
+        vs. PHX","L",24,10,3,11,0.273,0,4,0.0,4,7,0.571,0,5,5,9,1,0,4,1,-25],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300516","2024-01-09","LAL
+        vs. TOR","W",35,22,8,17,0.471,2,5,0.4,4,6,0.667,0,5,5,12,1,1,3,0,0],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300505","2024-01-07","LAL
+        vs. LAC","W",38,25,11,19,0.579,1,3,0.333,2,3,0.667,1,7,8,7,1,0,4,2,5],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300491","2024-01-05","LAL
+        vs. MEM","L",39,32,11,24,0.458,4,9,0.444,6,10,0.6,2,3,5,7,5,0,4,0,-8],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300475","2024-01-03","LAL
+        vs. MIA","L",38,12,6,18,0.333,0,6,0.0,0,0,null,0,6,6,9,0,0,2,2,-20],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300446","2023-12-31","LAL
+        @ NOP","L",37,34,12,24,0.5,3,7,0.429,7,8,0.875,0,5,5,8,0,1,4,2,-11],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300443","2023-12-30","LAL
+        @ MIN","L",39,26,10,21,0.476,1,4,0.25,5,7,0.714,0,3,3,6,3,1,1,2,-5],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300428","2023-12-28","LAL
+        vs. CHA","W",25,17,7,13,0.538,2,5,0.4,1,1,1.0,0,4,4,11,0,0,3,0,1],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300403","2023-12-25","LAL
+        vs. BOS","L",37,16,5,14,0.357,1,2,0.5,5,6,0.833,0,9,9,8,0,0,3,1,-11],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300397","2023-12-23","LAL
+        @ OKC","W",37,40,13,20,0.65,5,5,1.0,9,9,1.0,2,5,7,7,2,2,3,0,10],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300370","2023-12-20","LAL
+        @ CHI","L",37,25,10,18,0.556,1,3,0.333,4,4,1.0,2,8,10,9,1,2,5,0,-11],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300359","2023-12-18","LAL
+        vs. NYK","L",39,25,10,23,0.435,2,8,0.25,3,4,0.75,1,10,11,11,1,0,2,1,-13],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300331","2023-12-15","LAL
+        @ SAS","L",36,23,7,17,0.412,2,6,0.333,7,10,0.7,2,5,7,14,2,0,2,1,-28],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300306","2023-12-12","LAL
+        @ DAL","L",40,33,14,27,0.519,3,8,0.375,2,3,0.667,2,6,8,9,3,1,4,1,-4],["62023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0062300001","2023-12-09","LAL
+        vs. IND","W",35,24,10,21,0.476,0,1,0.0,4,5,0.8,1,10,11,4,2,0,6,5,19],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022301230","2023-12-07","LAL
+        vs. NOP","W",23,30,9,12,0.75,4,4,1.0,8,8,1.0,0,5,5,8,0,0,0,1,36],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022301203","2023-12-05","LAL
+        vs. PHX","W",40,31,12,25,0.48,2,4,0.5,5,6,0.833,3,5,8,11,5,0,2,3,12],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300291","2023-12-02","LAL
+        vs. HOU","W",35,16,7,17,0.412,0,4,0.0,2,5,0.4,0,4,4,7,1,1,5,0,16],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300271","2023-11-30","LAL
+        @ OKC","L",35,21,7,12,0.583,4,8,0.5,3,4,0.75,2,10,12,6,1,1,5,1,-18],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300258","2023-11-29","LAL
+        @ DET","W",29,25,9,19,0.474,2,6,0.333,5,5,1.0,2,6,8,3,0,0,1,0,26],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300255","2023-11-27","LAL
+        @ PHI","L",30,18,8,12,0.667,1,1,1.0,1,2,0.5,0,0,0,5,1,1,1,0,-30],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300242","2023-11-25","LAL
+        @ CLE","W",36,22,8,23,0.348,1,9,0.111,5,7,0.714,1,5,6,6,2,2,4,1,2],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300238","2023-11-22","LAL
+        vs. DAL","L",36,26,9,19,0.474,4,9,0.444,4,7,0.571,2,7,9,7,0,0,3,0,7],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300042","2023-11-21","LAL
+        vs. UTA","W",24,17,6,10,0.6,3,5,0.6,2,2,1.0,1,6,7,9,0,0,2,0,14],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300216","2023-11-19","LAL
+        vs. HOU","W",40,37,14,19,0.737,2,5,0.4,7,9,0.778,1,5,6,8,3,0,2,0,2],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300036","2023-11-17","LAL
+        @ POR","W",35,35,13,22,0.591,5,9,0.556,4,6,0.667,0,5,5,9,2,0,3,3,19],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300198","2023-11-15","LAL
+        vs. SAC","L",35,28,9,15,0.6,3,7,0.429,7,8,0.875,2,8,10,12,4,1,6,1,0],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300026","2023-11-14","LAL
+        vs. MEM","W",23,16,6,11,0.545,3,6,0.5,1,2,0.5,0,9,9,6,1,0,4,1,15],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300015","2023-11-10","LAL
+        @ PHX","W",36,32,11,17,0.647,3,4,0.75,7,11,0.636,1,10,11,6,1,1,4,1,2],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300163","2023-11-08","LAL
+        @ HOU","L",27,18,7,13,0.538,0,2,0.0,4,5,0.8,1,5,6,2,0,0,3,1,-24],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300150","2023-11-06","LAL
+        @ MIA","L",37,30,13,23,0.565,0,4,0.0,4,4,1.0,0,4,4,3,1,3,5,4,6],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300134","2023-11-04","LAL
+        @ ORL","L",35,24,8,15,0.533,2,5,0.4,6,7,0.857,1,8,9,5,3,0,3,1,12],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300127","2023-11-01","LAL
+        vs. LAC","W",42,35,13,19,0.684,4,8,0.5,5,10,0.5,0,12,12,7,1,2,4,3,6],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300111","2023-10-30","LAL
+        vs. ORL","W",33,19,7,17,0.412,2,6,0.333,3,4,0.75,0,3,3,4,3,1,5,0,5],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300100","2023-10-29","LAL
+        @ SAC","L",39,27,11,19,0.579,3,8,0.375,2,6,0.333,0,15,15,8,0,0,8,2,-5],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300076","2023-10-26","LAL
+        vs. PHX","W",35,21,7,14,0.5,1,5,0.2,6,8,0.75,1,7,8,9,2,2,5,1,22],["22023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0022300061","2023-10-24","LAL
+        @ DEN","L",29,21,10,16,0.625,1,4,0.25,0,1,0.0,1,7,8,5,1,0,0,1,7],["12023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0012300063","2023-10-19","LAL
+        vs. PHX","L",22,19,6,12,0.5,3,5,0.6,4,5,0.8,0,6,6,3,0,0,1,2,2],["12023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0012300034","2023-10-13","LAL
+        vs. GSW","L",18,12,4,8,0.5,1,3,0.333,3,6,0.5,0,2,2,5,0,0,2,0,-9],["12023",2544,"LeBron
+        James",1610612747,"LAL","Los Angeles Lakers","0012300012","2023-10-09","LAL
+        vs. BKN","W",17,10,3,8,0.375,1,4,0.25,3,4,0.75,0,3,3,5,1,1,3,2,2]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '3472'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:35:37 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF8aDeEWcAQAAVp7Ygx7QtnPNeIZ37u09DZC03UUvB/57F/ZF1Yej14aj0uR4P1i9ivaNa/Kc6HYlB01AIZT2XSCKIxVGPaE92a+ZTmtra9/zSXaR4BuxVcQ+Orf9UYZvDMG1s7f4SF67ZVkX2OzM7XhjOiqHHtOxBujTnIEtZNYx+4VMHgjRj8vp+6w7cakQDVJSxxBhN53+s1fVFIRpHXR41ydeiSFkQc6sxVVWEjGfPDoYWfRFBw==~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7187;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      ttl:
+      - '31536000'
+      vha6-origin:
+      - varnish-1
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '1'
+      x-full-ttl:
+      - '1800.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '1'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '416.592'
+      x-varnish:
+      - 69363256 68038902
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,556 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAksZbWicAQAAJDrZgx7v/V0fWR+n8lHI5U31cxjWJH/mDMkSRESmPaQ5xqZfyBDfmMhzAzG3Am4KgxzkDjmnn8oFP7f1yuSwPmFu5GF1ONFYMDBm3qwDFkH03LBmB/ON6yVc+IV1iiv4VOQBvRqtWvSjqggMXH7eqEgY3oz+l0tsKVEUC+/Big/I2MtGrA3RmM3RWOn5uv+oTL9AuQfQOE05J3mqL6qcdt4k2XWn97DxePLvfUJx7A==~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/franchiseplayers?LeagueID=00&PerMode=Totals&SeasonType=Regular+Season&TeamID=1610612739
+  response:
+    body:
+      string: "{\"resource\":\"franchiseplayers\",\"parameters\":{\"LeagueID\":\"00\",\"SeasonType\":\"Regular
+        Season\",\"TeamID\":1610612739,\"PerMode\":\"Totals\"},\"resultSets\":[{\"name\":\"FranchisePlayers\",\"headers\":[\"LEAGUE_ID\",\"TEAM_ID\",\"TEAM\",\"PERSON_ID\",\"PLAYER\",\"SEASON_TYPE\",\"ACTIVE_WITH_TEAM\",\"GP\",\"FGM\",\"FGA\",\"FG_PCT\",\"FG3M\",\"FG3A\",\"FG3_PCT\",\"FTM\",\"FTA\",\"FT_PCT\",\"OREB\",\"DREB\",\"REB\",\"AST\",\"PF\",\"STL\",\"TOV\",\"BLK\",\"PTS\"],\"rowSet\":[[\"00\",1610612739,\"Cleveland
+        Cavaliers\",36,\"Sarunas Marciulionis\",\"Regular Season\",0,1,3,9,0.333,1,3,0.333,0,0,0.0,2,2,4,2,3,0,2,0,7],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",73,\"Hot Rod Williams\",\"Regular Season\",0,661,3198,6633,0.482,2,16,0.125,2106,2884,0.73,1620,3049,4669,1366,1720,587,1038,1200,8504],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",95,\"Mark Bryant\",\"Regular Season\",0,75,174,346,0.503,0,0,0.0,76,94,0.809,126,226,352,61,250,31,87,31,424],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",104,\"Benoit Benjamin\",\"Regular Season\",0,3,1,3,0.333,0,0,0.0,0,0,0.0,0,1,1,0,1,0,0,1,2],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",114,\"Harold Miner\",\"Regular Season\",0,19,23,52,0.442,2,10,0.2,13,13,1.0,4,8,12,8,23,0,14,0,61],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",133,\"David Wesley\",\"Regular Season\",0,35,22,75,0.293,9,38,0.237,20,28,0.714,3,32,35,37,32,12,17,4,73],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",134,\"Kevin Johnson\",\"Regular Season\",0,52,143,311,0.46,2,9,0.222,92,112,0.821,10,62,72,193,96,60,82,17,380],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",166,\"Ron Harper\",\"Regular Season\",0,228,1722,3633,0.474,53,235,0.226,936,1313,0.713,374,698,1072,1158,653,530,751,219,4433],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",168,\"Chris Mills\",\"Regular Season\",0,319,1502,3397,0.442,297,792,0.375,705,861,0.819,463,1244,1707,668,937,272,450,178,4006],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",174,\"John Battle\",\"Regular Season\",0,196,572,1246,0.459,19,73,0.26,293,366,0.801,33,158,191,333,249,75,171,12,1456],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",179,\"Bryant Stith\",\"Regular Season\",0,50,70,188,0.372,24,68,0.353,44,52,0.846,20,65,85,42,42,29,30,6,208],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",184,\"Bobby Phills\",\"Regular Season\",0,334,1344,3032,0.443,200,501,0.399,629,842,0.747,296,712,1008,831,729,410,463,88,3517],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",198,\"Danny Ferry\",\"Regular Season\",0,723,2207,4939,0.447,543,1409,0.385,686,816,0.841,557,1605,2162,1045,1670,333,712,253,5643],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",201,\"Chris Dudley\",\"Regular Season\",0,153,217,508,0.427,0,1,0.0,105,255,0.412,234,270,504,64,252,41,123,83,539],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",209,\"Dell Curry\",\"Regular Season\",0,79,340,742,0.458,28,81,0.346,79,101,0.782,43,123,166,149,128,94,108,22,787],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",238,\"Tyrone Hill\",\"Regular Season\",0,303,1209,2320,0.521,0,5,0.0,856,1317,0.65,955,1830,2785,281,1056,250,540,158,3274],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",262,\"Michael Cage\",\"Regular Season\",0,164,397,736,0.539,0,3,0.0,103,180,0.572,491,802,1293,109,364,148,110,146,897],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",281,\"Scott Williams\",\"Regular Season\",0,19,12,41,0.293,0,1,0.0,9,11,0.818,15,15,30,8,30,4,5,6,33],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",348,\"Mitchell Butler\",\"Regular Season\",0,49,82,186,0.441,12,35,0.343,29,42,0.69,19,47,66,40,67,23,37,4,205],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",423,\"Chris Gatling\",\"Regular Season\",0,74,329,733,0.449,28,92,0.304,156,228,0.684,99,292,391,61,185,52,119,27,842],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",432,\"Pete Chilcutt\",\"Regular Season\",0,6,0,2,0.0,0,0,0.0,0,0,0.0,4,5,9,1,3,0,0,0,0],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",434,\"Tony Dumas\",\"Regular Season\",0,7,6,12,0.5,2,4,0.5,0,3,0.0,1,4,5,5,5,0,5,0,14],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",441,\"Lamond Murray\",\"Regular Season\",0,223,1281,2930,0.437,213,542,0.393,574,742,0.774,312,823,1135,413,529,258,466,106,3349],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",445,\"Wesley Person\",\"Regular Season\",0,328,1513,3284,0.461,550,1303,0.422,348,454,0.767,189,1007,1196,651,434,310,325,132,3924],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",680,\"John Amaechi\",\"Regular Season\",0,28,29,70,0.414,0,0,0.0,19,33,0.576,13,39,52,9,49,6,34,11,77],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",692,\"Andrew DeClercq\",\"Regular Season\",0,115,335,662,0.506,0,0,0.0,170,272,0.625,227,404,631,79,385,100,140,86,840],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",705,\"Randolph Keys\",\"Regular Season\",0,90,225,531,0.424,3,20,0.15,81,111,0.73,75,118,193,58,168,50,68,8,534],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",727,\"Eric Snow\",\"Regular Season\",0,267,429,1088,0.394,14,61,0.23,205,308,0.666,114,447,561,1035,622,208,326,55,1077],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",895,\"Tyrone Corbin\",\"Regular Season\",0,86,201,439,0.458,1,7,0.143,119,155,0.768,115,201,316,73,176,59,86,17,522],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",902,\"Bimbo Coles\",\"Regular Season\",0,115,181,504,0.359,13,61,0.213,108,127,0.85,31,120,151,301,189,51,108,14,483],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",916,\"Corie Blount\",\"Regular Season\",0,20,23,67,0.343,0,0,0.0,22,42,0.524,34,71,105,10,47,18,15,12,68],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",941,\"Ennis Whatley\",\"Regular Season\",0,8,9,19,0.474,0,0,0.0,4,7,0.571,2,5,7,13,8,5,6,0,22],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1002,\"Reggie Geary\",\"Regular Season\",0,39,22,58,0.379,8,21,0.381,5,11,0.455,4,11,15,36,36,13,15,2,57],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1035,\"Shawnelle Scott\",\"Regular Season\",0,57,24,52,0.462,0,0,0.0,16,29,0.552,28,47,75,8,51,6,10,11,64],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1063,\"Carl Thomas\",\"Regular Season\",0,48,36,94,0.383,17,50,0.34,9,14,0.643,9,41,50,17,34,18,18,6,98],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1080,\"Henry James\",\"Regular Season\",0,130,300,716,0.419,64,175,0.366,134,170,0.788,63,143,206,62,177,32,92,17,798],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1118,\"Tim Kempton\",\"Regular Season\",0,4,6,12,0.5,0,0,0.0,2,6,0.333,4,6,10,3,8,2,7,1,14],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1120,\"Elmer Bennett\",\"Regular Season\",0,4,6,11,0.545,0,2,0.0,3,4,0.75,0,1,1,3,3,4,3,0,15],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1429,\"Jimmy Oliver\",\"Regular Season\",0,27,39,98,0.398,1,9,0.111,17,22,0.773,9,18,27,20,22,9,9,2,96],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1432,\"Joe Courtney\",\"Regular Season\",0,23,15,35,0.429,0,0,0.0,8,18,0.444,24,25,49,9,35,5,17,6,38],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1499,\"Tony Battie\",\"Regular Season\",0,50,114,267,0.427,1,8,0.125,43,56,0.768,79,162,241,37,104,18,39,47,272],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1507,\"Derek Anderson\",\"Regular Season\",0,104,364,900,0.404,38,153,0.248,413,480,0.86,75,221,296,372,209,134,210,17,1179],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1510,\"Brevin Knight\",\"Regular Season\",0,190,627,1480,0.424,2,22,0.091,451,582,0.775,122,462,584,1441,588,379,463,47,1707],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1513,\"Scot Pollard\",\"Regular Season\",0,24,11,26,0.423,0,0,0.0,2,4,0.5,15,16,31,3,27,4,4,1,24],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1515,\"Anthony Parker\",\"Regular Season\",0,204,567,1353,0.419,244,626,0.39,184,246,0.748,73,514,587,495,325,168,201,35,1562],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1533,\"Anthony Johnson\",\"Regular Season\",0,28,27,81,0.333,1,2,0.5,11,16,0.688,7,14,21,44,21,6,14,1,66],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1538,\"Cedric Henderson\",\"Regular Season\",0,248,768,1766,0.435,4,39,0.103,309,431,0.717,169,583,752,415,574,222,393,109,1849],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1564,\"Etdrick Bohannon\",\"Regular Season\",0,6,2,4,0.5,0,0,0.0,4,4,1.0,3,4,7,0,4,0,1,2,8],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1600,\"Kornel David\",\"Regular Season\",0,6,4,9,0.444,0,0,0.0,3,4,0.75,4,4,8,1,7,4,2,1,11],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1683,\"Larry Robinson\",\"Regular Season\",0,1,0,0,0.0,0,0,0.0,0,0,0.0,0,0,0,0,0,0,1,0,0],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1714,\"Robert Traylor\",\"Regular Season\",0,144,338,723,0.467,0,10,0.0,135,243,0.556,260,372,632,124,419,103,171,126,811],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1729,\"Ricky Davis\",\"Regular Season\",0,183,1112,2562,0.434,102,287,0.355,595,788,0.755,178,576,754,725,376,219,493,67,2921],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1743,\"Bruno Sundov\",\"Regular Season\",0,4,3,9,0.333,0,0,0.0,3,6,0.5,2,8,10,0,7,0,3,0,9],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1863,\"Earl Boykins\",\"Regular Season\",0,42,73,170,0.429,10,33,0.303,20,26,0.769,17,21,38,72,40,17,30,1,176],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1884,\"Baron Davis\",\"Regular Season\",0,15,75,178,0.421,36,87,0.414,22,27,0.815,6,30,36,92,29,16,39,6,208],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1887,\"Wally Szczerbiak\",\"Regular Season\",0,99,254,607,0.418,88,220,0.4,126,147,0.857,61,252,313,117,166,37,75,17,722],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1892,\"Trajan Langdon\",\"Regular Season\",0,119,220,529,0.416,86,217,0.396,121,133,0.91,29,130,159,152,179,56,98,14,647],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1908,\"Jumaine Jones\",\"Regular Season\",0,161,595,1350,0.441,163,482,0.338,102,151,0.675,231,664,895,228,360,142,186,68,1455],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1930,\"Lari Ketner\",\"Regular Season\",0,16,9,22,0.409,0,0,0.0,6,10,0.6,12,15,27,0,12,3,7,2,24],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1956,\"Ira Newble\",\"Regular Season\",0,230,394,952,0.414,47,145,0.324,128,167,0.766,218,357,575,188,381,113,161,54,963],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1972,\"John Morton\",\"Regular Season\",0,107,171,447,0.383,11,43,0.256,164,210,0.781,51,91,142,315,145,80,162,22,517],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1985,\"Zendon Hamilton\",\"Regular Season\",0,11,7,13,0.538,0,0,0.0,11,16,0.688,3,8,11,0,4,3,6,0,25],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2079,\"Kaniel Dickens\",\"Regular Season\",0,5,1,3,0.333,0,0,0.0,0,0,0.0,0,1,1,1,1,0,0,1,2],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2208,\"Kedrick Brown\",\"Regular Season\",0,34,72,155,0.465,26,67,0.388,9,14,0.643,23,55,78,39,42,13,17,5,179],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2210,\"Richard Jefferson\",\"Regular Season\",0,153,296,655,0.452,128,359,0.357,138,195,0.708,43,288,331,137,282,59,95,24,858],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2217,\"Brendan Haywood\",\"Regular Season\",0,22,14,30,0.467,0,0,0.0,7,13,0.538,6,23,29,2,17,2,10,10,35],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2357,\"Tierre Brown\",\"Regular Season\",0,15,27,59,0.458,0,1,0.0,11,14,0.786,8,22,30,39,9,13,22,0,65],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2365,\"Chris Andersen\",\"Regular Season\",0,12,9,22,0.409,0,3,0.0,10,14,0.714,9,22,31,5,20,5,5,7,28],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2366,\"Mike Wilks\",\"Regular Season\",0,37,17,59,0.288,2,14,0.143,6,12,0.5,6,21,27,18,27,8,15,1,42],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2399,\"Mike Dunleavy\",\"Regular Season\",0,23,36,90,0.4,20,57,0.351,14,19,0.737,5,42,47,20,32,6,14,2,106],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2430,\"Carlos Boozer\",\"Regular Season\",0,156,802,1518,0.528,1,7,0.143,367,477,0.769,432,1034,1466,254,423,133,237,105,1972],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2452,\"J.R. Bremer\",\"Regular Season\",0,31,39,137,0.285,19,66,0.288,13,20,0.65,7,26,33,39,27,18,19,4,110],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2470,\"Smush Parker\",\"Regular Season\",0,66,136,338,0.402,38,118,0.322,98,118,0.831,29,90,119,162,106,48,133,12,408],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2484,\"Devin Brown\",\"Regular Season\",0,78,217,531,0.409,45,146,0.308,107,142,0.754,65,198,263,175,144,52,99,7,586],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2562,\"Sasha Pavlovic\",\"Regular Season\",0,302,691,1656,0.417,207,553,0.374,254,370,0.686,120,444,564,333,608,154,294,49,1843],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2570,\"Kendrick Perkins\",\"Regular Season\",0,18,21,43,0.488,0,0,0.0,5,10,0.5,11,31,42,10,28,3,22,4,47],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2590,\"Mo Williams\",\"Regular Season\",0,227,1214,2745,0.442,414,1029,0.402,508,570,0.891,96,558,654,1052,536,186,514,45,3350],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2594,\"Kyle Korver\",\"Regular Season\",0,124,388,829,0.468,286,630,0.454,91,103,0.883,16,275,291,140,212,45,101,37,1153],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2739,\"Luke Jackson\",\"Regular Season\",0,46,39,112,0.348,16,42,0.381,31,39,0.795,18,28,46,28,34,11,33,2,125],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2742,\"Sebastian Telfair\",\"Regular Season\",0,4,16,35,0.457,2,9,0.222,5,6,0.833,0,4,4,12,6,2,6,0,39],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2747,\"JR Smith\",\"Regular Season\",0,255,957,2384,0.401,585,1537,0.381,129,185,0.697,115,628,743,468,580,264,229,64,2628],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2753,\"Delonte West\",\"Regular Season\",0,150,578,1285,0.45,145,384,0.378,246,302,0.815,78,391,469,538,270,178,233,60,1547],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76130,\"Butch Beard\",\"Regular Season\",0,83,429,939,0.457,null,null,null,287,379,0.757,14,29,319,501,249,10,null,2,1145],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76152,\"Winston Bennett\",\"Regular Season\",0,134,256,602,0.425,0,1,0.0,134,193,0.694,176,237,413,120,304,50,115,21,646],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76154,\"Kent Benson\",\"Regular Season\",0,2,2,2,1.0,0,0,0.0,1,2,0.5,0,1,1,0,2,1,2,1,5],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76248,\"Jim Brewer\",\"Regular Season\",0,462,1486,3367,0.441,null,null,null,489,822,0.595,1292,2259,3551,853,1084,419,181,353,3461],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76263,\"Gary Brokaw\",\"Regular Season\",0,39,112,240,0.467,null,null,null,58,82,0.707,12,47,59,117,79,14,null,13,282],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76338,\"Tony Campbell\",\"Regular Season\",0,78,161,392,0.411,15,42,0.357,132,159,0.83,60,93,153,69,122,32,65,8,469],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76350,\"Kenny Carr\",\"Regular Season\",0,201,1111,2194,0.506,1,17,0.059,608,890,0.683,568,1232,1800,331,716,198,488,109,2831],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76392,\"Jim Chones\",\"Regular Season\",0,400,2456,5332,0.461,null,null,null,817,1161,0.704,1040,2750,3790,711,1259,222,371,450,5729],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76403,\"John Clemens\",\"Regular Season\",0,143,372,753,0.494,null,null,null,119,147,0.81,42,124,371,194,269,36,null,2,863],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76440,\"Joe Cooke\",\"Regular Season\",0,73,134,341,0.393,null,null,null,48,59,0.814,null,null,114,93,135,null,null,null,316],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76519,\"Charlie Davis\",\"Regular Season\",0,67,249,610,0.408,null,null,null,146,176,0.83,null,null,97,133,163,null,null,null,644],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76521,\"Double D Davis\",\"Regular Season\",0,235,964,2276,0.424,null,null,null,549,741,0.741,282,826,1671,454,842,108,null,113,2477],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76523,\"Harry Davis\",\"Regular Season\",0,40,66,153,0.431,null,null,null,30,43,0.698,27,39,66,16,66,13,23,8,162],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76526,\"Johnny Davis\",\"Regular Season\",0,115,439,1028,0.427,14,57,0.246,322,379,0.85,41,114,155,531,180,67,192,8,1214],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76647,\"Johnny Egan\",\"Regular Season\",0,26,40,98,0.408,null,null,null,25,28,0.893,null,null,32,58,31,null,null,null,105],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76686,\"Mike Evans\",\"Regular Season\",0,8,11,35,0.314,0,4,0.0,5,8,0.625,2,8,10,20,10,4,11,0,27],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76707,\"Eric Fernsten\",\"Regular Season\",0,4,0,2,0.0,null,null,null,0,0,0.0,0,1,1,0,1,0,null,0,0],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76725,\"Bruce Flowers\",\"Regular Season\",0,53,110,206,0.534,0,2,0.0,41,53,0.774,71,109,180,47,99,19,43,12,261],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76740,\"Fred Foster\",\"Regular Season\",0,131,329,809,0.407,null,null,null,123,161,0.764,99,119,218,165,209,41,null,8,781],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76750,\"Walt Frazier\",\"Regular Season\",0,66,394,847,0.465,0,1,0.0,176,209,0.842,62,170,232,249,148,92,139,16,964],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76755,\"Gary Freeman\",\"Regular Season\",0,11,7,12,0.583,null,null,null,1,2,0.5,null,null,8,4,4,null,null,null,15],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76767,\"Terry Furlow\",\"Regular Season\",0,102,467,1012,0.461,null,null,null,191,224,0.853,91,112,203,175,147,61,164,31,1125],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76791,\"John Garris\",\"Regular Season\",0,33,52,102,0.51,0,0,0.0,27,34,0.794,35,42,77,10,40,8,11,6,131],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76847,\"Stewart Granger\",\"Regular Season\",0,56,97,226,0.429,4,13,0.308,53,70,0.757,8,47,55,134,97,24,57,0,251],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76904,\"Jay Guidinger\",\"Regular Season\",0,64,35,87,0.402,0,0,0.0,28,46,0.609,41,56,97,20,71,13,26,15,98],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76994,\"Kevin Henderson\",\"Regular Season\",0,5,2,5,0.4,0,0,0.0,5,12,0.417,3,1,4,2,2,0,2,0,9],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77019,\"Rod Higgins\",\"Regular Season\",0,36,71,163,0.436,22,50,0.44,31,42,0.738,25,57,82,36,53,25,21,14,195],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77066,\"Greg Howard\",\"Regular Season\",0,48,50,131,0.382,null,null,null,39,51,0.765,null,null,108,27,50,null,null,null,139],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77067,\"Mo Howard\",\"Regular Season\",0,9,8,15,0.533,null,null,null,5,6,0.833,2,3,5,5,7,1,null,2,21],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77078,\"Kim Hughes\",\"Regular Season\",0,45,16,45,0.356,0,0,0.0,0,0,0.0,29,48,77,24,73,17,33,21,32],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77144,\"Eddie Johnson\",\"Regular Season\",0,32,129,293,0.44,24,65,0.369,33,45,0.733,13,33,46,114,56,8,60,1,315],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77153,\"Kannard Johnson\",\"Regular Season\",0,4,1,3,0.333,0,0,0.0,0,0,0.0,0,0,0,0,1,1,2,0,2],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77184,\"Edgar Jones\",\"Regular Season\",0,79,273,554,0.493,7,26,0.269,173,238,0.727,105,211,316,56,213,41,97,49,726],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77246,\"Larry Kenon\",\"Regular Season\",0,32,100,212,0.472,0,1,0.0,35,46,0.761,52,65,117,34,49,21,39,9,235],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77262,\"Chad Kinch\",\"Regular Season\",0,29,38,96,0.396,0,0,0.0,4,5,0.8,7,17,24,35,24,9,22,5,80],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77326,\"Sam Lacey\",\"Regular Season\",0,60,111,264,0.42,2,9,0.222,29,37,0.784,62,169,231,118,209,29,98,25,253],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77356,\"Butch Lee\",\"Regular Season\",0,36,148,332,0.446,0,0,0.0,87,114,0.763,25,45,70,129,58,30,61,0,383],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77361,\"Keith Lee\",\"Regular Season\",0,125,347,754,0.46,2,10,0.2,147,197,0.746,209,393,602,136,351,54,163,77,843],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77385,\"Bobby Lewis\",\"Regular Season\",0,79,179,484,0.37,null,null,null,109,152,0.717,null,null,206,244,176,null,null,null,467],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77623,\"Paul Mokeski\",\"Regular Season\",0,89,153,353,0.433,0,3,0.0,64,92,0.696,98,225,323,54,229,40,69,50,370],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77685,\"Larry Nance\",\"Regular Season\",0,433,2945,5559,0.53,3,24,0.125,1364,1696,0.804,1067,2494,3561,1145,1199,356,639,1087,7257],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77715,\"Carl Nicks\",\"Regular Season\",0,9,26,59,0.441,0,1,0.0,11,17,0.647,8,18,26,11,17,6,11,0,63],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77848,\"Roger Phegley\",\"Regular Season\",0,109,578,1179,0.49,12,41,0.293,260,312,0.833,118,199,317,237,323,81,198,17,1428],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77894,\"Luke Rackley\",\"Regular Season\",0,83,230,495,0.465,null,null,null,122,194,0.629,null,null,415,69,189,null,null,null,582],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77944,\"Kevin Restani\",\"Regular Season\",0,34,23,60,0.383,0,1,0.0,7,12,0.583,31,46,77,15,40,10,14,7,53],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77973,\"Rick Roberson\",\"Regular Season\",0,125,611,1397,0.437,null,null,null,382,656,0.582,null,null,1494,243,500,null,null,null,1604],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77998,\"Dave Robisch\",\"Regular Season\",0,93,526,1038,0.507,0,3,0.0,306,365,0.838,252,491,743,236,232,60,152,59,1358],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78014,\"Tree Rollins\",\"Regular Season\",0,108,119,263,0.452,0,2,0.0,23,35,0.657,96,196,292,43,172,24,57,91,261],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78047,\"Campy Russell\",\"Regular Season\",0,410,2480,5444,0.456,1,10,0.1,1627,2113,0.77,698,1409,2107,1143,1058,418,618,94,6588],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78059,\"Mike Sanders\",\"Regular Season\",0,180,681,1400,0.486,5,17,0.294,207,277,0.747,187,425,612,276,513,163,200,76,1574],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78133,\"Lonnie Shelton\",\"Regular Season\",0,180,621,1330,0.467,1,12,0.083,172,233,0.738,260,531,791,336,594,141,287,77,1415],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78188,\"Elmore Smith\",\"Regular Season\",0,141,599,1193,0.502,null,null,null,279,443,0.63,285,730,1015,83,399,73,183,267,1477],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78204,\"Robert Smith\",\"Regular Season\",0,8,6,22,0.273,0,4,0.0,12,14,0.857,1,6,7,10,12,2,6,0,24],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78208,\"Willie Smith\",\"Regular Season\",0,62,121,315,0.384,17,71,0.239,40,52,0.769,56,65,121,259,110,75,95,1,299],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78220,\"Dave Sorenson\",\"Regular Season\",0,165,577,1314,0.439,null,null,null,295,376,0.785,null,null,824,249,317,null,null,null,1449],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78277,\"Gary Suiter\",\"Regular Season\",0,30,19,54,0.352,null,null,null,4,9,0.444,null,null,41,2,20,null,null,null,42],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78294,\"Earl Tatum\",\"Regular Season\",0,33,36,94,0.383,2,6,0.333,11,19,0.579,11,15,26,20,29,16,17,5,85],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78332,\"Paul Thompson\",\"Regular Season\",0,115,457,1016,0.45,15,62,0.242,160,202,0.792,156,272,428,180,269,111,115,57,1089],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78386,\"Mel Turpin\",\"Regular Season\",0,223,988,1915,0.516,0,4,0.0,349,444,0.786,399,799,1198,124,561,114,315,233,2325],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78395,\"Darnell Valentine\",\"Regular Season\",0,142,366,815,0.449,9,39,0.231,234,284,0.824,59,216,275,525,258,155,209,19,975],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78461,\"Johnny Warren\",\"Regular Season\",0,259,710,1646,0.431,null,null,null,282,335,0.842,42,86,647,534,553,27,null,6,1702],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78468,\"Richard Washington\",\"Regular Season\",0,87,339,745,0.455,1,4,0.25,111,151,0.735,165,279,444,128,297,49,143,56,790],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78530,\"Lenny Wilkens\",\"Regular Season\",0,149,1034,2269,0.456,null,null,null,683,837,0.816,80,197,623,1150,386,97,null,17,2751],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78531,\"Bob Wilkerson\",\"Regular Season\",0,142,497,1190,0.418,3,22,0.136,238,309,0.77,122,370,492,426,345,160,298,41,1235],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78541,\"Chuckie Williams\",\"Regular Season\",0,22,14,47,0.298,null,null,null,9,12,0.75,3,1,4,7,7,1,null,0,37],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78556,\"Kevin Williams\",\"Regular Season\",0,46,58,134,0.433,0,5,0.0,47,64,0.734,19,44,63,61,86,22,49,4,163],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78577,\"Bill Willoughby\",\"Regular Season\",0,78,219,457,0.479,1,9,0.111,96,127,0.756,122,207,329,72,189,32,68,62,535],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78581,\"Mike Wilson\",\"Regular Season\",0,11,27,54,0.5,0,0,0.0,23,30,0.767,10,8,18,24,14,10,15,3,77],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78603,\"Luke Witte\",\"Regular Season\",0,118,149,371,0.402,null,null,null,74,108,0.685,127,230,357,60,147,13,null,45,372],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",100263,\"Bill Laimbeer\",\"Regular Season\",0,131,456,923,0.494,3,6,0.5,210,273,0.769,390,580,970,261,502,78,193,108,1125],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",101121,\"Joey Graham\",\"Regular Season\",0,39,82,179,0.458,9,30,0.3,29,36,0.806,8,76,84,18,73,6,28,7,202],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",101127,\"Jarrett Jack\",\"Regular Season\",0,80,286,698,0.41,63,185,0.341,125,149,0.839,22,201,223,324,133,56,133,22,760],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",101181,\"Jose Calderon\",\"Regular Season\",0,57,93,185,0.503,45,97,0.464,24,30,0.8,14,70,84,117,81,27,41,2,255],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",101214,\"Jawad Williams\",\"Regular Season\",0,90,127,344,0.369,45,144,0.313,41,57,0.719,24,109,133,56,109,22,35,8,340],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",200759,\"Cedric Simmons\",\"Regular Season\",0,7,2,6,0.333,0,0,0.0,0,8,0.0,5,10,15,0,7,2,4,5,4],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",200765,\"Rajon Rondo\",\"Regular Season\",0,21,45,105,0.429,23,58,0.397,18,24,0.75,5,54,59,103,31,18,34,1,131],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",200769,\"Shannon Brown\",\"Regular Season\",0,38,69,185,0.373,16,54,0.296,24,37,0.649,11,28,39,27,51,17,33,4,178],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",200796,\"Leon Powe\",\"Regular Season\",0,34,50,108,0.463,0,0,0.0,49,89,0.551,35,64,99,2,56,13,16,5,149],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",200809,\"Chris Quinn\",\"Regular Season\",0,7,4,16,0.25,0,5,0.0,2,2,1.0,1,1,2,9,4,3,6,0,10],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",200984,\"Lance Allred\",\"Regular Season\",0,3,1,4,0.25,0,0,0.0,1,2,0.5,0,1,1,0,1,0,0,0,3],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",201150,\"Spencer Hawes\",\"Regular Season\",0,27,139,297,0.468,47,105,0.448,40,51,0.784,43,165,208,64,83,13,54,27,365],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",201193,\"Demetris Nichols\",\"Regular Season\",0,3,1,8,0.125,0,3,0.0,0,0,0.0,0,1,1,0,0,0,2,0,2],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",201196,\"Ramon Sessions\",\"Regular Season\",0,122,503,1130,0.445,29,77,0.377,470,570,0.825,65,317,382,631,156,87,260,9,1505],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",201234,\"Trey Johnson\",\"Regular Season\",0,4,0,5,0.0,0,0,0.0,4,4,1.0,0,1,1,0,4,0,1,0,4],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",201578,\"Marreese Speights\",\"Regular Season\",0,39,154,337,0.457,1,5,0.2,87,108,0.806,70,127,197,29,89,14,45,26,396],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",201619,\"Sasha Kaun\",\"Regular Season\",0,25,9,17,0.529,0,0,0.0,5,11,0.455,12,14,26,3,11,4,7,5,23],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",201623,\"Semih Erden\",\"Regular Season\",0,32,43,88,0.489,0,0,0.0,26,47,0.553,26,57,83,10,72,12,18,8,112],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",201937,\"Ricky Rubio\",\"Regular Season\",0,67,210,589,0.357,80,256,0.313,116,138,0.841,24,187,211,340,126,75,121,13,616],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",201947,\"Earl Clark\",\"Regular Season\",0,45,90,240,0.375,40,116,0.345,14,24,0.583,20,107,127,16,61,16,30,19,234],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",201961,\"Wayne Ellington\",\"Regular Season\",0,38,145,330,0.439,53,143,0.371,53,59,0.898,20,94,114,62,43,29,33,2,396],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",201963,\"Christian Eyenga\",\"Regular Season\",0,50,133,325,0.409,26,93,0.28,20,34,0.588,30,105,135,39,85,37,49,32,312],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",201980,\"Danny Green\",\"Regular Season\",0,28,34,77,0.442,19,51,0.373,5,7,0.714,10,17,27,9,19,11,12,6,92],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",202087,\"Alonzo Gee\",\"Regular Season\",0,250,738,1765,0.418,149,463,0.322,437,558,0.783,260,688,948,326,525,262,334,77,2062],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",202336,\"Larry Sanders\",\"Regular Season\",0,5,1,4,0.25,0,0,0.0,2,2,1.0,3,1,4,0,5,1,2,1,4],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",202386,\"Ben Uzoh\",\"Regular Season\",0,2,2,5,0.4,0,0,0.0,0,0,0.0,2,2,4,2,1,1,0,0,4],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",202389,\"Timofey Mozgov\",\"Regular Season\",0,122,400,693,0.577,1,7,0.143,160,225,0.711,222,434,656,72,272,40,140,113,961],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",202396,\"Samardo Samuels\",\"Regular Season\",0,109,237,532,0.445,0,4,0.0,164,251,0.653,148,218,366,45,231,38,115,41,638],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",202412,\"Manny Harris\",\"Regular Season\",0,80,168,439,0.383,46,128,0.359,112,152,0.737,47,163,210,116,93,44,90,13,494],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",202620,\"Arinze Onuaku\",\"Regular Season\",0,2,0,1,0.0,0,0,0.0,0,0,0.0,0,1,1,0,0,0,0,0,0],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",202681,\"Kyrie Irving\",\"Regular Season\",0,381,3009,6588,0.457,723,1887,0.383,1491,1708,0.873,281,1009,1290,2115,829,504,1031,126,8232],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",202694,\"Marcus Morris Sr.\",\"Regular Season\",0,12,26,59,0.441,12,29,0.414,5,8,0.625,5,20,25,10,13,2,11,2,69],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",202720,\"Jon Leuer\",\"Regular Season\",0,9,10,28,0.357,0,3,0.0,2,6,0.333,5,8,13,5,11,2,5,0,22],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",202732,\"DeAndre Liggins\",\"Regular Season\",0,61,52,136,0.382,17,45,0.378,23,37,0.622,17,84,101,54,78,45,42,14,144],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",202738,\"Isaiah Thomas\",\"Regular Season\",0,15,70,194,0.361,22,87,0.253,59,68,0.868,7,24,31,68,25,9,41,2,221],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",203079,\"Dion Waiters\",\"Regular Season\",0,164,904,2150,0.42,177,539,0.328,367,508,0.722,66,335,401,466,325,166,325,43,2352],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",203089,\"John Henson\",\"Regular Season\",0,29,61,120,0.508,6,31,0.194,17,33,0.515,32,82,114,43,55,16,21,32,145],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",203099,\"Jared Cunningham\",\"Regular Season\",0,40,32,91,0.352,10,32,0.313,30,48,0.625,3,26,29,19,37,12,18,2,104],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",203156,\"Henry Sims\",\"Regular Season\",0,20,18,45,0.4,0,0,0.0,8,14,0.571,22,34,56,5,32,5,8,7,44],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",203467,\"Carrick Felix\",\"Regular Season\",0,7,7,14,0.5,2,5,0.4,3,4,0.75,1,5,6,4,4,0,4,0,19],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",203508,\"Sergey Karasev\",\"Regular Season\",0,22,12,35,0.343,4,19,0.211,9,10,0.9,0,16,16,6,22,3,11,1,37],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",203526,\"Raul Neto\",\"Regular Season\",0,48,57,110,0.518,12,42,0.286,31,34,0.912,10,36,46,79,49,17,24,4,157],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",203895,\"Jordan McRae\",\"Regular Season\",0,52,81,202,0.401,25,62,0.403,36,47,0.766,8,45,53,34,41,8,23,7,223],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",203918,\"Rodney Hood\",\"Regular Season\",0,66,282,653,0.432,80,223,0.359,130,146,0.89,26,140,166,122,142,53,43,10,774],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",203925,\"Joe Harris\",\"Regular Season\",0,56,49,124,0.395,32,88,0.364,9,15,0.6,7,37,44,28,63,7,28,2,139],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",203945,\"Alex Kirk\",\"Regular Season\",0,5,1,4,0.25,0,0,0.0,2,2,1.0,1,0,1,1,1,0,0,0,4],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",204002,\"Edy Tavares\",\"Regular Season\",0,1,3,4,0.75,0,0,0.0,0,1,0.0,4,6,10,1,3,0,2,6,6],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",204066,\"John Holland\",\"Regular Season\",0,25,17,59,0.288,11,36,0.306,9,13,0.692,6,18,24,5,10,7,8,2,54],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",600001,\"Nate Thurmond\",\"Regular Season\",0,114,222,538,0.413,null,null,null,122,211,0.578,222,496,718,151,273,34,null,167,566],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1626150,\"Andrew Harrison\",\"Regular Season\",0,10,12,39,0.308,3,14,0.214,16,16,1.0,4,11,15,17,26,4,10,2,43],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1627745,\"Damian Jones\",\"Regular Season\",0,39,43,72,0.597,3,14,0.214,18,21,0.857,20,42,62,15,27,7,13,13,107],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1627756,\"Denzel Valentine\",\"Regular Season\",0,22,23,62,0.371,18,44,0.409,0,0,0.0,9,29,38,11,17,7,10,0,64],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1627775,\"Patrick McCaw\",\"Regular Season\",0,3,2,9,0.222,1,4,0.25,0,0,0.0,0,3,3,2,1,2,3,0,5],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1628422,\"Damyean Dotson\",\"Regular Season\",0,46,119,293,0.406,46,159,0.289,24,36,0.667,5,88,93,91,42,16,42,4,308],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1628506,\"London Perrantes\",\"Regular Season\",0,14,2,13,0.154,0,3,0.0,3,5,0.6,1,3,4,5,6,2,1,1,7],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1629076,\"Tyler Cook\",\"Regular Season\",0,11,7,10,0.7,0,0,0.0,5,6,0.833,4,6,10,1,4,1,1,0,19],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1629122,\"J.P. Macura\",\"Regular Season\",0,1,0,0,0.0,0,0,0.0,0,0,0.0,0,0,0,0,0,0,0,0,0],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1629603,\"Mamadi Diakite\",\"Regular Season\",0,22,24,50,0.48,7,21,0.333,2,2,1.0,8,22,30,8,26,4,12,9,57],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1629622,\"Max Strus\",\"Regular Season\",1,120,469,1101,0.426,281,772,0.364,105,131,0.802,119,436,555,441,274,90,166,41,1324],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1629643,\"Chuma Okeke\",\"Regular Season\",0,2,2,7,0.286,1,6,0.167,0,0,0.0,1,3,4,2,0,0,0,1,5],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1629650,\"Moses Brown\",\"Regular Season\",0,14,37,58,0.638,0,0,0.0,16,29,0.552,23,51,74,0,25,4,6,7,90],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1629662,\"Mfiondu Kabengele\",\"Regular Season\",0,16,24,57,0.421,9,32,0.281,11,14,0.786,11,35,46,12,18,6,9,10,68],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1629685,\"Dylan Windler\",\"Regular Season\",0,84,96,231,0.416,48,149,0.322,36,45,0.8,41,155,196,68,84,34,49,15,276],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1629725,\"Jeremiah Martin\",\"Regular Season\",0,9,9,33,0.273,3,12,0.25,1,5,0.2,2,5,7,4,1,5,6,2,22],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1629760,\"Matt Mooney\",\"Regular Season\",0,4,1,4,0.25,0,2,0.0,0,0,0.0,0,3,3,1,1,2,0,1,2],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1630271,\"Brodric Thomas\",\"Regular Season\",0,28,37,101,0.366,15,53,0.283,26,39,0.667,7,42,49,26,35,14,18,9,115],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1630600,\"Isaiah Mobley\",\"Regular Season\",0,22,22,52,0.423,6,18,0.333,4,5,0.8,7,23,30,9,14,6,3,3,54],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1641734,\"Emoni Bates\",\"Regular Season\",0,25,28,87,0.322,21,63,0.333,1,4,0.25,1,20,21,18,9,2,10,3,78],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",37,\"Greg Graham\",\"Regular Season\",0,6,7,12,0.583,0,3,0.0,2,2,1.0,0,1,1,6,7,1,10,0,16],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",70,\"Steve Kerr\",\"Regular Season\",0,188,417,902,0.462,133,282,0.472,155,182,0.852,31,189,220,500,142,103,147,21,1122],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",105,\"Dan Majerle\",\"Regular Season\",0,82,303,748,0.405,146,414,0.353,120,169,0.71,70,235,305,214,131,81,93,34,872],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",122,\"Fred Roberts\",\"Regular Season\",0,21,28,72,0.389,4,11,0.364,20,26,0.769,13,21,34,8,26,6,7,3,80],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",180,\"John Crotty\",\"Regular Season\",0,58,51,114,0.447,8,27,0.296,62,72,0.861,20,34,54,102,60,22,51,6,172],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",199,\"Reggie Williams\",\"Regular Season\",0,32,91,239,0.381,6,27,0.222,30,41,0.732,17,43,60,38,79,22,32,10,218],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",210,\"Terrell Brandon\",\"Regular Season\",0,457,2205,4941,0.446,261,724,0.36,1122,1293,0.868,254,981,1235,2235,778,621,818,142,5793],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",221,\"Clar. Weatherspoon\",\"Regular Season\",0,82,347,692,0.501,0,0,0.0,230,291,0.79,223,573,796,103,171,85,112,105,924],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",226,\"Antonio Lang\",\"Regular Season\",0,115,113,245,0.461,0,8,0.0,74,104,0.712,75,121,196,46,185,49,78,43,300],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",229,\"James Edwards\",\"Regular Season\",0,92,601,1183,0.508,0,4,0.0,270,400,0.675,226,451,677,136,408,31,192,131,1472],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",271,\"Johnny Newman\",\"Regular Season\",0,109,219,526,0.416,24,83,0.289,134,160,0.838,51,94,145,68,193,48,87,19,596],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",306,\"Steve Colter\",\"Regular Season\",0,57,67,169,0.396,8,35,0.229,54,71,0.761,13,46,59,101,53,30,36,6,196],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",359,\"Chucky Brown\",\"Regular Season\",0,175,509,1034,0.492,0,12,0.0,247,340,0.726,168,318,486,139,312,68,171,56,1265],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",378,\"Craig Ehlo\",\"Regular Season\",0,513,2049,4430,0.463,381,1001,0.381,624,916,0.681,737,1530,2267,1803,1178,661,833,180,5103],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",406,\"Shaquille O'Neal\",\"Regular Season\",0,53,262,463,0.566,0,1,0.0,112,226,0.496,93,262,355,80,169,15,105,62,636],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",418,\"Scott Brooks\",\"Regular Season\",0,43,28,66,0.424,5,11,0.455,18,20,0.9,6,24,30,49,25,18,12,3,79],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",431,\"Shawn Kemp\",\"Regular Season\",0,204,1279,2899,0.441,5,16,0.313,1204,1580,0.762,581,1277,1858,436,840,256,689,231,3767],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",446,\"Lucious Harris\",\"Regular Season\",0,73,118,299,0.395,21,65,0.323,56,69,0.812,39,82,121,49,68,27,29,6,313],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",462,\"J.R. Reid\",\"Regular Season\",0,6,2,5,0.4,0,0,0.0,6,8,0.75,5,3,8,1,4,2,1,1,10],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",673,\"Alan Henderson\",\"Regular Season\",0,51,47,91,0.516,0,0,0.0,33,49,0.673,60,77,137,10,58,9,22,12,127],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",677,\"Eric Williams\",\"Regular Season\",0,50,154,421,0.366,24,95,0.253,137,174,0.787,44,147,191,95,128,48,57,8,469],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",681,\"Donny Marshall\",\"Regular Season\",0,96,79,239,0.331,40,120,0.333,65,95,0.684,31,66,97,31,93,34,42,5,263],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",682,\"Bob Sura\",\"Regular Season\",0,330,914,2203,0.415,230,679,0.339,609,945,0.644,206,721,927,1230,756,327,604,94,2667],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",683,\"Darryl Johnson\",\"Regular Season\",0,11,5,12,0.417,0,1,0.0,2,2,1.0,2,0,2,1,3,0,1,0,12],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",693,\"Joe Smith\",\"Regular Season\",0,48,144,285,0.505,1,5,0.2,66,97,0.68,91,145,236,35,123,16,32,30,355],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",754,\"Jim Jackson\",\"Regular Season\",0,39,162,415,0.39,10,42,0.238,66,84,0.786,36,109,145,113,97,34,82,6,400],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",770,\"Mark West\",\"Regular Season\",0,334,710,1283,0.553,0,3,0.0,306,570,0.537,464,914,1378,145,957,98,397,325,1726],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",786,\"Gerald Wilkins\",\"Regular Season\",0,162,807,1772,0.455,100,270,0.37,346,431,0.803,180,337,517,438,340,183,225,56,2060],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",899,\"Mark Price\",\"Regular Season\",0,582,3429,7165,0.479,802,1960,0.409,1883,2078,0.906,348,1185,1533,4206,765,734,1457,68,9543],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",921,\"Brad Daugherty\",\"Regular Season\",0,548,3823,7189,0.532,2,14,0.143,2741,3670,0.747,1207,4020,5227,2028,1466,422,1511,397,10389],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",923,\"Donyell Marshall\",\"Regular Season\",0,173,487,1208,0.403,231,689,0.335,152,212,0.717,200,645,845,111,306,100,163,93,1357],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",953,\"Lorenzen Wright\",\"Regular Season\",0,17,10,27,0.37,0,0,0.0,3,8,0.375,7,18,25,3,17,4,9,5,23],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",958,\"Vitaly Potapenko\",\"Regular Season\",0,177,475,1037,0.458,1,4,0.25,227,318,0.714,238,386,624,113,467,64,269,78,1178],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",971,\"Mark Hendrickson\",\"Regular Season\",0,10,5,7,0.714,0,0,0.0,2,2,1.0,2,9,11,3,7,2,3,1,12],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",976,\"Jeff McInnis\",\"Regular Season\",0,107,515,1246,0.413,122,344,0.355,186,227,0.819,49,190,239,625,246,92,176,5,1338],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",980,\"Zydrunas Ilgauskas\",\"Regular Season\",0,771,4045,8523,0.475,31,99,0.313,2495,3197,0.78,2336,3568,5904,929,2591,398,1457,1269,10616],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1036,\"Litterial Green\",\"Regular Season\",0,1,0,1,0.0,0,0,0.0,0,0,0.0,0,0,0,0,0,0,0,0,0],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1068,\"Greg Dreiling\",\"Regular Season\",0,58,42,102,0.412,0,0,0.0,26,41,0.634,32,84,116,22,108,6,25,22,110],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1112,\"Ben Wallace\",\"Regular Season\",0,78,106,236,0.449,0,0,0.0,46,108,0.426,195,330,525,57,117,67,52,112,258],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1138,\"Michael Hawkins\",\"Regular Season\",0,10,3,9,0.333,2,4,0.5,0,0,0.0,2,3,5,13,13,2,6,0,8],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1563,\"Kevin Ollie\",\"Regular Season\",0,82,95,257,0.37,4,9,0.444,147,176,0.835,23,147,170,234,119,51,81,8,341],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1565,\"Michael Stewart\",\"Regular Season\",0,55,17,44,0.386,0,0,0.0,10,14,0.714,24,49,73,6,63,3,11,23,44],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1666,\"Gerald Madkins\",\"Regular Season\",0,29,13,37,0.351,6,17,0.353,11,14,0.786,1,10,11,20,18,11,16,0,43],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1712,\"Antawn Jamison\",\"Regular Season\",0,146,958,2256,0.425,209,609,0.343,398,588,0.677,246,730,976,256,368,129,197,85,2523],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1716,\"Larry Hughes\",\"Regular Season\",0,146,753,1900,0.396,145,424,0.342,443,610,0.726,94,477,571,481,372,202,325,58,2094],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1720,\"Michael Doleac\",\"Regular Season\",0,42,78,187,0.417,0,0,0.0,38,46,0.826,47,121,168,25,98,15,37,11,194],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1723,\"Matt Harpring\",\"Regular Season\",0,56,238,524,0.454,13,52,0.25,134,165,0.812,90,152,242,102,161,42,90,17,623],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1730,\"Brian Skinner\",\"Regular Season\",0,65,88,162,0.543,0,0,0.0,48,79,0.608,93,188,281,17,130,24,42,61,224],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1741,\"Jelani McCoy\",\"Regular Season\",0,2,0,0,0.0,0,0,0.0,0,0,0.0,1,3,4,0,4,0,1,0,0],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1756,\"Ryan Stack\",\"Regular Season\",0,43,31,88,0.352,0,1,0.0,37,47,0.787,34,45,79,10,78,6,26,22,99],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1800,\"Damon Jones\",\"Regular Season\",0,209,478,1209,0.395,344,878,0.392,82,122,0.672,28,243,271,389,231,72,127,4,1382],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1889,\"Andre Miller\",\"Regular Season\",0,245,1265,2799,0.452,49,200,0.245,966,1189,0.812,287,732,1019,2015,651,329,676,79,3545],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1890,\"Shawn Marion\",\"Regular Season\",0,57,119,267,0.446,12,46,0.261,26,34,0.765,64,138,202,51,58,27,33,27,276],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1920,\"A.J. Bramlett\",\"Regular Season\",0,8,4,21,0.19,0,0,0.0,0,0,0.0,12,10,22,0,13,1,3,0,8],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1924,\"Lee Nailon\",\"Regular Season\",0,22,73,162,0.451,0,3,0.0,24,30,0.8,30,36,66,17,36,4,21,1,170],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1960,\"Milt Palacio\",\"Regular Season\",0,80,162,388,0.418,8,37,0.216,65,87,0.747,48,187,235,259,168,68,131,16,397],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2032,\"Darius Miles\",\"Regular Season\",0,104,406,973,0.417,5,44,0.114,131,227,0.577,161,369,530,256,243,92,234,96,948],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2034,\"Mike Miller\",\"Regular Season\",0,52,37,114,0.325,32,98,0.327,3,4,0.75,4,87,91,46,74,14,23,4,109],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2036,\"Chris Mihm\",\"Regular Season\",0,207,569,1331,0.427,3,11,0.273,334,458,0.729,379,664,1043,78,598,65,250,202,1475],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2040,\"Jerome Moiso\",\"Regular Season\",0,4,3,5,0.6,0,0,0.0,0,0,0.0,1,6,7,1,4,1,0,2,6],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2043,\"Mateen Cleaves\",\"Regular Season\",0,4,7,23,0.304,0,1,0.0,1,2,0.5,1,6,7,19,13,4,5,2,15],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2205,\"DeSagana Diop\",\"Regular Season\",0,193,143,399,0.358,0,2,0.0,24,60,0.4,170,331,501,97,336,68,109,169,310],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2244,\"Jeff Trepagnier\",\"Regular Season\",0,12,7,23,0.304,0,1,0.0,4,7,0.571,3,9,12,12,8,8,11,4,18],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2400,\"Drew Gooden\",\"Regular Season\",0,292,1401,2902,0.483,7,40,0.175,679,918,0.74,824,1698,2522,324,777,234,445,183,3488],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2402,\"Dajuan Wagner\",\"Regular Season\",0,102,353,966,0.365,91,286,0.318,163,211,0.773,29,113,142,194,211,69,135,14,960],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2412,\"Jiri Welsch\",\"Regular Season\",0,16,12,51,0.235,2,11,0.182,20,28,0.714,6,22,28,19,16,5,15,0,46],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2436,\"Flip Murray\",\"Regular Season\",0,28,142,317,0.448,20,65,0.308,73,104,0.702,15,52,67,77,64,38,56,7,377],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2548,\"Dwyane Wade\",\"Regular Season\",0,46,198,435,0.455,23,70,0.329,94,134,0.701,39,142,181,163,84,42,92,32,513],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2563,\"Dahntay Jones\",\"Regular Season\",0,2,9,22,0.409,1,4,0.25,3,4,0.75,2,5,7,3,7,1,1,2,22],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2574,\"Jason Kapono\",\"Regular Season\",0,41,52,129,0.403,21,44,0.477,20,24,0.833,19,36,55,14,41,13,21,2,145],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2575,\"Luke Walton\",\"Regular Season\",0,71,89,232,0.384,27,83,0.325,10,20,0.5,45,135,180,196,130,45,85,14,215],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2592,\"James Jones\",\"Regular Season\",0,153,176,435,0.405,135,345,0.391,73,92,0.793,20,129,149,52,154,30,36,28,560],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2733,\"Shaun Livingston\",\"Regular Season\",0,49,142,280,0.507,0,1,0.0,70,83,0.843,29,92,121,177,105,37,59,29,354],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2736,\"Luol Deng\",\"Regular Season\",0,40,211,506,0.417,40,127,0.315,111,144,0.771,59,144,203,98,58,38,55,5,573],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2760,\"Anderson Varejao\",\"Regular Season\",0,596,1782,3488,0.511,1,43,0.023,933,1478,0.631,1486,2968,4454,712,1582,529,579,399,4498],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2873,\"Billy Thomas\",\"Regular Season\",0,7,4,14,0.286,4,13,0.308,0,0,0.0,0,2,2,0,4,1,3,0,12],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76022,\"Gary Alexander\",\"Regular Season\",0,7,7,12,0.583,0,0,0.0,3,7,0.429,6,6,12,1,7,3,7,0,17],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76035,\"Cliff Anderson\",\"Regular Season\",0,23,19,59,0.322,null,null,null,41,60,0.683,null,null,37,16,22,null,null,null,79],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76046,\"Ron Anderson\",\"Regular Season\",0,53,121,269,0.45,1,3,0.333,53,66,0.803,44,70,114,42,60,10,40,7,296],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76079,\"Milos Babic\",\"Regular Season\",0,12,6,19,0.316,0,0,0.0,7,12,0.583,6,3,9,4,7,1,5,1,19],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76082,\"John Bagley\",\"Regular Season\",0,375,1434,3270,0.439,45,197,0.228,629,800,0.786,251,819,1070,2311,598,474,897,31,3542],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76151,\"Mel Bennett\",\"Regular Season\",0,3,2,4,0.5,0,0,0.0,1,6,0.167,1,2,3,0,2,1,4,0,5],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76239,\"Brad Branson\",\"Regular Season\",0,10,21,52,0.404,0,0,0.0,11,12,0.917,14,19,33,6,17,5,13,4,53],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76242,\"Mike Bratz\",\"Regular Season\",0,80,319,817,0.39,57,169,0.337,107,132,0.811,66,132,198,452,194,136,162,17,802],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76249,\"Ron Brewer\",\"Regular Season\",0,108,568,1293,0.439,10,41,0.244,211,260,0.812,65,136,201,188,184,96,137,35,1357],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76336,\"Mack Calvin\",\"Regular Season\",0,21,13,39,0.333,1,5,0.2,25,35,0.714,2,10,12,28,13,5,17,0,52],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76348,\"Austin Carr\",\"Regular Season\",0,635,4272,9480,0.451,2,6,0.333,1719,2127,0.808,689,721,1929,1820,1341,418,429,64,10265],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76382,\"Len Chappell\",\"Regular Season\",0,6,15,38,0.395,null,null,null,11,14,0.786,null,null,18,1,9,null,null,null,41],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76387,\"Derrick Chievous\",\"Regular Season\",0,32,32,88,0.364,0,1,0.0,28,40,0.7,18,15,33,6,27,6,11,2,92],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76402,\"Jim Cleamons\",\"Regular Season\",0,377,1467,3213,0.457,null,null,null,594,775,0.766,383,803,1359,1550,797,335,null,81,3528],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76436,\"Jeff Cook\",\"Regular Season\",0,129,321,654,0.491,1,4,0.25,149,207,0.72,290,504,794,190,427,100,156,74,792],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76474,\"Jeffrey Crompton\",\"Regular Season\",0,7,1,8,0.125,0,0,0.0,3,6,0.5,6,3,9,1,4,1,4,1,5],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76569,\"Mickey Dillard\",\"Regular Season\",0,33,29,79,0.367,0,4,0.0,15,23,0.652,6,9,15,34,40,8,17,2,73],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76734,\"Don Ford\",\"Regular Season\",0,106,174,392,0.444,1,6,0.167,49,55,0.891,109,177,286,124,175,34,85,18,398],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76753,\"World Free\",\"Regular Season\",0,275,2372,5227,0.454,179,473,0.378,1406,1835,0.766,292,511,803,1061,738,342,624,55,6329],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76789,\"Rowland Garrett\",\"Regular Season\",0,70,91,220,0.414,null,null,null,33,43,0.767,28,54,82,17,66,24,null,6,215],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76855,\"Butch Graves\",\"Regular Season\",0,4,2,6,0.333,0,1,0.0,1,5,0.2,0,2,2,1,4,1,1,0,5],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",76980,\"Steve Hayes\",\"Regular Season\",0,65,104,217,0.479,0,1,0.0,29,51,0.569,102,134,236,36,215,17,49,41,237],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77010,\"Keith Herron\",\"Regular Season\",0,30,39,106,0.368,0,1,0.0,7,8,0.875,10,11,21,23,25,8,12,2,85],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77021,\"Kenny Higgs\",\"Regular Season\",0,68,127,279,0.455,null,null,null,85,111,0.766,18,84,102,141,176,66,47,11,339],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77030,\"Roy Hinson\",\"Regular Season\",0,238,1270,2463,0.516,0,7,0.0,704,999,0.705,528,1206,1734,239,933,144,468,430,3244],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77071,\"Phil Hubbard\",\"Regular Season\",0,469,1822,3653,0.499,0,18,0.0,1318,1858,0.709,1051,1309,2360,570,1378,408,862,43,4962],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77087,\"Geoff Huston\",\"Regular Season\",0,268,1162,2381,0.488,9,34,0.265,455,629,0.723,138,307,445,1630,553,195,550,17,2788],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77152,\"John Johnson\",\"Regular Season\",0,231,1484,3461,0.429,null,null,null,716,922,0.777,null,null,1636,1047,765,null,null,null,3684],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77163,\"Reggie Johnson\",\"Regular Season\",0,23,94,175,0.537,0,0,0.0,35,44,0.795,43,82,125,22,73,6,24,17,223],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77205,\"Eddie Jordan\",\"Regular Season\",0,22,19,56,0.339,null,null,null,12,16,0.75,2,9,11,32,10,12,14,1,50],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77209,\"Walter Jordan\",\"Regular Season\",0,30,29,75,0.387,0,0,0.0,10,17,0.588,23,19,42,11,35,11,17,5,68],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77331,\"John Lambert\",\"Regular Season\",0,340,574,1337,0.429,0,3,0.0,185,277,0.668,479,746,1225,187,666,123,193,151,1333],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77335,\"Jerome Lane\",\"Regular Season\",0,21,27,54,0.5,0,0,0.0,5,20,0.25,24,29,53,17,32,12,7,3,59],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77442,\"Dave Magley\",\"Regular Season\",0,14,4,16,0.25,0,1,0.0,4,8,0.5,2,8,10,2,5,2,2,0,12],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77518,\"Scooter McCray\",\"Regular Season\",0,24,30,65,0.462,0,0,0.0,20,41,0.488,19,39,58,23,28,9,24,4,80],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77524,\"Ben McDonald\",\"Regular Season\",0,21,28,58,0.483,0,1,0.0,5,8,0.625,15,23,38,9,30,7,10,1,61],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77548,\"Mccoy McLemore\",\"Regular Season\",0,58,254,654,0.388,null,null,null,170,220,0.773,null,null,463,176,169,null,null,null,678],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77591,\"Larry Mikan\",\"Regular Season\",0,53,62,186,0.333,null,null,null,34,55,0.618,null,null,139,41,56,null,null,null,158],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77609,\"Dirk Minniefield\",\"Regular Season\",0,87,180,389,0.463,10,42,0.238,74,97,0.763,44,97,141,282,173,71,120,2,444],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77615,\"Mike Mitchell\",\"Regular Season\",0,271,2219,4483,0.495,4,21,0.19,775,1006,0.77,619,944,1563,331,750,211,504,173,5217],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77635,\"Lowes Moore\",\"Regular Season\",0,4,19,38,0.5,1,5,0.2,6,8,0.75,1,3,4,15,15,6,5,1,45],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77789,\"Gerald Paddio\",\"Regular Season\",0,70,212,506,0.419,6,24,0.25,74,93,0.796,38,80,118,90,71,20,71,6,504],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77812,\"Steve Patterson\",\"Regular Season\",0,298,603,1485,0.406,null,null,null,182,306,0.595,342,634,1432,372,491,72,null,83,1388],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77873,\"Ben Poquette\",\"Regular Season\",0,248,492,1058,0.465,6,35,0.171,246,319,0.771,346,759,1105,234,572,106,183,145,1236],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77957,\"Jackie Ridgle\",\"Regular Season\",0,32,19,44,0.432,null,null,null,19,26,0.731,null,null,15,7,15,null,null,null,57],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77986,\"Cliff T. Robinson\",\"Regular Season\",0,180,1316,2850,0.462,1,8,0.125,544,768,0.708,437,1459,1896,379,569,154,474,133,3177],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",77997,\"Bill Robinzine\",\"Regular Season\",0,8,14,32,0.438,0,0,0.0,5,8,0.625,4,9,13,5,19,4,10,0,33],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78007,\"Johnny Rogers\",\"Regular Season\",0,24,26,61,0.426,0,2,0.0,10,13,0.769,8,19,27,3,23,4,10,3,62],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78042,\"Bob Rule\",\"Regular Season\",0,75,136,349,0.39,null,null,null,54,77,0.701,43,60,209,84,137,12,null,10,326],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78150,\"James Silas\",\"Regular Season\",0,67,251,573,0.438,0,5,0.0,246,286,0.86,26,83,109,222,109,40,107,6,748],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78200,\"Randy Smith\",\"Regular Season\",0,164,1085,2369,0.458,11,81,0.136,454,554,0.819,139,310,449,720,322,238,395,21,2635],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78202,\"Bingo Smith\",\"Regular Season\",0,720,4182,9256,0.452,1,5,0.2,1148,1434,0.801,561,1366,3057,1566,1752,372,165,152,9513],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78213,\"Dick Snyder\",\"Regular Season\",0,304,1367,2814,0.486,null,null,null,503,596,0.844,143,491,634,717,692,196,48,125,3237],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78343,\"Darren Tillis\",\"Regular Season\",0,37,69,158,0.437,0,0,0.0,14,22,0.636,37,84,121,16,68,8,18,28,152],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78352,\"Sedric Toney\",\"Regular Season\",0,12,2,12,0.167,0,1,0.0,2,2,1.0,1,2,3,11,8,0,5,0,6],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78419,\"Gary Voce\",\"Regular Season\",0,1,1,3,0.333,0,0,0.0,0,0,0.0,2,0,2,0,0,0,0,0,2],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78436,\"Foots Walker\",\"Regular Season\",0,427,1164,2650,0.439,1,9,0.111,744,979,0.76,368,899,1267,2115,959,722,465,70,3073],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78460,\"Cornell Warner\",\"Regular Season\",0,73,168,417,0.403,null,null,null,62,92,0.674,5,12,524,70,179,0,null,2,398],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78469,\"Bobby Washington\",\"Regular Season\",0,116,246,619,0.397,null,null,null,208,268,0.776,null,null,234,413,240,null,null,null,700],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78482,\"Scott Wedman\",\"Regular Season\",0,89,540,1172,0.461,14,45,0.311,131,167,0.784,197,315,512,219,334,96,167,25,1225],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78495,\"Walt Wesley\",\"Regular Season\",0,176,991,2294,0.432,null,null,null,529,776,0.682,null,null,1462,166,561,null,null,null,2511],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78516,\"Jerome Whitehead\",\"Regular Season\",0,3,1,3,0.333,0,0,0.0,0,0,0.0,2,1,3,0,6,1,0,0,2],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",78614,\"Mike Woodson\",\"Regular Season\",0,4,5,23,0.217,0,1,0.0,1,1,1.0,1,1,2,5,7,0,5,1,11],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",101106,\"Andrew Bogut\",\"Regular Season\",0,1,0,0,0.0,0,0,0.0,0,0,0.0,0,0,0,0,2,0,0,0,0],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",101112,\"Channing Frye\",\"Regular Season\",0,180,436,967,0.451,242,618,0.392,99,117,0.846,63,482,545,119,292,64,96,62,1213],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",101114,\"Deron Williams\",\"Regular Season\",0,24,68,147,0.463,22,53,0.415,21,25,0.84,1,44,45,86,42,6,40,6,179],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",101115,\"Andrew Bynum\",\"Regular Season\",0,24,85,203,0.419,0,0,0.0,32,42,0.762,47,79,126,27,28,6,30,28,202],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",101139,\"CJ Miles\",\"Regular Season\",0,116,433,1023,0.423,209,539,0.388,157,182,0.863,42,235,277,115,241,95,113,32,1232],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",101149,\"Martynas Andriuskevicius\",\"Regular Season\",0,6,0,1,0.0,0,0,0.0,0,0,0.0,1,3,4,0,1,2,0,0,0],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",101204,\"Dwayne Jones\",\"Regular Season\",0,60,25,48,0.521,0,1,0.0,31,64,0.484,70,76,146,10,91,10,19,25,81],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",101211,\"Stephen Graham\",\"Regular Season\",0,13,14,33,0.424,0,1,0.0,8,9,0.889,4,13,17,3,23,3,7,2,36],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",200081,\"Jamario Moon\",\"Regular Season\",0,101,190,436,0.436,59,195,0.303,46,56,0.821,40,269,309,94,108,59,40,57,485],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",200789,\"Daniel Gibson\",\"Regular Season\",0,397,1065,2646,0.402,578,1419,0.407,407,522,0.78,142,650,792,775,811,243,373,86,3115],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",200797,\"Ryan Hollins\",\"Regular Season\",0,94,159,275,0.578,0,0,0.0,144,218,0.661,95,147,242,32,254,26,91,54,462],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",200811,\"Lou Amundson\",\"Regular Season\",0,12,4,12,0.333,0,0,0.0,3,5,0.6,5,15,20,5,11,1,5,0,11],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",200814,\"Tarence Kinsey\",\"Regular Season\",0,50,31,69,0.449,7,18,0.389,33,38,0.868,10,28,38,10,34,12,22,0,102],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",201207,\"Coby Karl\",\"Regular Season\",0,3,0,0,0.0,0,0,0.0,0,0,0.0,0,2,2,0,0,0,4,0,0],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",201565,\"Derrick Rose\",\"Regular Season\",0,16,58,132,0.439,6,24,0.25,35,41,0.854,10,19,29,26,14,3,28,4,157],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",201577,\"Robin Lopez\",\"Regular Season\",0,37,48,75,0.64,2,4,0.5,14,18,0.778,23,28,51,19,43,2,25,8,112],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",201580,\"JaVale McGee\",\"Regular Season\",0,33,112,215,0.521,5,20,0.25,36,55,0.655,54,116,170,33,80,16,45,40,265],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",201581,\"JJ Hickson\",\"Regular Season\",0,223,818,1652,0.495,0,6,0.0,403,597,0.675,379,881,1260,140,428,98,310,123,2039],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",201588,\"George Hill\",\"Regular Season\",0,37,138,294,0.469,40,105,0.381,50,61,0.82,32,59,91,103,88,34,48,16,366],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",201616,\"Darnell Jackson\",\"Regular Season\",0,78,45,111,0.405,1,5,0.2,28,41,0.683,40,67,107,12,96,12,27,8,119],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",201956,\"Omri Casspi\",\"Regular Season\",0,108,229,572,0.4,78,244,0.32,96,149,0.644,83,259,342,94,160,62,86,33,632],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",201985,\"AJ Price\",\"Regular Season\",0,11,9,34,0.265,0,11,0.0,4,6,0.667,4,11,15,13,1,3,3,0,22],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",201991,\"Lester Hudson\",\"Regular Season\",0,13,59,151,0.391,15,61,0.246,32,38,0.842,7,39,46,35,26,14,30,3,165],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",202132,\"Cedric Jackson\",\"Regular Season\",0,5,0,2,0.0,0,1,0.0,1,4,0.25,0,1,1,2,0,0,1,0,1],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",202197,\"Shane Edwards\",\"Regular Season\",0,2,1,3,0.333,0,0,0.0,0,0,0.0,1,1,2,0,1,0,1,0,2],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",202334,\"Ed Davis\",\"Regular Season\",0,31,11,16,0.688,0,0,0.0,6,14,0.429,14,50,64,7,33,3,5,9,28],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",202376,\"Luke Harangody\",\"Regular Season\",0,42,74,200,0.37,19,77,0.247,23,30,0.767,43,98,141,26,61,17,15,13,190],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",202388,\"Donald Sloan\",\"Regular Season\",0,45,98,254,0.386,9,41,0.22,41,51,0.804,18,69,87,129,49,15,55,3,246],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",202682,\"Derrick Williams\",\"Regular Season\",0,25,54,107,0.505,21,52,0.404,27,39,0.692,3,54,57,14,27,5,14,2,156],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",202684,\"Tristan Thompson\",\"Regular Season\",0,708,2448,4715,0.519,9,36,0.25,1164,1953,0.596,2220,3481,5701,699,1533,331,761,472,6069],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",202688,\"Brandon Knight\",\"Regular Season\",0,43,116,299,0.388,55,161,0.342,22,36,0.611,12,58,70,93,68,24,41,4,309],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",202692,\"Alec Burks\",\"Regular Season\",0,34,136,340,0.4,45,119,0.378,79,98,0.806,26,160,186,98,62,25,46,16,396],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",202697,\"Iman Shumpert\",\"Regular Season\",0,182,442,1108,0.399,188,563,0.334,140,183,0.765,111,494,605,275,362,176,200,63,1212],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",202810,\"D.J. Kennedy\",\"Regular Season\",0,2,5,12,0.417,2,4,0.5,0,2,0.0,1,6,7,3,7,2,3,0,12],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",202814,\"Mychel Thompson\",\"Regular Season\",0,5,7,24,0.292,4,11,0.364,0,0,0.0,0,5,5,7,8,2,5,1,18],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",202951,\"Jeremy Pargo\",\"Regular Season\",0,25,75,187,0.401,18,57,0.316,28,41,0.683,7,25,32,64,32,12,37,2,196],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",203092,\"Tyler Zeller\",\"Regular Season\",0,147,401,849,0.472,0,5,0.0,207,278,0.745,262,458,720,132,388,53,155,108,1009],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",203109,\"Jae Crowder\",\"Regular Season\",0,53,157,376,0.418,62,189,0.328,78,92,0.848,41,132,173,58,124,41,42,12,454],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",203158,\"Kevin Jones\",\"Regular Season\",0,32,43,107,0.402,0,0,0.0,9,15,0.6,38,40,78,10,25,9,8,5,95],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",203461,\"Anthony Bennett\",\"Regular Season\",0,52,80,225,0.356,13,53,0.245,44,69,0.638,49,106,155,17,93,21,47,8,217],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",203521,\"Matthew Dellavedova\",\"Regular Season\",0,321,608,1568,0.388,288,796,0.362,198,241,0.822,129,448,577,1118,616,137,359,21,1702],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",203805,\"Will Cherry\",\"Regular Season\",0,8,5,19,0.263,2,9,0.222,3,6,0.5,1,4,5,8,10,6,4,1,15],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",203816,\"Scotty Hopson\",\"Regular Season\",0,2,0,4,0.0,0,2,0.0,1,2,0.5,0,0,0,1,0,1,0,0,1],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",203917,\"Nik Stauskas\",\"Regular Season\",0,24,40,109,0.367,27,63,0.429,25,28,0.893,8,39,47,19,19,7,11,3,132],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",203957,\"Dante Exum\",\"Regular Season\",0,30,56,122,0.459,15,48,0.313,31,43,0.721,11,61,72,46,39,16,28,8,158],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",204025,\"Tim Frazier\",\"Regular Season\",0,2,1,2,0.5,0,0,0.0,0,0,0.0,0,0,0,1,3,0,2,0,2],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1626147,\"Justin Anderson\",\"Regular Season\",0,3,4,8,0.5,2,6,0.333,3,4,0.75,0,6,6,6,4,1,2,0,13],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1626155,\"Sam Dekker\",\"Regular Season\",0,9,22,48,0.458,5,13,0.385,8,10,0.8,9,24,33,9,13,11,5,0,57],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1626188,\"Quinn Cook\",\"Regular Season\",0,7,17,42,0.405,6,13,0.462,3,3,1.0,2,10,12,13,8,3,4,0,43],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1626224,\"Cedi Osman\",\"Regular Season\",0,404,1421,3327,0.427,628,1777,0.353,468,655,0.715,191,1040,1231,814,801,276,436,60,3938],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1627737,\"Marquese Chriss\",\"Regular Season\",0,27,56,146,0.384,15,57,0.263,26,38,0.684,33,81,114,16,64,15,24,7,153],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1627748,\"Thon Maker\",\"Regular Season\",0,8,10,18,0.556,0,2,0.0,10,11,0.909,8,10,18,4,7,2,3,4,30],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1627770,\"Kay Felder\",\"Regular Season\",0,42,62,158,0.392,7,22,0.318,35,49,0.714,3,38,41,58,38,18,30,7,166],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1627777,\"Georges Niang\",\"Regular Season\",0,133,450,980,0.459,239,621,0.385,74,89,0.831,56,411,467,165,321,47,120,25,1213],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1627790,\"Ante Zizic\",\"Regular Season\",0,113,273,470,0.581,0,0,0.0,128,180,0.711,150,296,446,64,170,22,82,40,674],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1627812,\"Yogi Ferrell\",\"Regular Season\",0,2,8,21,0.381,3,9,0.333,0,2,0.0,3,4,7,5,4,3,3,1,19],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1627883,\"Jalen Jones\",\"Regular Season\",0,16,26,62,0.419,10,28,0.357,19,27,0.704,11,23,34,7,27,9,8,2,81],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1628021,\"David Nwaba\",\"Regular Season\",0,51,126,262,0.481,24,75,0.32,58,85,0.682,41,122,163,54,106,36,29,17,334],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1628035,\"Alfonzo McKinnie\",\"Regular Season\",0,40,73,171,0.427,14,65,0.215,22,31,0.71,37,76,113,14,72,23,26,8,182],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1628417,\"Jaron Blossomgame\",\"Regular Season\",0,27,47,106,0.443,10,39,0.256,10,13,0.769,26,72,98,13,20,7,11,8,114],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1628424,\"Kobi Simmons\",\"Regular Season\",0,1,0,0,0.0,0,0,0.0,0,0,0.0,0,0,0,0,0,0,0,0,0],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1629005,\"Malik Newman\",\"Regular Season\",0,2,3,7,0.429,0,2,0.0,4,4,1.0,0,1,1,1,0,0,2,0,10],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1629061,\"Deng Adel\",\"Regular Season\",0,19,11,36,0.306,6,23,0.261,4,4,1.0,3,16,19,5,13,1,6,4,32],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1629164,\"Brandon Goodwin\",\"Regular Season\",0,36,64,154,0.416,19,55,0.345,24,38,0.632,14,53,67,91,39,25,36,1,171],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1629605,\"Tacko Fall\",\"Regular Season\",0,11,5,12,0.417,0,0,0.0,2,7,0.286,7,16,23,2,3,0,3,6,12],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1629716,\"Marques Bolden\",\"Regular Season\",0,7,1,3,0.333,0,0,0.0,5,8,0.625,3,5,8,0,1,3,2,2,7],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1630205,\"Lamar Stevens\",\"Regular Season\",0,165,347,743,0.467,52,185,0.281,130,183,0.71,119,348,467,102,238,75,91,50,876],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1630286,\"Trevon Scott\",\"Regular Season\",0,2,3,6,0.5,0,1,0.0,0,0,0.0,1,1,2,0,2,1,0,1,6],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1630550,\"JT Thor\",\"Regular Season\",0,9,9,15,0.6,3,6,0.5,7,8,0.875,3,3,6,1,6,2,6,3,28],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1630612,\"Ruben Nembhard Jr.\",\"Regular Season\",0,14,6,18,0.333,0,2,0.0,3,4,0.75,3,4,7,12,2,1,3,0,15],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1630698,\"Kevin Pangos\",\"Regular Season\",0,24,15,46,0.326,6,26,0.231,3,4,0.75,2,9,11,30,11,3,7,0,39],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1642878,\"Tyrese Proctor\",\"Regular Season\",1,40,69,175,0.394,36,106,0.34,23,27,0.852,6,37,43,53,45,16,27,0,197],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1642400,\"Tristan Enaruna\",\"Regular Season\",1,4,4,9,0.444,0,2,0.0,0,1,0.0,5,2,7,2,0,0,1,0,8],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1642281,\"Jaylon Tyson\",\"Regular Season\",1,99,333,675,0.493,126,283,0.445,84,110,0.764,139,233,372,161,181,56,106,24,876],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1641854,\"Craig Porter Jr.\",\"Regular Season\",1,152,281,574,0.49,59,153,0.386,82,121,0.678,107,239,346,346,123,88,128,60,703],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1641772,\"Nae'Qwan Tomlin\",\"Regular Season\",1,50,130,273,0.476,22,99,0.222,48,64,0.75,72,89,161,44,104,34,19,29,330],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1641753,\"Chris Livingston\",\"Regular Season\",0,3,4,7,0.571,0,3,0.0,1,1,1.0,0,3,3,1,4,1,0,0,9],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1631250,\"Pete Nance\",\"Regular Season\",0,8,1,6,0.167,1,1,1.0,0,2,0.0,0,3,3,0,2,1,1,0,3],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1631247,\"Luke Travers\",\"Regular Season\",0,24,14,56,0.25,1,25,0.04,11,11,1.0,17,27,44,17,12,8,11,5,40],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1631165,\"Keon Ellis\",\"Regular Season\",1,6,12,26,0.462,6,19,0.316,1,2,0.5,2,18,20,10,10,10,5,6,31],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1630596,\"Evan Mobley\",\"Regular Season\",1,312,2068,3812,0.542,200,642,0.312,838,1224,0.685,703,2082,2785,956,747,260,604,502,5174],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1630241,\"Sam Merrill\",\"Regular Season\",1,170,482,1134,0.425,397,979,0.406,92,100,0.92,82,280,362,296,283,95,83,23,1453],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1630171,\"Isaac Okoro\",\"Regular Season\",0,334,976,2091,0.467,319,908,0.351,437,598,0.731,308,622,930,536,751,263,263,126,2708],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1629750,\"Javonte Green\",\"Regular Season\",0,18,23,63,0.365,8,33,0.242,5,10,0.5,10,30,40,11,21,10,4,1,59],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1629731,\"Dean Wade\",\"Regular Season\",1,328,615,1432,0.429,391,1065,0.367,128,185,0.692,216,972,1188,352,527,212,121,115,1749],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1629660,\"Ty Jerome\",\"Regular Season\",0,72,321,622,0.516,111,254,0.437,129,148,0.872,51,123,174,240,104,78,93,3,882],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1629645,\"Kevin Porter Jr.\",\"Regular Season\",0,50,186,421,0.442,53,158,0.335,73,101,0.723,22,140,162,109,135,46,93,14,498],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1629636,\"Darius Garland\",\"Regular Season\",0,408,2805,6195,0.453,956,2477,0.386,1105,1275,0.867,206,872,1078,2738,751,468,1200,47,7671],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1629631,\"De'Andre Hunter\",\"Regular Season\",0,70,335,752,0.445,133,378,0.352,183,215,0.851,46,249,295,124,174,49,94,14,986],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1629012,\"Collin Sexton\",\"Regular Season\",0,218,1625,3548,0.458,325,860,0.378,781,944,0.827,189,474,663,720,510,181,541,23,4356],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1628436,\"Luke Kornet\",\"Regular Season\",0,2,1,5,0.2,0,1,0.0,2,3,0.667,2,1,3,1,1,0,0,1,4],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1628418,\"Thomas Bryant\",\"Regular Season\",1,40,74,147,0.503,26,75,0.347,32,38,0.842,34,83,117,26,47,10,17,18,206],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1628392,\"Isaiah Hartenstein\",\"Regular Season\",0,16,53,91,0.582,2,6,0.333,24,35,0.686,25,71,96,40,45,8,23,19,132],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1628386,\"Jarrett Allen\",\"Regular Season\",1,379,2261,3468,0.652,9,60,0.15,1057,1464,0.722,1140,2623,3763,747,679,296,543,424,5588],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1628378,\"Donovan Mitchell\",\"Regular Season\",1,247,2299,4905,0.469,849,2265,0.375,1166,1368,0.852,207,919,1126,1299,556,376,647,89,6613],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1628374,\"Lauri Markkanen\",\"Regular Season\",0,61,313,703,0.445,136,380,0.358,138,159,0.868,59,286,345,81,130,45,54,30,900],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1628366,\"Lonzo Ball\",\"Regular Season\",0,35,53,176,0.301,40,147,0.272,14,21,0.667,26,114,140,136,46,45,52,9,160],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1627752,\"Taurean Prince\",\"Regular Season\",0,29,101,253,0.399,49,118,0.415,41,49,0.837,17,91,108,69,54,20,36,15,292],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1627747,\"Caris LeVert\",\"Regular Season\",0,199,901,2092,0.431,316,871,0.363,377,511,0.738,127,606,733,848,379,197,317,82,2495],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1626204,\"Larry Nance Jr.\",\"Regular Season\",1,208,729,1437,0.507,147,429,0.343,215,312,0.689,404,1029,1433,494,462,261,234,101,1820],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",1626166,\"Cameron Payne\",\"Regular Season\",0,9,27,55,0.491,9,25,0.36,11,16,0.688,3,16,19,23,15,8,11,3,74],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",203903,\"Jordan Clarkson\",\"Regular Season\",0,138,804,1793,0.448,247,712,0.347,285,336,0.848,116,281,397,314,189,93,206,24,2140],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",203552,\"Seth Curry\",\"Regular Season\",0,1,1,3,0.333,1,1,1.0,0,0,0.0,0,1,1,0,0,2,0,0,3],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",203471,\"Dennis Schr\xF6der\",\"Regular Season\",1,6,17,47,0.362,3,17,0.176,13,15,0.867,0,13,13,21,6,9,8,1,50],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",203083,\"Andre Drummond\",\"Regular Season\",0,33,238,485,0.491,4,22,0.182,97,168,0.577,125,301,426,78,94,52,110,40,577],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",201935,\"James Harden\",\"Regular Season\",1,5,27,55,0.491,13,27,0.481,25,28,0.893,4,21,25,43,12,5,15,4,92],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",201567,\"Kevin Love\",\"Regular Season\",0,489,2503,5833,0.429,1096,2915,0.376,1561,1841,0.848,773,3720,4493,1097,880,293,841,176,7663],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",201145,\"Jeff Green\",\"Regular Season\",0,78,295,618,0.477,53,170,0.312,203,234,0.868,60,186,246,99,149,41,75,34,846],[\"00\",1610612739,\"Cleveland
+        Cavaliers\",2544,\"LeBron James\",\"Regular Season\",0,849,8369,17022,0.492,1251,3713,0.337,5130,6998,0.733,1034,5156,6190,6228,1618,1376,2973,695,23119]]}]}"
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '22156'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:36:18 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF1qIeEWcAQAAIj3Zgx7ioBHVDfG0qkd/IrbvgWtl8eUHC7uh8q2wVtI+uEJyUgTXKIyexVlrmiBILMOQZ3PCL9JSQauifeTMnzfi54KwEIu992welFLi1oXO0zC7jmetZJoHGJny2I2edPVXZCT8FsIeOvCqC+Fyn6FISqmBWjSK27tUxdpV4AV+O3yXHqAZWSLFfe//2Ls+qqFBN9D4e4YpwibAEGmtj/FI2Zz+LSaW5y7nror2XA==~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7146;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-0
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '3600.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '1'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '2207.936'
+      x-varnish:
+      - 37987692 36426797
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1
