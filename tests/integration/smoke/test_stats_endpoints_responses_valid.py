@@ -35,8 +35,21 @@ def call_endpoint_and_assert_valid_json(endpoint_spec):
     )
 
 
+def _to_pytest_param(spec):
+    if spec.deprecated:
+        return pytest.param(
+            spec,
+            marks=pytest.mark.deprecated_endpoint(spec.deprecated),
+        )
+    return spec
+
+
 # Run this test on each endpoint in endpoint_specs.
-@pytest.mark.parametrize("endpoint_spec", endpoint_specs, ids=endpoint_id_func)
+@pytest.mark.parametrize(
+    "endpoint_spec",
+    [_to_pytest_param(spec) for spec in endpoint_specs],
+    ids=endpoint_id_func,
+)
 def test_endpoints(endpoint_spec):
     """Smoke test each endpoint call and JSON validity with pacing."""
     call_endpoint_and_assert_valid_json(endpoint_spec)

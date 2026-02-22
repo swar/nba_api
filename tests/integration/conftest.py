@@ -26,3 +26,12 @@ def rate_limit(request):
 def vcr_cassette_dir(request):
     """Store cassettes next to the test file, in a cassettes/ subdirectory."""
     return str(request.fspath.dirpath("cassettes"))
+
+
+def pytest_collection_modifyitems(items):
+    """Auto-skip endpoint specs tagged as deprecated in the smoke catalog."""
+    for item in items:
+        marker = item.get_closest_marker("deprecated_endpoint")
+        if marker:
+            reason = marker.args[0] if marker.args else "deprecated endpoint"
+            item.add_marker(pytest.mark.skip(reason=reason))
