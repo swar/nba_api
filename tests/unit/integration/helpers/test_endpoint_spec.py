@@ -1,7 +1,7 @@
 import pytest
 
-from tests.integration.helpers.constants import GAME_ID, PLAYER_ID  # noqa: E402
-from tests.integration.helpers.models import EndpointSpec  # noqa: E402
+from tests.integration.helpers.constants import GAME_ID, PLAYER_ID
+from tests.integration.helpers.models import EndpointSpec
 
 
 class DemoEndpoint:
