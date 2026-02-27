@@ -122,6 +122,13 @@ def send_live_endpoint(capture="headers", **endpoint_kwargs):
     return call_kwargs.get(capture)
 
 
+@pytest.fixture(autouse=True)
+def reset_http_modules_after_test():
+    """Reload http modules after each test to prevent DEBUG flag and class-reference contamination."""
+    yield
+    reload_http_modules()
+
+
 @pytest.fixture(params=["stats", "live"])
 def send_endpoint(request):
     """Pytest fixture to call either a stats or live endpoint based on the test parameterization."""
@@ -144,13 +151,17 @@ def test_stats_endpoint_custom_headers_in_call():
     assert headers == NEW_STATS_HEADERS
 
 
-def test_stats_endpoint_custom_headers_in_legacy_debug_module():
+def test_stats_endpoint_custom_headers_in_legacy_debug_module(monkeypatch):
     debug_headers = NEW_STATS_HEADERS.copy()
     debug_headers["Some-Header"] = "Some Value"
-    with patch("nba_api.library.debug.debug.STATS_HEADERS", debug_headers, create=True):
-        reload_http_modules()  # Reload Modules to ensure patched debug headers are used
-        headers = send_stats_endpoint()
-        assert headers == debug_headers
+    monkeypatch.setattr(
+        target="nba_api.library.debug.debug.STATS_HEADERS",
+        name=debug_headers,
+        raising=False,
+    )
+    reload_http_modules()  # Reload Modules to ensure patched debug headers are used
+    headers = send_stats_endpoint()
+    assert headers == debug_headers
 
 
 def test_live_endpoint_default_headers():
@@ -163,13 +174,19 @@ def test_live_endpoint_custom_headers_in_call():
     assert headers == NEW_STATS_HEADERS
 
 
-def test_live_endpoint_custom_headers_in_legacy_debug_module_does_not_affect_endpoint():
+def test_live_endpoint_custom_headers_in_legacy_debug_module_does_not_affect_endpoint(
+    monkeypatch,
+):
     debug_headers = NEW_STATS_HEADERS.copy()
     debug_headers["Some-Header"] = "Some Value"
-    with patch("nba_api.library.debug.debug.STATS_HEADERS", debug_headers, create=True):
-        reload_http_modules()  # Reload Modules to ensure patched debug headers are used
-        headers = send_live_endpoint()
-        assert headers == DEFAULT_LIVE_HEADERS
+    monkeypatch.setattr(
+        target="nba_api.library.debug.debug.STATS_HEADERS",
+        name=debug_headers,
+        raising=False,
+    )
+    reload_http_modules()  # Reload Modules to ensure patched debug headers are used
+    headers = send_live_endpoint()
+    assert headers == DEFAULT_LIVE_HEADERS
 
 
 # Test Proxy
@@ -183,11 +200,15 @@ def test_stats_endpoint_custom_proxy_in_call(send_endpoint):
     assert proxies == PROXIES
 
 
-def test_stats_endpoint_customer_proxy_in_legacy_debug_module(send_endpoint):
-    with patch("nba_api.library.debug.debug.PROXY", PROXY_URL, create=True):
-        reload_http_modules()  # Reload Modules to ensure patched debug proxy is used
-        proxies = send_endpoint(capture="proxies")
-        assert proxies == PROXIES
+def test_stats_endpoint_customer_proxy_in_legacy_debug_module(
+    send_endpoint, monkeypatch
+):
+    monkeypatch.setattr(
+        target="nba_api.library.debug.debug.PROXY", name=PROXY_URL, raising=False
+    )
+    reload_http_modules()  # Reload Modules to ensure patched debug proxy is used
+    proxies = send_endpoint(capture="proxies")
+    assert proxies == PROXIES
 
 
 # Test DEBUG
@@ -197,14 +218,14 @@ def test_debug_variable_default_false():
     assert not nba_api.library.http.DEBUG
 
 
-def test_debug_variable_set_in_legacy_debug_module():
-    with patch("nba_api.library.debug.debug.DEBUG", True, create=True):
-        reload_http_modules(
-            reload_debug=False
-        )  # Don't reload debug.py — it would re-assign DEBUG=False
-        import nba_api.library.http
+def test_debug_variable_set_in_legacy_debug_module(monkeypatch):
+    monkeypatch.setattr(
+        target="nba_api.library.debug.debug.DEBUG", name=True, raising=False
+    )
+    reload_http_modules(reload_debug=False)  # Don't reload debug.py, its already set
+    import nba_api.library.http
 
-        assert nba_api.library.http.DEBUG
+    assert nba_api.library.http.DEBUG
 
 
 # Test DEBUG_STORAGE
@@ -214,36 +235,34 @@ def test_debug_storage_variable_default_false():
     assert not nba_api.library.http.DEBUG_STORAGE
 
 
-def test_debug_storage_variable_set_in_legacy_debug_module():
-    with patch("nba_api.library.debug.debug.DEBUG_STORAGE", True, create=True):
-        reload_http_modules(
-            reload_debug=False
-        )  # Don't reload debug.py — it would re-assign DEBUG_STORAGE=False
-        import nba_api.library.http
+def test_debug_storage_variable_set_in_legacy_debug_module(monkeypatch):
+    monkeypatch.setattr(
+        target="nba_api.library.debug.debug.DEBUG_STORAGE", name=True, raising=False
+    )
+    reload_http_modules(reload_debug=False)  # Don't reload debug.py, its already set
+    import nba_api.library.http
 
-        assert nba_api.library.http.DEBUG_STORAGE
+    assert nba_api.library.http.DEBUG_STORAGE
 
 
 @pytest.mark.parametrize(
     "is_file_cached", [True, False], ids=["file_is_cached", "file_is_not_cached"]
 )
-def test_debug_storage_caching(is_file_cached):
+def test_debug_storage_caching(is_file_cached, monkeypatch):
     """When DEBUG + DEBUG_STORAGE are active and a cache file exists, Session.get is not called."""
+    monkeypatch.setattr(
+        target="nba_api.library.debug.debug.DEBUG", name=True, raising=False
+    )
+    monkeypatch.setattr(
+        target="nba_api.library.debug.debug.DEBUG_STORAGE", name=True, raising=False
+    )
+    reload_http_modules(reload_debug=False)  # Don't reload debug.py, its already set
     with (
-        patch("nba_api.library.debug.debug.DEBUG", True, create=True),
-        patch("nba_api.library.debug.debug.DEBUG_STORAGE", True, create=True),
+        patch("os.path.exists", return_value=True),
+        patch("os.path.isfile", return_value=is_file_cached),
+        patch("builtins.open", mock_open(read_data=MOCK_RESPONSE_TEXT)),
+        patch.object(requests.Session, "get", return_value=MOCK_RESPONSE) as mock_get,
     ):
-        reload_http_modules(
-            reload_debug=False
-        )  # Don't reload debug.py — it would re-assign False values
-        with (
-            patch("os.path.exists", return_value=True),
-            patch("os.path.isfile", return_value=is_file_cached),
-            patch("builtins.open", mock_open(read_data=MOCK_RESPONSE_TEXT)),
-            patch.object(
-                requests.Session, "get", return_value=MOCK_RESPONSE
-            ) as mock_get,
-        ):
-            assistleaders.AssistLeaders()
+        assistleaders.AssistLeaders()
 
     assert (not mock_get.called) if is_file_cached else mock_get.called
