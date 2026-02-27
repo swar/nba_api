@@ -15,7 +15,7 @@ class TestCommonTeamRosterEndpoint:
         assert endpoint.parameters["TeamID"] == "1610612739"
         assert endpoint.endpoint == "commonteamroster"
 
-    @patch("nba_api.stats.library.http.NBAStatsHTTP.send_api_request")
+    @patch("nba_api.stats.endpoints.commonteamroster.NBAStatsHTTP.send_api_request")
     def test_endpoint_with_both_datasets(self, mock_request):
         """Test endpoint processes response with both Coaches and CommonTeamRoster."""
         # Mock response with both datasets present
@@ -37,6 +37,8 @@ class TestCommonTeamRosterEndpoint:
         mock_request.return_value = mock_response
 
         endpoint = CommonTeamRoster(team_id="1610612739")
+
+        mock_request.assert_called_once()
 
         # Verify both datasets are accessible
         assert hasattr(endpoint, "coaches")
@@ -61,6 +63,8 @@ class TestCommonTeamRosterEndpoint:
 
         # Should not raise KeyError
         endpoint = CommonTeamRoster(team_id="1610612739")
+
+        mock_request.assert_called_once()
 
         # Verify coaches dataset exists but is empty
         assert hasattr(endpoint, "coaches")
