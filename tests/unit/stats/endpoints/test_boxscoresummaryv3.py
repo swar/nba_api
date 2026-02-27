@@ -294,7 +294,7 @@ class TestBoxScoreSummaryV3Endpoint:
         assert parser.get_other_stats_headers() == _EXPECTED_DATA["OtherStats"]
         assert parser.get_available_video_headers() == _EXPECTED_DATA["AvailableVideo"]
 
-    @patch("nba_api.stats.library.http.NBAStatsHTTP.send_api_request")
+    @patch("nba_api.stats.endpoints.boxscoresummaryv3.NBAStatsHTTP.send_api_request")
     def test_endpoint_with_mocked_request(self, mock_request, json_fixture):
         """Test endpoint processes response correctly."""
         # Mock the HTTP response

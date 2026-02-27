@@ -95,7 +95,7 @@ class TestTeamDashLineupsEndpoint:
         assert "PTS" in overall_fields
         assert "PLUS_MINUS" in overall_fields
 
-    @patch("nba_api.stats.library.http.NBAStatsHTTP.send_api_request")
+    @patch("nba_api.stats.endpoints.teamdashlineups.NBAStatsHTTP.send_api_request")
     def test_endpoint_with_mocked_request(self, mock_request, json_fixture):
         """Test endpoint processes response correctly."""
         # Mock the HTTP response

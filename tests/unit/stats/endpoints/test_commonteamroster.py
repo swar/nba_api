@@ -44,7 +44,7 @@ class TestCommonTeamRosterEndpoint:
         assert endpoint.coaches is not None
         assert endpoint.common_team_roster is not None
 
-    @patch("nba_api.stats.library.http.NBAStatsHTTP.send_api_request")
+    @patch("nba_api.stats.endpoints.commonteamroster.NBAStatsHTTP.send_api_request")
     def test_endpoint_with_missing_coaches_dataset(self, mock_request):
         """Test endpoint handles missing Coaches dataset gracefully (#553)."""
         # Mock response with only CommonTeamRoster (no Coaches)

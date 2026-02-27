@@ -69,7 +69,7 @@ class TestDunkScoreLeadersEndpoint:
         assert "ALLEY_OOP" in dunks_fields
         assert "VIDEO_AVAILABLE" in dunks_fields
 
-    @patch("nba_api.stats.library.http.NBAStatsHTTP.send_api_request")
+    @patch("nba_api.stats.endpoints.dunkscoreleaders.NBAStatsHTTP.send_api_request")
     def test_endpoint_with_mocked_request(self, mock_request, json_fixture):
         """Test endpoint processes response correctly."""
         # Mock the HTTP response

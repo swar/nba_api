@@ -70,7 +70,7 @@ class TestScoreboardV3Endpoint:
             _EXPECTED_DATA["Broadcasters"]
         )
 
-    @patch("nba_api.stats.library.http.NBAStatsHTTP.send_api_request")
+    @patch("nba_api.stats.endpoints.scoreboardv3.NBAStatsHTTP.send_api_request")
     def test_endpoint_with_mocked_request(self, mock_request):
         """Test endpoint processes response correctly."""
         # Mock the HTTP response
