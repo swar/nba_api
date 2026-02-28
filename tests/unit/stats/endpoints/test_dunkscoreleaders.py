@@ -1,6 +1,6 @@
 """Unit tests for DunkScoreLeaders endpoint."""
 
-from typing import Any, Dict
+from typing import Any
 from unittest.mock import Mock, patch
 
 import pytest
@@ -11,7 +11,7 @@ from .data.dunkscoreleaders import DUNKSCORELEADERS_SAMPLE
 
 
 @pytest.fixture
-def json_fixture() -> Dict[str, Any]:
+def json_fixture() -> dict[str, Any]:
     """Load the DunkScoreLeaders fixture."""
     return DUNKSCORELEADERS_SAMPLE
 
@@ -116,7 +116,7 @@ class TestDunkScoreLeadersEndpoint:
         assert "possibleAttemptedCharge" in dunks_fields
         assert "videoAvailable" in dunks_fields
 
-    @patch("nba_api.stats.library.http.NBAStatsHTTP.send_api_request")
+    @patch("nba_api.stats.endpoints.dunkscoreleaders.NBAStatsHTTP.send_api_request")
     def test_endpoint_with_mocked_request(self, mock_request, json_fixture):
         """Test endpoint processes response correctly."""
         # Mock the HTTP response

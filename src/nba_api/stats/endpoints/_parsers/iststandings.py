@@ -12,7 +12,7 @@ class NBAStatsISTStandingsParser:
         game_header = []
         for game in self.nba_dict["teams"][0]["games"]:
             number = game["gameNumber"]
-            for key, value in game.items():
+            for key, _value in game.items():
                 if key == "gameNumber":
                     continue
                 header = key + str(number)

@@ -1,0 +1,586 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQlWITAoT0b2ecAQAATyLagx73nb84pPS9/6Ua1awRtnWl2n13r3yr5oHAgFvp+0E1SPVtQflSPNJyB/QihKBpshv1yb1vHAtmELtF35LoH9hjVWKwrpI7n5wXa2FTDgfhDLHQoh/vDETmltM6aBAY1ND7wOTXPIynlnyolFd1Bpb38sGgtaWIj6KZLXA5wzMkqJWLMCNZ7ELH5QPYJGMxH5H5Vo390LuDkyKtJD009vvuSydfszA1bL7bEqc=~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/teamvsplayer?DateFrom=&DateTo=&GameSegment=&LastNGames=0&LeagueID=00&Location=&MeasureType=Base&Month=0&OpponentTeamID=0&Outcome=&PaceAdjust=N&PerMode=Totals&Period=0&PlayerID=&PlusMinus=N&Rank=N&Season=2025-26&SeasonSegment=&SeasonType=Regular+Season&TeamID=1610612739&VsConference=&VsDivision=&VsPlayerID=1630596
+  response:
+    body:
+      string: '{"resource":"teamvsplayer","parameters":{"MeasureType":"Base","PerMode":"Totals","PlusMinus":"N","PaceAdjust":"N","Rank":"N","LeagueID":"00","Season":"2025-26","SeasonType":"Regular
+        Season","TeamID":0,"Outcome":null,"Location":null,"Month":0,"SeasonSegment":null,"DateFrom":null,"DateTo":null,"OpponentTeamID":0,"VsConference":null,"VsDivision":null,"GameSegment":null,"Period":0,"LastNGames":0,"VsPlayerID":1630596},"resultSets":[{"name":"Overall","headers":["GROUP_SET","GROUP_VALUE","TEAM_ID","TEAM_ABBREVIATION","GP","W","L","W_PCT","MIN","FGM","FGA","FG_PCT","FG3M","FG3A","FG3_PCT","FTM","FTA","FT_PCT","OREB","DREB","REB","AST","TOV","STL","BLK","BLKA","PF","PFD","PTS","PLUS_MINUS","GP_RANK","W_RANK","L_RANK","W_PCT_RANK","MIN_RANK","FGM_RANK","FGA_RANK","FG_PCT_RANK","FG3M_RANK","FG3A_RANK","FG3_PCT_RANK","FTM_RANK","FTA_RANK","FT_PCT_RANK","OREB_RANK","DREB_RANK","REB_RANK","AST_RANK","TOV_RANK","STL_RANK","BLK_RANK","BLKA_RANK","PF_RANK","PFD_RANK","PTS_RANK","PLUS_MINUS_RANK"],"rowSet":[["Overall","Miami
+        Heat",1610612748,"MIA",58,31,27,0.534,2788.971667,2528,5455,0.463,778,2158,0.361,1127,1434,0.786,701,2038,2739,1667,820.0,529,246,305,1101,1167,6961,182.0,1,13,15,14,4,1,1,19,13,12,14,8,10,15,9,1,1,3,12,6,22,25,11,10,1,10],["Overall","Atlanta
+        Hawks",1610612737,"ATL",58,27,31,0.466,2794.0,2496,5315,0.47,838,2267,0.37,953,1234,0.772,592,1870,2462,1760,830.0,535,271,297,1154,1075,6783,-95.0,1,17,20,19,3,2,2,14,4,8,6,26,24,21,22,9,17,1,18,5,17,23,21,24,6,19],["Overall","New
+        Orleans Pelicans",1610612740,"NOP",58,16,42,0.276,2808.971667,2438,5256,0.464,647,1872,0.346,1138,1454,0.783,705,1822,2527,1448,818.0,509,274,344,1154,1166,6661,-332.0,1,26,28,27,1,7,3,18,25,24,25,6,8,18,7,15,11,19,11,8,15,29,21,11,8,25],["Overall","Sacramento
+        Kings",1610612758,"SAC",58,12,46,0.207,2799.0,2373,5141,0.462,597,1754,0.34,1041,1341,0.776,638,1759,2397,1452,845.0,482,261,276,1165,1089,6384,-641.0,1,30,30,30,2,13,8,21,29,27,29,15,16,19,17,23,24,16,22,12,20,17,24,22,19,30],["Overall","Oklahoma
+        City Thunder",1610612760,"OKC",57,43,14,0.754,2761.0,2457,5056,0.486,767,2119,0.362,1127,1371,0.822,535,1957,2492,1450,717.0,558,324,246,1105,1199,6808,672.0,5,1,2,2,7,5,14,3,14,13,11,8,14,3,27,4,14,18,2,3,5,6,14,3,5,1],["Overall","Minnesota
+        Timberwolves",1610612750,"MIN",57,35,22,0.614,2751.0,2461,5090,0.483,814,2172,0.375,1088,1462,0.744,656,1907,2563,1512,829.0,499,325,222,1215,1189,6824,287.0,5,7,10,10,8,4,10,4,10,11,4,13,5,29,13,5,7,11,17,10,3,2,27,6,4,6],["Overall","Denver
+        Nuggets",1610612743,"DEN",57,36,21,0.632,2766.0,2450,4943,0.496,789,1991,0.396,1202,1486,0.809,545,1907,2452,1609,734.0,397,233,263,1092,1235,6891,274.0,5,4,6,5,5,6,22,2,12,21,1,1,1,5,26,5,19,8,3,29,25,13,10,2,2,7],["Overall","Cleveland
+        Cavaliers",1610612739,"CLE",57,36,21,0.632,2746.0,2484,5203,0.477,831,2314,0.359,1030,1314,0.784,689,1858,2547,1625,821.0,513,294,249,1134,1150,6829,257.0,5,4,6,5,12,3,4,9,8,5,15,18,17,16,10,10,8,6,13,7,9,7,16,15,3,9],["Overall","Charlotte
+        Hornets",1610612766,"CHA",57,26,31,0.456,2751.0,2318,5060,0.458,882,2374,0.372,1059,1286,0.823,718,1904,2622,1503,905.0,383,257,262,1085,1160,6577,95.0,5,20,20,20,8,18,13,25,2,3,5,14,21,2,6,7,2,12,28,30,21,12,9,13,13,11],["Overall","Phoenix
+        Suns",1610612756,"PHX",57,33,24,0.579,2751.0,2354,5165,0.456,832,2307,0.361,916,1158,0.791,748,1731,2479,1416,846.0,573,228,256,1208,1074,6456,74.0,5,11,12,12,8,15,6,27,7,6,13,27,28,11,3,28,15,20,23,2,27,8,26,25,17,14],["Overall","Portland
+        Trail Blazers",1610612757,"POR",57,27,30,0.474,2746.0,2334,5172,0.451,827,2422,0.341,1122,1458,0.77,806,1808,2614,1408,988.0,455,279,346,1163,1251,6617,-164.0,5,17,18,18,12,17,5,28,9,2,28,10,6,23,2,16,4,22,30,18,13,30,23,1,11,22],["Overall","Chicago
+        Bulls",1610612741,"CHI",57,24,33,0.421,2746.0,2416,5141,0.47,835,2279,0.366,967,1228,0.787,582,1964,2546,1656,843.0,426,295,308,1066,1064,6634,-236.0,5,21,22,22,12,9,8,13,5,7,8,24,25,13,24,3,9,4,21,24,8,26,6,26,10,24],["Overall","Indiana
+        Pacers",1610612754,"IND",57,15,42,0.263,2751.0,2286,5088,0.449,733,2111,0.347,1031,1345,0.767,586,1850,2436,1487,825.0,427,269,270,1241,1173,6336,-430.0,5,28,28,29,8,26,11,29,18,14,23,17,15,25,23,13,20,14,14,23,18,16,29,8,24,26],["Overall","Utah
+        Jazz",1610612762,"UTA",57,18,39,0.316,2766.0,2417,5150,0.469,738,2103,0.351,1165,1463,0.796,672,1856,2528,1712,912.0,467,202,339,1255,1176,6737,-438.0,5,25,25,25,5,8,7,16,17,16,19,4,4,8,12,11,10,2,29,16,30,28,30,7,7,28],["Overall","San
+        Antonio Spurs",1610612759,"SAS",56,40,16,0.714,2693.0,2396,5001,0.479,727,2089,0.348,1120,1425,0.786,636,1976,2612,1498,771.0,429,292,256,1057,1162,6639,366.0,15,3,3,3,20,10,17,7,19,17,22,11,11,14,18,2,5,13,6,22,10,8,5,12,9,4],["Overall","New
+        York Knicks",1610612752,"NYK",56,35,21,0.625,2703.0,2394,5077,0.472,835,2223,0.376,979,1241,0.789,735,1851,2586,1519,760.0,447,232,259,1146,1091,6602,324.0,15,7,6,8,17,11,12,11,5,9,3,23,23,12,4,12,6,10,4,20,26,11,17,20,12,5],["Overall","Toronto
+        Raptors",1610612761,"TOR",56,33,23,0.589,2707.983333,2360,5001,0.472,640,1863,0.344,1008,1287,0.783,639,1770,2409,1636,785.0,482,274,296,1172,1094,6368,93.0,15,11,11,11,16,14,17,10,26,25,26,20,20,17,16,21,22,5,9,12,15,22,25,19,20,12],["Overall","Golden
+        State Warriors",1610612744,"GSW",56,29,27,0.518,2698.0,2294,4978,0.461,917,2534,0.362,959,1189,0.807,611,1769,2380,1618,869.0,556,245,234,1103,1041,6464,90.0,15,15,15,16,19,23,21,22,1,1,12,25,26,6,19,22,26,7,27,4,23,5,13,27,16,13],["Overall","Philadelphia
+        76ers",1610612755,"PHI",56,30,26,0.536,2727.998333,2301,5033,0.457,709,2007,0.353,1180,1446,0.816,680,1751,2431,1372,776.0,508,325,288,1148,1150,6491,-11.0,15,14,13,13,15,20,15,26,20,19,16,2,9,4,11,25,21,27,7,9,3,20,18,15,14,17],["Overall","LA
+        Clippers",1610612746,"LAC",56,27,29,0.482,2702.998333,2215,4624,0.479,700,1926,0.363,1150,1382,0.832,532,1750,2282,1322,847.0,481,262,264,1055,1111,6280,-25.0,15,17,17,17,18,29,29,8,21,22,10,5,13,1,28,26,27,30,24,14,19,14,4,18,25,18],["Overall","Detroit
+        Pistons",1610612765,"DET",55,42,13,0.764,2650.0,2375,4942,0.481,614,1744,0.352,1102,1457,0.756,719,1794,2513,1476,838.0,585,346,316,1227,1198,6466,453.0,21,2,1,1,24,12,23,6,27,28,18,12,7,27,5,18,12,15,20,1,1,27,28,4,15,2],["Overall","Boston
+        Celtics",1610612738,"BOS",55,36,19,0.655,2650.0,2352,5029,0.468,848,2332,0.364,793,1002,0.791,704,1803,2507,1329,666.0,420,290,233,1080,1010,6345,384.0,21,4,4,4,24,16,16,17,3,4,9,29,30,9,8,17,13,28,1,27,12,4,7,28,22,3],["Overall","Orlando
+        Magic",1610612753,"ORL",55,29,26,0.527,2665.0,2257,4881,0.462,649,1877,0.346,1176,1469,0.801,607,1780,2387,1452,762.0,479,292,290,1149,1198,6339,24.0,21,15,13,15,21,27,25,20,24,23,24,3,3,7,20,19,25,16,5,15,10,21,20,4,23,15],["Overall","Los
+        Angeles Lakers",1610612747,"LAL",55,34,21,0.618,2640.0,2301,4600,0.5,650,1840,0.353,1138,1479,0.769,527,1725,2252,1398,828.0,450,220,194,1042,1170,6390,2.0,21,9,6,9,28,20,30,1,23,26,17,6,2,24,29,29,28,24,15,19,29,1,3,9,18,16],["Overall","Memphis
+        Grizzlies",1610612763,"MEM",55,21,34,0.382,2650.0,2295,4999,0.459,740,2111,0.351,1022,1292,0.791,640,1825,2465,1580,834.0,466,279,269,1101,1118,6352,-124.0,21,23,23,23,24,22,19,23,16,14,21,19,19,10,15,14,16,9,19,17,13,15,11,17,21,20],["Overall","Dallas
+        Mavericks",1610612742,"DAL",55,19,36,0.345,2665.0,2315,4930,0.47,594,1739,0.342,1040,1394,0.746,555,1903,2458,1376,806.0,421,301,283,1016,1157,6264,-198.0,21,24,24,24,21,19,24,15,30,29,27,16,12,28,25,8,18,26,10,25,7,19,2,14,26,23],["Overall","Brooklyn
+        Nets",1610612751,"BKN",55,15,40,0.273,2655.0,2070,4678,0.442,748,2206,0.339,988,1279,0.772,602,1631,2233,1391,861.0,421,236,276,1110,1081,5876,-432.0,21,28,27,28,23,30,27,30,15,10,30,21,22,20,21,30,29,25,26,25,24,17,15,23,30,27],["Overall","Washington
+        Wizards",1610612764,"WAS",55,16,39,0.291,2649.983333,2287,4989,0.458,699,1992,0.351,914,1186,0.771,644,1754,2398,1401,857.0,441,332,302,1148,955,6187,-562.0,21,26,25,26,27,25,20,24,22,20,20,28,27,22,14,24,23,23,25,21,2,24,18,30,27,29],["Overall","Houston
+        Rockets",1610612745,"HOU",54,34,20,0.63,2627.0,2294,4865,0.472,609,1655,0.368,984,1300,0.757,845,1772,2617,1327,828.0,483,315,258,1000,1091,6181,270.0,29,9,5,7,29,23,26,12,28,30,7,22,18,26,1,20,3,29,15,11,6,10,1,20,28,8],["Overall","Milwaukee
+        Bucks",1610612749,"MIL",54,24,30,0.444,2607.0,2243,4644,0.483,795,2026,0.392,783,1062,0.737,471,1750,2221,1412,783.0,401,227,225,1081,977,6064,-159.0,29,21,18,21,30,28,28,5,11,18,2,30,29,30,30,26,30,21,8,28,28,3,8,29,29,21]]},{"name":"vsPlayerOverall","headers":["GROUP_SET","GROUP_VALUE","PLAYER_ID","GP","W","L","W_PCT","MIN","FGM","FGA","FG_PCT","FG3M","FG3A","FG3_PCT","FTM","FTA","FT_PCT","OREB","DREB","REB","AST","TOV","STL","BLK","BLKA","PF","PFD","PTS","PLUS_MINUS","NBA_FANTASY_PTS","DD2","TD3","WNBA_FANTASY_PTS","GP_RANK","W_RANK","L_RANK","W_PCT_RANK","MIN_RANK","FGM_RANK","FGA_RANK","FG_PCT_RANK","FG3M_RANK","FG3A_RANK","FG3_PCT_RANK","FTM_RANK","FTA_RANK","FT_PCT_RANK","OREB_RANK","DREB_RANK","REB_RANK","AST_RANK","TOV_RANK","STL_RANK","BLK_RANK","BLKA_RANK","PF_RANK","PFD_RANK","PTS_RANK","PLUS_MINUS_RANK","NBA_FANTASY_PTS_RANK","DD2_RANK","TD3_RANK","WNBA_FANTASY_PTS_RANK","TEAM_COUNT"],"rowSet":[["Overall","Evan
+        Mobley",1630596,43,26,17,0.605,1420.2666666666667,296,577,0.513,48,159,0.302,122,192,0.635,98,279,377,172,90,38,83,32,107,143,762,165,1745.4,17,0,1601.0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]]},{"name":"OnOffCourt","headers":["GROUP_SET","TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","VS_PLAYER_ID","VS_PLAYER_NAME","COURT_STATUS","GP","W","L","W_PCT","MIN","FGM","FGA","FG_PCT","FG3M","FG3A","FG3_PCT","FTM","FTA","FT_PCT","OREB","DREB","REB","AST","TOV","STL","BLK","BLKA","PF","PFD","PTS","PLUS_MINUS","GP_RANK","W_RANK","L_RANK","W_PCT_RANK","MIN_RANK","FGM_RANK","FGA_RANK","FG_PCT_RANK","FG3M_RANK","FG3A_RANK","FG3_PCT_RANK","FTM_RANK","FTA_RANK","FT_PCT_RANK","OREB_RANK","DREB_RANK","REB_RANK","AST_RANK","TOV_RANK","STL_RANK","BLK_RANK","BLKA_RANK","PF_RANK","PFD_RANK","PTS_RANK","PLUS_MINUS_RANK"],"rowSet":[]},{"name":"ShotDistanceOverall","headers":["GROUP_SET","GROUP_VALUE","TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","FGM","FGA","FG_PCT"],"rowSet":[["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612761,"TOR","Toronto Raptors",1061,1622,0.654],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612760,"OKC","Oklahoma City Thunder",1034,1571,0.658],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612752,"NYK","New York Knicks",1005,1572,0.639],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612757,"POR","Portland Trail Blazers",1153,1791,0.644],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612749,"MIL","Milwaukee Bucks",923,1387,0.665],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612751,"BKN","Brooklyn Nets",943,1517,0.622],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612746,"LAC","LA Clippers",930,1383,0.672],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612755,"PHI","Philadelphia 76ers",1069,1765,0.606],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612742,"DAL","Dallas Mavericks",1019,1620,0.629],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612753,"ORL","Orlando Magic",1085,1724,0.629],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612762,"UTA","Utah Jazz",1018,1561,0.652],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612743,"DEN","Denver Nuggets",1014,1555,0.652],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612744,"GSW","Golden State Warriors",934,1414,0.661],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612747,"LAL","Los Angeles Lakers",1013,1408,0.719],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612739,"CLE","Cleveland Cavaliers",1058,1614,0.656],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612745,"HOU","Houston Rockets",955,1496,0.638],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612754,"IND","Indiana Pacers",913,1483,0.616],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612738,"BOS","Boston Celtics",824,1184,0.696],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612750,"MIN","Minnesota Timberwolves",1103,1670,0.66],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612764,"WAS","Washington Wizards",983,1538,0.639],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612756,"PHX","Phoenix Suns",844,1310,0.644],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612740,"NOP","New Orleans Pelicans",1392,2273,0.612],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612737,"ATL","Atlanta Hawks",1063,1694,0.628],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612766,"CHA","Charlotte Hornets",973,1546,0.629],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612748,"MIA","Miami Heat",1149,1846,0.622],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612758,"SAC","Sacramento Kings",919,1412,0.651],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612759,"SAS","San Antonio Spurs",1108,1703,0.651],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612741,"CHI","Chicago Bulls",1178,1933,0.609],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612765,"DET","Detroit Pistons",1233,1919,0.643],["Shot
+        Distance (5ft)","Less Than 5 ft.",1610612763,"MEM","Memphis Grizzlies",873,1405,0.621],["Shot
+        Distance (5ft)","5-9 ft.",1610612752,"NYK","New York Knicks",221,517,0.427],["Shot
+        Distance (5ft)","5-9 ft.",1610612742,"DAL","Dallas Mavericks",335,708,0.473],["Shot
+        Distance (5ft)","5-9 ft.",1610612739,"CLE","Cleveland Cavaliers",311,642,0.484],["Shot
+        Distance (5ft)","5-9 ft.",1610612757,"POR","Portland Trail Blazers",164,453,0.362],["Shot
+        Distance (5ft)","5-9 ft.",1610612755,"PHI","Philadelphia 76ers",188,476,0.395],["Shot
+        Distance (5ft)","5-9 ft.",1610612761,"TOR","Toronto Raptors",257,611,0.421],["Shot
+        Distance (5ft)","5-9 ft.",1610612750,"MIN","Minnesota Timberwolves",227,541,0.42],["Shot
+        Distance (5ft)","5-9 ft.",1610612756,"PHX","Phoenix Suns",253,590,0.429],["Shot
+        Distance (5ft)","5-9 ft.",1610612747,"LAL","Los Angeles Lakers",262,547,0.479],["Shot
+        Distance (5ft)","5-9 ft.",1610612749,"MIL","Milwaukee Bucks",202,456,0.443],["Shot
+        Distance (5ft)","5-9 ft.",1610612764,"WAS","Washington Wizards",241,644,0.374],["Shot
+        Distance (5ft)","5-9 ft.",1610612762,"UTA","Utah Jazz",379,821,0.462],["Shot
+        Distance (5ft)","5-9 ft.",1610612737,"ATL","Atlanta Hawks",298,687,0.434],["Shot
+        Distance (5ft)","5-9 ft.",1610612746,"LAC","LA Clippers",262,606,0.432],["Shot
+        Distance (5ft)","5-9 ft.",1610612766,"CHA","Charlotte Hornets",270,650,0.415],["Shot
+        Distance (5ft)","5-9 ft.",1610612754,"IND","Indiana Pacers",257,590,0.436],["Shot
+        Distance (5ft)","5-9 ft.",1610612745,"HOU","Houston Rockets",261,626,0.417],["Shot
+        Distance (5ft)","5-9 ft.",1610612751,"BKN","Brooklyn Nets",190,476,0.399],["Shot
+        Distance (5ft)","5-9 ft.",1610612743,"DEN","Denver Nuggets",280,599,0.467],["Shot
+        Distance (5ft)","5-9 ft.",1610612744,"GSW","Golden State Warriors",231,492,0.47],["Shot
+        Distance (5ft)","5-9 ft.",1610612760,"OKC","Oklahoma City Thunder",228,521,0.438],["Shot
+        Distance (5ft)","5-9 ft.",1610612753,"ORL","Orlando Magic",254,602,0.422],["Shot
+        Distance (5ft)","5-9 ft.",1610612740,"NOP","New Orleans Pelicans",191,555,0.344],["Shot
+        Distance (5ft)","5-9 ft.",1610612738,"BOS","Boston Celtics",250,573,0.436],["Shot
+        Distance (5ft)","5-9 ft.",1610612758,"SAC","Sacramento Kings",375,807,0.465],["Shot
+        Distance (5ft)","5-9 ft.",1610612763,"MEM","Memphis Grizzlies",368,754,0.488],["Shot
+        Distance (5ft)","5-9 ft.",1610612759,"SAS","San Antonio Spurs",260,548,0.474],["Shot
+        Distance (5ft)","5-9 ft.",1610612741,"CHI","Chicago Bulls",254,594,0.428],["Shot
+        Distance (5ft)","5-9 ft.",1610612748,"MIA","Miami Heat",334,820,0.407],["Shot
+        Distance (5ft)","5-9 ft.",1610612765,"DET","Detroit Pistons",278,694,0.401],["Shot
+        Distance (5ft)","10-14 ft.",1610612747,"LAL","Los Angeles Lakers",239,500,0.478],["Shot
+        Distance (5ft)","10-14 ft.",1610612760,"OKC","Oklahoma City Thunder",291,538,0.541],["Shot
+        Distance (5ft)","10-14 ft.",1610612756,"PHX","Phoenix Suns",271,586,0.462],["Shot
+        Distance (5ft)","10-14 ft.",1610612749,"MIL","Milwaukee Bucks",164,374,0.439],["Shot
+        Distance (5ft)","10-14 ft.",1610612766,"CHA","Charlotte Hornets",129,314,0.411],["Shot
+        Distance (5ft)","10-14 ft.",1610612740,"NOP","New Orleans Pelicans",120,314,0.382],["Shot
+        Distance (5ft)","10-14 ft.",1610612762,"UTA","Utah Jazz",168,371,0.453],["Shot
+        Distance (5ft)","10-14 ft.",1610612742,"DAL","Dallas Mavericks",208,456,0.456],["Shot
+        Distance (5ft)","10-14 ft.",1610612744,"GSW","Golden State Warriors",124,306,0.405],["Shot
+        Distance (5ft)","10-14 ft.",1610612737,"ATL","Atlanta Hawks",197,414,0.476],["Shot
+        Distance (5ft)","10-14 ft.",1610612745,"HOU","Houston Rockets",286,657,0.435],["Shot
+        Distance (5ft)","10-14 ft.",1610612738,"BOS","Boston Celtics",245,488,0.502],["Shot
+        Distance (5ft)","10-14 ft.",1610612751,"BKN","Brooklyn Nets",111,246,0.451],["Shot
+        Distance (5ft)","10-14 ft.",1610612743,"DEN","Denver Nuggets",184,389,0.473],["Shot
+        Distance (5ft)","10-14 ft.",1610612752,"NYK","New York Knicks",201,456,0.441],["Shot
+        Distance (5ft)","10-14 ft.",1610612761,"TOR","Toronto Raptors",238,536,0.444],["Shot
+        Distance (5ft)","10-14 ft.",1610612750,"MIN","Minnesota Timberwolves",196,405,0.484],["Shot
+        Distance (5ft)","10-14 ft.",1610612739,"CLE","Cleveland Cavaliers",185,390,0.474],["Shot
+        Distance (5ft)","10-14 ft.",1610612757,"POR","Portland Trail Blazers",93,244,0.381],["Shot
+        Distance (5ft)","10-14 ft.",1610612754,"IND","Indiana Pacers",231,493,0.469],["Shot
+        Distance (5ft)","10-14 ft.",1610612753,"ORL","Orlando Magic",156,383,0.407],["Shot
+        Distance (5ft)","10-14 ft.",1610612755,"PHI","Philadelphia 76ers",155,376,0.412],["Shot
+        Distance (5ft)","10-14 ft.",1610612746,"LAC","LA Clippers",220,447,0.492],["Shot
+        Distance (5ft)","10-14 ft.",1610612764,"WAS","Washington Wizards",198,441,0.449],["Shot
+        Distance (5ft)","10-14 ft.",1610612758,"SAC","Sacramento Kings",264,614,0.43],["Shot
+        Distance (5ft)","10-14 ft.",1610612763,"MEM","Memphis Grizzlies",210,466,0.451],["Shot
+        Distance (5ft)","10-14 ft.",1610612759,"SAS","San Antonio Spurs",175,377,0.464],["Shot
+        Distance (5ft)","10-14 ft.",1610612765,"DET","Detroit Pistons",160,363,0.441],["Shot
+        Distance (5ft)","10-14 ft.",1610612748,"MIA","Miami Heat",180,406,0.443],["Shot
+        Distance (5ft)","10-14 ft.",1610612741,"CHI","Chicago Bulls",100,194,0.515],["Shot
+        Distance (5ft)","15-19 ft.",1610612742,"DAL","Dallas Mavericks",124,303,0.409],["Shot
+        Distance (5ft)","15-19 ft.",1610612737,"ATL","Atlanta Hawks",79,194,0.407],["Shot
+        Distance (5ft)","15-19 ft.",1610612755,"PHI","Philadelphia 76ers",154,344,0.448],["Shot
+        Distance (5ft)","15-19 ft.",1610612744,"GSW","Golden State Warriors",66,172,0.384],["Shot
+        Distance (5ft)","15-19 ft.",1610612747,"LAL","Los Angeles Lakers",118,254,0.465],["Shot
+        Distance (5ft)","15-19 ft.",1610612738,"BOS","Boston Celtics",169,390,0.433],["Shot
+        Distance (5ft)","15-19 ft.",1610612760,"OKC","Oklahoma City Thunder",113,255,0.443],["Shot
+        Distance (5ft)","15-19 ft.",1610612757,"POR","Portland Trail Blazers",74,197,0.376],["Shot
+        Distance (5ft)","15-19 ft.",1610612756,"PHX","Phoenix Suns",126,299,0.421],["Shot
+        Distance (5ft)","15-19 ft.",1610612752,"NYK","New York Knicks",108,246,0.439],["Shot
+        Distance (5ft)","15-19 ft.",1610612754,"IND","Indiana Pacers",121,336,0.36],["Shot
+        Distance (5ft)","15-19 ft.",1610612740,"NOP","New Orleans Pelicans",66,181,0.365],["Shot
+        Distance (5ft)","15-19 ft.",1610612761,"TOR","Toronto Raptors",142,313,0.454],["Shot
+        Distance (5ft)","15-19 ft.",1610612762,"UTA","Utah Jazz",92,231,0.398],["Shot
+        Distance (5ft)","15-19 ft.",1610612749,"MIL","Milwaukee Bucks",124,316,0.392],["Shot
+        Distance (5ft)","15-19 ft.",1610612746,"LAC","LA Clippers",89,215,0.414],["Shot
+        Distance (5ft)","15-19 ft.",1610612739,"CLE","Cleveland Cavaliers",78,180,0.433],["Shot
+        Distance (5ft)","15-19 ft.",1610612764,"WAS","Washington Wizards",141,305,0.462],["Shot
+        Distance (5ft)","15-19 ft.",1610612766,"CHA","Charlotte Hornets",53,136,0.39],["Shot
+        Distance (5ft)","15-19 ft.",1610612750,"MIN","Minnesota Timberwolves",100,239,0.418],["Shot
+        Distance (5ft)","15-19 ft.",1610612751,"BKN","Brooklyn Nets",53,155,0.342],["Shot
+        Distance (5ft)","15-19 ft.",1610612753,"ORL","Orlando Magic",89,239,0.372],["Shot
+        Distance (5ft)","15-19 ft.",1610612743,"DEN","Denver Nuggets",150,318,0.472],["Shot
+        Distance (5ft)","15-19 ft.",1610612745,"HOU","Houston Rockets",167,377,0.443],["Shot
+        Distance (5ft)","15-19 ft.",1610612763,"MEM","Memphis Grizzlies",82,198,0.414],["Shot
+        Distance (5ft)","15-19 ft.",1610612741,"CHI","Chicago Bulls",33,96,0.344],["Shot
+        Distance (5ft)","15-19 ft.",1610612765,"DET","Detroit Pistons",75,193,0.389],["Shot
+        Distance (5ft)","15-19 ft.",1610612748,"MIA","Miami Heat",65,159,0.409],["Shot
+        Distance (5ft)","15-19 ft.",1610612759,"SAS","San Antonio Spurs",111,251,0.442],["Shot
+        Distance (5ft)","15-19 ft.",1610612758,"SAC","Sacramento Kings",173,442,0.391],["Shot
+        Distance (5ft)","20-24 ft.",1610612749,"MIL","Milwaukee Bucks",357,825,0.433],["Shot
+        Distance (5ft)","20-24 ft.",1610612744,"GSW","Golden State Warriors",362,916,0.395],["Shot
+        Distance (5ft)","20-24 ft.",1610612756,"PHX","Phoenix Suns",283,744,0.38],["Shot
+        Distance (5ft)","20-24 ft.",1610612754,"IND","Indiana Pacers",270,757,0.357],["Shot
+        Distance (5ft)","20-24 ft.",1610612747,"LAL","Los Angeles Lakers",222,639,0.347],["Shot
+        Distance (5ft)","20-24 ft.",1610612751,"BKN","Brooklyn Nets",339,943,0.359],["Shot
+        Distance (5ft)","20-24 ft.",1610612743,"DEN","Denver Nuggets",335,802,0.418],["Shot
+        Distance (5ft)","20-24 ft.",1610612746,"LAC","LA Clippers",280,718,0.39],["Shot
+        Distance (5ft)","20-24 ft.",1610612742,"DAL","Dallas Mavericks",330,919,0.359],["Shot
+        Distance (5ft)","20-24 ft.",1610612745,"HOU","Houston Rockets",266,675,0.394],["Shot
+        Distance (5ft)","20-24 ft.",1610612755,"PHI","Philadelphia 76ers",230,636,0.362],["Shot
+        Distance (5ft)","20-24 ft.",1610612760,"OKC","Oklahoma City Thunder",307,843,0.364],["Shot
+        Distance (5ft)","20-24 ft.",1610612740,"NOP","New Orleans Pelicans",249,692,0.36],["Shot
+        Distance (5ft)","20-24 ft.",1610612752,"NYK","New York Knicks",397,960,0.414],["Shot
+        Distance (5ft)","20-24 ft.",1610612757,"POR","Portland Trail Blazers",335,929,0.361],["Shot
+        Distance (5ft)","20-24 ft.",1610612764,"WAS","Washington Wizards",229,614,0.373],["Shot
+        Distance (5ft)","20-24 ft.",1610612737,"ATL","Atlanta Hawks",372,951,0.391],["Shot
+        Distance (5ft)","20-24 ft.",1610612739,"CLE","Cleveland Cavaliers",316,880,0.359],["Shot
+        Distance (5ft)","20-24 ft.",1610612753,"ORL","Orlando Magic",281,735,0.382],["Shot
+        Distance (5ft)","20-24 ft.",1610612762,"UTA","Utah Jazz",349,942,0.37],["Shot
+        Distance (5ft)","20-24 ft.",1610612750,"MIN","Minnesota Timberwolves",393,1036,0.379],["Shot
+        Distance (5ft)","20-24 ft.",1610612738,"BOS","Boston Celtics",250,636,0.393],["Shot
+        Distance (5ft)","20-24 ft.",1610612766,"CHA","Charlotte Hornets",329,776,0.424],["Shot
+        Distance (5ft)","20-24 ft.",1610612761,"TOR","Toronto Raptors",250,664,0.377],["Shot
+        Distance (5ft)","20-24 ft.",1610612763,"MEM","Memphis Grizzlies",327,887,0.369],["Shot
+        Distance (5ft)","20-24 ft.",1610612741,"CHI","Chicago Bulls",337,871,0.387],["Shot
+        Distance (5ft)","20-24 ft.",1610612748,"MIA","Miami Heat",336,954,0.352],["Shot
+        Distance (5ft)","20-24 ft.",1610612765,"DET","Detroit Pistons",248,652,0.38],["Shot
+        Distance (5ft)","20-24 ft.",1610612758,"SAC","Sacramento Kings",264,719,0.367],["Shot
+        Distance (5ft)","20-24 ft.",1610612759,"SAS","San Antonio Spurs",349,935,0.373],["Shot
+        Distance (5ft)","25-29 ft.",1610612760,"OKC","Oklahoma City Thunder",476,1311,0.363],["Shot
+        Distance (5ft)","25-29 ft.",1610612766,"CHA","Charlotte Hornets",544,1540,0.353],["Shot
+        Distance (5ft)","25-29 ft.",1610612743,"DEN","Denver Nuggets",480,1253,0.383],["Shot
+        Distance (5ft)","25-29 ft.",1610612742,"DAL","Dallas Mavericks",298,905,0.329],["Shot
+        Distance (5ft)","25-29 ft.",1610612757,"POR","Portland Trail Blazers",510,1528,0.334],["Shot
+        Distance (5ft)","25-29 ft.",1610612756,"PHX","Phoenix Suns",544,1523,0.357],["Shot
+        Distance (5ft)","25-29 ft.",1610612737,"ATL","Atlanta Hawks",477,1341,0.356],["Shot
+        Distance (5ft)","25-29 ft.",1610612745,"HOU","Houston Rockets",348,991,0.351],["Shot
+        Distance (5ft)","25-29 ft.",1610612753,"ORL","Orlando Magic",388,1180,0.329],["Shot
+        Distance (5ft)","25-29 ft.",1610612761,"TOR","Toronto Raptors",403,1231,0.327],["Shot
+        Distance (5ft)","25-29 ft.",1610612751,"BKN","Brooklyn Nets",427,1309,0.326],["Shot
+        Distance (5ft)","25-29 ft.",1610612764,"WAS","Washington Wizards",469,1358,0.345],["Shot
+        Distance (5ft)","25-29 ft.",1610612755,"PHI","Philadelphia 76ers",497,1406,0.353],["Shot
+        Distance (5ft)","25-29 ft.",1610612762,"UTA","Utah Jazz",407,1210,0.336],["Shot
+        Distance (5ft)","25-29 ft.",1610612752,"NYK","New York Knicks",458,1310,0.35],["Shot
+        Distance (5ft)","25-29 ft.",1610612754,"IND","Indiana Pacers",477,1374,0.347],["Shot
+        Distance (5ft)","25-29 ft.",1610612744,"GSW","Golden State Warriors",560,1612,0.347],["Shot
+        Distance (5ft)","25-29 ft.",1610612738,"BOS","Boston Celtics",573,1644,0.349],["Shot
+        Distance (5ft)","25-29 ft.",1610612750,"MIN","Minnesota Timberwolves",431,1171,0.368],["Shot
+        Distance (5ft)","25-29 ft.",1610612739,"CLE","Cleveland Cavaliers",518,1453,0.357],["Shot
+        Distance (5ft)","25-29 ft.",1610612746,"LAC","LA Clippers",424,1215,0.349],["Shot
+        Distance (5ft)","25-29 ft.",1610612747,"LAL","Los Angeles Lakers",430,1186,0.363],["Shot
+        Distance (5ft)","25-29 ft.",1610612740,"NOP","New Orleans Pelicans",400,1190,0.336],["Shot
+        Distance (5ft)","25-29 ft.",1610612749,"MIL","Milwaukee Bucks",468,1259,0.372],["Shot
+        Distance (5ft)","25-29 ft.",1610612763,"MEM","Memphis Grizzlies",433,1272,0.34],["Shot
+        Distance (5ft)","25-29 ft.",1610612765,"DET","Detroit Pistons",370,1096,0.338],["Shot
+        Distance (5ft)","25-29 ft.",1610612741,"CHI","Chicago Bulls",508,1423,0.357],["Shot
+        Distance (5ft)","25-29 ft.",1610612759,"SAS","San Antonio Spurs",390,1175,0.332],["Shot
+        Distance (5ft)","25-29 ft.",1610612758,"SAC","Sacramento Kings",369,1110,0.332],["Shot
+        Distance (5ft)","25-29 ft.",1610612748,"MIA","Miami Heat",459,1254,0.366],["Shot
+        Distance (5ft)","30-34 ft.",1610612744,"GSW","Golden State Warriors",14,59,0.237],["Shot
+        Distance (5ft)","30-34 ft.",1610612743,"DEN","Denver Nuggets",4,20,0.2],["Shot
+        Distance (5ft)","30-34 ft.",1610612742,"DAL","Dallas Mavericks",1,15,0.067],["Shot
+        Distance (5ft)","30-34 ft.",1610612766,"CHA","Charlotte Hornets",17,87,0.195],["Shot
+        Distance (5ft)","30-34 ft.",1610612764,"WAS","Washington Wizards",26,88,0.295],["Shot
+        Distance (5ft)","30-34 ft.",1610612739,"CLE","Cleveland Cavaliers",18,39,0.462],["Shot
+        Distance (5ft)","30-34 ft.",1610612738,"BOS","Boston Celtics",39,109,0.358],["Shot
+        Distance (5ft)","30-34 ft.",1610612753,"ORL","Orlando Magic",3,16,0.188],["Shot
+        Distance (5ft)","30-34 ft.",1610612757,"POR","Portland Trail Blazers",5,29,0.172],["Shot
+        Distance (5ft)","30-34 ft.",1610612740,"NOP","New Orleans Pelicans",19,48,0.396],["Shot
+        Distance (5ft)","30-34 ft.",1610612762,"UTA","Utah Jazz",4,14,0.286],["Shot
+        Distance (5ft)","30-34 ft.",1610612746,"LAC","LA Clippers",9,37,0.243],["Shot
+        Distance (5ft)","30-34 ft.",1610612761,"TOR","Toronto Raptors",9,23,0.391],["Shot
+        Distance (5ft)","30-34 ft.",1610612760,"OKC","Oklahoma City Thunder",8,17,0.471],["Shot
+        Distance (5ft)","30-34 ft.",1610612737,"ATL","Atlanta Hawks",9,33,0.273],["Shot
+        Distance (5ft)","30-34 ft.",1610612755,"PHI","Philadelphia 76ers",6,28,0.214],["Shot
+        Distance (5ft)","30-34 ft.",1610612747,"LAL","Los Angeles Lakers",16,61,0.262],["Shot
+        Distance (5ft)","30-34 ft.",1610612750,"MIN","Minnesota Timberwolves",11,23,0.478],["Shot
+        Distance (5ft)","30-34 ft.",1610612754,"IND","Indiana Pacers",17,51,0.333],["Shot
+        Distance (5ft)","30-34 ft.",1610612756,"PHX","Phoenix Suns",32,104,0.308],["Shot
+        Distance (5ft)","30-34 ft.",1610612751,"BKN","Brooklyn Nets",6,26,0.231],["Shot
+        Distance (5ft)","30-34 ft.",1610612752,"NYK","New York Knicks",4,16,0.25],["Shot
+        Distance (5ft)","30-34 ft.",1610612745,"HOU","Houston Rockets",9,39,0.231],["Shot
+        Distance (5ft)","30-34 ft.",1610612749,"MIL","Milwaukee Bucks",5,24,0.208],["Shot
+        Distance (5ft)","30-34 ft.",1610612748,"MIA","Miami Heat",4,12,0.333],["Shot
+        Distance (5ft)","30-34 ft.",1610612763,"MEM","Memphis Grizzlies",2,15,0.133],["Shot
+        Distance (5ft)","30-34 ft.",1610612741,"CHI","Chicago Bulls",5,27,0.185],["Shot
+        Distance (5ft)","30-34 ft.",1610612765,"DET","Detroit Pistons",9,21,0.429],["Shot
+        Distance (5ft)","30-34 ft.",1610612758,"SAC","Sacramento Kings",9,37,0.243],["Shot
+        Distance (5ft)","30-34 ft.",1610612759,"SAS","San Antonio Spurs",3,10,0.3],["Shot
+        Distance (5ft)","35-39 ft.",1610612746,"LAC","LA Clippers",0,2,0.0],["Shot
+        Distance (5ft)","35-39 ft.",1610612738,"BOS","Boston Celtics",2,5,0.4],["Shot
+        Distance (5ft)","35-39 ft.",1610612747,"LAL","Los Angeles Lakers",1,4,0.25],["Shot
+        Distance (5ft)","35-39 ft.",1610612742,"DAL","Dallas Mavericks",0,3,0.0],["Shot
+        Distance (5ft)","35-39 ft.",1610612756,"PHX","Phoenix Suns",1,6,0.167],["Shot
+        Distance (5ft)","35-39 ft.",1610612761,"TOR","Toronto Raptors",0,0,0.0],["Shot
+        Distance (5ft)","35-39 ft.",1610612755,"PHI","Philadelphia 76ers",0,0,0.0],["Shot
+        Distance (5ft)","35-39 ft.",1610612750,"MIN","Minnesota Timberwolves",0,3,0.0],["Shot
+        Distance (5ft)","35-39 ft.",1610612743,"DEN","Denver Nuggets",1,4,0.25],["Shot
+        Distance (5ft)","35-39 ft.",1610612740,"NOP","New Orleans Pelicans",1,3,0.333],["Shot
+        Distance (5ft)","35-39 ft.",1610612739,"CLE","Cleveland Cavaliers",0,4,0.0],["Shot
+        Distance (5ft)","35-39 ft.",1610612744,"GSW","Golden State Warriors",2,6,0.333],["Shot
+        Distance (5ft)","35-39 ft.",1610612752,"NYK","New York Knicks",0,0,0.0],["Shot
+        Distance (5ft)","35-39 ft.",1610612764,"WAS","Washington Wizards",0,1,0.0],["Shot
+        Distance (5ft)","35-39 ft.",1610612762,"UTA","Utah Jazz",0,0,0.0],["Shot Distance
+        (5ft)","35-39 ft.",1610612757,"POR","Portland Trail Blazers",0,0,0.0],["Shot
+        Distance (5ft)","35-39 ft.",1610612737,"ATL","Atlanta Hawks",0,0,0.0],["Shot
+        Distance (5ft)","35-39 ft.",1610612766,"CHA","Charlotte Hornets",1,8,0.125],["Shot
+        Distance (5ft)","35-39 ft.",1610612753,"ORL","Orlando Magic",0,1,0.0],["Shot
+        Distance (5ft)","35-39 ft.",1610612751,"BKN","Brooklyn Nets",1,5,0.2],["Shot
+        Distance (5ft)","35-39 ft.",1610612754,"IND","Indiana Pacers",0,3,0.0],["Shot
+        Distance (5ft)","35-39 ft.",1610612760,"OKC","Oklahoma City Thunder",0,0,0.0],["Shot
+        Distance (5ft)","35-39 ft.",1610612745,"HOU","Houston Rockets",0,1,0.0],["Shot
+        Distance (5ft)","35-39 ft.",1610612749,"MIL","Milwaukee Bucks",0,3,0.0],["Shot
+        Distance (5ft)","35-39 ft.",1610612759,"SAS","San Antonio Spurs",0,1,0.0],["Shot
+        Distance (5ft)","35-39 ft.",1610612765,"DET","Detroit Pistons",0,2,0.0],["Shot
+        Distance (5ft)","35-39 ft.",1610612748,"MIA","Miami Heat",0,2,0.0],["Shot
+        Distance (5ft)","35-39 ft.",1610612741,"CHI","Chicago Bulls",0,1,0.0],["Shot
+        Distance (5ft)","35-39 ft.",1610612763,"MEM","Memphis Grizzlies",0,2,0.0],["Shot
+        Distance (5ft)","35-39 ft.",1610612758,"SAC","Sacramento Kings",0,0,0.0],["Shot
+        Distance (5ft)","40+ ft.",1610612740,"NOP","New Orleans Pelicans",0,0,0.0],["Shot
+        Distance (5ft)","40+ ft.",1610612749,"MIL","Milwaukee Bucks",0,0,0.0],["Shot
+        Distance (5ft)","40+ ft.",1610612751,"BKN","Brooklyn Nets",0,1,0.0],["Shot
+        Distance (5ft)","40+ ft.",1610612754,"IND","Indiana Pacers",0,1,0.0],["Shot
+        Distance (5ft)","40+ ft.",1610612756,"PHX","Phoenix Suns",0,3,0.0],["Shot
+        Distance (5ft)","40+ ft.",1610612746,"LAC","LA Clippers",1,1,1.0],["Shot Distance
+        (5ft)","40+ ft.",1610612750,"MIN","Minnesota Timberwolves",0,2,0.0],["Shot
+        Distance (5ft)","40+ ft.",1610612766,"CHA","Charlotte Hornets",2,3,0.667],["Shot
+        Distance (5ft)","40+ ft.",1610612737,"ATL","Atlanta Hawks",1,1,1.0],["Shot
+        Distance (5ft)","40+ ft.",1610612753,"ORL","Orlando Magic",1,1,1.0],["Shot
+        Distance (5ft)","40+ ft.",1610612761,"TOR","Toronto Raptors",0,1,0.0],["Shot
+        Distance (5ft)","40+ ft.",1610612762,"UTA","Utah Jazz",0,0,0.0],["Shot Distance
+        (5ft)","40+ ft.",1610612744,"GSW","Golden State Warriors",1,1,1.0],["Shot
+        Distance (5ft)","40+ ft.",1610612755,"PHI","Philadelphia 76ers",2,2,1.0],["Shot
+        Distance (5ft)","40+ ft.",1610612760,"OKC","Oklahoma City Thunder",0,0,0.0],["Shot
+        Distance (5ft)","40+ ft.",1610612757,"POR","Portland Trail Blazers",0,1,0.0],["Shot
+        Distance (5ft)","40+ ft.",1610612745,"HOU","Houston Rockets",2,3,0.667],["Shot
+        Distance (5ft)","40+ ft.",1610612739,"CLE","Cleveland Cavaliers",0,1,0.0],["Shot
+        Distance (5ft)","40+ ft.",1610612742,"DAL","Dallas Mavericks",0,1,0.0],["Shot
+        Distance (5ft)","40+ ft.",1610612747,"LAL","Los Angeles Lakers",0,1,0.0],["Shot
+        Distance (5ft)","40+ ft.",1610612764,"WAS","Washington Wizards",0,0,0.0],["Shot
+        Distance (5ft)","40+ ft.",1610612738,"BOS","Boston Celtics",0,0,0.0],["Shot
+        Distance (5ft)","40+ ft.",1610612743,"DEN","Denver Nuggets",2,3,0.667],["Shot
+        Distance (5ft)","40+ ft.",1610612752,"NYK","New York Knicks",0,0,0.0],["Shot
+        Distance (5ft)","40+ ft.",1610612765,"DET","Detroit Pistons",2,2,1.0],["Shot
+        Distance (5ft)","40+ ft.",1610612748,"MIA","Miami Heat",1,2,0.5],["Shot Distance
+        (5ft)","40+ ft.",1610612759,"SAS","San Antonio Spurs",0,1,0.0],["Shot Distance
+        (5ft)","40+ ft.",1610612758,"SAC","Sacramento Kings",0,0,0.0],["Shot Distance
+        (5ft)","40+ ft.",1610612741,"CHI","Chicago Bulls",1,2,0.5],["Shot Distance
+        (5ft)","40+ ft.",1610612763,"MEM","Memphis Grizzlies",0,0,0.0]]},{"name":"ShotDistanceOnCourt","headers":["GROUP_SET","TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","VS_PLAYER_ID","VS_PLAYER_NAME","COURT_STATUS","GROUP_VALUE","FGM","FGA","FG_PCT"],"rowSet":[]},{"name":"ShotDistanceOffCourt","headers":["GROUP_SET","TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","VS_PLAYER_ID","VS_PLAYER_NAME","COURT_STATUS","GROUP_VALUE","FGM","FGA","FG_PCT"],"rowSet":[]},{"name":"ShotAreaOverall","headers":["GROUP_SET","GROUP_VALUE","TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","FGM","FGA","FG_PCT"],"rowSet":[["Shot
+        Area","Restricted Area",1610612743,"DEN","Denver Nuggets",909,1340,0.678],["Shot
+        Area","Restricted Area",1610612752,"NYK","New York Knicks",927,1412,0.657],["Shot
+        Area","Restricted Area",1610612766,"CHA","Charlotte Hornets",909,1388,0.655],["Shot
+        Area","Restricted Area",1610612742,"DAL","Dallas Mavericks",934,1423,0.656],["Shot
+        Area","Restricted Area",1610612761,"TOR","Toronto Raptors",1007,1497,0.673],["Shot
+        Area","Restricted Area",1610612737,"ATL","Atlanta Hawks",989,1505,0.657],["Shot
+        Area","Restricted Area",1610612751,"BKN","Brooklyn Nets",865,1321,0.655],["Shot
+        Area","Restricted Area",1610612746,"LAC","LA Clippers",831,1165,0.713],["Shot
+        Area","Restricted Area",1610612762,"UTA","Utah Jazz",860,1274,0.675],["Shot
+        Area","Restricted Area",1610612738,"BOS","Boston Celtics",735,1022,0.719],["Shot
+        Area","Restricted Area",1610612744,"GSW","Golden State Warriors",857,1246,0.688],["Shot
+        Area","Restricted Area",1610612753,"ORL","Orlando Magic",998,1506,0.663],["Shot
+        Area","Restricted Area",1610612764,"WAS","Washington Wizards",921,1360,0.677],["Shot
+        Area","Restricted Area",1610612739,"CLE","Cleveland Cavaliers",990,1464,0.676],["Shot
+        Area","Restricted Area",1610612755,"PHI","Philadelphia 76ers",1009,1622,0.622],["Shot
+        Area","Restricted Area",1610612754,"IND","Indiana Pacers",844,1313,0.643],["Shot
+        Area","Restricted Area",1610612757,"POR","Portland Trail Blazers",1066,1587,0.672],["Shot
+        Area","Restricted Area",1610612756,"PHX","Phoenix Suns",770,1142,0.674],["Shot
+        Area","Restricted Area",1610612745,"HOU","Houston Rockets",859,1316,0.653],["Shot
+        Area","Restricted Area",1610612750,"MIN","Minnesota Timberwolves",1023,1489,0.687],["Shot
+        Area","Restricted Area",1610612749,"MIL","Milwaukee Bucks",872,1255,0.695],["Shot
+        Area","Restricted Area",1610612747,"LAL","Los Angeles Lakers",922,1241,0.743],["Shot
+        Area","Restricted Area",1610612760,"OKC","Oklahoma City Thunder",965,1392,0.693],["Shot
+        Area","Restricted Area",1610612740,"NOP","New Orleans Pelicans",1320,2066,0.639],["Shot
+        Area","Restricted Area",1610612759,"SAS","San Antonio Spurs",1043,1555,0.671],["Shot
+        Area","Restricted Area",1610612765,"DET","Detroit Pistons",1086,1620,0.67],["Shot
+        Area","Restricted Area",1610612763,"MEM","Memphis Grizzlies",796,1239,0.642],["Shot
+        Area","Restricted Area",1610612741,"CHI","Chicago Bulls",1110,1783,0.623],["Shot
+        Area","Restricted Area",1610612758,"SAC","Sacramento Kings",789,1143,0.69],["Shot
+        Area","Restricted Area",1610612748,"MIA","Miami Heat",1054,1624,0.649],["Shot
+        Area","In The Paint (Non-RA)",1610612746,"LAC","LA Clippers",497,1097,0.453],["Shot
+        Area","In The Paint (Non-RA)",1610612766,"CHA","Charlotte Hornets",420,1001,0.42],["Shot
+        Area","In The Paint (Non-RA)",1610612739,"CLE","Cleveland Cavaliers",472,1015,0.465],["Shot
+        Area","In The Paint (Non-RA)",1610612756,"PHX","Phoenix Suns",493,1100,0.448],["Shot
+        Area","In The Paint (Non-RA)",1610612754,"IND","Indiana Pacers",448,1015,0.441],["Shot
+        Area","In The Paint (Non-RA)",1610612740,"NOP","New Orleans Pelicans",346,953,0.363],["Shot
+        Area","In The Paint (Non-RA)",1610612750,"MIN","Minnesota Timberwolves",416,926,0.449],["Shot
+        Area","In The Paint (Non-RA)",1610612737,"ATL","Atlanta Hawks",501,1142,0.439],["Shot
+        Area","In The Paint (Non-RA)",1610612742,"DAL","Dallas Mavericks",542,1163,0.466],["Shot
+        Area","In The Paint (Non-RA)",1610612744,"GSW","Golden State Warriors",358,786,0.455],["Shot
+        Area","In The Paint (Non-RA)",1610612761,"TOR","Toronto Raptors",452,1043,0.433],["Shot
+        Area","In The Paint (Non-RA)",1610612762,"UTA","Utah Jazz",634,1286,0.493],["Shot
+        Area","In The Paint (Non-RA)",1610612745,"HOU","Houston Rockets",546,1207,0.452],["Shot
+        Area","In The Paint (Non-RA)",1610612757,"POR","Portland Trail Blazers",304,795,0.382],["Shot
+        Area","In The Paint (Non-RA)",1610612764,"WAS","Washington Wizards",398,1018,0.391],["Shot
+        Area","In The Paint (Non-RA)",1610612753,"ORL","Orlando Magic",421,1022,0.412],["Shot
+        Area","In The Paint (Non-RA)",1610612752,"NYK","New York Knicks",400,897,0.446],["Shot
+        Area","In The Paint (Non-RA)",1610612749,"MIL","Milwaukee Bucks",331,770,0.43],["Shot
+        Area","In The Paint (Non-RA)",1610612743,"DEN","Denver Nuggets",479,1005,0.477],["Shot
+        Area","In The Paint (Non-RA)",1610612751,"BKN","Brooklyn Nets",322,779,0.413],["Shot
+        Area","In The Paint (Non-RA)",1610612755,"PHI","Philadelphia 76ers",338,829,0.408],["Shot
+        Area","In The Paint (Non-RA)",1610612747,"LAL","Los Angeles Lakers",504,1020,0.494],["Shot
+        Area","In The Paint (Non-RA)",1610612760,"OKC","Oklahoma City Thunder",472,1001,0.472],["Shot
+        Area","In The Paint (Non-RA)",1610612738,"BOS","Boston Celtics",495,1007,0.492],["Shot
+        Area","In The Paint (Non-RA)",1610612763,"MEM","Memphis Grizzlies",571,1197,0.477],["Shot
+        Area","In The Paint (Non-RA)",1610612748,"MIA","Miami Heat",530,1241,0.427],["Shot
+        Area","In The Paint (Non-RA)",1610612759,"SAS","San Antonio Spurs",400,867,0.461],["Shot
+        Area","In The Paint (Non-RA)",1610612741,"CHI","Chicago Bulls",373,836,0.446],["Shot
+        Area","In The Paint (Non-RA)",1610612765,"DET","Detroit Pistons",484,1140,0.425],["Shot
+        Area","In The Paint (Non-RA)",1610612758,"SAC","Sacramento Kings",621,1354,0.459],["Shot
+        Area","Mid-Range",1610612755,"PHI","Philadelphia 76ers",244,575,0.424],["Shot
+        Area","Mid-Range",1610612764,"WAS","Washington Wizards",269,619,0.435],["Shot
+        Area","Mid-Range",1610612762,"UTA","Utah Jazz",185,486,0.381],["Shot Area","Mid-Range",1610612739,"CLE","Cleveland
+        Cavaliers",191,409,0.467],["Shot Area","Mid-Range",1610612756,"PHX","Phoenix
+        Suns",259,616,0.42],["Shot Area","Mid-Range",1610612747,"LAL","Los Angeles
+        Lakers",225,499,0.451],["Shot Area","Mid-Range",1610612753,"ORL","Orlando
+        Magic",189,476,0.397],["Shot Area","Mid-Range",1610612743,"DEN","Denver Nuggets",273,607,0.45],["Shot
+        Area","Mid-Range",1610612751,"BKN","Brooklyn Nets",135,371,0.364],["Shot Area","Mid-Range",1610612744,"GSW","Golden
+        State Warriors",162,412,0.393],["Shot Area","Mid-Range",1610612761,"TOR","Toronto
+        Raptors",261,598,0.436],["Shot Area","Mid-Range",1610612749,"MIL","Milwaukee
+        Bucks",245,593,0.413],["Shot Area","Mid-Range",1610612738,"BOS","Boston Celtics",275,669,0.411],["Shot
+        Area","Mid-Range",1610612752,"NYK","New York Knicks",232,545,0.426],["Shot
+        Area","Mid-Range",1610612760,"OKC","Oklahoma City Thunder",253,544,0.465],["Shot
+        Area","Mid-Range",1610612757,"POR","Portland Trail Blazers",137,368,0.372],["Shot
+        Area","Mid-Range",1610612742,"DAL","Dallas Mavericks",246,605,0.407],["Shot
+        Area","Mid-Range",1610612766,"CHA","Charlotte Hornets",107,297,0.36],["Shot
+        Area","Mid-Range",1610612750,"MIN","Minnesota Timberwolves",208,503,0.414],["Shot
+        Area","Mid-Range",1610612737,"ATL","Atlanta Hawks",168,401,0.419],["Shot Area","Mid-Range",1610612740,"NOP","New
+        Orleans Pelicans",125,364,0.343],["Shot Area","Mid-Range",1610612746,"LAC","LA
+        Clippers",187,435,0.43],["Shot Area","Mid-Range",1610612745,"HOU","Houston
+        Rockets",280,687,0.408],["Shot Area","Mid-Range",1610612754,"IND","Indiana
+        Pacers",261,649,0.402],["Shot Area","Mid-Range",1610612759,"SAS","San Antonio
+        Spurs",226,490,0.461],["Shot Area","Mid-Range",1610612748,"MIA","Miami Heat",166,432,0.384],["Shot
+        Area","Mid-Range",1610612741,"CHI","Chicago Bulls",99,243,0.407],["Shot Area","Mid-Range",1610612765,"DET","Detroit
+        Pistons",191,438,0.436],["Shot Area","Mid-Range",1610612763,"MEM","Memphis
+        Grizzlies",188,452,0.416],["Shot Area","Mid-Range",1610612758,"SAC","Sacramento
+        Kings",366,890,0.411],["Shot Area","Left Corner 3",1610612743,"DEN","Denver
+        Nuggets",111,250,0.444],["Shot Area","Left Corner 3",1610612747,"LAL","Los
+        Angeles Lakers",94,265,0.355],["Shot Area","Left Corner 3",1610612764,"WAS","Washington
+        Wizards",69,196,0.352],["Shot Area","Left Corner 3",1610612750,"MIN","Minnesota
+        Timberwolves",114,309,0.369],["Shot Area","Left Corner 3",1610612760,"OKC","Oklahoma
+        City Thunder",108,318,0.34],["Shot Area","Left Corner 3",1610612756,"PHX","Phoenix
+        Suns",109,282,0.387],["Shot Area","Left Corner 3",1610612751,"BKN","Brooklyn
+        Nets",97,268,0.362],["Shot Area","Left Corner 3",1610612753,"ORL","Orlando
+        Magic",117,286,0.409],["Shot Area","Left Corner 3",1610612757,"POR","Portland
+        Trail Blazers",99,268,0.369],["Shot Area","Left Corner 3",1610612752,"NYK","New
+        York Knicks",142,330,0.43],["Shot Area","Left Corner 3",1610612762,"UTA","Utah
+        Jazz",129,326,0.396],["Shot Area","Left Corner 3",1610612737,"ATL","Atlanta
+        Hawks",110,291,0.378],["Shot Area","Left Corner 3",1610612744,"GSW","Golden
+        State Warriors",146,358,0.408],["Shot Area","Left Corner 3",1610612761,"TOR","Toronto
+        Raptors",96,248,0.387],["Shot Area","Left Corner 3",1610612746,"LAC","LA Clippers",128,267,0.479],["Shot
+        Area","Left Corner 3",1610612745,"HOU","Houston Rockets",89,233,0.382],["Shot
+        Area","Left Corner 3",1610612754,"IND","Indiana Pacers",64,203,0.315],["Shot
+        Area","Left Corner 3",1610612740,"NOP","New Orleans Pelicans",90,226,0.398],["Shot
+        Area","Left Corner 3",1610612742,"DAL","Dallas Mavericks",95,288,0.33],["Shot
+        Area","Left Corner 3",1610612738,"BOS","Boston Celtics",86,209,0.411],["Shot
+        Area","Left Corner 3",1610612749,"MIL","Milwaukee Bucks",137,311,0.441],["Shot
+        Area","Left Corner 3",1610612766,"CHA","Charlotte Hornets",131,312,0.42],["Shot
+        Area","Left Corner 3",1610612739,"CLE","Cleveland Cavaliers",102,263,0.388],["Shot
+        Area","Left Corner 3",1610612755,"PHI","Philadelphia 76ers",88,249,0.353],["Shot
+        Area","Left Corner 3",1610612763,"MEM","Memphis Grizzlies",99,295,0.336],["Shot
+        Area","Left Corner 3",1610612765,"DET","Detroit Pistons",72,227,0.317],["Shot
+        Area","Left Corner 3",1610612758,"SAC","Sacramento Kings",101,264,0.383],["Shot
+        Area","Left Corner 3",1610612748,"MIA","Miami Heat",129,338,0.382],["Shot
+        Area","Left Corner 3",1610612759,"SAS","San Antonio Spurs",126,328,0.384],["Shot
+        Area","Left Corner 3",1610612741,"CHI","Chicago Bulls",114,314,0.363],["Shot
+        Area","Right Corner 3",1610612739,"CLE","Cleveland Cavaliers",100,288,0.347],["Shot
+        Area","Right Corner 3",1610612744,"GSW","Golden State Warriors",129,328,0.393],["Shot
+        Area","Right Corner 3",1610612760,"OKC","Oklahoma City Thunder",83,211,0.393],["Shot
+        Area","Right Corner 3",1610612755,"PHI","Philadelphia 76ers",81,211,0.384],["Shot
+        Area","Right Corner 3",1610612762,"UTA","Utah Jazz",106,284,0.373],["Shot
+        Area","Right Corner 3",1610612766,"CHA","Charlotte Hornets",115,259,0.444],["Shot
+        Area","Right Corner 3",1610612754,"IND","Indiana Pacers",110,288,0.382],["Shot
+        Area","Right Corner 3",1610612753,"ORL","Orlando Magic",82,239,0.343],["Shot
+        Area","Right Corner 3",1610612750,"MIN","Minnesota Timberwolves",109,269,0.405],["Shot
+        Area","Right Corner 3",1610612757,"POR","Portland Trail Blazers",97,317,0.306],["Shot
+        Area","Right Corner 3",1610612749,"MIL","Milwaukee Bucks",119,268,0.444],["Shot
+        Area","Right Corner 3",1610612764,"WAS","Washington Wizards",84,205,0.41],["Shot
+        Area","Right Corner 3",1610612752,"NYK","New York Knicks",156,364,0.429],["Shot
+        Area","Right Corner 3",1610612743,"DEN","Denver Nuggets",98,247,0.397],["Shot
+        Area","Right Corner 3",1610612742,"DAL","Dallas Mavericks",94,254,0.37],["Shot
+        Area","Right Corner 3",1610612761,"TOR","Toronto Raptors",89,241,0.369],["Shot
+        Area","Right Corner 3",1610612740,"NOP","New Orleans Pelicans",87,228,0.382],["Shot
+        Area","Right Corner 3",1610612746,"LAC","LA Clippers",88,249,0.353],["Shot
+        Area","Right Corner 3",1610612737,"ATL","Atlanta Hawks",132,325,0.406],["Shot
+        Area","Right Corner 3",1610612745,"HOU","Houston Rockets",118,278,0.424],["Shot
+        Area","Right Corner 3",1610612738,"BOS","Boston Celtics",75,173,0.434],["Shot
+        Area","Right Corner 3",1610612751,"BKN","Brooklyn Nets",97,264,0.367],["Shot
+        Area","Right Corner 3",1610612756,"PHX","Phoenix Suns",83,221,0.376],["Shot
+        Area","Right Corner 3",1610612747,"LAL","Los Angeles Lakers",68,206,0.33],["Shot
+        Area","Right Corner 3",1610612765,"DET","Detroit Pistons",109,273,0.399],["Shot
+        Area","Right Corner 3",1610612763,"MEM","Memphis Grizzlies",101,229,0.441],["Shot
+        Area","Right Corner 3",1610612758,"SAC","Sacramento Kings",62,189,0.328],["Shot
+        Area","Right Corner 3",1610612759,"SAS","San Antonio Spurs",130,361,0.36],["Shot
+        Area","Right Corner 3",1610612748,"MIA","Miami Heat",91,261,0.349],["Shot
+        Area","Right Corner 3",1610612741,"CHI","Chicago Bulls",120,282,0.426],["Shot
+        Area","Above the Break 3",1610612757,"POR","Portland Trail Blazers",631,1837,0.343],["Shot
+        Area","Above the Break 3",1610612745,"HOU","Houston Rockets",401,1142,0.351],["Shot
+        Area","Above the Break 3",1610612742,"DAL","Dallas Mavericks",404,1196,0.338],["Shot
+        Area","Above the Break 3",1610612760,"OKC","Oklahoma City Thunder",576,1590,0.362],["Shot
+        Area","Above the Break 3",1610612756,"PHX","Phoenix Suns",640,1803,0.355],["Shot
+        Area","Above the Break 3",1610612762,"UTA","Utah Jazz",503,1494,0.337],["Shot
+        Area","Above the Break 3",1610612743,"DEN","Denver Nuggets",578,1492,0.387],["Shot
+        Area","Above the Break 3",1610612749,"MIL","Milwaukee Bucks",539,1447,0.372],["Shot
+        Area","Above the Break 3",1610612761,"TOR","Toronto Raptors",455,1373,0.331],["Shot
+        Area","Above the Break 3",1610612737,"ATL","Atlanta Hawks",596,1651,0.361],["Shot
+        Area","Above the Break 3",1610612766,"CHA","Charlotte Hornets",634,1800,0.352],["Shot
+        Area","Above the Break 3",1610612738,"BOS","Boston Celtics",686,1949,0.352],["Shot
+        Area","Above the Break 3",1610612746,"LAC","LA Clippers",484,1411,0.343],["Shot
+        Area","Above the Break 3",1610612754,"IND","Indiana Pacers",559,1620,0.345],["Shot
+        Area","Above the Break 3",1610612753,"ORL","Orlando Magic",449,1351,0.332],["Shot
+        Area","Above the Break 3",1610612744,"GSW","Golden State Warriors",641,1847,0.347],["Shot
+        Area","Above the Break 3",1610612764,"WAS","Washington Wizards",546,1591,0.343],["Shot
+        Area","Above the Break 3",1610612739,"CLE","Cleveland Cavaliers",629,1763,0.357],["Shot
+        Area","Above the Break 3",1610612752,"NYK","New York Knicks",537,1529,0.351],["Shot
+        Area","Above the Break 3",1610612755,"PHI","Philadelphia 76ers",540,1546,0.349],["Shot
+        Area","Above the Break 3",1610612750,"MIN","Minnesota Timberwolves",591,1592,0.371],["Shot
+        Area","Above the Break 3",1610612747,"LAL","Los Angeles Lakers",488,1368,0.357],["Shot
+        Area","Above the Break 3",1610612740,"NOP","New Orleans Pelicans",470,1419,0.331],["Shot
+        Area","Above the Break 3",1610612751,"BKN","Brooklyn Nets",554,1674,0.331],["Shot
+        Area","Above the Break 3",1610612741,"CHI","Chicago Bulls",599,1682,0.356],["Shot
+        Area","Above the Break 3",1610612765,"DET","Detroit Pistons",432,1243,0.348],["Shot
+        Area","Above the Break 3",1610612759,"SAS","San Antonio Spurs",471,1400,0.336],["Shot
+        Area","Above the Break 3",1610612763,"MEM","Memphis Grizzlies",540,1587,0.34],["Shot
+        Area","Above the Break 3",1610612758,"SAC","Sacramento Kings",434,1301,0.334],["Shot
+        Area","Above the Break 3",1610612748,"MIA","Miami Heat",557,1557,0.358],["Shot
+        Area","Backcourt",1610612750,"MIN","Minnesota Timberwolves",0,2,0.0],["Shot
+        Area","Backcourt",1610612744,"GSW","Golden State Warriors",1,1,1.0],["Shot
+        Area","Backcourt",1610612746,"LAC","LA Clippers",0,0,0.0],["Shot Area","Backcourt",1610612740,"NOP","New
+        Orleans Pelicans",0,0,0.0],["Shot Area","Backcourt",1610612739,"CLE","Cleveland
+        Cavaliers",0,1,0.0],["Shot Area","Backcourt",1610612753,"ORL","Orlando Magic",1,1,1.0],["Shot
+        Area","Backcourt",1610612754,"IND","Indiana Pacers",0,0,0.0],["Shot Area","Backcourt",1610612756,"PHX","Phoenix
+        Suns",0,1,0.0],["Shot Area","Backcourt",1610612766,"CHA","Charlotte Hornets",2,3,0.667],["Shot
+        Area","Backcourt",1610612738,"BOS","Boston Celtics",0,0,0.0],["Shot Area","Backcourt",1610612743,"DEN","Denver
+        Nuggets",2,2,1.0],["Shot Area","Backcourt",1610612755,"PHI","Philadelphia
+        76ers",1,1,1.0],["Shot Area","Backcourt",1610612760,"OKC","Oklahoma City Thunder",0,0,0.0],["Shot
+        Area","Backcourt",1610612757,"POR","Portland Trail Blazers",0,0,0.0],["Shot
+        Area","Backcourt",1610612747,"LAL","Los Angeles Lakers",0,1,0.0],["Shot Area","Backcourt",1610612742,"DAL","Dallas
+        Mavericks",0,1,0.0],["Shot Area","Backcourt",1610612761,"TOR","Toronto Raptors",0,1,0.0],["Shot
+        Area","Backcourt",1610612737,"ATL","Atlanta Hawks",0,0,0.0],["Shot Area","Backcourt",1610612752,"NYK","New
+        York Knicks",0,0,0.0],["Shot Area","Backcourt",1610612762,"UTA","Utah Jazz",0,0,0.0],["Shot
+        Area","Backcourt",1610612745,"HOU","Houston Rockets",1,2,0.5],["Shot Area","Backcourt",1610612749,"MIL","Milwaukee
+        Bucks",0,0,0.0],["Shot Area","Backcourt",1610612751,"BKN","Brooklyn Nets",0,1,0.0],["Shot
+        Area","Backcourt",1610612764,"WAS","Washington Wizards",0,0,0.0],["Shot Area","Backcourt",1610612763,"MEM","Memphis
+        Grizzlies",0,0,0.0],["Shot Area","Backcourt",1610612758,"SAC","Sacramento
+        Kings",0,0,0.0],["Shot Area","Backcourt",1610612748,"MIA","Miami Heat",1,2,0.5],["Shot
+        Area","Backcourt",1610612765,"DET","Detroit Pistons",1,1,1.0],["Shot Area","Backcourt",1610612741,"CHI","Chicago
+        Bulls",1,1,1.0],["Shot Area","Backcourt",1610612759,"SAS","San Antonio Spurs",0,0,0.0]]},{"name":"ShotAreaOnCourt","headers":["GROUP_SET","TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","VS_PLAYER_ID","VS_PLAYER_NAME","COURT_STATUS","GROUP_VALUE","FGM","FGA","FG_PCT"],"rowSet":[]},{"name":"ShotAreaOffCourt","headers":["GROUP_SET","TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","VS_PLAYER_ID","VS_PLAYER_NAME","COURT_STATUS","GROUP_VALUE","FGM","FGA","FG_PCT"],"rowSet":[]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '10519'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:37:17 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQjmITAs8Z9GicAQAA8iTagx64f3X2PxAFaVJynQg9cqe37q6V/Feg4Tl2LCd7GpYXwCF1gEYsiZCS0gJ3JdUUTj39kB5OaXz0D/USpVwHlRR3oTI6QwvVemjVBmiOTzT1oxhhD/l50lhweyTUBKWu96Frs4hQ7rLBo/Vprvj6beO9y8rj7SvP62vshT16gQynlns2l8NUj8XM4hSlDt9gFM1uyP/bfXeftVEziiAZebdZ/OSCr9VWj8+S5ac=~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7087;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '3600.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '3'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '-1117.746'
+      x-varnish:
+      - 69416521 62612140
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

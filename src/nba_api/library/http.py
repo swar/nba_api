@@ -1,9 +1,9 @@
-import os
 import json
+import os
 import random
-import requests
-
 from urllib.parse import quote_plus
+
+import requests
 
 try:
     from nba_api.library.debug.debug import DEBUG
@@ -97,10 +97,7 @@ class NBAHTTP:
         endpoint = endpoint.lower()
         self.parameters = parameters
 
-        if headers is None:
-            request_headers = self.headers
-        else:
-            request_headers = headers
+        request_headers = self.headers if headers is None else headers
 
         if referer:
             request_headers["Referer"] = referer
@@ -127,6 +124,7 @@ class NBAHTTP:
         url = None
         status_code = None
         contents = None
+        file_path = None
 
         # Sort parameters by key... for some reason this matters for some requests...
         parameters = sorted(parameters.items(), key=lambda kv: kv[0])
@@ -138,7 +136,7 @@ class NBAHTTP:
                 "{}={}".format(key, "" if val is None else quote_plus(str(val)))
                 for key, val in parameters
             )
-            url = "{}?{}".format(base_url, parameter_string)
+            url = f"{base_url}?{parameter_string}"
             print(url)
             file_name = "{}-{}.txt".format(
                 endpoint, md5(parameter_string.encode("utf-8")).hexdigest()
@@ -151,9 +149,8 @@ class NBAHTTP:
             file_path = os.path.join(file_path, file_name)
             print(file_name, os.path.isfile(file_path))
             if os.path.isfile(file_path):
-                f = open(file_path, "r")
-                contents = f.read()
-                f.close()
+                with open(file_path) as f:
+                    contents = f.read()
                 print("loading from file...")
 
         if not contents:
@@ -170,9 +167,8 @@ class NBAHTTP:
 
         contents = self.clean_contents(contents)
         if DEBUG and DEBUG_STORAGE:
-            f = open(file_path, "w")
-            f.write(contents)
-            f.close()
+            with open(file_path, "w") as f:
+                f.write(contents)
             print(url)
 
         data = self.nba_response(response=contents, status_code=status_code, url=url)

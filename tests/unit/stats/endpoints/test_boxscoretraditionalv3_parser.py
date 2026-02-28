@@ -1,9 +1,11 @@
 """Unit tests for BoxScoreTraditionalV3 parser."""
 
 import pytest
+
 from nba_api.stats.endpoints._parsers.boxscoretraditionalv3 import (
     NBAStatsBoxscoreTraditionalParserV3,
 )
+
 from .data.boxscoretraditionalv3 import BOXSCORETRADITIONALV3_SAMPLE
 
 
@@ -28,7 +30,13 @@ class TestNBAStatsBoxscoreTraditionalParserV3:
         assert isinstance(headers, tuple)
         assert len(headers) == 26
         assert headers[0] == "gameId"
-        assert headers[1:6] == ("teamId", "teamCity", "teamName", "teamTricode", "teamSlug")
+        assert headers[1:6] == (
+            "teamId",
+            "teamCity",
+            "teamName",
+            "teamTricode",
+            "teamSlug",
+        )
         # Traditional stats fields
         assert "minutes" in headers
         assert "fieldGoalsMade" in headers
@@ -186,7 +194,9 @@ class TestNBAStatsBoxscoreTraditionalParserV3:
 
         for row in player_data:
             for value in row:
-                assert not isinstance(value, dict), "Player data should not contain dicts"
+                assert not isinstance(value, dict), (
+                    "Player data should not contain dicts"
+                )
 
     def test_handles_missing_starters_bench_gracefully(self):
         """Test parser handles missing starters/bench data."""
@@ -209,7 +219,15 @@ class TestNBAStatsBoxscoreTraditionalParserV3:
         import json
         from pathlib import Path
 
-        response_path = Path(__file__).parents[4] / "docs" / "nba_api" / "stats" / "endpoints" / "responses" / "boxscoretraditionalv3.json"
+        response_path = (
+            Path(__file__).parents[4]
+            / "docs"
+            / "nba_api"
+            / "stats"
+            / "endpoints"
+            / "responses"
+            / "boxscoretraditionalv3.json"
+        )
 
         if not response_path.exists():
             pytest.skip(f"Full response file not found: {response_path}")
@@ -228,12 +246,18 @@ class TestNBAStatsBoxscoreTraditionalParserV3:
         # Verify data structure
         assert len(result["TeamStats"]["data"]) == 2  # 2 teams
         assert len(result["PlayerStats"]["data"]) > 0  # Should have players
-        assert len(result["TeamStarterBenchStats"]["data"]) == 4  # 2 teams * 2 (starters + bench)
+        assert (
+            len(result["TeamStarterBenchStats"]["data"]) == 4
+        )  # 2 teams * 2 (starters + bench)
 
         # Verify headers match expected_data from endpoint
         from nba_api.stats.endpoints.boxscoretraditionalv3 import BoxScoreTraditionalV3
+
         expected = BoxScoreTraditionalV3.expected_data
 
         assert list(result["TeamStats"]["headers"]) == expected["TeamStats"]
         assert list(result["PlayerStats"]["headers"]) == expected["PlayerStats"]
-        assert list(result["TeamStarterBenchStats"]["headers"]) == expected["TeamStarterBenchStats"]
+        assert (
+            list(result["TeamStarterBenchStats"]["headers"])
+            == expected["TeamStarterBenchStats"]
+        )

@@ -1,19 +1,25 @@
 import re
-from nba_api.stats.library.data import players, wnba_players
-from nba_api.stats.library.data import (
-    player_index_id,
-    player_index_full_name,
-    player_index_first_name,
-    player_index_last_name,
-    player_index_is_active,
-)
 import unicodedata
+
+from nba_api.stats.library.data import (
+    player_index_first_name,
+    player_index_full_name,
+    player_index_id,
+    player_index_is_active,
+    player_index_last_name,
+    players,
+    wnba_players,
+)
 
 
 def _find_players(regex_pattern, row_id, players=players):
     players_found = []
     for player in players:
-        if re.search(_strip_accents(regex_pattern), _strip_accents(str(player[row_id])), flags=re.I):
+        if re.search(
+            _strip_accents(regex_pattern),
+            _strip_accents(str(player[row_id])),
+            flags=re.I,
+        ):
             players_found.append(_get_player_dict(player))
     return players_found
 
@@ -23,13 +29,15 @@ def _strip_accents(inputstr: str) -> str:
     Normalize and remove accents from string.
     """
     # Normalize to decomposed form
-    normalizedstr = unicodedata.normalize('NFD', inputstr)
+    normalizedstr = unicodedata.normalize("NFD", inputstr)
     # Filter out accents (Mn = Mark, Nonspacing category)
-    return ''.join(charx for charx in normalizedstr if unicodedata.category(charx) != 'Mn')
+    return "".join(
+        charx for charx in normalizedstr if unicodedata.category(charx) != "Mn"
+    )
 
 
 def _find_player_by_id(player_id, players=players):
-    regex_pattern = "^{}$".format(player_id)
+    regex_pattern = f"^{player_id}$"
     players_list = _find_players(regex_pattern, player_index_id, players=players)
     if len(players_list) > 1:
         raise Exception("Found more than 1 id")

@@ -1,0 +1,116 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF2WNeEWcAQAA2MLZgx4QToqVnkZ/c/RyAqCfpqasq+/GGS+6WqVDhcbcMRoKQ0zDVyaDK9uI13JLbT4NcNShkYHWIUeFaP0j3fmXttBv4DciBuUpqYlR5jBnIRu6PMQYxnw6MrTECtUrQ0iZuQQenrwbNnC7nsFzBmzQyB+JWi3Q8TkTm6r47axx7uNSP+Q3zt2n5M9opfxSVyE5jjQ9gI5nH0VAeCDo1vSylDyWa8jH0G8s04fnAEA=~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/playerdashptshots?DateFrom=&DateTo=&GameSegment=&LastNGames=0&LeagueID=00&Location=&Month=0&OpponentTeamID=0&Outcome=&PerMode=Totals&Period=0&PlayerID=1628378&Season=2025-26&SeasonSegment=&SeasonType=Regular+Season&TeamID=1610612739&VsConference=&VsDivision=
+  response:
+    body:
+      string: '{"resource":"playerdashptshots","parameters":{"PerMode":"Totals","LeagueID":"00","Season":"2025-26","SeasonType":"Regular
+        Season","PlayerID":1628378,"TeamID":1610612739,"Outcome":null,"Location":null,"Month":0,"SeasonSegment":null,"DateFrom":null,"DateTo":null,"OpponentTeamID":0,"VsConference":null,"VsDivision":null,"GameSegment":null,"Period":0,"LastNGames":0,"ISTRound":null},"resultSets":[{"name":"Overall","headers":["PLAYER_ID","PLAYER_NAME_LAST_FIRST","SORT_ORDER","GP","G","SHOT_TYPE","FGA_FREQUENCY","FGM","FGA","FG_PCT","EFG_PCT","FG2A_FREQUENCY","FG2M","FG2A","FG2_PCT","FG3A_FREQUENCY","FG3M","FG3A","FG3_PCT"],"rowSet":[[1628378,"Mitchell,
+        Donovan",1,53,53,"Overall",1.0,532,1094,0.486,0.573,0.54,343,591,0.58,0.46,189,503,0.376]]},{"name":"GeneralShooting","headers":["PLAYER_ID","PLAYER_NAME_LAST_FIRST","SORT_ORDER","GP","G","SHOT_TYPE","FGA_FREQUENCY","FGM","FGA","FG_PCT","EFG_PCT","FG2A_FREQUENCY","FG2M","FG2A","FG2_PCT","FG3A_FREQUENCY","FG3M","FG3A","FG3_PCT"],"rowSet":[[1628378,"Mitchell,
+        Donovan",1,53,53,"Catch and Shoot",0.186,88,203,0.433,0.633,0.012,7,13,0.538,0.174,81,190,0.426],[1628378,"Mitchell,
+        Donovan",2,53,53,"Pull Ups",0.468,206,512,0.402,0.508,0.183,98,200,0.49,0.285,108,312,0.346],[1628378,"Mitchell,
+        Donovan",3,53,53,"Less than 10 ft",0.346,238,378,0.63,0.63,0.346,238,378,0.63,0.0,0,0,null],[1628378,"Mitchell,
+        Donovan",4,53,1,"Other",0.001,0,1,0.0,0.0,0.0,0,0,null,0.001,0,1,0.0]]},{"name":"ShotClockShooting","headers":["PLAYER_ID","PLAYER_NAME_LAST_FIRST","SORT_ORDER","GP","G","SHOT_CLOCK_RANGE","FGA_FREQUENCY","FGM","FGA","FG_PCT","EFG_PCT","FG2A_FREQUENCY","FG2M","FG2A","FG2_PCT","FG3A_FREQUENCY","FG3M","FG3A","FG3_PCT"],"rowSet":[[1628378,"Mitchell,
+        Donovan",1,53,8,"24-22",0.009,4,10,0.4,0.5,0.005,2,6,0.333,0.004,2,4,0.5],[1628378,"Mitchell,
+        Donovan",2,53,52,"22-18 Very Early",0.193,108,211,0.512,0.6,0.101,71,110,0.645,0.092,37,101,0.366],[1628378,"Mitchell,
+        Donovan",3,53,53,"18-15 Early",0.282,161,309,0.521,0.595,0.157,115,172,0.669,0.125,46,137,0.336],[1628378,"Mitchell,
+        Donovan",4,53,53,"15-7 Average",0.393,212,430,0.493,0.591,0.216,128,236,0.542,0.177,84,194,0.433],[1628378,"Mitchell,
+        Donovan",5,53,34,"7-4 Late",0.048,19,53,0.358,0.425,0.026,12,28,0.429,0.023,7,25,0.28],[1628378,"Mitchell,
+        Donovan",6,53,42,"4-0 Very Late",0.074,28,81,0.346,0.426,0.036,15,39,0.385,0.038,13,42,0.31]]},{"name":"DribbleShooting","headers":["PLAYER_ID","PLAYER_NAME_LAST_FIRST","SORT_ORDER","GP","G","DRIBBLE_RANGE","FGA_FREQUENCY","FGM","FGA","FG_PCT","EFG_PCT","FG2A_FREQUENCY","FG2M","FG2A","FG2_PCT","FG3A_FREQUENCY","FG3M","FG3A","FG3_PCT"],"rowSet":[[1628378,"Mitchell,
+        Donovan",1,53,53,"0 Dribbles",0.215,110,235,0.468,0.64,0.04,29,44,0.659,0.175,81,191,0.424],[1628378,"Mitchell,
+        Donovan",2,53,42,"1 Dribble",0.072,37,79,0.468,0.589,0.027,18,30,0.6,0.045,19,49,0.388],[1628378,"Mitchell,
+        Donovan",3,53,43,"2 Dribbles",0.081,42,89,0.472,0.562,0.043,26,47,0.553,0.038,16,42,0.381],[1628378,"Mitchell,
+        Donovan",4,53,53,"3-6 Dribbles",0.319,172,349,0.493,0.552,0.211,131,231,0.567,0.108,41,118,0.347],[1628378,"Mitchell,
+        Donovan",5,53,53,"7+ Dribbles",0.313,171,342,0.5,0.547,0.218,139,239,0.582,0.094,32,103,0.311]]},{"name":"ClosestDefenderShooting","headers":["PLAYER_ID","PLAYER_NAME_LAST_FIRST","SORT_ORDER","GP","G","CLOSE_DEF_DIST_RANGE","FGA_FREQUENCY","FGM","FGA","FG_PCT","EFG_PCT","FG2A_FREQUENCY","FG2M","FG2A","FG2_PCT","FG3A_FREQUENCY","FG3M","FG3A","FG3_PCT"],"rowSet":[[1628378,"Mitchell,
+        Donovan",1,53,29,"0-2 Feet - Very Tight",0.042,21,46,0.457,0.478,0.039,19,43,0.442,0.003,2,3,0.667],[1628378,"Mitchell,
+        Donovan",2,53,53,"2-4 Feet - Tight",0.391,241,428,0.563,0.585,0.324,222,355,0.625,0.067,19,73,0.26],[1628378,"Mitchell,
+        Donovan",3,53,53,"4-6 Feet - Open",0.411,179,450,0.398,0.51,0.145,78,159,0.491,0.266,101,291,0.347],[1628378,"Mitchell,
+        Donovan",4,53,51,"6+ Feet - Wide Open",0.155,91,170,0.535,0.732,0.031,24,34,0.706,0.124,67,136,0.493]]},{"name":"ClosestDefender10ftPlusShooting","headers":["PLAYER_ID","PLAYER_NAME_LAST_FIRST","SORT_ORDER","GP","G","CLOSE_DEF_DIST_RANGE","FGA_FREQUENCY","FGM","FGA","FG_PCT","EFG_PCT","FG2A_FREQUENCY","FG2M","FG2A","FG2_PCT","FG3A_FREQUENCY","FG3M","FG3A","FG3_PCT"],"rowSet":[[1628378,"Mitchell,
+        Donovan",1,53,8,"0-2 Feet - Very Tight",0.008,4,9,0.444,0.556,0.005,2,6,0.333,0.003,2,3,0.667],[1628378,"Mitchell,
+        Donovan",2,53,50,"2-4 Feet - Tight",0.144,65,158,0.411,0.472,0.078,46,85,0.541,0.067,19,73,0.26],[1628378,"Mitchell,
+        Donovan",3,53,53,"4-6 Feet - Open",0.358,145,392,0.37,0.499,0.092,44,101,0.436,0.266,101,291,0.347],[1628378,"Mitchell,
+        Donovan",4,53,51,"6+ Feet - Wide Open",0.144,80,157,0.51,0.723,0.019,13,21,0.619,0.124,67,136,0.493]]},{"name":"TouchTimeShooting","headers":["PLAYER_ID","PLAYER_NAME_LAST_FIRST","SORT_ORDER","GP","G","TOUCH_TIME_RANGE","FGA_FREQUENCY","FGM","FGA","FG_PCT","EFG_PCT","FG2A_FREQUENCY","FG2M","FG2A","FG2_PCT","FG3A_FREQUENCY","FG3M","FG3A","FG3_PCT"],"rowSet":[[1628378,"Mitchell,
+        Donovan",1,53,53,"Touch < 2 Seconds",0.28,144,306,0.471,0.627,0.069,48,75,0.64,0.211,96,231,0.416],[1628378,"Mitchell,
+        Donovan",2,53,53,"Touch 2-6 Seconds",0.368,200,403,0.496,0.563,0.233,146,255,0.573,0.135,54,148,0.365],[1628378,"Mitchell,
+        Donovan",3,53,53,"Touch 6+ Seconds",0.352,188,385,0.488,0.539,0.239,149,261,0.571,0.113,39,124,0.315]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1563'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:36:53 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF3eNeEWcAQAA5sXZgx50cJ46LCkEpesW+AAMcwmQrvambT8sJLH9m5f56MJ3eYBixoRlA1nA45qXDuiXAy+tRE0EVHS1j+pywYTM30sqfg6F7mZpBlZAfbPHoEdULAwo+VdGf9UccVPwKY7YihTsQroEov05L5zKbKWXTIvFClJsN8ZnESU/50BRCpPTFwFA4boz52kZ/gFQ/lGKQIcMj5DfZpR1dUG0Di3AsG+FA/ePxGSUIXMLfoQ=~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7111;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-1
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '1'
+      x-full-ttl:
+      - '1800.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '1'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '369.857'
+      x-varnish:
+      - 68801662 68163621
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

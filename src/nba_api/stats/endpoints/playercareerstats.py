@@ -1,7 +1,6 @@
-from typing import Any, Dict, List, Optional, Union
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
-from nba_api.stats.library.parameters import PerMode36, LeagueIDNullable
+from nba_api.stats.library.parameters import LeagueIDNullable, PerMode36
 
 
 class PlayerCareerStats(Endpoint):
@@ -295,11 +294,11 @@ class PlayerCareerStats(Endpoint):
 
     def __init__(
         self,
-        player_id: Union[str, int],
+        player_id: str | int,
         per_mode36: str = PerMode36.default,
         league_id_nullable: str = LeagueIDNullable.default,
-        proxy: Optional[str] = None,
-        headers: Optional[Dict[str, str]] = None,
+        proxy: str | None = None,
+        headers: dict[str, str] | None = None,
         timeout: int = 30,
         get_request: bool = True,
     ) -> None:

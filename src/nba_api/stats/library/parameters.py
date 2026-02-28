@@ -653,14 +653,10 @@ class SeasonYearNullable(_NotRequired, SeasonYear):
 
 class Season(SeasonYear):
     current_season_year = SeasonYear.current_season_year
-    current_season = "{}-{}".format(
-        current_season_year, str(current_season_year + 1)[2:]
-    )
+    current_season = f"{current_season_year}-{str(current_season_year + 1)[2:]}"
 
     # Get last Season
-    previous_season = "{}-{}".format(
-        current_season_year - 1, str(current_season_year)[2:]
-    )
+    previous_season = f"{current_season_year - 1}-{str(current_season_year)[2:]}"
 
     default = current_season
 
@@ -668,8 +664,8 @@ class Season(SeasonYear):
 class WnbaSeason(WnbaSeasonYear):
     current_season_year = WnbaSeasonYear.current_season_year
 
-    current_season = "{}".format(current_season_year)
-    previous_season = "{}".format(current_season_year - 1)
+    current_season = f"{current_season_year}"
+    previous_season = f"{current_season_year - 1}"
 
     default = current_season
 
@@ -696,10 +692,10 @@ class SeasonAllTime(Season):
 
 class SeasonID(SeasonYear):
     def get_season_id(self, season_year):
-        return "2{}".format(season_year)
+        return f"2{season_year}"
 
     current_season_year = SeasonYear.current_season_year
-    current_season_year = "2{}".format(current_season_year)
+    current_season_year = f"2{current_season_year}"
 
     default = current_season_year
 

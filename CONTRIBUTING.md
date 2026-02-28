@@ -157,19 +157,33 @@ poetry install
 eval $(poetry env activate) 
 ```
 
-### 5. Validating Your Environment
+### 5. Set Up Pre-Commit Hooks
+
+This project uses [pre-commit](https://pre-commit.com/) to automatically lint and format code before each commit using [Ruff](https://docs.astral.sh/ruff/).
+
+```bash
+# Install the git hooks (only needed once per clone)
+pre-commit install
+```
+
+Once installed, `ruff` will automatically fix imports, formatting, and style issues on every `git commit`. If files are modified by the hooks, re-stage them and commit again.
+
+### 6. Validating Your Environment
 
 Poetry provides all of the developer dependencies through the `pyproject.toml` file. This allows you to begin using the required development tools immediately.
 
-```python
-# Run Unit Test (all tests should pass)
+```bash
+# Run unit tests (all tests should pass)
 pytest
 
-# Validate for Style using Flake8 (only errors will be displayed)
-flake8
+# Lint and auto-fix with Ruff
+ruff check src/ --fix
+
+# Format with Ruff
+ruff format src/
 ```
 
-### 6. When Complete, Open a PR
+### 7. When Complete, Open a PR
 
 When you have completed your development and uploaded your changes to GitHub, [create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to have your changes reviewed.
 

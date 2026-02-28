@@ -1,0 +1,169 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF6iHeEWcAQAATx/Zgx4S/TQ3L8HYI+Lp59KiLFkZCRnn1z8pKcoabF4fW2Camg9xkXifzGjoFnfrGrr9CEmY/hSnKw2tUIS2GN4omg7vCdNTatiYY3+SclRWhsqIcCf7Lc7CVe+4zZaPSHid1KSZvc7DF07XbDtZJd6gOB35peIFlDn64v9hXeU0rI7iyJtwCmpK/FZEJ7XloTyHugFVjCluzBPXNcQyXqrAMtx1uTKWz8GFAdn+Wg==~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/draftcombinedrillresults?LeagueID=00&SeasonYear=2025
+  response:
+    body:
+      string: "{\"resource\":\"draftcombinedrillresults\",\"parameters\":{\"LeagueID\":\"00\",\"SeasonYear\":\"2025\"},\"resultSets\":[{\"name\":\"Results\",\"headers\":[\"TEMP_PLAYER_ID\",\"PLAYER_ID\",\"FIRST_NAME\",\"LAST_NAME\",\"PLAYER_NAME\",\"POSITION\",\"STANDING_VERTICAL_LEAP\",\"MAX_VERTICAL_LEAP\",\"LANE_AGILITY_TIME\",\"MODIFIED_LANE_AGILITY_TIME\",\"THREE_QUARTER_SPRINT\",\"BENCH_PRESS\"],\"rowSet\":[[1641891,1641891,\"Izan\",\"Almansa\",\"Izan
+        Almansa\",\"C\",28.0,34.0,11.46,2.93,3.33,null],[1642921,1642921,\"Neoklis\",\"Avdalas\",\"Neoklis
+        Avdalas\",\"SF\",27.0,33.5,10.98,2.98,3.24,null],[1642846,1642846,\"Ace\",\"Bailey\",\"Ace
+        Bailey\",\"SF-PF\",27.5,34.5,10.97,2.78,3.12,null],[1642926,1642926,\"Tamar\",\"Bates\",\"Tamar
+        Bates\",\"SG\",27.5,33.5,10.75,2.99,3.26,null],[1642866,1642866,\"Joan\",\"Beringer\",\"Joan
+        Beringer\",\"C\",28.5,32.5,11.44,2.97,3.45,null],[1642886,1642886,\"Koby\",\"Brea\",\"Koby
+        Brea\",\"SG\",27.5,34.0,11.4,3.23,3.31,null],[1641780,1641780,\"Johni\",\"Broome\",\"Johni
+        Broome\",\"SF-PF\",24.5,28.0,11.52,3.23,3.37,null],[1642868,1642868,\"Carter\",\"Bryant\",\"Carter
+        Bryant\",\"SF-PF\",30.5,39.5,11.25,3.14,3.07,null],[1642891,1642891,\"Miles\",\"Byrd\",\"Miles
+        Byrd\",\"SG\",31.5,35.5,10.91,2.9,3.22,null],[1642383,1642383,\"Walter\",\"Clayton
+        Jr.\",\"Walter Clayton Jr.\",\"PG-SG\",29.5,37.0,10.52,2.81,3.14,null],[1642363,1642363,\"Nique\",\"Clifford\",\"Nique
+        Clifford\",\"PG-SG\",31.0,35.5,10.87,2.96,3.07,null],[1642960,1642960,\"Alex\",\"Condon\",\"Alex
+        Condon\",\"SF-PF\",30.0,34.5,11.57,2.76,3.27,null],[1642907,1642907,\"Cedric\",\"Coward\",\"Cedric
+        Coward\",\"PG-SG\",32.5,38.5,10.97,3.02,3.06,null],[1642856,1642856,\"Egor\",\"Demin\",\"Egor
+        Demin\",\"PG-SG\",26.5,32.0,11.31,2.93,3.33,null],[1642915,1642915,\"Eric\",\"Dixon\",\"Eric
+        Dixon\",\"PF\",28.0,32.5,11.56,3.09,3.41,null],[1642845,1642845,\"VJ\",\"Edgecombe\",\"VJ
+        Edgecombe\",\"PG-SG\",30.0,38.5,11.27,2.93,3.2,null],[1642855,1642855,\"Noa\",\"Essengue\",\"Noa
+        Essengue\",\"PF\",null,null,10.7,null,3.1,null],[1642847,1642847,\"Jeremiah\",\"Fears\",\"Jeremiah
+        Fears\",\"PG-SG\",32.5,36.5,10.95,3.09,3.05,null],[1642843,1642843,\"Cooper\",\"Flagg\",\"Cooper
+        Flagg\",\"SF-PF\",29.0,35.5,10.64,2.92,3.3,null],[1642858,1642858,\"Boogie\",\"Fland\",\"Boogie
+        Fland\",\"PG\",null,null,null,null,null,null],[1642853,1642853,\"Rasheer\",\"Fleming\",\"Rasheer
+        Fleming\",\"SF-PF\",27.0,32.5,10.95,2.72,3.24,null],[1642884,1642884,\"Vladislav\",\"Goldin\",\"Vladislav
+        Goldin\",\"C\",26.5,30.0,11.76,2.95,3.53,null],[1642864,1642864,\"Hugo\",\"Gonz\xE1lez\",\"Hugo
+        Gonz\xE1lez\",\"SF\",null,null,10.91,null,3.27,null],[1642919,1642919,\"PJ\",\"Haggerty\",\"PJ
+        Haggerty\",\"SG\",27.5,32.0,11.76,3.11,3.23,null],[1642844,1642844,\"Dylan\",\"Harper\",\"Dylan
+        Harper\",\"PG-SG\",30.5,36.5,11.07,3.05,3.16,null],[1642916,1642916,\"Ben\",\"Henshall\",\"Ben
+        Henshall\",\"SG\",30.0,36.5,10.49,3.0,3.07,null],[1642857,1642857,\"Kasparas\",\"Jakucionis\",\"Kasparas
+        Jakucionis\",\"PG-SG\",28.5,35.0,10.99,2.82,3.22,null],[1642883,1642883,\"Sion\",\"James\",\"Sion
+        James\",\"SG\",32.0,39.5,10.91,2.93,2.97,null],[1642848,1642848,\"Tre\",\"Johnson\",\"Tre
+        Johnson\",\"PG-SG\",32.0,37.5,10.49,3.11,3.28,null],[1642880,1642880,\"Kam\",\"Jones\",\"Kam
+        Jones\",\"PG\",24.5,31.5,11.42,3.11,3.27,null],[1641750,1641750,\"Ryan\",\"Kalkbrenner\",\"Ryan
+        Kalkbrenner\",\"C\",29.0,33.0,12.05,3.1,3.34,null],[1642909,1642909,\"Karter\",\"Knox\",\"Karter
+        Knox\",\"SF\",32.0,39.5,10.92,2.96,3.2,null],[1642851,1642851,\"Kon\",\"Knueppel\",\"Kon
+        Knueppel\",\"PG-SG\",31.5,36.5,11.92,2.92,3.35,null],[1642404,1642404,\"Chaz\",\"Lanier\",\"Chaz
+        Lanier\",\"PG-SG\",33.0,39.0,10.53,2.96,3.12,null],[1642865,1642865,\"Yaxel\",\"Lendeborg\",\"Yaxel
+        Lendeborg\",\"PF\",25.5,31.5,11.68,3.09,3.32,null],[1642961,1642961,\"RJ\",\"Luis
+        Jr.\",\"RJ Luis Jr.\",\"SF\",31.5,38.0,11.24,2.98,3.13,null],[1642863,1642863,\"Khaman\",\"Maluach\",\"Khaman
+        Maluach\",\"C\",24.0,30.0,12.05,3.44,3.5,null],[1642881,1642881,\"Bogoljub\",\"Markovic\",\"Bogoljub
+        Markovic\",\"PF\",24.0,27.5,11.4,2.96,3.43,null],[1642918,1642918,\"Alijah\",\"Martin\",\"Alijah
+        Martin\",\"SG\",29.5,38.0,11.06,3.05,3.11,null],[1642862,1642862,\"Liam\",\"McNeeley\",\"Liam
+        McNeeley\",\"SF-PF\",30.5,36.5,11.11,2.75,3.16,null],[1642944,1642944,\"Mackenzie\",\"Mgbako\",\"Mackenzie
+        Mgbako\",\"SF-PF\",27.5,33.0,11.99,2.94,3.39,null],[1642922,1642922,\"Jalon\",\"Moore\",\"Jalon
+        Moore\",\"SF\",32.5,39.0,11.68,3.1,3.0,null],[1642867,1642867,\"Collin\",\"Murray-Boyles\",\"Collin
+        Murray-Boyles\",\"SF-PF\",29.5,34.5,11.21,2.86,3.15,null],[1641761,1641761,\"Grant\",\"Nelson\",\"Grant
+        Nelson\",\"PF\",27.0,30.0,10.51,2.58,3.23,null],[1642948,1642948,\"Ryan\",\"Nembhard\",\"Ryan
+        Nembhard\",\"PG\",26.5,32.5,11.5,2.88,3.22,null],[1642854,1642854,\"Asa\",\"Newell\",\"Asa
+        Newell\",\"SF-PF\",29.5,36.5,10.95,2.78,3.26,null],[1642949,1642949,\"Yanic
+        Konan\",\"Niederhauser\",\"Yanic Konan Niederhauser\",\"C\",33.5,37.0,11.45,2.84,3.2,null],[1642950,1642950,\"Lachlan\",\"Olbrich\",\"Lachlan
+        Olbrich\",\"PF\",23.5,31.0,11.9,3.0,3.45,null],[1642923,1642923,\"Otega\",\"Oweh\",\"Otega
+        Oweh\",\"SG\",27.5,35.0,10.92,2.88,3.19,null],[1641825,1641825,\"Dink\",\"Pate\",\"Dink
+        Pate\",\"SG\",24.5,32.5,10.63,2.97,3.29,null],[1642877,1642877,\"Micah\",\"Peavy\",\"Micah
+        Peavy\",\"SF\",30.5,35.5,10.9,3.06,3.13,null],[1642869,1642869,\"Noah\",\"Penda\",\"Noah
+        Penda\",\"PF\",25.0,31.0,11.7,3.13,3.34,null],[1642861,1642861,\"Tahaad\",\"Pettiford\",\"Tahaad
+        Pettiford\",\"PG\",31.0,42.0,10.63,2.96,3.23,null],[1642889,1642889,\"Labaron\",\"Philon\",\"Labaron
+        Philon\",\"PG-SG\",28.5,32.5,11.46,3.14,3.16,null],[1642962,1642962,\"Drake\",\"Powell\",\"Drake
+        Powell\",\"SF-PF\",37.5,43.0,10.71,2.79,3.07,null],[1642878,1642878,\"Tyrese\",\"Proctor\",\"Tyrese
+        Proctor\",\"PG-SG\",30.5,36.5,10.75,3.0,3.19,null],[1642852,1642852,\"Derik\",\"Queen\",\"Derik
+        Queen\",\"C\",23.5,28.0,12.45,3.27,3.52,null],[1642875,1642875,\"Maxime\",\"Raynaud\",\"Maxime
+        Raynaud\",\"C\",28.0,31.5,11.31,3.16,3.23,null],[1642859,1642859,\"Jase\",\"Richardson\",\"Jase
+        Richardson\",\"PG-SG\",30.5,38.0,10.97,3.08,3.22,null],[1642860,1642860,\"Will\",\"Riley\",\"Will
+        Riley\",\"SF-PF\",27.5,32.0,11.73,3.08,3.21,null],[1642913,1642913,\"Michael\",\"Ruzic\",\"Michael
+        Ruzic\",\"PF\",29.5,32.5,11.4,2.98,3.11,null],[1642282,1642282,\"Hunter\",\"Sallis\",\"Hunter
+        Sallis\",\"SG\",31.0,37.5,10.99,2.94,3.22,null],[1642920,1642920,\"Kobe\",\"Sanders\",\"Kobe
+        Sanders\",\"SF\",30.0,36.0,10.95,3.0,3.19,null],[1642879,1642879,\"Ben\",\"Saraf\",\"Ben
+        Saraf\",\"PG\",null,null,11.1,null,3.2,null],[1641813,1641813,\"Mark\",\"Sears\",\"Mark
+        Sears\",\"PG\",31.0,37.5,10.96,3.25,3.28,null],[1642917,1642917,\"Max\",\"Shulga\",\"Max
+        Shulga\",\"SG\",29.5,34.5,11.35,3.06,3.21,null],[1642914,1642914,\"Javon\",\"Small\",\"Javon
+        Small\",\"PG\",33.0,40.5,10.74,2.87,3.07,null],[1642850,1642850,\"Thomas\",\"Sorber\",\"Thomas
+        Sorber\",\"C\",null,null,null,null,null,null],[1642876,1642876,\"Adou\",\"Thiero\",\"Adou
+        Thiero\",\"PG-SG\",null,null,null,null,null,null],[1642910,1642910,\"John\",\"Tonje\",\"John
+        Tonje\",\"SG\",30.0,37.0,11.14,3.21,3.2,null],[1642893,1642893,\"Alex\",\"Toohey\",\"Alex
+        Toohey\",\"SF\",26.5,31.5,11.38,2.9,3.2,null],[1642849,1642849,\"Nolan\",\"Traor\xE9\",\"Nolan
+        Traor\xE9\",\"PG\",28.0,34.0,10.75,2.85,3.26,null],[1642870,1642870,\"Milos\",\"Uzan\",\"Milos
+        Uzan\",\"PG\",26.5,35.0,10.86,2.94,3.17,null],[1642364,1642364,\"Jamir\",\"Watkins\",\"Jamir
+        Watkins\",\"SF\",31.5,37.0,11.19,3.21,3.14,null],[1642924,1642924,\"Brice\",\"Williams\",\"Brice
+        Williams\",\"SG\",27.5,32.5,11.19,2.98,3.2,null],[1642963,1642963,\"Darrion\",\"Williams\",\"Darrion
+        Williams\",\"SF\",24.0,30.0,11.73,3.01,3.34,null],[1642874,1642874,\"Danny\",\"Wolf\",\"Danny
+        Wolf\",\"SF-PF\",24.0,30.0,11.26,2.91,3.51,null],[1642905,1642905,\"Hansen\",\"Yang\",\"Hansen
+        Yang\",\"C\",26.0,30.0,11.79,3.01,3.38,null],[1642911,1642911,\"Rocco\",\"Zikarsky\",\"Rocco
+        Zikarsky\",\"C\",27.5,31.5,11.92,3.0,3.48,null]]}]}"
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '2726'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:36:11 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAs0YbWicAQAALyLZgx5QjhKK67eHZWyL8VD4ZHi1fX92a4rRpW3l7Y7DtJir8CbcLEVf4Svr2R8SBSGAB82uw8AeOJDfp5Pl8TSAodUMVdpG0CY5hJKyxcTWnGDwoRAJbypylMjY8goPO5iPCxHmcS5B/2AU+XAbzOTHnw1zXB+UzSMn+VMEjWHyv81otvuTOquiX8ShS3p1WZ32JYFtOwoq6dB1KndeFnubcuG1izl8x9sPP3pCXw==~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7153;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-0
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '1'
+      x-full-ttl:
+      - '1800.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '2'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '-870.229'
+      x-varnish:
+      - 69978463 65854176
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

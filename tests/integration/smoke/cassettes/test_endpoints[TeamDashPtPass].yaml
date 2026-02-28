@@ -1,0 +1,129 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQlWITAhz0b2ecAQAAcQLagx52i3cWxUkHeW/jmIRyhmlW0u/CrSg/2HIQKq5hErJuT6QGbl/t2rQqq/Oi7iCLjrBAV16ms9zNjQ0GEq3/W7Wc/rdBzdCphNIt3fTJNYKD8xBSV4zfbvGh5HlAT7WvkHmh/LzH7f1PXKGEdaGMolLDq9Z9W2P9C8mYMH2rPQkWfp3ZvjFH2twkUO7SRKqDWBZbBcKC2IOUoKIHmBlE65fxh7PUGsLOeOz00oU=~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/teamdashptpass?DateFrom=&DateTo=&LastNGames=0&LeagueID=00&Location=&Month=0&OpponentTeamID=0&Outcome=&PerMode=Totals&Season=2025-26&SeasonSegment=&SeasonType=Regular+Season&TeamID=1610612739&VsConference=&VsDivision=
+  response:
+    body:
+      string: "{\"resource\":\"teamdashptpass\",\"parameters\":{\"PerMode\":\"Totals\",\"LeagueID\":\"00\",\"Season\":\"2025-26\",\"SeasonType\":\"Regular
+        Season\",\"TeamID\":1610612739,\"Outcome\":null,\"Location\":null,\"Month\":0,\"SeasonSegment\":null,\"DateFrom\":null,\"DateTo\":null,\"OpponentTeamID\":0,\"VsConference\":null,\"VsDivision\":null,\"LastNGames\":0,\"ISTRound\":null},\"resultSets\":[{\"name\":\"PassesMade\",\"headers\":[\"TEAM_ID\",\"TEAM_NAME\",\"PASS_TYPE\",\"G\",\"PASS_FROM\",\"PASS_TEAMMATE_PLAYER_ID\",\"FREQUENCY\",\"PASS\",\"AST\",\"FGM\",\"FGA\",\"FG_PCT\",\"FG2M\",\"FG2A\",\"FG2_PCT\",\"FG3M\",\"FG3A\",\"FG3_PCT\"],\"rowSet\":[[1610612739,\"Cleveland
+        Cavaliers\",\"made\",53,\"Mitchell, Donovan\",1628378,0.141,2330,311,356,809,0.44,226,446,0.507,130,363,0.358],[1610612739,\"Cleveland
+        Cavaliers\",\"made\",43,\"Mobley, Evan\",1630596,0.125,2073,171,260,612,0.425,152,315,0.483,108,297,0.364],[1610612739,\"Cleveland
+        Cavaliers\",\"made\",52,\"Tyson, Jaylon\",1642281,0.087,1441,117,183,424,0.432,111,227,0.489,72,197,0.365],[1610612739,\"Cleveland
+        Cavaliers\",\"made\",50,\"Porter Jr., Craig\",1641854,0.085,1399,157,209,491,0.426,138,281,0.491,71,210,0.338],[1610612739,\"Cleveland
+        Cavaliers\",\"made\",35,\"Ball, Lonzo\",1628366,0.082,1361,136,186,402,0.463,116,234,0.496,70,168,0.417],[1610612739,\"Cleveland
+        Cavaliers\",\"made\",26,\"Garland, Darius\",1629636,0.074,1221,179,198,457,0.433,131,257,0.51,67,200,0.335],[1610612739,\"Cleveland
+        Cavaliers\",\"made\",43,\"Hunter, De'Andre\",1629631,0.067,1100,88,127,316,0.402,76,163,0.466,51,153,0.333],[1610612739,\"Cleveland
+        Cavaliers\",\"made\",45,\"Allen, Jarrett\",1628386,0.066,1084,88,141,308,0.458,99,197,0.503,42,111,0.378],[1610612739,\"Cleveland
+        Cavaliers\",\"made\",45,\"Wade, Dean\",1629731,0.061,1007,68,123,283,0.435,80,159,0.503,43,124,0.347],[1610612739,\"Cleveland
+        Cavaliers\",\"made\",33,\"Merrill, Sam\",1630241,0.058,960,75,120,259,0.463,82,157,0.522,38,102,0.373],[1610612739,\"Cleveland
+        Cavaliers\",\"made\",44,\"Tomlin, Nae'Qwan\",1641772,0.033,544,42,67,150,0.447,40,81,0.494,27,69,0.391],[1610612739,\"Cleveland
+        Cavaliers\",\"made\",40,\"Proctor, Tyrese\",1642878,0.032,522,53,69,181,0.381,43,88,0.489,26,93,0.28],[1610612739,\"Cleveland
+        Cavaliers\",\"made\",40,\"Bryant, Thomas\",1628418,0.029,475,26,56,130,0.431,39,78,0.5,17,52,0.327],[1610612739,\"Cleveland
+        Cavaliers\",\"made\",26,\"Nance Jr., Larry\",1626204,0.019,310,25,38,97,0.392,22,48,0.458,16,49,0.327],[1610612739,\"Cleveland
+        Cavaliers\",\"made\",5,\"Harden, James\",201935,0.015,256,43,49,101,0.485,32,57,0.561,17,44,0.386],[1610612739,\"Cleveland
+        Cavaliers\",\"made\",6,\"Schr\xF6der, Dennis\",203471,0.011,188,21,29,60,0.483,19,38,0.5,10,22,0.455],[1610612739,\"Cleveland
+        Cavaliers\",\"made\",12,\"Travers, Luke\",1631247,0.007,115,9,11,32,0.344,7,18,0.389,4,14,0.286],[1610612739,\"Cleveland
+        Cavaliers\",\"made\",6,\"Ellis, Keon\",1631165,0.007,112,10,16,33,0.485,11,18,0.611,5,15,0.333],[1610612739,\"Cleveland
+        Cavaliers\",\"made\",4,\"Enaruna, Tristan\",1642400,0.001,17,2,2,4,0.5,1,2,0.5,1,2,0.5],[1610612739,\"Cleveland
+        Cavaliers\",\"made\",2,\"Livingston, Chris\",1641753,0.001,14,1,2,3,0.667,2,2,1.0,0,1,0.0]]},{\"name\":\"PassesReceived\",\"headers\":[\"TEAM_ID\",\"TEAM_NAME\",\"PASS_TYPE\",\"G\",\"PASS_TO\",\"PASS_TEAMMATE_PLAYER_ID\",\"FREQUENCY\",\"PASS\",\"AST\",\"FGM\",\"FGA\",\"FG_PCT\",\"FG2M\",\"FG2A\",\"FG2_PCT\",\"FG3M\",\"FG3A\",\"FG3_PCT\"],\"rowSet\":[[1610612739,\"Cleveland
+        Cavaliers\",\"received\",53,\"Mitchell, Donovan\",1628378,0.186,3079,202,486,1095,0.444,307,600,0.512,179,495,0.362],[1610612739,\"Cleveland
+        Cavaliers\",\"received\",43,\"Mobley, Evan\",1630596,0.105,1742,198,259,579,0.447,212,427,0.496,47,152,0.309],[1610612739,\"Cleveland
+        Cavaliers\",\"received\",52,\"Tyson, Jaylon\",1642281,0.092,1514,223,245,497,0.493,139,272,0.511,106,225,0.471],[1610612739,\"Cleveland
+        Cavaliers\",\"received\",26,\"Garland, Darius\",1629636,0.089,1476,77,164,392,0.418,107,230,0.465,57,162,0.352],[1610612739,\"Cleveland
+        Cavaliers\",\"received\",50,\"Porter Jr., Craig\",1641854,0.075,1244,55,81,191,0.424,55,121,0.455,26,70,0.371],[1610612739,\"Cleveland
+        Cavaliers\",\"received\",43,\"Hunter, De'Andre\",1629631,0.072,1182,148,191,493,0.387,119,258,0.461,72,235,0.306],[1610612739,\"Cleveland
+        Cavaliers\",\"received\",35,\"Ball, Lonzo\",1628366,0.065,1068,40,50,172,0.291,11,28,0.393,39,144,0.271],[1610612739,\"Cleveland
+        Cavaliers\",\"received\",45,\"Allen, Jarrett\",1628386,0.064,1061,217,229,429,0.534,228,420,0.543,1,9,0.111],[1610612739,\"Cleveland
+        Cavaliers\",\"received\",33,\"Merrill, Sam\",1630241,0.06,984,129,139,293,0.474,27,57,0.474,112,236,0.475],[1610612739,\"Cleveland
+        Cavaliers\",\"received\",45,\"Wade, Dean\",1629731,0.043,703,82,84,213,0.394,28,58,0.483,56,155,0.361],[1610612739,\"Cleveland
+        Cavaliers\",\"received\",40,\"Proctor, Tyrese\",1642878,0.039,639,42,63,177,0.356,28,72,0.389,35,105,0.333],[1610612739,\"Cleveland
+        Cavaliers\",\"received\",44,\"Tomlin, Nae'Qwan\",1641772,0.031,517,85,89,216,0.412,69,127,0.543,20,89,0.225],[1610612739,\"Cleveland
+        Cavaliers\",\"received\",40,\"Bryant, Thomas\",1628418,0.024,389,63,65,137,0.474,39,63,0.619,26,74,0.351],[1610612739,\"Cleveland
+        Cavaliers\",\"received\",26,\"Nance Jr., Larry\",1626204,0.017,274,29,31,85,0.365,15,35,0.429,16,50,0.32],[1610612739,\"Cleveland
+        Cavaliers\",\"received\",5,\"Harden, James\",201935,0.015,251,6,26,58,0.448,13,30,0.433,13,28,0.464],[1610612739,\"Cleveland
+        Cavaliers\",\"received\",6,\"Schr\xF6der, Dennis\",203471,0.012,204,5,17,51,0.333,14,34,0.412,3,17,0.176],[1610612739,\"Cleveland
+        Cavaliers\",\"received\",10,\"Travers, Luke\",1631247,0.005,85,6,7,36,0.194,6,20,0.3,1,16,0.063],[1610612739,\"Cleveland
+        Cavaliers\",\"received\",6,\"Ellis, Keon\",1631165,0.005,84,10,10,24,0.417,4,5,0.8,6,19,0.316],[1610612739,\"Cleveland
+        Cavaliers\",\"received\",4,\"Enaruna, Tristan\",1642400,0.001,17,2,2,7,0.286,2,5,0.4,0,2,0.0],[1610612739,\"Cleveland
+        Cavaliers\",\"received\",2,\"Livingston, Chris\",1641753,0.001,16,3,4,7,0.571,4,4,1.0,0,3,0.0]]}]}"
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1849'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:37:09 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQlWITAiX0b2ecAQAAdQXagx5OIvlGDaKtDQESaxFd30lr5fDEQxYf5I8oYf/gCDpeaMPL+0nf0EmNKuogAco6TftR5SfWX99Eqdqrszh2/pw7+hrA3b2/JJkXJATOLZCSTw0JFEyQHQ5lARwXKptmXnmKVrHIpHtqEQEb7HN59Iv1YALzRYbQM5JgH1D5cSJs8bsbat0RtrJyq1Dia9x4Gqa+v0sg6bEA7q4HUso4brjTMWiv2/Ecwbn1KHM=~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7095;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-1
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '3600.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '1'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '-1175.415'
+      x-varnish:
+      - 69854465 61777195
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

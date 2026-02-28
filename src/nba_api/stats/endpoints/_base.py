@@ -1,6 +1,7 @@
 import json
+from typing import Any
+
 import numpy as np
-from typing import Any, Dict, List, Optional, Union
 
 try:
     from pandas import DataFrame, MultiIndex
@@ -14,17 +15,17 @@ except ImportError:
 
 class Endpoint:
     class DataSet:
-        key: Optional[str] = None
-        data: Dict[str, Any] = {}
+        key: str | None = None
+        data: dict[str, Any] = {}
 
-        def __init__(self, data: Dict[str, Any]) -> None:
+        def __init__(self, data: dict[str, Any]) -> None:
             self.data = data
 
         def get_json(self) -> str:
             """Return the data as a JSON string."""
             return json.dumps(self.data)
 
-        def get_dict(self) -> Dict[str, Any]:
+        def get_dict(self) -> dict[str, Any]:
             """Return the data as a dictionary."""
             return self.data
 
@@ -63,7 +64,7 @@ class Endpoint:
                     column_names += list(
                         np.repeat(
                             np.array(level["columnNames"]),
-                            level["columnSpan"] if "columnSpan" in level else 1,
+                            level.get("columnSpan", 1),
                         )
                     )
                     levels.append(column_names)
@@ -73,13 +74,13 @@ class Endpoint:
                 return DataFrame(self.data["data"], columns=midx)
 
     nba_response: Any = None
-    data_sets: List[DataSet] = []
+    data_sets: list[DataSet] = []
 
     def get_request_url(self) -> str:
         """Return the URL of the request."""
         return self.nba_response.get_url()
 
-    def get_available_data(self) -> List[str]:
+    def get_available_data(self) -> list[str]:
         """Return the keys of the available data sets."""
         return self.get_normalized_dict().keys()
 
@@ -87,7 +88,7 @@ class Endpoint:
         """Return the raw response string."""
         return self.nba_response.get_response()
 
-    def get_dict(self) -> Dict[str, Any]:
+    def get_dict(self) -> dict[str, Any]:
         """Return the response as a dictionary."""
         return self.nba_response.get_dict()
 
@@ -95,7 +96,7 @@ class Endpoint:
         """Return the response as a JSON string."""
         return self.nba_response.get_json()
 
-    def get_normalized_dict(self) -> Dict[str, Any]:
+    def get_normalized_dict(self) -> dict[str, Any]:
         """Return the response as a normalized dictionary."""
         return self.nba_response.get_normalized_dict()
 
@@ -103,6 +104,6 @@ class Endpoint:
         """Return the response as a normalized JSON string."""
         return self.nba_response.get_normalized_json()
 
-    def get_data_frames(self) -> List[DataFrame]:
+    def get_data_frames(self) -> list[DataFrame]:
         """Return a list of pandas DataFrames for all data sets."""
         return [data_set.get_data_frame() for data_set in self.data_sets]

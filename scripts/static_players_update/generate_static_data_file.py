@@ -1,15 +1,15 @@
-import os
 import logging
+import os
 from datetime import datetime
+
+from template import file_template, player_row_template
 
 from nba_api.stats.endpoints.commonallplayers import CommonAllPlayers
 from nba_api.stats.library.parameters import LeagueID, Season, WnbaSeason
-from template import file_template, player_row_template
 
 # Configure logging
 logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
 )
 log = logging.getLogger(__name__)
 
@@ -17,11 +17,11 @@ log = logging.getLogger(__name__)
 # Note: is_active status is preserved from NBA API, not set here
 player_adjustments = {
     # Asian naming convention (Family name, Given name)
-    2775: ["Ha", "Seung-jin", "Ha Seung-jin"],           # Korean: 하승진
-    201180: ["Sun", "Yue", "Sun Yue"],                   # Chinese: 孙悦
-    2397: ["Yao", "Ming", "Yao Ming"],                   # Chinese: 姚明
-    201146: ["Yi", "Jianlian", "Yi Jianlian"],           # Chinese: 易建联
-    1627753: ["Zhou", "Qi", "Zhou Qi"],                  # Chinese: 周琦
+    2775: ["Ha", "Seung-jin", "Ha Seung-jin"],  # Korean: 하승진
+    201180: ["Sun", "Yue", "Sun Yue"],  # Chinese: 孙悦
+    2397: ["Yao", "Ming", "Yao Ming"],  # Chinese: 姚明
+    201146: ["Yi", "Jianlian", "Yi Jianlian"],  # Chinese: 易建联
+    1627753: ["Zhou", "Qi", "Zhou Qi"],  # Chinese: 周琦
     # Players with nicknames in official name
     77036: ["Hoffman", "Paul 'The Bear'", "Paul 'The Bear' Hoffman"],
     77510: ["McClain", "Ted 'Hound Dog'", "Ted 'Hound Dog' McClain"],

@@ -6,6 +6,7 @@ ScoreboardV2 endpoint for NBA daily game schedule and scores.
     2025-10-22 and 2025-12-25. Please use ScoreboardV3 instead.
     ScoreboardV3 is fully backward compatible with all historical seasons.
 """
+
 import warnings
 
 from nba_api.stats.endpoints._base import Endpoint
@@ -39,12 +40,13 @@ class ScoreboardV2(Endpoint):
     Example:
         >>> # Deprecated (has issues with 2025 early season):
         >>> from nba_api.stats.endpoints import ScoreboardV2
-        >>> scoreboard = ScoreboardV2(game_date='2025-10-22')
+        >>> scoreboard = ScoreboardV2(game_date="2025-10-22")
         >>>
         >>> # Recommended (works for all seasons):
         >>> from nba_api.stats.endpoints import ScoreboardV3
-        >>> scoreboard = ScoreboardV3(game_date='2025-10-22')
+        >>> scoreboard = ScoreboardV3(game_date="2025-10-22")
     """
+
     endpoint = "scoreboardv2"
     expected_data = {
         "Available": ["GAME_ID", "PT_AVAILABLE"],
@@ -193,7 +195,7 @@ class ScoreboardV2(Endpoint):
             "ScoreboardV3 is fully backward compatible and works for all historical seasons. "
             "See: https://github.com/swar/nba_api/issues/596",
             DeprecationWarning,
-            stacklevel=2
+            stacklevel=2,
         )
         self.proxy = proxy
         if headers is not None:

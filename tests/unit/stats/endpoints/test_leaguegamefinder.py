@@ -2,8 +2,6 @@
 
 import warnings
 
-import pytest
-
 from nba_api.stats.endpoints import LeagueGameFinder
 
 
@@ -19,7 +17,7 @@ class TestLeagueGameFinderWarnings:
                 player_or_team_abbreviation="T",
                 season_nullable="2023-24",
                 game_id_nullable="0022301181",
-                get_request=False
+                get_request=False,
             )
 
             # Should emit exactly one warning
@@ -37,7 +35,7 @@ class TestLeagueGameFinderWarnings:
             LeagueGameFinder(
                 player_or_team_abbreviation="T",
                 season_nullable="2023-24",
-                get_request=False
+                get_request=False,
             )
 
             # Should not emit any warnings
@@ -52,7 +50,7 @@ class TestLeagueGameFinderWarnings:
                 player_or_team_abbreviation="T",
                 season_nullable="2023-24",
                 game_id_nullable="",
-                get_request=False
+                get_request=False,
             )
 
             # Should not emit any warnings
@@ -67,7 +65,7 @@ class TestLeagueGameFinderInitialization:
         endpoint = LeagueGameFinder(
             player_or_team_abbreviation="T",
             season_nullable="2023-24",
-            get_request=False
+            get_request=False,
         )
 
         assert endpoint.parameters["PlayerOrTeam"] == "T"
@@ -79,7 +77,7 @@ class TestLeagueGameFinderInitialization:
         endpoint = LeagueGameFinder(
             player_or_team_abbreviation="T",
             game_id_nullable="0022301181",
-            get_request=False
+            get_request=False,
         )
 
         assert endpoint.parameters["GameID"] == "0022301181"

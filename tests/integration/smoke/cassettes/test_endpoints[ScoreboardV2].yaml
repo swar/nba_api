@@ -1,0 +1,123 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAsQebWicAQAA8e7Zgx5HUFFmPdQAO/V8MVWST8ixvXWaVoDHsft7tDOCkqD+9Tjm2p0aVkj54HyrqxEUC76Y+W+u7GVeXo0tb9+5MozAxfXBiWhmiW+c9NLM0nFPcrkW4M2jyMsB9+vhGqJD8DAxulWArP4BPeoTFXoLmj1E4MuFqFy8zWLl+yATUxdmx1OG+E/IceIDAJLPQZ3vyalxakYsg5f9iMYfgDjNgFpGxmm0sjII5sTKzac=~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/scoreboardv2?DayOffset=0&GameDate=2026-02-22&LeagueID=00
+  response:
+    body:
+      string: '{"resource":"scoreboardV2","parameters":{"LeagueID":"00","GameDate":"02/22/2026","DayOffset":0},"resultSets":[{"name":"GameHeader","headers":["GAME_DATE_EST","GAME_SEQUENCE","GAME_ID","GAME_STATUS_ID","GAME_STATUS_TEXT","GAMECODE","HOME_TEAM_ID","VISITOR_TEAM_ID","SEASON","LIVE_PERIOD","LIVE_PC_TIME","NATL_TV_BROADCASTER_ABBREVIATION","HOME_TV_BROADCASTER_ABBREVIATION","AWAY_TV_BROADCASTER_ABBREVIATION","LIVE_PERIOD_TIME_BCAST","ARENA_NAME","WH_STATUS","WNBA_COMMISSIONER_FLAG"],"rowSet":[["2026-02-22T00:00:00",1,"0022500817",1,"1:00
+        pm ET","20260222/CLEOKC",1610612760,1610612739,"2025",0,"","ABC",null,null,"Q0
+        - ABC","Paycom Center",0,0],["2026-02-22T00:00:00",2,"0022500818",1,"3:30
+        pm ET","20260222/BKNATL",1610612737,1610612751,"2025",0,"",null,"FDSNSE-ATL","YES",null,"State
+        Farm Arena",0,0],["2026-02-22T00:00:00",3,"0022500819",1,"3:30 pm ET","20260222/TORMIL",1610612749,1610612761,"2025",0,"",null,"FDSNWI","TSN",null,"Fiserv
+        Forum",0,0],["2026-02-22T00:00:00",4,"0022500820",1,"3:30 pm ET","20260222/DENGSW",1610612744,1610612743,"2025",0,"","ABC",null,null,"Q0
+        - ABC","Chase Center",0,0],["2026-02-22T00:00:00",5,"0022500821",1,"5:00 pm
+        ET","20260222/DALIND",1610612754,1610612742,"2025",0,"",null,"FDSNIN","KFAA",null,"Gainbridge
+        Fieldhouse",0,0],["2026-02-22T00:00:00",6,"0022500822",1,"6:00 pm ET","20260222/CHAWAS",1610612764,1610612766,"2025",0,"",null,"MNMT","FDSNSE-CHA",null,"Capital
+        One Arena",0,0],["2026-02-22T00:00:00",7,"0022500823",1,"6:30 pm ET","20260222/BOSLAL",1610612747,1610612738,"2025",0,"","Peacock",null,null,"Q0
+        - Peacock","Crypto.com Arena",0,0],["2026-02-22T00:00:00",7,"0022500823",1,"6:30
+        pm ET","20260222/BOSLAL",1610612747,1610612738,"2025",0,"","NBC",null,null,"Q0
+        - NBC","Crypto.com Arena",0,0],["2026-02-22T00:00:00",7,"0022500823",1,"6:30
+        pm ET","20260222/BOSLAL",1610612747,1610612738,"2025",0,"","Telemundo",null,null,"Q0
+        - Telemundo","Crypto.com Arena",0,0],["2026-02-22T00:00:00",8,"0022500824",1,"7:00
+        pm ET","20260222/PHIMIN",1610612750,1610612755,"2025",0,"",null,"FDSNNO","NBCSP",null,"Target
+        Center",0,0],["2026-02-22T00:00:00",9,"0022500825",1,"8:00 pm ET","20260222/NYKCHI",1610612741,1610612752,"2025",0,"",null,"CHSN","MSG",null,"United
+        Center",0,0],["2026-02-22T00:00:00",10,"0022500826",1,"8:00 pm ET","20260222/PORPHX",1610612756,1610612757,"2025",0,"",null,"KTVK/KPHE","KUNP",null,"Mortgage
+        Matchup Center",0,0],["2026-02-22T00:00:00",11,"0022500827",1,"9:00 pm ET","20260222/ORLLAC",1610612746,1610612753,"2025",0,"","NBA
+        TV","FDSNSC/KTLA","FDSNFL","Q0 - NBA TV","Intuit Dome",0,0]]},{"name":"LineScore","headers":["GAME_DATE_EST","GAME_SEQUENCE","GAME_ID","TEAM_ID","TEAM_ABBREVIATION","TEAM_CITY_NAME","TEAM_NAME","TEAM_WINS_LOSSES","PTS_QTR1","PTS_QTR2","PTS_QTR3","PTS_QTR4","PTS_OT1","PTS_OT2","PTS_OT3","PTS_OT4","PTS_OT5","PTS_OT6","PTS_OT7","PTS_OT8","PTS_OT9","PTS_OT10","PTS","FG_PCT","FT_PCT","FG3_PCT","AST","REB","TOV"],"rowSet":[["2026-02-22T00:00:00",1,"0022500817",1610612760,"OKC","Oklahoma
+        City","Thunder","43-14",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2026-02-22T00:00:00",1,"0022500817",1610612739,"CLE","Cleveland","Cavaliers","36-21",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2026-02-22T00:00:00",2,"0022500818",1610612751,"BKN","Brooklyn","Nets","15-40",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2026-02-22T00:00:00",2,"0022500818",1610612737,"ATL","Atlanta","Hawks","27-31",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2026-02-22T00:00:00",3,"0022500819",1610612749,"MIL","Milwaukee","Bucks","24-30",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2026-02-22T00:00:00",3,"0022500819",1610612761,"TOR","Toronto","Raptors","33-23",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2026-02-22T00:00:00",4,"0022500820",1610612743,"DEN","Denver","Nuggets","36-21",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2026-02-22T00:00:00",4,"0022500820",1610612744,"GSW","Golden
+        State","Warriors","29-27",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2026-02-22T00:00:00",5,"0022500821",1610612742,"DAL","Dallas","Mavericks","19-36",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2026-02-22T00:00:00",5,"0022500821",1610612754,"IND","Indiana","Pacers","15-42",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2026-02-22T00:00:00",6,"0022500822",1610612764,"WAS","Washington","Wizards","16-39",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2026-02-22T00:00:00",6,"0022500822",1610612766,"CHA","Charlotte","Hornets","26-31",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2026-02-22T00:00:00",7,"0022500823",1610612747,"LAL","Los
+        Angeles","Lakers","34-21",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2026-02-22T00:00:00",7,"0022500823",1610612738,"BOS","Boston","Celtics","36-19",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2026-02-22T00:00:00",8,"0022500824",1610612755,"PHI","Philadelphia","76ers","30-26",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2026-02-22T00:00:00",8,"0022500824",1610612750,"MIN","Minnesota","Timberwolves","35-22",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2026-02-22T00:00:00",9,"0022500825",1610612752,"NYK","New
+        York","Knicks","36-21",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2026-02-22T00:00:00",9,"0022500825",1610612741,"CHI","Chicago","Bulls","24-33",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2026-02-22T00:00:00",10,"0022500826",1610612757,"POR","Portland","Trail
+        Blazers","27-30",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2026-02-22T00:00:00",10,"0022500826",1610612756,"PHX","Phoenix","Suns","33-24",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2026-02-22T00:00:00",11,"0022500827",1610612746,"LAC","LA","Clippers","27-29",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2026-02-22T00:00:00",11,"0022500827",1610612753,"ORL","Orlando","Magic","29-26",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]]},{"name":"SeriesStandings","headers":["GAME_ID","HOME_TEAM_ID","VISITOR_TEAM_ID","GAME_DATE_EST","HOME_TEAM_WINS","HOME_TEAM_LOSSES","SERIES_LEADER"],"rowSet":[["0022500823",1610612747,1610612738,"2026-02-22T00:00:00",0,1,"Boston"],["0022500817",1610612760,1610612739,"2026-02-22T00:00:00",1,0,"Oklahoma
+        City"],["0022500822",1610612764,1610612766,"2026-02-22T00:00:00",0,3,"Charlotte"],["0022500826",1610612756,1610612757,"2026-02-22T00:00:00",2,0,"Phoenix"],["0022500820",1610612744,1610612743,"2026-02-22T00:00:00",1,1,"Tied"],["0022500827",1610612746,1610612753,"2026-02-22T00:00:00",0,1,"Orlando"],["0022500825",1610612741,1610612752,"2026-02-22T00:00:00",1,1,"Tied"],["0022500818",1610612737,1610612751,"2026-02-22T00:00:00",1,0,"Atlanta"],["0022500821",1610612754,1610612742,"2026-02-22T00:00:00",0,1,"Dallas"],["0022500819",1610612749,1610612761,"2026-02-22T00:00:00",1,2,"Toronto"]]},{"name":"LastMeeting","headers":["GAME_ID","LAST_GAME_ID","LAST_GAME_DATE_EST","LAST_GAME_HOME_TEAM_ID","LAST_GAME_HOME_TEAM_CITY","LAST_GAME_HOME_TEAM_NAME","LAST_GAME_HOME_TEAM_ABBREVIATION","LAST_GAME_HOME_TEAM_POINTS","LAST_GAME_VISITOR_TEAM_ID","LAST_GAME_VISITOR_TEAM_CITY","LAST_GAME_VISITOR_TEAM_NAME","LAST_GAME_VISITOR_TEAM_CITY1","LAST_GAME_VISITOR_TEAM_POINTS"],"rowSet":[["0022500817","0022500015","2026-01-19T00:00:00",1610612760,"Oklahoma
+        City","Thunder","OKC",136,1610612739,"Cleveland","Cavaliers","CLE",104],["0022500818","0022500130","2025-10-29T00:00:00",1610612737,"Atlanta","Hawks","ATL",117,1610612751,"Brooklyn","Nets","BKN",112],["0022500819","0022500374","2025-12-18T00:00:00",1610612749,"Milwaukee","Bucks","MIL",105,1610612761,"Toronto","Raptors","TOR",111],["0022500820","0022500037","2025-11-07T00:00:00",1610612744,"Golden
+        State","Warriors","GSW",104,1610612743,"Denver","Nuggets","DEN",129],["0022500821","0022500133","2025-10-29T00:00:00",1610612754,"Indiana","Pacers","IND",105,1610612742,"Dallas","Mavericks","DAL",107],["0022500822","0022500645","2026-01-24T00:00:00",1610612764,"Washington","Wizards","WAS",115,1610612766,"Charlotte","Hornets","CHA",119],["0022500823","0022500338","2025-12-05T00:00:00",1610612747,"Los
+        Angeles","Lakers","LAL",105,1610612738,"Boston","Celtics","BOS",126],["0022500824","0012500071","2025-10-17T00:00:00",1610612750,"Minnesota","Timberwolves","MIN",110,1610612755,"Philadelphia","76ers","PHI",126],["0022500825","0022500153","2025-11-02T00:00:00",1610612741,"Chicago","Bulls","CHI",116,1610612752,"New
+        York","Knicks","NYK",128],["0022500826","0022500725","2026-02-03T00:00:00",1610612756,"Phoenix","Suns","PHX",130,1610612757,"Portland","Trail
+        Blazers","POR",125],["0022500827","0022500264","2025-11-20T00:00:00",1610612746,"LA","Clippers","LAC",101,1610612753,"Orlando","Magic","ORL",129]]},{"name":"EastConfStandingsByDay","headers":["TEAM_ID","LEAGUE_ID","SEASON_ID","STANDINGSDATE","CONFERENCE","TEAM","G","W","L","W_PCT","HOME_RECORD","ROAD_RECORD"],"rowSet":[[1610612765,"00","22025","2026-02-22","East","Detroit",55,42,13,0.764,"21-6","20-7"],[1610612738,"00","22025","2026-02-22","East","Boston",55,36,19,0.655,"18-9","18-10"],[1610612739,"00","22025","2026-02-22","East","Cleveland",57,36,21,0.632,"19-11","17-10"],[1610612752,"00","22025","2026-02-22","East","New
+        York",57,36,21,0.632,"22-8","13-13"],[1610612761,"00","22025","2026-02-22","East","Toronto",56,33,23,0.589,"16-13","17-10"],[1610612755,"00","22025","2026-02-22","East","Philadelphia",56,30,26,0.536,"15-15","15-11"],[1610612748,"00","22025","2026-02-22","East","Miami",58,31,27,0.534,"17-11","14-16"],[1610612753,"00","22025","2026-02-22","East","Orlando",55,29,26,0.527,"17-9","11-15"],[1610612737,"00","22025","2026-02-22","East","Atlanta",58,27,31,0.466,"10-16","17-15"],[1610612766,"00","22025","2026-02-22","East","Charlotte",57,26,31,0.456,"12-16","14-15"],[1610612749,"00","22025","2026-02-22","East","Milwaukee",54,24,30,0.444,"12-12","12-18"],[1610612741,"00","22025","2026-02-22","East","Chicago",57,24,33,0.421,"15-14","9-19"],[1610612764,"00","22025","2026-02-22","East","Washington",55,16,39,0.291,"11-18","5-21"],[1610612751,"00","22025","2026-02-22","East","Brooklyn",55,15,40,0.273,"8-19","7-21"],[1610612754,"00","22025","2026-02-22","East","Indiana",57,15,42,0.263,"10-18","5-24"]]},{"name":"WestConfStandingsByDay","headers":["TEAM_ID","LEAGUE_ID","SEASON_ID","STANDINGSDATE","CONFERENCE","TEAM","G","W","L","W_PCT","HOME_RECORD","ROAD_RECORD"],"rowSet":[[1610612760,"00","22025","2026-02-22","West","Oklahoma
+        City",57,43,14,0.754,"23-6","20-7"],[1610612759,"00","22025","2026-02-22","West","San
+        Antonio",56,40,16,0.714,"21-6","18-10"],[1610612743,"00","22025","2026-02-22","West","Denver",57,36,21,0.632,"15-11","21-10"],[1610612745,"00","22025","2026-02-22","West","Houston",55,34,21,0.618,"18-7","16-14"],[1610612747,"00","22025","2026-02-22","West","L.A.
+        Lakers",55,34,21,0.618,"16-10","18-11"],[1610612750,"00","22025","2026-02-22","West","Minnesota",57,35,22,0.614,"20-10","15-12"],[1610612756,"00","22025","2026-02-22","West","Phoenix",57,33,24,0.579,"19-10","14-14"],[1610612744,"00","22025","2026-02-22","West","Golden
+        State",56,29,27,0.518,"18-11","11-16"],[1610612746,"00","22025","2026-02-22","West","LA
+        Clippers",56,27,29,0.482,"14-11","13-18"],[1610612757,"00","22025","2026-02-22","West","Portland",57,27,30,0.474,"16-14","11-16"],[1610612763,"00","22025","2026-02-22","West","Memphis",55,21,34,0.382,"11-15","9-18"],[1610612742,"00","22025","2026-02-22","West","Dallas",55,19,36,0.345,"14-16","5-19"],[1610612762,"00","22025","2026-02-22","West","Utah",57,18,39,0.316,"11-18","7-21"],[1610612740,"00","22025","2026-02-22","West","New
+        Orleans",58,16,42,0.276,"10-21","6-21"],[1610612758,"00","22025","2026-02-22","West","Sacramento",58,12,46,0.207,"9-20","3-26"]]},{"name":"Available","headers":["GAME_ID","PT_AVAILABLE"],"rowSet":[["0022500826",0],["0022500827",0],["0022500825",0],["0022500818",0],["0022500820",0],["0022500822",0],["0022500824",0],["0022500823",0],["0022500821",0],["0022500817",0],["0022500819",0]]},{"name":"TeamLeaders","headers":["GAME_ID","TEAM_ID","TEAM_CITY","TEAM_NICKNAME","TEAM_ABBREVIATION","PTS_PLAYER_ID","PTS_PLAYER_NAME","PTS","REB_PLAYER_ID","REB_PLAYER_NAME","REB","AST_PLAYER_ID","AST_PLAYER_NAME","AST"],"rowSet":[]},{"name":"TicketLinks","headers":["GAME_ID","LEAG_TIX"],"rowSet":[["0022500817",null],["0022500818",null],["0022500819",null],["0022500820",null],["0022500821",null],["0022500822",null],["0022500823",null],["0022500824",null],["0022500825",null],["0022500826",null],["0022500827",null]]},{"name":"WinProbability","headers":[],"rowSet":[]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '3358'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:37:05 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAt0ebWicAQAA9PPZgx6/m40NV5Yif3jXr2iNRk0uxtSxCw3k1allKMfjm/AhfPnvy8N5LWkUIlVr5fQZcn2WkcG/qk6Sbwka18z9Z+XNirpEuPBmH3uatjZ+Efry9xuCdpyLhtBCERTQfq1e7m1Rd2sZr7hxVvz7PwrfNWvuin7x0Ag4XhOPK3B+pb76p3YY6xYgQWI1a9k40B/sQc9K0SAOpdwVrKBLOWZlnJkSOJ0D88jLb/4gqG0=~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7099;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '300.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '3'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '234.186'
+      x-varnish:
+      - 37445473 38318409
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1
