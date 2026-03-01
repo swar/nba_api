@@ -1,0 +1,92 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF1qIeEWcAQAAIj3Zgx7ioBHVDfG0qkd/IrbvgWtl8eUHC7uh8q2wVtI+uEJyUgTXKIyexVlrmiBILMOQZ3PCL9JSQauifeTMnzfi54KwEIu992welFLi1oXO0zC7jmetZJoHGJny2I2edPVXZCT8FsIeOvCqC+Fyn6FISqmBWjSK27tUxdpV4AV+O3yXHqAZWSLFfe//2Ls+qqFBN9D4e4YpwibAEGmtj/FI2Zz+LSaW5y7nror2XA==~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/gamerotation?GameID=0022200552&LeagueID=00
+  response:
+    body:
+      string: '{"resource":"gamerotation","parameters":{"GameID":"0022200552","LeagueID":"00"},"resultSets":[{"name":"AwayTeam","headers":["GAME_ID","TEAM_ID","TEAM_CITY","TEAM_NAME","PERSON_ID","PLAYER_FIRST","PLAYER_LAST","IN_TIME_REAL","OUT_TIME_REAL","PLAYER_PTS","PT_DIFF","USG_PCT"],"rowSet":[["0022200552",1610612741,"Chicago","Bulls",201609,"Goran","Dragic",7200.0,11840.0,2,6.0,0.118],["0022200552",1610612741,"Chicago","Bulls",201609,"Goran","Dragic",19550.0,21471.0,0,-4.0,0.125],["0022200552",1610612741,"Chicago","Bulls",201942,"DeMar","DeRozan",0.0,4270.0,9,7.0,0.333],["0022200552",1610612741,"Chicago","Bulls",201942,"DeMar","DeRozan",5720.0,9790.0,5,7.0,0.375],["0022200552",1610612741,"Chicago","Bulls",201942,"DeMar","DeRozan",11840.0,18800.0,10,-3.0,0.385],["0022200552",1610612741,"Chicago","Bulls",201942,"DeMar","DeRozan",19550.0,31800.0,20,-20.0,0.354],["0022200552",1610612741,"Chicago","Bulls",202696,"Nikola","Vucevic",0.0,5720.0,2,7.0,0.056],["0022200552",1610612741,"Chicago","Bulls",202696,"Nikola","Vucevic",9790.0,22390.0,13,-9.0,0.176],["0022200552",1610612741,"Chicago","Bulls",202696,"Nikola","Vucevic",24010.0,31800.0,5,-17.0,0.067],["0022200552",1610612741,"Chicago","Bulls",203083,"Andre","Drummond",5720.0,9790.0,6,7.0,0.188],["0022200552",1610612741,"Chicago","Bulls",203083,"Andre","Drummond",28756.0,28770.0,0,-2.0,0.0],["0022200552",1610612741,"Chicago","Bulls",203897,"Zach","LaVine",0.0,5720.0,4,7.0,0.278],["0022200552",1610612741,"Chicago","Bulls",203897,"Zach","LaVine",9790.0,19550.0,12,-5.0,0.263],["0022200552",1610612741,"Chicago","Bulls",203897,"Zach","LaVine",23060.0,31800.0,10,-14.0,0.273],["0022200552",1610612741,"Chicago","Bulls",1627884,"Derrick","Jones
+        Jr.",4140.0,9790.0,2,7.0,0.105],["0022200552",1610612741,"Chicago","Bulls",1627884,"Derrick","Jones
+        Jr.",18330.0,22010.0,4,-6.0,0.118],["0022200552",1610612741,"Chicago","Bulls",1627884,"Derrick","Jones
+        Jr.",22390.0,24010.0,0,1.0,0.0],["0022200552",1610612741,"Chicago","Bulls",1627884,"Derrick","Jones
+        Jr.",29620.0,31800.0,0,-8.0,0.111],["0022200552",1610612741,"Chicago","Bulls",1627936,"Alex","Caruso",4140.0,8090.0,4,1.0,0.308],["0022200552",1610612741,"Chicago","Bulls",1627936,"Alex","Caruso",11840.0,14400.0,0,5.0,0.0],["0022200552",1610612741,"Chicago","Bulls",1627936,"Alex","Caruso",17390.0,19550.0,0,-5.0,0.0],["0022200552",1610612741,"Chicago","Bulls",1627936,"Alex","Caruso",22010.0,26740.0,0,-2.0,0.176],["0022200552",1610612741,"Chicago","Bulls",1629632,"Coby","White",4270.0,7200.0,3,0.0,0.222],["0022200552",1610612741,"Chicago","Bulls",1629632,"Coby","White",18800.0,22010.0,0,-5.0,0.0],["0022200552",1610612741,"Chicago","Bulls",1629632,"Coby","White",28711.0,28756.0,2,1.0,1.0],["0022200552",1610612741,"Chicago","Bulls",1629632,"Coby","White",28770.0,28800.0,0,0.0,0.0],["0022200552",1610612741,"Chicago","Bulls",1630172,"Patrick","Williams",0.0,4140.0,6,7.0,0.133],["0022200552",1610612741,"Chicago","Bulls",1630172,"Patrick","Williams",9790.0,18330.0,4,-3.0,0.188],["0022200552",1610612741,"Chicago","Bulls",1630172,"Patrick","Williams",22010.0,24600.0,0,1.0,0.1],["0022200552",1610612741,"Chicago","Bulls",1630172,"Patrick","Williams",26740.0,28711.0,0,-2.0,0.0],["0022200552",1610612741,"Chicago","Bulls",1630172,"Patrick","Williams",28756.0,28770.0,0,-2.0,0.0],["0022200552",1610612741,"Chicago","Bulls",1630172,"Patrick","Williams",28800.0,29620.0,0,-3.0,0.5],["0022200552",1610612741,"Chicago","Bulls",1630245,"Ayo","Dosunmu",0.0,4140.0,2,7.0,0.133],["0022200552",1610612741,"Chicago","Bulls",1630245,"Ayo","Dosunmu",8090.0,11840.0,3,5.0,0.154],["0022200552",1610612741,"Chicago","Bulls",1630245,"Ayo","Dosunmu",14400.0,17390.0,0,-4.0,0.1],["0022200552",1610612741,"Chicago","Bulls",1630245,"Ayo","Dosunmu",21471.0,23060.0,2,-2.0,0.125],["0022200552",1610612741,"Chicago","Bulls",1630245,"Ayo","Dosunmu",24600.0,28756.0,4,-4.0,0.188],["0022200552",1610612741,"Chicago","Bulls",1630245,"Ayo","Dosunmu",28770.0,31800.0,0,-11.0,0.182]]},{"name":"HomeTeam","headers":["GAME_ID","TEAM_ID","TEAM_CITY","TEAM_NAME","PERSON_ID","PLAYER_FIRST","PLAYER_LAST","IN_TIME_REAL","OUT_TIME_REAL","PLAYER_PTS","PT_DIFF","USG_PCT"],"rowSet":[["0022200552",1610612739,"Cleveland","Cavaliers",201567,"Kevin","Love",0.0,4980.0,5,-9.0,0.222],["0022200552",1610612739,"Cleveland","Cavaliers",201567,"Kevin","Love",8770.0,13110.0,0,-6.0,0.063],["0022200552",1610612739,"Cleveland","Cavaliers",201567,"Kevin","Love",14400.0,16930.0,0,2.0,0.222],["0022200552",1610612739,"Cleveland","Cavaliers",201567,"Kevin","Love",20560.0,31386.0,7,19.0,0.111],["0022200552",1610612739,"Cleveland","Cavaliers",201577,"Robin","Lopez",5720.0,8770.0,1,-5.0,0.273],["0022200552",1610612739,"Cleveland","Cavaliers",201577,"Robin","Lopez",13110.0,14400.0,0,0.0,0.0],["0022200552",1610612739,"Cleveland","Cavaliers",201577,"Robin","Lopez",28756.0,28770.0,0,2.0,0.0],["0022200552",1610612739,"Cleveland","Cavaliers",203526,"Raul","Neto",4980.0,9120.0,2,-6.0,0.125],["0022200552",1610612739,"Cleveland","Cavaliers",203526,"Raul","Neto",18950.0,24870.0,2,7.0,0.08],["0022200552",1610612739,"Cleveland","Cavaliers",203526,"Raul","Neto",31386.0,31800.0,0,2.0,0.0],["0022200552",1610612739,"Cleveland","Cavaliers",1626224,"Cedi","Osman",2950.0,9120.0,4,-6.0,0.174],["0022200552",1610612739,"Cleveland","Cavaliers",1626224,"Cedi","Osman",11170.0,14400.0,0,-3.0,0.091],["0022200552",1610612739,"Cleveland","Cavaliers",1626224,"Cedi","Osman",16930.0,25270.0,15,11.0,0.278],["0022200552",1610612739,"Cleveland","Cavaliers",1626224,"Cedi","Osman",27780.0,28756.0,0,2.0,0.0],["0022200552",1610612739,"Cleveland","Cavaliers",1626224,"Cedi","Osman",28770.0,31800.0,0,11.0,0.083],["0022200552",1610612739,"Cleveland","Cavaliers",1627747,"Caris","LeVert",0.0,4140.0,4,-7.0,0.286],["0022200552",1610612739,"Cleveland","Cavaliers",1627747,"Caris","LeVert",7200.0,11170.0,0,-8.0,0.214],["0022200552",1610612739,"Cleveland","Cavaliers",1627747,"Caris","LeVert",13110.0,18950.0,1,6.0,0.136],["0022200552",1610612739,"Cleveland","Cavaliers",1627747,"Caris","LeVert",21471.0,21600.0,0,0.0,0.0],["0022200552",1610612739,"Cleveland","Cavaliers",1627747,"Caris","LeVert",22390.0,31800.0,5,16.0,0.175],["0022200552",1610612739,"Cleveland","Cavaliers",1628378,"Donovan","Mitchell",0.0,7200.0,5,-7.0,0.28],["0022200552",1610612739,"Cleveland","Cavaliers",1628378,"Donovan","Mitchell",9120.0,31800.0,66,26.0,0.444],["0022200552",1610612739,"Cleveland","Cavaliers",1628386,"Jarrett","Allen",0.0,5720.0,6,-7.0,0.2],["0022200552",1610612739,"Cleveland","Cavaliers",1628386,"Jarrett","Allen",8770.0,13110.0,4,-6.0,0.188],["0022200552",1610612739,"Cleveland","Cavaliers",1628386,"Jarrett","Allen",14400.0,20560.0,1,8.0,0.04],["0022200552",1610612739,"Cleveland","Cavaliers",1628386,"Jarrett","Allen",24870.0,31800.0,10,16.0,0.167],["0022200552",1610612739,"Cleveland","Cavaliers",1630171,"Isaac","Okoro",4140.0,8770.0,3,-5.0,0.059],["0022200552",1610612739,"Cleveland","Cavaliers",1630171,"Isaac","Okoro",13110.0,14400.0,0,0.0,0.2],["0022200552",1610612739,"Cleveland","Cavaliers",1630171,"Isaac","Okoro",18950.0,21471.0,0,7.0,0.0],["0022200552",1610612739,"Cleveland","Cavaliers",1630171,"Isaac","Okoro",21600.0,22390.0,0,0.0,0.0],["0022200552",1610612739,"Cleveland","Cavaliers",1630171,"Isaac","Okoro",25270.0,27780.0,0,1.0,0.125],["0022200552",1610612739,"Cleveland","Cavaliers",1630205,"Lamar","Stevens",0.0,2950.0,0,-9.0,0.1],["0022200552",1610612739,"Cleveland","Cavaliers",1630205,"Lamar","Stevens",9120.0,13110.0,2,-3.0,0.214],["0022200552",1610612739,"Cleveland","Cavaliers",1630205,"Lamar","Stevens",14400.0,18950.0,2,6.0,0.059]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1528'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:36:19 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF3OIeEWcAQAAa0DZgx7b4+ZVE9iOUPdb6Q/ghmYsDbNAnvvAoUWiOSXI+vJ99Yuuh40yhWXsTW0rgtX16xNdvDpeV0j/M+xbCEtqi0Z4T3XMoZvThwzCwA6MuwbItCRvCMi1WozqMcsJKMiN2dXNO4/QNCTVaTUH1bWzh9lO4EKLZU2oUKVaSsJUq1V60UWCPm1emJJTwOe4H9X3hkU/N369l38ARrljPKPKoBRIz9fJf1lu4UWH6Q==~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7145;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      ttl:
+      - '31536000'
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '3600.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '3'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '-1413.916'
+      x-varnish:
+      - 39093335 31374113
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,6 +1,6 @@
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
-from nba_api.stats.library.parameters import Season, LeagueIDNullable
+from nba_api.stats.library.parameters import LeagueIDNullable, Season
 
 
 class CommonTeamRoster(Endpoint):
@@ -81,6 +81,8 @@ class CommonTeamRoster(Endpoint):
         ]
         # Handle cases where Coaches dataset may not be present (#553)
         self.coaches = Endpoint.DataSet(
-            data=data_sets.get("Coaches", {"headers": self.expected_data["Coaches"], "data": []})
+            data=data_sets.get(
+                "Coaches", {"headers": self.expected_data["Coaches"], "data": []}
+            )
         )
         self.common_team_roster = Endpoint.DataSet(data=data_sets["CommonTeamRoster"])

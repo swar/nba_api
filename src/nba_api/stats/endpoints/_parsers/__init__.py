@@ -21,6 +21,8 @@ from .boxscorescoringv3 import NBAStatsBoxscoreScoringV3Parser
 from .boxscoresummaryv3 import NBAStatsBoxscoreSummaryParserV3
 from .boxscoretraditionalv3 import NBAStatsBoxscoreTraditionalParserV3
 from .boxscoreusagev3 import NBAStatsBoxscoreUsageV3Parser
+from .dunkscoreleaders import NBAStatsDunkScoreLeadersParser
+from .gravityleaders import NBAStatsGravityLeadersParser
 from .iststandings import NBAStatsISTStandingsParser
 from .playbyplayv3 import NBAStatsPlayByPlayParserV3
 from .scheduleleaguev2 import (
@@ -41,11 +43,13 @@ __all__ = [
     "NBAStatsBoxscoreSummaryParserV3",
     "NBAStatsBoxscoreTraditionalParserV3",
     "NBAStatsBoxscoreUsageV3Parser",
+    "NBAStatsGravityLeadersParser",
     "NBAStatsISTStandingsParser",
     "NBAStatsPlayByPlayParserV3",
     "NBAStatsScheduleLeagueV2Parser",
     "NBAStatsScheduleLeagueV2IntParser",
     "NBAStatsScoreboardV3Parser",
+    "NBAStatsDunkScoreLeadersParser",
     "get_parser_for_endpoint",
 ]
 
@@ -63,11 +67,13 @@ _PARSER_REGISTRY = {
     "boxscoresummaryv3": NBAStatsBoxscoreSummaryParserV3,
     "boxscoretraditionalv3": NBAStatsBoxscoreTraditionalParserV3,
     "boxscoreusagev3": NBAStatsBoxscoreUsageV3Parser,
+    "gravityleaders": NBAStatsGravityLeadersParser,
     "playbyplayv3": NBAStatsPlayByPlayParserV3,
     "iststandings": NBAStatsISTStandingsParser,
     "scheduleleaguev2": NBAStatsScheduleLeagueV2Parser,
     "scheduleleaguev2int": NBAStatsScheduleLeagueV2IntParser,
     "scoreboardv3": NBAStatsScoreboardV3Parser,
+    "dunkscoreleaders": NBAStatsDunkScoreLeadersParser,
 }
 
 

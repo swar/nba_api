@@ -1,0 +1,87 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF1ONeEWcAQAAZcDZgx5Szx2gHGYQ5eHkw/yP2Gn8YMcL7D0Fl9qAfnabfhA6eoILIiG00H6d9FhffCKvgT7yufgMPMtShihe8S6hnb/jRk8lGIxYhrxiCe5QMAg965SHufcd38RQIqI1seeFF2bdHOo5+YNcSjoBJ/zW7hEZAQ8zwOlAxtiAxb7VtXkGHKaws/lt8t04VJnKfr6RlZK0++axX083GBuAIYVjrbDqqJHw6mtLMleNPYQ=~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/playerdashptshotdefend?DateFrom=&DateTo=&GameSegment=&LastNGames=0&LeagueID=00&Location=&Month=0&OpponentTeamID=0&Outcome=&PerMode=Totals&Period=0&PlayerID=1628378&Season=2025-26&SeasonSegment=&SeasonType=Regular+Season&TeamID=1610612739&VsConference=&VsDivision=
+  response:
+    body:
+      string: '{"resource":"playerdashptshotdefend","parameters":{"PerMode":"Totals","LeagueID":"00","Season":"2025-26","SeasonType":"Regular
+        Season","PlayerID":1628378,"TeamID":1610612739,"Outcome":null,"Location":null,"Month":0,"SeasonSegment":null,"DateFrom":null,"DateTo":null,"OpponentTeamID":0,"VsConference":null,"VsDivision":null,"GameSegment":null,"Period":0,"LastNGames":0,"ISTRound":null},"resultSets":[{"name":"DefendingShots","headers":["MATCHUPID","GP","G","DEFENSE_CATEGORY","FREQ","D_FGM","D_FGA","D_FG_PCT","NORMAL_FG_PCT","PCT_PLUSMINUS"],"rowSet":[]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '372'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:36:52 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF2WNeEWcAQAA2MLZgx4QToqVnkZ/c/RyAqCfpqasq+/GGS+6WqVDhcbcMRoKQ0zDVyaDK9uI13JLbT4NcNShkYHWIUeFaP0j3fmXttBv4DciBuUpqYlR5jBnIRu6PMQYxnw6MrTECtUrQ0iZuQQenrwbNnC7nsFzBmzQyB+JWi3Q8TkTm6r47axx7uNSP+Q3zt2n5M9opfxSVyE5jjQ9gI5nH0VAeCDo1vSylDyWa8jH0G8s04fnAEA=~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7112;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '1800.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '3'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '361.926'
+      x-varnish:
+      - 37136211 36250870
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

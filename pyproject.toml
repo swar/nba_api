@@ -1,13 +1,12 @@
 [project]
 name = "nba_api"
-version = "1.11.3"
+version = "1.11.4"
 description = "An API Client package to access the APIs for NBA.com"
 requires-python = ">=3.10"
 license = "MIT"
 authors = [ {name = "Swar Patel", email = "<swar.m.patel@gmail.com>"}]
 maintainers = [
     {name = "Swar Patel", email = "<swar.m.patel@gmail.com>"},
-    {name = "Randy Forbes", email="Randy Forbes <randy.forbes@gmail.com>"},
 ]
 keywords = [
     "api", 
@@ -53,30 +52,49 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.3"
 pytest-cov = "^4.0"
-flake8 = "^7.1.1"
 python-semantic-release = "^9.0.0"
 pandas = [
     {version = ">=2.2.0", python = ">=3.12"},
-    {version = "<2.2.0", python = "<3.12"} 
+    {version = "<2.2.0", python = "<3.12"}
 ]
-isort = "^7.0.0"
-pylint = "^4.0.2"
+ruff = "^0.15.2"
+pre-commit = "^4.0.0"
+pytest-recording = "^0.13.4"
 
 [tool.pytest.ini_options]
-testpaths = "./tests/unit/"
+markers = [
+    "live: test makes real HTTP requests to the NBA Stats API; skip in CI unless cassettes are present",
+    "vcr: test uses a pre-recorded VCR cassette and does not require network access",
+    "canary: lightweight smoke test suitable for rapid health checks",
+    "deprecated_endpoint: marks a test for an endpoint known to be deprecated or unstable",
+]
 
-[tool.isort]
-profile = "black"
-line_length = 88
-multi_line_output = 3
-include_trailing_comma = true
-force_grid_wrap = 0
-use_parentheses = true
-ensure_newline_before_comments = true
-
-[tool.black]
+[tool.ruff]
 line-length = 88
-target-version = ['py310', 'py311', 'py312', 'py313']
+target-version = "py310"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes (unused imports, undefined names, etc.)
+    "I",   # isort (import ordering)
+    "UP",  # pyupgrade (modernize syntax for target Python version)
+    "B",   # flake8-bugbear (common bugs and design issues)
+    "C4",  # flake8-comprehensions (simplify comprehensions)
+    "SIM", # flake8-simplify (simplify code patterns)
+]
+ignore = [
+    "E501", # line too long — handled by ruff format
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"] # re-exports are intentional in __init__.py
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true
 
 [tool.semantic_release]
 version_toml = ["pyproject.toml:project.version"]

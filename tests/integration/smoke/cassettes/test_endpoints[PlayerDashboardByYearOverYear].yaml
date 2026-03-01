@@ -1,0 +1,98 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF/CNeEWcAQAAUtXZgx6ix4IlgqM4mqFh38dZsGJYz46LzfDbByiOBdQ/tnHfm+snbcKEWuKsvgQHR3TdG8TTZBRdEbdhyWVrv/23MmgQL2tG63Td2yXz4oR84IjZ0iEmHi8Qh4yp0EaQk/RGEbdjCmcZsQkimVIiJJpHlChCq50C2CwQGfg66xUqx15eYXm6dBTB936BiD4TecJoCv5mS/91d5o4GpIkUFc6PFPTei3fBVUQ4K3S4rY=~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/playerdashboardbyyearoveryear?DateFrom=&DateTo=&GameSegment=&LastNGames=0&LeagueID=00&Location=&MeasureType=Base&Month=0&OpponentTeamID=0&Outcome=&PORound=&PaceAdjust=N&PerMode=Totals&Period=0&PlayerID=1628378&PlusMinus=N&Rank=N&Season=2025-26&SeasonSegment=&SeasonType=Regular+Season&ShotClockRange=&VsConference=&VsDivision=
+  response:
+    body:
+      string: '{"resource":"playerdashboardbyyearoveryear","parameters":{"MeasureType":"Base","PerMode":"Totals","PlusMinus":"N","PaceAdjust":"N","Rank":"N","LeagueID":"00","Season":"2025-26","SeasonType":"Regular
+        Season","PORound":0,"PlayerID":1628378,"Outcome":null,"Location":null,"Month":0,"SeasonSegment":null,"DateFrom":null,"DateTo":null,"OpponentTeamID":0,"VsConference":null,"VsDivision":null,"GameSegment":null,"Period":0,"ShotClockRange":null,"LastNGames":0},"resultSets":[{"name":"OverallPlayerDashboard","headers":["GROUP_SET","GROUP_VALUE","TEAM_ID","TEAM_ABBREVIATION","MAX_GAME_DATE","GP","W","L","W_PCT","MIN","FGM","FGA","FG_PCT","FG3M","FG3A","FG3_PCT","FTM","FTA","FT_PCT","OREB","DREB","REB","AST","TOV","STL","BLK","BLKA","PF","PFD","PTS","PLUS_MINUS","NBA_FANTASY_PTS","DD2","TD3","WNBA_FANTASY_PTS","GP_RANK","W_RANK","L_RANK","W_PCT_RANK","MIN_RANK","FGM_RANK","FGA_RANK","FG_PCT_RANK","FG3M_RANK","FG3A_RANK","FG3_PCT_RANK","FTM_RANK","FTA_RANK","FT_PCT_RANK","OREB_RANK","DREB_RANK","REB_RANK","AST_RANK","TOV_RANK","STL_RANK","BLK_RANK","BLKA_RANK","PF_RANK","PFD_RANK","PTS_RANK","PLUS_MINUS_RANK","NBA_FANTASY_PTS_RANK","DD2_RANK","TD3_RANK","WNBA_FANTASY_PTS_RANK"],"rowSet":[["Overall","2025-26",1610612739,"CLE","2026-02-20T00:00:00",53,34,19,0.642,1773.583333,532,1094,0.486,189,503,0.376,274,320,0.856,41,194,235,311,164,81,15,33,130,249,1527,337,2399.5,4,0,2454,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]]},{"name":"ByYearPlayerDashboard","headers":["GROUP_SET","GROUP_VALUE","TEAM_ID","TEAM_ABBREVIATION","MAX_GAME_DATE","GP","W","L","W_PCT","MIN","FGM","FGA","FG_PCT","FG3M","FG3A","FG3_PCT","FTM","FTA","FT_PCT","OREB","DREB","REB","AST","TOV","STL","BLK","BLKA","PF","PFD","PTS","PLUS_MINUS","NBA_FANTASY_PTS","DD2","TD3","WNBA_FANTASY_PTS","GP_RANK","W_RANK","L_RANK","W_PCT_RANK","MIN_RANK","FGM_RANK","FGA_RANK","FG_PCT_RANK","FG3M_RANK","FG3A_RANK","FG3_PCT_RANK","FTM_RANK","FTA_RANK","FT_PCT_RANK","OREB_RANK","DREB_RANK","REB_RANK","AST_RANK","TOV_RANK","STL_RANK","BLK_RANK","BLKA_RANK","PF_RANK","PFD_RANK","PTS_RANK","PLUS_MINUS_RANK","NBA_FANTASY_PTS_RANK","DD2_RANK","TD3_RANK","WNBA_FANTASY_PTS_RANK"],"rowSet":[["By
+        Year","2025-26",1610612739,"CLE","2026-02-20T00:00:00",53,34,19,0.642,1773.583333,532,1094,0.486,189,503,0.376,274,320,0.856,41,194,235,311,164,81,15,33,130,249,1527,337,2399.5,4,0,2454,8,9,3,5,8,7,7,1,4,6,3,6,5,4,9,8,8,5,6,7,6,1,3,7,7,5,8,4,1,8],["By
+        Year","2024-25",1610612739,"CLE","2025-04-06T00:00:00",71,55,16,0.775,2232.05,585,1320,0.443,233,633,0.368,298,362,0.823,57,265,322,354,149,95,17,50,140,278,1701,522,2805.4,6,0,2834,3,1,2,1,6,6,6,6,2,3,5,3,3,7,3,1,1,2,8,6,5,5,4,3,4,1,3,1,1,3],["By
+        Year","2023-24",1610612739,"CLE","2024-04-12T00:00:00",55,36,19,0.655,1942.683333,503,1089,0.462,182,494,0.368,275,318,0.865,46,234,280,333,154,101,30,54,118,234,1463,325,2537.5,6,0,2520,7,8,3,3,7,8,9,3,7,7,4,5,6,2,8,5,7,3,7,3,2,6,2,9,8,6,6,1,1,7],["By
+        Year","2022-23",1610612739,"CLE","2023-04-04T00:00:00",68,44,24,0.647,2432.383333,679,1402,0.484,245,635,0.386,319,368,0.867,63,226,289,301,180,99,27,56,168,279,1922,338,2918.3,5,0,3009,5,4,5,4,3,1,2,2,1,2,2,1,2,1,1,7,5,6,5,4,3,7,6,2,1,4,1,3,1,1],["By
+        Year","2021-22",1610612762,"UTA","2022-04-08T00:00:00",67,41,26,0.612,2265.616666,617,1376,0.448,232,654,0.355,267,313,0.853,55,227,282,358,200,99,12,47,164,274,1733,276,2741.4,3,0,2827,6,6,6,8,5,3,3,5,3,1,8,7,8,5,4,6,6,1,3,4,9,2,5,4,3,8,4,5,1,4],["By
+        Year","2020-21",1610612762,"UTA","2021-04-16T00:00:00",53,39,14,0.736,1771.45,478,1091,0.438,178,461,0.386,267,316,0.845,50,185,235,277,147,52,15,47,117,249,1401,287,2152.5,2,0,2225,8,7,1,2,9,9,8,7,8,9,1,7,7,6,7,9,8,9,9,9,6,2,1,7,9,7,9,6,1,9],["By
+        Year","2019-20",1610612762,"UTA","2020-08-13T00:00:00",69,43,26,0.623,2363.966666,602,1342,0.449,173,473,0.366,278,322,0.863,53,251,304,294,184,70,14,48,172,264,1655,113,2528.8,1,0,2594,4,5,6,7,4,4,5,4,9,8,6,4,4,3,5,3,3,7,4,8,8,4,7,5,5,9,7,7,1,6],["By
+        Year","2018-19",1610612762,"UTA","2019-04-09T00:00:00",77,49,28,0.636,2598.283333,661,1530,0.432,188,519,0.362,319,396,0.806,59,257,316,322,218,106,31,96,208,295,1829,371,2884.2,1,0,2929,2,2,8,6,2,2,1,9,5,5,7,1,1,8,2,2,2,4,1,2,1,9,8,1,2,2,2,7,1,2],["By
+        Year","2017-18",1610612762,"UTA","2018-04-11T00:00:00",79,46,33,0.582,2638.116666,595,1362,0.437,187,550,0.34,239,297,0.805,52,244,296,291,215,118,27,81,213,264,1616,360,2627.7,0,0,2680,1,3,9,9,1,5,4,8,6,4,9,9,9,9,6,4,4,8,2,1,3,8,9,5,6,3,5,9,1,5]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1626'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:36:57 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAhgebWicAQAAvdfZgx4GqQag+C91BCtwTFndt2KtXfg64fHy7uSxBUJdcD3DSCXiS05KxpaeTByZ1/JMCA+B88ynosOToSDcSECwMcW3r6zFcSie93fodu3zEH9HOmR6mwTNx4LEMwluk5lknCNkuwHh2jYZIujIWZRjsgj4QCmMjNROi21neHnF5f841Yq1mWXi9ksR4q4senzEgZFzMEt/YDWx7Vq0+NEiouOlABYbRrz5jgOYhdI=~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7107;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-0
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - S3
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '1800.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '1'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '358.292'
+      x-varnish:
+      - 70091115 67982126
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

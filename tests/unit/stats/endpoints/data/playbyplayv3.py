@@ -5,7 +5,7 @@ PLAYBYPLAYV3_SAMPLE = {
     "meta": {
         "version": 1,
         "request": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400001",
-        "time": "2024-10-22 23:15:42.123"
+        "time": "2024-10-22 23:15:42.123",
     },
     "game": {
         "gameId": "0022400001",
@@ -34,7 +34,7 @@ PLAYBYPLAYV3_SAMPLE = {
                 "subType": "jump-ball",
                 "videoAvailable": 1,
                 "shotValue": None,
-                "actionId": 1
+                "actionId": 1,
             },
             {
                 "actionNumber": 2,
@@ -59,10 +59,10 @@ PLAYBYPLAYV3_SAMPLE = {
                 "subType": "jump-shot",
                 "videoAvailable": 1,
                 "shotValue": 3,
-                "actionId": 2
-            }
-        ]
-    }
+                "actionId": 2,
+            },
+        ],
+    },
 }
 
 # Test case: missing optional fields
@@ -94,18 +94,14 @@ PLAYBYPLAYV3_MINIMAL = {
                 "subType": "start",
                 "videoAvailable": 0,
                 "shotValue": None,
-                "actionId": 1
+                "actionId": 1,
             }
-        ]
+        ],
     }
 }
 
 # Test case: empty actions (game not started)
 PLAYBYPLAYV3_EMPTY = {
     "meta": {"version": 1},
-    "game": {
-        "gameId": "0022400888",
-        "videoAvailable": 0,
-        "actions": []
-    }
+    "game": {"gameId": "0022400888", "videoAvailable": 0, "actions": []},
 }

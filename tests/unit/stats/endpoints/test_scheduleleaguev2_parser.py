@@ -1,8 +1,9 @@
 """Unit tests for ScheduleLeagueV2 parser."""
 
 import json
-import pytest
 from pathlib import Path
+
+import pytest
 
 from nba_api.stats.endpoints._parsers.scheduleleaguev2 import (
     NBAStatsScheduleLeagueV2Parser,
@@ -148,7 +149,9 @@ class TestNBAStatsScheduleLeagueV2Parser:
 
         assert len(home_team_fields) > 0, "Should have homeTeam fields"
         assert len(away_team_fields) > 0, "Should have awayTeam fields"
-        assert len(home_team_fields) == len(away_team_fields), "Should have same fields for both teams"
+        assert len(home_team_fields) == len(away_team_fields), (
+            "Should have same fields for both teams"
+        )
 
     def test_get_team_data(self, parser, json_fixture):
         """Test team data extraction from a game."""
@@ -255,6 +258,11 @@ class TestNBAStatsScheduleLeagueV2Parser:
 
         # If there are keys, check common fields
         if len(keys) > 0:
-            expected_fields = ["broadcasterScope", "broadcasterMedia", "broadcasterId", "broadcasterDisplay"]
+            expected_fields = [
+                "broadcasterScope",
+                "broadcasterMedia",
+                "broadcasterId",
+                "broadcasterDisplay",
+            ]
             for field in expected_fields:
                 assert field in keys, f"Should have {field} in broadcaster keys"

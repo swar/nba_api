@@ -1,6 +1,6 @@
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
-from nba_api.stats.library.parameters import LeagueID, SeasonYear, SeasonType
+from nba_api.stats.library.parameters import LeagueID, SeasonType, SeasonYear
 
 
 class GLAlumBoxScoreSimilarityScore(Endpoint):

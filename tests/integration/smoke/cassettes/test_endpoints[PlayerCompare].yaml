@@ -1,0 +1,100 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDFyaNeEWcAQAApbjZgx7A+M3Vg/n8KG9Y7VVejG+t/5Wez7Q55wZLOnT2Z0OgfqLdU8JiTXwfnw7GWIIBC/rlSLVTSumVJLG1X9Ag9oo6X2VxBKEY6FgcwuAHqyiuXyoPJqNWhn/XBvrQVusRkBUC3Fsgp0QdXQgjW73doFGFafmH0V1aMM2UeXzw2+wzYRZlooIwQCvbQejQIvHTEiwpvu21KwwmwBwkdEmB/fSDuvgR5bMI2h3IifE=~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/playercompare?Conference=&DateFrom=&DateTo=&Division=&GameSegment=&LastNGames=0&LeagueID=00&Location=&MeasureType=Base&Month=0&OpponentTeamID=0&Outcome=&PaceAdjust=N&PerMode=Totals&Period=0&PlayerIDList=202681%2C203078%2C2544%2C201567%2C203954&PlusMinus=N&Rank=N&Season=2025-26&SeasonSegment=&SeasonType=Regular+Season&ShotClockRange=&VsConference=&VsDivision=&VsPlayerIDList=201566%2C201939%2C201935%2C201142%2C203076
+  response:
+    body:
+      string: '{"resource":"playercompare","parameters":{"MeasureType":"Base","PerMode":"Totals","PlusMinus":"N","PaceAdjust":"N","Rank":"N","LeagueID":"00","Season":"2025-26","SeasonType":"Regular
+        Season","PlayerIDList":"202681,203078,2544,201567,203954","Outcome":null,"Location":null,"Month":0,"SeasonSegment":null,"DateFrom":null,"DateTo":null,"OpponentTeamID":0,"VsConference":null,"VsDivision":null,"Conference":null,"Division":null,"GameSegment":null,"Period":0,"ShotClockRange":null,"LastNGames":0,"VsPlayerIDList":"201566,201939,201935,201142,203076"},"resultSets":[{"name":"OverallCompare","headers":["GROUP_SET","DESCRIPTION","MIN","FGM","FGA","FG_PCT","FG3M","FG3A","FG3_PCT","FTM","FTA","FT_PCT","OREB","DREB","REB","AST","TOV","STL","BLK","BLKA","PF","PFD","PTS","PLUS_MINUS"],"rowSet":[["OVERALL","L.
+        James''s AND K. Love''s AND K. Irving''s AND B. Beal''s AND J. Embiid''s combined
+        stats",2830.955,663,1377,0.481,141,426,0.331,419,517,0.81,139,482,621,448,239,72,63,63,180,373,1886,-2.2],["VS
+        OVERALL","K. Durant''s AND R. Westbrook''s AND J. Harden''s AND S. Curry''s
+        AND A. Davis''s combined stats",7034.298333333333,1642,3544,0.463,564,1523,0.37,994,1152,0.863,207,969,1176,1220,680,241,125,162,449,897,4842,-14.8]]},{"name":"Individual","headers":["GROUP_SET","DESCRIPTION","MIN","FGM","FGA","FG_PCT","FG3M","FG3A","FG3_PCT","FTM","FTA","FT_PCT","OREB","DREB","REB","AST","TOV","STL","BLK","BLKA","PF","PFD","PTS","PLUS_MINUS"],"rowSet":[["INDIVIDUAL","K.
+        Love",505.48333333333335,67,165,0.406,43,115,0.374,31,38,0.816,48,124,172,52,24,9,8,1,47,35,208,-17.2],["INDIVIDUAL","L.
+        James",1232.985,300,601,0.499,52,170,0.306,152,203,0.749,24,188,212,265,114,40,21,26,52,139,804,-6.0],["INDIVIDUAL","J.
+        Embiid",971.57,278,563,0.494,39,122,0.32,230,268,0.858,65,167,232,121,92,20,34,35,67,188,825,25.6],["INDIVIDUAL","B.
+        Beal",120.91666666666667,18,48,0.375,7,19,0.368,6,8,0.75,2,3,5,10,9,3,0,1,14,11,49,-4.6],["VS
+        INDIVIDUAL","R. Westbrook",1559.4866666666667,299,700,0.427,109,320,0.341,101,145,0.697,72,227,299,345,185,70,9,34,131,115,808,-80.6],["VS
+        INDIVIDUAL","S. Curry",1221.6783333333333,348,744,0.468,175,448,0.391,190,204,0.931,16,122,138,189,111,44,16,24,74,187,1061,12.4],["VS
+        INDIVIDUAL","J. Harden",1718.425,350,826,0.424,148,416,0.356,362,402,0.9,31,206,237,401,177,62,20,64,95,246,1210,12.2],["VS
+        INDIVIDUAL","A. Davis",625.63,169,334,0.506,10,37,0.27,59,81,0.728,62,159,221,56,41,22,33,14,42,87,407,-10.0],["VS
+        INDIVIDUAL","K. Durant",1909.0783333333334,476,940,0.506,122,302,0.404,282,320,0.881,26,255,281,229,166,43,47,26,107,262,1356,51.2]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1228'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:36:50 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAkEdbWicAQAAJbvZgx5oMNI41OJnr2c1hEXwbW167XXsB8ofU0lA7W5icAhqGhHqmQ0rTDohsrPQhmmdN7EqajhmA7s4AM2K8tsYbHs82WZuve2pANOnf+V4mLyrdcxPG295b70ZrAHOWjEy0PzDjnsEAL72hK9xofhV2tL/f1s+mbLm7nYb5W4a7OTPqo4Q1CQh1G07JBwrYJPx1DMysej8U/wVCBjxqSbYUBGAf9FQifju921blTE=~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7114;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '1800.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '3'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '142.502'
+      x-varnish:
+      - 36777412 36155637
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

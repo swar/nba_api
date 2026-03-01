@@ -1,8 +1,9 @@
 """Unit tests for BoxScoreMatchupsV3 parser."""
 
 import json
-import pytest
 from pathlib import Path
+
+import pytest
 
 from nba_api.stats.endpoints._parsers.boxscorematchupsv3 import (
     NBAStatsBoxscoreMatchupsParserV3,

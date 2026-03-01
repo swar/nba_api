@@ -1,0 +1,167 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAs0YbWicAQAALyLZgx5QjhKK67eHZWyL8VD4ZHi1fX92a4rRpW3l7Y7DtJir8CbcLEVf4Svr2R8SBSGAB82uw8AeOJDfp5Pl8TSAodUMVdpG0CY5hJKyxcTWnGDwoRAJbypylMjY8goPO5iPCxHmcS5B/2AU+XAbzOTHnw1zXB+UzSMn+VMEjWHyv81otvuTOquiX8ShS3p1WZ32JYFtOwoq6dB1KndeFnubcuG1izl8x9sPP3pCXw==~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/draftcombinenonstationaryshooting?LeagueID=00&SeasonYear=2025
+  response:
+    body:
+      string: "{\"resource\":\"draftcombinenonstationaryshooting\",\"parameters\":{\"LeagueID\":\"00\",\"SeasonYear\":\"2025\"},\"resultSets\":[{\"name\":\"Results\",\"headers\":[\"TEMP_PLAYER_ID\",\"PLAYER_ID\",\"FIRST_NAME\",\"LAST_NAME\",\"PLAYER_NAME\",\"POSITION\",\"OFF_DRIB_FIFTEEN_BREAK_LEFT_MADE\",\"OFF_DRIB_FIFTEEN_BREAK_LEFT_ATTEMPT\",\"OFF_DRIB_FIFTEEN_BREAK_LEFT_PCT\",\"OFF_DRIB_FIFTEEN_TOP_KEY_MADE\",\"OFF_DRIB_FIFTEEN_TOP_KEY_ATTEMPT\",\"OFF_DRIB_FIFTEEN_TOP_KEY_PCT\",\"OFF_DRIB_FIFTEEN_BREAK_RIGHT_MADE\",\"OFF_DRIB_FIFTEEN_BREAK_RIGHT_ATTEMPT\",\"OFF_DRIB_FIFTEEN_BREAK_RIGHT_PCT\",\"OFF_DRIB_COLLEGE_BREAK_LEFT_MADE\",\"OFF_DRIB_COLLEGE_BREAK_LEFT_ATTEMPT\",\"OFF_DRIB_COLLEGE_BREAK_LEFT_PCT\",\"OFF_DRIB_COLLEGE_TOP_KEY_MADE\",\"OFF_DRIB_COLLEGE_TOP_KEY_ATTEMPT\",\"OFF_DRIB_COLLEGE_TOP_KEY_PCT\",\"OFF_DRIB_COLLEGE_BREAK_RIGHT_MADE\",\"OFF_DRIB_COLLEGE_BREAK_RIGHT_ATTEMPT\",\"OFF_DRIB_COLLEGE_BREAK_RIGHT_PCT\",\"ON_MOVE_FIFTEEN_MADE\",\"ON_MOVE_FIFTEEN_ATTEMPT\",\"ON_MOVE_FIFTEEN_PCT\",\"ON_MOVE_COLLEGE_MADE\",\"ON_MOVE_COLLEGE_ATTEMPT\",\"ON_MOVE_COLLEGE_PCT\"],\"rowSet\":[[1641891,1641891,\"Izan\",\"Almansa\",\"Izan
+        Almansa\",\"C\",null,null,null,null,null,null,null,null,null,13,30,0.433,null,null,null,null,null,null,null,null,null,8,25,0.32],[1642921,1642921,\"Neoklis\",\"Avdalas\",\"Neoklis
+        Avdalas\",\"SF\",null,null,null,null,null,null,null,null,null,19,30,0.633,null,null,null,null,null,null,null,null,null,11,25,0.44],[1642846,1642846,\"Ace\",\"Bailey\",\"Ace
+        Bailey\",\"SF-PF\",null,null,null,null,null,null,null,null,null,21,30,0.7,null,null,null,null,null,null,null,null,null,12,25,0.48],[1642926,1642926,\"Tamar\",\"Bates\",\"Tamar
+        Bates\",\"SG\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[1642866,1642866,\"Joan\",\"Beringer\",\"Joan
+        Beringer\",\"C\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[1642886,1642886,\"Koby\",\"Brea\",\"Koby
+        Brea\",\"SG\",null,null,null,null,null,null,null,null,null,21,30,0.7,null,null,null,null,null,null,null,null,null,15,25,0.6],[1641780,1641780,\"Johni\",\"Broome\",\"Johni
+        Broome\",\"SF-PF\",null,null,null,null,null,null,null,null,null,19,30,0.633,null,null,null,null,null,null,null,null,null,14,25,0.56],[1642868,1642868,\"Carter\",\"Bryant\",\"Carter
+        Bryant\",\"SF-PF\",null,null,null,null,null,null,null,null,null,11,30,0.367,null,null,null,null,null,null,null,null,null,13,25,0.52],[1642891,1642891,\"Miles\",\"Byrd\",\"Miles
+        Byrd\",\"SG\",null,null,null,null,null,null,null,null,null,15,30,0.5,null,null,null,null,null,null,null,null,null,13,25,0.52],[1642383,1642383,\"Walter\",\"Clayton
+        Jr.\",\"Walter Clayton Jr.\",\"PG-SG\",null,null,null,null,null,null,null,null,null,20,30,0.667,null,null,null,null,null,null,null,null,null,17,25,0.68],[1642363,1642363,\"Nique\",\"Clifford\",\"Nique
+        Clifford\",\"PG-SG\",null,null,null,null,null,null,null,null,null,22,30,0.733,null,null,null,null,null,null,null,null,null,11,25,0.44],[1642960,1642960,\"Alex\",\"Condon\",\"Alex
+        Condon\",\"SF-PF\",null,null,null,null,null,null,null,null,null,16,30,0.533,null,null,null,null,null,null,null,null,null,13,25,0.52],[1642907,1642907,\"Cedric\",\"Coward\",\"Cedric
+        Coward\",\"PG-SG\",null,null,null,null,null,null,null,null,null,23,30,0.767,null,null,null,null,null,null,null,null,null,17,25,0.68],[1642856,1642856,\"Egor\",\"Demin\",\"Egor
+        Demin\",\"PG-SG\",null,null,null,null,null,null,null,null,null,14,30,0.467,null,null,null,null,null,null,null,null,null,14,25,0.56],[1642915,1642915,\"Eric\",\"Dixon\",\"Eric
+        Dixon\",\"PF\",null,null,null,null,null,null,null,null,null,24,30,0.8,null,null,null,null,null,null,null,null,null,13,25,0.52],[1642845,1642845,\"VJ\",\"Edgecombe\",\"VJ
+        Edgecombe\",\"PG-SG\",null,null,null,null,null,null,null,null,null,20,30,0.667,null,null,null,null,null,null,null,null,null,12,25,0.48],[1642855,1642855,\"Noa\",\"Essengue\",\"Noa
+        Essengue\",\"PF\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[1642847,1642847,\"Jeremiah\",\"Fears\",\"Jeremiah
+        Fears\",\"PG-SG\",null,null,null,null,null,null,null,null,null,19,30,0.633,null,null,null,null,null,null,null,null,null,15,25,0.6],[1642843,1642843,\"Cooper\",\"Flagg\",\"Cooper
+        Flagg\",\"SF-PF\",null,null,null,null,null,null,null,null,null,21,30,0.7,null,null,null,null,null,null,null,null,null,15,25,0.6],[1642858,1642858,\"Boogie\",\"Fland\",\"Boogie
+        Fland\",\"PG\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[1642853,1642853,\"Rasheer\",\"Fleming\",\"Rasheer
+        Fleming\",\"SF-PF\",null,null,null,null,null,null,null,null,null,15,30,0.5,null,null,null,null,null,null,null,null,null,9,25,0.36],[1642884,1642884,\"Vladislav\",\"Goldin\",\"Vladislav
+        Goldin\",\"C\",null,null,null,null,null,null,null,null,null,14,30,0.467,null,null,null,null,null,null,null,null,null,8,25,0.32],[1642864,1642864,\"Hugo\",\"Gonz\xE1lez\",\"Hugo
+        Gonz\xE1lez\",\"SF\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[1642919,1642919,\"PJ\",\"Haggerty\",\"PJ
+        Haggerty\",\"SG\",null,null,null,null,null,null,null,null,null,22,30,0.733,null,null,null,null,null,null,null,null,null,18,25,0.72],[1642844,1642844,\"Dylan\",\"Harper\",\"Dylan
+        Harper\",\"PG-SG\",null,null,null,null,null,null,null,null,null,19,30,0.633,null,null,null,null,null,null,null,null,null,15,25,0.6],[1642916,1642916,\"Ben\",\"Henshall\",\"Ben
+        Henshall\",\"SG\",null,null,null,null,null,null,null,null,null,23,30,0.767,null,null,null,null,null,null,null,null,null,12,25,0.48],[1642857,1642857,\"Kasparas\",\"Jakucionis\",\"Kasparas
+        Jakucionis\",\"PG-SG\",null,null,null,null,null,null,null,null,null,16,30,0.533,null,null,null,null,null,null,null,null,null,16,25,0.64],[1642883,1642883,\"Sion\",\"James\",\"Sion
+        James\",\"SG\",null,null,null,null,null,null,null,null,null,21,30,0.7,null,null,null,null,null,null,null,null,null,17,25,0.68],[1642848,1642848,\"Tre\",\"Johnson\",\"Tre
+        Johnson\",\"PG-SG\",null,null,null,null,null,null,null,null,null,22,30,0.733,null,null,null,null,null,null,null,null,null,16,25,0.64],[1642880,1642880,\"Kam\",\"Jones\",\"Kam
+        Jones\",\"PG\",null,null,null,null,null,null,null,null,null,20,30,0.667,null,null,null,null,null,null,null,null,null,16,25,0.64],[1641750,1641750,\"Ryan\",\"Kalkbrenner\",\"Ryan
+        Kalkbrenner\",\"C\",null,null,null,null,null,null,null,null,null,19,30,0.633,null,null,null,null,null,null,null,null,null,15,25,0.6],[1642909,1642909,\"Karter\",\"Knox\",\"Karter
+        Knox\",\"SF\",null,null,null,null,null,null,null,null,null,19,30,0.633,null,null,null,null,null,null,null,null,null,16,25,0.64],[1642851,1642851,\"Kon\",\"Knueppel\",\"Kon
+        Knueppel\",\"PG-SG\",null,null,null,null,null,null,null,null,null,22,30,0.733,null,null,null,null,null,null,null,null,null,16,25,0.64],[1642404,1642404,\"Chaz\",\"Lanier\",\"Chaz
+        Lanier\",\"PG-SG\",null,null,null,null,null,null,null,null,null,20,30,0.667,null,null,null,null,null,null,null,null,null,17,25,0.68],[1642865,1642865,\"Yaxel\",\"Lendeborg\",\"Yaxel
+        Lendeborg\",\"PF\",null,null,null,null,null,null,null,null,null,23,30,0.767,null,null,null,null,null,null,null,null,null,16,25,0.64],[1642961,1642961,\"RJ\",\"Luis
+        Jr.\",\"RJ Luis Jr.\",\"SF\",null,null,null,null,null,null,null,null,null,22,30,0.733,null,null,null,null,null,null,null,null,null,13,25,0.52],[1642863,1642863,\"Khaman\",\"Maluach\",\"Khaman
+        Maluach\",\"C\",null,null,null,null,null,null,null,null,null,15,30,0.5,null,null,null,null,null,null,null,null,null,12,25,0.48],[1642881,1642881,\"Bogoljub\",\"Markovic\",\"Bogoljub
+        Markovic\",\"PF\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[1642918,1642918,\"Alijah\",\"Martin\",\"Alijah
+        Martin\",\"SG\",null,null,null,null,null,null,null,null,null,15,30,0.5,null,null,null,null,null,null,null,null,null,15,25,0.6],[1642862,1642862,\"Liam\",\"McNeeley\",\"Liam
+        McNeeley\",\"SF-PF\",null,null,null,null,null,null,null,null,null,24,30,0.8,null,null,null,null,null,null,null,null,null,15,25,0.6],[1642944,1642944,\"Mackenzie\",\"Mgbako\",\"Mackenzie
+        Mgbako\",\"SF-PF\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[1642922,1642922,\"Jalon\",\"Moore\",\"Jalon
+        Moore\",\"SF\",null,null,null,null,null,null,null,null,null,18,30,0.6,null,null,null,null,null,null,null,null,null,12,25,0.48],[1642867,1642867,\"Collin\",\"Murray-Boyles\",\"Collin
+        Murray-Boyles\",\"SF-PF\",null,null,null,null,null,null,null,null,null,22,30,0.733,null,null,null,null,null,null,null,null,null,10,25,0.4],[1641761,1641761,\"Grant\",\"Nelson\",\"Grant
+        Nelson\",\"PF\",null,null,null,null,null,null,null,null,null,15,30,0.5,null,null,null,null,null,null,null,null,null,10,25,0.4],[1642948,1642948,\"Ryan\",\"Nembhard\",\"Ryan
+        Nembhard\",\"PG\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[1642854,1642854,\"Asa\",\"Newell\",\"Asa
+        Newell\",\"SF-PF\",null,null,null,null,null,null,null,null,null,11,30,0.367,null,null,null,null,null,null,null,null,null,14,25,0.56],[1642949,1642949,\"Yanic
+        Konan\",\"Niederhauser\",\"Yanic Konan Niederhauser\",\"C\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[1642950,1642950,\"Lachlan\",\"Olbrich\",\"Lachlan
+        Olbrich\",\"PF\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[1642923,1642923,\"Otega\",\"Oweh\",\"Otega
+        Oweh\",\"SG\",null,null,null,null,null,null,null,null,null,16,30,0.533,null,null,null,null,null,null,null,null,null,12,25,0.48],[1641825,1641825,\"Dink\",\"Pate\",\"Dink
+        Pate\",\"SG\",null,null,null,null,null,null,null,null,null,23,30,0.767,null,null,null,null,null,null,null,null,null,16,25,0.64],[1642877,1642877,\"Micah\",\"Peavy\",\"Micah
+        Peavy\",\"SF\",null,null,null,null,null,null,null,null,null,18,30,0.6,null,null,null,null,null,null,null,null,null,12,25,0.48],[1642869,1642869,\"Noah\",\"Penda\",\"Noah
+        Penda\",\"PF\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[1642861,1642861,\"Tahaad\",\"Pettiford\",\"Tahaad
+        Pettiford\",\"PG\",null,null,null,null,null,null,null,null,null,23,30,0.767,null,null,null,null,null,null,null,null,null,16,25,0.64],[1642889,1642889,\"Labaron\",\"Philon\",\"Labaron
+        Philon\",\"PG-SG\",null,null,null,null,null,null,null,null,null,24,30,0.8,null,null,null,null,null,null,null,null,null,15,25,0.6],[1642962,1642962,\"Drake\",\"Powell\",\"Drake
+        Powell\",\"SF-PF\",null,null,null,null,null,null,null,null,null,21,30,0.7,null,null,null,null,null,null,null,null,null,11,25,0.44],[1642878,1642878,\"Tyrese\",\"Proctor\",\"Tyrese
+        Proctor\",\"PG-SG\",null,null,null,null,null,null,null,null,null,20,30,0.667,null,null,null,null,null,null,null,null,null,14,25,0.56],[1642852,1642852,\"Derik\",\"Queen\",\"Derik
+        Queen\",\"C\",null,null,null,null,null,null,null,null,null,16,30,0.533,null,null,null,null,null,null,null,null,null,11,25,0.44],[1642875,1642875,\"Maxime\",\"Raynaud\",\"Maxime
+        Raynaud\",\"C\",null,null,null,null,null,null,null,null,null,17,30,0.567,null,null,null,null,null,null,null,null,null,16,25,0.64],[1642859,1642859,\"Jase\",\"Richardson\",\"Jase
+        Richardson\",\"PG-SG\",null,null,null,null,null,null,null,null,null,26,30,0.867,null,null,null,null,null,null,null,null,null,14,25,0.56],[1642860,1642860,\"Will\",\"Riley\",\"Will
+        Riley\",\"SF-PF\",null,null,null,null,null,null,null,null,null,26,30,0.867,null,null,null,null,null,null,null,null,null,13,25,0.52],[1642913,1642913,\"Michael\",\"Ruzic\",\"Michael
+        Ruzic\",\"PF\",null,null,null,null,null,null,null,null,null,16,30,0.533,null,null,null,null,null,null,null,null,null,8,25,0.32],[1642282,1642282,\"Hunter\",\"Sallis\",\"Hunter
+        Sallis\",\"SG\",null,null,null,null,null,null,null,null,null,22,30,0.733,null,null,null,null,null,null,null,null,null,12,25,0.48],[1642920,1642920,\"Kobe\",\"Sanders\",\"Kobe
+        Sanders\",\"SF\",null,null,null,null,null,null,null,null,null,23,30,0.767,null,null,null,null,null,null,null,null,null,14,25,0.56],[1642879,1642879,\"Ben\",\"Saraf\",\"Ben
+        Saraf\",\"PG\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[1641813,1641813,\"Mark\",\"Sears\",\"Mark
+        Sears\",\"PG\",null,null,null,null,null,null,null,null,null,26,30,0.867,null,null,null,null,null,null,null,null,null,16,25,0.64],[1642917,1642917,\"Max\",\"Shulga\",\"Max
+        Shulga\",\"SG\",null,null,null,null,null,null,null,null,null,21,30,0.7,null,null,null,null,null,null,null,null,null,18,25,0.72],[1642914,1642914,\"Javon\",\"Small\",\"Javon
+        Small\",\"PG\",null,null,null,null,null,null,null,null,null,20,30,0.667,null,null,null,null,null,null,null,null,null,17,25,0.68],[1642850,1642850,\"Thomas\",\"Sorber\",\"Thomas
+        Sorber\",\"C\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[1642876,1642876,\"Adou\",\"Thiero\",\"Adou
+        Thiero\",\"PG-SG\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[1642910,1642910,\"John\",\"Tonje\",\"John
+        Tonje\",\"SG\",null,null,null,null,null,null,null,null,null,21,30,0.7,null,null,null,null,null,null,null,null,null,18,25,0.72],[1642893,1642893,\"Alex\",\"Toohey\",\"Alex
+        Toohey\",\"SF\",null,null,null,null,null,null,null,null,null,17,30,0.567,null,null,null,null,null,null,null,null,null,15,25,0.6],[1642849,1642849,\"Nolan\",\"Traor\xE9\",\"Nolan
+        Traor\xE9\",\"PG\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[1642870,1642870,\"Milos\",\"Uzan\",\"Milos
+        Uzan\",\"PG\",null,null,null,null,null,null,null,null,null,22,30,0.733,null,null,null,null,null,null,null,null,null,18,25,0.72],[1642364,1642364,\"Jamir\",\"Watkins\",\"Jamir
+        Watkins\",\"SF\",null,null,null,null,null,null,null,null,null,16,30,0.533,null,null,null,null,null,null,null,null,null,18,25,0.72],[1642924,1642924,\"Brice\",\"Williams\",\"Brice
+        Williams\",\"SG\",null,null,null,null,null,null,null,null,null,18,30,0.6,null,null,null,null,null,null,null,null,null,14,25,0.56],[1642963,1642963,\"Darrion\",\"Williams\",\"Darrion
+        Williams\",\"SF\",null,null,null,null,null,null,null,null,null,21,30,0.7,null,null,null,null,null,null,null,null,null,18,25,0.72],[1642874,1642874,\"Danny\",\"Wolf\",\"Danny
+        Wolf\",\"SF-PF\",null,null,null,null,null,null,null,null,null,16,30,0.533,null,null,null,null,null,null,null,null,null,10,25,0.4],[1642905,1642905,\"Hansen\",\"Yang\",\"Hansen
+        Yang\",\"C\",null,null,null,null,null,null,null,null,null,15,30,0.5,null,null,null,null,null,null,null,null,null,14,25,0.56],[1642911,1642911,\"Rocco\",\"Zikarsky\",\"Rocco
+        Zikarsky\",\"C\",null,null,null,null,null,null,null,null,null,14,30,0.467,null,null,null,null,null,null,null,null,null,13,25,0.52]]}]}"
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '2514'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:36:11 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAtgYbWicAQAArSTZgx5Hs7BFrWks8xP1dIwFziQfXA/6lyfdnlqoF7kV8aFrpuX3GTapOveEoGnN7qzzWdgKqCBQivvammX02V7NdQrLKyJddt3ZvyjQ06bZ90q4kmt08k9oz+5G/PJ1mbC9LXYuJEHGj7ItGiyF9daZIed5XipeLILMge67r2WCWZyITLgNALtVvzALwU/d+XYcEV3vOqo5Y7/fRLpMlgxlkkz/V2rfUI7fQBzPeg==~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7153;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-0
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '1'
+      x-full-ttl:
+      - '1800.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '1'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '389.131'
+      x-varnish:
+      - 69978468 68084238
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

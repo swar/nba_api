@@ -1,8 +1,9 @@
 """Unit tests for BoxScoreHustleV2 parser."""
 
 import json
-import pytest
 from pathlib import Path
+
+import pytest
 
 from nba_api.stats.endpoints._parsers.boxscorehustlev2 import (
     NBAStatsBoxscoreHustleV2Parser,
@@ -51,7 +52,13 @@ class TestNBAStatsBoxscoreHustleV2Parser:
         # gameId + 5 team metadata + 17 hustle stats
         assert len(headers) == 23
         assert headers[0] == "gameId"
-        assert headers[1:6] == ("teamId", "teamCity", "teamName", "teamTricode", "teamSlug")
+        assert headers[1:6] == (
+            "teamId",
+            "teamCity",
+            "teamName",
+            "teamTricode",
+            "teamSlug",
+        )
         # Hustle stats fields
         assert "minutes" in headers
         assert "points" in headers
@@ -199,7 +206,7 @@ class TestNBAStatsBoxscoreHustleV2Parser:
         # Get teamId index
         team_id_index = headers.index("teamId")
 
-        team_ids = set(row[team_id_index] for row in data)
+        team_ids = {row[team_id_index] for row in data}
 
         home_team_id = json_fixture["boxScoreHustle"]["homeTeamId"]
         away_team_id = json_fixture["boxScoreHustle"]["awayTeamId"]

@@ -1,0 +1,244 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAv0YbWicAQAArCnZgx733ec1PRXSx7Qz9rOAvkCHRIgy0sr/tMvgBHMnsF2I7FejWFFwXJDVz8BLfOyL63K367MSQg66QqD3TQxJO6BdSQNNe3EoI0bavb8bGZmXYMD1fYIbbWKlCkmYfQHVOJWupkqOBgW3aS0b2ZZpvAQZdjhLkiwFTzcPRpb0+Bd4+DZQ/QE/TpUs8S6KmeYWs5t8aFJimv17Ze2uc0Y/TZxk/F9n87aI1mRV8w==~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/draftcombinestats?LeagueID=00&SeasonYear=2025-26
+  response:
+    body:
+      string: "{\"resource\":\"draftcombinestats\",\"parameters\":{\"LeagueID\":\"00\",\"SeasonYear\":\"2025-26\"},\"resultSets\":[{\"name\":\"DraftCombineStats\",\"headers\":[\"SEASON\",\"PLAYER_ID\",\"FIRST_NAME\",\"LAST_NAME\",\"PLAYER_NAME\",\"POSITION\",\"HEIGHT_WO_SHOES\",\"HEIGHT_WO_SHOES_FT_IN\",\"HEIGHT_W_SHOES\",\"HEIGHT_W_SHOES_FT_IN\",\"WEIGHT\",\"WINGSPAN\",\"WINGSPAN_FT_IN\",\"STANDING_REACH\",\"STANDING_REACH_FT_IN\",\"BODY_FAT_PCT\",\"HAND_LENGTH\",\"HAND_WIDTH\",\"STANDING_VERTICAL_LEAP\",\"MAX_VERTICAL_LEAP\",\"LANE_AGILITY_TIME\",\"MODIFIED_LANE_AGILITY_TIME\",\"THREE_QUARTER_SPRINT\",\"BENCH_PRESS\",\"SPOT_FIFTEEN_CORNER_LEFT\",\"SPOT_FIFTEEN_BREAK_LEFT\",\"SPOT_FIFTEEN_TOP_KEY\",\"SPOT_FIFTEEN_BREAK_RIGHT\",\"SPOT_FIFTEEN_CORNER_RIGHT\",\"SPOT_COLLEGE_CORNER_LEFT\",\"SPOT_COLLEGE_BREAK_LEFT\",\"SPOT_COLLEGE_TOP_KEY\",\"SPOT_COLLEGE_BREAK_RIGHT\",\"SPOT_COLLEGE_CORNER_RIGHT\",\"SPOT_NBA_CORNER_LEFT\",\"SPOT_NBA_BREAK_LEFT\",\"SPOT_NBA_TOP_KEY\",\"SPOT_NBA_BREAK_RIGHT\",\"SPOT_NBA_CORNER_RIGHT\",\"OFF_DRIB_FIFTEEN_BREAK_LEFT\",\"OFF_DRIB_FIFTEEN_TOP_KEY\",\"OFF_DRIB_FIFTEEN_BREAK_RIGHT\",\"OFF_DRIB_COLLEGE_BREAK_LEFT\",\"OFF_DRIB_COLLEGE_TOP_KEY\",\"OFF_DRIB_COLLEGE_BREAK_RIGHT\",\"ON_MOVE_FIFTEEN\",\"ON_MOVE_COLLEGE\"],\"rowSet\":[[\"2025\",1641891,\"Izan\",\"Almansa\",\"Izan
+        Almansa\",\"C\",81.25,\"6' 9.25''\",null,null,\"220.40\",85.75,\"7' 1.75''\",109.5,\"9'
+        1.50''\",null,9.25,9.5,28.0,34.0,11.46,2.93,3.33,null,null,null,null,null,null,\"12-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"13-30\",null,null,null,\"8-25\"],[\"2025\",1642921,\"Neoklis\",\"Avdalas\",\"Neoklis
+        Avdalas\",\"SF\",79.5,\"6' 7.50''\",null,null,\"197.80\",81.0,\"6' 9.00''\",104.5,\"8'
+        8.50''\",null,8.25,9.75,27.0,33.5,10.98,2.98,3.24,null,null,null,null,null,null,\"14-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"19-30\",null,null,null,\"11-25\"],[\"2025\",1642846,\"Ace\",\"Bailey\",\"Ace
+        Bailey\",\"SF-PF\",79.5,\"6' 7.50''\",null,null,\"202.80\",84.5,\"7' 0.50''\",107.0,\"8'
+        11.00''\",null,8.5,9.0,27.5,34.5,10.97,2.78,3.12,null,null,null,null,null,null,\"18-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"21-30\",null,null,null,\"12-25\"],[\"2025\",1642926,\"Tamar\",\"Bates\",\"Tamar
+        Bates\",\"SG\",75.75,\"6' 3.75''\",null,null,\"191.40\",82.25,\"6' 10.25''\",103.0,\"8'
+        7.00''\",null,9.75,9.0,27.5,33.5,10.75,2.99,3.26,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[\"2025\",1642866,\"Joan\",\"Beringer\",\"Joan
+        Beringer\",\"C\",82.0,\"6' 11.00''\",null,null,\"234.80\",88.5,\"7' 4.50''\",111.0,\"9'
+        3.00''\",null,9.75,10.0,28.5,32.5,11.44,2.97,3.45,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[\"2025\",1642886,\"Koby\",\"Brea\",\"Koby
+        Brea\",\"SG\",77.75,\"6' 5.75''\",null,null,\"201.80\",77.25,\"6' 5.25''\",101.5,\"8'
+        5.50''\",null,8.5,9.25,27.5,34.0,11.4,3.23,3.31,null,null,null,null,null,null,\"19-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"21-30\",null,null,null,\"15-25\"],[\"2025\",1641780,\"Johni\",\"Broome\",\"Johni
+        Broome\",\"SF-PF\",81.25,\"6' 9.25''\",null,null,\"249.40\",84.25,\"7' 0.25''\",108.5,\"9'
+        0.50''\",null,9.25,10.25,24.5,28.0,11.52,3.23,3.37,null,null,null,null,null,null,\"15-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"19-30\",null,null,null,\"14-25\"],[\"2025\",1642868,\"Carter\",\"Bryant\",\"Carter
+        Bryant\",\"SF-PF\",78.5,\"6' 6.50''\",null,null,\"214.80\",83.75,\"6' 11.75''\",106.0,\"8'
+        10.00''\",null,8.5,9.5,30.5,39.5,11.25,3.14,3.07,null,null,null,null,null,null,\"16-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"11-30\",null,null,null,\"13-25\"],[\"2025\",1642891,\"Miles\",\"Byrd\",\"Miles
+        Byrd\",\"SG\",76.75,\"6' 4.75''\",null,null,\"181.80\",82.0,\"6' 10.00''\",102.5,\"8'
+        6.50''\",null,8.75,9.25,31.5,35.5,10.91,2.9,3.22,null,null,null,null,null,null,\"14-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"15-30\",null,null,null,\"13-25\"],[\"2025\",1642383,\"Walter\",\"Clayton
+        Jr.\",\"Walter Clayton Jr.\",\"PG-SG\",74.0,\"6' 2.00''\",null,null,\"199.00\",76.0,\"6'
+        4.00''\",97.5,\"8' 1.50''\",null,8.25,9.75,29.5,37.0,10.52,2.81,3.14,null,null,null,null,null,null,\"20-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"20-30\",null,null,null,\"17-25\"],[\"2025\",1642363,\"Nique\",\"Clifford\",\"Nique
+        Clifford\",\"PG-SG\",77.25,\"6' 5.25''\",null,null,\"202.00\",80.0,\"6' 8.00''\",102.5,\"8'
+        6.50''\",null,8.25,8.5,31.0,35.5,10.87,2.96,3.07,null,null,null,null,null,null,\"14-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"22-30\",null,null,null,\"11-25\"],[\"2025\",1642960,\"Alex\",\"Condon\",\"Alex
+        Condon\",\"SF-PF\",83.25,\"6' 11.25''\",null,null,\"221.80\",84.75,\"7' 0.75''\",107.5,\"8'
+        11.50''\",null,9.25,9.75,30.0,34.5,11.57,2.76,3.27,null,null,null,null,null,null,\"11-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"16-30\",null,null,null,\"13-25\"],[\"2025\",1642907,\"Cedric\",\"Coward\",\"Cedric
+        Coward\",\"PG-SG\",77.25,\"6' 5.25''\",null,null,\"213.00\",86.25,\"7' 2.25''\",106.0,\"8'
+        10.00''\",null,9.25,10.0,32.5,38.5,10.97,3.02,3.06,null,null,null,null,null,null,\"18-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"23-30\",null,null,null,\"17-25\"],[\"2025\",1642856,\"Egor\",\"Demin\",\"Egor
+        Demin\",\"PG-SG\",80.25,\"6' 8.25''\",null,null,\"199.20\",82.25,\"6' 10.25''\",105.5,\"8'
+        9.50''\",null,8.25,9.25,26.5,32.0,11.31,2.93,3.33,null,null,null,null,null,null,\"17-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"14-30\",null,null,null,\"14-25\"],[\"2025\",1642915,\"Eric\",\"Dixon\",\"Eric
+        Dixon\",\"PF\",79.5,\"6' 7.50''\",null,null,\"258.60\",83.5,\"6' 11.50''\",104.0,\"8'
+        8.00''\",null,8.75,10.0,28.0,32.5,11.56,3.09,3.41,null,null,null,null,null,null,\"20-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"24-30\",null,null,null,\"13-25\"],[\"2025\",1642845,\"VJ\",\"Edgecombe\",\"VJ
+        Edgecombe\",\"PG-SG\",76.0,\"6' 4.00''\",null,null,\"193.20\",79.5,\"6' 7.50''\",101.5,\"8'
+        5.50''\",null,8.5,9.5,30.0,38.5,11.27,2.93,3.2,null,null,null,null,null,null,\"12-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"20-30\",null,null,null,\"12-25\"],[\"2025\",1642855,\"Noa\",\"Essengue\",\"Noa
+        Essengue\",\"PF\",82.0,\"6' 10.00''\",null,null,\"204.00\",85.0,\"7' 1.00''\",110.0,\"9'
+        2.00''\",null,8.97,10.62,null,null,10.7,null,3.1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[\"2025\",1642847,\"Jeremiah\",\"Fears\",\"Jeremiah
+        Fears\",\"PG-SG\",74.5,\"6' 2.50''\",null,null,\"179.60\",77.25,\"6' 5.25''\",98.5,\"8'
+        2.50''\",null,8.25,9.25,32.5,36.5,10.95,3.09,3.05,null,null,null,null,null,null,\"14-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"19-30\",null,null,null,\"15-25\"],[\"2025\",1642843,\"Cooper\",\"Flagg\",\"Cooper
+        Flagg\",\"SF-PF\",79.75,\"6' 7.75''\",null,null,\"221.00\",84.0,\"7' 0.00''\",106.5,\"8'
+        10.50''\",null,8.75,9.75,29.0,35.5,10.64,2.92,3.3,null,null,null,null,null,null,\"16-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"21-30\",null,null,null,\"15-25\"],[\"2025\",1642858,\"Boogie\",\"Fland\",\"Boogie
+        Fland\",\"PG\",74.0,\"6' 2.00''\",null,null,\"172.40\",78.0,\"6' 6.00''\",98.0,\"8'
+        2.00''\",null,8.5,9.0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[\"2025\",1642853,\"Rasheer\",\"Fleming\",\"Rasheer
+        Fleming\",\"SF-PF\",80.25,\"6' 8.25''\",null,null,\"232.40\",89.25,\"7' 5.25''\",109.0,\"9'
+        1.00''\",null,9.5,9.5,27.0,32.5,10.95,2.72,3.24,null,null,null,null,null,null,\"16-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"15-30\",null,null,null,\"9-25\"],[\"2025\",1642884,\"Vladislav\",\"Goldin\",\"Vladislav
+        Goldin\",\"C\",84.0,\"7' 0.00''\",null,null,\"253.40\",89.25,\"7' 5.25''\",111.0,\"9'
+        3.00''\",null,9.5,11.75,26.5,30.0,11.76,2.95,3.53,null,null,null,null,null,null,\"14-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"14-30\",null,null,null,\"8-25\"],[\"2025\",1642864,\"Hugo\",\"Gonz\xE1lez\",\"Hugo
+        Gonz\xE1lez\",\"SF\",78.25,\"6' 6.25''\",null,null,\"222.70\",82.75,\"6' 10.75''\",101.5,\"8'
+        5.50''\",null,10.25,9.0,null,null,10.91,null,3.27,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[\"2025\",1642919,\"PJ\",\"Haggerty\",\"PJ
+        Haggerty\",\"SG\",74.25,\"6' 2.25''\",null,null,\"189.40\",78.5,\"6' 6.50''\",97.5,\"8'
+        1.50''\",null,8.5,9.5,27.5,32.0,11.76,3.11,3.23,null,null,null,null,null,null,\"20-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"22-30\",null,null,null,\"18-25\"],[\"2025\",1642844,\"Dylan\",\"Harper\",\"Dylan
+        Harper\",\"PG-SG\",76.5,\"6' 4.50''\",null,null,\"213.20\",82.5,\"6' 10.50''\",102.0,\"8'
+        6.00''\",null,9.25,9.25,30.5,36.5,11.07,3.05,3.16,null,null,null,null,null,null,\"16-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"19-30\",null,null,null,\"15-25\"],[\"2025\",1642916,\"Ben\",\"Henshall\",\"Ben
+        Henshall\",\"SG\",77.5,\"6' 5.50''\",null,null,\"193.40\",78.5,\"6' 6.50''\",99.5,\"8'
+        3.50''\",null,8.0,8.0,30.0,36.5,10.49,3.0,3.07,null,null,null,null,null,null,\"14-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"23-30\",null,null,null,\"12-25\"],[\"2025\",1642857,\"Kasparas\",\"Jakucionis\",\"Kasparas
+        Jakucionis\",\"PG-SG\",76.75,\"6' 4.75''\",null,null,\"205.20\",79.75,\"6'
+        7.75''\",99.5,\"8' 3.50''\",null,8.5,9.75,28.5,35.0,10.99,2.82,3.22,null,null,null,null,null,null,\"17-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"16-30\",null,null,null,\"16-25\"],[\"2025\",1642883,\"Sion\",\"James\",\"Sion
+        James\",\"SG\",76.5,\"6' 4.50''\",null,null,\"217.60\",78.5,\"6' 6.50''\",100.0,\"8'
+        4.00''\",null,8.25,9.25,32.0,39.5,10.91,2.93,2.97,null,null,null,null,null,null,\"15-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"21-30\",null,null,null,\"17-25\"],[\"2025\",1642848,\"Tre\",\"Johnson\",\"Tre
+        Johnson\",\"PG-SG\",76.75,\"6' 4.75''\",null,null,\"190.40\",82.25,\"6' 10.25''\",101.0,\"8'
+        5.00''\",null,8.5,8.0,32.0,37.5,10.49,3.11,3.28,null,null,null,null,null,null,\"17-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"22-30\",null,null,null,\"16-25\"],[\"2025\",1642880,\"Kam\",\"Jones\",\"Kam
+        Jones\",\"PG\",75.25,\"6' 3.25''\",null,null,\"202.40\",78.0,\"6' 6.00''\",100.5,\"8'
+        4.50''\",null,8.25,8.5,24.5,31.5,11.42,3.11,3.27,null,null,null,null,null,null,\"19-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"20-30\",null,null,null,\"16-25\"],[\"2025\",1641750,\"Ryan\",\"Kalkbrenner\",\"Ryan
+        Kalkbrenner\",\"C\",85.0,\"7' 1.00''\",null,null,\"257.40\",90.0,\"7' 6.00''\",112.0,\"9'
+        4.00''\",null,9.25,11.25,29.0,33.0,12.05,3.1,3.34,null,null,null,null,null,null,\"15-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"19-30\",null,null,null,\"15-25\"],[\"2025\",1642909,\"Karter\",\"Knox\",\"Karter
+        Knox\",\"SF\",77.0,\"6' 5.00''\",null,null,\"214.20\",82.25,\"6' 10.25''\",102.5,\"8'
+        6.50''\",null,9.0,9.5,32.0,39.5,10.92,2.96,3.2,null,null,null,null,null,null,\"11-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"19-30\",null,null,null,\"16-25\"],[\"2025\",1642851,\"Kon\",\"Knueppel\",\"Kon
+        Knueppel\",\"PG-SG\",77.0,\"6' 5.00''\",null,null,\"219.00\",78.25,\"6' 6.25''\",101.5,\"8'
+        5.50''\",null,8.5,9.75,31.5,36.5,11.92,2.92,3.35,null,null,null,null,null,null,\"20-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"22-30\",null,null,null,\"16-25\"],[\"2025\",1642404,\"Chaz\",\"Lanier\",\"Chaz
+        Lanier\",\"PG-SG\",75.75,\"6' 3.75''\",null,null,\"205.80\",81.0,\"6' 9.00''\",101.5,\"8'
+        5.50''\",null,8.5,9.75,33.0,39.0,10.53,2.96,3.12,null,null,null,null,null,null,\"20-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"20-30\",null,null,null,\"17-25\"],[\"2025\",1642865,\"Yaxel\",\"Lendeborg\",\"Yaxel
+        Lendeborg\",\"PF\",80.5,\"6' 8.50''\",null,null,\"234.60\",88.0,\"7' 4.00''\",108.5,\"9'
+        0.50''\",null,9.25,10.0,25.5,31.5,11.68,3.09,3.32,null,null,null,null,null,null,\"15-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"23-30\",null,null,null,\"16-25\"],[\"2025\",1642961,\"RJ\",\"Luis
+        Jr.\",\"RJ Luis Jr.\",\"SF\",77.75,\"6' 5.75''\",null,null,\"210.00\",82.5,\"6'
+        10.50''\",103.5,\"8' 7.50''\",null,9.0,10.0,31.5,38.0,11.24,2.98,3.13,null,null,null,null,null,null,\"14-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"22-30\",null,null,null,\"13-25\"],[\"2025\",1642863,\"Khaman\",\"Maluach\",\"Khaman
+        Maluach\",\"C\",84.75,\"7' 0.75''\",null,null,\"252.80\",90.75,\"7' 6.75''\",114.0,\"9'
+        6.00''\",null,9.75,10.25,24.0,30.0,12.05,3.44,3.5,null,null,null,null,null,null,\"12-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"15-30\",null,null,null,\"12-25\"],[\"2025\",1642881,\"Bogoljub\",\"Markovic\",\"Bogoljub
+        Markovic\",\"PF\",82.5,\"6' 10.50''\",null,null,\"213.2\",83.5,\"6' 11.50''\",110.0,\"9'
+        2.00''\",null,8.25,9.75,24.0,27.5,11.4,2.96,3.43,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[\"2025\",1642918,\"Alijah\",\"Martin\",\"Alijah
+        Martin\",\"SG\",73.5,\"6' 1.50''\",null,null,\"208.40\",79.5,\"6' 7.50''\",99.5,\"8'
+        3.50''\",null,8.25,9.25,29.5,38.0,11.06,3.05,3.11,null,null,null,null,null,null,\"19-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"15-30\",null,null,null,\"15-25\"],[\"2025\",1642862,\"Liam\",\"McNeeley\",\"Liam
+        McNeeley\",\"SF-PF\",78.75,\"6' 6.75''\",null,null,\"214.60\",80.5,\"6' 8.50''\",99.5,\"8'
+        3.50''\",null,8.75,10.0,30.5,36.5,11.11,2.75,3.16,null,null,null,null,null,null,\"17-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"24-30\",null,null,null,\"15-25\"],[\"2025\",1642944,\"Mackenzie\",\"Mgbako\",\"Mackenzie
+        Mgbako\",\"SF-PF\",79.5,\"6' 7.50''\",null,null,\"216.40\",82.25,\"6' 10.25''\",103.0,\"8'
+        7.00''\",null,9.0,9.25,27.5,33.0,11.99,2.94,3.39,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[\"2025\",1642922,\"Jalon\",\"Moore\",\"Jalon
+        Moore\",\"SF\",78.25,\"6' 6.25''\",null,null,\"203.40\",82.25,\"6' 10.25''\",104.5,\"8'
+        8.50''\",null,9.0,9.5,32.5,39.0,11.68,3.1,3.0,null,null,null,null,null,null,\"14-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"18-30\",null,null,null,\"12-25\"],[\"2025\",1642867,\"Collin\",\"Murray-Boyles\",\"Collin
+        Murray-Boyles\",\"SF-PF\",78.5,\"6' 6.50''\",null,null,\"239.20\",84.75,\"7'
+        0.75''\",106.0,\"8' 10.00''\",null,8.5,10.25,29.5,34.5,11.21,2.86,3.15,null,null,null,null,null,null,\"7-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"22-30\",null,null,null,\"10-25\"],[\"2025\",1641761,\"Grant\",\"Nelson\",\"Grant
+        Nelson\",\"PF\",82.0,\"6' 10.00''\",null,null,\"229.80\",84.0,\"7' 0.00''\",109.0,\"9'
+        1.00''\",null,9.0,9.75,27.0,30.0,10.51,2.58,3.23,null,null,null,null,null,null,\"12-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"15-30\",null,null,null,\"10-25\"],[\"2025\",1642948,\"Ryan\",\"Nembhard\",\"Ryan
+        Nembhard\",\"PG\",71.0,\"5' 11.00''\",null,null,\"175.80\",74.25,\"6' 2.25''\",94.0,\"7'
+        10.00''\",null,9.5,8.25,26.5,32.5,11.5,2.88,3.22,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[\"2025\",1642854,\"Asa\",\"Newell\",\"Asa
+        Newell\",\"SF-PF\",81.0,\"6' 9.00''\",null,null,\"223.80\",83.25,\"6' 11.25''\",107.5,\"8'
+        11.50''\",null,9.25,10.0,29.5,36.5,10.95,2.78,3.26,null,null,null,null,null,null,\"11-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"11-30\",null,null,null,\"14-25\"],[\"2025\",1642949,\"Yanic
+        Konan\",\"Niederhauser\",\"Yanic Konan Niederhauser\",\"C\",83.25,\"6' 11.25''\",null,null,\"242.60\",87.25,\"7'
+        3.25''\",111.0,\"9' 3.00''\",null,9.5,9.0,33.5,37.0,11.45,2.84,3.2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[\"2025\",1642950,\"Lachlan\",\"Olbrich\",\"Lachlan
+        Olbrich\",\"PF\",80.75,\"6' 8.75''\",null,null,\"230.20\",83.25,\"6' 11.25''\",107.5,\"8'
+        11.50''\",null,10.0,9.0,23.5,31.0,11.9,3.0,3.45,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[\"2025\",1642923,\"Otega\",\"Oweh\",\"Otega
+        Oweh\",\"SG\",76.25,\"6' 4.25''\",null,null,\"212.60\",80.5,\"6' 8.50''\",101.5,\"8'
+        5.50''\",null,8.5,9.5,27.5,35.0,10.92,2.88,3.19,null,null,null,null,null,null,\"14-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"16-30\",null,null,null,\"12-25\"],[\"2025\",1641825,\"Dink\",\"Pate\",\"Dink
+        Pate\",\"SG\",78.25,\"6' 6.25''\",null,null,\"200.80\",81.75,\"6' 9.75''\",104.0,\"8'
+        8.00''\",null,8.5,9.0,24.5,32.5,10.63,2.97,3.29,null,null,null,null,null,null,\"17-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"23-30\",null,null,null,\"16-25\"],[\"2025\",1642877,\"Micah\",\"Peavy\",\"Micah
+        Peavy\",\"SF\",78.25,\"6' 6.25''\",null,null,\"211.60\",79.25,\"6' 7.25''\",101.0,\"8'
+        5.00''\",null,8.5,8.75,30.5,35.5,10.9,3.06,3.13,null,null,null,null,null,null,\"12-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"18-30\",null,null,null,\"12-25\"],[\"2025\",1642869,\"Noah\",\"Penda\",\"Noah
+        Penda\",\"PF\",79.25,\"6' 7.25''\",null,null,\"241.8\",83.5,\"6' 11.50''\",106.5,\"8'
+        10.50''\",null,8.25,9.75,25.0,31.0,11.7,3.13,3.34,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[\"2025\",1642861,\"Tahaad\",\"Pettiford\",\"Tahaad
+        Pettiford\",\"PG\",72.25,\"6' 0.25''\",null,null,\"168.80\",77.5,\"6' 5.50''\",96.0,\"8'
+        0.00''\",null,8.25,8.5,31.0,42.0,10.63,2.96,3.23,null,null,null,null,null,null,\"16-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"23-30\",null,null,null,\"16-25\"],[\"2025\",1642889,\"Labaron\",\"Philon\",\"Labaron
+        Philon\",\"PG-SG\",74.75,\"6' 2.75''\",null,null,\"174.60\",78.25,\"6' 6.25''\",99.5,\"8'
+        3.50''\",null,8.5,9.0,28.5,32.5,11.46,3.14,3.16,null,null,null,null,null,null,\"13-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"24-30\",null,null,null,\"15-25\"],[\"2025\",1642962,\"Drake\",\"Powell\",\"Drake
+        Powell\",\"SF-PF\",77.25,\"6' 5.25''\",null,null,\"200.40\",84.0,\"7' 0.00''\",103.0,\"8'
+        7.00''\",null,8.75,10.0,37.5,43.0,10.71,2.79,3.07,null,null,null,null,null,null,\"10-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"21-30\",null,null,null,\"11-25\"],[\"2025\",1642878,\"Tyrese\",\"Proctor\",\"Tyrese
+        Proctor\",\"PG-SG\",76.25,\"6' 4.25''\",null,null,\"183.20\",79.25,\"6' 7.25''\",100.5,\"8'
+        4.50''\",null,8.25,9.0,30.5,36.5,10.75,3.0,3.19,null,null,null,null,null,null,\"12-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"20-30\",null,null,null,\"14-25\"],[\"2025\",1642852,\"Derik\",\"Queen\",\"Derik
+        Queen\",\"C\",81.25,\"6' 9.25''\",null,null,\"247.80\",84.5,\"7' 0.50''\",109.5,\"9'
+        1.50''\",null,9.0,9.5,23.5,28.0,12.45,3.27,3.52,null,null,null,null,null,null,\"13-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"16-30\",null,null,null,\"11-25\"],[\"2025\",1642875,\"Maxime\",\"Raynaud\",\"Maxime
+        Raynaud\",\"C\",84.25,\"7' 0.25''\",null,null,\"236.80\",85.25,\"7' 1.25''\",110.0,\"9'
+        2.00''\",null,9.0,10.25,28.0,31.5,11.31,3.16,3.23,null,null,null,null,null,null,\"10-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"17-30\",null,null,null,\"16-25\"],[\"2025\",1642859,\"Jase\",\"Richardson\",\"Jase
+        Richardson\",\"PG-SG\",72.5,\"6' 0.50''\",null,null,\"178.40\",78.0,\"6' 6.00''\",98.5,\"8'
+        2.50''\",null,8.5,9.5,30.5,38.0,10.97,3.08,3.22,null,null,null,null,null,null,\"18-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"26-30\",null,null,null,\"14-25\"],[\"2025\",1642860,\"Will\",\"Riley\",\"Will
+        Riley\",\"SF-PF\",80.25,\"6' 8.25''\",null,null,\"185.60\",80.75,\"6' 8.75''\",104.0,\"8'
+        8.00''\",null,8.5,9.0,27.5,32.0,11.73,3.08,3.21,null,null,null,null,null,null,\"16-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"26-30\",null,null,null,\"13-25\"],[\"2025\",1642913,\"Michael\",\"Ruzic\",\"Michael
+        Ruzic\",\"PF\",83.0,\"6' 11.00''\",null,null,\"221.40\",84.75,\"7' 0.75''\",108.0,\"9'
+        0.00''\",null,9.0,9.25,29.5,32.5,11.4,2.98,3.11,null,null,null,null,null,null,\"12-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"16-30\",null,null,null,\"8-25\"],[\"2025\",1642282,\"Hunter\",\"Sallis\",\"Hunter
+        Sallis\",\"SG\",75.75,\"6' 3.75''\",null,null,\"181.40\",82.0,\"6' 10.00''\",100.0,\"8'
+        4.00''\",null,8.5,9.75,31.0,37.5,10.99,2.94,3.22,null,null,null,null,null,null,\"12-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"22-30\",null,null,null,\"12-25\"],[\"2025\",1642920,\"Kobe\",\"Sanders\",\"Kobe
+        Sanders\",\"SF\",79.0,\"6' 7.00''\",null,null,\"203.20\",80.25,\"6' 8.25''\",103.0,\"8'
+        7.00''\",null,8.5,9.25,30.0,36.0,10.95,3.0,3.19,null,null,null,null,null,null,\"15-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"23-30\",null,null,null,\"14-25\"],[\"2025\",1642879,\"Ben\",\"Saraf\",\"Ben
+        Saraf\",\"PG\",78.0,\"6' 6.00''\",null,null,\"199.00\",80.7,\"6' 8.70''\",100.0,\"8'
+        4.00''\",null,9.44,8.07,null,null,11.1,null,3.2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[\"2025\",1641813,\"Mark\",\"Sears\",\"Mark
+        Sears\",\"PG\",70.75,\"5' 10.75''\",null,null,\"183.40\",74.0,\"6' 2.00''\",92.5,\"7'
+        8.50''\",null,8.0,8.75,31.0,37.5,10.96,3.25,3.28,null,null,null,null,null,null,\"19-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"26-30\",null,null,null,\"16-25\"],[\"2025\",1642917,\"Max\",\"Shulga\",\"Max
+        Shulga\",\"SG\",76.25,\"6' 4.25''\",null,null,\"206.40\",77.75,\"6' 5.75''\",99.0,\"8'
+        3.00''\",null,8.0,9.75,29.5,34.5,11.35,3.06,3.21,null,null,null,null,null,null,\"15-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"21-30\",null,null,null,\"18-25\"],[\"2025\",1642914,\"Javon\",\"Small\",\"Javon
+        Small\",\"PG\",73.0,\"6' 1.00''\",null,null,\"190.00\",76.75,\"6' 4.75''\",96.0,\"8'
+        0.00''\",null,8.25,9.75,33.0,40.5,10.74,2.87,3.07,null,null,null,null,null,null,\"17-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"20-30\",null,null,null,\"17-25\"],[\"2025\",1642850,\"Thomas\",\"Sorber\",\"Thomas
+        Sorber\",\"C\",81.25,\"6' 9.25''\",null,null,\"262.80\",90.0,\"7' 6.00''\",109.0,\"9'
+        1.00''\",null,8.5,9.0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[\"2025\",1642876,\"Adou\",\"Thiero\",\"Adou
+        Thiero\",\"PG-SG\",78.25,\"6' 6.25''\",null,null,\"218.40\",84.0,\"7' 0.00''\",104.5,\"8'
+        8.50''\",null,9.0,10.25,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[\"2025\",1642910,\"John\",\"Tonje\",\"John
+        Tonje\",\"SG\",76.75,\"6' 4.75''\",null,null,\"211.80\",81.0,\"6' 9.00''\",102.5,\"8'
+        6.50''\",null,9.0,9.5,30.0,37.0,11.14,3.21,3.2,null,null,null,null,null,null,\"16-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"21-30\",null,null,null,\"18-25\"],[\"2025\",1642893,\"Alex\",\"Toohey\",\"Alex
+        Toohey\",\"SF\",79.75,\"6' 7.75''\",null,null,\"222.80\",82.75,\"6' 10.75''\",104.5,\"8'
+        8.50''\",null,9.0,10.25,26.5,31.5,11.38,2.9,3.2,null,null,null,null,null,null,\"12-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"17-30\",null,null,null,\"15-25\"],[\"2025\",1642849,\"Nolan\",\"Traor\xE9\",\"Nolan
+        Traor\xE9\",\"PG\",75.0,\"6' 3.00''\",null,null,\"175\",80.0,\"6' 8.00''\",101.5,\"8'
+        5.50''\",null,7.75,9.25,28.0,34.0,10.75,2.85,3.26,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[\"2025\",1642870,\"Milos\",\"Uzan\",\"Milos
+        Uzan\",\"PG\",75.25,\"6' 3.25''\",null,null,\"186.40\",77.25,\"6' 5.25''\",97.5,\"8'
+        1.50''\",null,7.75,9.0,26.5,35.0,10.86,2.94,3.17,null,null,null,null,null,null,\"17-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"22-30\",null,null,null,\"18-25\"],[\"2025\",1642364,\"Jamir\",\"Watkins\",\"Jamir
+        Watkins\",\"SF\",77.0,\"6' 5.00''\",null,null,\"214.60\",83.25,\"6' 11.25''\",102.5,\"8'
+        6.50''\",null,9.25,9.75,31.5,37.0,11.19,3.21,3.14,null,null,null,null,null,null,\"16-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"16-30\",null,null,null,\"18-25\"],[\"2025\",1642924,\"Brice\",\"Williams\",\"Brice
+        Williams\",\"SG\",77.25,\"6' 5.25''\",null,null,\"205.80\",82.75,\"6' 10.75''\",103.0,\"8'
+        7.00''\",null,9.0,10.75,27.5,32.5,11.19,2.98,3.2,null,null,null,null,null,null,\"14-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"18-30\",null,null,null,\"14-25\"],[\"2025\",1642963,\"Darrion\",\"Williams\",\"Darrion
+        Williams\",\"SF\",76.5,\"6' 4.50''\",null,null,\"236.00\",78.5,\"6' 6.50''\",101.0,\"8'
+        5.00''\",null,9.0,10.5,24.0,30.0,11.73,3.01,3.34,null,null,null,null,null,null,\"12-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"21-30\",null,null,null,\"18-25\"],[\"2025\",1642874,\"Danny\",\"Wolf\",\"Danny
+        Wolf\",\"SF-PF\",82.5,\"6' 10.50''\",null,null,\"251.80\",86.25,\"7' 2.25''\",109.0,\"9'
+        1.00''\",null,9.25,9.75,24.0,30.0,11.26,2.91,3.51,null,null,null,null,null,null,\"19-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"16-30\",null,null,null,\"10-25\"],[\"2025\",1642905,\"Hansen\",\"Yang\",\"Hansen
+        Yang\",\"C\",85.0,\"7' 1.00''\",null,null,\"252.60\",86.75,\"7' 2.75''\",111.0,\"9'
+        3.00''\",null,10.0,11.25,26.0,30.0,11.79,3.01,3.38,null,null,null,null,null,null,\"14-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"15-30\",null,null,null,\"14-25\"],[\"2025\",1642911,\"Rocco\",\"Zikarsky\",\"Rocco
+        Zikarsky\",\"C\",87.0,\"7' 3.00''\",null,null,\"257.00\",88.75,\"7' 4.75''\",114.5,\"9'
+        6.50''\",null,9.0,9.75,27.5,31.5,11.92,3.0,3.48,null,null,null,null,null,null,\"6-25\",null,null,null,null,null,null,null,null,null,null,null,null,\"14-30\",null,null,null,\"13-25\"]]}]}"
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '5271'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:36:13 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDFwWIeEWcAQAAmyzZgx6UsRbq5RuolyyAeMOVaa7XBU0MpwXEgalOmTJdcrXSbnQ5Ly5/vJb3s60OCl3OxLZjQC++slAO7le7TR3LCGxlt/dQmZSjFP1SWMmk7T7TvmkuH+Cs050w4vt9yOHoRStszmKcWPs4auJCyfWHB6BNI1sD05LATePXnyOpAKPFDI1D0EcPpgc9C8A+f6pSwsqonicvkH3BJ8741WSWLNBz1j0FihHs3ZToNQ==~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7151;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '2'
+      x-full-ttl:
+      - '1800.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '3'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '406.541'
+      x-varnish:
+      - 39081489 37341404
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

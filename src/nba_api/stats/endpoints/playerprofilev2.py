@@ -1,6 +1,6 @@
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
-from nba_api.stats.library.parameters import PerMode36, LeagueIDNullable
+from nba_api.stats.library.parameters import LeagueIDNullable, PerMode36
 
 
 class PlayerProfileV2(Endpoint):

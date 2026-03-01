@@ -224,7 +224,7 @@ class TestNBAStatsScoreboardV3Parser:
                 "gameDate": "2025-11-05",
                 "leagueId": "00",
                 "leagueName": "NBA",
-                "games": []
+                "games": [],
             }
         }
         parser = NBAStatsScoreboardV3Parser(incomplete_data)

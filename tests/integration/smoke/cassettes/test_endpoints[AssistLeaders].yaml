@@ -1,0 +1,88 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAl8XbWicAQAAT93Ygx4R6m2O0S/Y1VLp6GzpMYHg5Iy2YyF3jqLfyy5XoDxldrtXS2EjZIXb1nbZwkI2iBmFAR3JyF+oXbbULuRLwa2Quute+FJX1BSewBxwHXHAh0rJ600xONFIrEcrEXU+uKrs3lKXhRIW+JJg0w0KNcM1iWuKWM45Qx6ivRTnttSmrKfw9pHQaRtPxTYdCRjUUUbvcEX8cW2/Qq79Xv1Rx57Eu6lQ5DXOZvwaOw==~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/assistleaders?LeagueID=00&PerMode=Totals&PlayerOrTeam=Team&Season=2025-26&SeasonType=Regular+Season
+  response:
+    body:
+      string: '{"resource":"assistleaders","parameters":{"LeagueID":"00","Season":"2025-26","SeasonType":"Regular
+        Season","PerMode":"Totals","PlayerOrTeam":"Team"},"resultSets":[{"name":"AssistLeaders","headers":["RANK","TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","AST"],"rowSet":[[1,1610612737,"ATL","Atlanta
+        Hawks",1760],[2,1610612762,"UTA","Utah Jazz",1712],[3,1610612748,"MIA","Miami
+        Heat",1667],[4,1610612741,"CHI","Chicago Bulls",1656],[5,1610612761,"TOR","Toronto
+        Raptors",1636]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '332'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:35:54 GMT
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-0
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '1800.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '1'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '403.710'
+      x-varnish:
+      - 35561418 36458512
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1
