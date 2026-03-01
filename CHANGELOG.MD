@@ -19,46 +19,52 @@
 ## Unreleased
 
 ### Infrastructure
-* Replaced `flake8`, `isort`, and `pylint` with `ruff` for linting and formatting; added `pre-commit` hooks to auto-fix on commit
-* Added `pytest-recording` (and `vcrpy`) to dev dependencies; introduced pytest markers for integration test modes (`live`, `vcr`, `canary`, `deprecated_endpoint`)
-* Added `tests/integration/conftest.py` with shared request pacing, cassette directory configuration, and automatic skipping for deprecated endpoint smoke cases
+* **Ruff Tooling** - Replaced `flake8`, `isort`, and `pylint` with `ruff` for linting and formatting; added `pre-commit` hooks to auto-fix on commit (PR [#639](https://github.com/swar/nba_api/pull/639))
+* **Pytest Recording Stack** - Added `pytest-recording` (and `vcrpy`) to dev dependencies; introduced pytest markers for integration test modes (`live`, `vcr`, `canary`, `deprecated_endpoint`) (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **Integration Conftest** - Added `tests/integration/conftest.py` with shared request pacing, cassette directory configuration, and automatic skipping for deprecated endpoint smoke cases (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **VCR Query Matcher** - Updated query matching to ignore dynamic `GameDate` params so cassette playback remains stable in CI (PR [#644](https://github.com/swar/nba_api/pull/644))
 
 ### Refactored
-* Reorganized integration tests into `tests/integration/smoke/` and `tests/integration/scenarios/`, replacing the older top-level integration smoke/scenario modules
-* Moved scenario test data modules and documentation under `tests/integration/scenarios/data/` and standardized the scenario runner/expectation schema
-* Replaced `tests/integration/deferred_endpoints.py` with `tests/integration/helpers/endpoint_specs.py` plus shared helper models/constants
-* Introduced `EndpointSpec` auto-parameter resolution (from canonical test defaults) to reduce manual endpoint test wiring and support per-endpoint `skip` / `deprecated` metadata
+* **Integration Test Layout** - Reorganized integration tests into `tests/integration/smoke/` and `tests/integration/scenarios/`, replacing the older top-level integration smoke/scenario modules (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **Scenario Data Layout** - Moved scenario test data modules and documentation under `tests/integration/scenarios/data/` and standardized the scenario runner/expectation schema (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **Endpoint Specs Migration** - Replaced `tests/integration/deferred_endpoints.py` with `tests/integration/helpers/endpoint_specs.py` plus shared helper models/constants (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **EndpointSpec Auto-Parameters** - Introduced `EndpointSpec` auto-parameter resolution (from canonical test defaults) to reduce manual endpoint test wiring and support per-endpoint `skip` / `deprecated` metadata (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **Unit Test Package Layout** - Reorganized unit tests into package-based folders (`tests/unit/http/`, `tests/unit/live/endpoints/`, `tests/unit/stats/library/`, etc.) and added missing `__init__.py` modules for reliable imports (PR [#643](https://github.com/swar/nba_api/pull/643))
 
 ### Added
-* Added broad VCR-backed integration smoke coverage with curated endpoint specs (~130 endpoints) and recorded cassettes under `tests/integration/smoke/cassettes/`
-* Added VCR-backed scenario/regression coverage for `LeagueDashTeamStats`, `LeagueGameFinder`, `PlayerDashPtShotDefend`, `ScoreboardV3`, `TeamDashLineups`, `TeamGameLog`, and `TeamGameLogs`, plus common sanity checks
-* Added shared integration helper utilities for response validation, dataset structure validation, row-count assertions, and endpoint instantiation checks
-* Added unit tests for integration `EndpointSpec` behavior (`tests/unit/test_integration_endpoint_spec.py`)
-* Added docstrings and integration test-data documentation for the new test layout and workflows
+* **VCR Smoke Coverage** - Added broad VCR-backed integration smoke coverage with curated endpoint specs (~130 endpoints) and recorded cassettes under `tests/integration/smoke/cassettes/` (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **VCR Scenario Coverage** - Added VCR-backed scenario/regression coverage for `LeagueDashTeamStats`, `LeagueGameFinder`, `PlayerDashPtShotDefend`, `ScoreboardV3`, `TeamDashLineups`, `TeamGameLog`, and `TeamGameLogs`, plus common sanity checks (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **Integration Helper Utilities** - Added shared integration helper utilities for response validation, dataset structure validation, row-count assertions, and endpoint instantiation checks (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **EndpointSpec Unit Tests** - Added unit tests for integration `EndpointSpec` behavior (`tests/unit/integration/helpers/test_endpoint_spec.py`) (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **Integration Test Documentation** - Added docstrings and integration test-data documentation for the new test layout and workflows (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **Legacy Debug Usage Tests** - Added legacy debug-configuration unit coverage for stats/live HTTP request behavior, proxy/debug flags, and debug cache mode (`tests/unit/http/test_legacy_debug_usage.py`) (PR [#645](https://github.com/swar/nba_api/pull/645))
+* **Parser/Normalization Regression Tests** - Added dedicated regression coverage for `DunkScoreLeaders` and `BoxScoreTraditionalV3` (`tests/unit/stats/endpoints/test_dunkscoreleaders_parser.py`, `tests/unit/stats/endpoints/test_boxscoretraditionalv3_normalized.py`) (PR [#598](https://github.com/swar/nba_api/pull/598), PR [#606](https://github.com/swar/nba_api/pull/606))
 
 ### Fixed
-* Updated pytest `skip` / `fail` calls to use the current `reason=` API in the refactored integration tests
-* Temporarily skipped `tests/integration/test_stats_library_playbyplayregex.py` at module import time (with TODO) because PlayByPlayV3 normalization is not yet wired up, preventing fixture failures during collection
+* **Pytest `reason=` API** - Updated pytest `skip` / `fail` calls to use the current `reason=` API in the refactored integration tests (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **PlayByPlayRegex Integration Collection** - Temporarily skipped `tests/integration/test_stats_library_playbyplayregex.py` at module import time (with TODO) because PlayByPlayV3 normalization is not yet wired up, preventing fixture failures during collection (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **DunkScoreLeaders Parsing** - Fixed response parsing by adding a dedicated parser, registering it in parser dispatch, and aligning expected data keys with the endpoint's nested V3 camelCase payload fields (PR [#598](https://github.com/swar/nba_api/pull/598))
+* **V3 Normalized Output** - Fixed `get_normalized_dict()` / `get_normalized_json()` returning empty payloads for V3 endpoints by persisting endpoint context and normalizing parser-generated data sets (PR [#606](https://github.com/swar/nba_api/pull/606), fixes #602)
 
 ## v1.11.4
 Date: 2026-02-20
 
 ### Added
-* **GravityLeaders** - New endpoint added (PR #626)
-* **`__version__` attribute** - Package now exposes a `__version__` attribute using `importlib.metadata` with `pyproject.toml` as the single source of truth (PR #612)
+* **GravityLeaders** - New endpoint added (PR [#626](https://github.com/swar/nba_api/pull/626))
+* **`__version__` attribute** - Package now exposes a `__version__` attribute using `importlib.metadata` with `pyproject.toml` as the single source of truth (PR [#612](https://github.com/swar/nba_api/pull/612))
 
 ### Fixed
-* **HTTP Headers** - Updated request headers to fix broken NBA.com API requests caused by an outdated user agent (PR #636)
-* **ContextMeasureSimple** - Removed deprecated `PF` (Personal Fouls) parameter; NBA.com API no longer returns data for this context measure on the `shotchartdetail` endpoint (PR #608, fixes #600)
+* **HTTP Headers** - Updated request headers to fix broken NBA.com API requests caused by an outdated user agent (PR [#636](https://github.com/swar/nba_api/pull/636))
+* **ContextMeasureSimple** - Removed deprecated `PF` (Personal Fouls) parameter; NBA.com API no longer returns data for this context measure on the `shotchartdetail` endpoint (PR [#608](https://github.com/swar/nba_api/pull/608), fixes #600)
 
 ### Deprecated
-* **PlayByPlayV2** - Added deprecation warning; NBA.com API returns empty JSON for this endpoint. Use **PlayByPlayV3** instead (PR #613, fixes #591)
-* **ScoreboardV2** - Added deprecation warning; returns empty line scores for 2025-26 season games. Use **ScoreboardV3** instead, which is 100% backward compatible (PR #609, fixes #596)
+* **PlayByPlayV2** - Added deprecation warning; NBA.com API returns empty JSON for this endpoint. Use **PlayByPlayV3** instead (PR [#613](https://github.com/swar/nba_api/pull/613), fixes #591)
+* **ScoreboardV2** - Added deprecation warning; returns empty line scores for 2025-26 season games. Use **ScoreboardV3** instead, which is 100% backward compatible (PR [#609](https://github.com/swar/nba_api/pull/609), fixes #596)
 
 ### Contributor
-* Added type hints and docstrings to the `Endpoint` base class and `PlayerCareerStats` endpoint for improved code clarity and IDE support (PR #628)
-* Added `CODEOWNERS` file (PR #627)
-* Corrected typos in contributing guide and README (PR #604)
+* Added type hints and docstrings to the `Endpoint` base class and `PlayerCareerStats` endpoint for improved code clarity and IDE support (PR [#628](https://github.com/swar/nba_api/pull/628))
+* Added `CODEOWNERS` file (PR [#627](https://github.com/swar/nba_api/pull/627))
+* Corrected typos in contributing guide and README (PR [#604](https://github.com/swar/nba_api/pull/604))
 
 ## v1.11.3
 Date: 2025-11-13
