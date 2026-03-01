@@ -1,12 +1,12 @@
 import json
-import pytest
+
 from nba_api.stats.endpoints.boxscoretraditionalv3 import BoxScoreTraditionalV3
 from nba_api.stats.library.http import NBAStatsResponse
+
 from .data.boxscoretraditionalv3 import BOXSCORETRADITIONALV3_SAMPLE
 
 
 class MockResponse(NBAStatsResponse):
-
     def __init__(self, data):
         super().__init__(json.dumps(data), 200, "http://mock.url")
         self._mock_data = data
@@ -16,7 +16,6 @@ class MockResponse(NBAStatsResponse):
 
 
 class TestBoxScoreTraditionalV3Normalized:
-
     def test_get_normalized_dict_returns_data(self):
         endpoint = BoxScoreTraditionalV3(game_id="0022500165", get_request=False)
         endpoint.nba_response = MockResponse(BOXSCORETRADITIONALV3_SAMPLE)
@@ -133,11 +132,15 @@ class TestBoxScoreTraditionalV3Normalized:
         endpoint.load_response()
 
         normalized_dict = endpoint.get_normalized_dict()
-        assert normalized_dict != {}, "Issue #602: get_normalized_dict() returns empty dict"
+        assert normalized_dict != {}, (
+            "Issue #602: get_normalized_dict() returns empty dict"
+        )
         assert len(normalized_dict) > 0, "Issue #602: get_normalized_dict() has no data"
 
         normalized_json = endpoint.get_normalized_json()
-        assert normalized_json != "{}", "Issue #602: get_normalized_json() returns empty JSON"
+        assert normalized_json != "{}", (
+            "Issue #602: get_normalized_json() returns empty JSON"
+        )
         assert len(normalized_json) > 2, "Issue #602: get_normalized_json() has no data"
 
         parsed = json.loads(normalized_json)
