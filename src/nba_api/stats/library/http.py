@@ -30,6 +30,10 @@ class NBAStatsResponse(http.NBAResponse):
         super().__init__(*args, **kwargs)
         self._endpoint = None
 
+    @staticmethod
+    def _build_rows(headers, row_set):
+        return [dict(zip(headers, raw_row, strict=False)) for raw_row in row_set]
+
     def get_normalized_dict(self):
         raw_data = self.get_dict()
 
@@ -49,34 +53,14 @@ class NBAStatsResponse(http.NBAResponse):
                 results = [results]
             for result in results:
                 name = result["name"]
-                headers = result["headers"]
-                row_set = result["rowSet"]
-
-                rows = []
-                for raw_row in row_set:
-                    row = {}
-                    for i in range(len(headers)):
-                        row[headers[i]] = raw_row[i]
-                    rows.append(row)
-                data[name] = rows
+                data[name] = self._build_rows(result["headers"], result["rowSet"])
         elif self._endpoint is not None:
             try:
                 from nba_api.stats.endpoints._parsers import get_parser_for_endpoint
 
                 endpoint_parser = get_parser_for_endpoint(self._endpoint, raw_data)
-                data_sets = endpoint_parser.get_data_sets()
-
-                for name, dataset in data_sets.items():
-                    headers = dataset["headers"]
-                    row_data = dataset["data"]
-
-                    rows = []
-                    for raw_row in row_data:
-                        row = {}
-                        for i in range(len(headers)):
-                            row[headers[i]] = raw_row[i]
-                        rows.append(row)
-                    data[name] = rows
+                for name, dataset in endpoint_parser.get_data_sets().items():
+                    data[name] = self._build_rows(dataset["headers"], dataset["data"])
             except (KeyError, ImportError):
                 pass
 
