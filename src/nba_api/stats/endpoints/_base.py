@@ -16,7 +16,6 @@ except ImportError:
 class Endpoint:
     class DataSet:
         key: str | None = None
-        data: dict[str, Any] = {}
 
         def __init__(self, data: dict[str, Any]) -> None:
             self.data = data

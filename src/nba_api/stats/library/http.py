@@ -61,7 +61,7 @@ class NBAStatsResponse(http.NBAResponse):
                 endpoint_parser = get_parser_for_endpoint(self._endpoint, raw_data)
                 for name, dataset in endpoint_parser.get_data_sets().items():
                     data[name] = self._build_rows(dataset["headers"], dataset["data"])
-            except (KeyError, ImportError):
+            except KeyError:
                 pass
 
         return data

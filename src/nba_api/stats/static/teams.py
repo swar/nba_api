@@ -1,4 +1,5 @@
 import re
+import unicodedata
 
 from nba_api.stats.library.data import (
     team_index_abbreviation,
@@ -20,11 +21,16 @@ _wnba_teams_by_id = {t[team_index_id]: t for t in wnba_teams}
 _wnba_teams_by_abbreviation = {t[team_index_abbreviation]: t for t in wnba_teams}
 
 
+def _strip_accents(inputstr: str) -> str:
+    normalizedstr = unicodedata.normalize("NFD", inputstr)
+    return "".join(c for c in normalizedstr if unicodedata.category(c) != "Mn")
+
+
 def _find_teams(regex_pattern, row_id, teams=teams):
-    compiled = re.compile(regex_pattern, flags=re.I)
+    compiled = re.compile(_strip_accents(regex_pattern), flags=re.I)
     teams_found = []
     for team in teams:
-        if compiled.search(str(team[row_id])):
+        if compiled.search(_strip_accents(str(team[row_id]))):
             teams_found.append(_get_team_dict(team))
     return teams_found
 

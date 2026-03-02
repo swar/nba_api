@@ -4,7 +4,6 @@ import json
 class Endpoint:
     class DataSet:
         key = None
-        data = {}
 
         def __init__(self, data=None):
             if data is None:
