@@ -132,3 +132,6 @@ nba_api/library/debug/
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+# Git worktrees
+.worktrees/
