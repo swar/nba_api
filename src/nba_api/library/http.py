@@ -57,6 +57,9 @@ class NBAResponse:
     def get_url(self):
         return self._url
 
+    def get_status_code(self):
+        return self._status_code
+
 
 class NBAHTTP:
     nba_response = NBAResponse
@@ -176,7 +179,14 @@ class NBAHTTP:
 
         data = self.nba_response(response=contents, status_code=status_code, url=url)
 
-        if raise_exception_on_error and not data.valid_json():
-            raise Exception("InvalidResponse: Response is not in a valid JSON format.")
+        if raise_exception_on_error:
+            if status_code is not None and status_code >= 400:
+                raise Exception(
+                    f"HTTPError: Request failed with status code {status_code}."
+                )
+            if not data.valid_json():
+                raise Exception(
+                    "InvalidResponse: Response is not in a valid JSON format."
+                )
 
         return data

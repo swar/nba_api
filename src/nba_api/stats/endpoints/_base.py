@@ -88,6 +88,10 @@ class Endpoint:
         """Return the raw response string."""
         return self.nba_response.get_response()
 
+    def get_status_code(self) -> int:
+        """Return the HTTP status code of the response."""
+        return self.nba_response.get_status_code()
+
     def get_dict(self) -> dict[str, Any]:
         """Return the response as a dictionary."""
         return self.nba_response.get_dict()

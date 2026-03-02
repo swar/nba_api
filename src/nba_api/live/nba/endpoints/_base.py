@@ -23,6 +23,9 @@ class Endpoint:
     def get_response(self):
         return self.nba_response.get_response()
 
+    def get_status_code(self):
+        return self.nba_response.get_status_code()
+
     def get_dict(self):
         return self.nba_response.get_dict()
 
