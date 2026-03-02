@@ -34,12 +34,15 @@ class NBAResponse:
         self._response = response
         self._status_code = status_code
         self._url = url
+        self._dict_cache = None
 
     def get_response(self):
         return self._response
 
     def get_dict(self):
-        return json.loads(self._response)
+        if self._dict_cache is None:
+            self._dict_cache = json.loads(self._response)
+        return self._dict_cache
 
     def get_json(self):
         return json.dumps(self.get_dict())

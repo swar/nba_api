@@ -70,18 +70,19 @@ class NBAStatsResponse(http.NBAResponse):
         return json.dumps(self.get_normalized_dict())
 
     def get_parameters(self):
-        if not self.valid_json() or "parameters" not in self.get_dict():
+        raw = self.get_dict() if self.valid_json() else None
+        if raw is None or "parameters" not in raw:
             return None
 
-        parameters = self.get_dict()["parameters"]
+        parameters = raw["parameters"]
         if isinstance(parameters, dict):
             return parameters
 
-        parameters = {}
-        for parameter in self.get_dict()["parameters"]:
+        result = {}
+        for parameter in parameters:
             for key, value in parameter.items():
-                parameters.update({key: value})
-        return parameters
+                result[key] = value
+        return result
 
     def get_headers_from_data_sets(self):
         raw_dict = self.get_dict()

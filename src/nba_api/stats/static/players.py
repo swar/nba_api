@@ -11,17 +11,9 @@ from nba_api.stats.library.data import (
     wnba_players,
 )
 
-
-def _find_players(regex_pattern, row_id, players=players):
-    players_found = []
-    for player in players:
-        if re.search(
-            _strip_accents(regex_pattern),
-            _strip_accents(str(player[row_id])),
-            flags=re.I,
-        ):
-            players_found.append(_get_player_dict(player))
-    return players_found
+# Pre-built index for O(1) ID lookup
+_players_by_id = {p[player_index_id]: p for p in players}
+_wnba_players_by_id = {p[player_index_id]: p for p in wnba_players}
 
 
 def _strip_accents(inputstr: str) -> str:
@@ -36,15 +28,18 @@ def _strip_accents(inputstr: str) -> str:
     )
 
 
-def _find_player_by_id(player_id, players=players):
-    regex_pattern = f"^{player_id}$"
-    players_list = _find_players(regex_pattern, player_index_id, players=players)
-    if len(players_list) > 1:
-        raise Exception("Found more than 1 id")
-    elif not players_list:
-        return None
-    else:
-        return players_list[0]
+def _find_players(regex_pattern, row_id, players=players):
+    compiled = re.compile(_strip_accents(regex_pattern), flags=re.I)
+    players_found = []
+    for player in players:
+        if compiled.search(_strip_accents(str(player[row_id]))):
+            players_found.append(_get_player_dict(player))
+    return players_found
+
+
+def _find_player_by_id(player_id, _index=_players_by_id):
+    player = _index.get(player_id)
+    return _get_player_dict(player) if player is not None else None
 
 
 def _get_players(players=players):
@@ -121,7 +116,7 @@ def find_wnba_players_by_last_name(regex_pattern):
 
 
 def find_wnba_player_by_id(player_id):
-    return _find_player_by_id(player_id, players=wnba_players)
+    return _find_player_by_id(player_id, _index=_wnba_players_by_id)
 
 
 def get_wnba_players():
