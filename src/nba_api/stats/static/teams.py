@@ -1,4 +1,5 @@
 import re
+import unicodedata
 
 from nba_api.stats.library.data import (
     team_index_abbreviation,
@@ -13,42 +14,43 @@ from nba_api.stats.library.data import (
     wnba_teams,
 )
 
+# Pre-built indexes for O(1) lookups
+_teams_by_id = {t[team_index_id]: t for t in teams}
+_teams_by_abbreviation = {t[team_index_abbreviation]: t for t in teams}
+_wnba_teams_by_id = {t[team_index_id]: t for t in wnba_teams}
+_wnba_teams_by_abbreviation = {t[team_index_abbreviation]: t for t in wnba_teams}
+
+
+def _strip_accents(inputstr: str) -> str:
+    normalizedstr = unicodedata.normalize("NFD", inputstr)
+    return "".join(c for c in normalizedstr if unicodedata.category(c) != "Mn")
+
 
 def _find_teams(regex_pattern, row_id, teams=teams):
+    compiled = re.compile(_strip_accents(regex_pattern), flags=re.I)
     teams_found = []
     for team in teams:
-        if re.search(regex_pattern, str(team[row_id]), flags=re.I):
+        if compiled.search(_strip_accents(str(team[row_id]))):
             teams_found.append(_get_team_dict(team))
     return teams_found
 
 
-def _find_team_name_by_id(team_id, teams=teams):
-    regex_pattern = f"^{team_id}$"
-    teams_list = _find_teams(regex_pattern, team_index_id, teams=teams)
-    if len(teams_list) > 1:
-        raise Exception("Found more than 1 id")
-    elif not teams_list:
-        return None
-    else:
-        return teams_list[0]
+def _find_team_name_by_id(team_id, _index=_teams_by_id):
+    team = _index.get(team_id)
+    return _get_team_dict(team) if team is not None else None
 
 
-def _find_team_by_abbreviation(abbreviation, teams=teams):
-    regex_pattern = f"^{abbreviation}$"
-    teams_list = _find_teams(regex_pattern, team_index_abbreviation, teams=teams)
-    if len(teams_list) > 1:
-        raise Exception("Found more than 1 id")
-    elif not teams_list:
-        return None
-    else:
-        return teams_list[0]
+def _find_team_by_abbreviation(abbreviation, _index=_teams_by_abbreviation):
+    team = _index.get(abbreviation.upper())
+    return _get_team_dict(team) if team is not None else None
 
 
 def _find_teams_by_championship_year(year, teams=teams):
-    for team in teams:
-        if year in team[team_index_championship_year]:
-            result = team[team_index_full_name]
-    return result
+    return [
+        _get_team_dict(team)
+        for team in teams
+        if year in team[team_index_championship_year]
+    ]
 
 
 def _find_teams_by_year_founded(year, teams=teams):
@@ -139,11 +141,11 @@ def find_wnba_teams_by_championship_year(year):
 
 
 def find_wnba_team_by_abbreviation(abbreviation):
-    return _find_team_by_abbreviation(abbreviation, teams=wnba_teams)
+    return _find_team_by_abbreviation(abbreviation, _index=_wnba_teams_by_abbreviation)
 
 
 def find_wnba_team_name_by_id(team_id):
-    return _find_team_name_by_id(team_id, teams=wnba_teams)
+    return _find_team_name_by_id(team_id, _index=_wnba_teams_by_id)
 
 
 def get_wnba_teams():
