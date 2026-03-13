@@ -34,15 +34,21 @@ class NBAResponse:
         self._response = response
         self._status_code = status_code
         self._url = url
+        self._dict_cache = None
+        self._json_cache = None
 
     def get_response(self):
         return self._response
 
     def get_dict(self):
-        return json.loads(self._response)
+        if self._dict_cache is None:
+            self._dict_cache = json.loads(self._response)
+        return self._dict_cache
 
     def get_json(self):
-        return json.dumps(self.get_dict())
+        if self._json_cache is None:
+            self._json_cache = json.dumps(self.get_dict())
+        return self._json_cache
 
     def valid_json(self):
         try:
@@ -53,6 +59,9 @@ class NBAResponse:
 
     def get_url(self):
         return self._url
+
+    def get_status_code(self):
+        return self._status_code
 
 
 class NBAHTTP:
@@ -126,8 +135,8 @@ class NBAHTTP:
         contents = None
         file_path = None
 
-        # Sort parameters by key... for some reason this matters for some requests...
-        parameters = sorted(parameters.items(), key=lambda kv: kv[0])
+        # tuples are faster to handle and iterate
+        parameters = tuple(sorted(parameters.items(), key=lambda kv: kv[0]))
 
         if DEBUG and DEBUG_STORAGE:
             print(endpoint, parameters)
@@ -173,7 +182,14 @@ class NBAHTTP:
 
         data = self.nba_response(response=contents, status_code=status_code, url=url)
 
-        if raise_exception_on_error and not data.valid_json():
-            raise Exception("InvalidResponse: Response is not in a valid JSON format.")
+        if raise_exception_on_error:
+            if status_code is not None and status_code >= 400:
+                raise Exception(
+                    f"HTTPError: Request failed with status code {status_code}."
+                )
+            if not data.valid_json():
+                raise Exception(
+                    "InvalidResponse: Response is not in a valid JSON format."
+                )
 
         return data

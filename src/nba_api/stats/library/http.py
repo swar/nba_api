@@ -29,26 +29,29 @@ class NBAStatsResponse(http.NBAResponse):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._endpoint = None
+        self._normalized_dict_cache = None
 
     @staticmethod
     def _build_rows(headers, row_set):
         return [dict(zip(headers, raw_row, strict=False)) for raw_row in row_set]
 
     def get_normalized_dict(self):
+        if self._normalized_dict_cache is not None:
+            return self._normalized_dict_cache
+
         raw_data = self.get_dict()
 
         data = {}
 
-        legacy_headers = ["resultSets", "resultSet"]
-        is_legacy = set(legacy_headers) & set(raw_data.keys())
+        legacy_headers = {"resultSets", "resultSet"}
+        raw_keys = raw_data.keys()
+        is_legacy = bool(legacy_headers & raw_keys)
 
         if is_legacy:
-            if "resultSets" in raw_data:
-                results = raw_data["resultSets"]
-                if "Meta" in results:
-                    return results
-            else:
-                results = raw_data["resultSet"]
+            results = raw_data.get("resultSets") or raw_data.get("resultSet")
+            if results and "Meta" in results:
+                self._normalized_dict_cache = results
+                return results
             if isinstance(results, dict):
                 results = [results]
             for result in results:
@@ -61,27 +64,31 @@ class NBAStatsResponse(http.NBAResponse):
                 endpoint_parser = get_parser_for_endpoint(self._endpoint, raw_data)
                 for name, dataset in endpoint_parser.get_data_sets().items():
                     data[name] = self._build_rows(dataset["headers"], dataset["data"])
-            except (KeyError, ImportError):
+            except KeyError:
                 pass
 
+        self._normalized_dict_cache = data
         return data
 
     def get_normalized_json(self):
+        if self._normalized_dict_cache is not None:
+            return json.dumps(self._normalized_dict_cache)
         return json.dumps(self.get_normalized_dict())
 
     def get_parameters(self):
-        if not self.valid_json() or "parameters" not in self.get_dict():
+        raw = self.get_dict() if self.valid_json() else None
+        if raw is None or "parameters" not in raw:
             return None
 
-        parameters = self.get_dict()["parameters"]
+        parameters = raw["parameters"]
         if isinstance(parameters, dict):
             return parameters
 
-        parameters = {}
-        for parameter in self.get_dict()["parameters"]:
+        result = {}
+        for parameter in parameters:
             for key, value in parameter.items():
-                parameters.update({key: value})
-        return parameters
+                result[key] = value
+        return result
 
     def get_headers_from_data_sets(self):
         raw_dict = self.get_dict()

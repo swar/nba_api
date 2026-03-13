@@ -16,7 +16,6 @@ except ImportError:
 class Endpoint:
     class DataSet:
         key: str | None = None
-        data: dict[str, Any] = {}
 
         def __init__(self, data: dict[str, Any]) -> None:
             self.data = data
@@ -87,6 +86,10 @@ class Endpoint:
     def get_response(self) -> str:
         """Return the raw response string."""
         return self.nba_response.get_response()
+
+    def get_status_code(self) -> int:
+        """Return the HTTP status code of the response."""
+        return self.nba_response.get_status_code()
 
     def get_dict(self) -> dict[str, Any]:
         """Return the response as a dictionary."""

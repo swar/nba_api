@@ -1,3 +1,4 @@
+import functools
 import re
 import unicodedata
 
@@ -11,17 +12,22 @@ from nba_api.stats.library.data import (
     wnba_players,
 )
 
+# Pre-built index for O(1) ID lookup
+_players_by_id = {p[player_index_id]: p for p in players}
+_wnba_players_by_id = {p[player_index_id]: p for p in wnba_players}
 
-def _find_players(regex_pattern, row_id, players=players):
-    players_found = []
-    for player in players:
-        if re.search(
-            _strip_accents(regex_pattern),
-            _strip_accents(str(player[row_id])),
-            flags=re.I,
-        ):
-            players_found.append(_get_player_dict(player))
-    return players_found
+# Pre-computed cached lists
+_cached_players = None
+_cached_active_players = None
+_cached_inactive_players = None
+_cached_wnba_players = None
+_cached_wnba_active_players = None
+_cached_wnba_inactive_players = None
+
+
+@functools.lru_cache(maxsize=128)
+def _compile_regex(pattern):
+    return re.compile(_strip_accents(pattern), flags=re.I)
 
 
 def _strip_accents(inputstr: str) -> str:
@@ -36,38 +42,72 @@ def _strip_accents(inputstr: str) -> str:
     )
 
 
-def _find_player_by_id(player_id, players=players):
-    regex_pattern = f"^{player_id}$"
-    players_list = _find_players(regex_pattern, player_index_id, players=players)
-    if len(players_list) > 1:
-        raise Exception("Found more than 1 id")
-    elif not players_list:
-        return None
-    else:
-        return players_list[0]
+def _find_players(regex_pattern, row_id, players=players):
+    compiled = _compile_regex(regex_pattern)
+    return [
+        _get_player_dict(player)
+        for player in players
+        if compiled.search(_strip_accents(str(player[row_id])))
+    ]
 
 
-def _get_players(players=players):
-    players_list = []
-    for player in players:
-        players_list.append(_get_player_dict(player))
-    return players_list
+def _find_player_by_id(player_id, _index=_players_by_id):
+    player = _index.get(player_id)
+    return _get_player_dict(player) if player is not None else None
 
 
-def _get_active_players(players=players):
-    players_list = []
-    for player in players:
-        if player[player_index_is_active]:
-            players_list.append(_get_player_dict(player))
-    return players_list
+def _get_players(players=players, _cache=False):
+    global _cached_players, _cached_wnba_players
+    if _cache:
+        if players is wnba_players:
+            if _cached_wnba_players is None:
+                _cached_wnba_players = [_get_player_dict(p) for p in players]
+            return _cached_wnba_players
+        else:
+            if _cached_players is None:
+                _cached_players = [_get_player_dict(p) for p in players]
+            return _cached_players
+    return [_get_player_dict(p) for p in players]
 
 
-def _get_inactive_players(players=players):
-    players_list = []
-    for player in players:
-        if not player[player_index_is_active]:
-            players_list.append(_get_player_dict(player))
-    return players_list
+def _get_active_players(players=players, _cache=False):
+    global _cached_active_players, _cached_wnba_active_players
+    if _cache:
+        if players is wnba_players:
+            if _cached_wnba_active_players is None:
+                _cached_wnba_active_players = [
+                    _get_player_dict(p) for p in players if p[player_index_is_active]
+                ]
+            return _cached_wnba_active_players
+        else:
+            if _cached_active_players is None:
+                _cached_active_players = [
+                    _get_player_dict(p) for p in players if p[player_index_is_active]
+                ]
+            return _cached_active_players
+    return [_get_player_dict(p) for p in players if p[player_index_is_active]]
+
+
+def _get_inactive_players(players=players, _cache=False):
+    global _cached_inactive_players, _cached_wnba_inactive_players
+    if _cache:
+        if players is wnba_players:
+            if _cached_wnba_inactive_players is None:
+                _cached_wnba_inactive_players = [
+                    _get_player_dict(p)
+                    for p in players
+                    if not p[player_index_is_active]
+                ]
+            return _cached_wnba_inactive_players
+        else:
+            if _cached_inactive_players is None:
+                _cached_inactive_players = [
+                    _get_player_dict(p)
+                    for p in players
+                    if not p[player_index_is_active]
+                ]
+            return _cached_inactive_players
+    return [_get_player_dict(p) for p in players if not p[player_index_is_active]]
 
 
 def _get_player_dict(player_row):
@@ -97,15 +137,15 @@ def find_player_by_id(player_id):
 
 
 def get_players():
-    return _get_players()
+    return _get_players(_cache=True)
 
 
 def get_active_players():
-    return _get_active_players()
+    return _get_active_players(_cache=True)
 
 
 def get_inactive_players():
-    return _get_inactive_players()
+    return _get_inactive_players(_cache=True)
 
 
 def find_wnba_players_by_full_name(regex_pattern):
@@ -121,16 +161,16 @@ def find_wnba_players_by_last_name(regex_pattern):
 
 
 def find_wnba_player_by_id(player_id):
-    return _find_player_by_id(player_id, players=wnba_players)
+    return _find_player_by_id(player_id, _index=_wnba_players_by_id)
 
 
 def get_wnba_players():
-    return _get_players(players=wnba_players)
+    return _get_players(players=wnba_players, _cache=True)
 
 
 def get_wnba_active_players():
-    return _get_active_players(players=wnba_players)
+    return _get_active_players(players=wnba_players, _cache=True)
 
 
 def get_wnba_inactive_players():
-    return _get_inactive_players(players=wnba_players)
+    return _get_inactive_players(players=wnba_players, _cache=True)
