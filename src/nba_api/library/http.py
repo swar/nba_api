@@ -35,6 +35,7 @@ class NBAResponse:
         self._status_code = status_code
         self._url = url
         self._dict_cache = None
+        self._json_cache = None
 
     def get_response(self):
         return self._response
@@ -45,7 +46,9 @@ class NBAResponse:
         return self._dict_cache
 
     def get_json(self):
-        return json.dumps(self.get_dict())
+        if self._json_cache is None:
+            self._json_cache = json.dumps(self.get_dict())
+        return self._json_cache
 
     def valid_json(self):
         try:
@@ -132,8 +135,8 @@ class NBAHTTP:
         contents = None
         file_path = None
 
-        # Sort parameters by key... for some reason this matters for some requests...
-        parameters = sorted(parameters.items(), key=lambda kv: kv[0])
+        # tuples are faster to handle and iterate
+        parameters = tuple(sorted(parameters.items(), key=lambda kv: kv[0]))
 
         if DEBUG and DEBUG_STORAGE:
             print(endpoint, parameters)

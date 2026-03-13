@@ -1,3 +1,4 @@
+import functools
 import re
 import unicodedata
 
@@ -20,6 +21,15 @@ _teams_by_abbreviation = {t[team_index_abbreviation]: t for t in teams}
 _wnba_teams_by_id = {t[team_index_id]: t for t in wnba_teams}
 _wnba_teams_by_abbreviation = {t[team_index_abbreviation]: t for t in wnba_teams}
 
+# Pre-computed cached lists
+_cached_teams = None
+_cached_wnba_teams = None
+
+
+@functools.lru_cache(maxsize=128)
+def _compile_regex(pattern):
+    return re.compile(_strip_accents(pattern), flags=re.I)
+
 
 def _strip_accents(inputstr: str) -> str:
     normalizedstr = unicodedata.normalize("NFD", inputstr)
@@ -27,12 +37,12 @@ def _strip_accents(inputstr: str) -> str:
 
 
 def _find_teams(regex_pattern, row_id, teams=teams):
-    compiled = re.compile(_strip_accents(regex_pattern), flags=re.I)
-    teams_found = []
-    for team in teams:
-        if compiled.search(_strip_accents(str(team[row_id]))):
-            teams_found.append(_get_team_dict(team))
-    return teams_found
+    compiled = _compile_regex(regex_pattern)
+    return [
+        _get_team_dict(team)
+        for team in teams
+        if compiled.search(_strip_accents(str(team[row_id])))
+    ]
 
 
 def _find_team_name_by_id(team_id, _index=_teams_by_id):
@@ -54,18 +64,23 @@ def _find_teams_by_championship_year(year, teams=teams):
 
 
 def _find_teams_by_year_founded(year, teams=teams):
-    teams_found = []
-    for team in teams:
-        if team[team_index_year_founded] == year:
-            teams_found.append(_get_team_dict(team))
-    return teams_found
+    return [
+        _get_team_dict(team) for team in teams if team[team_index_year_founded] == year
+    ]
 
 
-def _get_teams(teams=teams):
-    teams_list = []
-    for team in teams:
-        teams_list.append(_get_team_dict(team))
-    return teams_list
+def _get_teams(teams=teams, _cache=False):
+    global _cached_teams, _cached_wnba_teams
+    if _cache:
+        if teams is wnba_teams:
+            if _cached_wnba_teams is None:
+                _cached_wnba_teams = [_get_team_dict(t) for t in teams]
+            return _cached_wnba_teams
+        else:
+            if _cached_teams is None:
+                _cached_teams = [_get_team_dict(t) for t in teams]
+            return _cached_teams
+    return [_get_team_dict(t) for t in teams]
 
 
 def _get_team_dict(team_row):
@@ -113,7 +128,7 @@ def find_team_name_by_id(team_id):
 
 
 def get_teams():
-    return _get_teams()
+    return _get_teams(_cache=True)
 
 
 def find_wnba_teams_by_full_name(regex_pattern):
@@ -149,4 +164,4 @@ def find_wnba_team_name_by_id(team_id):
 
 
 def get_wnba_teams():
-    return _get_teams(teams=wnba_teams)
+    return _get_teams(teams=wnba_teams, _cache=True)
