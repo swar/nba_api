@@ -78,6 +78,12 @@ class NBAHTTP:
     def set_session(cls, session) -> None:
         cls._session = session
 
+    @classmethod
+    def clear_session(cls) -> None:
+        if cls._session is not None:
+            cls._session.close()
+            cls._session = None
+
     def clean_contents(self, contents):
         return contents
 
