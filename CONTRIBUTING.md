@@ -52,7 +52,6 @@ Please remember to do the following:
 * [ ] Recreate the issue
 
 * [ ] Simplify your code around the issue to better isolate the problem
-<<<<<<< HEAD
 
 # Contributing Code
 
@@ -109,7 +108,7 @@ Should you wish to make a significant change within the project, please open a [
 
 #### Code Reviews
 
-GitHub allows developers the ability to draft pull requestes. This is incredibly useful to get feedback early within the development cycle when making large or complex changes.
+GitHub allows developers the ability to draft pull requests. This is incredibly useful to get feedback early within the development cycle when making large or complex changes.
 
 ## Requirements
 
@@ -134,7 +133,7 @@ prefer-active-python = true
 
 ## Setting up your environment
 
-This guide assume familiarity with using GitHub and `git`.
+This guide assumes familiarity with using GitHub and `git`.
 
 ### 1. Install and configure pyenv (optional)
 
@@ -154,23 +153,37 @@ Follow GitHub's instructions on how to [fork](https://docs.github.com/en/get-sta
 # Create a isolated virtual environment inclusive of all dependencies
 poetry install
 
-# Once the environment has been created, active the environment for development
-poetry env activate 
+# Once the environment has been created, activate the environment for development
+eval $(poetry env activate) 
 ```
 
-### 5. Validating Your Environment
+### 5. Set Up Pre-Commit Hooks
+
+This project uses [pre-commit](https://pre-commit.com/) to automatically lint and format code before each commit using [Ruff](https://docs.astral.sh/ruff/).
+
+```bash
+# Install the git hooks (only needed once per clone)
+pre-commit install
+```
+
+Once installed, `ruff` will automatically fix imports, formatting, and style issues on every `git commit`. If files are modified by the hooks, re-stage them and commit again.
+
+### 6. Validating Your Environment
 
 Poetry provides all of the developer dependencies through the `pyproject.toml` file. This allows you to begin using the required development tools immediately.
 
-```python
-# Run Unit Test (all tests should pass)
+```bash
+# Run unit tests (all tests should pass)
 pytest
 
-# Validate for Style using Flake8 (only errors will be displayed)
-flake8
+# Lint and auto-fix with Ruff
+ruff check src/ --fix
+
+# Format with Ruff
+ruff format src/
 ```
 
-### 6. When Complete, Open a PR
+### 7. When Complete, Open a PR
 
 When you have completed your development and uploaded your changes to GitHub, [create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to have your changes reviewed.
 

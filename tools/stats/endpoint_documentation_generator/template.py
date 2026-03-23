@@ -1,5 +1,5 @@
 endpoint_documentation_template = """# {endpoint}
-##### [nba_api/stats/endpoints/{endpoint__lowercase}.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/{endpoint__lowercase}.py)
+##### [nba_api/stats/endpoints/{endpoint__lowercase}.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/{endpoint__lowercase}.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/{endpoint__lowercase}](https://stats.nba.com/stats/{endpoint__lowercase})

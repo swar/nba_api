@@ -14,11 +14,13 @@ class CommonAllPlayers(Endpoint):
             "FROM_YEAR",
             "TO_YEAR",
             "PLAYERCODE",
+            "PLAYER_SLUG",
             "TEAM_ID",
             "TEAM_CITY",
             "TEAM_NAME",
             "TEAM_ABBREVIATION",
             "TEAM_CODE",
+            "TEAM_SLUG",
             "GAMES_PLAYED_FLAG",
             "OTHERLEAGUE_EXPERIENCE_CH",
         ]

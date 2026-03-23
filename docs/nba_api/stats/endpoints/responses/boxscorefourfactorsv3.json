@@ -1,0 +1,556 @@
+{
+    "meta": {
+        "version": 1,
+        "request": "http://nba.cloud/games/1022500165/boxscorefourfactors?Format=json",
+        "time": "2025-11-05T19:58:21.5821Z"
+    },
+    "boxScoreFourFactors": {
+        "gameId": "1022500165",
+        "awayTeamId": 1611661328,
+        "homeTeamId": 1611661323,
+        "homeTeam": {
+            "teamId": 1611661323,
+            "teamCity": "Connecticut",
+            "teamName": "Sun",
+            "teamTricode": "CON",
+            "teamSlug": "sun",
+            "players": [
+                {
+                    "personId": 1642809,
+                    "firstName": "Saniya",
+                    "familyName": "Rivers",
+                    "nameI": "S. Rivers",
+                    "playerSlug": "saniya-rivers",
+                    "position": "F",
+                    "comment": "",
+                    "jerseyNum": "",
+                    "statistics": {
+                        "minutes": "12:46",
+                        "effectiveFieldGoalPercentage": 0.341,
+                        "freeThrowAttemptRate": 0.136,
+                        "teamTurnoverPercentage": 0.239,
+                        "offensiveReboundPercentage": 0.0,
+                        "oppEffectiveFieldGoalPercentage": 0.667,
+                        "oppFreeThrowAttemptRate": 0.083,
+                        "oppTeamTurnoverPercentage": 0.077,
+                        "oppOffensiveReboundPercentage": 0.111
+                    }
+                },
+                {
+                    "personId": 1642800,
+                    "firstName": "Aneesah",
+                    "familyName": "Morrow",
+                    "nameI": "A. Morrow",
+                    "playerSlug": "aneesah-morrow",
+                    "position": "F",
+                    "comment": "",
+                    "jerseyNum": "",
+                    "statistics": {
+                        "minutes": "17:27",
+                        "effectiveFieldGoalPercentage": 0.419,
+                        "freeThrowAttemptRate": 0.387,
+                        "teamTurnoverPercentage": 0.226,
+                        "offensiveReboundPercentage": 0.048,
+                        "oppEffectiveFieldGoalPercentage": 0.75,
+                        "oppFreeThrowAttemptRate": 0.125,
+                        "oppTeamTurnoverPercentage": 0.176,
+                        "oppOffensiveReboundPercentage": 0.1
+                    }
+                },
+                {
+                    "personId": 202250,
+                    "firstName": "Tina",
+                    "familyName": "Charles",
+                    "nameI": "T. Charles",
+                    "playerSlug": "tina-charles",
+                    "position": "C",
+                    "comment": "",
+                    "jerseyNum": "",
+                    "statistics": {
+                        "minutes": "22:44",
+                        "effectiveFieldGoalPercentage": 0.39,
+                        "freeThrowAttemptRate": 0.341,
+                        "teamTurnoverPercentage": 0.169,
+                        "offensiveReboundPercentage": 0.036,
+                        "oppEffectiveFieldGoalPercentage": 0.75,
+                        "oppFreeThrowAttemptRate": 0.114,
+                        "oppTeamTurnoverPercentage": 0.117,
+                        "oppOffensiveReboundPercentage": 0.083
+                    }
+                },
+                {
+                    "personId": 1629497,
+                    "firstName": "Marina",
+                    "familyName": "Mabrey",
+                    "nameI": "M. Mabrey",
+                    "playerSlug": "marina-mabrey",
+                    "position": "G",
+                    "comment": "",
+                    "jerseyNum": "",
+                    "statistics": {
+                        "minutes": "16:36",
+                        "effectiveFieldGoalPercentage": 0.417,
+                        "freeThrowAttemptRate": 0.1,
+                        "teamTurnoverPercentage": 0.188,
+                        "offensiveReboundPercentage": 0.0,
+                        "oppEffectiveFieldGoalPercentage": 0.652,
+                        "oppFreeThrowAttemptRate": 0.121,
+                        "oppTeamTurnoverPercentage": 0.082,
+                        "oppOffensiveReboundPercentage": 0.091
+                    }
+                },
+                {
+                    "personId": 203829,
+                    "firstName": "Bria",
+                    "familyName": "Hartley",
+                    "nameI": "B. Hartley",
+                    "playerSlug": "bria-hartley",
+                    "position": "G",
+                    "comment": "",
+                    "jerseyNum": "",
+                    "statistics": {
+                        "minutes": "30:07",
+                        "effectiveFieldGoalPercentage": 0.48,
+                        "freeThrowAttemptRate": 0.51,
+                        "teamTurnoverPercentage": 0.09,
+                        "offensiveReboundPercentage": 0.0,
+                        "oppEffectiveFieldGoalPercentage": 0.602,
+                        "oppFreeThrowAttemptRate": 0.148,
+                        "oppTeamTurnoverPercentage": 0.193,
+                        "oppOffensiveReboundPercentage": 0.125
+                    }
+                },
+                {
+                    "personId": 1631135,
+                    "firstName": "Olivia",
+                    "familyName": "Nelson-Ododa",
+                    "nameI": "O. Nelson-Ododa",
+                    "playerSlug": "olivia-nelson-ododa",
+                    "position": "",
+                    "comment": "",
+                    "jerseyNum": "",
+                    "statistics": {
+                        "minutes": "24:32",
+                        "effectiveFieldGoalPercentage": 0.5,
+                        "freeThrowAttemptRate": 0.359,
+                        "teamTurnoverPercentage": 0.102,
+                        "offensiveReboundPercentage": 0.042,
+                        "oppEffectiveFieldGoalPercentage": 0.628,
+                        "oppFreeThrowAttemptRate": 0.154,
+                        "oppTeamTurnoverPercentage": 0.232,
+                        "oppOffensiveReboundPercentage": 0.125
+                    }
+                },
+                {
+                    "personId": 1642303,
+                    "firstName": "Leïla",
+                    "familyName": "Lacan",
+                    "nameI": "L. Lacan",
+                    "playerSlug": "leïla-lacan",
+                    "position": "",
+                    "comment": "",
+                    "jerseyNum": "",
+                    "statistics": {
+                        "minutes": "22:14",
+                        "effectiveFieldGoalPercentage": 0.5,
+                        "freeThrowAttemptRate": 0.343,
+                        "teamTurnoverPercentage": 0.113,
+                        "offensiveReboundPercentage": 0.0,
+                        "oppEffectiveFieldGoalPercentage": 0.676,
+                        "oppFreeThrowAttemptRate": 0.206,
+                        "oppTeamTurnoverPercentage": 0.239,
+                        "oppOffensiveReboundPercentage": 0.143
+                    }
+                },
+                {
+                    "personId": 1642292,
+                    "firstName": "Jacy",
+                    "familyName": "Sheldon",
+                    "nameI": "J. Sheldon",
+                    "playerSlug": "jacy-sheldon",
+                    "position": "",
+                    "comment": "",
+                    "jerseyNum": "",
+                    "statistics": {
+                        "minutes": "25:52",
+                        "effectiveFieldGoalPercentage": 0.488,
+                        "freeThrowAttemptRate": 0.561,
+                        "teamTurnoverPercentage": 0.155,
+                        "offensiveReboundPercentage": 0.0,
+                        "oppEffectiveFieldGoalPercentage": 0.667,
+                        "oppFreeThrowAttemptRate": 0.167,
+                        "oppTeamTurnoverPercentage": 0.245,
+                        "oppOffensiveReboundPercentage": 0.111
+                    }
+                },
+                {
+                    "personId": 203863,
+                    "firstName": "Haley",
+                    "familyName": "Peters",
+                    "nameI": "H. Peters",
+                    "playerSlug": "haley-peters",
+                    "position": "",
+                    "comment": "",
+                    "jerseyNum": "",
+                    "statistics": {
+                        "minutes": "10:37",
+                        "effectiveFieldGoalPercentage": 0.469,
+                        "freeThrowAttemptRate": 0.438,
+                        "teamTurnoverPercentage": 0.05,
+                        "offensiveReboundPercentage": 0.0,
+                        "oppEffectiveFieldGoalPercentage": 0.5,
+                        "oppFreeThrowAttemptRate": 0.278,
+                        "oppTeamTurnoverPercentage": 0.216,
+                        "oppOffensiveReboundPercentage": 0.182
+                    }
+                },
+                {
+                    "personId": 1628263,
+                    "firstName": "Lindsay",
+                    "familyName": "Allen",
+                    "nameI": "L. Allen",
+                    "playerSlug": "lindsay-allen",
+                    "position": "",
+                    "comment": "",
+                    "jerseyNum": "",
+                    "statistics": {
+                        "minutes": "6:51",
+                        "effectiveFieldGoalPercentage": 0.455,
+                        "freeThrowAttemptRate": 0.0,
+                        "teamTurnoverPercentage": 0.286,
+                        "offensiveReboundPercentage": 0.0,
+                        "oppEffectiveFieldGoalPercentage": 1.111,
+                        "oppFreeThrowAttemptRate": 0.111,
+                        "oppTeamTurnoverPercentage": 0.298,
+                        "oppOffensiveReboundPercentage": 0.0
+                    }
+                },
+                {
+                    "personId": 1642841,
+                    "firstName": "Mamignan",
+                    "familyName": "Touré",
+                    "nameI": "M. Touré",
+                    "playerSlug": "mamignan-touré",
+                    "position": "",
+                    "comment": "",
+                    "jerseyNum": "",
+                    "statistics": {
+                        "minutes": "5:34",
+                        "effectiveFieldGoalPercentage": 0.545,
+                        "freeThrowAttemptRate": 1.0,
+                        "teamTurnoverPercentage": 0.063,
+                        "offensiveReboundPercentage": 0.0,
+                        "oppEffectiveFieldGoalPercentage": 0.773,
+                        "oppFreeThrowAttemptRate": 0.091,
+                        "oppTeamTurnoverPercentage": 0.259,
+                        "oppOffensiveReboundPercentage": 0.0
+                    }
+                },
+                {
+                    "personId": 1642796,
+                    "firstName": "Rayah",
+                    "familyName": "Marshall",
+                    "nameI": "R. Marshall",
+                    "playerSlug": "rayah-marshall",
+                    "position": "",
+                    "comment": "",
+                    "jerseyNum": "",
+                    "statistics": {
+                        "minutes": "4:40",
+                        "effectiveFieldGoalPercentage": 0.857,
+                        "freeThrowAttemptRate": 0.714,
+                        "teamTurnoverPercentage": 0.098,
+                        "offensiveReboundPercentage": 0.0,
+                        "oppEffectiveFieldGoalPercentage": 0.5,
+                        "oppFreeThrowAttemptRate": 0.0,
+                        "oppTeamTurnoverPercentage": 0.444,
+                        "oppOffensiveReboundPercentage": 0.0
+                    }
+                }
+            ],
+            "statistics": {
+                "minutes": "200:00",
+                "effectiveFieldGoalPercentage": 0.463,
+                "freeThrowAttemptRate": 0.388,
+                "teamTurnoverPercentage": 0.153,
+                "offensiveReboundPercentage": 0.186,
+                "oppEffectiveFieldGoalPercentage": 0.674,
+                "oppFreeThrowAttemptRate": 0.145,
+                "oppTeamTurnoverPercentage": 0.198,
+                "oppOffensiveReboundPercentage": 0.179
+            }
+        },
+        "awayTeam": {
+            "teamId": 1611661328,
+            "teamCity": "Seattle",
+            "teamName": "Storm",
+            "teamTricode": "SEA",
+            "teamSlug": "storm",
+            "players": [
+                {
+                    "personId": 1628931,
+                    "firstName": "Gabby",
+                    "familyName": "Williams",
+                    "nameI": "G. Williams",
+                    "playerSlug": "gabby-williams",
+                    "position": "F",
+                    "comment": "",
+                    "jerseyNum": "",
+                    "statistics": {
+                        "minutes": "24:21",
+                        "effectiveFieldGoalPercentage": 0.739,
+                        "freeThrowAttemptRate": 0.087,
+                        "teamTurnoverPercentage": 0.161,
+                        "offensiveReboundPercentage": 0.0,
+                        "oppEffectiveFieldGoalPercentage": 0.369,
+                        "oppFreeThrowAttemptRate": 0.381,
+                        "oppTeamTurnoverPercentage": 0.193,
+                        "oppOffensiveReboundPercentage": 0.125
+                    }
+                },
+                {
+                    "personId": 203014,
+                    "firstName": "Nneka",
+                    "familyName": "Ogwumike",
+                    "nameI": "N. Ogwumike",
+                    "playerSlug": "nneka-ogwumike",
+                    "position": "F",
+                    "comment": "",
+                    "jerseyNum": "",
+                    "statistics": {
+                        "minutes": "18:57",
+                        "effectiveFieldGoalPercentage": 0.736,
+                        "freeThrowAttemptRate": 0.111,
+                        "teamTurnoverPercentage": 0.16,
+                        "offensiveReboundPercentage": 0.0,
+                        "oppEffectiveFieldGoalPercentage": 0.397,
+                        "oppFreeThrowAttemptRate": 0.441,
+                        "oppTeamTurnoverPercentage": 0.115,
+                        "oppOffensiveReboundPercentage": 0.111
+                    }
+                },
+                {
+                    "personId": 1629496,
+                    "firstName": "Ezi",
+                    "familyName": "Magbegor",
+                    "nameI": "E. Magbegor",
+                    "playerSlug": "ezi-magbegor",
+                    "position": "C",
+                    "comment": "",
+                    "jerseyNum": "",
+                    "statistics": {
+                        "minutes": "17:23",
+                        "effectiveFieldGoalPercentage": 0.783,
+                        "freeThrowAttemptRate": 0.1,
+                        "teamTurnoverPercentage": 0.142,
+                        "offensiveReboundPercentage": 0.125,
+                        "oppEffectiveFieldGoalPercentage": 0.406,
+                        "oppFreeThrowAttemptRate": 0.125,
+                        "oppTeamTurnoverPercentage": 0.185,
+                        "oppOffensiveReboundPercentage": 0.158
+                    }
+                },
+                {
+                    "personId": 204365,
+                    "firstName": "Erica",
+                    "familyName": "Wheeler",
+                    "nameI": "E. Wheeler",
+                    "playerSlug": "erica-wheeler",
+                    "position": "G",
+                    "comment": "",
+                    "jerseyNum": "",
+                    "statistics": {
+                        "minutes": "20:47",
+                        "effectiveFieldGoalPercentage": 0.724,
+                        "freeThrowAttemptRate": 0.026,
+                        "teamTurnoverPercentage": 0.198,
+                        "offensiveReboundPercentage": 0.0,
+                        "oppEffectiveFieldGoalPercentage": 0.455,
+                        "oppFreeThrowAttemptRate": 0.364,
+                        "oppTeamTurnoverPercentage": 0.203,
+                        "oppOffensiveReboundPercentage": 0.158
+                    }
+                },
+                {
+                    "personId": 203400,
+                    "firstName": "Skylar",
+                    "familyName": "Diggins",
+                    "nameI": "S. Diggins",
+                    "playerSlug": "skylar-diggins",
+                    "position": "G",
+                    "comment": "",
+                    "jerseyNum": "",
+                    "statistics": {
+                        "minutes": "22:51",
+                        "effectiveFieldGoalPercentage": 0.695,
+                        "freeThrowAttemptRate": 0.22,
+                        "teamTurnoverPercentage": 0.12,
+                        "offensiveReboundPercentage": 0.0,
+                        "oppEffectiveFieldGoalPercentage": 0.384,
+                        "oppFreeThrowAttemptRate": 0.233,
+                        "oppTeamTurnoverPercentage": 0.131,
+                        "oppOffensiveReboundPercentage": 0.042
+                    }
+                },
+                {
+                    "personId": 1627676,
+                    "firstName": "Tiffany",
+                    "familyName": "Mitchell",
+                    "nameI": "T. Mitchell",
+                    "playerSlug": "tiffany-mitchell",
+                    "position": "",
+                    "comment": "",
+                    "jerseyNum": "",
+                    "statistics": {
+                        "minutes": "14:47",
+                        "effectiveFieldGoalPercentage": 0.761,
+                        "freeThrowAttemptRate": 0.391,
+                        "teamTurnoverPercentage": 0.188,
+                        "offensiveReboundPercentage": 0.0,
+                        "oppEffectiveFieldGoalPercentage": 0.481,
+                        "oppFreeThrowAttemptRate": 0.192,
+                        "oppTeamTurnoverPercentage": 0.128,
+                        "oppOffensiveReboundPercentage": 0.059
+                    }
+                },
+                {
+                    "personId": 1642798,
+                    "firstName": "Dominique",
+                    "familyName": "Malonga",
+                    "nameI": "D. Malonga",
+                    "playerSlug": "dominique-malonga",
+                    "position": "",
+                    "comment": "",
+                    "jerseyNum": "",
+                    "statistics": {
+                        "minutes": "24:48",
+                        "effectiveFieldGoalPercentage": 0.622,
+                        "freeThrowAttemptRate": 0.146,
+                        "teamTurnoverPercentage": 0.224,
+                        "offensiveReboundPercentage": 0.0,
+                        "oppEffectiveFieldGoalPercentage": 0.551,
+                        "oppFreeThrowAttemptRate": 0.359,
+                        "oppTeamTurnoverPercentage": 0.15,
+                        "oppOffensiveReboundPercentage": 0.0
+                    }
+                },
+                {
+                    "personId": 1628882,
+                    "firstName": "Lexie",
+                    "familyName": "Brown",
+                    "nameI": "L. Brown",
+                    "playerSlug": "lexie-brown",
+                    "position": "",
+                    "comment": "",
+                    "jerseyNum": "",
+                    "statistics": {
+                        "minutes": "18:45",
+                        "effectiveFieldGoalPercentage": 0.534,
+                        "freeThrowAttemptRate": 0.207,
+                        "teamTurnoverPercentage": 0.213,
+                        "offensiveReboundPercentage": 0.063,
+                        "oppEffectiveFieldGoalPercentage": 0.532,
+                        "oppFreeThrowAttemptRate": 0.355,
+                        "oppTeamTurnoverPercentage": 0.126,
+                        "oppOffensiveReboundPercentage": 0.059
+                    }
+                },
+                {
+                    "personId": 202252,
+                    "firstName": "Alysha",
+                    "familyName": "Clark",
+                    "nameI": "A. Clark",
+                    "playerSlug": "alysha-clark",
+                    "position": "",
+                    "comment": "",
+                    "jerseyNum": "",
+                    "statistics": {
+                        "minutes": "18:52",
+                        "effectiveFieldGoalPercentage": 0.565,
+                        "freeThrowAttemptRate": 0.226,
+                        "teamTurnoverPercentage": 0.238,
+                        "offensiveReboundPercentage": 0.063,
+                        "oppEffectiveFieldGoalPercentage": 0.483,
+                        "oppFreeThrowAttemptRate": 0.655,
+                        "oppTeamTurnoverPercentage": 0.142,
+                        "oppOffensiveReboundPercentage": 0.059
+                    }
+                },
+                {
+                    "personId": 1641660,
+                    "firstName": "Zia",
+                    "familyName": "Cooke",
+                    "nameI": "Z. Cooke",
+                    "playerSlug": "zia-cooke",
+                    "position": "",
+                    "comment": "",
+                    "jerseyNum": "",
+                    "statistics": {
+                        "minutes": "12:28",
+                        "effectiveFieldGoalPercentage": 0.591,
+                        "freeThrowAttemptRate": 0.045,
+                        "teamTurnoverPercentage": 0.306,
+                        "offensiveReboundPercentage": 0.0,
+                        "oppEffectiveFieldGoalPercentage": 0.611,
+                        "oppFreeThrowAttemptRate": 0.944,
+                        "oppTeamTurnoverPercentage": 0.073,
+                        "oppOffensiveReboundPercentage": 0.0
+                    }
+                },
+                {
+                    "personId": 1642307,
+                    "firstName": "Mackenzie",
+                    "familyName": "Holmes",
+                    "nameI": "M. Holmes",
+                    "playerSlug": "mackenzie-holmes",
+                    "position": "",
+                    "comment": "",
+                    "jerseyNum": "",
+                    "statistics": {
+                        "minutes": "6:01",
+                        "effectiveFieldGoalPercentage": 0.438,
+                        "freeThrowAttemptRate": 0.0,
+                        "teamTurnoverPercentage": 0.333,
+                        "offensiveReboundPercentage": 0.0,
+                        "oppEffectiveFieldGoalPercentage": 0.75,
+                        "oppFreeThrowAttemptRate": 0.875,
+                        "oppTeamTurnoverPercentage": 0.083,
+                        "oppOffensiveReboundPercentage": 0.0
+                    }
+                },
+                {
+                    "personId": 1629478,
+                    "firstName": "Katie Lou",
+                    "familyName": "Samuelson",
+                    "nameI": "K. Samuelson",
+                    "playerSlug": "katie-lou-samuelson",
+                    "position": "",
+                    "comment": "NWT - Injury/Illness",
+                    "jerseyNum": "",
+                    "statistics": {
+                        "minutes": "",
+                        "effectiveFieldGoalPercentage": 0.0,
+                        "freeThrowAttemptRate": 0.0,
+                        "teamTurnoverPercentage": 0.0,
+                        "offensiveReboundPercentage": 0.0,
+                        "oppEffectiveFieldGoalPercentage": 0.0,
+                        "oppFreeThrowAttemptRate": 0.0,
+                        "oppTeamTurnoverPercentage": 0.0,
+                        "oppOffensiveReboundPercentage": 0.0
+                    }
+                }
+            ],
+            "statistics": {
+                "minutes": "200:00",
+                "effectiveFieldGoalPercentage": 0.674,
+                "freeThrowAttemptRate": 0.145,
+                "teamTurnoverPercentage": 0.198,
+                "offensiveReboundPercentage": 0.179,
+                "oppEffectiveFieldGoalPercentage": 0.463,
+                "oppFreeThrowAttemptRate": 0.388,
+                "oppTeamTurnoverPercentage": 0.153,
+                "oppOffensiveReboundPercentage": 0.186
+            }
+        }
+    }
+}

@@ -1,5 +1,5 @@
 # ScoreBoard
-##### [nba_api/live/nba/endpoints/scoreboard.py](https://github.com/swar/nba_api/blob/master/nba_api/live/nba/endpoints/scoreboard.py)
+##### [nba_api/live/nba/endpoints/scoreboard.py](https://github.com/swar/nba_api/blob/master/src/nba_api/live/nba/endpoints/scoreboard.py)
 
 ##### Endpoint URL
 >[https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json](https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json)

@@ -1,6 +1,6 @@
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
-from nba_api.stats.library.parameters import Season, SeasonTypeAllStar, LeagueIDNullable
+from nba_api.stats.library.parameters import LeagueIDNullable, Season, SeasonTypeAllStar
 
 
 class TeamGameLog(Endpoint):
@@ -68,6 +68,10 @@ class TeamGameLog(Endpoint):
             "DateTo": date_to_nullable,
             "LeagueID": league_id_nullable,
         }
+
+        # Initialize dataset attributes
+        self.team_game_log = None
+
         if get_request:
             self.get_request()
 

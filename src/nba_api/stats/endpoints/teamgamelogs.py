@@ -1,20 +1,20 @@
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
 from nba_api.stats.library.parameters import (
+    ConferenceNullable,
+    DivisionNullable,
     GameSegmentNullable,
     LastNGamesNullable,
     LeagueIDNullable,
     LocationNullable,
     MonthNullable,
     OutcomeNullable,
-    PerModeSimpleNullable,
     PeriodNullable,
+    PerModeSimpleNullable,
     SeasonNullable,
     SeasonSegmentNullable,
     SeasonTypeNullable,
     ShotClockRangeNullable,
-    ConferenceNullable,
-    DivisionNullable,
 )
 
 
@@ -142,6 +142,10 @@ class TeamGameLogs(Endpoint):
             "VsConference": vs_conference_nullable,
             "VsDivision": vs_division_nullable,
         }
+
+        # Initialize dataset attributes
+        self.team_game_logs = None
+
         if get_request:
             self.get_request()
 

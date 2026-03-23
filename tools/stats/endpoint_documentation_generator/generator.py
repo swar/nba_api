@@ -2,19 +2,19 @@ import json
 import urllib.parse
 from datetime import datetime
 
-from .template import (
-    endpoint_documentation_template,
-    data_set_template,
-    parameter_line_template,
-)
-
+from tools.library.file_handler import get_file_path, save_file
 from tools.library.functions import get_python_variable_name
-from tools.library.file_handler import save_file, get_file_path
 from tools.stats.endpoint_analysis.analysis import load_endpoint_file
 from tools.stats.library.mapping import (
     endpoint_list,
     parameter_map,
     parameter_variations,
+)
+
+from .template import (
+    data_set_template,
+    endpoint_documentation_template,
+    parameter_line_template,
 )
 
 
@@ -114,7 +114,7 @@ def generate_boilerplate_endpoint_documentation(instance, directory="./docs"):
         "parameters": list(instance.parameters.keys()),
         "required_parameters": [],
         "nullable_parameters": [],
-        "parameter_patterns": {k: None for k in instance.parameters.keys()},
+        "parameter_patterns": dict.fromkeys(instance.parameters.keys()),
         "data_sets": instance.expected_data,
         "status": "success",
     }
@@ -132,7 +132,7 @@ def generate_all_endpoint_documentation(directory="endpoint_documentation"):
         if endpoints_information[endpoint]["status"] != "success":
             continue
         file_path = get_file_path(directory)
-        file_name = "{}.md".format(endpoint.lower())
+        file_name = f"{endpoint.lower()}.md"
         contents = get_endpoint_documentation(
             endpoint=endpoint, endpoints_information=endpoints_information
         )

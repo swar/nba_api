@@ -1,0 +1,89 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=D77EE8B6DDCD6D37555910E8C3F896F5~000000000000000000000000000000~YAAQjmITApga9GicAQAABlDagx6YA0PbH0G/k1Z5ms0kG2o+kbxp7jbphyuabEM5NnhranEU2mCqVS/z2utjLE4+n1M4v9mSaS5FH0XMSjjg/dMugVplnwixNVkdi25/hCp1phi35rsAimKATC/79PJJW653lOJ+UY6aPwNlpyOKZI9ngInC3qxcgl28KBaehEvqUuPwGh0W/TlvKYx9K7wtq6OsckEA0jULDUUkv2AOsNQgxGsZkao1wn1adhLzz4nopCFlDTuFz3o4o+77XPbL/KyiJxYOBBhztVUgHsWuq0MYlyTpS9L/3JvNM61cvAmRrNGea8+j4AjiIkorL7j6EE+FCDYqG03rzzhOLvhhF+aLsbxpQkLUpQ==;
+        bm_sv=856C19669A8A17B20698FEB428492AF1~YAAQjmITArsa9GicAQAA+lfagx7GadmVdhpLOkARyOjJn4rehhp81/vB1OHqd/+3QiPomjmHG8YrTNcp8j4BvC4WGbdPH1xWCa8rTYeXnOX5FscUNicEoLipYBI7snyQJbmPgQYg/PeOQnCE5X7DkHcgVVgtgL9pi+nN9q9i/U+owXrjBWgGafPAKdb7ZHSliP6zdJTC0lBRnpzYOHaiRzV0g3sbWlVFT3CTSIjOjxCucqvrr51xMCUjvuBf~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/scoreboardv3?GameDate=2025-07-15&LeagueID=00
+  response:
+    body:
+      string: '{"meta":{"version":1,"request":"http://nba.cloud/league/00/2025/07/15/scoreboard?Format=json","time":"2025-07-17T11:10:49.1049Z"},"scoreboard":{"gameDate":"2025-07-15","leagueId":"00","leagueName":"National
+        Basketball Association","games":[]}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '203'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:37:31 GMT
+      Set-Cookie:
+      - bm_sv=856C19669A8A17B20698FEB428492AF1~YAAQlWITAun0b2ecAQAAyFvagx6EhHwFzYvuwjm2+EF65jQiqtWB1B3dB/NPrrrjp6kPATC85lvIdTaL+R2jQZOt4HZ0bJSAwQAc9aEWQz/WFN3LgjFs2F/hveD5x5Nm4lXUstxDqwknowXFWCNvsR7ZywDoYXFeB3rXXqHOmuoXnfZPUKnor7dW3Jf6OEuhuufWCBuOWTTf2lPtwHiOFXJE9SkAKyJLdp9njHssGvbxNrHAx4C7ie6lBeE+~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:37:29 GMT; Max-Age=7198;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-2
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - S3
+      x-envoy-upstream-service-time:
+      - '1'
+      x-full-ttl:
+      - '300.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '1'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '175.540'
+      x-varnish:
+      - 38171958 38269163
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

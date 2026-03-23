@@ -1,0 +1,88 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAkQZbWicAQAAVzfZgx75Dao39RwEKN+85Sz6ZqIIAANGNkEw/W3LlzEKBnkN/dpMuqaAeJn/MZkUjMkY+hVUskwYybfh1kRWkJxFkImBFdeNoZ650uzgpSMpW1BDTiKjWGKMlcbExjoyD6GKgrdJU4E0GFyutd+AA2tke3PHJ9JuL1LN+Kz79zaz1xTwDqlOrzO5GUaKmtfrkDKV5I24yBSnVIlnrfyn00XrZW+VZR3dBIA7R7Fl5w==~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/franchiseleaders?LeagueID=00&TeamID=1610612739
+  response:
+    body:
+      string: '{"resource":"franchiseleaders","parameters":{"LeagueID":"00","TeamID":1610612739},"resultSets":[{"name":"FranchiseLeaders","headers":["TEAM_ID","PTS","PTS_PERSON_ID","PTS_PLAYER","AST","AST_PERSON_ID","AST_PLAYER","REB","REB_PERSON_ID","REB_PLAYER","BLK","BLK_PERSON_ID","BLK_PLAYER","STL","STL_PERSON_ID","STL_PLAYER"],"rowSet":[[1610612739,23119,2544,"LeBron
+        James",6228,2544,"LeBron James",6190,2544,"LeBron James",1269,980,"Zydrunas
+        Ilgauskas",1376,2544,"LeBron James"]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '274'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:36:17 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAksZbWicAQAAJDrZgx7v/V0fWR+n8lHI5U31cxjWJH/mDMkSRESmPaQ5xqZfyBDfmMhzAzG3Am4KgxzkDjmnn8oFP7f1yuSwPmFu5GF1ONFYMDBm3qwDFkH03LBmB/ON6yVc+IV1iiv4VOQBvRqtWvSjqggMXH7eqEgY3oz+l0tsKVEUC+/Big/I2MtGrA3RmM3RWOn5uv+oTL9AuQfQOE05J3mqL6qcdt4k2XWn97DxePLvfUJx7A==~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7147;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '3600.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '3'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '2189.469'
+      x-varnish:
+      - 68947953 67959349
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

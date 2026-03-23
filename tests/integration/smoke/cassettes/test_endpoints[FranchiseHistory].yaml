@@ -1,0 +1,113 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAjUZbWicAQAArzPZgx5LorHIT9kY+BA3lnwKxnlbmRy9MoLbD3jBzjOmenIhXRQJUapmMcAJTnPDQhaWE+DuyKaUujYkN0HIrKA3RSabNP8oQYWydtF6+9i+vog2J/PUqdn1y57yVykjnhQmjQ8C16IqoMBlNgFL11aVy8oHWrXsRTDXCeIiGyMfzhnwTW+oYwYRCoUDxTfMZQ900ZB5JLMMT9cOTWkoUgVqTzsgOZDqGYwkK3Bdkg==~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/franchisehistory?LeagueID=00
+  response:
+    body:
+      string: '{"resource":"franchisehistory","parameters":{"LeagueID":"00"},"resultSets":[{"name":"FranchiseHistory","headers":["LEAGUE_ID","TEAM_ID","TEAM_CITY","TEAM_NAME","START_YEAR","END_YEAR","YEARS","GAMES","WINS","LOSSES","WIN_PCT","PO_APPEARANCES","DIV_TITLES","CONF_TITLES","LEAGUE_TITLES"],"rowSet":[["00",1610612737,"Atlanta","Hawks","1949","2025",77,6079,2995,3084,0.493,49,12,0,1],["00",1610612737,"Atlanta","Hawks","1968","2025",58,4659,2296,2363,0.493,36,6,0,0],["00",1610612737,"St.
+        Louis","Hawks","1955","1967",13,1008,555,453,0.551,12,6,0,1],["00",1610612737,"Milwaukee","Hawks","1951","1954",4,280,90,190,0.321,0,0,0,0],["00",1610612737,"Tri-Cities","Blackhawks","1949","1950",2,132,54,78,0.409,1,0,0,0],["00",1610612738,"Boston","Celtics","1946","2025",80,6252,3731,2520,0.597,62,36,11,18],["00",1610612751,"Brooklyn","Nets","1976","2025",50,4005,1695,2310,0.423,24,4,2,0],["00",1610612751,"Brooklyn","Nets","2012","2025",14,1101,487,614,0.442,8,0,0,0],["00",1610612751,"New
+        Jersey","Nets","1977","2011",35,2822,1186,1636,0.42,16,4,2,0],["00",1610612751,"New
+        York","Nets","1976","1976",1,82,22,60,0.268,0,0,0,0],["00",1610612766,"Charlotte","Hornets","1988","2025",36,2852,1219,1633,0.427,10,0,0,0],["00",1610612766,"Charlotte","Hornets","1988","2025",26,2048,926,1122,0.452,10,0,0,0],["00",1610612766,"Charlotte","Bobcats","2004","2013",10,804,293,511,0.364,2,0,0,0],["00",1610612741,"Chicago","Bulls","1966","2025",60,4819,2446,2373,0.508,36,9,6,6],["00",1610612739,"Cleveland","Cavaliers","1970","2025",56,4492,2132,2360,0.475,25,8,5,1],["00",1610612742,"Dallas","Mavericks","1980","2025",46,3680,1855,1825,0.504,25,5,3,1],["00",1610612743,"Denver","Nuggets","1976","2025",50,4008,2040,1968,0.509,31,10,1,1],["00",1610612765,"Detroit","Pistons","1948","2025",78,6137,2914,3223,0.475,43,13,5,3],["00",1610612765,"Detroit","Pistons","1957","2025",69,5516,2600,2916,0.471,35,10,5,3],["00",1610612765,"Ft.
+        Wayne Zollner","Pistons","1948","1956",9,621,314,307,0.506,8,3,0,0],["00",1610612744,"Golden
+        State","Warriors","1946","2025",80,6241,3046,3195,0.488,38,12,7,7],["00",1610612744,"Golden
+        State","Warriors","1971","2025",55,4409,2158,2251,0.489,21,7,7,5],["00",1610612744,"San
+        Francisco","Warriors","1962","1970",9,729,330,399,0.453,5,2,0,0],["00",1610612744,"Philadelphia","Warriors","1946","1961",16,1103,558,545,0.506,12,3,0,2],["00",1610612745,"Houston","Rockets","1967","2025",59,4743,2455,2288,0.518,35,9,4,2],["00",1610612745,"Houston","Rockets","1971","2025",55,4415,2336,2079,0.529,34,9,4,2],["00",1610612745,"San
+        Diego","Rockets","1967","1970",4,328,119,209,0.363,1,0,0,0],["00",1610612754,"Indiana","Pacers","1976","2025",50,4008,1995,2012,0.498,29,6,2,0],["00",1610612746,"LA","Clippers","1970","2025",56,4498,1920,2578,0.427,19,3,0,0],["00",1610612746,"LA","Clippers","2015","2025",11,856,504,352,0.589,8,1,0,0],["00",1610612746,"Los
+        Angeles","Clippers","1984","2014",31,2494,971,1523,0.389,8,2,0,0],["00",1610612746,"San
+        Diego","Clippers","1978","1983",6,492,186,306,0.378,0,0,0,0],["00",1610612746,"Buffalo","Braves","1970","1977",8,656,259,397,0.395,3,0,0,0],["00",1610612747,"Los
+        Angeles","Lakers","1948","2025",78,6144,3636,2508,0.592,65,37,19,17],["00",1610612747,"Los
+        Angeles","Lakers","1960","2025",66,5302,3177,2125,0.599,54,32,19,12],["00",1610612747,"Minneapolis","Lakers","1948","1959",12,842,459,383,0.545,11,5,0,5],["00",1610612763,"Memphis","Grizzlies","1995","2025",31,2448,1067,1381,0.436,14,2,0,0],["00",1610612763,"Memphis","Grizzlies","2001","2025",25,1988,966,1022,0.486,14,2,0,0],["00",1610612763,"Vancouver","Grizzlies","1995","2000",6,460,101,359,0.22,0,0,0,0],["00",1610612748,"Miami","Heat","1988","2025",38,3025,1589,1436,0.525,26,17,7,3],["00",1610612749,"Milwaukee","Bucks","1968","2025",58,4661,2461,2200,0.528,37,19,3,2],["00",1610612750,"Minnesota","Timberwolves","1989","2025",37,2933,1231,1702,0.42,13,1,0,0],["00",1610612740,"New
+        Orleans","Pelicans","2002","2025",24,1908,868,1040,0.455,9,1,0,0],["00",1610612740,"New
+        Orleans","Pelicans","2013","2025",13,1022,449,573,0.439,4,0,0,0],["00",1610612740,"New
+        Orleans","Hornets","2002","2012",9,722,342,380,0.474,5,1,0,0],["00",1610612740,"New
+        Orleans/Oklahoma City","Hornets","2005","2006",2,164,77,87,0.47,0,0,0,0],["00",1610612752,"New
+        York","Knicks","1946","2025",80,6245,3061,3184,0.49,45,9,4,2],["00",1610612760,"Oklahoma
+        City","Thunder","1967","2025",59,4745,2581,2164,0.544,34,14,5,2],["00",1610612760,"Oklahoma
+        City","Thunder","2008","2025",18,1415,836,579,0.591,12,8,2,1],["00",1610612760,"Seattle","SuperSonics","1967","2007",41,3330,1745,1585,0.524,22,6,3,1],["00",1610612753,"Orlando","Magic","1989","2025",37,2940,1385,1555,0.471,18,9,2,0],["00",1610612755,"Philadelphia","76ers","1949","2025",77,6080,3156,2924,0.519,54,13,5,3],["00",1610612755,"Philadelphia","76ers","1963","2025",63,5066,2579,2487,0.509,40,10,5,2],["00",1610612755,"Syracuse","Nationals","1949","1962",14,1014,577,437,0.569,14,3,0,1],["00",1610612756,"Phoenix","Suns","1968","2025",58,4664,2498,2166,0.536,33,8,3,0],["00",1610612757,"Portland","Trail
+        Blazers","1970","2025",56,4501,2355,2146,0.523,37,6,3,1],["00",1610612758,"Sacramento","Kings","1948","2025",78,6146,2800,3346,0.456,30,7,0,1],["00",1610612758,"Sacramento","Kings","1985","2025",41,3270,1394,1876,0.426,11,3,0,0],["00",1610612758,"Kansas
+        City","Kings","1975","1984",10,820,381,439,0.465,4,1,0,0],["00",1610612758,"Kansas
+        City-Omaha","Kings","1972","1974",3,246,113,133,0.459,1,0,0,0],["00",1610612758,"Cincinnati","Royals","1957","1971",15,1189,555,634,0.467,7,0,0,0],["00",1610612758,"Rochester","Royals","1948","1956",9,621,357,264,0.575,7,3,0,1],["00",1610612759,"San
+        Antonio","Spurs","1976","2025",50,4005,2379,1626,0.594,39,23,6,5],["00",1610612761,"Toronto","Raptors","1995","2025",31,2448,1159,1289,0.473,13,7,1,1],["00",1610612762,"Utah","Jazz","1974","2025",52,4171,2212,1959,0.53,31,12,2,0],["00",1610612762,"Utah","Jazz","1979","2025",47,3761,2051,1710,0.545,31,12,2,0],["00",1610612762,"New
+        Orleans","Jazz","1974","1978",5,410,161,249,0.393,0,0,0,0],["00",1610612764,"Washington","Wizards","1961","2025",65,5224,2306,2918,0.441,30,8,4,1],["00",1610612764,"Washington","Wizards","1997","2025",29,2283,928,1355,0.406,9,1,0,0],["00",1610612764,"Washington","Bullets","1974","1996",23,1886,887,999,0.47,13,2,3,1],["00",1610612764,"Capital","Bullets","1973","1973",1,82,47,35,0.573,1,1,0,0],["00",1610612764,"Baltimore","Bullets","1963","1972",10,813,401,412,0.493,7,4,1,0],["00",1610612764,"Chicago","Zephyrs","1962","1962",1,80,25,55,0.313,0,0,0,0],["00",1610612764,"Chicago","Packers","1961","1961",1,80,18,62,0.225,0,0,0,0]]},{"name":"DefunctTeams","headers":["LEAGUE_ID","TEAM_ID","TEAM_CITY","TEAM_NAME","START_YEAR","END_YEAR","YEARS","GAMES","WINS","LOSSES","WIN_PCT","PO_APPEARANCES","DIV_TITLES","CONF_TITLES","LEAGUE_TITLES"],"rowSet":[["00",1610610023,"Anderson","Packers","1949","1949",1,64,37,27,0.578,1,0,0,0],["00",1610610024,"Baltimore","Bullets","1947","1953",7,450,158,292,0.351,3,0,0,1],["00",1610610025,"Chicago","Stags","1946","1949",4,240,147,93,0.613,4,1,0,0],["00",1610610026,"Cleveland","Rebels","1946","1946",1,60,30,30,0.5,1,0,0,0],["00",1610610027,"Denver","Nuggets","1949","1949",1,62,11,51,0.177,0,0,0,0],["00",1610610028,"Detroit","Falcons","1946","1946",1,60,20,40,0.333,0,0,0,0],["00",1610610029,"Indianapolis","Jets","1948","1948",1,60,18,42,0.3,0,0,0,0],["00",1610610030,"Indianapolis","Olympians","1949","1952",4,269,132,137,0.491,4,1,0,0],["00",1610610031,"Pittsburgh","Ironmen","1946","1946",1,60,15,45,0.25,0,0,0,0],["00",1610610032,"Providence","Steamrollers","1946","1948",3,168,46,122,0.274,0,0,0,0],["00",1610610033,"Sheboygan","Redskins","1949","1949",1,62,22,40,0.355,1,0,0,0],["00",1610610034,"St.
+        Louis","Bombers","1946","1949",4,237,122,115,0.515,3,1,0,0],["00",1610610035,"Toronto","Huskies","1946","1946",1,60,22,38,0.367,0,0,0,0],["00",1610610036,"Washington","Capitols","1946","1950",5,272,157,115,0.577,3,2,0,0],["00",1610610037,"Waterloo","Hawks","1949","1949",1,62,19,43,0.306,0,0,0,0]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '2933'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:36:16 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAkQZbWicAQAAVzfZgx75Dao39RwEKN+85Sz6ZqIIAANGNkEw/W3LlzEKBnkN/dpMuqaAeJn/MZkUjMkY+hVUskwYybfh1kRWkJxFkImBFdeNoZ650uzgpSMpW1BDTiKjWGKMlcbExjoyD6GKgrdJU4E0GFyutd+AA2tke3PHJ9JuL1LN+Kz79zaz1xTwDqlOrzO5GUaKmtfrkDKV5I24yBSnVIlnrfyn00XrZW+VZR3dBIA7R7Fl5w==~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7148;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-0
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '1'
+      x-full-ttl:
+      - '3600.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '1'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '2584.362'
+      x-varnish:
+      - 69721447 68305791
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

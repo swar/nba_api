@@ -1,5 +1,5 @@
 # ScheduleLeagueV2Int
-##### [nba_api/stats/endpoints/scheduleleaguev2int.py](https://github.com/swar/nba_api/blob/master/nba_api/stats/endpoints/scheduleleaguev2int.py)
+##### [nba_api/stats/endpoints/scheduleleaguev2int.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/scheduleleaguev2int.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/scheduleleaguev2int](https://stats.nba.com/stats/scheduleleaguev2int)

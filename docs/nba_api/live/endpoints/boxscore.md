@@ -1,5 +1,5 @@
 # BoxScore
-##### [nba_api/live/nba/endpoints/boxscore.py](https://github.com/swar/nba_api/blob/master/nba_api/live/nba/endpoints/boxscore.py)
+##### [nba_api/live/nba/endpoints/boxscore.py](https://github.com/swar/nba_api/blob/master/src/nba_api/live/nba/endpoints/boxscore.py)
 
 ##### Endpoint URL
 >[https://cdn.nba.com/static/json/liveData/boxscore/boxscore_{game_id}.json](https://cdn.nba.com/static/json/liveData/boxscore/boxscore_{game_id}.json)

@@ -1,25 +1,25 @@
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
 from nba_api.stats.library.parameters import (
+    ConferenceNullable,
+    DivisionNullable,
+    DivisionSimpleNullable,
+    GameSegmentNullable,
     LastNGames,
+    LeagueIDNullable,
+    LocationNullable,
     MeasureTypeDetailedDefense,
     Month,
+    OutcomeNullable,
     PaceAdjust,
-    PerModeDetailed,
     Period,
+    PerModeDetailed,
     PlusMinus,
     Rank,
     Season,
-    SeasonType,
-    ConferenceNullable,
-    DivisionSimpleNullable,
-    GameSegmentNullable,
-    LeagueIDNullable,
-    LocationNullable,
-    OutcomeNullable,
     SeasonSegmentNullable,
+    SeasonType,
     ShotClockRangeNullable,
-    DivisionNullable,
 )
 
 

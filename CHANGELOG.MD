@@ -16,6 +16,303 @@
 - `Contributor` (notes on updates to the project)
 
 # Version History
+## Unreleased
+
+### Infrastructure
+* **Ruff Tooling** - Replaced `flake8`, `isort`, and `pylint` with `ruff` for linting and formatting; added `pre-commit` hooks to auto-fix on commit (PR [#639](https://github.com/swar/nba_api/pull/639))
+* **Pytest Recording Stack** - Added `pytest-recording` (and `vcrpy`) to dev dependencies; introduced pytest markers for integration test modes (`live`, `vcr`, `canary`, `deprecated_endpoint`) (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **Integration Conftest** - Added `tests/integration/conftest.py` with shared request pacing, cassette directory configuration, and automatic skipping for deprecated endpoint smoke cases (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **VCR Query Matcher** - Updated query matching to ignore dynamic `GameDate` params so cassette playback remains stable in CI (PR [#644](https://github.com/swar/nba_api/pull/644))
+
+### Refactored
+* **Integration Test Layout** - Reorganized integration tests into `tests/integration/smoke/` and `tests/integration/scenarios/`, replacing the older top-level integration smoke/scenario modules (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **Scenario Data Layout** - Moved scenario test data modules and documentation under `tests/integration/scenarios/data/` and standardized the scenario runner/expectation schema (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **Endpoint Specs Migration** - Replaced `tests/integration/deferred_endpoints.py` with `tests/integration/helpers/endpoint_specs.py` plus shared helper models/constants (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **EndpointSpec Auto-Parameters** - Introduced `EndpointSpec` auto-parameter resolution (from canonical test defaults) to reduce manual endpoint test wiring and support per-endpoint `skip` / `deprecated` metadata (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **Unit Test Package Layout** - Reorganized unit tests into package-based folders (`tests/unit/http/`, `tests/unit/live/endpoints/`, `tests/unit/stats/library/`, etc.) and added missing `__init__.py` modules for reliable imports (PR [#643](https://github.com/swar/nba_api/pull/643))
+
+### Added
+* **VCR Smoke Coverage** - Added broad VCR-backed integration smoke coverage with curated endpoint specs (~130 endpoints) and recorded cassettes under `tests/integration/smoke/cassettes/` (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **VCR Scenario Coverage** - Added VCR-backed scenario/regression coverage for `LeagueDashTeamStats`, `LeagueGameFinder`, `PlayerDashPtShotDefend`, `ScoreboardV3`, `TeamDashLineups`, `TeamGameLog`, and `TeamGameLogs`, plus common sanity checks (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **Integration Helper Utilities** - Added shared integration helper utilities for response validation, dataset structure validation, row-count assertions, and endpoint instantiation checks (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **EndpointSpec Unit Tests** - Added unit tests for integration `EndpointSpec` behavior (`tests/unit/integration/helpers/test_endpoint_spec.py`) (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **Integration Test Documentation** - Added docstrings and integration test-data documentation for the new test layout and workflows (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **Legacy Debug Usage Tests** - Added legacy debug-configuration unit coverage for stats/live HTTP request behavior, proxy/debug flags, and debug cache mode (`tests/unit/http/test_legacy_debug_usage.py`) (PR [#645](https://github.com/swar/nba_api/pull/645))
+* **Parser/Normalization Regression Tests** - Added dedicated regression coverage for `DunkScoreLeaders` and `BoxScoreTraditionalV3` (`tests/unit/stats/endpoints/test_dunkscoreleaders_parser.py`, `tests/unit/stats/endpoints/test_boxscoretraditionalv3_normalized.py`) (PR [#598](https://github.com/swar/nba_api/pull/598), PR [#606](https://github.com/swar/nba_api/pull/606))
+
+### Fixed
+* **Pytest `reason=` API** - Updated pytest `skip` / `fail` calls to use the current `reason=` API in the refactored integration tests (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **PlayByPlayRegex Integration Collection** - Temporarily skipped `tests/integration/test_stats_library_playbyplayregex.py` at module import time (with TODO) because PlayByPlayV3 normalization is not yet wired up, preventing fixture failures during collection (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **DunkScoreLeaders Parsing** - Fixed response parsing by adding a dedicated parser, registering it in parser dispatch, and aligning expected data keys with the endpoint's nested V3 camelCase payload fields (PR [#598](https://github.com/swar/nba_api/pull/598))
+* **V3 Normalized Output** - Fixed `get_normalized_dict()` / `get_normalized_json()` returning empty payloads for V3 endpoints by persisting endpoint context and normalizing parser-generated data sets (PR [#606](https://github.com/swar/nba_api/pull/606), fixes #602)
+
+## v1.11.4
+Date: 2026-02-20
+
+### Added
+* **GravityLeaders** - New endpoint added (PR [#626](https://github.com/swar/nba_api/pull/626))
+* **`__version__` attribute** - Package now exposes a `__version__` attribute using `importlib.metadata` with `pyproject.toml` as the single source of truth (PR [#612](https://github.com/swar/nba_api/pull/612))
+
+### Fixed
+* **HTTP Headers** - Updated request headers to fix broken NBA.com API requests caused by an outdated user agent (PR [#636](https://github.com/swar/nba_api/pull/636))
+* **ContextMeasureSimple** - Removed deprecated `PF` (Personal Fouls) parameter; NBA.com API no longer returns data for this context measure on the `shotchartdetail` endpoint (PR [#608](https://github.com/swar/nba_api/pull/608), fixes #600)
+
+### Deprecated
+* **PlayByPlayV2** - Added deprecation warning; NBA.com API returns empty JSON for this endpoint. Use **PlayByPlayV3** instead (PR [#613](https://github.com/swar/nba_api/pull/613), fixes #591)
+* **ScoreboardV2** - Added deprecation warning; returns empty line scores for 2025-26 season games. Use **ScoreboardV3** instead, which is 100% backward compatible (PR [#609](https://github.com/swar/nba_api/pull/609), fixes #596)
+
+### Contributor
+* Added type hints and docstrings to the `Endpoint` base class and `PlayerCareerStats` endpoint for improved code clarity and IDE support (PR [#628](https://github.com/swar/nba_api/pull/628))
+* Added `CODEOWNERS` file (PR [#627](https://github.com/swar/nba_api/pull/627))
+* Corrected typos in contributing guide and README (PR [#604](https://github.com/swar/nba_api/pull/604))
+
+## v1.11.3
+Date: 2025-11-13
+
+### Removed
+* **BoxScorePlayerTrackV2** - Endpoint removed due to NBA API returning HTTP 500 errors
+  * The NBA.com API no longer supports this endpoint
+  * Users should migrate to **BoxScorePlayerTrackV3** instead
+  * Removed endpoint class, documentation, tests, and all references
+
+* **PlayerFantasyProfile** - Endpoint removed due to NBA API discontinuation
+  * The NBA.com API no longer supports this endpoint
+  * No direct replacement available
+  * Removed endpoint class, documentation, tests, and all references
+
+### Added
+* **TeamGameLog** - Endpoint restored after confirming NBA API is working again
+  * Retired in v1.11.0 due to reported NBA API deprecation, but now confirmed to be operational
+  * Returns game-by-game statistics for a specific team
+  * Required parameter: `team_id`
+  * Optional filtering: season, season type, date range
+  * Comprehensive unit tests (6 tests) and integration tests (4 tests) added
+
+* **TeamGameLogs** - Endpoint restored after confirming NBA API is working again
+  * Retired in v1.11.0 due to reported NBA API deprecation, but now confirmed to be operational
+  * Returns game-by-game statistics for one or more teams
+  * All parameters optional (can query all teams)
+  * Includes rank fields for all statistics (_RANK suffix)
+  * Advanced filtering: location, outcome, conference, division, measure type
+  * Comprehensive unit tests (8 tests) and integration tests (5 tests) added
+
+* **Integration Test Validation Infrastructure** - Enhanced validation to prevent false endpoint retirements
+  * **Root Cause**: TeamGameLog/TeamGameLogs were incorrectly retired in v1.11.0 because integration test framework didn't exist yet (created 3 days later)
+  * **New Validation Features**:
+    * `validate_dataset_structure()` - Validates dataset names and column structure match `expected_data` definitions
+    * Per-dataset row count validation and logging (instead of just total rows)
+    * Opt-in strict validation mode via `validate_structure: True` flag (default: False to preserve compatibility)
+    * Helper functions to reduce code complexity: `_count_dataset_rows()`, `_validate_status()`, `_validate_row_counts()`
+  * **Benefits**:
+    * Catches API response structure changes early
+    * Detects `expected_data` definition errors
+    * Prevents false endpoint retirements
+    * Provides detailed per-dataset diagnostics
+  * **Documentation**: Comprehensive guide in `tests/integration/data/README.md` with examples and best practices
+  * **Test Results**: All 37 integration tests passing, all 460 unit tests passing
+
+### Fixed
+* **LeagueIDNullable Parameter** - Fixed default value to prevent empty responses ([#562](https://github.com/swar/nba_api/issues/562))
+  * **Root Cause**: `LeagueIDNullable.default` was inheriting `""` (empty string) from `_NotRequired` instead of `"00"` (NBA) from `LeagueID`
+  * **NBA API Change**: Starting around the 2023-24 season (IST introduction), the NBA.com API became stricter and now **requires** an explicit `LeagueID` value rather than accepting empty strings
+  * **Impact**: Endpoints using `LeagueIDNullable` (e.g., `PlayerProfileV2`, `CommonTeamRoster`) returned empty datasets when called without explicitly specifying `league_id_nullable`
+  * **Fix**: Override `LeagueIDNullable.default` to explicitly use `LeagueID.nba` (`"00"`)
+  * **Affected Endpoints**: All endpoints with `league_id_nullable` parameter now default to NBA league instead of empty string
+  * **Possible Breaking Change**: This fixes broken behavior but changes the API semantics - empty LeagueID is no longer sent to NBA.com (which was causing failures)
+
+* **LeagueGameFinder** - Documented and added warning for `game_id_nullable` parameter limitation ([#446](https://github.com/swar/nba_api/issues/446))
+  * **NBA API Limitation**: The `game_id_nullable` parameter is ignored by the NBA Stats API and does not filter results
+  * **Impact**: Users passing `game_id_nullable` receive all games matching other criteria instead of the specific game requested
+  * **Fix**: Added runtime `UserWarning` when `game_id_nullable` is used, informing users of the limitation and providing workaround
+  * **Workaround**: Filter results client-side using pandas: `df[df['GAME_ID'] == 'game_id_value']`
+  * **Documentation**: Added comprehensive module docstring with examples and workaround
+  * **Testing**: Added integration tests documenting API behavior and unit tests verifying warning emission
+  * Note: Using `season_nullable` parameter helps reduce result set size before client-side filtering
+
+* **CommonAllPlayers** - Added missing `PLAYER_SLUG` and `TEAM_SLUG` fields to `expected_data` ([#550](https://github.com/swar/nba_api/issues/550))
+  * These fields are returned by the NBA API but were missing from the expected_data definition
+  * Note: The endpoint still does not include `POSITION` field (NBA API limitation). Users needing position data should use `CommonPlayerInfo` or `CommonTeamRoster` endpoints instead
+
+* **PlayerProfileV2 CareerHighs** - Fixed `expected_data` to match actual API response ([#536](https://github.com/swar/nba_api/issues/536))
+  * Added missing `GAME_ID` field
+  * Fixed field name from `STATS_VALUE` to `STAT_VALUE` (singular)
+  * Note: The `CareerHighs` dataset correctly returns **regular season** career highs (not playoff highs as originally reported). All game IDs have "002" prefix indicating regular season games
+
+* **Static Teams Data** - Corrected Golden State Warriors city name ([#434](https://github.com/swar/nba_api/issues/434))
+  * Changed city name from "Golden State" to "San Francisco"
+  * Updated in both `data.py` and `template.py`
+  * The team name remains "Golden State Warriors" (unchanged)
+
+### Refactored
+* **PlayByPlayV3 Parser** - Refactored parser to use defensive coding pattern and explicit field access ([#443](https://github.com/swar/nba_api/issues/443))
+  * **Root Cause**: Parser used fragile dynamic key extraction (`self.nba_dict[list(self.nba_dict.keys())[1]]`) that relied on dictionary key order
+  * **Impact**: Parser could crash if NBA API response structure changed (added/reordered fields, missing meta field, empty actions list)
+  * **Fix**: Rewrote parser following CLAUDE.md V3 parser best practices:
+    * Explicit field access using `self.game = nba_dict.get("game", {})` instead of dynamic key indexing
+    * All 24 action fields explicitly defined in headers tuple (no dynamic extraction)
+    * Defensive `.get()` calls with defaults instead of direct dictionary access
+    * Handles edge cases: missing meta field, empty actions list, missing optional fields
+  * **Added**: Comprehensive unit tests with 11 test cases covering all edge cases
+  * **Added**: Test fixtures (`tests/unit/stats/endpoints/data/playbyplayv3.py`) for unit testing
+  * **Added**: Real API response documentation (`docs/nba_api/stats/endpoints/responses/playbyplayv3.json`)
+  * **Result**: Parser is now resilient to API structure changes and follows project coding standards
+
+### Changed
+* **TeamDashboardByGeneralSplits** - Added warning and documentation for NBA API bug with `plus_minus='Y'` parameter ([#448](https://github.com/swar/nba_api/issues/448))
+  * **NBA API Bug (not nba_api)**: When `plus_minus='Y'`, the NBA API returns incorrect differential/delta values instead of actual statistics
+  * Example: FGM shows -0.3 instead of 39.3, PTS shows +/- value instead of actual points
+  * **Solution**: Always use `plus_minus='N'` (default). The PLUS_MINUS column is still included and contains correct values
+  * Added runtime warning when `plus_minus='Y'` is used
+  * Added comprehensive documentation in class docstring with examples
+
+## v1.11.2
+Date: 2025-11-12
+
+### Fixed
+* **Parser Dataset Order** - Fixed critical bug where 9 parsers returned datasets in wrong order ([#589](https://github.com/swar/nba_api/issues/589))
+  * **BoxScoreAdvancedV3** - Swapped dataset order: now returns PlayerStats first, TeamStats second
+  * **BoxScoreDefensiveV2** - Swapped dataset order: now returns PlayerStats first, TeamStats second
+  * **BoxScoreFourFactorsV3** - Swapped dataset order: now returns PlayerStats first, TeamStats second
+  * **BoxScoreHustleV2** - Swapped dataset order: now returns PlayerStats first, TeamStats second
+  * **BoxScoreMiscV3** - Swapped dataset order: now returns PlayerStats first, TeamStats second
+  * **BoxScorePlayerTrackV3** - Swapped dataset order: now returns PlayerStats first, TeamStats second
+  * **BoxScoreScoringV3** - Swapped dataset order: now returns PlayerStats first, TeamStats second
+  * **BoxScoreTraditionalV3** - Reordered datasets: now returns PlayerStats, TeamStarterBenchStats, TeamStats (matching expected_data)
+  * **BoxScoreUsageV3** - Swapped dataset order: now returns PlayerStats first, TeamStats second
+  * **Impact**: `get_data_frames()[0]` previously returned TeamStats (7 columns) instead of expected PlayerStats (29+ columns)
+  * **Root Cause**: Parsers created in v1.11.0 had dataset order mismatched with endpoint's `expected_data` definition
+* **Asian Naming Convention** - Fixed improper name parsing for Asian players in static data
+  * **Ha Seung-jin** (Korean: 하승진) - Now properly split: last_name="Ha", first_name="Seung-jin"
+  * **Sun Yue** (Chinese: 孙悦) - Now properly split: last_name="Sun", first_name="Yue"
+  * **Yao Ming** (Chinese: 姚明) - Now properly split: last_name="Yao", first_name="Ming"
+  * **Yi Jianlian** (Chinese: 易建联) - Now properly split: last_name="Yi", first_name="Jianlian"
+  * **Zhou Qi** (Chinese: 周琦) - Now properly split: last_name="Zhou", first_name="Qi"
+  * **Impact**: Enables proper name-based matching and searching, respects Asian naming conventions (family name first)
+  * **Root Cause**: NBA API provides inconsistent data; generation script now uses `player_adjustments` to correct name splits
+* **Static Data Generation** - Fixed bug where `player_adjustments` overwrote `is_active` status from NBA API
+  * Now preserves active/inactive status when applying name corrections
+  * Previous behavior: Adjustments included hardcoded `is_active=False`, losing actual player status
+
+### Changed
+* **Documentation** - Updated README.md example to use named attributes instead of array indices
+  * Replaced `career.get_data_frames()[0]` with `career.season_totals_regular_season.get_data_frame()`
+  * Encourages version-safe approach: use `endpoint.dataset_name.get_data_frame()` instead of `get_data_frames()[index]`
+* **BoxScoreDefensiveV2** - Added module docstring with usage recommendations and named attribute examples
+
+### Added
+* **Regression Test** - Added `test_dataset_order_matches_expected_data()` to BoxScoreDefensiveV2 parser tests
+  * Validates parser dataset order matches endpoint's `expected_data` definition
+  * Prevents future regressions of dataset ordering bugs
+
+## v1.11.1
+Date: 2025-11-12
+
+### Fixed
+* **BoxScoreTraditionalV3 Parser** - Complete rewrite to fix critical bugs
+  * Fixed AttributeError: Renamed `get_players_headers()` to correct method name `get_player_headers()`
+  * Fixed TypeError: Corrected tuple concatenation in `get_start_bench_headers()`
+  * Fixed ValueError: Replaced incorrect advanced stats fields (31 columns) with traditional stats fields (26 columns)
+  * Added comprehensive unit tests with Python fixture pattern
+
+### Added
+* **Parser Test Coverage** - Comprehensive unit tests for 5 previously untested V3 parsers (100% parser coverage)
+  * BoxScoreMatchupsV3 parser tests (9 tests) - Validates nested matchup structure with offensive/defensive player metrics
+  * PlayByPlayV3 parser tests (10 tests) - Validates play-by-play actions and video availability
+  * ISTStandings parser tests (11 tests) - Validates IST tournament standings with flattened game columns
+  * BoxScoreHustleV2 parser tests (11 tests) - Validates hustle statistics (contested shots, deflections, charges, box outs)
+  * ScheduleLeagueV2 parser tests (18 tests) - Validates complex nested game schedule structure
+
+### Changed
+* **Static Player Data** - Updated player and team data to latest roster information
+* **Script Organization** - Reorganized static data generation scripts
+  * Moved `tools/stats/static_players_update/` → `scripts/static_players_update/`
+  * Renamed `update.py` → `generate_static_data_file.py`
+  * Removed redundant `scripts/create_static_data_file.py`
+
+## v1.11.0
+Date: 2025-11-11
+
+### Added
+* **New Endpoints**
+  * **BoxScoreSummaryV3** - Comprehensive game summary data including game info, arena details, officials, line scores, inactive players, and historical matchups ([7fefb00](https://github.com/swar/nba_api/commit/7fefb00))
+  * **DunkScoreLeaders** - Advanced dunk tracking with 55 metrics including hang time, vertical leap, takeoff distance, biomechanics, and style indicators ([2e2fb8b](https://github.com/swar/nba_api/commit/2e2fb8b))
+  * **ScoreboardV3** - Enhanced scoreboard with 10+ datasets including game info, line scores, series standings, and team leaders ([35e1358](https://github.com/swar/nba_api/commit/35e1358))
+
+* **Testing Infrastructure**
+  * Integration test framework for validating endpoint scenarios with detailed logging ([1dec848](https://github.com/swar/nba_api/commit/1dec848))
+  * Comprehensive unit tests for TeamDashLineups endpoint (96% coverage) ([cfb971d](https://github.com/swar/nba_api/commit/cfb971d))
+  * Python fixture pattern for V3 endpoints replacing JSON files ([cfb971d](https://github.com/swar/nba_api/commit/cfb971d))
+
+### Changed
+* **Parser Architecture**
+  * Refactored V3 parsers to dedicated `_parsers` module with comprehensive test coverage ([8304148](https://github.com/swar/nba_api/commit/8304148))
+  * Moved parser registry to `_parsers` module for better organization ([283e818](https://github.com/swar/nba_api/commit/283e818))
+
+* **Build System**
+  * Added pylint for comprehensive code quality checks ([aed2f96](https://github.com/swar/nba_api/commit/aed2f96))
+  * Updated flake8 max-line-length to 88 characters ([2f1d916](https://github.com/swar/nba_api/commit/2f1d916))
+  * Added Makefile and configured code formatters (isort, black) ([e12240c](https://github.com/swar/nba_api/commit/e12240c))
+  * Modernized DevContainer configuration ([6a344ac](https://github.com/swar/nba_api/commit/6a344ac))
+
+* **Documentation**
+  * Added REFACTORING.md to track technical debt and future improvements ([5121e7f](https://github.com/swar/nba_api/commit/5121e7f))
+  * Updated integration test documentation with validation format examples ([4de365f](https://github.com/swar/nba_api/commit/4de365f))
+
+### Deprecated
+* **Python 3.9 Support** - Python 3.9 is now deprecated and will be removed in a future release ([89b2443](https://github.com/swar/nba_api/commit/89b2443))
+* **BoxScoreTraditionalV2** - Added deprecation warning ([bfe29b5](https://github.com/swar/nba_api/commit/bfe29b5))
+
+### Removed
+* **TeamGameLog and TeamGameLogs Endpoints** - Deprecated by the NBA with no replacement available ([ecb6ae2](https://github.com/swar/nba_api/commit/ecb6ae2), [eb83420](https://github.com/swar/nba_api/commit/eb83420))
+
+### Fixed
+* Handle empty weeks array in ScheduleLeagueV2 parser for older seasons ([f56521a](https://github.com/swar/nba_api/commit/f56521a))
+* Add missing boxscoresummaryv3 Python fixture for unit tests ([707fa09](https://github.com/swar/nba_api/commit/707fa09))
+* Added warning for BoxScoreSummaryV2 regarding data availability after 4/10/2025 with recommendation to use BoxScoreSummaryV3 ([5859506](https://github.com/swar/nba_api/commit/5859506))
+
+## v1.10.2
+Date: 2025-09-30
+
+### Fixed
+* **NBA Stats API Connection Issues** - Updated HTTP headers to resolve connection timeouts
+  * Updated User-Agent to modern Chrome 140 version to match current browser fingerprints
+  * Added the following headers:
+    * [Sec-Ch-Ua](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Sec-Fetch-Dest): allows servers to determine whether to service a request based on whether it is appropriate for how it is expected to be used.
+    * [Sec-Ch-Ua-Mobile](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Sec-CH-UA-Mobile): indicates whether the browser is on a mobile device.
+    * [Sec-Fetch-Dest](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Sec-Fetch-Dest): allows servers to determine whether to service a request based on whether it is appropriate for how it is expected to be used.
+  * Dropped the `x-nba-stats-origin` and `x-nba-stats-token` headers as no longer used.
+
+### Changed
+* Updated Static Player & Team Data
+
+## v1.10.1
+Date: 2025-01-11
+
+### Fixed
+* Handle missing WinProbability data in ScoreboardV2 endpoint ([#560](https://github.com/swar/nba_api/pull/560))
+* Add missing PlayIn season type to parameters ([#544](https://github.com/swar/nba_api/pull/544))
+* Add missing GITHUB_TOKEN environment variable ([#546](https://github.com/swar/nba_api/pull/546))
+
+### Changed
+* **Build System**
+  * Add automated release workflow with semantic-release ([#542](https://github.com/swar/nba_api/pull/542))
+  * Add local release preparation script and workflow ([#566](https://github.com/swar/nba_api/pull/566))
+  * Configure dependabot for conventional commits
+
+### Security
+* Bump urllib3 from 2.2.3 to 2.5.0 ([#547](https://github.com/swar/nba_api/pull/547))
+* Bump requests from 2.32.3 to 2.32.4 ([#541](https://github.com/swar/nba_api/pull/541))
+
+## v1.10.0
+Date: 2025-06-02
+
+### Added
+* Add ScheduleLeagueV2 endpoint to package exports
+
+### Changed
+* Update WNBA team count to 13 teams (Golden State Valkyries)
+* Update WNBA player and team data for 2025 season
+
 ## v1.9.0
 ### Added
 * https://github.com/swar/nba_api/pull/538
