@@ -51,7 +51,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.3"
-pytest-cov = "^4.0"
+pytest-cov = "^7.1"
 python-semantic-release = "^9.0.0"
 pandas = [
     {version = ">=2.2.0", python = ">=3.12"},
