@@ -1,8 +1,8 @@
 from nba_api.library import http
 
-
 try:
     from nba_api.library.debug.debug import STATS_HEADERS as _STATS_HEADERS
+
     _COMMON_HEADERS = _STATS_HEADERS
 except ImportError:
     _COMMON_HEADERS = {

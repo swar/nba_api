@@ -1,16 +1,17 @@
-import pytest
 import json
+
+import pytest
+
 from nba_api.library.http import NBAHTTP, NBAResponse
 from nba_api.live.nba.endpoints import boxscore
 from nba_api.live.wnba.library.http import WNBALiveHTTP
-
 
 content = {
     "meta": {
         "version": 1,
         "code": 200,
         "request": "http://nba.cloud/games/1022500153/boxscore?Format=json",
-        "time": "2025-07-24 23:07:22.884009"
+        "time": "2025-07-24 23:07:22.884009",
     },
     "game": {
         "gameId": "1022500153",
@@ -34,7 +35,7 @@ content = {
             "arenaCity": "Indianapolis",
             "arenaState": "IN",
             "arenaCountry": "US",
-            "arenaTimezone": "America/Indiana/Indianapolis"
+            "arenaTimezone": "America/Indiana/Indianapolis",
         },
         "officials": [
             {
@@ -44,7 +45,7 @@ content = {
                 "firstName": "Amy",
                 "familyName": "Bonner",
                 "jerseyNum": "31",
-                "assignment": "OFFICIAL2"
+                "assignment": "OFFICIAL2",
             },
         ],
         "homeTeam": {
@@ -55,13 +56,7 @@ content = {
             "score": 80,
             "inBonus": "1",
             "timeoutsRemaining": 1,
-            "periods": [
-                {
-                    "period": 1,
-                    "periodType": "REGULAR",
-                    "score": 18
-                }
-            ],
+            "periods": [{"period": 1, "periodType": "REGULAR", "score": 18}],
             "players": [
                 {
                     "status": "ACTIVE",
@@ -105,12 +100,12 @@ content = {
                         "turnovers": 0,
                         "twoPointersAttempted": 1,
                         "twoPointersMade": 1,
-                        "twoPointersPercentage": 1.0
+                        "twoPointersPercentage": 1.0,
                     },
                     "name": "Sophie Cunningham",
                     "nameI": "S. Cunningham",
                     "firstName": "Sophie",
-                    "familyName": "Cunningham"
+                    "familyName": "Cunningham",
                 }
             ],
             "statistics": {
@@ -175,8 +170,8 @@ content = {
                 "turnoversTotal": 14,
                 "twoPointersAttempted": 48,
                 "twoPointersMade": 18,
-                "twoPointersPercentage": 0.375
-            }
+                "twoPointersPercentage": 0.375,
+            },
         },
         "awayTeam": {
             "teamId": 1611661319,
@@ -186,13 +181,7 @@ content = {
             "score": 70,
             "inBonus": "0",
             "timeoutsRemaining": 1,
-            "periods": [
-                {
-                    "period": 1,
-                    "periodType": "REGULAR",
-                    "score": 18
-                }
-            ],
+            "periods": [{"period": 1, "periodType": "REGULAR", "score": 18}],
             "players": [
                 {
                     "status": "ACTIVE",
@@ -236,80 +225,80 @@ content = {
                         "turnovers": 1,
                         "twoPointersAttempted": 10,
                         "twoPointersMade": 7,
-                        "twoPointersPercentage": 0.7
+                        "twoPointersPercentage": 0.7,
                     },
                     "name": "Jackie Young",
                     "nameI": "J. Young",
                     "firstName": "Jackie",
-                    "familyName": "Young"
+                    "familyName": "Young",
                 },
             ],
             "statistics": {
-                    "assists": 12,
-                    "assistsTurnoverRatio": 0.857142857142857,
-                    "benchPoints": 4,
-                    "biggestLead": 8,
-                    "biggestLeadScore": "26-18",
-                    "biggestScoringRun": 14,
-                    "biggestScoringRunScore": "26-18",
-                    "blocks": 3,
-                    "blocksReceived": 1,
-                    "fastBreakPointsAttempted": 9,
-                    "fastBreakPointsMade": 1,
-                    "fastBreakPointsPercentage": 0.111111111111111,
-                    "fieldGoalsAttempted": 67,
-                    "fieldGoalsEffectiveAdjusted": 0.417910447761194,
-                    "fieldGoalsMade": 27,
-                    "fieldGoalsPercentage": 0.402985074626866,
-                    "foulsOffensive": 3,
-                    "foulsDrawn": 16,
-                    "foulsPersonal": 21,
-                    "foulsTeam": 18,
-                    "foulsTechnical": 0,
-                    "foulsTeamTechnical": 0,
-                    "freeThrowsAttempted": 17,
-                    "freeThrowsMade": 14,
-                    "freeThrowsPercentage": 0.823529411764706,
-                    "leadChanges": 11,
-                    "minutes": "PT200M00.00S",
-                    "minutesCalculated": "PT200M",
-                    "points": 70,
-                    "pointsAgainst": 80,
-                    "pointsFastBreak": 2,
-                    "pointsFromTurnovers": 16,
-                    "pointsInThePaint": 38,
-                    "pointsInThePaintAttempted": 40,
-                    "pointsInThePaintMade": 19,
-                    "pointsInThePaintPercentage": 0.475,
-                    "pointsSecondChance": 10,
-                    "reboundsDefensive": 28,
-                    "reboundsOffensive": 9,
-                    "reboundsPersonal": 37,
-                    "reboundsTeam": 5,
-                    "reboundsTeamDefensive": 1,
-                    "reboundsTeamOffensive": 4,
-                    "reboundsTotal": 42,
-                    "secondChancePointsAttempted": 8,
-                    "secondChancePointsMade": 5,
-                    "secondChancePointsPercentage": 0.625,
-                    "steals": 7,
-                    "teamFieldGoalAttempts": 0,
-                    "threePointersAttempted": 15,
-                    "threePointersMade": 2,
-                    "threePointersPercentage": 0.133333333333333,
-                    "timeLeading": "PT12M21.00S",
-                    "timesTied": 5,
-                    "trueShootingAttempts": 74.48,
-                    "trueShootingPercentage": 0.469924812030075,
-                    "turnovers": 14,
-                    "turnoversTeam": 0,
-                    "turnoversTotal": 14,
-                    "twoPointersAttempted": 52,
-                    "twoPointersMade": 25,
-                    "twoPointersPercentage": 0.480769230769231
-                  }
-        }
-    }
+                "assists": 12,
+                "assistsTurnoverRatio": 0.857142857142857,
+                "benchPoints": 4,
+                "biggestLead": 8,
+                "biggestLeadScore": "26-18",
+                "biggestScoringRun": 14,
+                "biggestScoringRunScore": "26-18",
+                "blocks": 3,
+                "blocksReceived": 1,
+                "fastBreakPointsAttempted": 9,
+                "fastBreakPointsMade": 1,
+                "fastBreakPointsPercentage": 0.111111111111111,
+                "fieldGoalsAttempted": 67,
+                "fieldGoalsEffectiveAdjusted": 0.417910447761194,
+                "fieldGoalsMade": 27,
+                "fieldGoalsPercentage": 0.402985074626866,
+                "foulsOffensive": 3,
+                "foulsDrawn": 16,
+                "foulsPersonal": 21,
+                "foulsTeam": 18,
+                "foulsTechnical": 0,
+                "foulsTeamTechnical": 0,
+                "freeThrowsAttempted": 17,
+                "freeThrowsMade": 14,
+                "freeThrowsPercentage": 0.823529411764706,
+                "leadChanges": 11,
+                "minutes": "PT200M00.00S",
+                "minutesCalculated": "PT200M",
+                "points": 70,
+                "pointsAgainst": 80,
+                "pointsFastBreak": 2,
+                "pointsFromTurnovers": 16,
+                "pointsInThePaint": 38,
+                "pointsInThePaintAttempted": 40,
+                "pointsInThePaintMade": 19,
+                "pointsInThePaintPercentage": 0.475,
+                "pointsSecondChance": 10,
+                "reboundsDefensive": 28,
+                "reboundsOffensive": 9,
+                "reboundsPersonal": 37,
+                "reboundsTeam": 5,
+                "reboundsTeamDefensive": 1,
+                "reboundsTeamOffensive": 4,
+                "reboundsTotal": 42,
+                "secondChancePointsAttempted": 8,
+                "secondChancePointsMade": 5,
+                "secondChancePointsPercentage": 0.625,
+                "steals": 7,
+                "teamFieldGoalAttempts": 0,
+                "threePointersAttempted": 15,
+                "threePointersMade": 2,
+                "threePointersPercentage": 0.133333333333333,
+                "timeLeading": "PT12M21.00S",
+                "timesTied": 5,
+                "trueShootingAttempts": 74.48,
+                "trueShootingPercentage": 0.469924812030075,
+                "turnovers": 14,
+                "turnoversTeam": 0,
+                "turnoversTotal": 14,
+                "twoPointersAttempted": 52,
+                "twoPointersMade": 25,
+                "twoPointersPercentage": 0.480769230769231,
+            },
+        },
+    },
 }
 game_details = {
     "gameId": "1022500153",
@@ -336,13 +325,7 @@ home_team_stats = {
     "score": 80,
     "inBonus": "1",
     "timeoutsRemaining": 1,
-    "periods": [
-        {
-            "period": 1,
-            "periodType": "REGULAR",
-            "score": 18
-        }
-    ],
+    "periods": [{"period": 1, "periodType": "REGULAR", "score": 18}],
     "statistics": {
         "assists": 17,
         "assistsTurnoverRatio": 1.21428571428571,
@@ -405,8 +388,8 @@ home_team_stats = {
         "turnoversTotal": 14,
         "twoPointersAttempted": 48,
         "twoPointersMade": 18,
-        "twoPointersPercentage": 0.375
-    }
+        "twoPointersPercentage": 0.375,
+    },
 }
 away_team_stats = {
     "teamId": 1611661319,
@@ -416,13 +399,7 @@ away_team_stats = {
     "score": 70,
     "inBonus": "0",
     "timeoutsRemaining": 1,
-    "periods": [
-        {
-            "period": 1,
-            "periodType": "REGULAR",
-            "score": 18
-        }
-    ],
+    "periods": [{"period": 1, "periodType": "REGULAR", "score": 18}],
     "statistics": {
         "assists": 12,
         "assistsTurnoverRatio": 0.857142857142857,
@@ -485,8 +462,8 @@ away_team_stats = {
         "turnoversTotal": 14,
         "twoPointersAttempted": 52,
         "twoPointersMade": 25,
-        "twoPointersPercentage": 0.480769230769231
-    }
+        "twoPointersPercentage": 0.480769230769231,
+    },
 }
 
 game_id = "1022500153"
@@ -494,7 +471,7 @@ game_id = "1022500153"
 
 @pytest.fixture
 def nba_http_patch(monkeypatch):
-    class MockResponse(object):
+    class MockResponse:
         def __init__(*args, **kwargs):
             pass
 

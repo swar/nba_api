@@ -1,4 +1,4 @@
-from nba_api.live.http import BaseLiveHTTP, _COMMON_HEADERS
+from nba_api.live.http import _COMMON_HEADERS, BaseLiveHTTP
 
 
 class WNBALiveHTTP(BaseLiveHTTP):
