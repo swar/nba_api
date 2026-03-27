@@ -266,3 +266,48 @@ def test_debug_storage_caching(is_file_cached, monkeypatch):
         assistleaders.AssistLeaders()
 
     assert (not mock_get.called) if is_file_cached else mock_get.called
+
+
+# Test raise_for_status
+@pytest.mark.parametrize(
+    "status_code",
+    [400, 403, 404, 500, 502, 503],
+    ids=["400", "403", "404", "500", "502", "503"],
+)
+def test_stats_endpoint_raises_on_http_error(status_code):
+    """An HTTP error response (4xx/5xx) raises requests.HTTPError via raise_for_status."""
+    error_response = Mock()
+    error_response.status_code = status_code
+    error_response.url = "https://nba.com/stats/assistleaders"
+    error_response.raise_for_status.side_effect = requests.HTTPError(
+        f"{status_code} Error", response=error_response
+    )
+
+    with (
+        patch.object(requests.Session, "get", return_value=error_response),
+        pytest.raises(requests.HTTPError, match=f"{status_code} Error"),
+    ):
+        assistleaders.AssistLeaders()
+
+
+@pytest.mark.parametrize(
+    "status_code",
+    [400, 403, 404, 500, 502, 503],
+    ids=["400", "403", "404", "500", "502", "503"],
+)
+def test_live_endpoint_raises_on_http_error(status_code):
+    """An HTTP error response (4xx/5xx) raises requests.HTTPError via raise_for_status."""
+    error_response = Mock()
+    error_response.status_code = status_code
+    error_response.url = (
+        "https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json"
+    )
+    error_response.raise_for_status.side_effect = requests.HTTPError(
+        f"{status_code} Error", response=error_response
+    )
+
+    with (
+        patch.object(requests.Session, "get", return_value=error_response),
+        pytest.raises(requests.HTTPError, match=f"{status_code} Error"),
+    ):
+        scoreboard.ScoreBoard()

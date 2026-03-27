@@ -161,6 +161,7 @@ class NBAHTTP:
                 proxies=proxies,
                 timeout=timeout,
             )
+            response.raise_for_status()
             url = response.url
             status_code = response.status_code
             contents = response.text
