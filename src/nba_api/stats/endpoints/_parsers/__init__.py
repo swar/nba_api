@@ -86,10 +86,10 @@ def get_parser_for_endpoint(endpoint, nba_dict):
         nba_dict (dict): The raw API response dictionary.
 
     Returns:
-        Parser instance configured with the provided data.
-
-    Raises:
-        KeyError: If the endpoint doesn't have a registered parser.
+        Parser instance configured with the provided data, or None if
+        no parser is registered for this endpoint.
     """
-    parser_class = _PARSER_REGISTRY[endpoint]
+    parser_class = _PARSER_REGISTRY.get(endpoint)
+    if parser_class is None:
+        return None
     return parser_class(nba_dict)

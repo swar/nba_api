@@ -35,6 +35,10 @@ class NBAStatsResponse(http.NBAResponse):
     def _build_rows(headers, row_set):
         return [dict(zip(headers, raw_row, strict=False)) for raw_row in row_set]
 
+    @staticmethod
+    def _get_legacy_results(raw_dict):
+        return raw_dict.get("resultSets") or raw_dict.get("resultSet")
+
     def get_normalized_dict(self):
         if self._normalized_dict_cache is not None:
             return self._normalized_dict_cache
@@ -48,7 +52,7 @@ class NBAStatsResponse(http.NBAResponse):
         is_legacy = bool(legacy_headers & raw_keys)
 
         if is_legacy:
-            results = raw_data.get("resultSets") or raw_data.get("resultSet")
+            results = self._get_legacy_results(raw_data)
             if results and "Meta" in results:
                 self._normalized_dict_cache = results
                 return results
@@ -58,14 +62,12 @@ class NBAStatsResponse(http.NBAResponse):
                 name = result["name"]
                 data[name] = self._build_rows(result["headers"], result["rowSet"])
         elif self._endpoint is not None:
-            try:
-                from nba_api.stats.endpoints._parsers import get_parser_for_endpoint
+            from nba_api.stats.endpoints._parsers import get_parser_for_endpoint
 
-                endpoint_parser = get_parser_for_endpoint(self._endpoint, raw_data)
+            endpoint_parser = get_parser_for_endpoint(self._endpoint, raw_data)
+            if endpoint_parser is not None:
                 for name, dataset in endpoint_parser.get_data_sets().items():
                     data[name] = self._build_rows(dataset["headers"], dataset["data"])
-            except KeyError:
-                pass
 
         self._normalized_dict_cache = data
         return data
@@ -93,15 +95,9 @@ class NBAStatsResponse(http.NBAResponse):
     def get_headers_from_data_sets(self):
         raw_dict = self.get_dict()
 
-        legacy_headers = ["resultSets", "resultSet"]
-        is_legacy = set(legacy_headers) & set(raw_dict.keys())
-        if not is_legacy:
+        results = self._get_legacy_results(raw_dict)
+        if results is None:
             return {}
-
-        if "resultSets" in raw_dict:
-            results = raw_dict["resultSets"]
-        else:
-            results = raw_dict["resultSet"]
         if isinstance(results, dict):
             if "name" not in results:
                 return {}
@@ -115,10 +111,9 @@ class NBAStatsResponse(http.NBAResponse):
             self._endpoint = endpoint
 
         if endpoint is None:
-            if "resultSets" in raw_dict:
-                results = raw_dict["resultSets"]
-            else:
-                results = raw_dict["resultSet"]
+            results = self._get_legacy_results(raw_dict)
+            if results is None:
+                return {}
             if isinstance(results, dict):
                 if "name" not in results:
                     return {}
@@ -139,6 +134,8 @@ class NBAStatsResponse(http.NBAResponse):
             from nba_api.stats.endpoints._parsers import get_parser_for_endpoint
 
             endpoint_parser = get_parser_for_endpoint(endpoint, self.get_dict())
+            if endpoint_parser is None:
+                return {}
             return endpoint_parser.get_data_sets()
 
 

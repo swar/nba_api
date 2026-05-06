@@ -30,53 +30,53 @@ if DEBUG:
 
 
 class NBAResponse:
-    def __init__(self, response, status_code, url):
+    def __init__(self, response: str, status_code: int | None, url: str | None) -> None:
         self._response = response
         self._status_code = status_code
         self._url = url
-        self._dict_cache = None
-        self._json_cache = None
+        self._dict_cache: dict | None = None
+        self._json_cache: str | None = None
 
-    def get_response(self):
+    def get_response(self) -> str:
         return self._response
 
-    def get_dict(self):
+    def get_dict(self) -> dict:
         if self._dict_cache is None:
             self._dict_cache = json.loads(self._response)
         return self._dict_cache
 
-    def get_json(self):
+    def get_json(self) -> str:
         if self._json_cache is None:
             self._json_cache = json.dumps(self.get_dict())
         return self._json_cache
 
-    def valid_json(self):
+    def valid_json(self) -> bool:
         try:
             self.get_dict()
         except ValueError:
             return False
         return True
 
-    def get_url(self):
+    def get_url(self) -> str | None:
         return self._url
 
-    def get_status_code(self):
+    def get_status_code(self) -> int | None:
         return self._status_code
 
 
 class NBAHTTP:
-    nba_response = NBAResponse
+    nba_response: type[NBAResponse] = NBAResponse
 
-    base_url = None
+    base_url: str | None = None
 
-    parameters = None
+    parameters: tuple | None = None
 
-    headers = None
+    headers: dict[str, str] | None = None
 
-    _session = None
+    _session: requests.Session | None = None
 
     @classmethod
-    def get_session(cls):
+    def get_session(cls) -> requests.Session:
         session = cls._session
         if session is None:
             session = requests.Session()
@@ -84,32 +84,34 @@ class NBAHTTP:
         return session
 
     @classmethod
-    def set_session(cls, session) -> None:
+    def set_session(cls, session: requests.Session) -> None:
         cls._session = session
 
-    def clean_contents(self, contents):
+    def clean_contents(self, contents: str) -> str:
         return contents
 
     def send_api_request(
         self,
-        endpoint,
-        parameters,
-        referer=None,
-        proxy=None,
-        headers=None,
-        timeout=None,
-        raise_exception_on_error=False,
-    ):
+        endpoint: str,
+        parameters: dict[str, str | None],
+        referer: str | None = None,
+        proxy: str | list[str] | None = None,
+        headers: dict[str, str] | None = None,
+        timeout: int | None = None,
+        raise_exception_on_error: bool = False,
+    ) -> NBAResponse:
         if not self.base_url:
             raise Exception("Cannot use send_api_request from _HTTP class.")
         base_url = self.base_url.format(endpoint=endpoint)
         endpoint = endpoint.lower()
         self.parameters = parameters
 
-        request_headers = self.headers if headers is None else headers
-
-        if referer:
-            request_headers["Referer"] = referer
+        if headers is not None:
+            request_headers = headers
+        elif referer:
+            request_headers = {**self.headers, "Referer": referer}
+        else:
+            request_headers = self.headers
 
         if proxy is None:
             request_proxy = PROXY
@@ -160,6 +162,7 @@ class NBAHTTP:
             if os.path.isfile(file_path):
                 with open(file_path) as f:
                     contents = f.read()
+                status_code = 200
                 print("loading from file...")
 
         if not contents:

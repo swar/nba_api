@@ -35,8 +35,9 @@ class Endpoint:
                 Exception: If pandas is not installed.
             """
             if not PANDAS:
-                raise Exception(
-                    "Import Missing - Failed to import DataFrame from pandas."
+                raise ImportError(
+                    "Failed to import DataFrame from pandas. "
+                    "Install pandas: pip install pandas"
                 )
 
             if "headers" not in self.data or not self.data["headers"]:
@@ -52,14 +53,8 @@ class Endpoint:
                     len(self.data["headers"])
                 ):  # Extend column names for level to full length
                     level = self.data["headers"][i]
-                    level_names.append(
-                        level["name"] if "name" in level else "LEVEL_" + str(i)
-                    )
-                    column_names = (
-                        [""] * level["columnsToSkip"]
-                        if "columnsToSkip" in level
-                        else []
-                    )
+                    level_names.append(level.get("name", f"LEVEL_{i}"))
+                    column_names = [""] * level.get("columnsToSkip", 0)
                     column_names += list(
                         np.repeat(
                             np.array(level["columnNames"]),
@@ -73,7 +68,7 @@ class Endpoint:
                 return DataFrame(self.data["data"], columns=midx)
 
     nba_response: Any = None
-    data_sets: list[DataSet] = []
+    data_sets: list[DataSet] | None = None
 
     def get_request_url(self) -> str:
         """Return the URL of the request."""
@@ -81,7 +76,7 @@ class Endpoint:
 
     def get_available_data(self) -> list[str]:
         """Return the keys of the available data sets."""
-        return self.get_normalized_dict().keys()
+        return list(self.get_normalized_dict().keys())
 
     def get_response(self) -> str:
         """Return the raw response string."""

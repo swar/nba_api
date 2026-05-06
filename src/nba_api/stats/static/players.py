@@ -120,57 +120,57 @@ def _get_player_dict(player_row):
     }
 
 
-def find_players_by_full_name(regex_pattern):
+def find_players_by_full_name(regex_pattern: str) -> list[dict]:
     return _find_players(regex_pattern, player_index_full_name)
 
 
-def find_players_by_first_name(regex_pattern):
+def find_players_by_first_name(regex_pattern: str) -> list[dict]:
     return _find_players(regex_pattern, player_index_first_name)
 
 
-def find_players_by_last_name(regex_pattern):
+def find_players_by_last_name(regex_pattern: str) -> list[dict]:
     return _find_players(regex_pattern, player_index_last_name)
 
 
-def find_player_by_id(player_id):
+def find_player_by_id(player_id: int) -> dict | None:
     return _find_player_by_id(player_id)
 
 
-def get_players():
+def get_players() -> list[dict]:
     return _get_players(_cache=True)
 
 
-def get_active_players():
+def get_active_players() -> list[dict]:
     return _get_active_players(_cache=True)
 
 
-def get_inactive_players():
+def get_inactive_players() -> list[dict]:
     return _get_inactive_players(_cache=True)
 
 
-def find_wnba_players_by_full_name(regex_pattern):
+def find_wnba_players_by_full_name(regex_pattern: str) -> list[dict]:
     return _find_players(regex_pattern, player_index_full_name, players=wnba_players)
 
 
-def find_wnba_players_by_first_name(regex_pattern):
+def find_wnba_players_by_first_name(regex_pattern: str) -> list[dict]:
     return _find_players(regex_pattern, player_index_first_name, players=wnba_players)
 
 
-def find_wnba_players_by_last_name(regex_pattern):
+def find_wnba_players_by_last_name(regex_pattern: str) -> list[dict]:
     return _find_players(regex_pattern, player_index_last_name, players=wnba_players)
 
 
-def find_wnba_player_by_id(player_id):
+def find_wnba_player_by_id(player_id: int) -> dict | None:
     return _find_player_by_id(player_id, _index=_wnba_players_by_id)
 
 
-def get_wnba_players():
+def get_wnba_players() -> list[dict]:
     return _get_players(players=wnba_players, _cache=True)
 
 
-def get_wnba_active_players():
+def get_wnba_active_players() -> list[dict]:
     return _get_active_players(players=wnba_players, _cache=True)
 
 
-def get_wnba_inactive_players():
+def get_wnba_inactive_players() -> list[dict]:
     return _get_inactive_players(players=wnba_players, _cache=True)

@@ -95,73 +95,73 @@ def _get_team_dict(team_row):
     }
 
 
-def find_teams_by_full_name(regex_pattern):
+def find_teams_by_full_name(regex_pattern: str) -> list[dict]:
     return _find_teams(regex_pattern, team_index_full_name)
 
 
-def find_teams_by_state(regex_pattern):
+def find_teams_by_state(regex_pattern: str) -> list[dict]:
     return _find_teams(regex_pattern, team_index_state)
 
 
-def find_teams_by_city(regex_pattern):
+def find_teams_by_city(regex_pattern: str) -> list[dict]:
     return _find_teams(regex_pattern, team_index_city)
 
 
-def find_teams_by_nickname(regex_pattern):
+def find_teams_by_nickname(regex_pattern: str) -> list[dict]:
     return _find_teams(regex_pattern, team_index_nickname)
 
 
-def find_teams_by_year_founded(year):
+def find_teams_by_year_founded(year: int) -> list[dict]:
     return _find_teams_by_year_founded(year)
 
 
-def find_teams_by_championship_year(year):
+def find_teams_by_championship_year(year: int) -> list[dict]:
     return _find_teams_by_championship_year(year)
 
 
-def find_team_by_abbreviation(abbreviation):
+def find_team_by_abbreviation(abbreviation: str) -> dict | None:
     return _find_team_by_abbreviation(abbreviation)
 
 
-def find_team_name_by_id(team_id):
+def find_team_name_by_id(team_id: int) -> dict | None:
     return _find_team_name_by_id(team_id)
 
 
-def get_teams():
+def get_teams() -> list[dict]:
     return _get_teams(_cache=True)
 
 
-def find_wnba_teams_by_full_name(regex_pattern):
+def find_wnba_teams_by_full_name(regex_pattern: str) -> list[dict]:
     return _find_teams(regex_pattern, team_index_full_name, teams=wnba_teams)
 
 
-def find_wnba_teams_by_state(regex_pattern):
+def find_wnba_teams_by_state(regex_pattern: str) -> list[dict]:
     return _find_teams(regex_pattern, team_index_state, teams=wnba_teams)
 
 
-def find_wnba_teams_by_city(regex_pattern):
+def find_wnba_teams_by_city(regex_pattern: str) -> list[dict]:
     return _find_teams(regex_pattern, team_index_city, teams=wnba_teams)
 
 
-def find_wnba_teams_by_nickname(regex_pattern):
+def find_wnba_teams_by_nickname(regex_pattern: str) -> list[dict]:
     return _find_teams(regex_pattern, team_index_nickname, teams=wnba_teams)
 
 
-def find_wnba_teams_by_year_founded(year):
+def find_wnba_teams_by_year_founded(year: int) -> list[dict]:
     return _find_teams_by_year_founded(year, teams=wnba_teams)
 
 
-def find_wnba_teams_by_championship_year(year):
+def find_wnba_teams_by_championship_year(year: int) -> list[dict]:
     return _find_teams_by_championship_year(year, teams=wnba_teams)
 
 
-def find_wnba_team_by_abbreviation(abbreviation):
+def find_wnba_team_by_abbreviation(abbreviation: str) -> dict | None:
     return _find_team_by_abbreviation(abbreviation, _index=_wnba_teams_by_abbreviation)
 
 
-def find_wnba_team_name_by_id(team_id):
+def find_wnba_team_name_by_id(team_id: int) -> dict | None:
     return _find_team_name_by_id(team_id, _index=_wnba_teams_by_id)
 
 
-def get_wnba_teams():
+def get_wnba_teams() -> list[dict]:
     return _get_teams(teams=wnba_teams, _cache=True)
