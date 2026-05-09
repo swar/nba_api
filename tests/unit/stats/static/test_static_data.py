@@ -6,4 +6,4 @@ def test_nba_teams():
 
 
 def test_wnba_teams():
-    assert len(teams.wnba_teams) == 13
+    assert len(teams.wnba_teams) == 15

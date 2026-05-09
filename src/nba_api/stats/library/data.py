@@ -6679,5 +6679,5 @@ wnba_teams = [
         "Portland Fire",
         "Oregon",
         [],
-    ]
+    ],
 ]
