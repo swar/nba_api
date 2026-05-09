@@ -6660,4 +6660,24 @@ wnba_teams = [
         "California",
         [],
     ],
+    [
+        1611661332,
+        "TOR",
+        "Tempo",
+        2026,
+        "Toronto",
+        "Toronto Tempo",
+        "Ontario",
+        [],
+    ],
+    [
+        1611661327,
+        "POR",
+        "Fire",
+        2000,
+        "Portland",
+        "Portland Fire",
+        "Oregon",
+        [],
+    ]
 ]
