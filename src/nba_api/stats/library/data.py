@@ -6272,6 +6272,16 @@ team_index_state = 6
 team_index_championship_year = 7
 
 teams = [
+    [
+        15018,
+        "GUA",
+        "Loong Lions",
+        2000,
+        "Guangzhou",
+        "Guangzhou Loong Lions",
+        "Guangdong",
+        [],
+    ],
     [1610612737, "ATL", "Hawks", 1949, "Atlanta", "Atlanta Hawks", "Georgia", [1958]],
     [
         1610612738,
