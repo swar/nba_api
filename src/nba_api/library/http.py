@@ -68,15 +68,15 @@ class NBAHTTP:
 
     @classmethod
     def get_session(cls):
-        session = cls._session
+        session = NBAHTTP._session
         if session is None:
             session = requests.Session()
-            cls._session = session
+            NBAHTTP._session = session
         return session
 
     @classmethod
     def set_session(cls, session) -> None:
-        cls._session = session
+        NBAHTTP._session = session
 
     def clean_contents(self, contents):
         return contents
