@@ -6661,3 +6661,83 @@ wnba_teams = [
         [],
     ],
 ]
+
+
+# Conference and division mapping for NBA teams, keyed by team_id from `teams`.
+# Alignment is stable since the 2004-05 season. WNBA teams are intentionally
+# excluded because the WNBA uses a different alignment that changes with
+# expansion.
+
+team_conferences = {
+    # Eastern Conference
+    1610612737: "East",  # Atlanta Hawks
+    1610612738: "East",  # Boston Celtics
+    1610612739: "East",  # Cleveland Cavaliers
+    1610612741: "East",  # Chicago Bulls
+    1610612748: "East",  # Miami Heat
+    1610612749: "East",  # Milwaukee Bucks
+    1610612751: "East",  # Brooklyn Nets
+    1610612752: "East",  # New York Knicks
+    1610612753: "East",  # Orlando Magic
+    1610612754: "East",  # Indiana Pacers
+    1610612755: "East",  # Philadelphia 76ers
+    1610612761: "East",  # Toronto Raptors
+    1610612764: "East",  # Washington Wizards
+    1610612765: "East",  # Detroit Pistons
+    1610612766: "East",  # Charlotte Hornets
+    # Western Conference
+    1610612740: "West",  # New Orleans Pelicans
+    1610612742: "West",  # Dallas Mavericks
+    1610612743: "West",  # Denver Nuggets
+    1610612744: "West",  # Golden State Warriors
+    1610612745: "West",  # Houston Rockets
+    1610612746: "West",  # Los Angeles Clippers
+    1610612747: "West",  # Los Angeles Lakers
+    1610612750: "West",  # Minnesota Timberwolves
+    1610612756: "West",  # Phoenix Suns
+    1610612757: "West",  # Portland Trail Blazers
+    1610612758: "West",  # Sacramento Kings
+    1610612759: "West",  # San Antonio Spurs
+    1610612760: "West",  # Oklahoma City Thunder
+    1610612762: "West",  # Utah Jazz
+    1610612763: "West",  # Memphis Grizzlies
+}
+
+team_divisions = {
+    # Atlantic (Eastern Conference)
+    1610612738: "Atlantic",  # Boston Celtics
+    1610612751: "Atlantic",  # Brooklyn Nets
+    1610612752: "Atlantic",  # New York Knicks
+    1610612755: "Atlantic",  # Philadelphia 76ers
+    1610612761: "Atlantic",  # Toronto Raptors
+    # Central (Eastern Conference)
+    1610612739: "Central",  # Cleveland Cavaliers
+    1610612741: "Central",  # Chicago Bulls
+    1610612749: "Central",  # Milwaukee Bucks
+    1610612754: "Central",  # Indiana Pacers
+    1610612765: "Central",  # Detroit Pistons
+    # Southeast (Eastern Conference)
+    1610612737: "Southeast",  # Atlanta Hawks
+    1610612748: "Southeast",  # Miami Heat
+    1610612753: "Southeast",  # Orlando Magic
+    1610612764: "Southeast",  # Washington Wizards
+    1610612766: "Southeast",  # Charlotte Hornets
+    # Northwest (Western Conference)
+    1610612743: "Northwest",  # Denver Nuggets
+    1610612750: "Northwest",  # Minnesota Timberwolves
+    1610612757: "Northwest",  # Portland Trail Blazers
+    1610612760: "Northwest",  # Oklahoma City Thunder
+    1610612762: "Northwest",  # Utah Jazz
+    # Pacific (Western Conference)
+    1610612744: "Pacific",  # Golden State Warriors
+    1610612746: "Pacific",  # Los Angeles Clippers
+    1610612747: "Pacific",  # Los Angeles Lakers
+    1610612756: "Pacific",  # Phoenix Suns
+    1610612758: "Pacific",  # Sacramento Kings
+    # Southwest (Western Conference)
+    1610612740: "Southwest",  # New Orleans Pelicans
+    1610612742: "Southwest",  # Dallas Mavericks
+    1610612745: "Southwest",  # Houston Rockets
+    1610612759: "Southwest",  # San Antonio Spurs
+    1610612763: "Southwest",  # Memphis Grizzlies
+}
