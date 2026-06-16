@@ -1,6 +1,8 @@
 import json
 import os
 import random
+import re
+from collections.abc import Mapping
 from urllib.parse import quote_plus
 
 import requests
@@ -29,17 +31,143 @@ if DEBUG:
     print("DEBUG MODE")
 
 
+BODY_PREVIEW_LENGTH = 300
+
+
+class NBAError(Exception):
+    def __init__(
+        self,
+        message,
+        *,
+        status_code=None,
+        url=None,
+        headers=None,
+        content_type=None,
+        body_preview=None,
+        reason_hint=None,
+        original_exception=None,
+    ):
+        super().__init__(message)
+        self.status_code = status_code
+        self.url = url
+        self.headers = headers
+        self.content_type = content_type
+        self.body_preview = body_preview
+        self.reason_hint = reason_hint
+        self.original_exception = original_exception
+
+
+class NBAHTTPError(NBAError):
+    pass
+
+
+class NBARequestError(NBAError):
+    pass
+
+
+class NBAJSONDecodeError(NBAError, ValueError):
+    pass
+
+
+def _get_content_type(headers):
+    if not headers or not isinstance(headers, Mapping):
+        return None
+    for header, value in headers.items():
+        if header.lower() == "content-type":
+            return value
+    return None
+
+
+def _get_body_preview(contents):
+    if contents is None:
+        return None
+    return str(contents)[:BODY_PREVIEW_LENGTH].strip()
+
+
+def _get_reason_hint(status_code=None, contents=None):
+    preview = _get_body_preview(contents)
+    if not preview:
+        return None
+
+    hint_patterns = [
+        ("access_denied", r"\baccess denied\b|<Code>AccessDenied</Code>"),
+        ("rate_limited", r"\brate limit\b|\btoo many requests\b|\bthrottl\w*\b"),
+        ("not_found", r"\bnot found\b|<Code>NoSuchKey</Code>"),
+        (
+            "service_unavailable",
+            r"\bservice unavailable\b|\btemporarily unavailable\b|\bmaintenance\b",
+        ),
+        ("gateway_error", r"\bbad gateway\b|\bgateway timeout\b|\borigin error\b"),
+    ]
+
+    for hint, pattern in hint_patterns:
+        if re.search(pattern, preview, flags=re.IGNORECASE):
+            return hint
+
+    if status_code == 206:
+        return "partial_content"
+
+    return None
+
+
+def _format_error_context(
+    status_code=None,
+    url=None,
+    content_type=None,
+    body_preview=None,
+    reason_hint=None,
+):
+    context = []
+    if status_code is not None:
+        context.append(f"status={status_code}")
+    if url:
+        context.append(f"url={url}")
+    if content_type:
+        context.append(f"content_type={content_type}")
+    if reason_hint:
+        context.append(f"reason_hint={reason_hint}")
+    if body_preview:
+        context.append(f"body_preview={body_preview!r}")
+    return ", ".join(context)
+
+
 class NBAResponse:
-    def __init__(self, response, status_code, url):
+    def __init__(self, response, status_code, url, headers=None):
         self._response = response
         self._status_code = status_code
         self._url = url
+        self._headers = headers
 
     def get_response(self):
         return self._response
 
     def get_dict(self):
-        return json.loads(self._response)
+        try:
+            return json.loads(self._response)
+        except json.JSONDecodeError as exc:
+            content_type = _get_content_type(self._headers)
+            body_preview = _get_body_preview(self._response)
+            reason_hint = _get_reason_hint(self._status_code, self._response)
+            context = _format_error_context(
+                status_code=self._status_code,
+                url=self._url,
+                content_type=content_type,
+                body_preview=body_preview,
+                reason_hint=reason_hint,
+            )
+            message = "Failed to parse NBA API response as JSON."
+            if context:
+                message = f"{message} {context}"
+            raise NBAJSONDecodeError(
+                message,
+                status_code=self._status_code,
+                url=self._url,
+                headers=self._headers,
+                content_type=content_type,
+                body_preview=body_preview,
+                reason_hint=reason_hint,
+                original_exception=exc,
+            ) from exc
 
     def get_json(self):
         return json.dumps(self.get_dict())
@@ -124,6 +252,7 @@ class NBAHTTP:
         url = None
         status_code = None
         contents = None
+        response_headers = None
         file_path = None
 
         # Sort parameters by key... for some reason this matters for some requests...
@@ -154,24 +283,77 @@ class NBAHTTP:
                 print("loading from file...")
 
         if not contents:
-            response = self.get_session().get(
-                url=base_url,
-                params=parameters,
-                headers=request_headers,
-                proxies=proxies,
-                timeout=timeout,
-            )
+            try:
+                response = self.get_session().get(
+                    url=base_url,
+                    params=parameters,
+                    headers=request_headers,
+                    proxies=proxies,
+                    timeout=timeout,
+                )
+            except requests.RequestException as exc:
+                raise NBARequestError(
+                    f"NBA API request failed. url={base_url}, error={exc}",
+                    url=base_url,
+                    original_exception=exc,
+                ) from exc
             url = response.url
             status_code = response.status_code
+            response_headers = response.headers
             contents = response.text
 
         contents = self.clean_contents(contents)
+        content_type = _get_content_type(response_headers)
+        if status_code is not None and (status_code < 200 or status_code >= 300):
+            body_preview = _get_body_preview(contents)
+            reason_hint = _get_reason_hint(status_code, contents)
+            context = _format_error_context(
+                status_code=status_code,
+                url=url,
+                content_type=content_type,
+                body_preview=body_preview,
+                reason_hint=reason_hint,
+            )
+            raise NBAHTTPError(
+                f"NBA API request failed with HTTP status. {context}",
+                status_code=status_code,
+                url=url,
+                headers=response_headers,
+                content_type=content_type,
+                body_preview=body_preview,
+                reason_hint=reason_hint,
+            )
+
+        if status_code == 206:
+            body_preview = _get_body_preview(contents)
+            context = _format_error_context(
+                status_code=status_code,
+                url=url,
+                content_type=content_type,
+                body_preview=body_preview,
+                reason_hint="partial_content",
+            )
+            raise NBAHTTPError(
+                f"NBA API request returned partial content. {context}",
+                status_code=status_code,
+                url=url,
+                headers=response_headers,
+                content_type=content_type,
+                body_preview=body_preview,
+                reason_hint="partial_content",
+            )
+
         if DEBUG and DEBUG_STORAGE:
             with open(file_path, "w") as f:
                 f.write(contents)
             print(url)
 
-        data = self.nba_response(response=contents, status_code=status_code, url=url)
+        data = self.nba_response(
+            response=contents,
+            status_code=status_code,
+            url=url,
+            headers=response_headers,
+        )
 
         if raise_exception_on_error and not data.valid_json():
             raise Exception("InvalidResponse: Response is not in a valid JSON format.")
