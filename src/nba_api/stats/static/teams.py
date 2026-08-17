@@ -1,6 +1,8 @@
 import re
 
 from nba_api.stats.library.data import (
+    team_conferences,
+    team_divisions,
     team_index_abbreviation,
     team_index_championship_year,
     team_index_city,
@@ -148,3 +150,43 @@ def find_wnba_team_name_by_id(team_id):
 
 def get_wnba_teams():
     return _get_teams(teams=wnba_teams)
+
+
+def get_team_conference(team_id):
+    """Return the conference name ("East" or "West") for an NBA team id,
+    or None if the team id is not an NBA team. WNBA teams are not covered."""
+    return team_conferences.get(team_id)
+
+
+def get_team_division(team_id):
+    """Return the division name for an NBA team id (one of "Atlantic",
+    "Central", "Southeast", "Northwest", "Pacific", "Southwest"), or None
+    if the team id is not an NBA team."""
+    return team_divisions.get(team_id)
+
+
+def find_teams_by_conference(conference):
+    """Return all NBA teams in the given conference. Conference matching
+    is case-insensitive ("East" and "east" both work). Returns an empty
+    list for falsy input."""
+    if not conference:
+        return []
+    target = conference.lower()
+    return [
+        _get_team_dict(team)
+        for team in teams
+        if team_conferences.get(team[team_index_id], "").lower() == target
+    ]
+
+
+def find_teams_by_division(division):
+    """Return all NBA teams in the given division. Division matching is
+    case-insensitive. Returns an empty list for falsy input."""
+    if not division:
+        return []
+    target = division.lower()
+    return [
+        _get_team_dict(team)
+        for team in teams
+        if team_divisions.get(team[team_index_id], "").lower() == target
+    ]
