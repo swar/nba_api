@@ -39,7 +39,16 @@ class NBAResponse:
         return self._response
 
     def get_dict(self):
-        return json.loads(self._response)
+        try:
+            return json.loads(self._response)
+        except json.JSONDecodeError as e:
+            preview = (self._response or "")[:300].strip()
+            raise ValueError(
+                f"""
+                Failed to parse NBA API response as JSON.\n
+                Response preview (first 300 chars): {preview!r}
+                """
+            ) from e
 
     def get_json(self):
         return json.dumps(self.get_dict())
