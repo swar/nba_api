@@ -8,6 +8,8 @@
 
 - [Scripts](scripts.md)
 
+- [Model Context Protocol (MCP) Server](mcp.md)
+
 - NBA API
     - Library
         - Debug 

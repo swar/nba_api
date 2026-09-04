@@ -60,10 +60,13 @@ games.get_dict()
   - Reduce HTTP requests for common and frequently accessed player and team data.
 - [Jupyter Notebooks](https://github.com/swar/nba_api/tree/master/docs/examples)
   - Practical examples in Jupyter Notebook format, including making basic calls, finding games, working with play-by-play data, and interacting with live game data.
+- [Model Context Protocol (MCP) Server](https://github.com/swar/nba_api/blob/master/docs/mcp.md)
+  - Run the official MCP server for AI coding assistants and agents (Claude Desktop, Cursor, Antigravity).
 
 # Documentation
 
 - [Table of Contents](https://github.com/swar/nba_api/tree/master/docs/table_of_contents.md)
+- [Model Context Protocol (MCP) Server](/docs/mcp.md)
 - [Package Structure](https://github.com/swar/nba_api/tree/master/docs/package_structure.md)
 - [Endpoints](/docs/nba_api/stats/endpoints)
 - Static Data Sets

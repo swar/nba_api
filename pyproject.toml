@@ -40,6 +40,14 @@ dependencies = [
 
 readme = "README.md"
 
+[project.optional-dependencies]
+mcp = [
+    "mcp>=1.2.0"
+]
+
+[project.scripts]
+nba-mcp = "nba_api.mcp.server:main"
+
 [project.urls]
     repository = "https://github.com/swar/nba_api"
     "Bug Tracker" = "https://github.com/swar/nba_api/issues"
