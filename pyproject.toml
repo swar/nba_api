@@ -40,6 +40,14 @@ dependencies = [
 
 readme = "README.md"
 
+[project.optional-dependencies]
+mcp = [
+    "mcp>=1.2.0"
+]
+
+[project.scripts]
+nba-mcp = "nba_api.mcp.server:main"
+
 [project.urls]
     repository = "https://github.com/swar/nba_api"
     "Bug Tracker" = "https://github.com/swar/nba_api/issues"
@@ -60,6 +68,7 @@ pandas = [
 ruff = "^0.15.2"
 pre-commit = "^4.0.0"
 pytest-recording = "^0.13.4"
+mcp = ">=1.2.0"
 
 [tool.pytest.ini_options]
 markers = [
