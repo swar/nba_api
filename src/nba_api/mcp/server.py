@@ -30,14 +30,18 @@ if _ServerClass is None:
         "The MCP server requires the 'mcp' extra. Install it with: pip install 'nba-api[mcp]'"
     )
 
-mcp = _ServerClass(
-    "nba-api",
-    description=(
-        "Official NBA API Model Context Protocol server for player statistics, "
-        "game logs, scoreboards, Synergy play types, Second Spectrum shot tracking, "
-        "shot mechanics, and advanced analytics."
-    ),
+_description = (
+    "Official NBA API Model Context Protocol server for player statistics, "
+    "game logs, scoreboards, Synergy play types, Second Spectrum shot tracking, "
+    "shot mechanics, and advanced analytics."
 )
+try:
+    mcp = _ServerClass("nba-api", description=_description)
+except TypeError:
+    try:
+        mcp = _ServerClass("nba-api", instructions=_description)
+    except TypeError:
+        mcp = _ServerClass("nba-api")
 
 DEFAULT_TIMEOUT = 45
 
