@@ -3,6 +3,8 @@ from unittest.mock import MagicMock, patch
 import pandas as pd
 import pytest
 
+pytest.importorskip("mcp", reason="mcp extra not installed")
+
 from nba_api.mcp.server import (
     _find_player,
     _find_team,
