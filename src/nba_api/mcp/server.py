@@ -7,6 +7,7 @@ callable tools for LLMs and AI agents (Cursor, Claude Desktop, Antigravity, Fact
 
 import datetime
 import importlib
+import inspect
 import json
 import time
 import unicodedata
@@ -44,6 +45,15 @@ except TypeError:
         mcp = _ServerClass("nba-api")
 
 DEFAULT_TIMEOUT = 45
+
+
+def _get_default_season() -> str:
+    """Calculate the current active or most recently completed NBA season string."""
+    today = datetime.date.today()
+    if today.month >= 10:
+        return f"{today.year}-{str(today.year + 1)[-2:]}"
+    return f"{today.year - 1}-{str(today.year)[-2:]}"
+
 
 PLAY_TYPE_MAP: dict[str, str] = {
     "prballhandler": "PRBallHandler",
@@ -151,13 +161,13 @@ def _find_team(team_query: str) -> dict[str, Any]:
 
 @mcp.tool()
 def get_player_stats(
-    player: str, season: str | None = "2024-25", per_game: bool = True
+    player: str, season: str | None = None, per_game: bool = True
 ) -> str:
     """Get NBA regular season or career statistics for a player.
 
     Args:
         player: Player name (e.g., 'LeBron James', 'Stephen Curry', 'Luka Doncic')
-        season: Specific season ID (e.g., '2024-25') or None for all career seasons
+        season: Season ID (e.g., '2025-26'), 'career' for all seasons, or None for current season
         per_game: Whether to return per-game averages (True) or season totals (False)
     """
     from nba_api.stats.endpoints import playercareerstats
@@ -171,8 +181,11 @@ def get_player_stats(
         timeout=DEFAULT_TIMEOUT,
     )
     df = call.get_data_frames()[0]
-    if season:
-        df = df[df["SEASON_ID"] == season.strip()]
+    if season and season.strip().lower() in ["career", "all"]:
+        pass
+    else:
+        target_season = season.strip() if season else _get_default_season()
+        df = df[df["SEASON_ID"] == target_season]
 
     cols = [
         "SEASON_ID",
@@ -195,16 +208,17 @@ def get_player_stats(
 
 
 @mcp.tool()
-def get_player_gamelog(player: str, season: str = "2024-25", last_n: int = 10) -> str:
+def get_player_gamelog(player: str, season: str | None = None, last_n: int = 10) -> str:
     """Get recent game-by-game box scores for a player.
 
     Args:
         player: Player name
-        season: Season ID (e.g., '2024-25')
+        season: Season ID (default: current season, e.g. '2025-26')
         last_n: Number of recent games to return (default: 10)
     """
     from nba_api.stats.endpoints import playergamelog
 
+    season = season or _get_default_season()
     p = _find_player(player)
     log = _call_with_retry(
         playergamelog.PlayerGameLog,
@@ -283,15 +297,16 @@ def get_scoreboard(date: str | None = None) -> str:
 
 
 @mcp.tool()
-def get_team_roster(team: str, season: str = "2024-25") -> str:
+def get_team_roster(team: str, season: str | None = None) -> str:
     """Get active team roster, player positions, numbers, and person IDs.
 
     Args:
         team: Team name, city, or abbreviation (e.g. 'Celtics', 'BOS', 'Warriors')
-        season: Season ID (default: 2024-25)
+        season: Season ID (default: current season, e.g. '2025-26')
     """
     from nba_api.stats.endpoints import commonteamroster
 
+    season = season or _get_default_season()
     t = _find_team(team)
     roster = _call_with_retry(
         commonteamroster.CommonTeamRoster,
@@ -320,7 +335,7 @@ def get_synergy_play_types(
     player: str | None = None,
     team: str | None = None,
     grouping: str = "offensive",
-    season: str = "2024-25",
+    season: str | None = None,
     min_poss: int = 20,
     top_n: int = 15,
 ) -> str:
@@ -332,11 +347,13 @@ def get_synergy_play_types(
         player: Filter by player name (optional)
         team: Filter by team name or abbreviation (optional)
         grouping: 'offensive' or 'defensive'
-        season: Season ID (default: 2024-25)
+        season: Season ID (default: current season, e.g. '2025-26')
         min_poss: Minimum possessions threshold (default: 20)
         top_n: Number of top entries to return (default: 15)
     """
     from nba_api.stats.endpoints import synergyplaytypes
+
+    season = season or _get_default_season()
 
     pt = PLAY_TYPE_MAP.get(play_type.lower(), play_type)
     player_or_team = "T" if (team and not player) else "P"
@@ -394,10 +411,14 @@ def get_shot_tracking(
     dribbles: str | None = None,
     defender_dist: str | None = None,
     min_fga: int = 30,
-    season: str = "2024-25",
+    sort_by: str = "FGA",
+    season: str | None = None,
     top_n: int = 15,
 ) -> str:
     """Query Second Spectrum tracking (Pullups, Catch & Shoot, Dribble counts, Defender proximity).
+
+    Use this tool for official, full-season Second Spectrum league-wide tracking leaderboards
+    (Pullups, Catch and Shoot, Defender distance) which cover the entire season without truncation.
 
     Args:
         player: Player name for individual tracking breakdown (optional)
@@ -406,9 +427,11 @@ def get_shot_tracking(
         dribbles: '0 Dribbles', '1 Dribble', '2 Dribbles', '3-6 Dribbles', '7+ Dribbles'
         defender_dist: '0-2 Feet - Very Tight', '2-4 Feet - Tight', '4-6 Feet - Open', '6+ Feet - Wide Open'
         min_fga: Minimum field goal attempts threshold (default: 30)
-        season: Season ID (default: 2024-25)
+        sort_by: Metric column to sort by when league-wide, e.g. 'FGA', 'FG3_PCT', 'EFG_PCT' (default: 'FGA')
+        season: Season ID (default: current season, e.g. '2025-26')
         top_n: Number of top entries to return (default: 15)
     """
+    season = season or _get_default_season()
     if player:
         from nba_api.stats.endpoints import playerdashptshots
 
@@ -468,7 +491,8 @@ def get_shot_tracking(
     df = league_pt.get_data_frames()[0]
     if "FGA" in df.columns:
         df = df[df["FGA"] >= min_fga]
-    df = df.sort_values(by="FGA", ascending=False)
+    sort_col = sort_by if sort_by in df.columns else "FGA"
+    df = df.sort_values(by=sort_col, ascending=False)
     if top_n > 0:
         df = df.head(top_n)
 
@@ -496,21 +520,27 @@ def get_shot_chart_actions(
     action_type: str | None = None,
     shot_type: str | None = None,
     min_fga: int = 10,
-    season: str = "2024-25",
+    season: str | None = None,
     top_n: int = 15,
 ) -> str:
     """Analyze shooting mechanics and action types (Step Back, Fadeaway, Pullup, Floater, etc.).
 
+    NOTE: NBA.com's ShotChartDetail endpoint truncates league-wide queries (player=None)
+    at 102,400 shots (~mid-season). For exact full-season stats of a specific player, always
+    specify player='<Name>'. For un-truncated full-season league-wide pullup and catch-and-shoot
+    leaderboards, use get_shot_tracking.
+
     Args:
-        player: Player name (optional)
+        player: Player name (optional, recommended for complete full-season player stats)
         action_type: Action mechanic filter (e.g. 'Step Back', 'Fadeaway', 'Pullup', 'Floating')
         shot_type: '2pt', '3pt', or None
         min_fga: Minimum attempts threshold (default: 10)
-        season: Season ID (default: 2024-25)
+        season: Season ID (default: current season, e.g. '2025-26')
         top_n: Number of top entries to return (default: 15)
     """
     from nba_api.stats.endpoints import shotchartdetail
 
+    season = season or _get_default_season()
     player_id = _find_player(player)["id"] if player else 0
 
     sc = _call_with_retry(
@@ -525,6 +555,9 @@ def get_shot_chart_actions(
     if df.empty:
         return json.dumps([])
 
+    raw_count = len(df)
+    is_truncated = raw_count >= 100000 and not player
+
     if shot_type:
         st = shot_type.strip().lower()
         if st in ["2pt", "2", "2p"]:
@@ -535,6 +568,9 @@ def get_shot_chart_actions(
     if action_type:
         term = action_type.strip().lower()
         df = df[df["ACTION_TYPE"].str.lower().str.contains(term, na=False)]
+
+    if df.empty:
+        return json.dumps([])
 
     if player and not action_type:
         # Full action repertoire for player
@@ -555,7 +591,15 @@ def get_shot_chart_actions(
             )
             .reset_index()
         )
+        grouped["FG2A"] = grouped["FGA"] - grouped["FG3A"]
+        grouped["FG2M"] = grouped["FGM"] - grouped["FG3M"]
         grouped["FG_PCT"] = (grouped["FGM"] / grouped["FGA"]).round(3)
+        grouped["FG2_PCT"] = (
+            grouped["FG2M"] / grouped["FG2A"].replace(0, float("nan"))
+        ).round(3)
+        grouped["FG3_PCT"] = (
+            grouped["FG3M"] / grouped["FG3A"].replace(0, float("nan"))
+        ).round(3)
         grouped["EFG_PCT"] = (
             (grouped["FGM"] + 0.5 * grouped["FG3M"]) / grouped["FGA"]
         ).round(3)
@@ -584,7 +628,15 @@ def get_shot_chart_actions(
         )
         .reset_index()
     )
+    grouped["FG2A"] = grouped["FGA"] - grouped["FG3A"]
+    grouped["FG2M"] = grouped["FGM"] - grouped["FG3M"]
     grouped["FG_PCT"] = (grouped["FGM"] / grouped["FGA"]).round(3)
+    grouped["FG2_PCT"] = (
+        grouped["FG2M"] / grouped["FG2A"].replace(0, float("nan"))
+    ).round(3)
+    grouped["FG3_PCT"] = (
+        grouped["FG3M"] / grouped["FG3A"].replace(0, float("nan"))
+    ).round(3)
     grouped["EFG_PCT"] = (
         (grouped["FGM"] + 0.5 * grouped["FG3M"]) / grouped["FGA"]
     ).round(3)
@@ -592,7 +644,23 @@ def get_shot_chart_actions(
     grouped = grouped[grouped["FGA"] >= min_fga].sort_values(by="FGA", ascending=False)
     if top_n > 0:
         grouped = grouped.head(top_n)
-    return grouped.to_json(orient="records", indent=2)
+
+    records = json.loads(grouped.to_json(orient="records"))
+    if is_truncated:
+        return json.dumps(
+            {
+                "notice": (
+                    f"NBA.com ShotChartDetail response reached maximum API payload limit "
+                    f"({raw_count} shots) and cuts off around mid-season for league-wide queries. "
+                    f"To obtain 100% complete full-season shot chart data for a specific player, "
+                    f"re-run with player='<Player Name>'. For un-truncated full-season pull-up "
+                    f"or catch-and-shoot leaderboards across the entire league, use get_shot_tracking."
+                ),
+                "data": records,
+            },
+            indent=2,
+        )
+    return json.dumps(records, indent=2)
 
 
 @mcp.tool()
@@ -601,7 +669,7 @@ def get_advanced_stats(
     team: str | None = None,
     min_minutes: int = 500,
     sort_by: str = "TS_PCT",
-    season: str = "2024-25",
+    season: str | None = None,
     top_n: int = 15,
 ) -> str:
     """Query advanced metrics: True Shooting % (TS%), Usage Rate (USG%), Net Rating, PIE.
@@ -611,11 +679,12 @@ def get_advanced_stats(
         team: Filter by team name or abbreviation (optional)
         min_minutes: Minimum total minutes (if > 50) or minutes per game (if <= 50)
         sort_by: Column to sort by (e.g. 'TS_PCT', 'USG_PCT', 'NET_RATING', 'PIE')
-        season: Season ID (default: 2024-25)
+        season: Season ID (default: current season, e.g. '2025-26')
         top_n: Number of top entries to return (default: 15)
     """
     from nba_api.stats.endpoints import leaguedashplayerstats
 
+    season = season or _get_default_season()
     adv = _call_with_retry(
         leaguedashplayerstats.LeagueDashPlayerStats,
         measure_type_detailed_defense="Advanced",
@@ -672,7 +741,7 @@ def get_hustle_stats(
     team: str | None = None,
     min_minutes: int = 15,
     sort_by: str = "DEFLECTIONS",
-    season: str = "2024-25",
+    season: str | None = None,
     top_n: int = 15,
 ) -> str:
     """Query NBA Hustle stats (Deflections, Charges Drawn, Screen Assists, Contested Shots).
@@ -682,11 +751,12 @@ def get_hustle_stats(
         team: Filter by team name or abbreviation (optional)
         min_minutes: Minimum minutes per game (if <= 50) or total minutes (if > 50)
         sort_by: Column to sort by (e.g. 'DEFLECTIONS', 'CHARGES_DRAWN', 'SCREEN_ASSISTS')
-        season: Season ID (default: 2024-25)
+        season: Season ID (default: current season, e.g. '2025-26')
         top_n: Number of top entries to return (default: 15)
     """
     from nba_api.stats.endpoints import leaguehustlestatsplayer
 
+    season = season or _get_default_season()
     hustle = _call_with_retry(
         leaguehustlestatsplayer.LeagueHustleStatsPlayer,
         per_mode_time="PerGame",
@@ -734,14 +804,14 @@ def get_hustle_stats(
 @mcp.tool()
 def query_raw_endpoint(
     endpoint_name: str,
-    params: dict[str, Any] | None = None,
+    params: dict[str, Any] | str | None = None,
     dataset_index: int = 0,
 ) -> str:
     """Execute any endpoint in nba_api.stats.endpoints dynamically.
 
     Args:
-        endpoint_name: Class name in nba_api.stats.endpoints (e.g. 'CommonPlayerInfo')
-        params: Dictionary of kwargs to pass to endpoint constructor
+        endpoint_name: Class name in nba_api.stats.endpoints (e.g. 'CommonPlayerInfo', 'ShotChartDetail')
+        params: Dictionary or JSON string of kwargs to pass to endpoint constructor
         dataset_index: Index of dataset returned by get_data_frames() (default: 0)
     """
     module_name = endpoint_name.lower()
@@ -754,21 +824,84 @@ def query_raw_endpoint(
         if hasattr(ep_pkg, endpoint_name):
             endpoint_cls = getattr(ep_pkg, endpoint_name)
         else:
-            raise ValueError(
-                f"Endpoint '{endpoint_name}' could not be located in nba_api.stats.endpoints."
-            ) from None
+            return json.dumps(
+                {
+                    "error": f"Endpoint '{endpoint_name}' could not be located in nba_api.stats.endpoints."
+                }
+            )
 
-    call_params = dict(params) if params else {}
+    if isinstance(params, str):
+        try:
+            call_params = json.loads(params)
+        except json.JSONDecodeError as err:
+            return json.dumps({"error": f"Invalid JSON string passed in params: {err}"})
+    elif isinstance(params, dict):
+        call_params = dict(params)
+    else:
+        call_params = {}
+
     if "timeout" not in call_params:
         call_params["timeout"] = DEFAULT_TIMEOUT
 
-    instance = _call_with_retry(endpoint_cls, **call_params)
-    data_frames = instance.get_data_frames()
-    if dataset_index >= len(data_frames):
-        raise ValueError(
-            f"Dataset index {dataset_index} out of range (returned {len(data_frames)} datasets)"
-        )
-    return data_frames[dataset_index].to_json(orient="records", indent=2)
+    # Inspect endpoint constructor signature to supply sensible defaults for common required positional args
+    # and map common alias parameters (e.g. season -> season_nullable)
+    try:
+        sig = inspect.signature(endpoint_cls.__init__)
+        sig_params = sig.parameters
+
+        alias_pairs = [
+            ("season", "season_nullable"),
+            ("team_id", "team_id_nullable"),
+            ("player_id", "player_id_nullable"),
+            ("league_id", "league_id_nullable"),
+        ]
+        for standard_key, nullable_key in alias_pairs:
+            if (
+                standard_key in call_params
+                and standard_key not in sig_params
+                and nullable_key in sig_params
+            ):
+                call_params[nullable_key] = call_params.pop(standard_key)
+            elif (
+                nullable_key in call_params
+                and nullable_key not in sig_params
+                and standard_key in sig_params
+            ):
+                call_params[standard_key] = call_params.pop(nullable_key)
+
+        for param_name, param in sig_params.items():
+            if param_name in ("self", "args", "kwargs"):
+                continue
+            if (
+                param.default is inspect.Parameter.empty
+                and param_name not in call_params
+            ):
+                if param_name in (
+                    "team_id",
+                    "player_id",
+                    "team_id_nullable",
+                    "player_id_nullable",
+                ):
+                    call_params[param_name] = 0
+                elif param_name in ("league_id", "league_id_nullable"):
+                    call_params[param_name] = "00"
+                elif param_name in ("season", "season_nullable"):
+                    call_params[param_name] = _get_default_season()
+    except Exception:
+        pass
+
+    try:
+        instance = _call_with_retry(endpoint_cls, **call_params)
+        data_frames = instance.get_data_frames()
+        if dataset_index >= len(data_frames):
+            return json.dumps(
+                {
+                    "error": f"Dataset index {dataset_index} out of range (returned {len(data_frames)} datasets)"
+                }
+            )
+        return data_frames[dataset_index].to_json(orient="records", indent=2)
+    except Exception as err:
+        return json.dumps({"error": str(err)})
 
 
 def main() -> None:
