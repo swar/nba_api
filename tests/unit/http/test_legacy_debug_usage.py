@@ -29,6 +29,7 @@ DEFAULT_LIVE_HEADERS = {
     "Cache-Control": "max-age=0",
     "Connection": "keep-alive",
     "Host": "cdn.nba.com",
+    "Referer": "https://www.nba.com/",
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36",
 }
 
@@ -266,3 +267,139 @@ def test_debug_storage_caching(is_file_cached, monkeypatch):
         assistleaders.AssistLeaders()
 
     assert (not mock_get.called) if is_file_cached else mock_get.called
+
+
+class HTTPTestClientMixin:
+    base_url = "https://cdn.nba.com/static/json/liveData/{endpoint}"
+    headers = DEFAULT_LIVE_HEADERS
+
+
+def send_test_http_response(response):
+    import nba_api.library.http
+
+    class TestHTTP(HTTPTestClientMixin, nba_api.library.http.NBAHTTP):
+        pass
+
+    with patch.object(requests.Session, "get", return_value=response):
+        return TestHTTP().send_api_request("scoreboard/todaysScoreboard_00.json", {})
+
+
+def make_response(
+    *,
+    status_code=200,
+    text=MOCK_LIVE_RESPONSE_TEXT,
+    content_type="application/json",
+):
+    response = Mock()
+    response.url = (
+        "https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json"
+    )
+    response.status_code = status_code
+    response.text = text
+    response.headers = {"Content-Type": content_type}
+    return response
+
+
+@pytest.mark.parametrize(
+    ("status_code", "content_type", "body", "reason_hint"),
+    [
+        (
+            403,
+            "text/html",
+            '<HTML><HEAD><TITLE>Access Denied</TITLE></HEAD><BODY><H1>Access Denied</H1></BODY></HTML>',
+            "access_denied",
+        ),
+        (
+            403,
+            "application/xml",
+            "<?xml version=\"1.0\"?><Error><Code>AccessDenied</Code><Message>Access Denied</Message></Error>",
+            "access_denied",
+        ),
+    ],
+    ids=["akamai_html_access_denied", "s3_xml_access_denied"],
+)
+def test_http_error_includes_response_context(
+    status_code, content_type, body, reason_hint
+):
+    import nba_api.library.http
+
+    response = make_response(
+        status_code=status_code,
+        text=body,
+        content_type=content_type,
+    )
+
+    with pytest.raises(nba_api.library.http.NBAHTTPError) as exc_info:
+        send_test_http_response(response)
+
+    exc = exc_info.value
+    assert exc.status_code == status_code
+    assert exc.content_type == content_type
+    assert exc.reason_hint == reason_hint
+    assert exc.body_preview == body[:300]
+    assert str(status_code) in str(exc)
+    assert reason_hint in str(exc)
+
+
+def test_partial_content_response_raises_http_error():
+    import nba_api.library.http
+
+    response = make_response(
+        status_code=206,
+        text='{"meta":',
+        content_type="text/plain",
+    )
+
+    with pytest.raises(nba_api.library.http.NBAHTTPError) as exc_info:
+        send_test_http_response(response)
+
+    assert exc_info.value.status_code == 206
+    assert exc_info.value.reason_hint == "partial_content"
+    assert exc_info.value.body_preview == '{"meta":'
+
+
+def test_text_plain_json_response_is_allowed():
+    response = make_response(content_type="text/plain")
+
+    data = send_test_http_response(response)
+
+    assert data.get_dict()["scoreboard"]["gameDate"] == "2025-02-25"
+
+
+def test_json_decode_error_includes_response_context():
+    import nba_api.library.http
+
+    response = make_response(
+        status_code=200,
+        text="<html>not json</html>",
+        content_type="text/html",
+    )
+    data = send_test_http_response(response)
+
+    with pytest.raises(nba_api.library.http.NBAJSONDecodeError) as exc_info:
+        data.get_dict()
+
+    exc = exc_info.value
+    assert exc.status_code == 200
+    assert exc.content_type == "text/html"
+    assert exc.body_preview == "<html>not json</html>"
+    assert exc.original_exception is not None
+
+
+def test_request_exception_raises_nba_request_error():
+    import nba_api.library.http
+
+    class TestHTTP(HTTPTestClientMixin, nba_api.library.http.NBAHTTP):
+        pass
+
+    original_exception = requests.Timeout("request timed out")
+    with (
+        patch.object(requests.Session, "get", side_effect=original_exception),
+        pytest.raises(nba_api.library.http.NBARequestError) as exc_info,
+    ):
+        TestHTTP().send_api_request("scoreboard/todaysScoreboard_00.json", {})
+
+    assert exc_info.value.url == TestHTTP.base_url.format(
+        endpoint="scoreboard/todaysScoreboard_00.json"
+    )
+    assert exc_info.value.original_exception is original_exception
