@@ -70,6 +70,8 @@ wnba_teams = [
     [1611661329, "CHI", "Sky", 2005, "Chicago", "Chicago Sky", "Illinois", [2021]],
     [1611661330, "ATL", "Dream", 2008, "Atlanta", "Atlanta Dream", "Georgia", []],
     [1611661331, "GSV", "Valkyries", 2025, "Golden State", "Golden State Valkyries", "California", []],
+    [1611661327, "POR", "Fire", 2026, "Portland", "Portland Fire", "Oregon", []],
+    [1611661332, "TOR", "Tempo", 2026, "Toronto", "Toronto Tempo", "Ontario", []],
 ]
 """
 
