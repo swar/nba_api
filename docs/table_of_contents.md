@@ -174,7 +174,8 @@
 - [Refactoring backlog](../REFACTORING.md)
 - Endpoint tooling
     - [Endpoint analysis format](endpoint_analysis_format.md)
-    - [Endpoint analysis](nba_api/tools/stats/endpoint_analysis/analysis.md)
+    - [Endpoint scope](nba_api/tools/stats/endpoint_scope/scope.md)
+    - [Endpoint analysis (legacy)](nba_api/tools/stats/endpoint_analysis/analysis.md)
     - [Endpoint documentation generator](nba_api/tools/stats/endpoint_documentation_generator/generator.md)
     - [Endpoint .py file generator](nba_api/tools/stats/endpoint_py_file_generator/generator.md)
     - [Parameter documentation generator](nba_api/tools/stats/parameter_documentation_generator/generator.md)
