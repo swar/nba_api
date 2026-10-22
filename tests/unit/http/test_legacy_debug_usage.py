@@ -29,10 +29,8 @@ DEFAULT_LIVE_HEADERS = {
     "Cache-Control": "max-age=0",
     "Connection": "keep-alive",
     "Host": "cdn.nba.com",
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
     "Referer": "https://www.nba.com/",
-    "Sec-Ch-Ua": '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"',
-    "Sec-Fetch-Dest": "empty",
 }
 
 NEW_STATS_HEADERS = {
