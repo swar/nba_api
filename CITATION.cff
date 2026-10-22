@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use nba_api in your research, please cite it as below."
+type: software
+title: "nba_api: an API client for NBA.com"
+authors:
+  - family-names: Patel
+    given-names: Swar
+repository-code: "https://github.com/swar/nba_api"
+url: "https://pypi.org/project/nba_api/"
+license: MIT
+keywords:
+  - nba
+  - basketball
+  - sports
+  - stats
+  - api

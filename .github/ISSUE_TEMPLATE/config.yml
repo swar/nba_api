@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Ask a question on Slack
+    url: https://join.slack.com/t/nbaapi/shared_invite/zt-3dc2qtnh0-udQJoSYrQVWaXOF3owVaAw
+    about: Get help using nba_api, share projects, and discuss the API.
+  - name: Ask on Stack Overflow
+    url: https://stackoverflow.com/questions/tagged/nba-api
+    about: Search or ask questions tagged nba-api.
+  - name: Report a security vulnerability
+    url: https://github.com/swar/nba_api/security/advisories/new
+    about: Please report security problems privately, not as public issues.
