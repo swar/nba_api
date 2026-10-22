@@ -206,8 +206,9 @@ def test_stats_endpoint_customer_proxy_in_legacy_debug_module(
     monkeypatch.setattr(
         target="nba_api.library.debug.debug.PROXY", name=PROXY_URL, raising=False
     )
-    reload_http_modules()  # Reload Modules to ensure patched debug proxy is used
-    proxies = send_endpoint(capture="proxies")
+    monkeypatch.delenv("NBA_API_PROXY", raising=False)
+    with pytest.warns(FutureWarning):
+        proxies = send_endpoint(capture="proxies")
     assert proxies == PROXIES
 
 

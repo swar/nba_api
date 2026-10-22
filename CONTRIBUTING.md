@@ -64,7 +64,7 @@ Run commands with `poetry run <command>`, or activate the environment with `eval
 > Running bare `pytest` also collects integration tests that send real requests to `stats.nba.com`. Those requests are slow and easily throttled. Run `tests/unit` and the `vcr`-marked tests, as above, unless you specifically need live requests.
 
 > [!NOTE]
-> If you set `NBA_API_PROXY` (in your shell or a local `.env`), use `make test-vcr` instead of calling pytest directly. It clears the proxy so recorded responses are replayed rather than sent through the proxy.
+> If you export `NBA_API_PROXY` in your shell, use `make test-vcr` instead of calling pytest directly. It clears the proxy so recorded responses are replayed rather than sent through the proxy.
 
 ### Test conventions
 
