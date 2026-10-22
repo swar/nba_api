@@ -53,8 +53,9 @@ Enabling `DEBUG` and `DEBUG_STORAGE` in [`debug.py`](nba_api/debug.md) caches re
 
 ## `gen-release.sh`
 
-Prepares a release locally: it computes the next version from the Conventional Commits since the last tag, then updates `pyproject.toml` and `CHANGELOG.MD` in a local commit. It doesn't tag or push. See [RELEASE_TESTING.md](../RELEASE_TESTING.md).
+Prepares a release locally. It computes the next version from the Conventional Commits since the last tag, bumps `pyproject.toml`, and renames the hand-written `## Unreleased` section of `CHANGELOG.MD` to `## vX.Y.Z`, in one commit on a new `release/vX.Y.Z` branch. It doesn't tag, push, or build. See [RELEASING.md](../RELEASING.md).
 
 ```bash
-./scripts/gen-release.sh
+./scripts/gen-release.sh --dry-run   # checks + plan, changes nothing
+./scripts/gen-release.sh             # asks before committing
 ```

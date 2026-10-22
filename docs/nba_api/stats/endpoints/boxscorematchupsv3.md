@@ -15,7 +15,7 @@
 ## Data Sets
 #### PlayerStats `player_stats`
 ```text
-["gameId", "teamId", "teamCity", "teamName", "teamTricode", "teamSlug", "personIdOff", "firstNameOff", "familyNameOff", "nameIOff", "playerSlugOff", "jerseyNumOff", "personIdDef", "firstNameDef", "familyNameDef", "nameIDef", "playerSlugDef", "positionDef", "commentDef", "jerseyNumDef", "matchupMinutes", "matchupMinutesSort", "partialPossessions", "percentageDefenderTotalTime", "percentageOffensiveTotalTime", "percentageTotalTimeBothOn", "switchesOn", "playerPoints", "teamPoints", "matchupAssists", "matchupPotentialAssists", "matchupTurnovers", "matchupBlocks", "matchupFieldGoalsMade", "matchupFieldGoalsAttempted", "matchupFieldGoalsPercentage", "matchupThreePointersMade", "matchupThreePointersAttempted", "matchupThreePointersPercentage", "helpBlocks", "helpFieldGoalsMade", "helpFieldGoalsAttempted", "helpFieldGoalsPercentage", "matchupFreeThrowsMade", "matchupFreeThrowsAttempted", "shootingFouls"]
+["gameId", "teamId", "teamCity", "teamName", "teamTricode", "teamSlug", "personIdOff", "firstNameOff", "familyNameOff", "nameIOff", "playerSlugOff", "jerseyNumOff", "personIdDef", "firstNameDef", "familyNameDef", "nameIDef", "playerSlugDef", "positionDef", "commentDef", "jerseyNumDef", "matchupMinutes", "matchupMinutesSort", "partialPossessions", "percentageDefenderTotalTime", "percentageOffensiveTotalTime", "percentageTotalTimeBothOn", "switchesOn", "playerPoints", "teamPoints", "matchupAssists", "matchupPotentialAssists", "matchupTurnovers", "matchupBlocks", "matchupFieldGoalsMade", "matchupFieldGoalsAttempted", "matchupFieldGoalsPercentage", "matchupThreePointersMade", "matchupThreePointersAttempted", "matchupThreePointersPercentage", "helpBlocks", "helpFieldGoalsMade", "helpFieldGoalsAttempted", "helpFieldGoalsPercentage", "matchupFreeThrowsMade", "matchupFreeThrowsAttempted", "shootingFouls", "homeTeamId", "awayTeamId"]
 ```
 
 
@@ -69,7 +69,9 @@
           "helpFieldGoalsPercentage",
           "matchupFreeThrowsMade",
           "matchupFreeThrowsAttempted",
-          "shootingFouls"
+          "shootingFouls", 
+          "homeTeamId", 
+          "awayTeamId"
         ]
     },
     "endpoint": "BoxScoreMatchupsV3",

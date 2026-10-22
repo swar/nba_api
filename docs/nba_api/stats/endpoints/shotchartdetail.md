@@ -41,6 +41,7 @@
 | [_**ContextFilter**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#ContextFilter)   | context_filter_nullable   |                                                                                                                                             |          |   `Y`    | 
 | [_**ClutchTime**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#ClutchTime)         | clutch_time_nullable      |    `^((Last 5 Minutes)\|(Last 4 Minutes)\|(Last 3 Minutes)\|(Last 2 Minutes)\|(Last 1 Minute)\|(Last 30 Seconds)\|(Last 10 Seconds))?$`     |          |   `Y`    | 
 | [_**AheadBehind**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#AheadBehind)       | ahead_behind_nullable     |                                         `^((Ahead or Behind)\|(Ahead or Tied)\|(Behind or Tied))?$`                                         |          |   `Y`    | 
+| [_**ISTRound**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#ISTRound) | ist_round_nullable | `^((Group)\|(East Group A)\|(East Group B)\|(East Group C)\|(West Group A)\|(West Group B)\|(West Group C)\|(Knockout)\|(Championship))?$` |  | `Y` |
 
 ## Data Sets
 #### LeagueAverages `league_averages`

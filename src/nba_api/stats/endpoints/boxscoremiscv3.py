@@ -40,6 +40,8 @@ class BoxScoreMiscV3(Endpoint):
             "blocksAgainst",
             "foulsPersonal",
             "foulsDrawn",
+            "homeTeamId",
+            "awayTeamId",
         ],
         "TeamStats": [
             "gameId",
@@ -61,6 +63,8 @@ class BoxScoreMiscV3(Endpoint):
             "blocksAgainst",
             "foulsPersonal",
             "foulsDrawn",
+            "homeTeamId",
+            "awayTeamId",
         ],
     }
 

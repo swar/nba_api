@@ -60,7 +60,9 @@
             "blocks",
             "blocksAgainst",
             "foulsPersonal",
-            "foulsDrawn"
+            "foulsDrawn", 
+            "homeTeamId", 
+            "awayTeamId"
         ],
         "TeamStats": [
             "gameId",
@@ -81,7 +83,9 @@
             "blocks",
             "blocksAgainst",
             "foulsPersonal",
-            "foulsDrawn"
+            "foulsDrawn", 
+            "homeTeamId", 
+            "awayTeamId"
         ]
     },
     "endpoint": "BoxScoreMiscV3",

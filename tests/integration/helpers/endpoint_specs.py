@@ -9,13 +9,15 @@ import nba_api.stats.endpoints as ep
 from .constants import ALT_PLAYER_ID, GAME_ID, LINEUP_GROUP_ID, PLAYER_ID
 from .models import EndpointSpec
 
+REMOVED_UPSTREAM = "Removed upstream; returns the NBA.com homepage"
+
 # Endpoint specs for smoke testing:
 # - Default parameters will be used, you can override as needed.
 endpoint_specs = [
     # Core/common leaders and trackers
     EndpointSpec(ep.AllTimeLeadersGrids),
-    EndpointSpec(ep.AssistLeaders),
-    EndpointSpec(ep.AssistTracker),
+    EndpointSpec(ep.AssistLeaders, deprecated=REMOVED_UPSTREAM),
+    EndpointSpec(ep.AssistTracker, deprecated=REMOVED_UPSTREAM),
     # Box score and game-level breakdown endpoints
     EndpointSpec(ep.BoxScoreAdvancedV2, deprecated="Likely deprecated in favor of V3"),
     EndpointSpec(ep.BoxScoreAdvancedV3),
@@ -96,7 +98,7 @@ endpoint_specs = [
     EndpointSpec(ep.LeagueGameLog),
     EndpointSpec(ep.LeagueHustleStatsPlayer),
     EndpointSpec(ep.LeagueHustleStatsTeam),
-    EndpointSpec(ep.LeagueLeaders),
+    EndpointSpec(ep.LeagueLeaders, deprecated=REMOVED_UPSTREAM),
     EndpointSpec(ep.LeagueLineupViz),
     EndpointSpec(ep.LeaguePlayerOnDetails),
     EndpointSpec(
@@ -149,7 +151,7 @@ endpoint_specs = [
     EndpointSpec(ep.PlayerProfileV2),
     EndpointSpec(ep.PlayerVsPlayer),
     # Scoreboard, shot, and tracking/advanced endpoints
-    EndpointSpec(ep.PlayoffPicture),
+    EndpointSpec(ep.PlayoffPicture, deprecated=REMOVED_UPSTREAM),
     EndpointSpec(ep.ScoreboardV2),
     EndpointSpec(ep.ShotChartDetail),
     EndpointSpec(ep.ShotChartLeagueWide),

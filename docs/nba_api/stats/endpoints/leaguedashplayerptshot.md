@@ -45,6 +45,7 @@
 | [_**Conference**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Conference)               | conference_nullable           |                                     `^((East)\|(West))?$`                                      |          |   `Y`    | 
 | [_**College**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#College)                     | college_nullable              |                                                                                                |          |   `Y`    | 
 | [_**CloseDefDistRange**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#CloseDefDistRange) | close_def_dist_range_nullable |                                                                                                |          |   `Y`    | 
+| [_**ISTRound**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#ISTRound) | ist_round_nullable | `^((Group)\|(East Group A)\|(East Group B)\|(East Group C)\|(West Group A)\|(West Group B)\|(West Group C)\|(Knockout)\|(Championship))?$` |  | `Y` |
 
 ## Data Sets
 #### LeagueDashPTShots `league_dash_ptshots`
