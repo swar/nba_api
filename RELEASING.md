@@ -9,16 +9,16 @@ The next version is computed by [python-semantic-release](https://python-semanti
 Details for each step are in [Cutting a release](#cutting-a-release). Replace `X.Y.Z` with the version the script prints.
 
 ```bash
-# 1-2. Have an agent prepare the release (it writes the notes and runs the script):
-#        "Prepare the next nba_api release following RELEASING.md"
-#      or by hand:
+# 1-3. Have an agent open the release PR: in Claude Code run /release-pr
+#      (other agents: "Open the nba_api release PR following RELEASING.md").
+#      It writes the notes, runs the script, pushes, and opens the PR. Or by hand:
 git checkout master && git pull --ff-only
 ./scripts/gen-release.sh --context > /tmp/release-context.md   # read this, write /tmp/notes.md
 ./scripts/gen-release.sh --notes /tmp/notes.md                 # creates release/vX.Y.Z with one commit
-
-# 3. Open the release PR, then squash-merge it
 git push -u origin release/vX.Y.Z
 gh pr create --base master --title "chore: release vX.Y.Z"
+
+# Review the PR (especially the CHANGELOG.MD section), then squash-merge it
 
 # 4. Tag the merge commit and create the GitHub release
 git switch master && git pull --ff-only
@@ -87,7 +87,8 @@ These rules are for whoever writes the notes, usually an AI agent working from t
 1. On an up-to-date `master` with a clean tree, run `./scripts/gen-release.sh --context` and read all of it.
 2. Write the notes to a file outside the repo (agents can't edit `CHANGELOG.MD` directly; `.claude/settings.json` denies it).
 3. Run `./scripts/gen-release.sh --notes <file> --yes`. Fix the notes and re-run if it warns about missing PRs; delete the `release/vX.Y.Z` branch first (`git switch master && git branch -D release/vX.Y.Z`).
-4. Show the maintainer `git show` and stop. Pushing, tagging, and publishing are the maintainer's call.
+4. Push the branch (`git push -u origin release/vX.Y.Z`) and open the PR with `gh pr create --base master --title "chore: release vX.Y.Z"`. In the body, put the new changelog section, then the post-merge steps the script printed (tag, GitHub release, Release workflow) as a checklist.
+5. Give the maintainer the PR link and stop. Merging, tagging, and publishing are the maintainer's job; never do them.
 
 **What to include**
 
