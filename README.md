@@ -19,12 +19,13 @@
   <a href="https://join.slack.com/t/nbaapi/shared_invite/zt-3dc2qtnh0-udQJoSYrQVWaXOF3owVaAw">Slack</a>
 </p>
 
-`nba_api` makes the APIs behind [NBA.com](https://www.nba.com/) easy to call from Python, and documents them so you don't have to reverse-engineer them yourself.
+**The NBA's stats, in Python.** `nba_api` wraps 130+ `stats.nba.com` endpoints and the live game feeds behind [NBA.com](https://www.nba.com/), no API key required, and hands stats back as pandas DataFrames.
 
-- **130+ stats endpoints** from `stats.nba.com`: box scores, game logs, shot charts, play-by-play, standings, and more
-- **Live game data** from `cdn.nba.com`: today's scoreboard, live box scores, and play-by-play
-- **Offline player and team lookups**, bundled with the package and accent-insensitive
-- **pandas-ready results**: every data set comes back as a DataFrame, a dict, or JSON
+- **Every corner of NBA.com stats**: player and team stats, box scores, game logs, shot charts, play-by-play, standings, and more, with each endpoint's parameters and data sets documented
+- **Live game data**: scoreboard, box scores, play-by-play, and odds, updated during games
+- **pandas built in**: stats come back as DataFrames, dicts, or JSON
+- **Player and team IDs offline**: reference data ships with the package, so lookups need no request
+- **More than the NBA**: many endpoints also cover the WNBA and G League through `league_id`
 
 ## Installation
 
@@ -36,9 +37,9 @@ Requires Python 3.10+. Installs `requests`, `numpy`, and `pandas`.
 
 ## Quick start
 
-### Find a player or team (no HTTP request)
+### Look up a player or team
 
-Player and team reference data ships with the package, so lookups are instant and offline.
+Player and team reference data ships with the package, so lookups are instant and work offline.
 
 ```python
 from nba_api.stats.static import players, teams
@@ -53,41 +54,36 @@ teams.find_team_by_abbreviation("cle")
 
 Searches take case-insensitive regular expressions, and player name searches ignore accents (`"žydrūnas"` finds `"Zydrunas Ilgauskas"`).
 
-### Official stats (`stats.nba.com`)
+### Get stats from `stats.nba.com`
 
 ```python
 from nba_api.stats.endpoints import playercareerstats
 
 career = playercareerstats.PlayerCareerStats(player_id=1628378)  # sends the request
 
-df = career.season_totals_regular_season.get_data_frame()  # one data set as a pandas DataFrame
+df = career.season_totals_regular_season.get_data_frame()
 df[["SEASON_ID", "TEAM_ABBREVIATION", "PTS"]].tail(3)
 #   SEASON_ID TEAM_ABBREVIATION   PTS
 # 6   2023-24               CLE  1463
 # 7   2024-25               CLE  1701
 # 8   2025-26               CLE  1952
-
-career.get_data_frames()  # every data set, as a list of DataFrames
-career.get_dict()         # the full response as a dict
 ```
 
-Every stats endpoint works the same way: constructing it sends the request, and each data set the endpoint returns is available as an attribute with `get_data_frame()`, `get_dict()`, and `get_json()`. See the [endpoint reference](https://github.com/swar/nba_api/blob/master/docs/table_of_contents.md#reference) for each endpoint's parameters and data sets.
+Every stats endpoint works the same way: constructing it sends the request, and each data set it returns is an attribute with `get_data_frame()`, `get_dict()`, and `get_json()`. To grab everything at once, use `career.get_data_frames()` or `career.get_dict()`. The [endpoint reference](https://github.com/swar/nba_api/blob/master/docs/table_of_contents.md#reference) lists every endpoint's parameters and data sets.
 
-### Live game data (`cdn.nba.com`)
+### Follow live games from `cdn.nba.com`
 
 ```python
 from nba_api.live.nba.endpoints import scoreboard
 
 games = scoreboard.ScoreBoard()  # today's games
-
-games.score_board_date
 cavs = [
     g for g in games.games.get_dict()
     if "CLE" in (g["homeTeam"]["teamTricode"], g["awayTeam"]["teamTricode"])
 ]  # tonight's Cavs game, if they play
 ```
 
-Live endpoints: `ScoreBoard`, `BoxScore(game_id)`, `PlayByPlay(game_id)`, and `Odds`.
+Live endpoints: `ScoreBoard`, `BoxScore(game_id)`, `PlayByPlay(game_id)`, and `Odds`. They return dicts and JSON.
 
 ## Request options
 
@@ -140,4 +136,4 @@ NBA.com does not announce new, changed, or removed endpoints. If you find one, o
 
 Data retrieved with this package comes from NBA.com and is subject to the NBA.com [Terms of Use](https://www.nba.com/termsofuse).
 
-`nba_api` is an independent, community-maintained project. It is not affiliated with, endorsed by, or sponsored by the NBA or NBA Media Ventures, LLC.
+`nba_api` is an independent, community-maintained project and is not affiliated with, endorsed by, or sponsored by the NBA.
