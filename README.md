@@ -25,22 +25,22 @@ Player and team reference data ships with the package, so lookups are instant an
 ```python
 from nba_api.stats.static import players, teams
 
-players.find_players_by_full_name("jokic")
-# [{'id': 203999, 'full_name': 'Nikola Jokić', 'first_name': 'Nikola',
-#   'last_name': 'Jokić', 'is_active': True}]
+players.find_players_by_full_name("donovan mitchell")
+# [{'id': 1628378, 'full_name': 'Donovan Mitchell', 'first_name': 'Donovan',
+#   'last_name': 'Mitchell', 'is_active': True}]
 
-teams.find_team_by_abbreviation("bos")
-# {'id': 1610612738, 'full_name': 'Boston Celtics', 'abbreviation': 'BOS', ...}
+teams.find_team_by_abbreviation("cle")
+# {'id': 1610612739, 'full_name': 'Cleveland Cavaliers', 'abbreviation': 'CLE', ...}
 ```
 
-Searches take case-insensitive regular expressions, and player name searches ignore accents (`"jokic"` matches `"Jokić"`).
+Searches take case-insensitive regular expressions, and player name searches ignore accents.
 
 ### Official stats (`stats.nba.com`)
 
 ```python
 from nba_api.stats.endpoints import playercareerstats
 
-career = playercareerstats.PlayerCareerStats(player_id=203999)  # sends the request
+career = playercareerstats.PlayerCareerStats(player_id=1628378)  # sends the request
 
 career.season_totals_regular_season.get_data_frame()  # one data set as a pandas DataFrame
 career.get_data_frames()                              # every data set, as a list of DataFrames
@@ -57,7 +57,10 @@ from nba_api.live.nba.endpoints import scoreboard
 games = scoreboard.ScoreBoard()  # today's games
 
 games.score_board_date
-games.games.get_dict()
+cavs = [
+    g for g in games.games.get_dict()
+    if "CLE" in (g["homeTeam"]["teamTricode"], g["awayTeam"]["teamTricode"])
+]  # tonight's Cavs game, if they play
 ```
 
 Live endpoints: `ScoreBoard`, `BoxScore(game_id)`, `PlayByPlay(game_id)`, and `Odds`.
@@ -68,7 +71,7 @@ Every endpoint, stats or live, accepts the same request options:
 
 ```python
 career = playercareerstats.PlayerCareerStats(
-    player_id=203999,
+    player_id=1628378,
     timeout=60,                       # seconds; default 30
     proxy="http://127.0.0.1:8080",    # or a list of proxies to pick from at random
     headers={"User-Agent": "..."},    # replaces the default headers entirely
