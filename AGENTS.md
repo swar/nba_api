@@ -111,4 +111,6 @@ applicable), an `EndpointSpec` in `tests/integration/helpers/endpoint_specs.py`,
 ## Further reading
 
 `REFACTORING.md` (known tech debt, e.g. decoupling parsers from `http.py`),
-`RELEASING.md`, `docs/table_of_contents.md`.
+`docs/open_api_findings.md` (audit findings about stats.nba.com not yet handled: bad enum
+values, stale `expected_data`, unsent params, coverage gaps), `RELEASING.md`,
+`docs/table_of_contents.md`.
