@@ -13,7 +13,7 @@ set -euo pipefail
 
 usage() {
     cat <<'EOF'
-Usage: scripts/gen-release.sh [--context | --dry-run] [--notes FILE] [--yes] [--remote NAME]
+Usage: scripts/gen-release.sh [--context | --dry-run] [--notes FILE] [--bump LEVEL] [--yes] [--remote NAME]
 
   --context      Print what's needed to write the release notes (commits since
                  the last tag with their bodies and changed files, plus any
@@ -23,6 +23,9 @@ Usage: scripts/gen-release.sh [--context | --dry-run] [--notes FILE] [--yes] [--
                  "#" or "##".
   --dry-run      Run every check and print the plan; change nothing.
   -y, --yes      Skip the confirmation prompt.
+  --bump LEVEL   Override the version bump the commits imply: patch, minor,
+                 or major. For mislabeled commits (e.g. a data refresh typed
+                 feat:). Can't go below major when a commit is breaking.
   --remote NAME  Remote for swar/nba_api (default: origin).
 
 Without --notes, the "## Unreleased" section of CHANGELOG.MD becomes the notes.
@@ -33,6 +36,7 @@ CONTEXT=false
 DRY_RUN=false
 ASSUME_YES=false
 NOTES_FILE=""
+BUMP=""
 REMOTE=origin
 BASE_BRANCH=master
 CHANGELOG=CHANGELOG.MD
@@ -57,6 +61,14 @@ while [ $# -gt 0 ]; do
         --notes)
             [ $# -ge 2 ] || die "--notes needs a file"
             NOTES_FILE=$2
+            shift
+            ;;
+        --bump)
+            [ $# -ge 2 ] || die "--bump needs a level"
+            case "$2" in
+                patch | minor | major) BUMP=$2 ;;
+                *) die "--bump must be patch, minor, or major (got '$2')" ;;
+            esac
             shift
             ;;
         --remote)
@@ -117,19 +129,52 @@ trap 'rm -f "$psr_log" "$notes"' EXIT
 
 # --strict makes "nothing to release" exit 2 instead of reprinting the current version.
 set +e
-next=$(poetry run semantic-release --strict version --print 2>"$psr_log")
+computed=$(poetry run semantic-release --strict version --print 2>"$psr_log")
 status=$?
 set -e
 if [ "$status" -ne 0 ]; then
-    if grep -q "No release will be made" "$psr_log"; then
-        die "nothing to release: no feat/fix/perf or breaking commits since $last_tag"
+    if ! grep -q "No release will be made" "$psr_log"; then
+        cat "$psr_log" >&2
+        die "semantic-release failed (exit $status); its output is above"
     fi
-    cat "$psr_log" >&2
-    die "semantic-release failed (exit $status); its output is above"
+    [ -n "$BUMP" ] ||
+        die "nothing to release: no feat/fix/perf or breaking commits since $last_tag (pass --bump to release anyway)"
+    computed_level=none
+else
+    computed=$(printf '%s\n' "$computed" | tail -n 1)
+    printf '%s\n' "$computed" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+$' ||
+        die "unexpected version from semantic-release: '$computed'"
 fi
-next=$(printf '%s\n' "$next" | tail -n 1)
-printf '%s\n' "$next" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+$' ||
-    die "unexpected version from semantic-release: '$next'"
+
+IFS=. read -r cur_major cur_minor cur_patch <<EOF
+$current
+EOF
+if [ "${computed_level:-}" != none ]; then
+    IFS=. read -r new_major new_minor _ <<EOF
+$computed
+EOF
+    if [ "$new_major" != "$cur_major" ]; then
+        computed_level=major
+    elif [ "$new_minor" != "$cur_minor" ]; then
+        computed_level=minor
+    else
+        computed_level=patch
+    fi
+fi
+
+case "$BUMP" in
+    "") next=$computed ;;
+    patch) next="$cur_major.$cur_minor.$((cur_patch + 1))" ;;
+    minor) next="$cur_major.$((cur_minor + 1)).0" ;;
+    major) next="$((cur_major + 1)).0.0" ;;
+esac
+if [ "$computed_level" = major ] && [ -n "$BUMP" ] && [ "$BUMP" != major ]; then
+    die "commits since $last_tag include a breaking change, so this must be a major release; --bump $BUMP would hide it"
+fi
+version_note=""
+if [ -n "$BUMP" ] && [ "$BUMP" != "$computed_level" ]; then
+    version_note=" (forced with --bump $BUMP; commits imply $computed_level)"
+fi
 
 release_branch="release/v$next"
 if git show-ref --verify --quiet "refs/heads/$release_branch"; then
@@ -167,12 +212,12 @@ commits() {
 
 if $CONTEXT; then
     cat <<EOF
-# Release context: v$current -> v$next
+# Release context: v$current -> v$next$version_note
 
 Write the notes for v$next from the commits below, following "Writing the
 release notes" in RELEASING.md. Then run:
 
-    ./scripts/gen-release.sh --notes <file> --yes
+    ./scripts/gen-release.sh --notes <file> --yes${BUMP:+ --bump $BUMP}
 
 EOF
     if [ -n "$unreleased" ]; then
@@ -234,7 +279,7 @@ done)
 today=$(date +%F)
 echo
 echo "Release plan"
-echo "  version:   $current -> $next"
+echo "  version:   $current -> $next$version_note"
 echo "  branch:    $release_branch (from $BASE_BRANCH @ $(git rev-parse --short HEAD))"
 echo "  changelog: new '## v$next' section (Date: $today) with notes from $notes_source;"
 echo "             '## Unreleased' is left empty above it"
