@@ -27,6 +27,7 @@ import json
 import os
 import re
 import time
+from contextlib import contextmanager
 from datetime import datetime
 from urllib.parse import parse_qsl, urlencode, urlparse
 
@@ -47,10 +48,29 @@ from tools.stats.endpoint_scope.knowledge import (
 )
 
 GARBAGE = "zz~"
+# Statuses that mean "slow down" or "blocked", never a verdict on a parameter.
+THROTTLE_STATUSES = {403, 429, 502, 503, 504}
+# Extra wait before each retry of a failed or throttled request.
+RETRY_DELAYS = (0, 5, 15)
 # Required args the integration PARAM_DEFAULTS do not cover.
 FALLBACK_ARGS = {"game_date": "2025-01-15"}
 CACHE_DIR = os.path.join(os.path.expanduser("~"), ".cache", "nba_api", "endpoint_scope")
 PRIORS_PATH = os.path.join(CACHE_DIR, "parameter_priors.json")
+
+
+_last_request = [0.0]  # monotonic start time of the last live request, any prober
+
+
+def _wait(seconds):
+    """Sleep so live requests start at least ``seconds`` apart.
+
+    The gap is measured from the previous request's start, so time spent
+    waiting for a response counts towards it.
+    """
+    remaining = _last_request[0] + seconds - time.monotonic()
+    if remaining > 0:
+        time.sleep(remaining)
+    _last_request[0] = time.monotonic()
 
 
 class NetworkError(Exception):
@@ -61,7 +81,7 @@ class Priors:
     """Per-parameter outcomes remembered across endpoints and runs.
 
     Dashboard endpoints share ~30 parameters that fail the same way everywhere
-    (LastNGames, Month, MeasureType, ...). Testing known failures one at a time
+    (LastNGames, Month, MeasureType, ...). Testing likely failures one at a time
     keeps them from poisoning the group tests for everything else.
     """
 
@@ -73,10 +93,26 @@ class Priors:
         self.facts = {}
         if enabled and os.path.exists(path):
             with open(path) as f:
-                self.facts = json.load(f)
+                stored = json.load(f)
+            # A short-lived format nested the names under "names".
+            self.facts = stored.get("names", stored) if "types" in stored else stored
 
     def suspects(self, kind):
         return {name for name, facts in self.facts.items() if facts.get(kind)}
+
+    @staticmethod
+    def _rate(facts, kind):
+        # Older entries have no "seen": count them as seen as often as they failed.
+        seen = facts.get("seen") or max(facts.get(k, 0) for k in Priors.KINDS) or 1
+        return facts.get(kind, 0) / seen
+
+    def likely(self, kind, params, threshold=0.0):
+        """Params whose past failure rate for ``kind`` is above ``threshold``."""
+        return {
+            name
+            for name in params
+            if name in self.facts and self._rate(self.facts[name], kind) > threshold
+        }
 
     def record(self, report):
         if not self.enabled:
@@ -89,8 +125,26 @@ class Priors:
         }
         for name in report["parameters"]:
             facts = self.facts.setdefault(name, dict.fromkeys(self.KINDS, 0))
+            if "seen" not in facts:
+                facts["seen"] = max(facts.get(k, 0) for k in self.KINDS)
+            facts["seen"] += 1
             for kind in self.KINDS:
                 facts[kind] = facts.get(kind, 0) + (name in outcomes[kind])
+
+    def overridden_by(self, report):
+        """A copy in which ``report``'s outcomes replace these for its params.
+
+        An endpoint's own last run predicts its next one better than how the
+        same names behaved elsewhere. Nothing is saved from the copy.
+        """
+        if not self.enabled or not report or "required_parameters" not in report:
+            return self
+        copy = Priors(enabled=False)
+        copy.enabled = True
+        names = set(report["parameters"])
+        copy.facts = {k: v for k, v in self.facts.items() if k not in names}
+        copy.record(report)
+        return copy
 
     def save(self):
         os.makedirs(os.path.dirname(self.path), exist_ok=True)
@@ -114,18 +168,27 @@ class Prober:
         self.timeout = timeout
         self.requests_sent = 0
         self.cache_hits = 0
+        self.phase = "baseline"
+        self.phases = {}
+        self.seconds = 0.0
+        self.log = []  # (phase, parameters, status) for every lookup
+
+    def _count(self, kind):
+        counts = self.phases.setdefault(self.phase, {"sent": 0, "cached": 0})
+        counts[kind] += 1
 
     def _cache_path(self, parameters):
         key = f"{self.endpoint}?{urlencode(sorted(parameters.items()))}"
         digest = hashlib.sha1(key.encode()).hexdigest()
         return os.path.join(CACHE_DIR, f"{self.endpoint}-{digest}.json")
 
-    def send(self, parameters):
+    def send(self, parameters, use_cache=True):
         """Return (status_code, NBAStatsResponse or None)."""
         parameters = {k: ("" if v is None else v) for k, v in parameters.items()}
         cache_path = self._cache_path(parameters)
         fresh = (
-            self.cache_ttl
+            use_cache
+            and self.cache_ttl
             and os.path.exists(cache_path)
             and time.time() - os.path.getmtime(cache_path) < self.cache_ttl
         )
@@ -133,12 +196,17 @@ class Prober:
             with open(cache_path) as f:
                 cached = json.load(f)
             self.cache_hits += 1
+            self._count("cached")
+            self.log.append((self.phase, parameters, cached["status"]))
             response = NBAStatsResponse(cached["body"], cached["status"], cached["url"])
             return cached["status"], response
 
-        for attempt in range(3):
-            time.sleep(self.pause * (attempt + 1))
+        start = time.monotonic()
+        for delay in RETRY_DELAYS:
+            time.sleep(delay)  # backoff counts from the failure, not the request
+            _wait(self.pause)
             self.requests_sent += 1
+            self._count("sent")
             try:
                 response = NBAStatsHTTP().send_api_request(
                     endpoint=self.endpoint,
@@ -146,15 +214,21 @@ class Prober:
                     proxy=self.proxy,
                     timeout=self.timeout,
                 )
-                break
             except requests.exceptions.InvalidSchema as e:
                 raise SystemExit(f"Proxy misconfigured: {redact(e)}") from None
             except requests.exceptions.RequestException as e:
-                last_error = e
+                last_error = f"{type(e).__name__}: {redact(e)}"
+                continue
+            if response._status_code not in THROTTLE_STATUSES:
+                break
+            last_error = f"HTTP {response._status_code} (throttled or blocked?)"
         else:
-            raise NetworkError(f"{type(last_error).__name__}: {redact(last_error)}")
+            self.seconds += time.monotonic() - start
+            raise NetworkError(last_error)
+        self.seconds += time.monotonic() - start
 
         status = response._status_code
+        self.log.append((self.phase, parameters, status))
         os.makedirs(CACHE_DIR, exist_ok=True)
         with open(cache_path, "w") as f:
             json.dump(
@@ -164,6 +238,27 @@ class Prober:
 
     def ok(self, parameters):
         return self.send(parameters)[0] == 200
+
+    def recheck(self, parameters):
+        """Like ``ok``, but always asks the server again."""
+        return self.send(parameters, use_cache=False)[0] == 200
+
+
+@contextmanager
+def phase(prober, name):
+    """Attribute the requests sent inside the block to ``name``."""
+    previous = getattr(prober, "phase", "")
+    prober.phase = name
+    try:
+        yield
+    finally:
+        prober.phase = previous
+
+
+def _confirm(prober, parameters):
+    """A request that only checks a failure the bisection already inferred."""
+    with phase(prober, f"{getattr(prober, 'phase', '')}:confirm"):
+        return prober.ok(parameters)
 
 
 def bisect_failures(params, keys, mutate, prober, interactions=None):
@@ -187,14 +282,14 @@ def _bisect(params, keys, mutate, prober, interactions, inferred):
     if not inferred and prober.ok(mutate(params, keys)):
         return [], True
     if len(keys) == 1:
-        if inferred and prober.ok(mutate(params, keys)):
+        if inferred and _confirm(prober, mutate(params, keys)):
             return [], True
         return list(keys), False
     mid = len(keys) // 2
     left, left_passed = _bisect(params, keys[:mid], mutate, prober, interactions, False)
     right, _ = _bisect(params, keys[mid:], mutate, prober, interactions, left_passed)
     if not left and not right:
-        if inferred and prober.ok(mutate(params, keys)):
+        if inferred and _confirm(prober, mutate(params, keys)):
             return [], True
         interactions.append(sorted(keys))
     return left + right, False
@@ -204,7 +299,8 @@ def find_failures(params, keys, mutate, prober, suspects=(), interactions=None):
     """Like bisect_failures, but tests likely failures one at a time first."""
     likely = [k for k in keys if k in suspects]
     rest = [k for k in keys if k not in suspects]
-    failures = [k for k in likely if not prober.ok(mutate(params, [k]))]
+    with phase(prober, f"{getattr(prober, 'phase', '')}:suspect"):
+        failures = [k for k in likely if not prober.ok(mutate(params, [k]))]
     return failures + bisect_failures(params, rest, mutate, prober, interactions)
 
 
@@ -304,9 +400,14 @@ def scope_endpoint(
     offline=False,
     values=None,
     priors=None,
+    previous=None,
     **prober_kwargs,
 ):
     """Build a report for one endpoint.
+
+    ``previous`` is this endpoint's report from an earlier run, if any: its
+    outcomes are the best guess at what will fail now, though everything is
+    still tested.
 
     ``offline`` reads the baseline from the VCR cassette and skips probing.
     ``values`` is None (skip), an empty set (all validated params), or a set of
@@ -339,7 +440,7 @@ def scope_endpoint(
         if status != 200 or not response.valid_json():
             report["status"] = "baseline-failed"
             report["baseline_body"] = response.get_response()[:300] if response else ""
-            report["requests"] = prober.requests_sent
+            _record_cost(report, prober)
             return report
 
     raw = response.get_dict()
@@ -352,29 +453,36 @@ def scope_endpoint(
 
     if not offline:
         try:
-            probe_parameters(report, params, prober, priors)
+            probe_parameters(report, params, prober, priors.overridden_by(previous))
             priors.record(report)
             if values is not None:
-                report["values"] = discover_values(report, params, cls, prober, values)
+                with phase(prober, "values"):
+                    report["values"] = discover_values(
+                        report, params, cls, prober, values
+                    )
         except NetworkError as e:
             return _network_failure(report, prober, e)
-            for parameter, verdict in report["values"].items():
-                if verdict["library_offers_rejected"]:
-                    report["flags"].append(
-                        f"{parameter}: library offers rejected values"
-                    )
+        for parameter, verdict in report.get("values", {}).items():
+            if verdict["library_offers_rejected"]:
+                report["flags"].append(f"{parameter}: library offers rejected values")
 
     report["status"] = "drift" if report["flags"] else "success"
+    _record_cost(report, prober)
+    return report
+
+
+def _record_cost(report, prober):
     report["requests"] = prober.requests_sent
     report["cache_hits"] = prober.cache_hits
-    return report
+    report["phases"] = prober.phases
+    report["seconds"] = round(prober.seconds, 1)
 
 
 def _network_failure(report, prober, error):
     """Partial probe results are untrustworthy; say so instead of guessing."""
     report["status"] = "network-error"
     report["error"] = str(error)[:200]
-    report["requests"] = prober.requests_sent
+    _record_cost(report, prober)
     return report
 
 
@@ -414,28 +522,109 @@ def describe_response(report, endpoint, cls, response, raw, params):
         report["flags"].append("server accepts params the library does not send")
 
 
-def probe_parameters(report, params, prober, priors=None):
+# How probe_parameters picks what to test one at a time. LEGACY is the
+# algorithm the first full run used; truth.py scores both against ground truth.
+STRATEGY = {
+    "blank_first": True,
+    # Test a param alone when it failed this way on more than this share of the
+    # endpoints it was seen on (below that, a group test is cheaper).
+    "threshold": {"required": 0.0, "non_nullable": 0.2, "crash": 0.3},
+    "priors_beat_hints": True,
+    "merge_drop_groups": True,
+    "drop_priors": True,
+}
+LEGACY_STRATEGY = {
+    **STRATEGY,
+    "blank_first": False,
+    "threshold": {},
+    "priors_beat_hints": False,
+    "merge_drop_groups": False,
+    "drop_priors": False,
+}
+
+
+def recheck_surprises(params, prober, priors, required, non_nullable):
+    """Ask again, uncached, about failures that contradict what is known.
+
+    A transient 500 looks exactly like a required or non-null parameter; the
+    first full run's one wrong decision (CommonTeamRoster TeamID "required")
+    was one. Missing and "" both mean "unset" to the server, so a required
+    param that accepts "" is suspect, as is a failure for a param that never
+    failed that way on two or more other endpoints. That is ~10 requests a run.
+    Removes the failures that do not reproduce from ``required`` and
+    ``non_nullable`` in place.
+    """
+
+    def surprising(name, kind):
+        facts = priors.facts.get(name)
+        return bool(facts) and facts.get("seen", 0) >= 2 and not facts.get(kind)
+
+    recheck = getattr(prober, "recheck", prober.ok)
+    with phase(prober, "recheck"):
+        for key in list(required):
+            suspect = key not in non_nullable or surprising(key, "required")
+            if suspect and recheck(drop(params, [key])):
+                required.remove(key)
+        for key in list(non_nullable):
+            if surprising(key, "non_nullable") and recheck(blank(params, [key])):
+                non_nullable.remove(key)
+
+
+def probe_parameters(report, params, prober, priors=None, strategy=None):
     """Required / nullable / validated parameters by differential probing."""
     priors = priors or Priors(enabled=False)
+    s = {**STRATEGY, **(strategy or {})}
     # Only params with a value can be required or non-nullable in practice; check
     # the blank ones as a single group so a surprise still gets caught.
     keys = sorted(params)
     filled = [k for k in keys if params[k] not in ("", None)]
     empty = [k for k in keys if k not in filled]
     numeric = {k for k in keys if str(params[k]).isdigit()}
-    suspects = priors.suspects("required") | numeric
+    # Numbers are a cold-start hint; what earlier endpoints showed wins. LeagueID
+    # "00" looks numeric but accepted "" on 86 of 117 endpoints.
+    hints = numeric - set(priors.facts) if s["priors_beat_hints"] else numeric
+
+    def likely(kind):
+        return priors.likely(kind, params, s["threshold"].get(kind, 0.0))
+
     interactions = {"drop": [], "blank": []}
-    required = find_failures(
-        params, filled, drop, prober, suspects, interactions["drop"]
-    )
-    required += bisect_failures(params, empty, drop, prober, interactions["drop"])
+
+    def find_required(suspects):
+        with phase(prober, "drop"):
+            if s["merge_drop_groups"]:
+                return find_failures(
+                    params, keys, drop, prober, suspects, interactions["drop"]
+                )
+            found = find_failures(
+                params, filled, drop, prober, suspects, interactions["drop"]
+            )
+            return found + bisect_failures(
+                params, empty, drop, prober, interactions["drop"]
+            )
+
+    def find_non_nullable(suspects):
+        with phase(prober, "blank"):
+            return find_failures(
+                params, filled, blank, prober, suspects, interactions["blank"]
+            )
+
+    if s["blank_first"]:
+        non_nullable = find_non_nullable(likely("non_nullable") | hints)
+        # In a full run 83% of non-null params were required and 1 of ~320
+        # nullable ones was (CommonTeamRoster TeamID): test the former alone and
+        # the latter as a group, which still catches that one. Non-null params
+        # that were never required elsewhere (V3 StartRange, ...) join the group.
+        suspects = set(non_nullable)
+        if s["drop_priors"]:
+            suspects -= {k for k in priors.facts if k not in likely("required")}
+        required = find_required(suspects)
+    else:
+        required = find_required(likely("required") | hints)
+        # Required params almost always reject "" too: test them one at a time
+        # so they don't poison the group tests for everything else.
+        non_nullable = find_non_nullable(set(required) | likely("non_nullable") | hints)
+    recheck_surprises(params, prober, priors, required, non_nullable)
     report["required_parameters"] = sorted(required)
-    # Required params almost always reject "" too: test them one at a time so
-    # they don't poison the group tests for everything else.
-    suspects = set(required) | priors.suspects("non_nullable") | numeric
-    non_nullable = find_failures(
-        params, filled, blank, prober, suspects, interactions["blank"]
-    )
     # Groups that fail although no single key does: e.g. "PlayerID or TeamID".
     report["interactions"] = {k: v for k, v in interactions.items() if v}
     if report["interactions"]:
@@ -448,11 +637,13 @@ def probe_parameters(report, params, prober, priors=None):
     # 400. Params that 500 instead (dates, mostly) poison that request, so the
     # ones known to do so elsewhere are isolated first.
     validated, crashes = {}, {}
-    suspects = [k for k in keys if k in priors.suspects("crash") - numeric]
-    for key in suspects:
-        find_validated(params, [key], prober, validated, crashes)
+    suspects = [k for k in keys if k in likely("crash") - numeric]
+    with phase(prober, "garbage:suspect"):
+        for key in suspects:
+            find_validated(params, [key], prober, validated, crashes)
     others = [k for k in keys if k not in suspects]
-    find_validated(params, others, prober, validated, crashes)
+    with phase(prober, "garbage"):
+        find_validated(params, others, prober, validated, crashes)
     report["validated_parameters"] = validated
     report["type_checked_parameters"] = crashes
     report["numeric_parameters"] = sorted(numeric)
@@ -465,9 +656,41 @@ def probe_parameters(report, params, prober, priors=None):
     report["parameter_patterns"] = dict.fromkeys(keys)
 
 
+def response_data(response):
+    """The data in a response, without the parameter echo and metadata."""
+    if response is None or not response.valid_json():
+        return None
+    body = response.get_dict()
+    if not isinstance(body, dict):
+        return body
+    return {k: v for k, v in body.items() if k not in ("parameters", "params", "meta")}
+
+
+def row_count(data):
+    """Rows across a tabular response's datasets; None if not tabular."""
+    if not isinstance(data, dict):
+        return None
+    sets = data.get("resultSets") or data.get("resultSet")
+    if isinstance(sets, dict):
+        sets = [sets]
+    if not isinstance(sets, list):
+        return None
+    return sum(len(s.get("rowSet", [])) for s in sets if isinstance(s, dict))
+
+
 def discover_values(report, params, cls, prober, only):
-    """Try every value of the related parameters.py classes, one request each."""
+    """Try every value of the related parameters.py classes, one request each.
+
+    A 200 only says the server did not reject a value; it may still ignore it.
+    Values whose data is identical to the baseline's are listed separately as
+    ``no_effect`` (free: the baseline response is cached). When the baseline has
+    no rows that comparison means nothing, so ``no_effect`` is None.
+    """
     library = library_parameter_classes(cls)
+    baseline = response_data(prober.send(params)[1])
+    comparable = row_count(baseline) != 0
+    if not comparable:
+        report["flags"].append("baseline has no rows: value effects not checked")
     results = {}
     for parameter in sorted(report["validated_parameters"]):
         if parameter in SKIP_VALUE_DISCOVERY or parameter not in params:
@@ -478,13 +701,17 @@ def discover_values(report, params, cls, prober, only):
         candidates = sorted(set().union(*family.values())) if family else []
         if not candidates or len(candidates) > MAX_VALUES_PER_PARAMETER:
             continue
-        accepted, rejected = set(), set()
+        accepted, rejected, no_effect = set(), set(), set()
         for value in candidates:
-            status, _ = prober.send({**params, parameter: value})
+            status, response = prober.send({**params, parameter: value})
             (accepted if status == 200 else rejected).add(value)
+            same = status == 200 and response_data(response) == baseline
+            if same and value != str(params[parameter]):
+                no_effect.add(value)
         results[parameter] = summarize_values(
             parameter, family, library.get(parameter), accepted, rejected
         )
+        results[parameter]["no_effect"] = sorted(no_effect) if comparable else None
     return results
 
 
@@ -563,8 +790,10 @@ def format_report(r):
         return "\n".join(lines)
     lines.append(
         f"   format: {r['format']}   requests: {r['requests']}"
-        f" (+{r['cache_hits']} cached)"
+        f" (+{r['cache_hits']} cached)  {r.get('seconds', 0)}s"
     )
+    if r.get("phases"):
+        lines.append(f"   by phase: {format_phases(r['phases'])}")
     for flag in r["flags"]:
         lines.append(f"   ! {flag}")
     for name, headers in r["data_sets"].items():
@@ -603,6 +832,14 @@ def format_report(r):
             line += f"; also accepts: {v['accepted_but_missing_from_library']}"
         lines.append(line)
     return "\n".join(lines)
+
+
+def format_phases(phases):
+    """{"drop": {"sent": 3, "cached": 1}} -> "drop 4" (sent + cached lookups)."""
+    return ", ".join(
+        f"{name} {counts['sent'] + counts['cached']}"
+        for name, counts in sorted(phases.items())
+    )
 
 
 def _clip(items, limit=12):
