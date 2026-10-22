@@ -18,33 +18,38 @@
 # Version History
 ## Unreleased
 
+## v1.11.5
+Date: 2026-10-21
+
+### Changed
+* **Static WNBA Teams Data** - Added the Portland Fire and Toronto Tempo expansion teams, so `get_wnba_teams()` and the `find_wnba_team*` helpers return them (PR [#693](https://github.com/swar/nba_api/pull/693))
+* **Static Players Data** - Refreshed `players` and `wnba_players` from stats.nba.com: added the 2025 draft class and newly listed players, updated active-roster flags for the current season, applied upstream name corrections, and dropped inactive entries the API no longer returns (PR [#687](https://github.com/swar/nba_api/pull/687), PR [#698](https://github.com/swar/nba_api/pull/698))
+
+### Fixed
+* **V3 Normalized Output** - Fixed `get_normalized_dict()` / `get_normalized_json()` returning empty payloads for V3 endpoints by persisting endpoint context and normalizing parser-generated data sets (PR [#606](https://github.com/swar/nba_api/pull/606), fixes #602)
+* **DunkScoreLeaders Parsing** - Fixed response parsing by adding a dedicated parser, registering it in parser dispatch, and aligning expected data keys with the endpoint's nested V3 camelCase payload fields (PR [#598](https://github.com/swar/nba_api/pull/598))
+* **ScheduleLeagueV2** - League schedules now parse correctly regardless of the order of keys in the NBA.com response (PR [#692](https://github.com/swar/nba_api/pull/692))
+* **Static Teams Data** - Added the Boston Celtics' 2024 championship, so `find_teams_by_championship_year(2024)` returns them (PR [#695](https://github.com/swar/nba_api/pull/695))
+* **Win-Loss Example Notebook** - Replaced the `DataFrame.append` call removed in pandas 2 in the Home Team Win-Loss data-prep notebook (PR [#684](https://github.com/swar/nba_api/pull/684))
+
 ### Infrastructure
+* **GitHub Actions CI** - Added GitHub Actions running lint plus unit and VCR tests on Python 3.10–3.13 alongside CircleCI, with a single `CI passed` status check, Conventional Commit PR-title validation, network-blocked test runs, and a lockfile sync check (PR [#704](https://github.com/swar/nba_api/pull/704), PR [#706](https://github.com/swar/nba_api/pull/706))
+* **Release Pipeline** - Releases are now published to PyPI from a GitHub Actions workflow using Trusted Publishing, and `scripts/gen-release.sh` was rewritten to prepare release PRs safely, including agent-written notes and a `--bump` override (PR [#705](https://github.com/swar/nba_api/pull/705), PR [#710](https://github.com/swar/nba_api/pull/710), PR [#711](https://github.com/swar/nba_api/pull/711))
+* **Static Teams Generator** - Added `scripts/static_teams_update/generate_static_teams.py` to refresh championship years and new teams in the static data, with a `--check` mode (PR [#699](https://github.com/swar/nba_api/pull/699))
+* **Integration Season Pinning** - Cassette-backed integration tests now pin season defaults to the recorded season, so they no longer break when the season rolls over each October (PR [#700](https://github.com/swar/nba_api/pull/700))
+* **Live Endpoint Unit Tests** - Mocked the HTTP layer in the live boxscore/odds `get_request_url` tests, which were making real network calls (PR [#686](https://github.com/swar/nba_api/pull/686))
 * **Ruff Tooling** - Replaced `flake8`, `isort`, and `pylint` with `ruff` for linting and formatting; added `pre-commit` hooks to auto-fix on commit (PR [#639](https://github.com/swar/nba_api/pull/639))
 * **Pytest Recording Stack** - Added `pytest-recording` (and `vcrpy`) to dev dependencies; introduced pytest markers for integration test modes (`live`, `vcr`, `canary`, `deprecated_endpoint`) (PR [#640](https://github.com/swar/nba_api/pull/640))
 * **Integration Conftest** - Added `tests/integration/conftest.py` with shared request pacing, cassette directory configuration, and automatic skipping for deprecated endpoint smoke cases (PR [#640](https://github.com/swar/nba_api/pull/640))
 * **VCR Query Matcher** - Updated query matching to ignore dynamic `GameDate` params so cassette playback remains stable in CI (PR [#644](https://github.com/swar/nba_api/pull/644))
+* **VCR Smoke and Scenario Coverage** - Added VCR-backed smoke coverage for ~130 endpoints and scenario/regression coverage for `LeagueDashTeamStats`, `LeagueGameFinder`, `PlayerDashPtShotDefend`, `ScoreboardV3`, `TeamDashLineups`, `TeamGameLog`, and `TeamGameLogs`, with shared validation helpers (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **Test Layout Refactor** - Reorganized integration tests into `tests/integration/smoke/` and `tests/integration/scenarios/`, replaced `deferred_endpoints.py` with `EndpointSpec` (auto-parameter resolution, per-endpoint `skip` / `deprecated` metadata), and reorganized unit tests into package-based folders (PR [#640](https://github.com/swar/nba_api/pull/640), PR [#643](https://github.com/swar/nba_api/pull/643))
+* **Additional Test Coverage** - Added unit tests for `EndpointSpec`, legacy debug/proxy configuration, and `DunkScoreLeaders` / `BoxScoreTraditionalV3` parsing and normalization (PR [#640](https://github.com/swar/nba_api/pull/640), PR [#645](https://github.com/swar/nba_api/pull/645), PR [#598](https://github.com/swar/nba_api/pull/598), PR [#606](https://github.com/swar/nba_api/pull/606))
+* **Integration Test Fixes** - Updated pytest `skip` / `fail` calls to the `reason=` API and temporarily skipped `test_stats_library_playbyplayregex.py` until PlayByPlayV3 normalization is wired up (PR [#640](https://github.com/swar/nba_api/pull/640))
 
-### Refactored
-* **Integration Test Layout** - Reorganized integration tests into `tests/integration/smoke/` and `tests/integration/scenarios/`, replacing the older top-level integration smoke/scenario modules (PR [#640](https://github.com/swar/nba_api/pull/640))
-* **Scenario Data Layout** - Moved scenario test data modules and documentation under `tests/integration/scenarios/data/` and standardized the scenario runner/expectation schema (PR [#640](https://github.com/swar/nba_api/pull/640))
-* **Endpoint Specs Migration** - Replaced `tests/integration/deferred_endpoints.py` with `tests/integration/helpers/endpoint_specs.py` plus shared helper models/constants (PR [#640](https://github.com/swar/nba_api/pull/640))
-* **EndpointSpec Auto-Parameters** - Introduced `EndpointSpec` auto-parameter resolution (from canonical test defaults) to reduce manual endpoint test wiring and support per-endpoint `skip` / `deprecated` metadata (PR [#640](https://github.com/swar/nba_api/pull/640))
-* **Unit Test Package Layout** - Reorganized unit tests into package-based folders (`tests/unit/http/`, `tests/unit/live/endpoints/`, `tests/unit/stats/library/`, etc.) and added missing `__init__.py` modules for reliable imports (PR [#643](https://github.com/swar/nba_api/pull/643))
-
-### Added
-* **VCR Smoke Coverage** - Added broad VCR-backed integration smoke coverage with curated endpoint specs (~130 endpoints) and recorded cassettes under `tests/integration/smoke/cassettes/` (PR [#640](https://github.com/swar/nba_api/pull/640))
-* **VCR Scenario Coverage** - Added VCR-backed scenario/regression coverage for `LeagueDashTeamStats`, `LeagueGameFinder`, `PlayerDashPtShotDefend`, `ScoreboardV3`, `TeamDashLineups`, `TeamGameLog`, and `TeamGameLogs`, plus common sanity checks (PR [#640](https://github.com/swar/nba_api/pull/640))
-* **Integration Helper Utilities** - Added shared integration helper utilities for response validation, dataset structure validation, row-count assertions, and endpoint instantiation checks (PR [#640](https://github.com/swar/nba_api/pull/640))
-* **EndpointSpec Unit Tests** - Added unit tests for integration `EndpointSpec` behavior (`tests/unit/integration/helpers/test_endpoint_spec.py`) (PR [#640](https://github.com/swar/nba_api/pull/640))
-* **Integration Test Documentation** - Added docstrings and integration test-data documentation for the new test layout and workflows (PR [#640](https://github.com/swar/nba_api/pull/640))
-* **Legacy Debug Usage Tests** - Added legacy debug-configuration unit coverage for stats/live HTTP request behavior, proxy/debug flags, and debug cache mode (`tests/unit/http/test_legacy_debug_usage.py`) (PR [#645](https://github.com/swar/nba_api/pull/645))
-* **Parser/Normalization Regression Tests** - Added dedicated regression coverage for `DunkScoreLeaders` and `BoxScoreTraditionalV3` (`tests/unit/stats/endpoints/test_dunkscoreleaders_parser.py`, `tests/unit/stats/endpoints/test_boxscoretraditionalv3_normalized.py`) (PR [#598](https://github.com/swar/nba_api/pull/598), PR [#606](https://github.com/swar/nba_api/pull/606))
-
-### Fixed
-* **Pytest `reason=` API** - Updated pytest `skip` / `fail` calls to use the current `reason=` API in the refactored integration tests (PR [#640](https://github.com/swar/nba_api/pull/640))
-* **PlayByPlayRegex Integration Collection** - Temporarily skipped `tests/integration/test_stats_library_playbyplayregex.py` at module import time (with TODO) because PlayByPlayV3 normalization is not yet wired up, preventing fixture failures during collection (PR [#640](https://github.com/swar/nba_api/pull/640))
-* **DunkScoreLeaders Parsing** - Fixed response parsing by adding a dedicated parser, registering it in parser dispatch, and aligning expected data keys with the endpoint's nested V3 camelCase payload fields (PR [#598](https://github.com/swar/nba_api/pull/598))
-* **V3 Normalized Output** - Fixed `get_normalized_dict()` / `get_normalized_json()` returning empty payloads for V3 endpoints by persisting endpoint context and normalizing parser-generated data sets (PR [#606](https://github.com/swar/nba_api/pull/606), fixes #602)
+### Contributor
+* **Documentation Overhaul** - Updated the README, contributing guide, and debug/HTTP/static docs to match the current codebase; regenerated the table of contents (adding 21 missing endpoints and the live endpoints); and added docs for `DunkScoreLeaders`, `GravityLeaders`, `ScoreboardV3`, and `VideoEventsAsset` (PR [#702](https://github.com/swar/nba_api/pull/702))
+* **AI Agent Guide** - Added `AGENTS.md` / `CLAUDE.md` and shared agent settings for AI coding tools (PR [#701](https://github.com/swar/nba_api/pull/701))
 
 ## v1.11.4
 Date: 2026-02-20
