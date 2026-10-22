@@ -2,19 +2,19 @@
 
 This guide is for maintainers. It covers how a release is cut and how to preview a release safely without publishing anything.
 
-The next version is computed by [python-semantic-release](https://python-semantic-release.readthedocs.io/) (configured under `[tool.semantic_release]` in `pyproject.toml`) from the [Conventional Commits](https://www.conventionalcommits.org/) merged since the last `vX.Y.Z` tag. semantic-release does nothing else here: `CHANGELOG.MD` is written by hand, and publishing is done by the **Release** GitHub Actions workflow.
+The next version is computed by [python-semantic-release](https://python-semantic-release.readthedocs.io/) (configured under `[tool.semantic_release]` in `pyproject.toml`) from the [Conventional Commits](https://www.conventionalcommits.org/) merged since the last `vX.Y.Z` tag. semantic-release does nothing else here. The release notes in `CHANGELOG.MD` are written per release (usually by an AI agent, from the commits), and publishing is done by the **Release** GitHub Actions workflow.
 
 ## Quick checklist
 
 Details for each step are in [Cutting a release](#cutting-a-release). Replace `X.Y.Z` with the version the script prints.
 
 ```bash
-# 1. Write the notes under "## Unreleased" in CHANGELOG.MD; the dry run lists missing PRs
+# 1-2. Have an agent prepare the release (it writes the notes and runs the script):
+#        "Prepare the next nba_api release following RELEASING.md"
+#      or by hand:
 git checkout master && git pull --ff-only
-./scripts/gen-release.sh --dry-run
-
-# 2. Bump the version and date the changelog (creates release/vX.Y.Z with one commit)
-./scripts/gen-release.sh
+./scripts/gen-release.sh --context > /tmp/release-context.md   # read this, write /tmp/notes.md
+./scripts/gen-release.sh --notes /tmp/notes.md                 # creates release/vX.Y.Z with one commit
 
 # 3. Open the release PR, then squash-merge it
 git push -u origin release/vX.Y.Z
@@ -44,20 +44,28 @@ git branch -D release/vX.Y.Z
 
 ## Cutting a release
 
-1. **Write the notes.** Make sure the `## Unreleased` section of `CHANGELOG.MD` describes everything user-facing since the last release. A dry run lists any `feat:`/`fix:`/`perf:` commits whose PR number isn't mentioned there:
+1. **Write the notes.** Get the release context, then write this release's notes to a file outside the repo, following [Writing the release notes](#writing-the-release-notes):
 
    ```bash
    git checkout master && git pull --ff-only
-   ./scripts/gen-release.sh --dry-run
+   ./scripts/gen-release.sh --context > /tmp/release-context.md
    ```
 
-2. **Prepare.** Run the script for real:
+   The context covers every commit since the last tag (first-parent, so one entry per merged PR), with its PR link, changed files and commit body, plus any notes already under `## Unreleased`. It changes nothing.
+
+2. **Prepare.** Run the script with the notes:
 
    ```bash
-   ./scripts/gen-release.sh
+   ./scripts/gen-release.sh --notes /tmp/notes.md --dry-run   # optional: check the plan first
+   ./scripts/gen-release.sh --notes /tmp/notes.md
    ```
 
-   First it checks that you're on `master`, the working tree is clean, `master` matches the remote (after fetching tags), and `pyproject.toml` matches the latest tag. Then it shows the next version and asks for confirmation. On a yes, it creates a `release/vX.Y.Z` branch with one commit, `chore: release vX.Y.Z`. That commit bumps `pyproject.toml` and renames `## Unreleased` to `## vX.Y.Z` with today's date, leaving a new empty `## Unreleased` above it. Nothing is tagged, pushed, or built. It stops with an error, changing nothing, if there's nothing to release or the Unreleased section is empty. Run `--help` for options.
+   First it checks that you're on `master`, the working tree is clean, `master` matches the remote (after fetching tags), and `pyproject.toml` matches the latest tag. Then it shows the next version, warns about any `feat:`/`fix:`/`perf:` PR missing from the notes, and asks for confirmation (`--yes` skips the prompt). On a yes, it creates a `release/vX.Y.Z` branch with one commit, `chore: release vX.Y.Z`. That commit:
+   - bumps `pyproject.toml`;
+   - adds a `## vX.Y.Z` section with today's date and the notes;
+   - replaces anything under `## Unreleased`, leaving the heading empty.
+
+   Nothing is tagged, pushed, or built. It stops with an error, changing nothing, if there's nothing to release or the notes are empty or contain `#`/`##` headings. Without `--notes`, the existing `## Unreleased` section is used as the notes. Run `--help` for options.
 
 3. **Review and open a PR.** Check the commit with `git show` (amend it to reword the changelog), then push the branch and open a PR titled `chore: release vX.Y.Z`. The script prints the exact commands.
 
@@ -70,13 +78,50 @@ git branch -D release/vX.Y.Z
 > [!WARNING]
 > Don't run `semantic-release version` directly. The script only uses it to compute the version. The config uses changelog `mode = "update"` with a marker that `CHANGELOG.MD` never contains, so a stray run can't regenerate (and wipe) the hand-written changelog. It would still bump the version, commit, tag, and (by default) push.
 
-The CircleCI `release` job (`.circleci/config.yml`) runs `semantic-release publish` on every `master` build. With python-semantic-release v9 that only uploads `dist/*` to the latest GitHub release, and `dist/` is never built there, so it doesn't publish anything. It goes away when CircleCI is retired.
+## Writing the release notes
 
-### One-time setup for the Release workflow
+These rules are for whoever writes the notes, usually an AI agent working from the `--context` output.
+
+**Procedure for agents**
+
+1. On an up-to-date `master` with a clean tree, run `./scripts/gen-release.sh --context` and read all of it.
+2. Write the notes to a file outside the repo (agents can't edit `CHANGELOG.MD` directly; `.claude/settings.json` denies it).
+3. Run `./scripts/gen-release.sh --notes <file> --yes`. Fix the notes and re-run if it warns about missing PRs; delete the `release/vX.Y.Z` branch first (`git switch master && git branch -D release/vX.Y.Z`).
+4. Show the maintainer `git show` and stop. Pushing, tagging, and publishing are the maintainer's call.
+
+**What to include**
+
+- Every `feat:`, `fix:`, and `perf:` PR, plus anything else a user of the package would notice: new or removed endpoints, parameters, or datasets; behavior changes; deprecations; dependency floor changes; static data updates. A `fix:` that only touches tests goes under `Infrastructure`.
+- Carry over still-relevant entries from the existing `## Unreleased` notes. `--notes` replaces them.
+- Skip pure noise: release commits, formatting-only changes, merge-branch commits. Group related internal changes (CI, tooling, test refactors) into a few `Infrastructure` entries instead of one per commit.
+- Read the commit bodies and changed files, not just subjects. Describe the user-visible effect, not the implementation. If a PR fixes an issue, say so (`fixes #602`).
+- Breaking changes (`!` or `BREAKING CHANGE:`) go first, in a `### Breaking Changes` section that says what users must change.
+
+**Format** (match the `v1.11.4` section of `CHANGELOG.MD`)
+
+- Sections, in this order and only when non-empty: `### Breaking Changes`, `### Added`, `### Changed`, `### Deprecated`, `### Removed`, `### Fixed`, `### Security`, `### Infrastructure`, `### Contributor`. Use `###` and deeper only.
+- One bullet per change: ``* **Name** - What changed, in one or two sentences (PR [#123](https://github.com/swar/nba_api/pull/123))``. `Name` is the endpoint, class, or feature (`**LeagueGameFinder**`, `**Static Teams Data**`). Put code identifiers in backticks.
+- Several PRs for one change: `(PR [#1](...), PR [#2](...))`.
+
+Example:
+
+```markdown
+### Added
+* **Static Teams Data** - Added the Portland Fire and Toronto Tempo WNBA expansion teams (PR [#693](https://github.com/swar/nba_api/pull/693))
+
+### Fixed
+* **ScheduleLeagueV2** - League schedules now parse regardless of the order of keys in the NBA.com response (PR [#692](https://github.com/swar/nba_api/pull/692))
+```
+
+## One-time setup for the Release workflow
+
+Already done for `swar/nba_api`; kept for reference.
 
 1. On [PyPI](https://pypi.org/manage/project/nba_api/settings/publishing/), add a trusted publisher: owner `swar`, repository `nba_api`, workflow `release.yml`, environment `pypi`. To rehearse, do the same on [TestPyPI](https://test.pypi.org/) with environment `testpypi`.
 2. In GitHub → *Settings* → *Environments*, create `pypi` and `testpypi`. On `pypi`, add yourself as a required reviewer and limit deployments to the `master` branch (the branch the workflow is run from; the tag is an input).
 3. Rehearse with target `testpypi` before the first real run. Each version can only be uploaded once per index.
+
+The CircleCI `release` job (`.circleci/config.yml`) runs `semantic-release publish` on every `master` build. With python-semantic-release v9 that only uploads `dist/*` to the latest GitHub release, and `dist/` is never built there, so it doesn't publish anything. It goes away when CircleCI is retired.
 
 ## Previewing a release safely
 
