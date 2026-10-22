@@ -297,6 +297,7 @@ class TeamDashboardByShootingSplits(Endpoint):
         shot_clock_range_nullable=ShotClockRangeNullable.default,
         vs_conference_nullable=ConferenceNullable.default,
         vs_division_nullable=DivisionNullable.default,
+        ist_round_nullable=None,
         proxy=None,
         headers=None,
         timeout=30,
@@ -330,6 +331,7 @@ class TeamDashboardByShootingSplits(Endpoint):
             "ShotClockRange": shot_clock_range_nullable,
             "VsConference": vs_conference_nullable,
             "VsDivision": vs_division_nullable,
+            "ISTRound": ist_round_nullable,
         }
         if get_request:
             self.get_request()

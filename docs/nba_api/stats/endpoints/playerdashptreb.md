@@ -28,6 +28,7 @@
 | [_**GameSegment**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#GameSegment)       | game_segment_nullable     |                         `^((First Half)\|(Overtime)\|(Second Half))?$`                         |   `Y`    |   `Y`    | 
 | [_**DateTo**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DateTo)                 | date_to_nullable          |                                                                                                |   `Y`    |   `Y`    | 
 | [_**DateFrom**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DateFrom)             | date_from_nullable        |                                                                                                |   `Y`    |   `Y`    | 
+| [_**ISTRound**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#ISTRound) | ist_round_nullable | `^((Group)\|(East Group A)\|(East Group B)\|(East Group C)\|(West Group A)\|(West Group B)\|(West Group C)\|(Knockout)\|(Championship))?$` |  | `Y` |
 
 ## Data Sets
 #### NumContestedRebounding `num_contested_rebounding`

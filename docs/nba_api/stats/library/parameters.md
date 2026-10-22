@@ -987,6 +987,25 @@ _**none**_ `default` |
 _**season**_ | `0`
 _**all_time**_ | `1`
 
+## _ISTRound_
+
+#### Class `ISTRoundNullable`
+##### Patterns 
+ - `^((Group)|(East Group A)|(East Group B)|(East Group C)|(West Group A)|(West Group B)|(West Group C)|(Knockout)|(Championship))?$`
+
+Variable Name | Value
+------------ | -------------
+_**none**_ `default` | 
+_**group**_ | `Group`
+_**east_group_a**_ | `East Group A`
+_**east_group_b**_ | `East Group B`
+_**east_group_c**_ | `East Group C`
+_**west_group_a**_ | `West Group A`
+_**west_group_b**_ | `West Group B`
+_**west_group_c**_ | `West Group C`
+_**knockout**_ | `Knockout`
+_**championship**_ | `Championship`
+
 ## _IsOnlyCurrentSeason_
 No available information.
 
