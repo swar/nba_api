@@ -14,7 +14,7 @@ add new things alongside old ones.
 
 ## Commands
 
-Run everything through Poetry. These mirror CI (`.circleci/config.yml`):
+Run everything through Poetry. These mirror CI (`.github/workflows/ci.yml`):
 
 ```bash
 poetry install                                   # set up env
@@ -105,7 +105,7 @@ applicable), an `EndpointSpec` in `tests/integration/helpers/endpoint_specs.py`,
 
 - Changing public endpoint/parameter/dataset names or signatures.
 - Adding runtime dependencies (keep the dependency list minimal: requests, numpy, pandas).
-- Touching release config (`[tool.semantic_release]`, `.circleci/`, `scripts/gen-release.sh`).
+- Touching release config (`[tool.semantic_release]`, `.github/workflows/`, `scripts/gen-release.sh`).
 - Anything that publishes: `semantic-release`, `poetry publish`, pushing tags.
 
 ## Further reading
