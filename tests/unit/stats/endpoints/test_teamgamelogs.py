@@ -1,6 +1,7 @@
 """Unit tests for TeamGameLogs endpoint."""
 
 from nba_api.stats.endpoints import TeamGameLogs
+from nba_api.stats.library.parameters import Season
 
 
 class TestTeamGameLogsInitialization:
@@ -41,6 +42,13 @@ class TestTeamGameLogsInitialization:
         assert endpoint.parameters["Location"] == "Home"
         assert endpoint.parameters["Outcome"] == "W"
         assert endpoint.parameters["LastNGames"] == "10"
+
+    def test_season_defaults_to_current_season(self):
+        """The server answers 500 when Season is blank, so it defaults to the
+        current season instead."""
+        endpoint = TeamGameLogs(get_request=False)
+
+        assert endpoint.parameters["Season"] == Season.default
 
     def test_conference_and_division_filters(self):
         """Test conference and division filtering parameters."""
