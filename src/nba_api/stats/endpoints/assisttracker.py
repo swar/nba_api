@@ -3,7 +3,7 @@ AssistTracker endpoint.
 
 .. deprecated:: 2026-27
     This endpoint is deprecated. There is no direct replacement.
-    The NBA API no longer returns data for AssistTracker (requests redirect to the NBA.com homepage).
+    The NBA API no longer returns data for AssistTracker (it returns the NBA.com homepage instead).
 """
 
 import warnings
@@ -37,7 +37,7 @@ class AssistTracker(Endpoint):
     .. deprecated:: 2026-27
         **DEPRECATION WARNING:** This endpoint is deprecated.
         There is no direct replacement.
-        The NBA API no longer returns data for AssistTracker (requests redirect to the NBA.com homepage).
+        The NBA API no longer returns data for AssistTracker (it returns the NBA.com homepage instead).
     """
 
     endpoint = "assisttracker"
@@ -87,7 +87,7 @@ class AssistTracker(Endpoint):
         warnings.warn(
             "AssistTracker is deprecated and will be removed in a future version. "
             "There is no direct replacement. "
-            "The NBA API no longer returns data for AssistTracker (requests redirect to the NBA.com homepage).",
+            "The NBA API no longer returns data for AssistTracker (it returns the NBA.com homepage instead).",
             DeprecationWarning,
             stacklevel=2,
         )

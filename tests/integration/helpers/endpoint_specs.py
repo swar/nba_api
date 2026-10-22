@@ -9,7 +9,7 @@ import nba_api.stats.endpoints as ep
 from .constants import ALT_PLAYER_ID, GAME_ID, LINEUP_GROUP_ID, PLAYER_ID
 from .models import EndpointSpec
 
-REMOVED_UPSTREAM = "Removed upstream; redirects to the NBA.com homepage"
+REMOVED_UPSTREAM = "Removed upstream; returns the NBA.com homepage"
 
 # Endpoint specs for smoke testing:
 # - Default parameters will be used, you can override as needed.

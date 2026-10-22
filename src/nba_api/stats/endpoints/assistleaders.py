@@ -3,7 +3,7 @@ AssistLeaders endpoint.
 
 .. deprecated:: 2026-27
     This endpoint is deprecated. Please use LeagueDashPlayerStats or LeagueDashTeamStats for assist totals instead.
-    The NBA API no longer returns data for AssistLeaders (requests redirect to the NBA.com homepage).
+    The NBA API no longer returns data for AssistLeaders (it returns the NBA.com homepage instead).
 """
 
 import warnings
@@ -26,7 +26,7 @@ class AssistLeaders(Endpoint):
     .. deprecated:: 2026-27
         **DEPRECATION WARNING:** This endpoint is deprecated.
         Please use :class:`~nba_api.stats.endpoints.LeagueDashPlayerStats` or :class:`~nba_api.stats.endpoints.LeagueDashTeamStats` for assist totals instead.
-        The NBA API no longer returns data for AssistLeaders (requests redirect to the NBA.com homepage).
+        The NBA API no longer returns data for AssistLeaders (it returns the NBA.com homepage instead).
     """
 
     endpoint = "assistleaders"
@@ -55,7 +55,7 @@ class AssistLeaders(Endpoint):
         warnings.warn(
             "AssistLeaders is deprecated and will be removed in a future version. "
             "Please use LeagueDashPlayerStats or LeagueDashTeamStats for assist totals instead. "
-            "The NBA API no longer returns data for AssistLeaders (requests redirect to the NBA.com homepage).",
+            "The NBA API no longer returns data for AssistLeaders (it returns the NBA.com homepage instead).",
             DeprecationWarning,
             stacklevel=2,
         )

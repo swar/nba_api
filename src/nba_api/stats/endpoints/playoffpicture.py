@@ -3,7 +3,7 @@ PlayoffPicture endpoint.
 
 .. deprecated:: 2026-27
     This endpoint is deprecated. Please use LeagueStandingsV3 for playoff seeding and clinch status instead.
-    The NBA API no longer returns data for PlayoffPicture (requests redirect to the NBA.com homepage).
+    The NBA API no longer returns data for PlayoffPicture (it returns the NBA.com homepage instead).
 """
 
 import warnings
@@ -20,7 +20,7 @@ class PlayoffPicture(Endpoint):
     .. deprecated:: 2026-27
         **DEPRECATION WARNING:** This endpoint is deprecated.
         Please use :class:`~nba_api.stats.endpoints.LeagueStandingsV3` for playoff seeding and clinch status instead.
-        The NBA API no longer returns data for PlayoffPicture (requests redirect to the NBA.com homepage).
+        The NBA API no longer returns data for PlayoffPicture (it returns the NBA.com homepage instead).
     """
 
     endpoint = "playoffpicture"
@@ -211,7 +211,7 @@ class PlayoffPicture(Endpoint):
         warnings.warn(
             "PlayoffPicture is deprecated and will be removed in a future version. "
             "Please use LeagueStandingsV3 for playoff seeding and clinch status instead. "
-            "The NBA API no longer returns data for PlayoffPicture (requests redirect to the NBA.com homepage).",
+            "The NBA API no longer returns data for PlayoffPicture (it returns the NBA.com homepage instead).",
             DeprecationWarning,
             stacklevel=2,
         )

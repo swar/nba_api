@@ -3,7 +3,7 @@ LeagueLeaders endpoint.
 
 .. deprecated:: 2026-27
     This endpoint is deprecated. Please use LeagueDashPlayerStats for per-player totals and ranks instead.
-    The NBA API no longer returns data for LeagueLeaders (requests redirect to the NBA.com homepage).
+    The NBA API no longer returns data for LeagueLeaders (it returns the NBA.com homepage instead).
 """
 
 import warnings
@@ -27,7 +27,7 @@ class LeagueLeaders(Endpoint):
     .. deprecated:: 2026-27
         **DEPRECATION WARNING:** This endpoint is deprecated.
         Please use :class:`~nba_api.stats.endpoints.LeagueDashPlayerStats` for per-player totals and ranks instead.
-        The NBA API no longer returns data for LeagueLeaders (requests redirect to the NBA.com homepage).
+        The NBA API no longer returns data for LeagueLeaders (it returns the NBA.com homepage instead).
     """
 
     endpoint = "leagueleaders"
@@ -86,7 +86,7 @@ class LeagueLeaders(Endpoint):
         warnings.warn(
             "LeagueLeaders is deprecated and will be removed in a future version. "
             "Please use LeagueDashPlayerStats for per-player totals and ranks instead. "
-            "The NBA API no longer returns data for LeagueLeaders (requests redirect to the NBA.com homepage).",
+            "The NBA API no longer returns data for LeagueLeaders (it returns the NBA.com homepage instead).",
             DeprecationWarning,
             stacklevel=2,
         )
