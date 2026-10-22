@@ -1,0 +1,116 @@
+# Port of the `main` job in .circleci/config.yml. Runs alongside CircleCI until
+# cutover; see docs/ci-improvements.md.
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  # Supersede stale PR runs; never cancel a run on master.
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  # Matches the Poetry that generated poetry.lock.
+  POETRY_VERSION: "2.3.2"
+  PYTHONUNBUFFERED: "1"
+  FORCE_COLOR: "1"
+
+jobs:
+  lint:
+    name: Lint (ruff)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install Poetry
+        run: pipx install "poetry==${POETRY_VERSION}"
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.13"
+          cache: poetry
+      - name: Install dependencies
+        run: poetry install --no-ansi --no-interaction
+      - name: ruff check
+        run: poetry run ruff check --output-format=github
+      - name: ruff format --check
+        run: poetry run ruff format --check
+
+  test:
+    name: Tests (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install Poetry
+        run: pipx install "poetry==${POETRY_VERSION}"
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: poetry
+      - name: Install dependencies
+        run: poetry install --no-ansi --no-interaction
+      - name: Unit tests
+        run: poetry run pytest tests/unit
+      - name: Integration tests (VCR cassette replay)
+        # A proxy would intercept cassette replay; keep it blank in CI.
+        env:
+          NBA_API_PROXY: ""
+        run: poetry run pytest tests/integration -m vcr
+
+  # CircleCI ran the Snyk orb on non-PR builds only; same here. Needs a
+  # SNYK_TOKEN repository secret and is skipped until one is added.
+  snyk:
+    name: Dependency scan (Snyk)
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+    steps:
+      - name: Check for SNYK_TOKEN
+        id: token
+        run: |
+          if [ -n "$SNYK_TOKEN" ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::SNYK_TOKEN is not set; skipping Snyk scan."
+          fi
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        if: steps.token.outputs.present
+        with:
+          persist-credentials: false
+      - name: Install Poetry
+        if: steps.token.outputs.present
+        run: pipx install "poetry==${POETRY_VERSION}"
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        if: steps.token.outputs.present
+        with:
+          python-version: "3.13"
+          cache: poetry
+      - name: Install dependencies
+        if: steps.token.outputs.present
+        run: poetry install --no-ansi --no-interaction
+      - uses: snyk/actions/setup@9adf32b1121593767fc3c057af55b55db032dc04 # v1.0.0
+        if: steps.token.outputs.present
+      # Same as the orb's defaults: test, then monitor.
+      - name: snyk test
+        if: steps.token.outputs.present
+        run: snyk test
+      - name: snyk monitor
+        if: steps.token.outputs.present && github.ref == 'refs/heads/master'
+        run: snyk monitor

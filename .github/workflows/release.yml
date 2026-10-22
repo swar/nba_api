@@ -1,0 +1,99 @@
+# Replacement for the `release` job in .circleci/config.yml.
+#
+# The CircleCI job runs `semantic-release publish`, which in python-semantic-release
+# v9 only uploads dist/* to the latest GitHub release. It never builds, so dist/ is
+# empty and nothing is uploaded; `upload_to_pypi` is a v7 setting that v9 ignores.
+# PyPI publishing is actually the manual `poetry publish` in scripts/gen-release.sh.
+#
+# This workflow does that publish from CI instead, for an existing release tag:
+# build once, check the version, upload to PyPI via Trusted Publishing (no API
+# token), and attach the files to the GitHub release.
+#
+# Manual trigger only until the maintainer finishes the setup in
+# docs/ci-improvements.md (PyPI trusted publisher + `pypi` environment).
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Existing release tag to build and publish (e.g. v1.11.5)"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+env:
+  POETRY_VERSION: "2.3.2"
+
+jobs:
+  build:
+    name: Build distributions
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: refs/tags/${{ inputs.tag }}
+          persist-credentials: false
+      - name: Install Poetry
+        run: pipx install "poetry==${POETRY_VERSION}"
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.13"
+      - name: Check tag matches pyproject version
+        env:
+          TAG: ${{ inputs.tag }}
+        run: |
+          version="$(poetry version --short)"
+          if [ "v${version}" != "${TAG}" ]; then
+            echo "::error::Tag ${TAG} does not match pyproject.toml version ${version}"
+            exit 1
+          fi
+      - name: Build
+        run: poetry build --no-ansi
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: dist
+          path: dist/
+          if-no-files-found: error
+
+  pypi:
+    name: Publish to PyPI
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: pypi
+      url: https://pypi.org/project/nba_api/
+    permissions:
+      id-token: write # Trusted Publishing
+    steps:
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: dist
+          path: dist/
+      - uses: pypa/gh-action-pypi-publish@7245906fb61fa33a13554f9d5fb856fe61758086 # v1.14.3
+
+  github-release:
+    name: Attach to GitHub release
+    needs: pypi
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: dist
+          path: dist/
+      - name: Upload files to the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.tag }}
+        run: gh release upload "$TAG" dist/* --repo "$GITHUB_REPOSITORY" --clobber
