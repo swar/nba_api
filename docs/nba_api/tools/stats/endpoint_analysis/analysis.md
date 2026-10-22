@@ -1,5 +1,5 @@
 # analysis.py
->/tools/endpoint_analysis/analysis.py
+>/tools/stats/endpoint_analysis/analysis.py
 
 ## Objects
 
@@ -17,13 +17,13 @@ Regular expression pattern for parameter patterns.
 
 returns _`parameter_patterns`_
 
-This function will return all parameter patterns from an [`NBAStatsResponse`]() class. An `exception` will be raised if a response is outputted that has not been mapped. In which case, this function will need to be edited to account for the error.
+This function will return all parameter patterns from an [`NBAStatsResponse`](../../../stats/library/http.md) class. An `exception` will be raised if a response is outputted that has not been mapped. In which case, this function will need to be edited to account for the error.
 
-### `get_required_parameters`(_`nba_stats_response`_)
+### `get_required_parameters`(_`endpoint`_, _`nba_stats_response`_)
 
 returns _`required_parameters`_
 
-This function will return all required parameters from an [`NBAStatsResponse`]() class. An `exception` will be raised if a response is outputted that has not been mapped. In which case, this function will need to be edited to account for the error.
+This function will return all required parameters from an [`NBAStatsResponse`](../../../stats/library/http.md) class. An `exception` will be raised if a response is outputted that has not been mapped. In which case, this function will need to be edited to account for the error.
  
 
 ### `required_parameters_test`(_`endpoint`_)
@@ -55,6 +55,12 @@ returns _`parameter_patterns`_
 This function will return all parameter patterns by submitting a request with invalid values. Any parameters without a matching matter will be `null`. 
 
 The purpose of this test is to retrieve all matching patterns. In order to do that, we must submit invalid values.
+
+### `clean_parameters`(_`endpoint`_, _`all_parameters`_, _`required_parameters`_, _`nullable_parameters`_, _`parameter_patterns`_)
+
+returns _`all_parameters`_, _`required_parameters`_, _`nullable_parameters`_, _`parameter_patterns`_
+
+This function will de-duplicate the parameter lists gathered for an endpoint and apply any manual corrections defined for it in `parameter_override` and `remove_nullable_parameters`.
 
 ### `analyze_endpoint`(_`endpoint`_ \[, _`pause=1`_\] )
 
