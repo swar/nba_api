@@ -170,7 +170,7 @@
 - [Contributing guide](../CONTRIBUTING.md)
 - [Package structure](package_structure.md)
 - [Scripts](scripts.md)
-- [Releases](../RELEASE_TESTING.md)
+- [Releases](../RELEASING.md)
 - [Refactoring backlog](../REFACTORING.md)
 - Endpoint tooling
     - [Endpoint analysis format](endpoint_analysis_format.md)
