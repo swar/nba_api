@@ -21,9 +21,10 @@ and ask.
 5. Push the branch and open the PR:
    `git push -u origin release/vX.Y.Z`, then
    `gh pr create --base master --title "chore: release vX.Y.Z" --body-file <file>`.
-   The body is the new CHANGELOG.MD section, followed by a "After merging" checklist with the
-   tag, GitHub release, and Release workflow (`target: pypi`) commands the script printed.
+   The body is the new CHANGELOG.MD section, followed by an "After merging" note: squash-merging
+   starts the Release workflow (live canary, approval on the `pypi` environment, publish, then
+   tag and GitHub release), so there are no manual tag or publish commands.
 6. Reply with the PR link and the new changelog section.
 
 Stop there. Never merge the PR, push tags, create the GitHub release, or run the Release
-workflow. Those are the maintainer's steps after reviewing the PR.
+workflow. Merging is the maintainer's step, and it is what starts the release.
