@@ -30,9 +30,17 @@ Commits matching `Bump ...`, `Update ...`, or `Merge pull request ...` are exclu
 
 3. **Open a PR.** Push the branch and open a PR titled `chore: release vX.Y.Z` against `master`.
 
-4. **Publish.** After the PR is merged, follow the next steps the script printed: build and publish from a clean, up-to-date `master` with `poetry build` and `poetry publish`.
+4. **Tag.** After the PR is merged, tag the merge commit `vX.Y.Z`, push the tag, and create the GitHub release for it.
 
-The CircleCI `release` job (`.circleci/config.yml`) also runs `semantic-release publish` on every `master` build, after the test matrix passes. It needs the `PYPI_TOKEN` and `GITHUB_TOKEN` environment variables set in CircleCI.
+5. **Publish.** In GitHub → *Actions* → **Release** → *Run workflow*, enter the tag and pick `pypi`. The workflow checks that the tag matches the version in `pyproject.toml`, builds once, publishes to PyPI via [Trusted Publishing](https://docs.pypi.org/trusted-publishers/), and attaches the built files to the GitHub release. The manual alternative is still `poetry build && poetry publish` from a clean checkout of the tag.
+
+The CircleCI `release` job (`.circleci/config.yml`) runs `semantic-release publish` on every `master` build. With python-semantic-release v9 that only uploads `dist/*` to the latest GitHub release, and `dist/` is never built there, so it doesn't publish anything. It goes away when CircleCI is retired.
+
+### One-time setup for the Release workflow
+
+1. On [PyPI](https://pypi.org/manage/project/nba_api/settings/publishing/), add a trusted publisher: owner `swar`, repository `nba_api`, workflow `release.yml`, environment `pypi`. To rehearse, do the same on [TestPyPI](https://test.pypi.org/) with environment `testpypi`.
+2. In GitHub → *Settings* → *Environments*, create `pypi` and `testpypi`. On `pypi`, add yourself as a required reviewer and limit deployments to the `master` branch (the branch the workflow is run from; the tag is an input).
+3. Rehearse with target `testpypi` before the first real run. Each version can only be uploaded once per index.
 
 ## Previewing a release safely
 
@@ -72,7 +80,7 @@ git log --format=%s -20 | grep -vE '^(feat|fix|perf|docs|style|refactor|test|cho
 ```
 
 > [!CAUTION]
-> Don't test the release pipeline by merging test commits into `swar/nba_api:master`. Any merged `feat:` or `fix:` commit will be included in the next real release and its changelog. To exercise the full pipeline end to end, use your own fork with its own CircleCI project and a [TestPyPI](https://test.pypi.org/) token.
+> Don't test the release pipeline by merging test commits into `swar/nba_api:master`. Any merged `feat:` or `fix:` commit will be included in the next real release and its changelog. To exercise the full pipeline end to end, run the **Release** workflow with target `testpypi`, or use your own fork.
 
 ## Troubleshooting
 
