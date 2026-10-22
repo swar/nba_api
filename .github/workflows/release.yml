@@ -1,14 +1,13 @@
-# Replacement for the `release` job in .circleci/config.yml.
+# Publishes to PyPI from CI (replaces the manual `poetry publish` in
+# scripts/gen-release.sh): build once, check the version, upload via Trusted
+# Publishing (no API token), and attach the files to the GitHub release.
 #
-# The CircleCI job runs `semantic-release publish`, which in python-semantic-release
-# v9 only uploads dist/* to the latest GitHub release. It never builds, so dist/ is
-# empty and nothing is uploaded; `upload_to_pypi` is a v7 setting that v9 ignores.
-#
-# This workflow publishes from CI instead. It starts automatically, and only, when
-# a release commit lands on master: a commit titled `chore: release vX.Y.Z` (the
-# squash-merge of the release PR from scripts/gen-release.sh) whose parent had a
-# different `pyproject.toml` version, with the new version equal to X.Y.Z. Any other
-# push touching pyproject.toml exits in `prepare` without building anything.
+# It starts automatically, and only, when a release commit lands on master: a commit
+# titled `chore: release vX.Y.Z` (the squash-merge of the release PR from
+# scripts/gen-release.sh) whose parent had a different `pyproject.toml` version, with
+# the new version equal to X.Y.Z. A push that touches pyproject.toml without changing
+# the version exits in `prepare` without building anything; a version change with a
+# non-release subject fails loudly.
 #
 # Pipeline: prepare -> build -> live canary (pypi only) -> publish (pypi environment
 # approval) -> tag + GitHub release. It can also be run by hand (workflow_dispatch)

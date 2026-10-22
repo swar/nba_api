@@ -36,6 +36,8 @@ class BoxScoreFourFactorsV3(Endpoint):
             "oppFreeThrowAttemptRate",
             "oppTeamTurnoverPercentage",
             "oppOffensiveReboundPercentage",
+            "homeTeamId",
+            "awayTeamId",
         ],
         "TeamStats": [
             "gameId",
@@ -53,6 +55,8 @@ class BoxScoreFourFactorsV3(Endpoint):
             "oppFreeThrowAttemptRate",
             "oppTeamTurnoverPercentage",
             "oppOffensiveReboundPercentage",
+            "homeTeamId",
+            "awayTeamId",
         ],
     }
 

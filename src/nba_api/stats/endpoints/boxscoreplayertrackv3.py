@@ -41,6 +41,8 @@ class BoxScorePlayerTrackV3(Endpoint):
             "defendedAtRimFieldGoalsMade",
             "defendedAtRimFieldGoalsAttempted",
             "defendedAtRimFieldGoalPercentage",
+            "homeTeamId",
+            "awayTeamId",
         ],
         "TeamStats": [
             "gameId",
@@ -69,6 +71,8 @@ class BoxScorePlayerTrackV3(Endpoint):
             "defendedAtRimFieldGoalsMade",
             "defendedAtRimFieldGoalsAttempted",
             "defendedAtRimFieldGoalPercentage",
+            "homeTeamId",
+            "awayTeamId",
         ],
     }
 

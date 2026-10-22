@@ -7,6 +7,7 @@
 - [Jupyter notebook examples](examples/)
 - [Endpoint data structure](nba_api/stats/endpoints_data_structure.md) — the `Endpoint` and `DataSet` API shared by every endpoint
 - [Parameters](nba_api/stats/library/parameters.md) — valid values and defaults for endpoint parameters
+- [Known upstream issues](nba_api/stats/known_upstream_issues.md) — endpoints stats.nba.com is not serving correctly
 
 ## Reference
 

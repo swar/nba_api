@@ -48,6 +48,8 @@ responses = [
                     "percentagePersonalFouls",
                     "percentagePersonalFoulsDrawn",
                     "percentagePoints",
+                    "homeTeamId",
+                    "awayTeamId",
                 ],
                 "data": [
                     [
@@ -84,6 +86,8 @@ responses = [
                         0.273,
                         0.111,
                         0.178,
+                        1610612739,
+                        1610612750,
                     ],
                     [
                         "0021700807",
@@ -119,6 +123,8 @@ responses = [
                         0.111,
                         0.125,
                         0.09,
+                        1610612739,
+                        1610612750,
                     ],
                     [
                         "0021700807",
@@ -154,6 +160,8 @@ responses = [
                         0.176,
                         0.188,
                         0.287,
+                        1610612739,
+                        1610612750,
                     ],
                     [
                         "0021700807",
@@ -189,6 +197,8 @@ responses = [
                         0.5,
                         0.375,
                         0.147,
+                        1610612739,
+                        1610612750,
                     ],
                 ],
             },
@@ -219,6 +229,8 @@ responses = [
                     "percentagePersonalFouls",
                     "percentagePersonalFoulsDrawn",
                     "percentagePoints",
+                    "homeTeamId",
+                    "awayTeamId",
                 ],
                 "data": [
                     [
@@ -247,6 +259,8 @@ responses = [
                         1,
                         1,
                         1,
+                        1610612739,
+                        1610612750,
                     ],
                     [
                         "0021700807",
@@ -274,6 +288,8 @@ responses = [
                         1,
                         1,
                         1,
+                        1610612739,
+                        1610612750,
                     ],
                 ],
             },
