@@ -50,20 +50,19 @@ git log --oneline $(git describe --tags --abbrev=0)..HEAD
 poetry run semantic-release version --print
 ```
 
-This only works on branches matched in `[tool.semantic_release.branches]` (`master`/`main`, `release`/`release/*`, or `test-release` for `-rc` prereleases). On any other branch it reports that no release will be made.
+This only works on branches matched in `[tool.semantic_release.branches]` (`master`/`main`, `release`/`release/*`, or `test-release` for `-rc` prereleases). The patterns match the start of the branch name, so `release-preview` below also counts. On any other branch it reports that no release will be made.
 
 **Preview the result of merging your branch,** in a throwaway worktree so your checkout is untouched:
 
 ```bash
-git fetch origin
-git worktree add ../nba_api-release-preview origin/master
+git fetch origin --tags
+git worktree add -b release-preview ../nba_api-release-preview origin/master
 cd ../nba_api-release-preview
-git checkout -b release
 git merge --no-edit <your-branch>
 poetry install
 poetry run semantic-release version --print
 cd - && git worktree remove --force ../nba_api-release-preview
-git branch -D release
+git branch -D release-preview
 ```
 
 **Check commit message format** for recent commits. Lines that don't match need rewording before merge:

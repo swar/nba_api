@@ -25,7 +25,7 @@ Commit the result as `chore: refresh static player data`.
 Analyzes every endpoint in the analyzer's endpoint list by probing `stats.nba.com` with valid, missing, and invalid parameters. It then generates endpoint `.py` files, endpoint documentation, and parameter documentation from the results. See the [endpoint tooling docs](table_of_contents.md#contributing-and-maintenance) and the [analysis format](endpoint_analysis_format.md).
 
 ```bash
-poetry run python scripts/analyze_endpoints_and_create_files.py
+PYTHONPATH=. poetry run python scripts/analyze_endpoints_and_create_files.py   # run from the repo root so `tools` is importable
 ```
 
 > [!WARNING]

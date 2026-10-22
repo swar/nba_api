@@ -7,7 +7,7 @@
 #
 # COMMON TARGETS:
 #   make help          - Show all available commands with examples
-#   make lint          - Run ruff lint + format check (defaults to all src + tests)
+#   make lint          - Run ruff lint + format check (defaults to the whole repo)
 #   make test          - Run all unit tests
 #   make test-vcr      - Run cassette-backed integration tests (offline)
 #   make check         - Format + lint + unit tests + vcr tests (pre-commit check)
@@ -18,7 +18,7 @@
 #   make format FILES='src/nba_api/stats/endpoints/dunkscoreleaders.py tests/unit/stats/endpoints/test_dunkscoreleaders.py'
 #
 # DEFAULTS:
-#   FILES defaults to: src/nba_api tests (both source and tests)
+#   FILES defaults to: . (the whole repo, same as CI and pre-commit)
 #
 # ============================================================================
 
@@ -27,7 +27,7 @@
 # Default paths (can be overridden with FILES=path/to/file.py)
 SRC_DIR = src/nba_api
 TEST_DIR = tests/unit
-FILES ?= $(SRC_DIR) tests
+FILES ?= .
 
 # Help target
 help:
@@ -50,7 +50,7 @@ help:
 
 # Install dependencies
 install:
-	poetry install --sync
+	poetry sync
 
 # Auto-fix lint issues (incl. import sorting) and format with ruff
 format:

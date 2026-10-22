@@ -33,7 +33,7 @@ teams.find_team_by_abbreviation("bos")
 # {'id': 1610612738, 'full_name': 'Boston Celtics', 'abbreviation': 'BOS', ...}
 ```
 
-Name searches are case-insensitive regular expressions and ignore accents (`"jokic"` matches `"Jokić"`).
+Searches take case-insensitive regular expressions, and player name searches ignore accents (`"jokic"` matches `"Jokić"`).
 
 ### Official stats (`stats.nba.com`)
 

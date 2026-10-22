@@ -34,16 +34,16 @@ Single test: `poetry run pytest tests/unit/stats/endpoints/test_teamgamelog.py -
 src/nba_api/
   library/http.py            # NBAHTTP / NBAResponse base: sessions, proxy, headers
   library/debug/debug.py     # DEBUG flags + PROXY, loaded from env / local .env at import time
-  stats/endpoints/<name>.py  # one class per stats.nba.com endpoint (~135 of them)
+  stats/endpoints/<name>.py  # one class per stats.nba.com endpoint (~140 of them)
   stats/endpoints/_parsers/  # parsers for nested-JSON (V3-style) endpoints + _PARSER_REGISTRY
-  stats/library/parameters.py# parameter enums/defaults (Season, SeasonType, LeagueID, ...)
+  stats/library/parameters.py # parameter enums/defaults (Season, SeasonType, LeagueID, ...)
   stats/library/data.py      # GENERATED static players/teams data — do not hand-edit
   stats/static/              # players.py / teams.py lookup helpers over data.py
   live/nba/endpoints/        # live CDN endpoints (scoreboard, boxscore, playbyplay, odds)
 tests/unit/                  # fast, offline; HTTP is mocked
 tests/integration/           # smoke + scenario tests; replay VCR cassettes or hit the live API
 tools/                       # code/doc generators used by scripts/analyze_endpoints_and_create_files.py
-scripts/static_*_update/     # regenerate data.py from the live API
+scripts/static_players_update/  # regenerate data.py from the live API
 docs/nba_api/                # per-endpoint markdown docs
 ```
 
@@ -96,7 +96,7 @@ applicable), an `EndpointSpec` in `tests/integration/helpers/endpoint_specs.py`,
   releases. `feat:` → minor, `fix:`/`perf:` → patch, `!`/`BREAKING CHANGE:` → major. Use
   `test:`, `docs:`, `chore:`, `refactor:`, `ci:`, `build:` for everything else.
 - Branch off `master`; one logical change per PR; don't commit directly to `master`.
-- Pre-commit runs Ruff (`pre-commit install` once per clone).
+- Pre-commit runs Ruff (`poetry run pre-commit install` once per clone).
 
 ## Ask before
 
