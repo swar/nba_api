@@ -15,12 +15,12 @@
 ## Data Sets
 #### PlayerStats `player_stats`
 ```text
-['gameId', 'teamId', 'teamCity', 'teamName', 'teamTricode', 'teamSlug', 'personId', 'firstName', 'familyName', 'nameI', 'playerSlug', 'position', 'comment', 'jerseyNum', 'minutes', 'points', 'contestedShots', 'contestedShots2pt', 'contestedShots3pt', 'deflections', 'chargesDrawn', 'screenAssists', 'screenAssistPoints', 'looseBallsRecoveredOffensive', 'looseBallsRecoveredDefensive', 'looseBallsRecoveredTotal', 'offensiveBoxOuts', 'defensiveBoxOuts', 'boxOutPlayerTeamRebounds', 'boxOutPlayerRebounds', 'boxOuts']
+['gameId', 'teamId', 'teamCity', 'teamName', 'teamTricode', 'teamSlug', 'personId', 'firstName', 'familyName', 'nameI', 'playerSlug', 'position', 'comment', 'jerseyNum', 'minutes', 'points', 'contestedShots', 'contestedShots2pt', 'contestedShots3pt', 'deflections', 'chargesDrawn', 'screenAssists', 'screenAssistPoints', 'looseBallsRecoveredOffensive', 'looseBallsRecoveredDefensive', 'looseBallsRecoveredTotal', 'offensiveBoxOuts', 'defensiveBoxOuts', 'boxOutPlayerTeamRebounds', 'boxOutPlayerRebounds', 'boxOuts', 'homeTeamId', 'awayTeamId']
 ```
 
 #### TeamStats `team_stats`
 ```text
-['gameId', 'teamId', 'teamCity', 'teamName', 'teamTricode', 'teamSlug', 'minutes', 'points', 'contestedShots', 'contestedShots2pt', 'contestedShots3pt', 'deflections', 'chargesDrawn', 'screenAssists', 'screenAssistPoints', 'looseBallsRecoveredOffensive', 'looseBallsRecoveredDefensive', 'looseBallsRecoveredTotal', 'offensiveBoxOuts', 'defensiveBoxOuts', 'boxOutPlayerTeamRebounds', 'boxOutPlayerRebounds', 'boxOuts']
+['gameId', 'teamId', 'teamCity', 'teamName', 'teamTricode', 'teamSlug', 'minutes', 'points', 'contestedShots', 'contestedShots2pt', 'contestedShots3pt', 'deflections', 'chargesDrawn', 'screenAssists', 'screenAssistPoints', 'looseBallsRecoveredOffensive', 'looseBallsRecoveredDefensive', 'looseBallsRecoveredTotal', 'offensiveBoxOuts', 'defensiveBoxOuts', 'boxOutPlayerTeamRebounds', 'boxOutPlayerRebounds', 'boxOuts', 'homeTeamId', 'awayTeamId']
 ```
 
 
@@ -59,7 +59,9 @@
             "defensiveBoxOuts",
             "boxOutPlayerTeamRebounds",
             "boxOutPlayerRebounds",
-            "boxOuts"
+            "boxOuts", 
+            "homeTeamId", 
+            "awayTeamId"
         ],
         "TeamStats": [
             "gameId", 
@@ -84,7 +86,9 @@
             "defensiveBoxOuts", 
             "boxOutPlayerTeamRebounds", 
             "boxOutPlayerRebounds", 
-            "boxOuts"
+            "boxOuts", 
+            "homeTeamId", 
+            "awayTeamId"
         ]
     },
     "endpoint": "BoxScoreHustleV2",

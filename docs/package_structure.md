@@ -5,7 +5,8 @@ nba_api/
 ├── src/nba_api/                  # the installed package
 │   ├── library/
 │   │   ├── http.py               # shared HTTP client (NBAHTTP, NBAResponse)
-│   │   └── debug/debug.py        # DEBUG flags and default proxy (NBA_API_PROXY)
+│   │   ├── proxy.py              # per-request proxy resolution (NBA_API_PROXY)
+│   │   └── debug/debug.py        # DEBUG flags (legacy PROXY, deprecated)
 │   ├── stats/                    # stats.nba.com
 │   │   ├── endpoints/            # one module per endpoint
 │   │   │   ├── _base.py          # Endpoint and Endpoint.DataSet base classes

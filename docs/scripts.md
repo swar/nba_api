@@ -20,6 +20,24 @@ poetry run pytest tests/unit/stats/static
 
 Commit the result as `chore: refresh static player data`.
 
+## `static_teams_update/generate_static_teams.py`
+
+Refreshes the `teams` and `wnba_teams` lists from the `CommonTeamYears` and `TeamDetails` endpoints. Existing rows are the base, so hand-curated fields such as state, city and abbreviation are kept.
+
+- Championship years are refreshed from the API.
+- Teams the API reports as active that are missing from the data are added. The API has no state field, so add new teams' states to `team_states` in the script.
+- Differences in abbreviation, nickname, city or year founded, and teams that are no longer active, are logged as warnings and left unchanged for manual review.
+
+The lists are rewritten in both `scripts/static_players_update/template.py` and `src/nba_api/stats/library/data.py`, so a later players refresh does not revert them.
+
+```bash
+# Report what would change, exit 1 if the data is out of date (writes nothing)
+poetry run python scripts/static_teams_update/generate_static_teams.py --check
+
+# Apply the changes
+poetry run python scripts/static_teams_update/generate_static_teams.py
+```
+
 ## `analyze_endpoints_and_create_files.py`
 
 Analyzes every endpoint in the analyzer's endpoint list by probing `stats.nba.com` with valid, missing, and invalid parameters. It then generates endpoint `.py` files, endpoint documentation, and parameter documentation from the results. See the [endpoint tooling docs](table_of_contents.md#contributing-and-maintenance) and the [analysis format](endpoint_analysis_format.md).
@@ -35,8 +53,9 @@ Enabling `DEBUG` and `DEBUG_STORAGE` in [`debug.py`](nba_api/debug.md) caches re
 
 ## `gen-release.sh`
 
-Prepares a release locally: it computes the next version from the Conventional Commits since the last tag, then updates `pyproject.toml` and `CHANGELOG.MD` in a local commit. It doesn't tag or push. See [RELEASE_TESTING.md](../RELEASE_TESTING.md).
+Prepares a release locally. It computes the next version from the Conventional Commits since the last tag, bumps `pyproject.toml`, and renames the hand-written `## Unreleased` section of `CHANGELOG.MD` to `## vX.Y.Z`, in one commit on a new `release/vX.Y.Z` branch. It doesn't tag, push, or build. See [RELEASING.md](../RELEASING.md).
 
 ```bash
-./scripts/gen-release.sh
+./scripts/gen-release.sh --dry-run   # checks + plan, changes nothing
+./scripts/gen-release.sh             # asks before committing
 ```

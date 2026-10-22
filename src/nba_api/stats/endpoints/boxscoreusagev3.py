@@ -46,6 +46,8 @@ class BoxScoreUsageV3(Endpoint):
             "percentagePersonalFouls",
             "percentagePersonalFoulsDrawn",
             "percentagePoints",
+            "homeTeamId",
+            "awayTeamId",
         ],
         "TeamStats": [
             "gameId",
@@ -73,6 +75,8 @@ class BoxScoreUsageV3(Endpoint):
             "percentagePersonalFouls",
             "percentagePersonalFoulsDrawn",
             "percentagePoints",
+            "homeTeamId",
+            "awayTeamId",
         ],
     }
 

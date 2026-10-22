@@ -20,12 +20,12 @@
 ## Data Sets
 #### PlayerStats `player_stats`
 ```text
-['gameId', 'teamId', 'teamCity', 'teamName', 'teamTricode', 'teamSlug', 'personId', 'firstName', 'familyName', 'nameI', 'playerSlug', 'position', 'comment', 'jerseyNum', 'minutes', 'estimatedOffensiveRating', 'offensiveRating', 'estimatedDefensiveRating', 'defensiveRating', 'estimatedNetRating', 'netRating', 'assistPercentage', 'assistToTurnover', 'assistRatio', 'offensiveReboundPercentage', 'defensiveReboundPercentage', 'reboundPercentage', 'turnoverRatio', 'effectiveFieldGoalPercentage', 'trueShootingPercentage', 'usagePercentage', 'estimatedUsagePercentage', 'estimatedPace', 'pace', 'pacePer40', 'possessions', 'PIE']
+['gameId', 'teamId', 'teamCity', 'teamName', 'teamTricode', 'teamSlug', 'personId', 'firstName', 'familyName', 'nameI', 'playerSlug', 'position', 'comment', 'jerseyNum', 'minutes', 'estimatedOffensiveRating', 'offensiveRating', 'estimatedDefensiveRating', 'defensiveRating', 'estimatedNetRating', 'netRating', 'assistPercentage', 'assistToTurnover', 'assistRatio', 'offensiveReboundPercentage', 'defensiveReboundPercentage', 'reboundPercentage', 'turnoverRatio', 'effectiveFieldGoalPercentage', 'trueShootingPercentage', 'usagePercentage', 'estimatedUsagePercentage', 'estimatedPace', 'pace', 'pacePer40', 'possessions', 'PIE', 'homeTeamId', 'awayTeamId']
 ```
 
 #### TeamStats `team_stats`
 ```text
-['gameId', 'teamId', 'teamCity', 'teamName', 'teamTricode', 'teamSlug', 'minutes', 'estimatedOffensiveRating', 'offensiveRating', 'estimatedDefensiveRating', 'defensiveRating', 'estimatedNetRating', 'netRating', 'assistPercentage', 'assistToTurnover', 'assistRatio', 'offensiveReboundPercentage', 'defensiveReboundPercentage', 'reboundPercentage', 'estimatedTeamTurnoverPercentage', 'turnoverRatio', 'effectiveFieldGoalPercentage', 'trueShootingPercentage', 'usagePercentage', 'estimatedUsagePercentage', 'estimatedPace', 'pace', 'pacePer40', 'possessions', 'PIE']
+['gameId', 'teamId', 'teamCity', 'teamName', 'teamTricode', 'teamSlug', 'minutes', 'estimatedOffensiveRating', 'offensiveRating', 'estimatedDefensiveRating', 'defensiveRating', 'estimatedNetRating', 'netRating', 'assistPercentage', 'assistToTurnover', 'assistRatio', 'offensiveReboundPercentage', 'defensiveReboundPercentage', 'reboundPercentage', 'estimatedTeamTurnoverPercentage', 'turnoverRatio', 'effectiveFieldGoalPercentage', 'trueShootingPercentage', 'usagePercentage', 'estimatedUsagePercentage', 'estimatedPace', 'pace', 'pacePer40', 'possessions', 'PIE', 'homeTeamId', 'awayTeamId']
 ```
 
 
@@ -70,7 +70,9 @@
             "pace", 
             "pacePer40", 
             "possessions", 
-            "PIE"
+            "PIE", 
+            "homeTeamId", 
+            "awayTeamId"
         ],
         "TeamStats": [
           "gameId", 
@@ -102,7 +104,9 @@
           "pace", 
           "pacePer40", 
           "possessions", 
-          "PIE"
+          "PIE", 
+          "homeTeamId", 
+          "awayTeamId"
         ]
     },
     "endpoint": "BoxScoreAdvancedV3",

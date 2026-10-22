@@ -37,6 +37,8 @@ class BoxScoreHustleV2(Endpoint):
             "boxOutPlayerTeamRebounds",
             "boxOutPlayerRebounds",
             "boxOuts",
+            "homeTeamId",
+            "awayTeamId",
         ],
         "TeamStats": [
             "gameId",
@@ -62,6 +64,8 @@ class BoxScoreHustleV2(Endpoint):
             "boxOutPlayerTeamRebounds",
             "boxOutPlayerRebounds",
             "boxOuts",
+            "homeTeamId",
+            "awayTeamId",
         ],
     }
 

@@ -50,6 +50,8 @@ class BoxScoreAdvancedV3(Endpoint):
             "pacePer40",
             "possessions",
             "PIE",
+            "homeTeamId",
+            "awayTeamId",
         ],
         "TeamStats": [
             "gameId",
@@ -82,6 +84,8 @@ class BoxScoreAdvancedV3(Endpoint):
             "pacePer40",
             "possessions",
             "PIE",
+            "homeTeamId",
+            "awayTeamId",
         ],
     }
 
