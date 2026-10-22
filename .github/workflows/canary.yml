@@ -27,8 +27,9 @@ on:
 permissions:
   contents: read
 
+# Release gates (inputs.ref set) get their own group; scheduled and manual runs share one.
 concurrency:
-  group: canary
+  group: canary-${{ inputs.ref || 'default' }}
   cancel-in-progress: false
 
 env:
@@ -41,7 +42,6 @@ jobs:
     timeout-minutes: 15
     environment: release
     env:
-      NBA_API_PROXY: ${{ secrets.NBA_API_PROXY }}
       NBA_API_REQUIRE_PROXY: "1"
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -58,6 +58,8 @@ jobs:
       # Actions only masks the exact secret string; also mask the pieces a
       # traceback could print on their own (decoded user/password).
       - name: Mask derived proxy credentials
+        env:
+          NBA_API_PROXY: ${{ secrets.NBA_API_PROXY }}
         run: |
           python3 - <<'PY'
           import os
@@ -71,6 +73,8 @@ jobs:
           PY
       # Proxy IPs are occasionally blocked by NBA.com, so retry once before failing.
       - name: Run canary tests
+        env:
+          NBA_API_PROXY: ${{ secrets.NBA_API_PROXY }}
         run: |
           run() { poetry run pytest tests/integration/canary -m canary -v --record-mode=none -p no:cacheprovider; }
           run || {

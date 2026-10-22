@@ -42,8 +42,10 @@ on:
 permissions:
   contents: read
 
+# One run per release (commit for pushes, tag for manual runs), so a queued run for a
+# different release can never replace a pending one.
 concurrency:
-  group: release
+  group: release-${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.sha }}
   cancel-in-progress: false
 
 env:
@@ -77,6 +79,10 @@ jobs:
           version_of() { python3 -c 'import sys, tomllib; print(tomllib.load(sys.stdin.buffer)["project"]["version"])'; }
 
           if [ "$EVENT" = "workflow_dispatch" ]; then
+            [[ "$INPUT_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] || {
+              echo "::error::tag input '${INPUT_TAG}' must look like vX.Y.Z"
+              exit 1
+            }
             {
               echo "run=true"
               echo "tag=${INPUT_TAG}"
@@ -86,15 +92,24 @@ jobs:
             exit 0
           fi
 
-          subject="$(git log -1 --format=%s "$SHA")"
-          re='^chore: release v([0-9]+\.[0-9]+\.[0-9]+)( \(#[0-9]+\))?$'
-          [[ "$subject" =~ $re ]] || skip "commit subject '${subject}' is not 'chore: release vX.Y.Z'"
-          version="${BASH_REMATCH[1]}"
-
           new="$(git show "${SHA}:pyproject.toml" | version_of)"
           old="$(git show "${SHA}^:pyproject.toml" | version_of)"
-          [ "$new" = "$version" ] || skip "pyproject.toml is ${new} but the commit says ${version}"
           [ "$new" != "$old" ] || skip "pyproject.toml version did not change (still ${old})"
+
+          # The version changed, so this should be a release. If the commit subject
+          # does not say so (edited squash title, merge commit), fail loudly instead
+          # of silently not publishing.
+          subject="$(git log -1 --format=%s "$SHA")"
+          re='^chore: release v([0-9]+\.[0-9]+\.[0-9]+)( \(#[0-9]+\))?$'
+          if ! [[ "$subject" =~ $re ]]; then
+            echo "::error::pyproject.toml version changed ${old} -> ${new}, but the commit subject '${subject}' is not 'chore: release vX.Y.Z'. Nothing was published; fix the subject or run Release manually."
+            exit 1
+          fi
+          version="${BASH_REMATCH[1]}"
+          if [ "$new" != "$version" ]; then
+            echo "::error::pyproject.toml is ${new} but the commit subject says ${version}. Nothing was published."
+            exit 1
+          fi
 
           if git ls-remote --exit-code --tags origin "refs/tags/v${version}" >/dev/null 2>&1; then
             skip "tag v${version} already exists"
@@ -132,6 +147,16 @@ jobs:
             echo "::error::Tag ${TAG} does not match pyproject.toml version ${version}"
             exit 1
           fi
+      # Check before anything is published, so a missing heading can't leave a version
+      # on PyPI with no GitHub release.
+      - name: Check CHANGELOG.MD has this release's section
+        env:
+          TAG: ${{ needs.prepare.outputs.tag }}
+        run: |
+          grep -qxF "## ${TAG}" CHANGELOG.MD || {
+            echo "::error::CHANGELOG.MD has no '## ${TAG}' heading"
+            exit 1
+          }
       - name: Build
         run: poetry build --no-ansi
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
@@ -170,6 +195,8 @@ jobs:
       - uses: pypa/gh-action-pypi-publish@7245906fb61fa33a13554f9d5fb856fe61758086 # v1.14.3
         with:
           repository-url: ${{ needs.prepare.outputs.target == 'pypi' && 'https://upload.pypi.org/legacy/' || 'https://test.pypi.org/legacy/' }}
+          # Lets "Re-run failed jobs" finish tagging if a later job failed after PyPI accepted the files.
+          skip-existing: true
 
   github-release:
     name: Tag and GitHub release
