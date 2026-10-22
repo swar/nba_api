@@ -96,16 +96,13 @@ quote-style = "double"
 indent-style = "space"
 docstring-code-format = true
 
+# semantic-release only computes the next version from commit messages
+# (scripts/gen-release.sh). CHANGELOG.MD is written by hand, and publishing is
+# .github/workflows/release.yml. See RELEASE_TESTING.md.
 [tool.semantic_release]
 version_toml = ["pyproject.toml:project.version"]
-build_command = "poetry build"
-dist_path = "dist/"
-upload_to_pypi = true
-upload_to_release = true
-commit_subject = "chore: release v{version}"
-commit_message = "chore: release v{version}\n\n{changelog}"
+commit_message = "chore: release v{version}"
 tag_format = "v{version}"
-changelog_placeholder = "# NBA API Change Log"
 
 [tool.semantic_release.remote]
 type = "github"
@@ -129,20 +126,13 @@ allowed_tags = ["build", "chore", "ci", "docs", "feat", "fix", "perf", "style", 
 minor_tags = ["feat"]
 patch_tags = ["fix", "perf"]
 
+# The default ("init") mode regenerates the whole file from git history, which
+# would wipe the hand-written changelog. "update" mode only writes at
+# insertion_flag, and CHANGELOG.MD never contains it, so a stray
+# `semantic-release version` leaves the file alone.
 [tool.semantic_release.changelog]
-exclude_commit_patterns = [
-  "^Bump .*",
-  "^Update .*", 
-  "^Merge pull request.*"
-]
-changelog_file = "CHANGELOG.MD"
+mode = "update"
+insertion_flag = "<!-- semantic-release: not used, CHANGELOG.MD is hand-written -->"
 
-[tool.semantic_release.changelog.environment]
-block_start_string = "{%"
-block_end_string = "%}"
-variable_start_string = "{{"
-variable_end_string = "}}"
-comment_start_string = "{#"
-comment_end_string = "#}"
-trim_blocks = false
-lstrip_blocks = false
+[tool.semantic_release.changelog.default_templates]
+changelog_file = "CHANGELOG.MD"

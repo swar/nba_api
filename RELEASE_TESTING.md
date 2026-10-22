@@ -2,7 +2,7 @@
 
 This guide is for maintainers. It covers how a release is cut and how to preview a release safely without publishing anything.
 
-Versioning and changelog generation use [python-semantic-release](https://python-semantic-release.readthedocs.io/) (configured under `[tool.semantic_release]` in `pyproject.toml`). The next version is computed from the [Conventional Commits](https://www.conventionalcommits.org/) merged since the last `vX.Y.Z` tag.
+The next version is computed by [python-semantic-release](https://python-semantic-release.readthedocs.io/) (configured under `[tool.semantic_release]` in `pyproject.toml`) from the [Conventional Commits](https://www.conventionalcommits.org/) merged since the last `vX.Y.Z` tag. semantic-release does nothing else here: `CHANGELOG.MD` is written by hand, and publishing is done by the **Release** GitHub Actions workflow.
 
 ## How commits map to versions
 
@@ -13,26 +13,33 @@ Versioning and changelog generation use [python-semantic-release](https://python
 | `feat!:` or a `BREAKING CHANGE:` footer | `feat!: remove deprecated endpoints` | major (1.11.4 → 2.0.0) |
 | `docs:`, `test:`, `chore:`, `refactor:`, `style:`, `build:`, `ci:` | `docs: update examples` | none |
 
-Commits matching `Bump ...`, `Update ...`, or `Merge pull request ...` are excluded from the changelog.
-
 ## Cutting a release
 
-1. **Prepare.** From an up-to-date `master`, run the release script:
+1. **Write the notes.** Make sure the `## Unreleased` section of `CHANGELOG.MD` describes everything user-facing since the last release. A dry run lists any `feat:`/`fix:`/`perf:` commits whose PR number isn't mentioned there:
 
    ```bash
-   git checkout master && git pull
+   git checkout master && git pull --ff-only
+   ./scripts/gen-release.sh --dry-run
+   ```
+
+2. **Prepare.** Run the script for real:
+
+   ```bash
    ./scripts/gen-release.sh
    ```
 
-   The script switches to a `release` branch (offering to create it), shows the computed next version, and asks for confirmation. It then runs `semantic-release version --no-tag --no-push --no-vcs-release`, which updates the version in `pyproject.toml` and `CHANGELOG.MD` in a single local commit. Nothing is tagged or pushed.
+   First it checks that you're on `master`, the working tree is clean, `master` matches the remote (after fetching tags), and `pyproject.toml` matches the latest tag. Then it shows the next version and asks for confirmation. On a yes, it creates a `release/vX.Y.Z` branch with one commit, `chore: release vX.Y.Z`. That commit bumps `pyproject.toml` and renames `## Unreleased` to `## vX.Y.Z` with today's date, leaving a new empty `## Unreleased` above it. Nothing is tagged, pushed, or built. It stops with an error, changing nothing, if there's nothing to release or the Unreleased section is empty. Run `--help` for options.
 
-2. **Review.** Check the changes with `git show` and edit the changelog wording if needed.
+3. **Review and open a PR.** Check the commit with `git show` (amend it to reword the changelog), then push the branch and open a PR titled `chore: release vX.Y.Z`. The script prints the exact commands.
 
-3. **Open a PR.** Push the branch and open a PR titled `chore: release vX.Y.Z` against `master`.
-
-4. **Tag.** After the PR is merged, tag the merge commit `vX.Y.Z`, push the tag, and create the GitHub release for it.
+4. **Tag.** After the PR is squash-merged, tag the merge commit `vX.Y.Z`, push the tag, and create the GitHub release from that version's changelog section. The script prints these commands too.
 
 5. **Publish.** In GitHub → *Actions* → **Release** → *Run workflow*, enter the tag and pick `pypi`. The workflow checks that the tag matches the version in `pyproject.toml`, builds once, publishes to PyPI via [Trusted Publishing](https://docs.pypi.org/trusted-publishers/), and attaches the built files to the GitHub release. The manual alternative is still `poetry build && poetry publish` from a clean checkout of the tag.
+
+6. **Clean up.** `git branch -D release/vX.Y.Z`.
+
+> [!WARNING]
+> Don't run `semantic-release version` directly. The script only uses it to compute the version. The config uses changelog `mode = "update"` with a marker that `CHANGELOG.MD` never contains, so a stray run can't regenerate (and wipe) the hand-written changelog. It would still bump the version, commit, tag, and (by default) push.
 
 The CircleCI `release` job (`.circleci/config.yml`) runs `semantic-release publish` on every `master` build. With python-semantic-release v9 that only uploads `dist/*` to the latest GitHub release, and `dist/` is never built there, so it doesn't publish anything. It goes away when CircleCI is retired.
 
