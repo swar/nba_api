@@ -18,6 +18,15 @@
 # Version History
 ## Unreleased
 
+## v1.11.6
+Date: 2026-10-22
+
+### Fixed
+* **Live Endpoints** - `ScoreBoard`, `BoxScore`, `PlayByPlay` and `Odds` work again with default settings. cdn.nba.com had started rejecting the default request headers with `403 Access Denied`, which surfaced as a `JSONDecodeError`; the live client now sends a current Firefox `User-Agent` and a `Referer: https://www.nba.com/` header (PR [#716](https://github.com/swar/nba_api/pull/716))
+
+### Infrastructure
+* **CI** - Removed the CircleCI config and the Snyk dependency scan; GitHub Actions now runs lint, tests and releases (PR [#714](https://github.com/swar/nba_api/pull/714), PR [#718](https://github.com/swar/nba_api/pull/718))
+
 ## v1.11.5
 Date: 2026-10-21
 
