@@ -56,7 +56,8 @@ jobs:
       - name: Install dependencies
         run: poetry install --no-ansi --no-interaction
       # Actions only masks the exact secret string; also mask the pieces a
-      # traceback could print on their own (decoded user/password).
+      # traceback could print on their own (decoded user/password, proxy host).
+      # This repo is public, so run logs are world-readable.
       - name: Mask derived proxy credentials
         env:
           NBA_API_PROXY: ${{ secrets.NBA_API_PROXY }}
@@ -66,7 +67,10 @@ jobs:
           from urllib.parse import unquote, urlsplit
 
           parts = urlsplit(os.environ.get("NBA_API_PROXY", ""))
-          for value in (parts.username, parts.password):
+          values = [parts.username, parts.password, parts.hostname]
+          if parts.hostname and parts.port:
+              values.append(f"{parts.hostname}:{parts.port}")
+          for value in values:
               if value:
                   for form in {value, unquote(value)}:
                       print(f"::add-mask::{form}")
@@ -76,7 +80,8 @@ jobs:
         env:
           NBA_API_PROXY: ${{ secrets.NBA_API_PROXY }}
         run: |
-          run() { poetry run pytest tests/integration/canary -m canary -v --record-mode=none -p no:cacheprovider; }
+          # Quiet output: one-line failures plus a pass/fail summary per test.
+          run() { poetry run pytest tests/integration/canary -m canary -q --tb=line -rA --record-mode=none -p no:cacheprovider; }
           run || {
             echo "::warning::Canary failed once; retrying in 60s"
             sleep 60
