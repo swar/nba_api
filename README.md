@@ -116,17 +116,17 @@ More detail is in the [stats examples](https://github.com/swar/nba_api/blob/mast
 
 ## Documentation
 
-- [Table of contents](https://github.com/swar/nba_api/blob/master/docs/table_of_contents.md) — start here
-- [Stats examples](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/examples.md) — request options, return formats, static data
-- [Jupyter notebooks](https://github.com/swar/nba_api/tree/master/docs/examples) — basic calls, finding games, play-by-play, live data
-- [Endpoint data structure](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/endpoints_data_structure.md) — the methods every endpoint shares
-- [Parameters](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md) — valid values and defaults
+- [Table of contents](https://github.com/swar/nba_api/blob/master/docs/table_of_contents.md): start here
+- [Stats examples](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/examples.md): request options, return formats, static data
+- [Jupyter notebooks](https://github.com/swar/nba_api/tree/master/docs/examples): basic calls, finding games, play-by-play, live data
+- [Endpoint data structure](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/endpoints_data_structure.md): the methods every endpoint shares
+- [Parameters](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md): valid values and defaults
 - [Changelog](https://github.com/swar/nba_api/blob/master/CHANGELOG.MD)
 
 ## Community
 
-- **Slack** — [join the workspace](https://join.slack.com/t/nbaapi/shared_invite/zt-3dc2qtnh0-udQJoSYrQVWaXOF3owVaAw) to get help, help others, share projects, and discuss the API.
-- **Stack Overflow** — ask questions tagged [`nba-api`](https://stackoverflow.com/questions/tagged/nba-api).
+- **Slack**: [join the workspace](https://join.slack.com/t/nbaapi/shared_invite/zt-3dc2qtnh0-udQJoSYrQVWaXOF3owVaAw) to get help, help others, share projects, and discuss the API.
+- **Stack Overflow**: ask questions tagged [`nba-api`](https://stackoverflow.com/questions/tagged/nba-api).
 
 ## Contributing
 
