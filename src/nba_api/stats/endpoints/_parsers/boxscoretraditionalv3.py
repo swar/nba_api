@@ -15,6 +15,8 @@ Structure:
     }
 """
 
+from ._home_away import add_home_away_ids
+
 # Common metadata fields
 TEAM_METADATA_FIELDS = (
     "teamId",
@@ -253,7 +255,7 @@ class NBAStatsBoxscoreTraditionalParserV3:
             dict: Dictionary with PlayerStats, TeamStarterBenchStats, and TeamStats
                   Order matches expected_data in boxscoretraditionalv3.py
         """
-        return {
+        data_sets = {
             "PlayerStats": {
                 "headers": self.get_player_headers(),
                 "data": self.get_player_data(),
@@ -267,3 +269,4 @@ class NBAStatsBoxscoreTraditionalParserV3:
                 "data": self.get_team_data(),
             },
         }
+        return add_home_away_ids(data_sets, self.boxscore)
