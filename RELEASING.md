@@ -19,18 +19,13 @@ git checkout master && git pull --ff-only
 git push -u origin release/vX.Y.Z
 gh pr create --base master --title "chore: release vX.Y.Z"
 
-# Review the PR (especially the CHANGELOG.MD section), then squash-merge it
-
-# 4. Tag the merge commit and create the GitHub release
-git switch master && git pull --ff-only
-git tag vX.Y.Z && git push origin vX.Y.Z
-awk '/^## vX.Y.Z$/ {on=1; next} on && /^## / {exit} on' CHANGELOG.MD | gh release create vX.Y.Z --title vX.Y.Z --notes-file -
-
-# 5. Publish to PyPI, then approve the run when it pauses for the pypi environment
-gh workflow run release.yml -f tag=vX.Y.Z -f target=pypi
+# Review the PR (especially the CHANGELOG.MD section), then squash-merge it.
+# Merging starts the Release workflow by itself. The live canary runs first and must
+# pass; then approve the run when it pauses for the pypi environment. After PyPI
+# accepts the files, the workflow tags vX.Y.Z and creates the GitHub release.
 gh run watch
 
-# 6. Clean up
+# 4. Clean up
 git branch -D release/vX.Y.Z
 ```
 
@@ -74,9 +69,11 @@ Use `feat:` only for new public API: an endpoint, parameter, dataset, or functio
 
 3. **Review and open a PR.** Check the commit with `git show` (amend it to reword the changelog), then push the branch and open a PR titled `chore: release vX.Y.Z`. The script prints the exact commands.
 
-4. **Tag.** After the PR is squash-merged, tag the merge commit `vX.Y.Z`, push the tag, and create the GitHub release from that version's changelog section. The script prints these commands too.
+4. **Merge, and the release starts.** Squash-merge the PR. The **Release** workflow starts automatically, and only, when a commit titled exactly `chore: release vX.Y.Z` (GitHub appends ` (#123)` on squash-merge) lands on `master`, changes the version in `pyproject.toml`, and that version equals `X.Y.Z`. A push that touches `pyproject.toml` without changing the version stops in the first job without building anything, and so does one whose tag already exists. If the version **did** change but the subject isn't exactly `chore: release vX.Y.Z` (an edited squash title, a merge commit) or disagrees with the version, the run **fails with an error** and nothing is published, so a release can't be silently skipped. Fix it by running the workflow by hand (below).
 
-5. **Publish.** In GitHub → *Actions* → **Release** → *Run workflow*, enter the tag and pick `pypi`. The workflow checks that the tag matches the version in `pyproject.toml`, builds once, publishes to PyPI via [Trusted Publishing](https://docs.pypi.org/trusted-publishers/), and attaches the built files to the GitHub release. The manual alternative is still `poetry build && poetry publish` from a clean checkout of the tag.
+5. **Publish.** The workflow checks that the version in `pyproject.toml` matches the release, builds once, runs the [live canary](#live-canary) against the tag, publishes to PyPI via [Trusted Publishing](https://docs.pypi.org/trusted-publishers/), and attaches the built files to the GitHub release. A failing canary stops the run before anything reaches PyPI. The run then pauses for your approval on the `pypi` environment. After PyPI accepts the files, the workflow creates the tag `vX.Y.Z` on the release commit and the GitHub release (notes come from that version's `CHANGELOG.MD` section) and attaches the built files.
+
+   To re-run a failed publish, or to rehearse on TestPyPI, run the workflow by hand: *Actions* → **Release** → *Run workflow*, with the existing tag and the target. The tag must look like `vX.Y.Z`. That path never creates a tag; it only publishes and uploads. If a job fails after PyPI accepted the files (for example, tagging), use **Re-run failed jobs**: the upload step skips files PyPI already has, so the run can finish creating the tag and release. The manual alternative is still `poetry build && poetry publish` from a clean checkout of the tag.
 
 6. **Clean up.** `git branch -D release/vX.Y.Z`.
 
@@ -118,6 +115,17 @@ Example:
 ### Fixed
 * **ScheduleLeagueV2** - League schedules now parse regardless of the order of keys in the NBA.com response (PR [#692](https://github.com/swar/nba_api/pull/692))
 ```
+
+## Live canary
+
+`.github/workflows/canary.yml` makes a few real requests to stats.nba.com and cdn.nba.com (`tests/integration/canary`), always through the proxy in the `NBA_API_PROXY` secret, with `NBA_API_REQUIRE_PROXY=1` so a missing proxy fails instead of connecting directly. It runs:
+
+- **Before every `pypi` publish**, against the release commit (or tag, for a manual run). A failure blocks `publish`. A failed canary is retried once after 60 seconds, because NBA.com occasionally blocks proxy IPs.
+- **Weekly** (Mondays 13:17 UTC) against `master`, and on demand from *Actions* → **Canary** → *Run workflow*.
+
+If the proxy is blocked and you must release anyway, run **Release** with `skip_canary` ticked. That is visible in the run's inputs; leave it off normally. The canary never runs for the `testpypi` target.
+
+**Failure emails.** GitHub emails a failed *scheduled* run to whoever last edited the `cron:` line in `canary.yml`, if they have *Settings* → *Notifications* → *Actions* set to send email (choose "Send notifications for failed workflows only"). To change who is notified, have that person edit the cron line. GitHub disables scheduled workflows after 60 days without repository activity.
 
 ## One-time setup for the Release workflow
 
@@ -178,3 +186,9 @@ git log --format=%s -20 | grep -vE '^(feat|fix|perf|docs|style|refactor|test|cho
 **The computed version is unexpected**
 
 Make sure your local tags match the remote (`git fetch --tags --force`), then list the commits since the last tag with the command above. A single mislabeled commit, such as `feat:` that should have been `fix:`, changes the bump.
+
+### One-time setup for the live canary
+
+1. In GitHub → *Settings* → *Environments*, create `release`. Limit deployments to the `master` branch (both the weekly run and the Release workflow run from there). No required reviewers: merging the release PR already started the run, and `pypi` still asks for approval.
+2. Add the secret `NBA_API_PROXY` to that environment, as a single URL (for example `socks5://user:pass@host:1080`). Percent-encode special characters in the username and password. Use an environment secret rather than a repository secret so only the canary job can read it.
+3. Run **Canary** once by hand and confirm it passes before relying on the release gate.

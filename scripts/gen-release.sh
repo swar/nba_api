@@ -347,10 +347,9 @@ Next steps:
   2. Push and open the release PR:
        git push -u $REMOTE $release_branch
        gh pr create --base $BASE_BRANCH --title "chore: release v$next" --body "Release v$next. See $CHANGELOG."
-  3. After it is squash-merged, tag the merge commit and create the GitHub release:
-       git switch $BASE_BRANCH && git pull --ff-only $REMOTE $BASE_BRANCH
-       git tag v$next && git push $REMOTE v$next
-       awk '/^## v$next\$/ {on=1; next} on && /^## / {exit} on' $CHANGELOG | gh release create v$next --title v$next --notes-file -
-  4. Publish: GitHub -> Actions -> Release -> Run workflow, tag v$next, target pypi.
-  5. Clean up: git branch -D $release_branch
+  3. Squash-merge it. The merge starts the Release workflow, which runs the live canary,
+     waits for approval on the pypi environment, publishes to PyPI, then tags v$next and
+     creates the GitHub release from the $CHANGELOG section. Watch it with:
+       gh run watch
+  4. Clean up: git branch -D $release_branch
 EOF
