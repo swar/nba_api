@@ -3,6 +3,7 @@
 import inspect
 
 from .constants import INFRASTRUCTURE_PARAMS, PARAM_DEFAULTS
+from .seasons import pinned_season_kwargs
 
 
 class EndpointSpec:
@@ -51,4 +52,5 @@ class EndpointSpec:
                 f"overrides to EndpointSpec."
             )
 
-        return self.endpoint_class(**{**resolved, **self.overrides})
+        pinned = pinned_season_kwargs(self.endpoint_class, self.overrides)
+        return self.endpoint_class(**{**pinned, **resolved, **self.overrides})
