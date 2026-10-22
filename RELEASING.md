@@ -10,6 +10,7 @@ Details for each step are in [Cutting a release](#cutting-a-release). Replace `X
 
 ```bash
 # 1-3. Have an agent open the release PR: in Claude Code run /release-pr
+#      (or /release-pr patch to override the bump; see "How commits map to versions")
 #      (other agents: "Open the nba_api release PR following RELEASING.md").
 #      It writes the notes, runs the script, pushes, and opens the PR. Or by hand:
 git checkout master && git pull --ff-only
@@ -41,6 +42,10 @@ git branch -D release/vX.Y.Z
 | `feat:` | `feat: add player stats endpoint` | minor (1.11.4 → 1.12.0) |
 | `feat!:` or a `BREAKING CHANGE:` footer | `feat!: remove deprecated endpoints` | major (1.11.4 → 2.0.0) |
 | `docs:`, `test:`, `chore:`, `refactor:`, `style:`, `build:`, `ci:` | `docs: update examples` | none |
+
+Use `feat:` only for new public API: an endpoint, parameter, dataset, or function. Static data refreshes and maintainer-only scripts (`scripts/`, `tools/`) are `chore:`, and data corrections are `fix:`.
+
+**Overriding the bump.** If merged commits were mislabeled, for example a data update typed `feat:`, pass `--bump patch|minor|major` to `gen-release.sh` (or `/release-pr patch`). The plan shows the override next to the level the commits imply. It can't go below `major` when a commit is breaking.
 
 ## Cutting a release
 
@@ -84,7 +89,7 @@ These rules are for whoever writes the notes, usually an AI agent working from t
 
 **Procedure for agents**
 
-1. On an up-to-date `master` with a clean tree, run `./scripts/gen-release.sh --context` and read all of it.
+1. On an up-to-date `master` with a clean tree, run `./scripts/gen-release.sh --context` and read all of it. If the maintainer named a bump level, add `--bump <level>` here and in step 3.
 2. Write the notes to a file outside the repo (agents can't edit `CHANGELOG.MD` directly; `.claude/settings.json` denies it).
 3. Run `./scripts/gen-release.sh --notes <file> --yes`. Fix the notes and re-run if it warns about missing PRs; delete the `release/vX.Y.Z` branch first (`git switch master && git branch -D release/vX.Y.Z`).
 4. Push the branch (`git push -u origin release/vX.Y.Z`) and open the PR with `gh pr create --base master --title "chore: release vX.Y.Z"`. In the body, put the new changelog section, then the post-merge steps the script printed (tag, GitHub release, Release workflow) as a checklist.
