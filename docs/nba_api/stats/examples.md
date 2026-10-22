@@ -2,15 +2,15 @@
 
 ## Calling an endpoint
 
-Every `stats.nba.com` endpoint follows the same pattern. Here we fetch player information for LeBron James (player ID `2544`) with the [`CommonPlayerInfo`](endpoints/commonplayerinfo.md) endpoint:
+Every `stats.nba.com` endpoint follows the same pattern. Here we fetch player information for Donovan Mitchell (player ID `1628378`) with the [`CommonPlayerInfo`](endpoints/commonplayerinfo.md) endpoint:
 
 ```python
 from nba_api.stats.endpoints import commonplayerinfo
 
-player_info = commonplayerinfo.CommonPlayerInfo(player_id=2544)
+player_info = commonplayerinfo.CommonPlayerInfo(player_id=1628378)
 ```
 
-Constructing the endpoint sends the request. Don't know the ID? Look it up offline with [`players.find_players_by_full_name("lebron")`](#players).
+Constructing the endpoint sends the request. Don't know the ID? Look it up offline with [`players.find_players_by_full_name("donovan mitchell")`](#players).
 
 ### Request options
 
@@ -25,7 +25,7 @@ Every endpoint accepts these keyword arguments in addition to its own parameters
 
 ```python
 player_info = commonplayerinfo.CommonPlayerInfo(
-    player_id=2544,
+    player_id=1628378,
     proxy="http://127.0.0.1:8080",
     timeout=60,
 )
@@ -68,18 +68,18 @@ The `nba_api.stats.static` modules search player and team data that ships with t
 
 ### Players
 
-Name searches take a case-insensitive regular expression and ignore accents (`"jokic"` matches `"Jokić"`). They return a list of player dicts:
+Name searches take a case-insensitive regular expression and ignore accents (`"žydrūnas"` finds `"Zydrunas Ilgauskas"`). They return a list of player dicts:
 
 ```python
 from nba_api.stats.static import players
 
-players.find_players_by_full_name("lebron")
-# [{'id': 2544, 'full_name': 'LeBron James', 'first_name': 'LeBron',
-#   'last_name': 'James', 'is_active': True}]
+players.find_players_by_full_name("donovan mitchell")
+# [{'id': 1628378, 'full_name': 'Donovan Mitchell', 'first_name': 'Donovan',
+#   'last_name': 'Mitchell', 'is_active': True}]
 
-players.find_players_by_first_name("lebron")
-players.find_players_by_last_name("^(james|love)$")  # anchors for exact matches
-players.find_player_by_id(2544)                      # a single dict, or None
+players.find_players_by_first_name("donovan")
+players.find_players_by_last_name("^(mitchell|mobley)$")  # anchors for exact matches
+players.find_player_by_id(1628378)                   # a single dict, or None
 
 players.get_players()           # all players
 players.get_active_players()

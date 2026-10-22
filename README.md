@@ -33,7 +33,7 @@ teams.find_team_by_abbreviation("cle")
 # {'id': 1610612739, 'full_name': 'Cleveland Cavaliers', 'abbreviation': 'CLE', ...}
 ```
 
-Searches take case-insensitive regular expressions, and player name searches ignore accents.
+Searches take case-insensitive regular expressions, and player name searches ignore accents (`"žydrūnas"` finds `"Zydrunas Ilgauskas"`).
 
 ### Official stats (`stats.nba.com`)
 
