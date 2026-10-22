@@ -140,3 +140,32 @@ def test_redaction_keeps_exception_type_and_request(monkeypatch):
     ):
         assistleaders.AssistLeaders()
     assert exc.value.request is req and "s3cret" not in str(exc.value)
+
+
+def test_redact_leaves_unrelated_urls_alone_when_proxy_known():
+    out = redact("GET https://x.com/?e=me@b.com via " + URL, URL)
+    assert "e=me@b.com" in out and "s3cret" not in out
+
+
+def test_errors_are_untouched_without_a_proxy(monkeypatch):
+    monkeypatch.delenv("NBA_API_PROXY", raising=False)
+    inner = RuntimeError("boom")
+    err = requests.exceptions.ConnectionError(inner)
+    with (
+        patch.object(requests.Session, "get", side_effect=err),
+        pytest.raises(requests.exceptions.ConnectionError) as exc,
+    ):
+        assistleaders.AssistLeaders()
+    assert exc.value.args[0] is inner
+
+
+def test_errors_without_credentials_in_message_keep_args_and_context(monkeypatch):
+    monkeypatch.setenv("NBA_API_PROXY", URL)
+    inner = RuntimeError("boom")
+    err = requests.exceptions.ConnectionError(inner)
+    with (
+        patch.object(requests.Session, "get", side_effect=err),
+        pytest.raises(requests.exceptions.ConnectionError) as exc,
+    ):
+        assistleaders.AssistLeaders()
+    assert exc.value.args[0] is inner

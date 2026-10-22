@@ -27,12 +27,21 @@ if DEBUG:
 def _redacted(error, proxy_url):
     """Mask proxy credentials in ``error`` in place.
 
-    Keeps the exception type and its ``request``/``response``; drops the chained
-    cause/context, whose urllib3 messages can embed the proxy URL.
+    Does nothing unless the proxy URL carries credentials. Otherwise it rewrites only
+    the arguments that contain them (keeping the exception type, ``request`` and
+    ``response``) and drops the chained cause/context, whose urllib3 messages can
+    embed the proxy URL.
     """
-    error.args = tuple(redact(arg, proxy_url) for arg in error.args)
-    error.__cause__ = None
-    error.__context__ = None
+    if not proxy_url or "@" not in proxy_url:
+        return error
+    args = tuple(
+        masked if (masked := redact(arg, proxy_url)) != str(arg) else arg
+        for arg in error.args
+    )
+    if args != error.args:
+        error.args = args
+        error.__cause__ = None
+        error.__context__ = None
     return error
 
 

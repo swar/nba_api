@@ -86,12 +86,16 @@ def as_proxies(proxy_url):
 def redact(text, proxy_url=None):
     """Mask proxy credentials in ``text``.
 
-    Masks the userinfo of any ``scheme://user:pass@`` URL, plus the userinfo and
-    password of ``proxy_url`` (raw, percent-decoded and percent-encoded) wherever
-    they appear on their own.
+    With ``proxy_url``, masks that proxy's userinfo and password (raw,
+    percent-decoded and percent-encoded) wherever they appear, and nothing else, so
+    unrelated URLs in the message are left alone. Without it, masks the userinfo of
+    any ``scheme://user:pass@`` URL.
     """
-    text = _USERINFO.sub(r"\g<scheme>***@", str(text))
-    if proxy_url and "@" in proxy_url:
+    text = str(text)
+    if not proxy_url:
+        # No proxy to compare against: mask the userinfo of any URL (used for log output).
+        return _USERINFO.sub(r"\g<scheme>***@", text)
+    if "@" in proxy_url:
         userinfo = proxy_url.partition("://")[2].rpartition("@")[0]
         password = userinfo.partition(":")[2]
         secrets = set()
