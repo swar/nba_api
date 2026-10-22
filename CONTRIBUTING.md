@@ -55,6 +55,7 @@ Run commands with `poetry run <command>`, or activate the environment with `eval
 |---|---|
 | Unit tests (offline, fast) | `poetry run pytest tests/unit` |
 | Integration tests (replay recorded responses, offline) | `make test-vcr` |
+| Live canary tests (real requests, needs a proxy; see below) | `make test-canary` |
 | Lint | `poetry run ruff check` |
 | Format check | `poetry run ruff format --check` |
 | Auto-fix lint and format | `make format` |
@@ -64,7 +65,16 @@ Run commands with `poetry run <command>`, or activate the environment with `eval
 > Running bare `pytest` also collects integration tests that send real requests to `stats.nba.com`. Those requests are slow and easily throttled. Run `tests/unit` and the `vcr`-marked tests, as above, unless you specifically need live requests.
 
 > [!NOTE]
-> If you set `NBA_API_PROXY` (in your shell or a local `.env`), use `make test-vcr` instead of calling pytest directly. It clears the proxy so recorded responses are replayed rather than sent through the proxy.
+> If you export `NBA_API_PROXY` in your shell, use `make test-vcr` instead of calling pytest directly. It clears the proxy so recorded responses are replayed rather than sent through the proxy.
+
+### Live canary tests
+
+`tests/integration/canary` makes a handful of real requests to stats.nba.com and cdn.nba.com to confirm the library still works against the live APIs. It is meant for maintainers before a release, not for everyday development, and it is not part of `make ci`.
+
+- Every request goes through the proxy in `NBA_API_PROXY` (export it in your shell). The tests set `NBA_API_REQUIRE_PROXY=1`, so they can never fall back to a direct connection.
+- Without `NBA_API_PROXY` the tests skip locally. On GitHub Actions they fail instead, so a missing secret can't pass silently.
+- SOCKS proxies (`socks5://...`) work because `requests[socks]` is a dev dependency.
+- Don't combine them with `--block-network`, and don't use `pytest -l`/`--showlocals`, which prints local variables including the proxy URL.
 
 ### Test conventions
 

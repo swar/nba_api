@@ -10,6 +10,7 @@
 #   make lint          - Run ruff lint + format check (defaults to the whole repo)
 #   make test          - Run all unit tests
 #   make test-vcr      - Run cassette-backed integration tests (offline)
+#   make test-canary   - Run live canary tests through NBA_API_PROXY (real requests)
 #   make check         - Format + lint + unit tests + vcr tests (pre-commit check)
 #   make ci            - Same checks as CI, without modifying files
 #
@@ -22,7 +23,7 @@
 #
 # ============================================================================
 
-.PHONY: format lint test test-unit test-vcr test-cov check ci all install clean build help
+.PHONY: format lint test test-unit test-vcr test-canary test-cov check ci all install clean build help
 
 # Default paths (can be overridden with FILES=path/to/file.py)
 SRC_DIR = src/nba_api
@@ -39,6 +40,7 @@ help:
 	@echo "  make test             - Run all unit tests"
 	@echo "  make test-unit        - Run unit tests (same as test)"
 	@echo "  make test-vcr         - Run cassette-backed integration tests (offline)"
+	@echo "  make test-canary      - Run live canary tests through NBA_API_PROXY (real requests)"
 	@echo "  make test-cov         - Run tests with coverage report"
 	@echo "  make check            - Run format + lint + unit + vcr tests"
 	@echo "  make ci               - Run lint + unit + vcr tests (no formatting, mirrors CI)"
@@ -71,10 +73,15 @@ test-unit:
 # Alias for test-unit
 test: test-unit
 
-# Run cassette-backed integration tests. NBA_API_PROXY is blanked so a local
-# .env proxy doesn't intercept cassette replay.
+# Run cassette-backed integration tests. NBA_API_PROXY is blanked so a proxy
+# exported in your shell doesn't intercept cassette replay.
 test-vcr:
 	NBA_API_PROXY= poetry run pytest tests/integration -m vcr
+
+# Run the live canary tests: real requests to stats.nba.com and cdn.nba.com, always
+# through NBA_API_PROXY (skipped when it is unset). Not part of check/ci.
+test-canary:
+	poetry run pytest tests/integration/canary -m canary -v
 
 # Run tests with coverage
 test-cov:

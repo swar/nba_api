@@ -1,46 +1,43 @@
 # debug.py
 >/src/nba_api/library/debug/debug.py
 
-This module holds package-wide settings for debug mode, response caching, and the default proxy. The HTTP clients read these values **once, when they are first imported**, so a setting must be in place before you import any endpoint.
+This module holds package-wide settings for debug mode and response caching. The HTTP clients read `DEBUG` and `DEBUG_STORAGE` **once, when they are first imported**, so set them before you import any endpoint. The proxy is resolved on every request, not at import time; see [`PROXY`](#proxy) below.
 
 For most uses, prefer the per-request `proxy`, `headers`, and `timeout` arguments that every endpoint accepts (see [Stats examples](stats/examples.md)). They need no global configuration.
 
 ## `PROXY`
 
-`str` — default `""` (no proxy)
+`str` — default `""`. **Deprecated.** Set the `NBA_API_PROXY` environment variable, or pass `proxy=`, instead.
 
-The proxy used by every request that does not pass its own `proxy` argument. It is read from the `NBA_API_PROXY` environment variable:
+The proxy is resolved on every request (not at import time), so you can change it between calls. It comes from, in order:
+
+| Source | Proxy used |
+|---|---|
+| `proxy=` a URL string | that URL |
+| `proxy=` a list of URLs | one chosen at random for each request |
+| `proxy=""` | none, even if `NBA_API_PROXY` is set |
+| `proxy` not passed / `None` | the `NBA_API_PROXY` environment variable |
+| nothing above | `PROXY` in this module, with a `FutureWarning` |
 
 ```bash
 export NBA_API_PROXY='http://user:pass@proxy.example.com:8080'
 ```
 
-If the variable is not set in the environment, `debug.py` also looks for a `.env` file in the **current working directory** and loads `KEY=VALUE` lines from it. Values already set in the environment take precedence.
-
-```text
-# .env
-NBA_API_PROXY=http://user:pass@proxy.example.com:8080
-```
+`.env` files are **not** read. Export the variable in your shell, or load a `.env` yourself (for example with `direnv` or `set -a; source .env; set +a`).
 
 SOCKS proxies (`socks5://...`) also work, but require [PySocks](https://pypi.org/project/PySocks/) (`pip install "requests[socks]"`).
 
-> [!CAUTION]
-> Keep proxy credentials out of version control: add `.env` to your `.gitignore`. Exceptions raised by `requests` can include the full proxy URL, credentials included, so check tracebacks before sharing them in issues.
+Proxy credentials are masked (`scheme://***@host`) in exceptions raised by the HTTP clients, but still keep them out of version control and logs.
 
-How a request picks its proxy:
+### Requiring a proxy
 
-| `proxy` argument | Proxy used |
-|---|---|
-| not passed / `None` | `PROXY` (from `NBA_API_PROXY`) |
-| `""` (empty string) | none, even if `NBA_API_PROXY` is set |
-| a URL string | that URL |
-| a list of URLs | one chosen at random for each request |
+Set `NBA_API_REQUIRE_PROXY=1` to make any request raise `nba_api.library.proxy.ProxyRequiredError` *before a connection is opened* when no proxy resolves. `proxy=""` does not bypass it. The project's live tests use this so they can never reach NBA.com directly.
 
 ## `DEBUG`
 
 `bool` — default `False`
 
-When `True`, the HTTP clients print `DEBUG MODE` on import and report which proxy was picked when `proxy` is a list. Combined with `DEBUG_STORAGE`, they also print each request's endpoint, parameters, URL, and cache hits.
+When `True`, the HTTP clients print `DEBUG MODE` on import and report the (credential-masked) proxy that was picked. Combined with `DEBUG_STORAGE`, they also print each request's endpoint, parameters, URL, and cache hits.
 
 ## `DEBUG_STORAGE`
 

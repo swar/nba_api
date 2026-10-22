@@ -33,7 +33,8 @@ Single test: `poetry run pytest tests/unit/stats/endpoints/test_teamgamelog.py -
 ```
 src/nba_api/
   library/http.py            # NBAHTTP / NBAResponse base: sessions, proxy, headers
-  library/debug/debug.py     # DEBUG flags + PROXY, loaded from env / local .env at import time
+  library/proxy.py           # resolve_proxy(): per-request proxy lookup, NBA_API_REQUIRE_PROXY, redact()
+  library/debug/debug.py     # DEBUG flags (read at import time) + deprecated legacy PROXY
   stats/endpoints/<name>.py  # one class per stats.nba.com endpoint (~140 of them)
   stats/endpoints/_parsers/  # parsers for nested-JSON (V3-style) endpoints + _PARSER_REGISTRY
   stats/library/parameters.py # parameter enums/defaults (Season, SeasonType, LeagueID, ...)
@@ -67,10 +68,13 @@ applicable), an `EndpointSpec` in `tests/integration/helpers/endpoint_specs.py`,
 ## Testing rules
 
 - Unit tests must never touch the network. Mock the HTTP layer (see `tests/unit/http/`).
-- `http.py` reads `DEBUG`/`PROXY` from `debug.py` **at import time**. Tests that change those must
-  patch and reload the modules — follow `tests/unit/http/test_legacy_debug_usage.py`.
-- Integration markers: `vcr` = replays a cassette (offline, runs in CI); `live` = real HTTP.
-  Do not record or re-record cassettes, or run `live` tests, unless asked — they hit
+- `http.py` reads `DEBUG`/`DEBUG_STORAGE` from `debug.py` **at import time**. Tests that change those
+  must patch and reload the modules — follow `tests/unit/http/test_legacy_debug_usage.py`. The proxy
+  is resolved per request in `library/proxy.py`: just `monkeypatch.setenv("NBA_API_PROXY", ...)`.
+- Integration markers: `vcr` = replays a cassette (offline, runs in CI); `live` = real HTTP;
+  `canary` = the few live requests in `tests/integration/canary`, which force
+  `NBA_API_REQUIRE_PROXY=1` and skip without `NBA_API_PROXY` (`make test-canary`).
+  Do not record or re-record cassettes, or run `live`/`canary` tests, unless asked — they hit
   stats.nba.com, which rate-limits and blocks aggressively.
 - `Season.default` and friends are date-derived and roll over every October. Cassette tests pin
   them via `RECORDED_SEASON_YEAR` in `tests/integration/helpers/seasons.py`; bump it only when
@@ -78,11 +82,10 @@ applicable), an `EndpointSpec` in `tests/integration/helpers/endpoint_specs.py`,
 
 ## Gotchas
 
-- **`.env` contains real proxy credentials.** `debug.py` auto-loads `.env` from the CWD, so a
-  local `NBA_API_PROXY` leaks into tests. VCR tests then fail with SOCKS errors **and the
-  traceback prints the credentials**. Always run integration tests with `NBA_API_PROXY=`
-  (as above). Never read, print, or commit `.env`, and never paste tracebacks containing proxy
-  URLs into commits, PRs, or issues.
+- **Proxy credentials.** `NBA_API_PROXY` may hold real credentials. The library does not read `.env`,
+  but a shell-exported `NBA_API_PROXY` still reaches tests, so run cassette tests with
+  `NBA_API_PROXY=` (as above). Request errors have the proxy URL masked, but still never read,
+  print, or commit `.env`, and never paste proxy URLs into commits, PRs, or issues.
 - The version in `pyproject.toml` and each release's `CHANGELOG.MD` section are written by
   `scripts/gen-release.sh` in a `chore: release vX.Y.Z` PR. Don't bump the version or edit
   `CHANGELOG.MD` in ordinary PRs. When asked to open a release PR, follow "Writing the release

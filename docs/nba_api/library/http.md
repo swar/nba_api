@@ -3,9 +3,9 @@
 
 This module provides the HTTP client that every NBA.com API client builds on: `NBAHTTP` sends the request, and `NBAResponse` wraps the result. The stats client ([`NBAStatsHTTP`](../stats/library/http.md)) and the live client (`NBALiveHTTP`) subclass these and set their own base URL, headers, and response class.
 
-## `DEBUG`, `DEBUG_STORAGE`, `PROXY`
+## `DEBUG`, `DEBUG_STORAGE`
 
-Imported from [`debug.py`](../debug.md) when this module is first loaded.
+Imported from [`debug.py`](../debug.md) when this module is first loaded. The proxy is resolved per request; see [`PROXY`](../debug.md#proxy).
 
 
 ## class `NBAResponse`
@@ -81,7 +81,7 @@ A hook for subclasses to normalize the response text before it is wrapped. The b
 Sends a `GET` request to `base_url` for `endpoint` with the given query `parameters`, and returns an instance of `nba_response`.
 
 - `headers`: `None` uses the class's default `headers`. Any other value, including `{}`, replaces them entirely.
-- `proxy`: `None` uses the default `PROXY`, `""` disables the proxy, and a list picks one at random. See [`debug.py`](../debug.md#proxy).
+- `proxy`: `None` uses `NBA_API_PROXY`, `""` disables the proxy, and a list picks one at random. See [`debug.py`](../debug.md#proxy).
 - `referer`: if set, added to the request headers as `Referer`.
 - `timeout`: seconds to wait for a response. `None` waits indefinitely. Endpoints pass `30` by default.
 - `raise_exception_on_error`: if `True`, raises an `Exception` when the response is not valid JSON.
