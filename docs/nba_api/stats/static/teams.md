@@ -3,19 +3,19 @@
 
 This module looks up NBA and WNBA teams from the data bundled in [`data.py`](../library/data.md), without sending any requests.
 
-Text searches take a regular expression and match case-insensitively. Use anchors for exact matches, for example `"^new york"`. Year arguments must be `int`s.
+Text searches take a regular expression and match case-insensitively. Use anchors for exact matches, for example `"^cleveland"`. Year arguments must be `int`s.
 
 Each team is returned as a `dict`:
 
 ```python
 {
-    'id': 1610612738,
-    'full_name': 'Boston Celtics',
-    'abbreviation': 'BOS',
-    'nickname': 'Celtics',
-    'city': 'Boston',
-    'state': 'Massachusetts',
-    'year_founded': 1946,
+    'id': 1610612739,
+    'full_name': 'Cleveland Cavaliers',
+    'abbreviation': 'CLE',
+    'nickname': 'Cavaliers',
+    'city': 'Cleveland',
+    'state': 'Ohio',
+    'year_founded': 1970,
 }
 ```
 
@@ -55,7 +55,7 @@ Returns the team **dict** with this ID, despite the function's name, or `None` i
 
 ### `find_teams_by_championship_year`(_`year`_)
 
-Returns the **full name** (a `str`, not a team dict) of the team that won the championship in `year`, for example `"Boston Celtics"` for `2024`.
+Returns the **full name** (a `str`, not a team dict) of the team that won the championship in `year`, for example `"Cleveland Cavaliers"` for `2016`.
 
 > [!WARNING]
 > If no team won a championship in `year` (a future season, for example), this function raises `UnboundLocalError` instead of returning `None`.
