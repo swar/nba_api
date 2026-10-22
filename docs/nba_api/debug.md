@@ -1,39 +1,55 @@
 # debug.py
->/nba_api/debug.py
+>/src/nba_api/library/debug/debug.py
 
-The purpose of this module is to set the library into debug mode as well as set your proxy and headers.
+This module holds package-wide settings for debug mode, response caching, and the default proxy. The HTTP clients read these values **once, when they are first imported**, so a setting must be in place before you import any endpoint.
 
-
-## `DEBUG`
-
-`boolean`
-
-Set this value to `true` in order to enable debug mode.
-
-
-## `DEBUG_STORAGE`
-
-`boolean`
-
-Set this value to `true` in order to enable text file saving of every request. Parameters are joined together and an MD5 hash is used to create the file name in a `debug_storage` folder. 
-
-This feature is primarily used to help debug any issues as well as develop additional features.
-
-This feature is dependent on `DEBUG` to be `true`. If not, then this feature will not be enabled, regardless of the setting.
-
+For most uses, prefer the per-request `proxy`, `headers`, and `timeout` arguments that every endpoint accepts (see [Stats examples](stats/examples.md)). They need no global configuration.
 
 ## `PROXY`
 
-`string`
+`str` — default `""` (no proxy)
 
-```python
-PROXY = '127.0.0.1:80'
+The proxy used by every request that does not pass its own `proxy` argument. It is read from the `NBA_API_PROXY` environment variable:
+
+```bash
+export NBA_API_PROXY='http://user:pass@proxy.example.com:8080'
 ```
 
-Set this value to run requests through a proxy.
+If the variable is not set in the environment, `debug.py` also looks for a `.env` file in the **current working directory** and loads `KEY=VALUE` lines from it. Values already set in the environment take precedence.
+
+```text
+# .env
+NBA_API_PROXY=http://user:pass@proxy.example.com:8080
+```
+
+SOCKS proxies (`socks5://...`) also work, but require [PySocks](https://pypi.org/project/PySocks/) (`pip install "requests[socks]"`).
+
+> [!CAUTION]
+> Keep proxy credentials out of version control: add `.env` to your `.gitignore`. Exceptions raised by `requests` can include the full proxy URL, credentials included, so check tracebacks before sharing them in issues.
+
+How a request picks its proxy:
+
+| `proxy` argument | Proxy used |
+|---|---|
+| not passed / `None` | `PROXY` (from `NBA_API_PROXY`) |
+| `""` (empty string) | none, even if `NBA_API_PROXY` is set |
+| a URL string | that URL |
+| a list of URLs | one chosen at random for each request |
+
+## `DEBUG`
+
+`bool` — default `False`
+
+When `True`, the HTTP clients print `DEBUG MODE` on import and report which proxy was picked when `proxy` is a list. Combined with `DEBUG_STORAGE`, they also print each request's endpoint, parameters, URL, and cache hits.
+
+## `DEBUG_STORAGE`
+
+`bool` — default `False`
+
+When `True` **and** `DEBUG` is also `True`, every response is saved to a text file and reused for identical later requests, avoiding repeated calls while developing. Files are written to `library/debug/debug_storage/` inside the installed `nba_api` package, named `<endpoint>-<md5 of the query string>.txt`. Delete that directory to clear the cache.
 
 ## `STATS_HEADERS`
 
-`dictionary`
+`dict` — not defined by default
 
-Set this value to override the headers of the `stats.nba.com` API Endpoints.
+If you define `STATS_HEADERS` in `debug.py`, it **replaces** the default request headers for both the stats (`stats.nba.com`) and live (`cdn.nba.com`) clients. To change headers for a single request, pass `headers=` to the endpoint instead.

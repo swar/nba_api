@@ -1,72 +1,101 @@
-# Contributing to the NBA_API
+# Contributing to nba_api
 
-Welcome, and thank you for your interest in contributing to the NBA_API!
+Thank you for your interest in contributing! There are many ways to help beyond writing code: reporting bugs, flagging endpoints that NBA.com has changed, improving documentation, and answering questions.
 
-There are many ways in which you can contribute, beyond writing code. The goal of this document is to provide a high-level overview of how you can get involved.
+## Asking questions
 
-# Asking Questions
+Rather than opening an issue for a question, join the [Slack](https://join.slack.com/t/nbaapi/shared_invite/zt-3dc2qtnh0-udQJoSYrQVWaXOF3owVaAw) or ask on [Stack Overflow](https://stackoverflow.com/questions/tagged/nba-api) with the `nba-api` tag.
 
-Have a question? Rather than opening an issue, head over to the [Slack](https://join.slack.com/t/nbaapi/shared_invite/zt-1ipsuai9j-GjZjuP9S2~Uczuny1t74zA) to connect with others, chat, and receive help.
+## Reporting issues
 
-# Reporting Issues
+1. **Search first.** Check [open issues](https://github.com/swar/nba_api/issues) for an existing report. If one exists, add details or a 👍 [reaction](https://github.blog/news-insights/product-news/add-reactions-to-pull-requests-issues-and-comments/) instead of a "+1" comment.
+2. **One problem per issue.** Don't combine several bugs or requests in one issue, and don't add to an existing issue unless the cause is identical.
+3. **Use the bug report template** and include:
+   - your `nba_api` version (`python -c "import nba_api; print(nba_api.__version__)"`)
+   - numbered steps to reproduce
+   - what you expected versus what happened
+   - a minimal, copy-pasteable code snippet (not a screenshot)
 
-Have you identified a reproducible problem? Have a feature request? Identified a missing endpoint? Here's how you can make reporting your issue as effective as possible.
+For significant changes, open an issue titled `PROPOSAL: ...` to discuss the design before writing code.
 
-## Look For an Existing Issue
+## Development setup
 
-Before you create a new issue, please do a search in [open issues](https://github.com/swar/nba_api/issues) to see if the issue or feature request has already been filed.
+### Prerequisites
 
-If you find your issue already exists, make relevant comments and add your [reaction](https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments). Use a reaction in place of a "+1" comment:
+- **Python** — a version listed under `requires-python` and the classifiers in [`pyproject.toml`](pyproject.toml) (currently 3.10–3.13; CI tests all of them).
+- **[Poetry](https://python-poetry.org/docs/#installation) 2.x** — manages the virtual environment, dependencies, and builds.
+- **[pyenv](https://github.com/pyenv/pyenv)** (optional) — for switching between Python versions. Poetry uses whichever Python is active.
 
-* 👍 - upvote
-* 👎 - downvote
+A [dev container](.devcontainer/devcontainer.json) is also provided if you prefer VS Code or Codespaces.
 
-If you cannot find an existing issue that describes your bug or feature, create a new issue using the guidelines below.
+### Setup
 
-## Writing Good Bug Reports and Feature Requests
+```bash
+# 1. Fork the repository on GitHub, then clone your fork
+git clone https://github.com/<your-username>/nba_api.git
+cd nba_api
 
-File a single issue per problem and feature request. Do not enumerate multiple bugs or feature requests in the same issue.
+# 2. Install the package and all development dependencies
+poetry install
 
-Do not add your issue as a comment to an existing issue unless it's for the identical input. Many issues look similar, but have different causes.
+# 3. Install the pre-commit hooks (runs Ruff on every commit)
+poetry run pre-commit install
 
-The more information you can provide, the more likely someone will be successful at reproducing the issue and finding a fix.
+# 4. Verify everything passes
+make ci
+```
 
-Please include the following with each issue:
+Run commands with `poetry run <command>`, or activate the environment with `eval $(poetry env activate)`.
 
-* Version of the nba_api you are using
+## Running checks
 
-* Reproducible steps (1... 2... 3...) that cause the issue
+`make ci` runs the same checks as CI. The individual commands:
 
-* What you expected to occur, versus what you actually occur
+| Check | Command |
+|---|---|
+| Unit tests (offline, fast) | `poetry run pytest tests/unit` |
+| Integration tests (replay recorded responses, offline) | `make test-vcr` |
+| Lint | `poetry run ruff check` |
+| Format check | `poetry run ruff format --check` |
+| Auto-fix lint and format | `make format` |
+| Coverage report | `make test-cov` |
 
-* A code snippet that demonstrates the issue or a link to a code repository that can easily be pull down to recreate the issue locally
+> [!WARNING]
+> Running bare `pytest` also collects integration tests that send real requests to `stats.nba.com`. Those requests are slow and easily throttled. Run `tests/unit` and the `vcr`-marked tests, as above, unless you specifically need live requests.
 
-  * **Note:** Because the developers need to copy and paste the code snippet, including a code snippet as a media file (i.e. .gif) is not sufficient.
+> [!NOTE]
+> If you set `NBA_API_PROXY` (in your shell or a local `.env`), use `make test-vcr` instead of calling pytest directly. It clears the proxy so recorded responses are replayed rather than sent through the proxy.
 
-## Final Checklist
+### Test conventions
 
-Please remember to do the following:
+- **Unit tests** (`tests/unit/`) must never make network requests. Construct endpoints with `get_request=False` and mock the HTTP layer.
+- **Integration tests** (`tests/integration/`) replay responses recorded as [VCR](https://github.com/kiwicom/pytest-recording) cassettes. The `vcr` marker means a test replays a cassette; `live` means it sends real requests.
+- Season defaults such as `Season.default` change every October. Integration tests pin them to the season the cassettes were recorded in (`RECORDED_SEASON_YEAR` in `tests/integration/helpers/seasons.py`). Don't hardcode the current season in tests.
 
-* [ ] Search the issue repository to ensure your report is a new issue
+## Making changes
 
-* [ ] Recreate the issue
+### Style
 
-* [ ] Simplify your code around the issue to better isolate the problem
+- Ruff enforces linting and formatting (configured in `pyproject.toml`). The pre-commit hook fixes most issues automatically. If it modifies files, stage them and commit again.
+- Follow the patterns of the surrounding code. Endpoints in particular share one structure; copy a similar existing endpoint rather than starting from scratch.
+- Don't break the public API. Endpoint class names, constructor parameter names, and data set attribute names are relied on by many downstream projects. Add new names alongside old ones rather than renaming.
 
-# Contributing Code
+### Adding or updating a stats endpoint
 
-The `nba_api` project has been setup in a way to support development across a wide range of operating systems including Linux, macOS, and Windows. Contributions are managed via GitHub [forks](https://docs.github.com/en/get-started/quickstart/fork-a-repo) and [pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+1. Add `src/nba_api/stats/endpoints/<name>.py`, following an existing endpoint with a similar response shape.
+2. If the endpoint returns nested JSON instead of the tabular `resultSets` format, add a parser in `src/nba_api/stats/endpoints/_parsers/` and register it in `_PARSER_REGISTRY`.
+3. Export it from `src/nba_api/stats/endpoints/__init__.py`: add the module name to `__all__` and import the class.
+4. Add unit tests in `tests/unit/stats/endpoints/` (and parser tests, if applicable).
+5. Add an `EndpointSpec` entry in `tests/integration/helpers/endpoint_specs.py`.
+6. Document it in `docs/nba_api/stats/endpoints/<name>.md` and add it to [`docs/table_of_contents.md`](docs/table_of_contents.md).
 
-## Style Guidelines
+### Updating static player and team data
 
-* Code submitted should follow the style of the code already found throughout the repository.
-* The structure of data returned to the consumer of the library should align with the data structures already found throughout the library.  
-* Unit tests should accompany your code wherever possible
-* Use `git rebase -i` to organize your commits ([Write Better Commits, Build Better Projects](https://github.blog/2022-06-30-write-better-commits-build-better-projects/))
+`src/nba_api/stats/library/data.py` is generated by `scripts/static_players_update/` (see [docs/scripts.md](docs/scripts.md)). Player rows come from the API. Name corrections go in the script's `player_adjustments`, and team rows (including championship years) go in its `template.py`. If you also edit `data.py` directly, make the same change in the script or template so it survives the next refresh.
 
-### Commit Message Format
+### Commit messages
 
-This project uses [Conventional Commits](https://www.conventionalcommits.org/) for automated changelog generation and semantic versioning. Please format your commit messages as follows:
+This project uses [Conventional Commits](https://www.conventionalcommits.org/). The commit type determines the next version number and the changelog entry, so it matters:
 
 ```
 <type>[optional scope]: <description>
@@ -76,132 +105,34 @@ This project uses [Conventional Commits](https://www.conventionalcommits.org/) f
 [optional footer(s)]
 ```
 
-#### Commit Types
-- **feat**: A new feature (triggers minor version bump)
-- **fix**: A bug fix (triggers patch version bump)
-- **docs**: Documentation only changes
-- **style**: Changes that do not affect the meaning of the code
-- **refactor**: A code change that neither fixes a bug nor adds a feature
-- **perf**: A code change that improves performance
-- **test**: Adding missing tests or correcting existing tests
-- **build**: Changes that affect the build system or external dependencies
-- **ci**: Changes to CI configuration files and scripts
-- **chore**: Other changes that don't modify src or test files
+| Type | Use for | Version bump |
+|---|---|---|
+| `feat` | a new feature or endpoint | minor |
+| `fix` | a bug fix | patch |
+| `perf` | a performance improvement | patch |
+| `docs` | documentation only | none |
+| `test` | adding or fixing tests | none |
+| `refactor` | code changes that neither fix a bug nor add a feature | none |
+| `style` | formatting only | none |
+| `build` | build system or dependencies | none |
+| `ci` | CI configuration | none |
+| `chore` | anything else that doesn't touch `src/` or tests | none |
 
-#### Examples
-```
-feat: add new endpoint for player statistics
-fix: resolve timeout issue in HTTP requests
-docs: update API documentation for new endpoints
-```
+A breaking change, marked with `!` after the type (`feat!: ...`) or a `BREAKING CHANGE:` footer, triggers a major bump.
 
-**Breaking Changes**: Add `BREAKING CHANGE:` in the commit body or add `!` after the type to trigger a major version bump:
-```
-feat!: remove deprecated endpoint support
-```
+### Pull requests
 
-### Collaborating on Open Source
+1. Create a branch from `master` in your fork.
+2. Keep each PR to one logical change, and tidy up your commits before requesting review.
+3. Make sure `make ci` passes.
+4. Open the PR against `swar/nba_api:master`. Open it as a draft for early feedback on larger changes.
 
-#### Proposals
+Don't edit `CHANGELOG.MD` or the version in `pyproject.toml`. Both are updated during the release process.
 
-Should you wish to make a significant change within the project, please open a [GitHub Issue](https://github.com/swar/nba_api/issues) using the prefix `PROPOSAL:` within the subject.
+## Releases
 
-#### Code Reviews
+Maintainers cut releases with [python-semantic-release](https://python-semantic-release.readthedocs.io/). `scripts/gen-release.sh` computes the next version from the commit history and updates `pyproject.toml` and `CHANGELOG.MD`, and the result is merged as a `chore: release vX.Y.Z` PR. Contributors only need to write correct commit messages. See [RELEASE_TESTING.md](RELEASE_TESTING.md) for the full process.
 
-GitHub allows developers the ability to draft pull requests. This is incredibly useful to get feedback early within the development cycle when making large or complex changes.
+## AI coding agents
 
-## Requirements
-
-### Python Supported Versions
-
-Supported versions can be found within the [build script](https://github.com/swar/nba_api/blob/master/.circleci/config.yml).
-
-While `nba_api` makes every attempt to provide compatibility with [Supported Versions of Python](https://devguide.python.org/versions/), libraries that the `nba_api` depends on may not offer that same compatibility. Should this occur, the `nba_api` will support the next Supported Version of Python in which all libraries share mutual compatibility.
-
-### Poetry
-
-Development on `nba_api` requires [Poetry](https://python-poetry.org/docs/). Poetry provides [environment isolation](https://python-poetry.org/docs/managing-environments/) managing all dependencies and packaging in a deterministic way.
-
-### pyenv (optional)
-
-The `nba_api` project supports [pyenv](https://github.com/pyenv/pyenv) and includes a `poetry.lock` file to recognize the currently active environment.
-
-```yaml
-[virtualenvs]
-prefer-active-python = true
-```
-
-## Setting up your environment
-
-This guide assumes familiarity with using GitHub and `git`.
-
-### 1. Install and configure pyenv (optional)
-
-Follow the [pyenv installation instructions](https://github.com/pyenv/pyenv).
-
-### 2. Install Poetry
-
-Follow the [Poetry installation instructions](https://python-poetry.org/docs/).
-
-### 3. Fork the `nba_api`
-
-Follow GitHub's instructions on how to [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) a repository and [clone that repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo#cloning-your-forked-repository) for local development.
-
-### 4. Using Poetry with `nba_api`
-
-```python
-# Create a isolated virtual environment inclusive of all dependencies
-poetry install
-
-# Once the environment has been created, activate the environment for development
-eval $(poetry env activate) 
-```
-
-### 5. Set Up Pre-Commit Hooks
-
-This project uses [pre-commit](https://pre-commit.com/) to automatically lint and format code before each commit using [Ruff](https://docs.astral.sh/ruff/).
-
-```bash
-# Install the git hooks (only needed once per clone)
-pre-commit install
-```
-
-Once installed, `ruff` will automatically fix imports, formatting, and style issues on every `git commit`. If files are modified by the hooks, re-stage them and commit again.
-
-### 6. Validating Your Environment
-
-Poetry provides all of the developer dependencies through the `pyproject.toml` file. This allows you to begin using the required development tools immediately.
-
-```bash
-# Run unit tests (all tests should pass)
-pytest
-
-# Lint and auto-fix with Ruff
-ruff check src/ --fix
-
-# Format with Ruff
-ruff format src/
-```
-
-### 7. When Complete, Open a PR
-
-When you have completed your development and uploaded your changes to GitHub, [create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to have your changes reviewed.
-
-## Release Automation
-
-This project uses automated releases based on conventional commit messages. When PRs are merged to the `master` branch, the system automatically:
-
-- Determines the appropriate version bump (patch/minor/major)
-- Updates the changelog
-- Creates a git tag
-- Publishes to PyPI
-- Creates a GitHub release
-
-### Testing Release Changes
-
-If your changes affect the release process or you want to test automation:
-
-- **For maintainers**: See [RELEASE_TESTING.md](RELEASE_TESTING.md) for safe testing methods
-- **For contributors**: Follow the conventional commit format - the automation will handle the rest
-
-The conventional commit format ensures your changes are properly categorized for automatic version management.
+If you use an AI coding assistant, it should read [AGENTS.md](AGENTS.md), which summarizes these conventions for agents. Claude Code loads it automatically through `CLAUDE.md`.

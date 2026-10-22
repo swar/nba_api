@@ -2,8 +2,9 @@
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "permissions": {
     "allow": [
-      "Bash(poetry run pytest:*)",
-      "Bash(NBA_API_PROXY= poetry run pytest:*)",
+      "Bash(poetry run pytest tests/unit:*)",
+      "Bash(NBA_API_PROXY= poetry run pytest tests/unit:*)",
+      "Bash(NBA_API_PROXY= poetry run pytest tests/integration -m vcr:*)",
       "Bash(poetry run ruff:*)",
       "Bash(make ci)",
       "Bash(make test)",
