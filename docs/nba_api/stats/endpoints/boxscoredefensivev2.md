@@ -15,12 +15,12 @@
 ## Data Sets
 #### PlayerStats `player_stats`
 ```text
-['gameId', 'teamId', 'teamCity', 'teamName', 'teamTricode', 'teamSlug', 'personId', 'firstName', 'familyName', 'nameI', 'playerSlug', 'position', 'comment', 'jerseyNum', 'matchupMinutes', 'partialPossessions', 'switchesOn', 'playerPoints', 'defensiveRebounds', 'matchupAssists', 'matchupTurnovers', 'steals', 'blocks', 'matchupFieldGoalsMade', 'matchupFieldGoalsAttempted', 'matchupFieldGoalPercentage', 'matchupThreePointersMade', 'matchupThreePointersAttempted', 'matchupThreePointerPercentage']
+['gameId', 'teamId', 'teamCity', 'teamName', 'teamTricode', 'teamSlug', 'personId', 'firstName', 'familyName', 'nameI', 'playerSlug', 'position', 'comment', 'jerseyNum', 'matchupMinutes', 'partialPossessions', 'switchesOn', 'playerPoints', 'defensiveRebounds', 'matchupAssists', 'matchupTurnovers', 'steals', 'blocks', 'matchupFieldGoalsMade', 'matchupFieldGoalsAttempted', 'matchupFieldGoalPercentage', 'matchupThreePointersMade', 'matchupThreePointersAttempted', 'matchupThreePointerPercentage', 'homeTeamId', 'awayTeamId']
 ```
 
 #### TeamStats `team_stats`
 ```text
-['gameId', 'teamId', 'teamCity', 'teamName', 'teamTricode', 'teamSlug', 'minutes']
+['gameId', 'teamId', 'teamCity', 'teamName', 'teamTricode', 'teamSlug', 'minutes', 'homeTeamId', 'awayTeamId']
 ```
 
 
@@ -57,7 +57,9 @@
             "matchupFieldGoalPercentage", 
             "matchupThreePointersMade", 
             "matchupThreePointersAttempted", 
-            "matchupThreePointerPercentage"
+            "matchupThreePointerPercentage", 
+            "homeTeamId", 
+            "awayTeamId"
         ],
         "TeamStats": [
             "gameId", 
@@ -66,7 +68,9 @@
             "teamName", 
             "teamTricode", 
             "teamSlug", 
-            "minutes"
+            "minutes", 
+            "homeTeamId", 
+            "awayTeamId"
         ]
     },
     "endpoint": "BoxScoreDefensiveV2",

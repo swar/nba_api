@@ -47,6 +47,8 @@ class BoxScoreTraditionalV3(Endpoint):
             "foulsPersonal",
             "points",
             "plusMinusPoints",
+            "homeTeamId",
+            "awayTeamId",
         ],
         "TeamStarterBenchStats": [
             "gameId",
@@ -75,6 +77,8 @@ class BoxScoreTraditionalV3(Endpoint):
             "foulsPersonal",
             "points",
             "startersBench",
+            "homeTeamId",
+            "awayTeamId",
         ],
         "TeamStats": [
             "gameId",
@@ -103,6 +107,8 @@ class BoxScoreTraditionalV3(Endpoint):
             "foulsPersonal",
             "points",
             "plusMinusPoints",
+            "homeTeamId",
+            "awayTeamId",
         ],
     }
 
