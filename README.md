@@ -1,6 +1,6 @@
 [![Version: PyPI](https://img.shields.io/pypi/v/nba_api.svg?longCache=true&style=for-the-badge&logo=pypi)](https://pypi.python.org/pypi/nba_api)
 [![Downloads per Month: PyPI](https://img.shields.io/pypi/dm/nba_api.svg?style=for-the-badge)](https://pepy.tech/project/nba-api)
-[![Build: CircleCI](https://img.shields.io/circleci/project/github/swar/nba_api.svg?style=for-the-badge&logo=circleci)](https://circleci.com/gh/swar/nba_api)
+[![Build: GitHub Actions](https://img.shields.io/github/actions/workflow/status/swar/nba_api/ci.yml?branch=master&style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/swar/nba_api/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/github/license/swar/nba_api.svg?style=for-the-badge)](https://github.com/swar/nba_api/blob/master/LICENSE)
 [![Slack](https://img.shields.io/badge/Slack-NBA_API-4A154B?style=for-the-badge&logo=slack)](https://join.slack.com/t/nbaapi/shared_invite/zt-3dc2qtnh0-udQJoSYrQVWaXOF3owVaAw)
 

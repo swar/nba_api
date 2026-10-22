@@ -122,8 +122,6 @@ Already done for `swar/nba_api`; kept for reference.
 2. In GitHub → *Settings* → *Environments*, create `pypi` and `testpypi`. On `pypi`, add yourself as a required reviewer and limit deployments to the `master` branch (the branch the workflow is run from; the tag is an input).
 3. Rehearse with target `testpypi` before the first real run. Each version can only be uploaded once per index.
 
-The CircleCI `release` job (`.circleci/config.yml`) runs `semantic-release publish` on every `master` build. With python-semantic-release v9 that only uploads `dist/*` to the latest GitHub release, and `dist/` is never built there, so it doesn't publish anything. It goes away when CircleCI is retired.
-
 ## Previewing a release safely
 
 All of these run locally and publish nothing.
