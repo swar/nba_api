@@ -183,6 +183,10 @@ endpoint_specs = [
     EndpointSpec(ep.TeamDetails),
     EndpointSpec(ep.TeamEstimatedMetrics),
     EndpointSpec(
+        ep.TeamGameStreakFinder,
+        skip="Answers HTTP 500 upstream; see docs/nba_api/stats/known_upstream_issues.md",
+    ),
+    EndpointSpec(
         ep.TeamHistoricalLeaders,
         skip="Unable to construct valid request, maybe deprecated.",
     ),
