@@ -1,12 +1,30 @@
-[![Version: PyPI](https://img.shields.io/pypi/v/nba_api.svg?longCache=true&style=for-the-badge&logo=pypi)](https://pypi.python.org/pypi/nba_api)
-[![Downloads per Month: PyPI](https://img.shields.io/pypi/dm/nba_api.svg?style=for-the-badge)](https://pepy.tech/project/nba-api)
-[![Build: GitHub Actions](https://img.shields.io/github/actions/workflow/status/swar/nba_api/ci.yml?branch=master&style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/swar/nba_api/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/github/license/swar/nba_api.svg?style=for-the-badge)](https://github.com/swar/nba_api/blob/master/LICENSE)
-[![Slack](https://img.shields.io/badge/Slack-NBA_API-4A154B?style=for-the-badge&logo=slack)](https://join.slack.com/t/nbaapi/shared_invite/zt-3dc2qtnh0-udQJoSYrQVWaXOF3owVaAw)
+<h1 align="center">nba_api</h1>
 
-# nba_api
+<p align="center">
+  <strong>A Python client for the APIs behind NBA.com</strong>
+</p>
 
-**An API client for NBA.com.** `nba_api` makes the APIs behind [NBA.com](https://www.nba.com/) easy to call from Python and documents them extensively — 130+ `stats.nba.com` endpoints, the live game data feeds on `cdn.nba.com`, and bundled player and team reference data.
+<p align="center">
+  <a href="https://pypi.org/project/nba_api/"><img src="https://img.shields.io/pypi/v/nba_api.svg" alt="PyPI version"></a>
+  <a href="https://pypi.org/project/nba_api/"><img src="https://img.shields.io/pypi/pyversions/nba_api.svg" alt="Python versions"></a>
+  <a href="https://pepy.tech/project/nba-api"><img src="https://img.shields.io/pypi/dm/nba_api.svg" alt="Monthly downloads"></a>
+  <a href="https://github.com/swar/nba_api/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/swar/nba_api/ci.yml?branch=master" alt="CI status"></a>
+  <a href="https://github.com/swar/nba_api/blob/master/LICENSE"><img src="https://img.shields.io/github/license/swar/nba_api.svg" alt="MIT license"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/swar/nba_api/blob/master/docs/table_of_contents.md">Documentation</a> ·
+  <a href="https://github.com/swar/nba_api/blob/master/docs/table_of_contents.md#reference">Endpoints</a> ·
+  <a href="https://github.com/swar/nba_api/tree/master/docs/examples">Notebooks</a> ·
+  <a href="https://join.slack.com/t/nbaapi/shared_invite/zt-3dc2qtnh0-udQJoSYrQVWaXOF3owVaAw">Slack</a>
+</p>
+
+`nba_api` makes the APIs behind [NBA.com](https://www.nba.com/) easy to call from Python, and documents them so you don't have to reverse-engineer them yourself.
+
+- **130+ stats endpoints** from `stats.nba.com`: box scores, game logs, shot charts, play-by-play, standings, and more
+- **Live game data** from `cdn.nba.com`: today's scoreboard, live box scores, and play-by-play
+- **Offline player and team lookups**, bundled with the package and accent-insensitive
+- **pandas-ready results**: every data set comes back as a DataFrame, a dict, or JSON
 
 ## Installation
 
@@ -42,9 +60,15 @@ from nba_api.stats.endpoints import playercareerstats
 
 career = playercareerstats.PlayerCareerStats(player_id=1628378)  # sends the request
 
-career.season_totals_regular_season.get_data_frame()  # one data set as a pandas DataFrame
-career.get_data_frames()                              # every data set, as a list of DataFrames
-career.get_dict()                                     # the full response as a dict
+df = career.season_totals_regular_season.get_data_frame()  # one data set as a pandas DataFrame
+df[["SEASON_ID", "TEAM_ABBREVIATION", "PTS"]].tail(3)
+#   SEASON_ID TEAM_ABBREVIATION   PTS
+# 6   2023-24               CLE  1463
+# 7   2024-25               CLE  1701
+# 8   2025-26               CLE  1952
+
+career.get_data_frames()  # every data set, as a list of DataFrames
+career.get_dict()         # the full response as a dict
 ```
 
 Every stats endpoint works the same way: constructing it sends the request, and each data set the endpoint returns is available as an attribute with `get_data_frame()`, `get_dict()`, and `get_json()`. See the [endpoint reference](https://github.com/swar/nba_api/blob/master/docs/table_of_contents.md#reference) for each endpoint's parameters and data sets.
@@ -80,7 +104,15 @@ career = playercareerstats.PlayerCareerStats(
 career.get_request()                  # send it later
 ```
 
-`stats.nba.com` throttles rapid requests and does not respond to some cloud-hosting IP ranges. If requests hang or time out, add a delay between calls, increase `timeout`, or route through a `proxy`. More detail is in the [stats examples](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/examples.md).
+## Rate limits and hosting
+
+> **Requests hanging or timing out?** `stats.nba.com` throttles rapid requests and does not respond to many cloud-hosting IP ranges (AWS, GCP, Azure, Colab, and others).
+
+- Pause between requests when fetching in a loop, for example `time.sleep(1)`.
+- Increase `timeout`.
+- Route requests through a `proxy`, or set the `NBA_API_PROXY` environment variable.
+
+More detail is in the [stats examples](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/examples.md).
 
 ## Documentation
 
@@ -98,7 +130,7 @@ career.get_request()                  # send it later
 
 ## Contributing
 
-Contributions are welcome. See [CONTRIBUTING.md](https://github.com/swar/nba_api/blob/master/CONTRIBUTING.md) to set up a development environment and open a pull request.
+Contributions of all sizes are welcome, from fixing a typo to adding an endpoint. See [CONTRIBUTING.md](https://github.com/swar/nba_api/blob/master/CONTRIBUTING.md) to set up a development environment and open a pull request.
 
 NBA.com does not announce new, changed, or removed endpoints. If you find one, or hit a bug, [open an issue](https://github.com/swar/nba_api/issues).
 
@@ -107,3 +139,5 @@ NBA.com does not announce new, changed, or removed endpoints. If you find one, o
 `nba_api` is open source under the [MIT License](https://github.com/swar/nba_api/blob/master/LICENSE).
 
 Data retrieved with this package comes from NBA.com and is subject to the NBA.com [Terms of Use](https://www.nba.com/termsofuse).
+
+`nba_api` is an independent, community-maintained project. It is not affiliated with, endorsed by, or sponsored by the NBA or NBA Media Ventures, LLC.
