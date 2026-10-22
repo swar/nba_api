@@ -6,7 +6,7 @@
 # bumps pyproject.toml, and turns the "## Unreleased" section of CHANGELOG.MD
 # into "## vX.Y.Z", all in one commit on a new release/vX.Y.Z branch.
 # Nothing is pushed, tagged, or published. The full process is in
-# RELEASE_TESTING.md.
+# RELEASING.md.
 
 set -euo pipefail
 

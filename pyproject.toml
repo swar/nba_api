@@ -98,7 +98,7 @@ docstring-code-format = true
 
 # semantic-release only computes the next version from commit messages
 # (scripts/gen-release.sh). CHANGELOG.MD is written by hand, and publishing is
-# .github/workflows/release.yml. See RELEASE_TESTING.md.
+# .github/workflows/release.yml. See RELEASING.md.
 [tool.semantic_release]
 version_toml = ["pyproject.toml:project.version"]
 commit_message = "chore: release v{version}"

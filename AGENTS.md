@@ -109,4 +109,4 @@ applicable), an `EndpointSpec` in `tests/integration/helpers/endpoint_specs.py`,
 ## Further reading
 
 `REFACTORING.md` (known tech debt, e.g. decoupling parsers from `http.py`),
-`RELEASE_TESTING.md`, `docs/table_of_contents.md`.
+`RELEASING.md`, `docs/table_of_contents.md`.

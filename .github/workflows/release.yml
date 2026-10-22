@@ -9,7 +9,7 @@
 # build once, check the version, upload to PyPI via Trusted Publishing (no API
 # token), and attach the files to the GitHub release.
 #
-# Manual trigger only. One-time setup is in RELEASE_TESTING.md.
+# Manual trigger only. One-time setup is in RELEASING.md.
 name: Release
 
 on:

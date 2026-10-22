@@ -131,7 +131,7 @@ Don't edit `CHANGELOG.MD` or the version in `pyproject.toml`. Both are updated d
 
 ## Releases
 
-Maintainers cut releases with [python-semantic-release](https://python-semantic-release.readthedocs.io/). `scripts/gen-release.sh` computes the next version from the commit history, bumps `pyproject.toml`, and dates the `## Unreleased` section of `CHANGELOG.MD`. The result is merged as a `chore: release vX.Y.Z` PR. Contributors only need to write correct commit messages. See [RELEASE_TESTING.md](RELEASE_TESTING.md) for the full process.
+Maintainers cut releases with [python-semantic-release](https://python-semantic-release.readthedocs.io/). `scripts/gen-release.sh` computes the next version from the commit history, bumps `pyproject.toml`, and dates the `## Unreleased` section of `CHANGELOG.MD`. The result is merged as a `chore: release vX.Y.Z` PR. Contributors only need to write correct commit messages. See [RELEASING.md](RELEASING.md) for the full process.
 
 ## AI coding agents
 

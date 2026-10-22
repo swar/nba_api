@@ -4,6 +4,35 @@ This guide is for maintainers. It covers how a release is cut and how to preview
 
 The next version is computed by [python-semantic-release](https://python-semantic-release.readthedocs.io/) (configured under `[tool.semantic_release]` in `pyproject.toml`) from the [Conventional Commits](https://www.conventionalcommits.org/) merged since the last `vX.Y.Z` tag. semantic-release does nothing else here: `CHANGELOG.MD` is written by hand, and publishing is done by the **Release** GitHub Actions workflow.
 
+## Quick checklist
+
+Details for each step are in [Cutting a release](#cutting-a-release). Replace `X.Y.Z` with the version the script prints.
+
+```bash
+# 1. Write the notes under "## Unreleased" in CHANGELOG.MD; the dry run lists missing PRs
+git checkout master && git pull --ff-only
+./scripts/gen-release.sh --dry-run
+
+# 2. Bump the version and date the changelog (creates release/vX.Y.Z with one commit)
+./scripts/gen-release.sh
+
+# 3. Open the release PR, then squash-merge it
+git push -u origin release/vX.Y.Z
+gh pr create --base master --title "chore: release vX.Y.Z"
+
+# 4. Tag the merge commit and create the GitHub release
+git switch master && git pull --ff-only
+git tag vX.Y.Z && git push origin vX.Y.Z
+awk '/^## vX.Y.Z$/ {on=1; next} on && /^## / {exit} on' CHANGELOG.MD | gh release create vX.Y.Z --title vX.Y.Z --notes-file -
+
+# 5. Publish to PyPI, then approve the run when it pauses for the pypi environment
+gh workflow run release.yml -f tag=vX.Y.Z -f target=pypi
+gh run watch
+
+# 6. Clean up
+git branch -D release/vX.Y.Z
+```
+
 ## How commits map to versions
 
 | Commit | Example | Version bump |
