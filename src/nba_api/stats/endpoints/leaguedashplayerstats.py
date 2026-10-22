@@ -143,6 +143,7 @@ class LeagueDashPlayerStats(Endpoint):
         vs_conference_nullable=ConferenceNullable.default,
         vs_division_nullable=DivisionNullable.default,
         weight_nullable="",
+        ist_round_nullable=None,
         proxy=None,
         headers=None,
         timeout=30,
@@ -189,6 +190,7 @@ class LeagueDashPlayerStats(Endpoint):
             "VsConference": vs_conference_nullable,
             "VsDivision": vs_division_nullable,
             "Weight": weight_nullable,
+            "ISTRound": ist_round_nullable,
         }
         if get_request:
             self.get_request()
