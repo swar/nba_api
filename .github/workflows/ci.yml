@@ -37,6 +37,8 @@ jobs:
         with:
           python-version: "3.13"
           cache: poetry
+      - name: poetry.lock is in sync with pyproject.toml
+        run: poetry check --lock
       - name: Install dependencies
         run: poetry install --no-ansi --no-interaction
       - name: ruff check
@@ -64,13 +66,35 @@ jobs:
           cache: poetry
       - name: Install dependencies
         run: poetry install --no-ansi --no-interaction
+      # --block-network fails any test that opens a real socket, and
+      # --record-mode=none stops VCR from recording a missing cassette.
       - name: Unit tests
-        run: poetry run pytest tests/unit
+        run: poetry run pytest tests/unit --block-network --record-mode=none
       - name: Integration tests (VCR cassette replay)
         # A proxy would intercept cassette replay; keep it blank in CI.
         env:
           NBA_API_PROXY: ""
-        run: poetry run pytest tests/integration -m vcr
+        run: poetry run pytest tests/integration -m vcr --block-network --record-mode=none
+
+  # Single check for branch protection to require, so adding or renaming
+  # jobs and matrix entries never means editing the protection rules.
+  all-green:
+    name: CI passed
+    if: always()
+    needs: [lint, test]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check that every required job succeeded
+        env:
+          RESULTS: ${{ join(needs.*.result, ' ') }}
+        run: |
+          echo "Job results: $RESULTS"
+          for result in $RESULTS; do
+            if [ "$result" != "success" ]; then
+              exit 1
+            fi
+          done
 
   # CircleCI ran the Snyk orb on non-PR builds only; same here. Needs a
   # SNYK_TOKEN repository secret and is skipped until one is added.
