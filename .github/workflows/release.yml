@@ -9,6 +9,8 @@
 # build once, check the version, upload to PyPI via Trusted Publishing (no API
 # token), and attach the files to the GitHub release.
 #
+# Publishing to pypi is gated on the live canary (canary.yml) passing against the tag.
+#
 # Manual trigger only. One-time setup is in RELEASING.md.
 name: Release
 
@@ -25,6 +27,11 @@ on:
         type: choice
         options: [testpypi, pypi]
         default: testpypi
+      skip_canary:
+        description: "Skip the live canary gate when publishing to pypi (escape hatch for a blocked proxy; leave off normally)"
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -68,9 +75,21 @@ jobs:
           path: dist/
           if-no-files-found: error
 
+  canary:
+    name: Live canary
+    needs: build
+    if: inputs.target == 'pypi' && !inputs.skip_canary
+    permissions:
+      contents: read
+    uses: ./.github/workflows/canary.yml
+    with:
+      ref: refs/tags/${{ inputs.tag }}
+
   publish:
     name: Publish to ${{ inputs.target }}
-    needs: build
+    needs: [build, canary]
+    # A skipped canary (testpypi, or skip_canary) is fine; a failed one blocks the publish.
+    if: ${{ !cancelled() && needs.build.result == 'success' && contains(fromJSON('["success","skipped"]'), needs.canary.result) }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     environment:

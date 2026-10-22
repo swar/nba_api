@@ -1,0 +1,80 @@
+# Live canary: a few real requests to stats.nba.com and cdn.nba.com, always
+# through the proxy in the NBA_API_PROXY secret (tests/integration/canary).
+#
+# Runs three ways:
+#   - weekly, against the default branch (a failed scheduled run emails whoever
+#     last edited the cron line below, if they have Actions email notifications on)
+#   - on demand (workflow_dispatch)
+#   - as a gate inside release.yml, against the release tag, before publishing
+#
+# The secret lives in the `release` environment, which must be limited to the
+# `master` branch: both the weekly run and release.yml run from there. One-time
+# setup is in RELEASING.md.
+name: Canary
+
+on:
+  schedule:
+    - cron: "17 13 * * 1" # Mondays, 13:17 UTC
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      ref:
+        description: "Git ref to test (empty = the default branch)"
+        required: false
+        type: string
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  group: canary
+  cancel-in-progress: false
+
+env:
+  POETRY_VERSION: "2.3.2"
+
+jobs:
+  canary:
+    name: Live canary
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: release
+    env:
+      NBA_API_PROXY: ${{ secrets.NBA_API_PROXY }}
+      NBA_API_REQUIRE_PROXY: "1"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ inputs.ref }}
+          persist-credentials: false
+      - name: Install Poetry
+        run: pipx install "poetry==${POETRY_VERSION}"
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.13"
+      - name: Install dependencies
+        run: poetry install --no-ansi --no-interaction
+      # Actions only masks the exact secret string; also mask the pieces a
+      # traceback could print on their own (decoded user/password).
+      - name: Mask derived proxy credentials
+        run: |
+          python3 - <<'PY'
+          import os
+          from urllib.parse import unquote, urlsplit
+
+          parts = urlsplit(os.environ.get("NBA_API_PROXY", ""))
+          for value in (parts.username, parts.password):
+              if value:
+                  for form in {value, unquote(value)}:
+                      print(f"::add-mask::{form}")
+          PY
+      # Proxy IPs are occasionally blocked by NBA.com, so retry once before failing.
+      - name: Run canary tests
+        run: |
+          run() { poetry run pytest tests/integration/canary -m canary -v --record-mode=none -p no:cacheprovider; }
+          run || {
+            echo "::warning::Canary failed once; retrying in 60s"
+            sleep 60
+            run
+          }
