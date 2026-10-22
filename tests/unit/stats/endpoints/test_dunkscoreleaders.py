@@ -41,6 +41,14 @@ class TestDunkScoreLeadersEndpoint:
         assert endpoint.parameters["TeamID"] == "1610612737"
         assert endpoint.parameters["GameID"] == "0022500101"
 
+    def test_unset_player_and_team_ids_are_omitted(self):
+        """The server rejects blank PlayerID/TeamID with a 400, so they default
+        to None, which requests leaves out of the query string."""
+        endpoint = DunkScoreLeaders(get_request=False)
+
+        assert endpoint.parameters["PlayerID"] is None
+        assert endpoint.parameters["TeamID"] is None
+
     def test_expected_data_structure(self):
         """Test that expected_data has all required datasets."""
         from nba_api.stats.endpoints._expected_data.dunkscoreleaders import (

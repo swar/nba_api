@@ -1,11 +1,5 @@
-# Replacement for the `release` job in .circleci/config.yml.
-#
-# The CircleCI job runs `semantic-release publish`, which in python-semantic-release
-# v9 only uploads dist/* to the latest GitHub release. It never builds, so dist/ is
-# empty and nothing is uploaded; `upload_to_pypi` is a v7 setting that v9 ignores.
-# PyPI publishing is actually the manual `poetry publish` in scripts/gen-release.sh.
-#
-# This workflow does that publish from CI instead, for an existing release tag:
+# Publishes an existing release tag from CI (replaces the manual `poetry publish`
+# in scripts/gen-release.sh):
 # build once, check the version, upload to PyPI via Trusted Publishing (no API
 # token), and attach the files to the GitHub release.
 #
