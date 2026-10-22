@@ -71,8 +71,10 @@ applicable), an `EndpointSpec` in `tests/integration/helpers/endpoint_specs.py`,
 - `http.py` reads `DEBUG`/`DEBUG_STORAGE` from `debug.py` **at import time**. Tests that change those
   must patch and reload the modules — follow `tests/unit/http/test_legacy_debug_usage.py`. The proxy
   is resolved per request in `library/proxy.py`: just `monkeypatch.setenv("NBA_API_PROXY", ...)`.
-- Integration markers: `vcr` = replays a cassette (offline, runs in CI); `live` = real HTTP.
-  Do not record or re-record cassettes, or run `live` tests, unless asked — they hit
+- Integration markers: `vcr` = replays a cassette (offline, runs in CI); `live` = real HTTP;
+  `canary` = the few live requests in `tests/integration/canary`, which force
+  `NBA_API_REQUIRE_PROXY=1` and skip without `NBA_API_PROXY` (`make test-canary`).
+  Do not record or re-record cassettes, or run `live`/`canary` tests, unless asked — they hit
   stats.nba.com, which rate-limits and blocks aggressively.
 - `Season.default` and friends are date-derived and roll over every October. Cassette tests pin
   them via `RECORDED_SEASON_YEAR` in `tests/integration/helpers/seasons.py`; bump it only when
