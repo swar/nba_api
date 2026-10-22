@@ -2,8 +2,7 @@
 
 Endpoints that stats.nba.com is not serving correctly. The `nba_api` classes are kept, so
 existing code keeps importing. The server is the problem, and there is nothing to fix on your
-side. Each section gives the date the behaviour was last checked. Rerun
-[`endpoint_scope`](../tools/stats/endpoint_scope/scope.md) to recheck.
+side. Each section gives the date the behaviour was last checked.
 
 ## Failing upstream
 
@@ -23,16 +22,16 @@ If you find parameters that make one of these work, please open an issue.
 
 ## Removed upstream
 
-**Last checked: 2026-10-21.** These return no data at all. Requests are redirected to the
-NBA.com homepage (HTTP 200 with HTML), or answered with an empty `{}`. Constructing them emits
-a `DeprecationWarning` that names a replacement where one exists.
+**Last checked: 2026-10-22.** These return no data at all. They answer with the NBA.com
+homepage (HTTP 200 with HTML) or with an empty `{}`. Constructing them emits a
+`DeprecationWarning` that names a replacement where one exists.
 
 | Endpoint | Response | Use instead |
 |---|---|---|
-| [AssistLeaders](endpoints/assistleaders.md) | Homepage redirect | LeagueDashPlayerStats or LeagueDashTeamStats |
-| [AssistTracker](endpoints/assisttracker.md) | Homepage redirect | — |
-| [LeagueLeaders](endpoints/leagueleaders.md) | Homepage redirect | LeagueDashPlayerStats |
-| [PlayoffPicture](endpoints/playoffpicture.md) | Homepage redirect | LeagueStandingsV3 |
+| [AssistLeaders](endpoints/assistleaders.md) | NBA.com homepage (HTML) | LeagueDashPlayerStats or LeagueDashTeamStats |
+| [AssistTracker](endpoints/assisttracker.md) | NBA.com homepage (HTML) | — |
+| [LeagueLeaders](endpoints/leagueleaders.md) | NBA.com homepage (HTML) | LeagueDashPlayerStats |
+| [PlayoffPicture](endpoints/playoffpicture.md) | NBA.com homepage (HTML) | LeagueStandingsV3 |
 | [BoxScoreAdvancedV2](endpoints/boxscoreadvancedv2.md) | Empty `{}` | BoxScoreAdvancedV3 |
 | [BoxScoreFourFactorsV2](endpoints/boxscorefourfactorsv2.md) | Empty `{}` | BoxScoreFourFactorsV3 |
 | [BoxScoreMiscV2](endpoints/boxscoremiscv2.md) | Empty `{}` | BoxScoreMiscV3 |
