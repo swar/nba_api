@@ -82,7 +82,7 @@ applicable), an `EndpointSpec` in `tests/integration/helpers/endpoint_specs.py`,
 
 ## Gotchas
 
-- **Proxy credentials.** `NBA_API_PROXY` may hold real credentials. `.env` is no longer auto-loaded,
+- **Proxy credentials.** `NBA_API_PROXY` may hold real credentials. The library does not read `.env`,
   but a shell-exported `NBA_API_PROXY` still reaches tests, so run cassette tests with
   `NBA_API_PROXY=` (as above). Request errors have the proxy URL masked, but still never read,
   print, or commit `.env`, and never paste proxy URLs into commits, PRs, or issues.

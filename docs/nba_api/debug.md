@@ -1,7 +1,7 @@
 # debug.py
 >/src/nba_api/library/debug/debug.py
 
-This module holds package-wide settings for debug mode and response caching. The HTTP clients read `DEBUG` and `DEBUG_STORAGE` **once, when they are first imported**, so set them before you import any endpoint. Proxy configuration no longer lives here; see [`PROXY`](#proxy) below.
+This module holds package-wide settings for debug mode and response caching. The HTTP clients read `DEBUG` and `DEBUG_STORAGE` **once, when they are first imported**, so set them before you import any endpoint. The proxy is resolved on every request, not at import time; see [`PROXY`](#proxy) below.
 
 For most uses, prefer the per-request `proxy`, `headers`, and `timeout` arguments that every endpoint accepts (see [Stats examples](stats/examples.md)). They need no global configuration.
 
