@@ -1,7 +1,7 @@
 # Input / Output Definitions
 
 ### `nba_stats_response`
-[`NBAStatsResponse`]() class
+[`NBAStatsResponse`](../../stats/library/http.md) class
 
 ### `endpoint`
 ```python
@@ -70,4 +70,4 @@ nullable_parameters = ['parameter1',  'parameter2', ...]
 ```
 
 ### `data_sets`
-The data sets returned by the [`NBAStatsResponse`]() class.
+The data sets returned by the [`NBAStatsResponse`](../../stats/library/http.md) class.
