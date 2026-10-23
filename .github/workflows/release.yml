@@ -1,0 +1,234 @@
+# Publishes to PyPI from CI (replaces the manual `poetry publish` in
+# scripts/gen-release.sh): build once, check the version, upload via Trusted
+# Publishing (no API token), and attach the files to the GitHub release.
+#
+# It starts automatically, and only, when a release commit lands on master: a commit
+# titled `chore: release vX.Y.Z` (the squash-merge of the release PR from
+# scripts/gen-release.sh) whose parent had a different `pyproject.toml` version, with
+# the new version equal to X.Y.Z. A push that touches pyproject.toml without changing
+# the version exits in `prepare` without building anything; a version change with a
+# non-release subject fails loudly.
+#
+# Pipeline: prepare -> build -> live canary (pypi only) -> publish (pypi environment
+# approval) -> tag + GitHub release. It can also be run by hand (workflow_dispatch)
+# for an existing tag, e.g. to re-run a failed publish or rehearse on testpypi.
+#
+# One-time setup is in RELEASING.md.
+name: Release
+
+on:
+  push:
+    branches: [master]
+    paths: [pyproject.toml]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Existing release tag to build and publish (e.g. v1.11.5)"
+        required: true
+        type: string
+      target:
+        description: "Package index to publish to"
+        required: true
+        type: choice
+        options: [testpypi, pypi]
+        default: testpypi
+      skip_canary:
+        description: "Skip the live canary gate when publishing to pypi (escape hatch for a blocked proxy; leave off normally)"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+# One run per release (commit for pushes, tag for manual runs), so a queued run for a
+# different release can never replace a pending one.
+concurrency:
+  group: release-${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.sha }}
+  cancel-in-progress: false
+
+env:
+  POETRY_VERSION: "2.3.2"
+
+jobs:
+  prepare:
+    name: Detect release
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      run: ${{ steps.detect.outputs.run }}
+      tag: ${{ steps.detect.outputs.tag }}
+      target: ${{ steps.detect.outputs.target }}
+      ref: ${{ steps.detect.outputs.ref }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+      - name: Decide whether this is a release
+        id: detect
+        env:
+          EVENT: ${{ github.event_name }}
+          SHA: ${{ github.sha }}
+          INPUT_TAG: ${{ inputs.tag }}
+          INPUT_TARGET: ${{ inputs.target }}
+        run: |
+          set -euo pipefail
+          skip() { echo "::notice::Not a release: $1"; echo "run=false" >> "$GITHUB_OUTPUT"; exit 0; }
+          version_of() { python3 -c 'import sys, tomllib; print(tomllib.load(sys.stdin.buffer)["project"]["version"])'; }
+
+          if [ "$EVENT" = "workflow_dispatch" ]; then
+            [[ "$INPUT_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] || {
+              echo "::error::tag input '${INPUT_TAG}' must look like vX.Y.Z"
+              exit 1
+            }
+            {
+              echo "run=true"
+              echo "tag=${INPUT_TAG}"
+              echo "target=${INPUT_TARGET}"
+              echo "ref=refs/tags/${INPUT_TAG}"
+            } >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          new="$(git show "${SHA}:pyproject.toml" | version_of)"
+          old="$(git show "${SHA}^:pyproject.toml" | version_of)"
+          [ "$new" != "$old" ] || skip "pyproject.toml version did not change (still ${old})"
+
+          # The version changed, so this should be a release. If the commit subject
+          # does not say so (edited squash title, merge commit), fail loudly instead
+          # of silently not publishing.
+          subject="$(git log -1 --format=%s "$SHA")"
+          re='^chore: release v([0-9]+\.[0-9]+\.[0-9]+)( \(#[0-9]+\))?$'
+          if ! [[ "$subject" =~ $re ]]; then
+            echo "::error::pyproject.toml version changed ${old} -> ${new}, but the commit subject '${subject}' is not 'chore: release vX.Y.Z'. Nothing was published; fix the subject or run Release manually."
+            exit 1
+          fi
+          version="${BASH_REMATCH[1]}"
+          if [ "$new" != "$version" ]; then
+            echo "::error::pyproject.toml is ${new} but the commit subject says ${version}. Nothing was published."
+            exit 1
+          fi
+
+          if git ls-remote --exit-code --tags origin "refs/tags/v${version}" >/dev/null 2>&1; then
+            skip "tag v${version} already exists"
+          fi
+
+          {
+            echo "run=true"
+            echo "tag=v${version}"
+            echo "target=pypi"
+            echo "ref=${SHA}"
+          } >> "$GITHUB_OUTPUT"
+
+  build:
+    name: Build distributions
+    needs: prepare
+    if: needs.prepare.outputs.run == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ needs.prepare.outputs.ref }}
+          persist-credentials: false
+      - name: Install Poetry
+        run: pipx install "poetry==${POETRY_VERSION}"
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.13"
+      - name: Check tag matches pyproject version
+        env:
+          TAG: ${{ needs.prepare.outputs.tag }}
+        run: |
+          version="$(poetry version --short)"
+          if [ "v${version}" != "${TAG}" ]; then
+            echo "::error::Tag ${TAG} does not match pyproject.toml version ${version}"
+            exit 1
+          fi
+      # Check before anything is published, so a missing heading can't leave a version
+      # on PyPI with no GitHub release.
+      - name: Check CHANGELOG.MD has this release's section
+        env:
+          TAG: ${{ needs.prepare.outputs.tag }}
+        run: |
+          grep -qxF "## ${TAG}" CHANGELOG.MD || {
+            echo "::error::CHANGELOG.MD has no '## ${TAG}' heading"
+            exit 1
+          }
+      - name: Build
+        run: poetry build --no-ansi
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: dist
+          path: dist/
+          if-no-files-found: error
+
+  canary:
+    name: Live canary
+    needs: [prepare, build]
+    if: needs.prepare.outputs.target == 'pypi' && !inputs.skip_canary
+    permissions:
+      contents: read
+    uses: ./.github/workflows/canary.yml
+    with:
+      ref: ${{ needs.prepare.outputs.ref }}
+
+  publish:
+    name: Publish to ${{ needs.prepare.outputs.target }}
+    needs: [prepare, build, canary]
+    # A skipped canary (testpypi, or skip_canary) is fine; a failed one blocks the publish.
+    if: ${{ !cancelled() && needs.build.result == 'success' && contains(fromJSON('["success","skipped"]'), needs.canary.result) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: ${{ needs.prepare.outputs.target }}
+      url: ${{ needs.prepare.outputs.target == 'pypi' && 'https://pypi.org/project/nba_api/' || 'https://test.pypi.org/project/nba_api/' }}
+    permissions:
+      id-token: write # Trusted Publishing
+    steps:
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: dist
+          path: dist/
+      - uses: pypa/gh-action-pypi-publish@7245906fb61fa33a13554f9d5fb856fe61758086 # v1.14.3
+        with:
+          repository-url: ${{ needs.prepare.outputs.target == 'pypi' && 'https://upload.pypi.org/legacy/' || 'https://test.pypi.org/legacy/' }}
+          # Lets "Re-run failed jobs" finish tagging if a later job failed after PyPI accepted the files.
+          skip-existing: true
+
+  github-release:
+    name: Tag and GitHub release
+    needs: [prepare, publish]
+    if: needs.prepare.outputs.target == 'pypi'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ needs.prepare.outputs.ref }}
+          persist-credentials: false
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: dist
+          path: dist/
+      # Creates the tag on the released commit if needed (the push path has no tag yet);
+      # for a manual run on an existing release it just uploads the files.
+      - name: Create the release (if missing) and upload files
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ needs.prepare.outputs.tag }}
+          SHA: ${{ github.sha }}
+          REF: ${{ needs.prepare.outputs.ref }}
+        run: |
+          set -euo pipefail
+          if ! gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            target="$SHA"
+            case "$REF" in refs/tags/*) target="$(git rev-parse "$REF^{commit}")" ;; esac
+            awk -v v="$TAG" '$0 == "## " v {on=1; next} on && /^## / {exit} on' CHANGELOG.MD > notes.md
+            [ -s notes.md ] || { echo "::error::No '## ${TAG}' section in CHANGELOG.MD"; exit 1; }
+            gh release create "$TAG" --repo "$GITHUB_REPOSITORY" --target "$target" --title "$TAG" --notes-file notes.md
+          fi
+          gh release upload "$TAG" dist/* --repo "$GITHUB_REPOSITORY" --clobber

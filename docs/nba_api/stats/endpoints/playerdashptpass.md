@@ -26,6 +26,7 @@
 | [_**Location**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#Location)             | location_nullable         |                                     `^((Home)\|(Road))?$`                                      |   `Y`    |   `Y`    | 
 | [_**DateTo**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DateTo)                 | date_to_nullable          |                                                                                                |   `Y`    |   `Y`    | 
 | [_**DateFrom**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#DateFrom)             | date_from_nullable        |                                                                                                |   `Y`    |   `Y`    | 
+| [_**ISTRound**_](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md#ISTRound) | ist_round_nullable | `^((Group)\|(East Group A)\|(East Group B)\|(East Group C)\|(West Group A)\|(West Group B)\|(West Group C)\|(Knockout)\|(Championship))?$` |  | `Y` |
 
 ## Data Sets
 #### PassesMade `passes_made`

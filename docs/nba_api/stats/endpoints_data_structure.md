@@ -1,59 +1,66 @@
-# class `Endpoint`
+# Endpoint data structure
+>/src/nba_api/stats/endpoints/_base.py
 
-## `get_request_url`( )
+Every stats endpoint class inherits from `Endpoint`, so the methods below work the same on all of them. Each data set the endpoint returns is also exposed as an attribute holding an `Endpoint.DataSet` (for example, `PlayerCareerStats(...).season_totals_regular_season`). The data set attributes for each endpoint are listed on its page in the [table of contents](../../table_of_contents.md).
 
-Returns the url of the request.
+## class `Endpoint`
 
-## `get_available_data`( )
+#### `get_request`( )
 
-Returns the data set names that are in the object.
+Sends the request and loads the response. Called automatically by the constructor unless the endpoint was created with `get_request=False`.
 
-## `get_response`( )
+#### `get_request_url`( )
 
-Returns the raw `string` response.
+Returns the URL of the request, including the query string.
 
-## `get_dict`( )
+#### `get_available_data`( )
 
-Returns the response in a `dictionary`.
+Returns the names of the data sets in the response.
 
-## `get_json`( )
+#### `get_response`( )
 
-Returns the response in a `json`.
+Returns the raw response text.
 
-## `get_normalized_dict`( )
+#### `get_dict`( )
 
-Returns the response in a normalized `dictionary`.
-
-## `get_normalized_json`( )
-
-Returns the response in a normalized `json`.
-
-## `get_data_frames`( )
-
-Returns the a `list` of data sets in `DataFrame` objects.
-
-## class `DataSet`
-
-#### `__init__`(_`data`_)
-```python
-data = data_set
-```
-```python
-data_set = {'name': name, 'headers': headers, 'data': data}
-```
+Returns the full response as a `dict`.
 
 #### `get_json`( )
-returns the data set in a `json` object.
-```json
-{"name": name, "headers": [headers...], "data": [[data1], [data2], ...]}
+
+Returns the full response as a JSON `str`.
+
+#### `get_normalized_dict`( )
+
+Returns every data set as a list of row dictionaries, keyed by data set name:
+
+```python
+{"DataSetName": [{"HEADER1": value, "HEADER2": value, ...}, ...], ...}
+```
+
+#### `get_normalized_json`( )
+
+Returns `get_normalized_dict()` as a JSON `str`.
+
+#### `get_data_frames`( )
+
+Returns a `list` of pandas `DataFrame`s, one per data set, in the order the API returned them.
+
+## class `Endpoint.DataSet`
+
+#### `__init__`(_`data`_)
+
+```python
+data = {"headers": ["HEADER1", "HEADER2", ...], "data": [[row1...], [row2...], ...]}
 ```
 
 #### `get_dict`( )
-returns the data set in a `dictionary` object.
-```python
-data_set = {'name': name, 'headers': [headers...], 'data': [[data1], [data2], ...]}
-```
+
+Returns the data set as a `dict` in the format above.
+
+#### `get_json`( )
+
+Returns the data set as a JSON `str` in the format above.
 
 #### `get_data_frame`( )
-returns the data set in a `DataFrame` object. If `pandas` fails to import, this method will raise an exception.
 
+Returns the data set as a pandas `DataFrame`. Data sets with multiple header levels get `MultiIndex` columns, and a data set without headers returns an empty `DataFrame`.

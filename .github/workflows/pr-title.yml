@@ -1,0 +1,36 @@
+# PRs are squash-merged, so the PR title becomes the commit on master that
+# semantic-release reads. Check it against the allowed_tags in pyproject.toml.
+#
+# pull_request_target so fork PRs get a token; it never checks out PR code.
+name: PR title
+
+on:
+  pull_request_target:
+    types: [opened, edited, reopened, synchronize]
+
+permissions:
+  pull-requests: read
+
+jobs:
+  conventional-commit:
+    name: Conventional Commit title
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: amannn/action-semantic-pull-request@48f256284bd46cdaab1048c3721360e808335d50 # v6.1.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          # Keep in sync with [tool.semantic_release.commit_parser_options].
+          types: |
+            build
+            chore
+            ci
+            docs
+            feat
+            fix
+            perf
+            style
+            refactor
+            test
+          requireScope: false

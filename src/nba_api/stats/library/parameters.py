@@ -297,6 +297,26 @@ class HistoricalNullable(_NotRequired, Historical):
     pass
 
 
+class ISTRound:
+    """NBA Cup (In-Season Tournament) rounds."""
+
+    group = "Group"
+    east_group_a = "East Group A"
+    east_group_b = "East Group B"
+    east_group_c = "East Group C"
+    west_group_a = "West Group A"
+    west_group_b = "West Group B"
+    west_group_c = "West Group C"
+    knockout = "Knockout"
+    championship = "Championship"
+
+    default = group
+
+
+class ISTRoundNullable(_NotRequired, ISTRound):
+    pass
+
+
 class LastNGames:
     def games(self, i):
         return str(int(i))

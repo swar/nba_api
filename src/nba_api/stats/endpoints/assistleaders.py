@@ -1,3 +1,13 @@
+"""
+AssistLeaders endpoint.
+
+.. deprecated:: 2026-27
+    This endpoint is deprecated. Please use LeagueDashPlayerStats or LeagueDashTeamStats for assist totals instead.
+    The NBA API no longer returns data for AssistLeaders (it returns the NBA.com homepage instead).
+"""
+
+import warnings
+
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
 from nba_api.stats.library.parameters import (
@@ -10,6 +20,15 @@ from nba_api.stats.library.parameters import (
 
 
 class AssistLeaders(Endpoint):
+    """
+    AssistLeaders endpoint.
+
+    .. deprecated:: 2026-27
+        **DEPRECATION WARNING:** This endpoint is deprecated.
+        Please use :class:`~nba_api.stats.endpoints.LeagueDashPlayerStats` or :class:`~nba_api.stats.endpoints.LeagueDashTeamStats` for assist totals instead.
+        The NBA API no longer returns data for AssistLeaders (it returns the NBA.com homepage instead).
+    """
+
     endpoint = "assistleaders"
     expected_data = {
         "AssistLeaders": ["RANK", "TEAM_ID", "TEAM_ABBREVIATION", "TEAM_NAME", "AST"]
@@ -33,6 +52,13 @@ class AssistLeaders(Endpoint):
         timeout=30,
         get_request=True,
     ):
+        warnings.warn(
+            "AssistLeaders is deprecated and will be removed in a future version. "
+            "Please use LeagueDashPlayerStats or LeagueDashTeamStats for assist totals instead. "
+            "The NBA API no longer returns data for AssistLeaders (it returns the NBA.com homepage instead).",
+            DeprecationWarning,
+            stacklevel=2,
+        )
         self.proxy = proxy
         if headers is not None:
             self.headers = headers

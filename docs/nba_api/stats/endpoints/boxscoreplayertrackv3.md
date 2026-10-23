@@ -15,12 +15,12 @@
 ## Data Sets
 #### PlayerStats `player_stats`
 ```text
-['gameId', 'teamId', 'teamCity', 'teamName', 'teamTricode', 'teamSlug', 'personId', 'firstName', 'familyName', 'nameI', 'playerSlug', 'position', 'comment', 'jerseyNum', 'minutes', 'speed', 'distance', 'reboundChancesOffensive', 'reboundChancesDefensive', 'reboundChancesTotal', 'touches', 'secondaryAssists', 'freeThrowAssists', 'passes', 'assists', 'contestedFieldGoalsMade', 'contestedFieldGoalsAttempted', 'contestedFieldGoalPercentage', 'uncontestedFieldGoalsMade', 'uncontestedFieldGoalsAttempted', 'uncontestedFieldGoalsPercentage', 'fieldGoalPercentage', 'defendedAtRimFieldGoalsMade', 'defendedAtRimFieldGoalsAttempted', 'defendedAtRimFieldGoalPercentage']
+['gameId', 'teamId', 'teamCity', 'teamName', 'teamTricode', 'teamSlug', 'personId', 'firstName', 'familyName', 'nameI', 'playerSlug', 'position', 'comment', 'jerseyNum', 'minutes', 'speed', 'distance', 'reboundChancesOffensive', 'reboundChancesDefensive', 'reboundChancesTotal', 'touches', 'secondaryAssists', 'freeThrowAssists', 'passes', 'assists', 'contestedFieldGoalsMade', 'contestedFieldGoalsAttempted', 'contestedFieldGoalPercentage', 'uncontestedFieldGoalsMade', 'uncontestedFieldGoalsAttempted', 'uncontestedFieldGoalsPercentage', 'fieldGoalPercentage', 'defendedAtRimFieldGoalsMade', 'defendedAtRimFieldGoalsAttempted', 'defendedAtRimFieldGoalPercentage', 'homeTeamId', 'awayTeamId']
 ```
 
 #### TeamStats `team_stats`
 ```text
-['gameId', 'teamId', 'teamCity', 'teamName', 'teamTricode', 'teamSlug', 'minutes', 'distance', 'reboundChancesOffensive', 'reboundChancesDefensive', 'reboundChancesTotal', 'touches', 'secondaryAssists', 'freeThrowAssists', 'passes', 'assists', 'contestedFieldGoalsMade', 'contestedFieldGoalsAttempted', 'contestedFieldGoalPercentage', 'uncontestedFieldGoalsMade', 'uncontestedFieldGoalsAttempted', 'uncontestedFieldGoalsPercentage', 'fieldGoalPercentage', 'defendedAtRimFieldGoalsMade', 'defendedAtRimFieldGoalsAttempted', 'defendedAtRimFieldGoalPercentage']
+['gameId', 'teamId', 'teamCity', 'teamName', 'teamTricode', 'teamSlug', 'minutes', 'distance', 'reboundChancesOffensive', 'reboundChancesDefensive', 'reboundChancesTotal', 'touches', 'secondaryAssists', 'freeThrowAssists', 'passes', 'assists', 'contestedFieldGoalsMade', 'contestedFieldGoalsAttempted', 'contestedFieldGoalPercentage', 'uncontestedFieldGoalsMade', 'uncontestedFieldGoalsAttempted', 'uncontestedFieldGoalsPercentage', 'fieldGoalPercentage', 'defendedAtRimFieldGoalsMade', 'defendedAtRimFieldGoalsAttempted', 'defendedAtRimFieldGoalPercentage', 'homeTeamId', 'awayTeamId']
 ```
 
 
@@ -63,7 +63,9 @@
             "fieldGoalPercentage",
             "defendedAtRimFieldGoalsMade",
             "defendedAtRimFieldGoalsAttempted",
-            "defendedAtRimFieldGoalPercentage"
+            "defendedAtRimFieldGoalPercentage", 
+            "homeTeamId", 
+            "awayTeamId"
         ],
         "TeamStats": [
             "gameId",
@@ -91,7 +93,9 @@
             "fieldGoalPercentage",
             "defendedAtRimFieldGoalsMade",
             "defendedAtRimFieldGoalsAttempted",
-            "defendedAtRimFieldGoalPercentage"
+            "defendedAtRimFieldGoalPercentage", 
+            "homeTeamId", 
+            "awayTeamId"
         ]
     },
     "endpoint": "BoxScorePlayerTrackV3",

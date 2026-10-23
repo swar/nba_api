@@ -486,7 +486,7 @@ def nba_http_patch(monkeypatch):
     monkeypatch.setattr(NBAHTTP, "send_api_request", MockResponse.send_api_request)
 
 
-def test_get_request_url():
+def test_get_request_url(nba_http_patch):
     assert (
         boxscore.BoxScore(game_id).get_request_url()
         == "https://cdn.nba.com/static/json/liveData/boxscore/boxscore_0022000180.json"

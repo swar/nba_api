@@ -43,6 +43,8 @@ class BoxScoreScoringV3(Endpoint):
             "percentageUnassisted3pt",
             "percentageAssistedFGM",
             "percentageUnassistedFGM",
+            "homeTeamId",
+            "awayTeamId",
         ],
         "TeamStats": [
             "gameId",
@@ -67,6 +69,8 @@ class BoxScoreScoringV3(Endpoint):
             "percentageUnassisted3pt",
             "percentageAssistedFGM",
             "percentageUnassistedFGM",
+            "homeTeamId",
+            "awayTeamId",
         ],
     }
 

@@ -2,6 +2,7 @@
 
 import pytest
 
+from nba_api.stats.endpoints._parsers._home_away import HOME_AWAY_FIELDS
 from nba_api.stats.endpoints._parsers.boxscoreplayertrackv3 import (
     PLAYER_METADATA_FIELDS,
     PLAYERTRACK_STATS_FIELDS,
@@ -318,7 +319,7 @@ class TestBoxScorePlayerTrackV3ParserDataSets:
         team_stats = data_sets["TeamStats"]
         assert len(team_stats["headers"]) == 1 + len(TEAM_METADATA_FIELDS) + len(
             PLAYERTRACK_STATS_FIELDS
-        )
+        ) + len(HOME_AWAY_FIELDS)
         assert len(team_stats["data"]) == 2
 
     def test_player_stats_dataset(self, json_fixture):
@@ -329,7 +330,7 @@ class TestBoxScorePlayerTrackV3ParserDataSets:
         player_stats = data_sets["PlayerStats"]
         assert len(player_stats["headers"]) == 1 + len(TEAM_METADATA_FIELDS) + len(
             PLAYER_METADATA_FIELDS
-        ) + len(PLAYERTRACK_STATS_FIELDS)
+        ) + len(PLAYERTRACK_STATS_FIELDS) + len(HOME_AWAY_FIELDS)
         assert len(player_stats["data"]) == 2  # 1 home + 1 away player
 
 

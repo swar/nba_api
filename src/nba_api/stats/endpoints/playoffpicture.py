@@ -1,9 +1,28 @@
+"""
+PlayoffPicture endpoint.
+
+.. deprecated:: 2026-27
+    This endpoint is deprecated. Please use LeagueStandingsV3 for playoff seeding and clinch status instead.
+    The NBA API no longer returns data for PlayoffPicture (it returns the NBA.com homepage instead).
+"""
+
+import warnings
+
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
 from nba_api.stats.library.parameters import LeagueID, SeasonID
 
 
 class PlayoffPicture(Endpoint):
+    """
+    PlayoffPicture endpoint.
+
+    .. deprecated:: 2026-27
+        **DEPRECATION WARNING:** This endpoint is deprecated.
+        Please use :class:`~nba_api.stats.endpoints.LeagueStandingsV3` for playoff seeding and clinch status instead.
+        The NBA API no longer returns data for PlayoffPicture (it returns the NBA.com homepage instead).
+    """
+
     endpoint = "playoffpicture"
     expected_data = {
         "EastConfPlayoffPicture": [
@@ -189,6 +208,13 @@ class PlayoffPicture(Endpoint):
         timeout=30,
         get_request=True,
     ):
+        warnings.warn(
+            "PlayoffPicture is deprecated and will be removed in a future version. "
+            "Please use LeagueStandingsV3 for playoff seeding and clinch status instead. "
+            "The NBA API no longer returns data for PlayoffPicture (it returns the NBA.com homepage instead).",
+            DeprecationWarning,
+            stacklevel=2,
+        )
         self.proxy = proxy
         if headers is not None:
             self.headers = headers
