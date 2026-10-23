@@ -63,7 +63,7 @@ pandas = [
     {version = ">=2.2.0", python = ">=3.12"},
     {version = "<2.2.0", python = "<3.12"}
 ]
-ruff = "^0.15.9"
+ruff = "^0.17.2"
 pre-commit = "^4.0.0"
 pytest-recording = "^0.14.0"
 requests = {version = "^2.32.3", extras = ["socks"]}
@@ -102,6 +102,9 @@ ignore = [
 quote-style = "double"
 indent-style = "space"
 docstring-code-format = true
+# Ruff 0.17 formats code blocks in Markdown. Leave the docs alone: their examples
+# use hand-aligned comments that the formatter would collapse.
+exclude = ["*.md", "*.MD"]
 
 # semantic-release only computes the next version from commit messages
 # (scripts/gen-release.sh). CHANGELOG.MD is written by hand, and publishing is
