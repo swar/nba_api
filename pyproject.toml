@@ -65,7 +65,7 @@ pandas = [
 ]
 ruff = "^0.15.9"
 pre-commit = "^4.0.0"
-pytest-recording = "^0.13.4"
+pytest-recording = "^0.14.0"
 requests = {version = "^2.32.3", extras = ["socks"]}
 
 [tool.pytest.ini_options]
