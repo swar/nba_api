@@ -1,0 +1,21 @@
+# Fail a PR that adds or bumps a dependency with a known advisory. It reads the
+# dependency graph diff (pyproject.toml, poetry.lock, workflow actions), so only
+# what the PR changes is checked; Dependabot alerts cover what is already on master.
+name: Dependency review
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  dependency-review:
+    name: Dependency review
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/dependency-review-action@a1d282b36b6f3519aa1f3fc636f609c47dddb294 # v5.0.0
+        with:
+          fail-on-severity: moderate
+          show-openssf-scorecard: false

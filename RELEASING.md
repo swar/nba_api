@@ -125,7 +125,7 @@ Example:
 
 If the proxy is blocked and you must release anyway, run **Release** with `skip_canary` ticked. That is visible in the run's inputs; leave it off normally. The canary never runs for the `testpypi` target.
 
-**Failure emails.** GitHub emails a failed *scheduled* run to whoever last edited the `cron:` line in `canary.yml`, if they have *Settings* → *Notifications* → *Actions* set to send email (choose "Send notifications for failed workflows only"). To change who is notified, have that person edit the cron line. GitHub disables scheduled workflows after 60 days without repository activity.
+**Failure issue.** When a *scheduled* run fails, `canary-report.yml` opens an issue titled "Weekly live canary is failing", or comments on it if it is already open. The next passing scheduled run closes it. The issue only links to the run; it never copies logs. Manual and release-gate runs don't touch the issue. GitHub also emails a failed scheduled run to whoever last edited the `cron:` line, if they have Actions email notifications on. GitHub disables scheduled workflows after 60 days without repository activity.
 
 ## One-time setup for the Release workflow
 
