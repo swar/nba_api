@@ -1,5 +1,6 @@
 # Keep one open issue in sync with the weekly canary: open it (or comment on it)
-# when a scheduled run fails, and close it when a scheduled run passes again.
+# when a scheduled run fails, and close it when a scheduled or manual run passes.
+# Release-gate runs (called from release.yml) are ignored.
 #
 # A separate workflow rather than a job in canary.yml, because release.yml calls
 # canary.yml and a called workflow can't ask for more permissions than its caller.
@@ -9,7 +10,7 @@ name: Canary report
 
 on:
   workflow_run:
-    workflows: [Canary]
+    workflows: [Canary] # the `name:` of canary.yml, not its file name
     types: [completed]
 
 permissions:
@@ -18,9 +19,13 @@ permissions:
 jobs:
   report:
     name: Update canary issue
+    # A job that hits timeout-minutes can finish as "cancelled", and a broken
+    # canary.yml as "startup_failure", so both count as failures.
     if: >-
-      github.event.workflow_run.event == 'schedule' &&
-      contains(fromJSON('["success", "failure", "timed_out"]'), github.event.workflow_run.conclusion)
+      (github.event.workflow_run.event == 'schedule' &&
+       contains(fromJSON('["success", "failure", "timed_out", "cancelled", "startup_failure"]'), github.event.workflow_run.conclusion)) ||
+      (github.event.workflow_run.event == 'workflow_dispatch' &&
+       github.event.workflow_run.conclusion == 'success')
     runs-on: ubuntu-latest
     timeout-minutes: 5
     env:
@@ -32,12 +37,13 @@ jobs:
     steps:
       - name: Open, update, or close the canary issue
         run: |
+          set -euo pipefail
           number="$(gh issue list --state open --search "\"${TITLE}\" in:title" \
             --json number,title --jq ".[] | select(.title == \"${TITLE}\") | .number" | head -n1)"
 
           if [ "$CONCLUSION" = "success" ]; then
             if [ -n "$number" ]; then
-              gh issue close "$number" --comment "Scheduled canary passed again: ${RUN_URL}"
+              gh issue close "$number" --comment "Canary passed again: ${RUN_URL}"
             fi
           elif [ -n "$number" ]; then
             gh issue comment "$number" --body "Failed again: ${RUN_URL}"
@@ -48,7 +54,7 @@ jobs:
 
           That means stats.nba.com or cdn.nba.com stopped answering the way \`tests/integration/canary\` expects, or the proxy in the \`release\` environment is blocked. Until it passes, the canary gate in \`release.yml\` will block PyPI publishes too.
 
-          This issue is updated on each failed scheduled run and closed by the next passing one. Do not paste proxy URLs or raw logs here.
+          This issue is updated on each failed scheduled run and closed by the next passing scheduled or manual run. Do not paste proxy URLs or raw logs here.
           EOF
             gh issue create --title "$TITLE" --body-file "$body"
           fi

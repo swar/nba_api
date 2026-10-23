@@ -1,6 +1,9 @@
 # Fail a PR that adds or bumps a dependency with a known advisory. It reads the
 # dependency graph diff (pyproject.toml, poetry.lock, workflow actions), so only
 # what the PR changes is checked; Dependabot alerts cover what is already on master.
+# GitHub marks every poetry.lock package as runtime, dev tools included, so the
+# threshold is high: a moderate advisory with no fix yet would otherwise block
+# routine Dependabot bumps.
 name: Dependency review
 
 on:
@@ -17,5 +20,5 @@ jobs:
     steps:
       - uses: actions/dependency-review-action@a1d282b36b6f3519aa1f3fc636f609c47dddb294 # v5.0.0
         with:
-          fail-on-severity: moderate
+          fail-on-severity: high
           show-openssf-scorecard: false

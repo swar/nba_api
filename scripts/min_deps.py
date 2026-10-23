@@ -1,7 +1,7 @@
 """Print the lowest versions pyproject.toml allows for the running Python.
 
 One pin per runtime dependency whose marker matches this interpreter, taken from
-its ">=" (or "==" / "~=") bound, e.g. "numpy==1.26.0". CI installs these over
+its highest ">=" (or "==" / "~=") bound, e.g. "numpy==1.26.0". CI installs these over
 the locked versions to test the floors the package promises.
 
 Usage: poetry run python scripts/min_deps.py
@@ -11,6 +11,7 @@ import sys
 from pathlib import Path
 
 from packaging.requirements import Requirement
+from packaging.version import Version
 
 if sys.version_info >= (3, 11):
     import tomllib
@@ -31,9 +32,9 @@ def floors():
             for spec in requirement.specifier
             if spec.operator in (">=", "==", "~=")
         ]
-        if not lower:
-            sys.exit(f"{dependency!r} has no lower bound")
-        yield f"{requirement.name}=={lower[0]}"
+        if not lower or any("*" in version for version in lower):
+            sys.exit(f"{dependency!r} has no exact lower bound")
+        yield f"{requirement.name}=={max(lower, key=Version)}"
 
 
 if __name__ == "__main__":
