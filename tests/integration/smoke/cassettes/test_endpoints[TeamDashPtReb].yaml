@@ -1,0 +1,101 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQlWITAiX0b2ecAQAAdQXagx5OIvlGDaKtDQESaxFd30lr5fDEQxYf5I8oYf/gCDpeaMPL+0nf0EmNKuogAco6TftR5SfWX99Eqdqrszh2/pw7+hrA3b2/JJkXJATOLZCSTw0JFEyQHQ5lARwXKptmXnmKVrHIpHtqEQEb7HN59Iv1YALzRYbQM5JgH1D5cSJs8bsbat0RtrJyq1Dia9x4Gqa+v0sg6bEA7q4HUso4brjTMWiv2/Ecwbn1KHM=~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/teamdashptreb?DateFrom=&DateTo=&GameSegment=&LastNGames=0&LeagueID=00&Location=&Month=0&OpponentTeamID=0&Outcome=&PerMode=Totals&Period=0&Season=2025-26&SeasonSegment=&SeasonType=Regular+Season&TeamID=1610612739&VsConference=&VsDivision=
+  response:
+    body:
+      string: '{"resource":"teamdashptreb","parameters":{"PerMode":"Totals","LeagueID":"00","Season":"2025-26","SeasonType":"Regular
+        Season","TeamID":1610612739,"Outcome":null,"Location":null,"Month":0,"SeasonSegment":null,"DateFrom":null,"DateTo":null,"OpponentTeamID":0,"VsConference":null,"VsDivision":null,"GameSegment":null,"Period":0,"LastNGames":0,"ISTRound":null},"resultSets":[{"name":"OverallRebounding","headers":["TEAM_ID","TEAM_NAME","G","OVERALL","REB_FREQUENCY","OREB","DREB","REB","C_OREB","C_DREB","C_REB","C_REB_PCT","UC_OREB","UC_DREB","UC_REB","UC_REB_PCT"],"rowSet":[[1610612739,"Cleveland
+        Cavaliers",57,"Overall",1.0,684,1853,2537,365,487,852,0.336,319,1366,1685,0.664]]},{"name":"ShotTypeRebounding","headers":["TEAM_ID","TEAM_NAME","SORT_ORDER","G","SHOT_TYPE_RANGE","REB_FREQUENCY","OREB","DREB","REB","C_OREB","C_DREB","C_REB","C_REB_PCT","UC_OREB","UC_DREB","UC_REB","UC_REB_PCT"],"rowSet":[[1610612739,"Cleveland
+        Cavaliers",2,57,"Miss 2FG",0.461,311,858,1169,186,256,442,0.378,125,602,727,0.622],[1610612739,"Cleveland
+        Cavaliers",3,57,"Miss 3FG",0.493,359,892,1251,179,231,410,0.328,180,661,841,0.672]]},{"name":"NumContestedRebounding","headers":["TEAM_ID","TEAM_NAME","SORT_ORDER","G","REB_NUM_CONTESTING_RANGE","REB_FREQUENCY","OREB","DREB","REB","C_OREB","C_DREB","C_REB","C_REB_PCT","UC_OREB","UC_DREB","UC_REB","UC_REB_PCT"],"rowSet":[[1610612739,"Cleveland
+        Cavaliers",1,57,"0 Contesting Rebounders",0.664,319,1366,1685,0,0,0,0.0,319,1366,1685,1.0],[1610612739,"Cleveland
+        Cavaliers",2,57,"1 Contesting Rebounder",0.301,304,460,764,304,460,764,1.0,0,0,0,0.0],[1610612739,"Cleveland
+        Cavaliers",3,57,"2+ Contesting Rebounders",0.035,61,27,88,61,27,88,1.0,0,0,0,0.0]]},{"name":"ShotDistanceRebounding","headers":["TEAM_ID","TEAM_NAME","SORT_ORDER","G","SHOT_DIST_RANGE","REB_FREQUENCY","OREB","DREB","REB","C_OREB","C_DREB","C_REB","C_REB_PCT","UC_OREB","UC_DREB","UC_REB","UC_REB_PCT"],"rowSet":[[1610612739,"Cleveland
+        Cavaliers",1,57,"0-6 Feet",0.207,161,364,525,96,117,213,0.406,65,247,312,0.594],[1610612739,"Cleveland
+        Cavaliers",2,57,"7-13 Feet",0.156,114,282,396,70,85,155,0.391,44,197,241,0.609],[1610612739,"Cleveland
+        Cavaliers",3,57,"13-19 Feet",0.073,24,160,184,15,44,59,0.321,9,116,125,0.679],[1610612739,"Cleveland
+        Cavaliers",4,57,"19+ Feet",0.518,371,944,1315,184,241,425,0.323,187,703,890,0.677]]},{"name":"RebDistanceRebounding","headers":["TEAM_ID","TEAM_NAME","SORT_ORDER","G","REB_DIST_RANGE","REB_FREQUENCY","OREB","DREB","REB","C_OREB","C_DREB","C_REB","C_REB_PCT","UC_OREB","UC_DREB","UC_REB","UC_REB_PCT"],"rowSet":[[1610612739,"Cleveland
+        Cavaliers",1,57,"0-3 Feet",0.187,123,352,475,92,145,237,0.499,31,207,238,0.501],[1610612739,"Cleveland
+        Cavaliers",2,57,"3-6 Feet",0.354,216,683,899,146,203,349,0.388,70,480,550,0.612],[1610612739,"Cleveland
+        Cavaliers",3,57,"6-10 Feet",0.248,140,490,630,77,94,171,0.271,63,396,459,0.729],[1610612739,"Cleveland
+        Cavaliers",4,57,"10+ Feet",0.21,205,328,533,50,45,95,0.178,155,283,438,0.822]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '970'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:37:10 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQlWITAjL0b2ecAQAAHAjagx5fqvAXNooUXjaG6mCDVNWtx/auRyI/Z/DCgMPaIpohixQlY8+AR+38iCbhwO0V8LwgLwZf57AKW8be8GzfU26q4l4dO47yT7LTfmBC0L0m3d8VsKklcwaFt/VR8Ghi5esDu70Kv1KBQu6Zns8nMXM5q99b5kSHItt24larsKyzQDL9RtNFW3w+DNTmSraDGZhG/Tiw8bp8mauCIvqXneriMT5wjhUS2wXf0qk=~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7094;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '3600.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '3'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '2182.815'
+      x-varnish:
+      - 39217925 37288950
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

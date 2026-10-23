@@ -1,0 +1,1656 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAt0ebWicAQAA9PPZgx6/m40NV5Yif3jXr2iNRk0uxtSxCw3k1allKMfjm/AhfPnvy8N5LWkUIlVr5fQZcn2WkcG/qk6Sbwka18z9Z+XNirpEuPBmH3uatjZ+Efry9xuCdpyLhtBCERTQfq1e7m1Rd2sZr7hxVvz7PwrfNWvuin7x0Ag4XhOPK3B+pb76p3YY6xYgQWI1a9k40B/sQc9K0SAOpdwVrKBLOWZlnJkSOJ0D88jLb/4gqG0=~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/shotchartdetail?AheadBehind=&ClutchTime=&ContextFilter=&ContextMeasure=PTS&DateFrom=&DateTo=&EndPeriod=&EndRange=&GameID=&GameSegment=&LastNGames=0&LeagueID=00&Location=&Month=0&OpponentTeamID=0&Outcome=&Period=0&PlayerID=1628378&PlayerPosition=&PointDiff=&Position=&RangeType=&RookieYear=&Season=&SeasonSegment=&SeasonType=Regular+Season&StartPeriod=&StartRange=&TeamID=1610612739&VsConference=&VsDivision=
+  response:
+    body:
+      string: '{"resource":"shotchartdetail","parameters":{"LeagueID":"00","Season":null,"SeasonType":"Regular
+        Season","TeamID":1610612739,"PlayerID":1628378,"GameID":null,"Outcome":null,"Location":null,"Month":0,"SeasonSegment":null,"DateFrom":null,"DateTo":null,"OpponentTeamID":0,"VsConference":null,"VsDivision":null,"Position":null,"RookieYear":null,"GameSegment":null,"Period":0,"LastNGames":0,"ISTRound":null,"ClutchTime":null,"AheadBehind":null,"PointDiff":null,"RangeType":null,"StartPeriod":null,"EndPeriod":null,"StartRange":null,"EndRange":null,"ContextFilter":null,"ContextMeasure":"PTS"},"resultSets":[{"name":"Shot_Chart_Detail","headers":["GRID_TYPE","GAME_ID","GAME_EVENT_ID","PLAYER_ID","PLAYER_NAME","TEAM_ID","TEAM_NAME","PERIOD","MINUTES_REMAINING","SECONDS_REMAINING","EVENT_TYPE","ACTION_TYPE","SHOT_TYPE","SHOT_ZONE_BASIC","SHOT_ZONE_AREA","SHOT_ZONE_RANGE","SHOT_DISTANCE","LOC_X","LOC_Y","SHOT_ATTEMPTED_FLAG","SHOT_MADE_FLAG","GAME_DATE","HTM","VTM"],"rowSet":[["Shot
+        Chart Detail","0022500003",18,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,10,44,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,10,8,1,1,"20251022","NYK","CLE"],["Shot
+        Chart Detail","0022500003",145,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,0,9,"Made Shot","Pullup Jump shot","2PT Field Goal","Mid-Range","Center(C)","8-16
+        ft.",14,-20,147,1,1,"20251022","NYK","CLE"],["Shot Chart Detail","0022500003",333,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",2,0,9,"Made Shot","Pullup Jump
+        shot","2PT Field Goal","Mid-Range","Center(C)","16-24 ft.",17,43,172,1,1,"20251022","NYK","CLE"],["Shot
+        Chart Detail","0022500003",347,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,11,42,"Made Shot","Running Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",3,16,31,1,1,"20251022","NYK","CLE"],["Shot
+        Chart Detail","0022500003",357,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,11,15,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","Mid-Range","Right
+        Side Center(RC)","16-24 ft.",17,120,124,1,1,"20251022","NYK","CLE"],["Shot
+        Chart Detail","0022500003",363,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,10,33,"Made Shot","Pullup Jump shot","3PT Field Goal","Above
+        the Break 3","Center(C)","24+ ft.",28,0,285,1,1,"20251022","NYK","CLE"],["Shot
+        Chart Detail","0022500003",370,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,10,7,"Made Shot","Pullup Jump shot","2PT Field Goal","Mid-Range","Left
+        Side Center(LC)","16-24 ft.",16,-78,142,1,1,"20251022","NYK","CLE"],["Shot
+        Chart Detail","0022500003",390,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,7,53,"Made Shot","Driving Layup Shot","2PT Field Goal","In The
+        Paint (Non-RA)","Center(C)","Less Than 8 ft.",5,32,48,1,1,"20251022","NYK","CLE"],["Shot
+        Chart Detail","0022500003",415,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,6,43,"Made Shot","Running Dunk Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,15,8,1,1,"20251022","NYK","CLE"],["Shot
+        Chart Detail","0022500003",483,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,2,50,"Made Shot","Pullup Jump shot","2PT Field Goal","Mid-Range","Right
+        Side Center(RC)","16-24 ft.",19,105,161,1,1,"20251022","NYK","CLE"],["Shot
+        Chart Detail","0022500003",496,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,1,52,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",5,10,53,1,1,"20251022","NYK","CLE"],["Shot
+        Chart Detail","0022500003",499,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,1,32,"Made Shot","Running Pull-Up Jump Shot","3PT Field Goal","Above
+        the Break 3","Center(C)","24+ ft.",25,4,250,1,1,"20251022","NYK","CLE"],["Shot
+        Chart Detail","0022500007",59,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,7,28,"Made Shot","Jump Shot","2PT Field Goal","Mid-Range","Right
+        Side(R)","16-24 ft.",19,196,16,1,1,"20251027","DET","CLE"],["Shot Chart Detail","0022500007",130,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",1,2,49,"Made Shot","Layup Shot","2PT
+        Field Goal","In The Paint (Non-RA)","Center(C)","Less Than 8 ft.",4,-16,44,1,1,"20251027","DET","CLE"],["Shot
+        Chart Detail","0022500007",144,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,2,6,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",3,-21,32,1,1,"20251027","DET","CLE"],["Shot
+        Chart Detail","0022500007",159,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,0,45,"Made Shot","Finger Roll Layup Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",7,-45,63,1,1,"20251027","DET","CLE"],["Shot
+        Chart Detail","0022500007",412,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,0,0,"Made Shot","Running Finger Roll Layup Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",6,48,44,1,1,"20251027","DET","CLE"],["Shot
+        Chart Detail","0022500007",441,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,10,45,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Right Side Center(RC)","24+ ft.",26,148,214,1,1,"20251027","DET","CLE"],["Shot
+        Chart Detail","0022500007",497,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,7,7,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",7,27,74,1,1,"20251027","DET","CLE"],["Shot
+        Chart Detail","0022500007",500,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,6,36,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Right Side(R)","8-16 ft.",12,74,98,1,1,"20251027","DET","CLE"],["Shot
+        Chart Detail","0022500007",592,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,1,16,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Left Side Center(LC)","24+ ft.",26,-163,210,1,1,"20251027","DET","CLE"],["Shot
+        Chart Detail","0022500007",648,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,11,0,"Made Shot","Driving Reverse Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",2,-29,6,1,1,"20251027","DET","CLE"],["Shot
+        Chart Detail","0022500007",666,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,9,27,"Made Shot","Driving Layup Shot","2PT Field Goal","In The
+        Paint (Non-RA)","Center(C)","Less Than 8 ft.",4,29,40,1,1,"20251027","DET","CLE"],["Shot
+        Chart Detail","0022500007",675,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,8,11,"Made Shot","Running Layup Shot","2PT Field Goal","In The
+        Paint (Non-RA)","Center(C)","Less Than 8 ft.",4,-23,35,1,1,"20251027","DET","CLE"],["Shot
+        Chart Detail","0022500007",688,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,7,7,"Made Shot","Running Layup Shot","2PT Field Goal","In The
+        Paint (Non-RA)","Center(C)","Less Than 8 ft.",4,9,42,1,1,"20251027","DET","CLE"],["Shot
+        Chart Detail","0022500009",23,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,10,15,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,10,8,1,1,"20251225","NYK","CLE"],["Shot
+        Chart Detail","0022500009",46,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,8,45,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Center(C)","24+ ft.",25,78,242,1,1,"20251225","NYK","CLE"],["Shot
+        Chart Detail","0022500009",51,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,8,2,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Right Side Center(RC)","24+ ft.",25,202,153,1,1,"20251225","NYK","CLE"],["Shot
+        Chart Detail","0022500009",65,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,6,42,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",1,1,11,1,1,"20251225","NYK","CLE"],["Shot
+        Chart Detail","0022500009",148,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,1,2,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",4,-13,47,1,1,"20251225","NYK","CLE"],["Shot
+        Chart Detail","0022500009",335,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,11,41,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",2,15,16,1,1,"20251225","NYK","CLE"],["Shot
+        Chart Detail","0022500009",352,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,9,41,"Made Shot","Running Alley Oop Dunk Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",0,-9,-4,1,1,"20251225","NYK","CLE"],["Shot
+        Chart Detail","0022500009",461,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,3,7,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Right Side Center(RC)","24+ ft.",27,161,229,1,1,"20251225","NYK","CLE"],["Shot
+        Chart Detail","0022500009",596,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,5,29,"Made Shot","Pullup Jump shot","2PT Field Goal","Mid-Range","Center(C)","16-24
+        ft.",22,66,216,1,1,"20251225","NYK","CLE"],["Shot Chart Detail","0022500009",613,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",4,3,59,"Made Shot","Driving Reverse
+        Layup Shot","2PT Field Goal","Restricted Area","Center(C)","Less Than 8 ft.",0,-5,8,1,1,"20251225","NYK","CLE"],["Shot
+        Chart Detail","0022500009",667,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,0,21,"Made Shot","Driving Dunk Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",0,-2,8,1,1,"20251225","NYK","CLE"],["Shot
+        Chart Detail","0022500009",684,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,0,2,"Made Shot","Running Pull-Up Jump Shot","3PT Field Goal","Above
+        the Break 3","Center(C)","24+ ft.",28,48,276,1,1,"20251225","NYK","CLE"],["Shot
+        Chart Detail","0022500015",8,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,11,43,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",2,6,20,1,1,"20260119","CLE","OKC"],["Shot
+        Chart Detail","0022500015",119,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,3,43,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","Mid-Range","Left
+        Side(L)","16-24 ft.",16,-161,-4,1,1,"20260119","CLE","OKC"],["Shot Chart Detail","0022500015",600,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",4,11,31,"Made Shot","Jump Shot","3PT
+        Field Goal","Above the Break 3","Left Side Center(LC)","24+ ft.",25,-222,115,1,1,"20260119","CLE","OKC"],["Shot
+        Chart Detail","0022500015",632,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,8,31,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",6,9,61,1,1,"20260119","CLE","OKC"],["Shot
+        Chart Detail","0022500015",636,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,7,58,"Made Shot","Driving Layup Shot","2PT Field Goal","Mid-Range","Right
+        Side(R)","8-16 ft.",9,92,17,1,1,"20260119","CLE","OKC"],["Shot Chart Detail","0022500029",43,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",1,8,38,"Made Shot","Running Layup
+        Shot","2PT Field Goal","Restricted Area","Center(C)","Less Than 8 ft.",1,10,-5,1,1,"20251107","WAS","CLE"],["Shot
+        Chart Detail","0022500029",148,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,1,58,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Right Side Center(RC)","24+ ft.",29,172,235,1,1,"20251107","WAS","CLE"],["Shot
+        Chart Detail","0022500029",235,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,9,9,"Made Shot","Driving Layup Shot","2PT Field Goal","In The
+        Paint (Non-RA)","Left Side(L)","8-16 ft.",8,-48,67,1,1,"20251107","WAS","CLE"],["Shot
+        Chart Detail","0022500029",392,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,11,34,"Made Shot","Cutting Dunk Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,-2,16,1,1,"20251107","WAS","CLE"],["Shot
+        Chart Detail","0022500029",404,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,10,49,"Made Shot","Running Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",2,9,19,1,1,"20251107","WAS","CLE"],["Shot
+        Chart Detail","0022500029",429,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,8,55,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Right Side Center(RC)","24+ ft.",29,200,215,1,1,"20251107","WAS","CLE"],["Shot
+        Chart Detail","0022500029",434,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,8,27,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Left Side Center(LC)","24+ ft.",26,-137,231,1,1,"20251107","WAS","CLE"],["Shot
+        Chart Detail","0022500029",458,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,6,37,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Center(C)","24+ ft.",29,-10,297,1,1,"20251107","WAS","CLE"],["Shot
+        Chart Detail","0022500048",140,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,2,17,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Right Side Center(RC)","24+ ft.",26,197,177,1,1,"20251121","CLE","IND"],["Shot
+        Chart Detail","0022500048",193,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,11,27,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",0,-7,0,1,1,"20251121","CLE","IND"],["Shot
+        Chart Detail","0022500048",203,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,10,21,"Made Shot","Turnaround Fadeaway shot","2PT Field Goal","Mid-Range","Right
+        Side(R)","8-16 ft.",11,104,45,1,1,"20251121","CLE","IND"],["Shot Chart Detail","0022500048",377,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",3,11,8,"Made Shot","Fadeaway Jump
+        Shot","2PT Field Goal","Mid-Range","Right Side(R)","8-16 ft.",12,91,84,1,1,"20251121","CLE","IND"],["Shot
+        Chart Detail","0022500048",400,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,9,40,"Made Shot","Running Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",0,2,5,1,1,"20251121","CLE","IND"],["Shot
+        Chart Detail","0022500048",444,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,7,11,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",25,-206,152,1,1,"20251121","CLE","IND"],["Shot
+        Chart Detail","0022500048",507,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,4,20,"Made Shot","Jump Shot","2PT Field Goal","Mid-Range","Left
+        Side Center(LC)","16-24 ft.",22,-165,154,1,1,"20251121","CLE","IND"],["Shot
+        Chart Detail","0022500048",538,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,1,59,"Made Shot","Step Back Jump shot","2PT Field Goal","Mid-Range","Center(C)","16-24
+        ft.",18,51,180,1,1,"20251121","CLE","IND"],["Shot Chart Detail","0022500048",544,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",3,1,28,"Made Shot","Turnaround
+        Jump Shot","2PT Field Goal","In The Paint (Non-RA)","Center(C)","Less Than
+        8 ft.",7,44,62,1,1,"20251121","CLE","IND"],["Shot Chart Detail","0022500048",586,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",4,11,37,"Made Shot","Pullup Jump
+        shot","3PT Field Goal","Above the Break 3","Right Side Center(RC)","24+ ft.",25,200,165,1,1,"20251121","CLE","IND"],["Shot
+        Chart Detail","0022500048",702,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,3,43,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Left Side Center(LC)","24+ ft.",27,-178,207,1,1,"20251121","CLE","IND"],["Shot
+        Chart Detail","0022500069",137,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,2,25,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",7,17,78,1,1,"20251128","ATL","CLE"],["Shot
+        Chart Detail","0022500069",215,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,9,26,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Left Side Center(LC)","24+ ft.",25,-161,195,1,1,"20251128","ATL","CLE"],["Shot
+        Chart Detail","0022500069",222,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,8,59,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,-4,13,1,1,"20251128","ATL","CLE"],["Shot
+        Chart Detail","0022500069",236,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,7,59,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",25,-118,228,1,1,"20251128","ATL","CLE"],["Shot
+        Chart Detail","0022500069",239,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,7,36,"Made Shot","Running Pull-Up Jump Shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",25,-104,233,1,1,"20251128","ATL","CLE"],["Shot
+        Chart Detail","0022500069",318,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,2,27,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",0,-7,7,1,1,"20251128","ATL","CLE"],["Shot
+        Chart Detail","0022500069",338,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,0,50,"Made Shot","Driving Floating Bank Jump Shot","2PT Field
+        Goal","In The Paint (Non-RA)","Center(C)","Less Than 8 ft.",5,32,47,1,1,"20251128","ATL","CLE"],["Shot
+        Chart Detail","0022500069",497,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,1,35,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,4,14,1,1,"20251128","ATL","CLE"],["Shot
+        Chart Detail","0022500069",507,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,0,44,"Made Shot","Pullup Jump shot","2PT Field Goal","Mid-Range","Right
+        Side Center(RC)","16-24 ft.",22,80,211,1,1,"20251128","ATL","CLE"],["Shot
+        Chart Detail","0022500069",546,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,10,47,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,16,9,1,1,"20251128","ATL","CLE"],["Shot
+        Chart Detail","0022500069",549,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,10,15,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Center(C)","24+ ft.",25,-67,245,1,1,"20251128","ATL","CLE"],["Shot Chart
+        Detail","0022500069",560,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,9,3,"Made Shot","Running Jump Shot","3PT Field Goal","Above the
+        Break 3","Left Side Center(LC)","24+ ft.",25,-145,214,1,1,"20251128","ATL","CLE"],["Shot
+        Chart Detail","0022500069",619,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,5,51,"Made Shot","Jump Shot","3PT Field Goal","Right Corner 3","Right
+        Side(R)","24+ ft.",23,233,19,1,1,"20251128","ATL","CLE"],["Shot Chart Detail","0022500069",664,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",4,2,3,"Made Shot","Step Back Jump
+        shot","3PT Field Goal","Above the Break 3","Left Side Center(LC)","24+ ft.",25,-114,231,1,1,"20251128","ATL","CLE"],["Shot
+        Chart Detail","0022500069",667,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,1,36,"Made Shot","Running Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,5,17,1,1,"20251128","ATL","CLE"],["Shot
+        Chart Detail","0022500091",45,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,8,21,"Made Shot","Step Back Jump shot","2PT Field Goal","Mid-Range","Right
+        Side Center(RC)","16-24 ft.",20,114,168,1,1,"20251024","BKN","CLE"],["Shot
+        Chart Detail","0022500091",155,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,0,48,"Made Shot","Jump Shot","3PT Field Goal","Left Corner 3","Left
+        Side(L)","24+ ft.",23,-230,-13,1,1,"20251024","BKN","CLE"],["Shot Chart Detail","0022500091",193,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",2,10,48,"Made Shot","Jump Shot","3PT
+        Field Goal","Left Corner 3","Left Side(L)","24+ ft.",23,-225,67,1,1,"20251024","BKN","CLE"],["Shot
+        Chart Detail","0022500091",209,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,8,51,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Center(C)","24+ ft.",26,-31,259,1,1,"20251024","BKN","CLE"],["Shot
+        Chart Detail","0022500091",380,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,10,9,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",3,29,20,1,1,"20251024","BKN","CLE"],["Shot
+        Chart Detail","0022500091",402,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,8,14,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Left Side Center(LC)","24+ ft.",25,-181,184,1,1,"20251024","BKN","CLE"],["Shot
+        Chart Detail","0022500091",493,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,2,9,"Made Shot","Driving Finger Roll Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",2,23,5,1,1,"20251024","BKN","CLE"],["Shot
+        Chart Detail","0022500091",506,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,0,43,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Left Side Center(LC)","24+ ft.",25,-121,219,1,1,"20251024","BKN","CLE"],["Shot
+        Chart Detail","0022500091",535,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,11,27,"Made Shot","Driving Hook Shot","2PT Field Goal","In The
+        Paint (Non-RA)","Center(C)","Less Than 8 ft.",5,6,50,1,1,"20251024","BKN","CLE"],["Shot
+        Chart Detail","0022500091",618,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,5,55,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Left Side Center(LC)","24+ ft.",24,-116,216,1,1,"20251024","BKN","CLE"],["Shot
+        Chart Detail","0022500107",194,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,11,40,"Made Shot","Driving Dunk Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",0,-2,-1,1,1,"20251026","CLE","MIL"],["Shot
+        Chart Detail","0022500107",333,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,2,24,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",7,42,64,1,1,"20251026","CLE","MIL"],["Shot
+        Chart Detail","0022500107",388,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,10,18,"Made Shot","Jump Shot","3PT Field Goal","Right Corner
+        3","Right Side(R)","24+ ft.",23,232,8,1,1,"20251026","CLE","MIL"],["Shot Chart
+        Detail","0022500107",407,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,9,3,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","Mid-Range","Right
+        Side(R)","8-16 ft.",15,88,124,1,1,"20251026","CLE","MIL"],["Shot Chart Detail","0022500107",580,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",4,10,55,"Made Shot","Driving Floating
+        Jump Shot","2PT Field Goal","Restricted Area","Center(C)","Less Than 8 ft.",1,11,8,1,1,"20251026","CLE","MIL"],["Shot
+        Chart Detail","0022500107",598,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,9,23,"Made Shot","Running Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",0,0,0,1,1,"20251026","CLE","MIL"],["Shot
+        Chart Detail","0022500107",687,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,3,55,"Made Shot","Pullup Jump shot","2PT Field Goal","Mid-Range","Right
+        Side(R)","8-16 ft.",14,87,111,1,1,"20251026","CLE","MIL"],["Shot Chart Detail","0022500107",690,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",4,3,24,"Made Shot","Driving Floating
+        Jump Shot","2PT Field Goal","In The Paint (Non-RA)","Center(C)","8-16 ft.",12,45,114,1,1,"20251026","CLE","MIL"],["Shot
+        Chart Detail","0022500107",716,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,1,12,"Made Shot","Pullup Jump shot","2PT Field Goal","Mid-Range","Right
+        Side Center(RC)","16-24 ft.",18,87,164,1,1,"20251026","CLE","MIL"],["Shot
+        Chart Detail","0022500128",22,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,10,23,"Made Shot","Pullup Jump shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",27,-96,260,1,1,"20251029","BOS","CLE"],["Shot
+        Chart Detail","0022500128",42,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,8,7,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",26,-138,226,1,1,"20251029","BOS","CLE"],["Shot
+        Chart Detail","0022500128",124,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,2,28,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Left Side Center(LC)","24+ ft.",24,-197,153,1,1,"20251029","BOS","CLE"],["Shot
+        Chart Detail","0022500128",157,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,0,0,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Center(C)","24+ ft.",25,61,251,1,1,"20251029","BOS","CLE"],["Shot Chart
+        Detail","0022500128",187,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,10,36,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Right Side Center(RC)","24+ ft.",26,157,216,1,1,"20251029","BOS","CLE"],["Shot
+        Chart Detail","0022500151",18,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,10,49,"Made Shot","Running Jump Shot","3PT Field Goal","Left
+        Corner 3","Left Side(L)","24+ ft.",24,-237,38,1,1,"20251102","CLE","ATL"],["Shot
+        Chart Detail","0022500151",31,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,9,20,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",25,-175,186,1,1,"20251102","CLE","ATL"],["Shot
+        Chart Detail","0022500151",36,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,8,52,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Right Side Center(RC)","24+ ft.",27,132,239,1,1,"20251102","CLE","ATL"],["Shot
+        Chart Detail","0022500151",180,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,0,1,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",7,1,76,1,1,"20251102","CLE","ATL"],["Shot
+        Chart Detail","0022500151",376,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,11,14,"Made Shot","Jump Shot","3PT Field Goal","Left Corner 3","Left
+        Side(L)","24+ ft.",22,-229,10,1,1,"20251102","CLE","ATL"],["Shot Chart Detail","0022500151",396,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",3,9,41,"Made Shot","Pullup Jump
+        shot","2PT Field Goal","Mid-Range","Center(C)","8-16 ft.",15,34,147,1,1,"20251102","CLE","ATL"],["Shot
+        Chart Detail","0022500151",403,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,8,41,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Right Side Center(RC)","24+ ft.",29,159,253,1,1,"20251102","CLE","ATL"],["Shot
+        Chart Detail","0022500151",490,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,3,56,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Right Side Center(RC)","24+ ft.",27,129,240,1,1,"20251102","CLE","ATL"],["Shot
+        Chart Detail","0022500151",502,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,3,19,"Made Shot","Step Back Jump shot","2PT Field Goal","Mid-Range","Right
+        Side Center(RC)","16-24 ft.",19,126,148,1,1,"20251102","CLE","ATL"],["Shot
+        Chart Detail","0022500151",559,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,11,25,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Center(C)","24+ ft.",25,0,257,1,1,"20251102","CLE","ATL"],["Shot Chart
+        Detail","0022500151",649,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,6,2,"Made Shot","Running Pull-Up Jump Shot","3PT Field Goal","Above
+        the Break 3","Right Side Center(RC)","24+ ft.",26,172,197,1,1,"20251102","CLE","ATL"],["Shot
+        Chart Detail","0022500151",697,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,2,33,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","8-16 ft.",12,-50,111,1,1,"20251102","CLE","ATL"],["Shot
+        Chart Detail","0022500171",26,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,9,57,"Made Shot","Jump Shot","3PT Field Goal","Left Corner 3","Left
+        Side(L)","24+ ft.",24,-238,38,1,1,"20251105","CLE","PHI"],["Shot Chart Detail","0022500171",36,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",1,8,53,"Made Shot","Running Finger
+        Roll Layup Shot","2PT Field Goal","Restricted Area","Center(C)","Less Than
+        8 ft.",1,5,12,1,1,"20251105","CLE","PHI"],["Shot Chart Detail","0022500171",48,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",1,7,57,"Made Shot","Running Jump
+        Shot","3PT Field Goal","Above the Break 3","Left Side Center(LC)","24+ ft.",25,-196,169,1,1,"20251105","CLE","PHI"],["Shot
+        Chart Detail","0022500171",169,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,0,47,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Right Side Center(RC)","24+ ft.",25,218,130,1,1,"20251105","CLE","PHI"],["Shot
+        Chart Detail","0022500171",242,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,9,32,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",3,36,12,1,1,"20251105","CLE","PHI"],["Shot
+        Chart Detail","0022500171",352,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,3,18,"Made Shot","Pullup Jump shot","2PT Field Goal","In The
+        Paint (Non-RA)","Center(C)","8-16 ft.",14,51,133,1,1,"20251105","CLE","PHI"],["Shot
+        Chart Detail","0022500171",454,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,8,25,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",2,-7,21,1,1,"20251105","CLE","PHI"],["Shot
+        Chart Detail","0022500171",522,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,3,32,"Made Shot","Running Jump Shot","3PT Field Goal","Above
+        the Break 3","Right Side Center(RC)","24+ ft.",25,158,195,1,1,"20251105","CLE","PHI"],["Shot
+        Chart Detail","0022500171",541,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,1,56,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",25,-132,221,1,1,"20251105","CLE","PHI"],["Shot
+        Chart Detail","0022500171",547,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,1,17,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Right Side Center(RC)","24+ ft.",26,211,163,1,1,"20251105","CLE","PHI"],["Shot
+        Chart Detail","0022500171",560,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,0,32,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",0,2,0,1,1,"20251105","CLE","PHI"],["Shot
+        Chart Detail","0022500171",580,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,11,46,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",1,4,11,1,1,"20251105","CLE","PHI"],["Shot
+        Chart Detail","0022500171",601,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,9,42,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","8-16 ft.",8,-15,88,1,1,"20251105","CLE","PHI"],["Shot
+        Chart Detail","0022500171",609,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,8,59,"Made Shot","Driving Floating Bank Jump Shot","2PT Field
+        Goal","In The Paint (Non-RA)","Center(C)","Less Than 8 ft.",4,29,34,1,1,"20251105","CLE","PHI"],["Shot
+        Chart Detail","0022500171",721,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,1,15,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",2,-13,24,1,1,"20251105","CLE","PHI"],["Shot
+        Chart Detail","0022500186",141,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,2,43,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","Mid-Range","Right
+        Side(R)","8-16 ft.",11,112,32,1,1,"20251108","CLE","CHI"],["Shot Chart Detail","0022500186",393,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",3,11,35,"Made Shot","Driving Floating
+        Jump Shot","2PT Field Goal","In The Paint (Non-RA)","Center(C)","Less Than
+        8 ft.",7,-43,59,1,1,"20251108","CLE","CHI"],["Shot Chart Detail","0022500186",508,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",3,4,14,"Made Shot","Jump Shot","3PT
+        Field Goal","Above the Break 3","Center(C)","24+ ft.",27,38,277,1,1,"20251108","CLE","CHI"],["Shot
+        Chart Detail","0022500186",529,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,3,18,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Right Side Center(RC)","24+ ft.",25,121,225,1,1,"20251108","CLE","CHI"],["Shot
+        Chart Detail","0022500186",538,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,2,23,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Left Side Center(LC)","24+ ft.",26,-104,239,1,1,"20251108","CLE","CHI"],["Shot
+        Chart Detail","0022500186",623,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,9,25,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",25,-229,115,1,1,"20251108","CLE","CHI"],["Shot
+        Chart Detail","0022500186",687,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,6,7,"Made Shot","Jump Shot","2PT Field Goal","Mid-Range","Right
+        Side Center(RC)","16-24 ft.",22,137,181,1,1,"20251108","CLE","CHI"],["Shot
+        Chart Detail","0022500186",740,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,1,38,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Right Side Center(RC)","24+ ft.",25,114,230,1,1,"20251108","CLE","CHI"],["Shot
+        Chart Detail","0022500186",743,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,1,14,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,1,11,1,1,"20251108","CLE","CHI"],["Shot
+        Chart Detail","0022500186",747,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,0,33,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",2,16,17,1,1,"20251108","CLE","CHI"],["Shot
+        Chart Detail","0022500201",57,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,7,35,"Made Shot","Pullup Jump shot","2PT Field Goal","Mid-Range","Right
+        Side Center(RC)","16-24 ft.",19,152,125,1,1,"20251110","MIA","CLE"],["Shot
+        Chart Detail","0022500201",130,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,2,59,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Right Side Center(RC)","24+ ft.",25,161,197,1,1,"20251110","MIA","CLE"],["Shot
+        Chart Detail","0022500201",152,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,1,12,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",6,20,66,1,1,"20251110","MIA","CLE"],["Shot
+        Chart Detail","0022500201",391,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,10,39,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",3,7,37,1,1,"20251110","MIA","CLE"],["Shot
+        Chart Detail","0022500201",413,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,9,25,"Made Shot","Driving Layup Shot","2PT Field Goal","In The
+        Paint (Non-RA)","Center(C)","Less Than 8 ft.",7,53,50,1,1,"20251110","MIA","CLE"],["Shot
+        Chart Detail","0022500201",435,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,7,37,"Made Shot","Putback Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",0,0,0,1,1,"20251110","MIA","CLE"],["Shot
+        Chart Detail","0022500201",518,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,3,24,"Made Shot","Driving Floating Bank Jump Shot","2PT Field
+        Goal","In The Paint (Non-RA)","Center(C)","Less Than 8 ft.",6,58,37,1,1,"20251110","MIA","CLE"],["Shot
+        Chart Detail","0022500201",540,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,2,33,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Right Side Center(RC)","24+ ft.",26,107,243,1,1,"20251110","MIA","CLE"],["Shot
+        Chart Detail","0022500201",686,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,5,37,"Made Shot","Driving Reverse Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",2,9,22,1,1,"20251110","MIA","CLE"],["Shot
+        Chart Detail","0022500201",886,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",5,0,0,"Made Shot","Turnaround Fadeaway shot","3PT Field Goal","Left
+        Corner 3","Left Side(L)","24+ ft.",23,-237,23,1,1,"20251110","MIA","CLE"],["Shot
+        Chart Detail","0022500225",137,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,2,59,"Made Shot","Driving Floating Bank Jump Shot","2PT Field
+        Goal","Mid-Range","Right Side(R)","8-16 ft.",9,89,31,1,1,"20251113","CLE","TOR"],["Shot
+        Chart Detail","0022500225",304,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,2,54,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",0,-6,4,1,1,"20251113","CLE","TOR"],["Shot
+        Chart Detail","0022500225",370,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,9,7,"Made Shot","Driving Finger Roll Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,-4,12,1,1,"20251113","CLE","TOR"],["Shot
+        Chart Detail","0022500225",411,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,6,28,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Right Side Center(RC)","24+ ft.",25,221,117,1,1,"20251113","CLE","TOR"],["Shot
+        Chart Detail","0022500225",498,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,0,20,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",7,28,74,1,1,"20251113","CLE","TOR"],["Shot
+        Chart Detail","0022500225",572,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,8,43,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Right Side Center(RC)","24+ ft.",26,93,246,1,1,"20251113","CLE","TOR"],["Shot
+        Chart Detail","0022500225",611,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,6,12,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,1,17,1,1,"20251113","CLE","TOR"],["Shot
+        Chart Detail","0022500228",11,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,11,33,"Made Shot","Pullup Jump shot","3PT Field Goal","Above
+        the Break 3","Center(C)","24+ ft.",25,4,256,1,1,"20251115","CLE","MEM"],["Shot
+        Chart Detail","0022500228",36,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,9,54,"Made Shot","Pullup Jump shot","2PT Field Goal","In The
+        Paint (Non-RA)","Center(C)","8-16 ft.",13,26,134,1,1,"20251115","CLE","MEM"],["Shot
+        Chart Detail","0022500228",153,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,2,32,"Made Shot","Pullup Jump shot","2PT Field Goal","Mid-Range","Right
+        Side Center(RC)","16-24 ft.",21,121,183,1,1,"20251115","CLE","MEM"],["Shot
+        Chart Detail","0022500228",445,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,9,56,"Made Shot","Pullup Jump shot","2PT Field Goal","In The
+        Paint (Non-RA)","Left Side(L)","8-16 ft.",10,-71,82,1,1,"20251115","CLE","MEM"],["Shot
+        Chart Detail","0022500228",465,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,8,32,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",5,12,50,1,1,"20251115","CLE","MEM"],["Shot
+        Chart Detail","0022500228",593,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,0,53,"Made Shot","Pullup Jump shot","2PT Field Goal","Mid-Range","Left
+        Side Center(LC)","16-24 ft.",19,-103,160,1,1,"20251115","CLE","MEM"],["Shot
+        Chart Detail","0022500228",697,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,6,34,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Center(C)","24+ ft.",25,-65,243,1,1,"20251115","CLE","MEM"],["Shot Chart
+        Detail","0022500228",715,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,5,16,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",25,-191,166,1,1,"20251115","CLE","MEM"],["Shot
+        Chart Detail","0022500228",722,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,4,20,"Made Shot","Jump Shot","3PT Field Goal","Left Corner 3","Left
+        Side(L)","24+ ft.",23,-232,42,1,1,"20251115","CLE","MEM"],["Shot Chart Detail","0022500228",737,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",4,3,36,"Made Shot","Driving Floating
+        Jump Shot","2PT Field Goal","In The Paint (Non-RA)","Right Side(R)","8-16
+        ft.",11,58,95,1,1,"20251115","CLE","MEM"],["Shot Chart Detail","0022500241",13,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",1,11,14,"Made Shot","Step Back
+        Jump shot","2PT Field Goal","Mid-Range","Right Side Center(RC)","16-24 ft.",19,142,132,1,1,"20251117","CLE","MIL"],["Shot
+        Chart Detail","0022500241",51,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,7,55,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,7,16,1,1,"20251117","CLE","MIL"],["Shot
+        Chart Detail","0022500241",114,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,3,3,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",25,-123,225,1,1,"20251117","CLE","MIL"],["Shot
+        Chart Detail","0022500241",118,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,2,32,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Right Side Center(RC)","24+ ft.",26,211,161,1,1,"20251117","CLE","MIL"],["Shot
+        Chart Detail","0022500241",128,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,1,15,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,-6,13,1,1,"20251117","CLE","MIL"],["Shot
+        Chart Detail","0022500241",170,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,10,32,"Made Shot","Pullup Jump shot","2PT Field Goal","In The
+        Paint (Non-RA)","Center(C)","8-16 ft.",12,-64,111,1,1,"20251117","CLE","MIL"],["Shot
+        Chart Detail","0022500241",173,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,9,57,"Made Shot","Driving Reverse Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",0,2,6,1,1,"20251117","CLE","MIL"],["Shot
+        Chart Detail","0022500241",179,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,9,19,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Center(C)","24+ ft.",29,43,288,1,1,"20251117","CLE","MIL"],["Shot
+        Chart Detail","0022500241",196,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,8,4,"Made Shot","Running Finger Roll Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,1,19,1,1,"20251117","CLE","MIL"],["Shot
+        Chart Detail","0022500241",333,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,1,34,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Right Side(R)","8-16 ft.",12,67,104,1,1,"20251117","CLE","MIL"],["Shot
+        Chart Detail","0022500241",387,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,8,35,"Made Shot","Running Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",0,4,4,1,1,"20251117","CLE","MIL"],["Shot
+        Chart Detail","0022500241",489,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,1,16,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Right Side Center(RC)","24+ ft.",25,205,159,1,1,"20251117","CLE","MIL"],["Shot
+        Chart Detail","0022500241",495,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,0,5,"Made Shot","Driving Reverse Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,-6,10,1,1,"20251117","CLE","MIL"],["Shot
+        Chart Detail","0022500241",615,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,3,9,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,6,10,1,1,"20251117","CLE","MIL"],["Shot
+        Chart Detail","0022500255",54,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,7,30,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",6,33,52,1,1,"20251119","CLE","HOU"],["Shot
+        Chart Detail","0022500255",564,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,11,17,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Right Side Center(RC)","24+ ft.",24,207,125,1,1,"20251119","CLE","HOU"],["Shot
+        Chart Detail","0022500255",568,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,10,54,"Made Shot","Running Pull-Up Jump Shot","3PT Field Goal","Above
+        the Break 3","Right Side Center(RC)","24+ ft.",25,212,149,1,1,"20251119","CLE","HOU"],["Shot
+        Chart Detail","0022500255",600,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,8,32,"Made Shot","Running Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",2,20,8,1,1,"20251119","CLE","HOU"],["Shot
+        Chart Detail","0022500255",624,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,6,44,"Made Shot","Turnaround Fadeaway shot","2PT Field Goal","Mid-Range","Right
+        Side(R)","8-16 ft.",10,82,65,1,1,"20251119","CLE","HOU"],["Shot Chart Detail","0022500255",627,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",4,6,9,"Made Shot","Pullup Jump
+        shot","3PT Field Goal","Above the Break 3","Center(C)","24+ ft.",26,61,263,1,1,"20251119","CLE","HOU"],["Shot
+        Chart Detail","0022500255",630,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,5,39,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",2,22,15,1,1,"20251119","CLE","HOU"],["Shot
+        Chart Detail","0022500255",684,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,2,48,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,6,18,1,1,"20251119","CLE","HOU"],["Shot
+        Chart Detail","0022500278",18,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,10,38,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Right Side Center(RC)","24+ ft.",24,202,135,1,1,"20251123","CLE","LAC"],["Shot
+        Chart Detail","0022500278",40,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,8,57,"Made Shot","Fadeaway Jump Shot","2PT Field Goal","Mid-Range","Right
+        Side(R)","16-24 ft.",17,174,-26,1,1,"20251123","CLE","LAC"],["Shot Chart Detail","0022500278",117,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",1,3,9,"Made Shot","Pullup Jump
+        shot","2PT Field Goal","Mid-Range","Center(C)","8-16 ft.",14,-26,140,1,1,"20251123","CLE","LAC"],["Shot
+        Chart Detail","0022500278",138,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,1,6,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","8-16 ft.",9,11,96,1,1,"20251123","CLE","LAC"],["Shot
+        Chart Detail","0022500278",211,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,8,19,"Made Shot","Running Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",2,-22,8,1,1,"20251123","CLE","LAC"],["Shot
+        Chart Detail","0022500278",287,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,3,46,"Made Shot","Running Pull-Up Jump Shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",25,-223,127,1,1,"20251123","CLE","LAC"],["Shot
+        Chart Detail","0022500278",302,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,2,39,"Made Shot","Turnaround Fadeaway shot","2PT Field Goal","Mid-Range","Right
+        Side Center(RC)","16-24 ft.",16,118,120,1,1,"20251123","CLE","LAC"],["Shot
+        Chart Detail","0022500278",322,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,0,54,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",1,-9,8,1,1,"20251123","CLE","LAC"],["Shot
+        Chart Detail","0022500278",381,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,7,57,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Right Side Center(RC)","24+ ft.",26,143,220,1,1,"20251123","CLE","LAC"],["Shot
+        Chart Detail","0022500278",457,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,3,6,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,5,10,1,1,"20251123","CLE","LAC"],["Shot
+        Chart Detail","0022500278",466,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,2,42,"Made Shot","Driving Floating Bank Jump Shot","2PT Field
+        Goal","In The Paint (Non-RA)","Center(C)","Less Than 8 ft.",5,49,28,1,1,"20251123","CLE","LAC"],["Shot
+        Chart Detail","0022500278",503,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,0,34,"Made Shot","Running Pull-Up Jump Shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",26,-164,211,1,1,"20251123","CLE","LAC"],["Shot
+        Chart Detail","0022500278",536,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,10,40,"Made Shot","Pullup Jump shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",28,-126,251,1,1,"20251123","CLE","LAC"],["Shot
+        Chart Detail","0022500278",644,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,3,0,"Made Shot","Pullup Jump shot","2PT Field Goal","Mid-Range","Center(C)","16-24
+        ft.",16,-20,159,1,1,"20251123","CLE","LAC"],["Shot Chart Detail","0022500284",7,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",1,11,35,"Made Shot","Step Back
+        Jump shot","3PT Field Goal","Above the Break 3","Left Side Center(LC)","24+
+        ft.",29,-189,230,1,1,"20251124","TOR","CLE"],["Shot Chart Detail","0022500284",148,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",1,0,10,"Made Shot","Turnaround
+        Fadeaway shot","2PT Field Goal","Mid-Range","Right Side(R)","8-16 ft.",11,118,-8,1,1,"20251124","TOR","CLE"],["Shot
+        Chart Detail","0022500284",444,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,4,5,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",6,9,69,1,1,"20251124","TOR","CLE"],["Shot
+        Chart Detail","0022500284",523,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,10,39,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","8-16 ft.",9,9,99,1,1,"20251124","TOR","CLE"],["Shot
+        Chart Detail","0022500284",601,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,5,13,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Right Side Center(RC)","24+ ft.",26,138,222,1,1,"20251124","TOR","CLE"],["Shot
+        Chart Detail","0022500284",605,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,4,37,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Center(C)","24+ ft.",25,34,256,1,1,"20251124","TOR","CLE"],["Shot Chart
+        Detail","0022500302",55,1628378,"Donovan Mitchell",1610612739,"Cleveland Cavaliers",1,7,9,"Made
+        Shot","Running Jump Shot","3PT Field Goal","Above the Break 3","Left Side
+        Center(LC)","24+ ft.",25,-210,152,1,1,"20251130","CLE","BOS"],["Shot Chart
+        Detail","0022500302",122,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,1,24,"Made Shot","Driving Dunk Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,5,10,1,1,"20251130","CLE","BOS"],["Shot
+        Chart Detail","0022500302",421,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,4,44,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,5,11,1,1,"20251130","CLE","BOS"],["Shot
+        Chart Detail","0022500302",446,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,3,9,"Made Shot","Running Finger Roll Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,-13,1,1,1,"20251130","CLE","BOS"],["Shot
+        Chart Detail","0022500302",538,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,8,28,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",1,-11,-2,1,1,"20251130","CLE","BOS"],["Shot
+        Chart Detail","0022500302",655,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,0,45,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Right Side Center(RC)","24+ ft.",27,200,187,1,1,"20251130","CLE","BOS"],["Shot
+        Chart Detail","0022500302",658,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,0,20,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Center(C)","24+ ft.",26,22,261,1,1,"20251130","CLE","BOS"],["Shot
+        Chart Detail","0022500310",31,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,9,20,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",2,-22,17,1,1,"20251201","IND","CLE"],["Shot
+        Chart Detail","0022500310",132,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,2,41,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Center(C)","24+ ft.",27,78,268,1,1,"20251201","IND","CLE"],["Shot
+        Chart Detail","0022500310",157,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,0,47,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","In The Paint (Non-RA)","Center(C)","Less Than 8 ft.",4,-18,37,1,1,"20251201","IND","CLE"],["Shot
+        Chart Detail","0022500310",187,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,10,57,"Made Shot","Pullup Jump shot","2PT Field Goal","In The
+        Paint (Non-RA)","Center(C)","8-16 ft.",13,-27,132,1,1,"20251201","IND","CLE"],["Shot
+        Chart Detail","0022500310",331,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,2,25,"Made Shot","Turnaround Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",7,13,73,1,1,"20251201","IND","CLE"],["Shot
+        Chart Detail","0022500310",340,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,1,28,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Right Side Center(RC)","24+ ft.",25,200,152,1,1,"20251201","IND","CLE"],["Shot
+        Chart Detail","0022500310",359,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,0,31,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",2,27,13,1,1,"20251201","IND","CLE"],["Shot
+        Chart Detail","0022500310",380,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,11,5,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",25,-219,124,1,1,"20251201","IND","CLE"],["Shot
+        Chart Detail","0022500310",435,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,7,10,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",3,21,29,1,1,"20251201","IND","CLE"],["Shot
+        Chart Detail","0022500310",528,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,1,51,"Made Shot","Step Back Jump shot","2PT Field Goal","Mid-Range","Center(C)","16-24
+        ft.",22,-59,216,1,1,"20251201","IND","CLE"],["Shot Chart Detail","0022500310",561,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",4,11,39,"Made Shot","Driving Floating
+        Jump Shot","2PT Field Goal","In The Paint (Non-RA)","Center(C)","8-16 ft.",12,53,111,1,1,"20251201","IND","CLE"],["Shot
+        Chart Detail","0022500310",566,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,11,3,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",3,-27,15,1,1,"20251201","IND","CLE"],["Shot
+        Chart Detail","0022500310",614,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,8,8,"Made Shot","Running Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",0,-5,3,1,1,"20251201","IND","CLE"],["Shot
+        Chart Detail","0022500310",636,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,7,5,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Right Side Center(RC)","24+ ft.",25,173,187,1,1,"20251201","IND","CLE"],["Shot
+        Chart Detail","0022500310",650,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,6,44,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",2,-21,-1,1,1,"20251201","IND","CLE"],["Shot
+        Chart Detail","0022500310",706,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,4,1,"Made Shot","Pullup Jump shot","2PT Field Goal","In The Paint
+        (Non-RA)","Center(C)","8-16 ft.",9,-5,94,1,1,"20251201","IND","CLE"],["Shot
+        Chart Detail","0022500324",11,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,11,26,"Made Shot","Running Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",0,7,2,1,1,"20251203","CLE","POR"],["Shot
+        Chart Detail","0022500324",25,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,10,4,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Right Side Center(RC)","24+ ft.",25,216,139,1,1,"20251203","CLE","POR"],["Shot
+        Chart Detail","0022500324",48,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,8,8,"Made Shot","Fadeaway Jump Shot","2PT Field Goal","In The
+        Paint (Non-RA)","Center(C)","8-16 ft.",9,31,88,1,1,"20251203","CLE","POR"],["Shot
+        Chart Detail","0022500324",115,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,4,34,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","Mid-Range","Right
+        Side(R)","8-16 ft.",8,88,-11,1,1,"20251203","CLE","POR"],["Shot Chart Detail","0022500324",118,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",1,4,4,"Made Shot","Driving Floating
+        Jump Shot","2PT Field Goal","In The Paint (Non-RA)","Center(C)","8-16 ft.",11,32,113,1,1,"20251203","CLE","POR"],["Shot
+        Chart Detail","0022500324",124,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,3,25,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Right Side Center(RC)","24+ ft.",25,194,168,1,1,"20251203","CLE","POR"],["Shot
+        Chart Detail","0022500324",354,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,1,50,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Left Side(L)","8-16 ft.",12,-74,102,1,1,"20251203","CLE","POR"],["Shot
+        Chart Detail","0022500324",367,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,0,48,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Right Side Center(RC)","24+ ft.",25,169,194,1,1,"20251203","CLE","POR"],["Shot
+        Chart Detail","0022500324",440,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,7,2,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Right Side(R)","8-16 ft.",10,69,78,1,1,"20251203","CLE","POR"],["Shot
+        Chart Detail","0022500324",597,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,10,4,"Made Shot","Running Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",0,-6,6,1,1,"20251203","CLE","POR"],["Shot
+        Chart Detail","0022500324",680,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,4,33,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","8-16 ft.",10,5,104,1,1,"20251203","CLE","POR"],["Shot
+        Chart Detail","0022500324",719,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,1,29,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",5,22,53,1,1,"20251203","CLE","POR"],["Shot
+        Chart Detail","0022500341",53,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,8,30,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","Mid-Range","Right
+        Side(R)","8-16 ft.",11,87,76,1,1,"20251205","CLE","SAS"],["Shot Chart Detail","0022500341",66,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",1,7,41,"Made Shot","Step Back Jump
+        shot","3PT Field Goal","Above the Break 3","Right Side Center(RC)","24+ ft.",24,207,136,1,1,"20251205","CLE","SAS"],["Shot
+        Chart Detail","0022500341",159,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,1,55,"Made Shot","Turnaround Fadeaway shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","8-16 ft.",11,-33,112,1,1,"20251205","CLE","SAS"],["Shot
+        Chart Detail","0022500341",198,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,11,47,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Left Side(L)","8-16 ft.",10,-71,74,1,1,"20251205","CLE","SAS"],["Shot
+        Chart Detail","0022500341",229,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,8,58,"Made Shot","Driving Reverse Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,-1,10,1,1,"20251205","CLE","SAS"],["Shot
+        Chart Detail","0022500341",398,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,10,19,"Made Shot","Running Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",1,7,15,1,1,"20251205","CLE","SAS"],["Shot
+        Chart Detail","0022500341",414,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,8,55,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",0,2,8,1,1,"20251205","CLE","SAS"],["Shot
+        Chart Detail","0022500341",600,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,9,14,"Made Shot","Turnaround Jump Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",3,37,7,1,1,"20251205","CLE","SAS"],["Shot
+        Chart Detail","0022500341",630,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,6,49,"Made Shot","Running Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",1,-6,13,1,1,"20251205","CLE","SAS"],["Shot
+        Chart Detail","0022500352",142,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,2,41,"Made Shot","Pullup Jump shot","2PT Field Goal","In The
+        Paint (Non-RA)","Center(C)","8-16 ft.",12,2,125,1,1,"20251206","CLE","GSW"],["Shot
+        Chart Detail","0022500352",205,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,10,1,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",24,-92,225,1,1,"20251206","CLE","GSW"],["Shot
+        Chart Detail","0022500352",348,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,0,0,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Left Side Center(LC)","24+ ft.",24,-91,230,1,1,"20251206","CLE","GSW"],["Shot
+        Chart Detail","0022500352",524,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,1,35,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Center(C)","24+ ft.",26,77,251,1,1,"20251206","CLE","GSW"],["Shot
+        Chart Detail","0022500352",529,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,1,9,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","Mid-Range","Center(C)","16-24
+        ft.",16,26,163,1,1,"20251206","CLE","GSW"],["Shot Chart Detail","0022500352",562,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",4,10,31,"Made Shot","Jump Shot","3PT
+        Field Goal","Right Corner 3","Right Side(R)","24+ ft.",22,229,18,1,1,"20251206","CLE","GSW"],["Shot
+        Chart Detail","0022500352",573,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,9,31,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",0,7,1,1,1,"20251206","CLE","GSW"],["Shot
+        Chart Detail","0022500352",583,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,8,27,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Left Side Center(LC)","24+ ft.",26,-121,235,1,1,"20251206","CLE","GSW"],["Shot
+        Chart Detail","0022500352",638,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,4,1,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Left Side Center(LC)","24+ ft.",25,-183,179,1,1,"20251206","CLE","GSW"],["Shot
+        Chart Detail","0022500352",645,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,3,35,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",7,-59,44,1,1,"20251206","CLE","GSW"],["Shot
+        Chart Detail","0022500352",678,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,1,48,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Right Side Center(RC)","24+ ft.",23,196,138,1,1,"20251206","CLE","GSW"],["Shot
+        Chart Detail","0022500367",13,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,10,48,"Made Shot","Turnaround Hook Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",6,-32,52,1,1,"20251217","CHI","CLE"],["Shot
+        Chart Detail","0022500367",38,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,8,52,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","Mid-Range","Right
+        Side(R)","8-16 ft.",10,103,-1,1,1,"20251217","CHI","CLE"],["Shot Chart Detail","0022500367",124,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",1,2,25,"Made Shot","Driving Layup
+        Shot","2PT Field Goal","Restricted Area","Center(C)","Less Than 8 ft.",1,-12,5,1,1,"20251217","CHI","CLE"],["Shot
+        Chart Detail","0022500367",184,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,10,53,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Right Side Center(RC)","24+ ft.",27,154,225,1,1,"20251217","CHI","CLE"],["Shot
+        Chart Detail","0022500367",271,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,4,17,"Made Shot","Running Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,11,10,1,1,"20251217","CHI","CLE"],["Shot
+        Chart Detail","0022500367",374,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,8,55,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",27,-154,227,1,1,"20251217","CHI","CLE"],["Shot
+        Chart Detail","0022500367",487,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,1,29,"Made Shot","Jump Shot","3PT Field Goal","Left Corner 3","Left
+        Side(L)","24+ ft.",22,-229,-9,1,1,"20251217","CHI","CLE"],["Shot Chart Detail","0022500367",540,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",4,10,8,"Made Shot","Driving Floating
+        Jump Shot","2PT Field Goal","In The Paint (Non-RA)","Center(C)","Less Than
+        8 ft.",7,62,36,1,1,"20251217","CHI","CLE"],["Shot Chart Detail","0022500367",543,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",4,9,42,"Made Shot","Driving Floating
+        Jump Shot","2PT Field Goal","In The Paint (Non-RA)","Center(C)","Less Than
+        8 ft.",5,37,39,1,1,"20251217","CHI","CLE"],["Shot Chart Detail","0022500367",552,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",4,8,42,"Made Shot","Pullup Jump
+        shot","3PT Field Goal","Above the Break 3","Left Side Center(LC)","24+ ft.",28,-91,270,1,1,"20251217","CHI","CLE"],["Shot
+        Chart Detail","0022500367",555,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,8,18,"Made Shot","Driving Dunk Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",0,-4,2,1,1,"20251217","CHI","CLE"],["Shot
+        Chart Detail","0022500402",42,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,9,22,"Made Shot","Running Jump Shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",26,-240,106,1,1,"20251222","CLE","CHA"],["Shot
+        Chart Detail","0022500402",45,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,8,48,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Left Side Center(LC)","24+ ft.",24,-188,161,1,1,"20251222","CLE","CHA"],["Shot
+        Chart Detail","0022500402",210,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,10,0,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Right Side Center(RC)","24+ ft.",27,162,225,1,1,"20251222","CLE","CHA"],["Shot
+        Chart Detail","0022500402",213,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,9,21,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",1,-10,9,1,1,"20251222","CLE","CHA"],["Shot
+        Chart Detail","0022500402",337,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,0,56,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Right Side(R)","8-16 ft.",13,75,115,1,1,"20251222","CLE","CHA"],["Shot
+        Chart Detail","0022500402",358,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,0,0,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Center(C)","24+ ft.",27,7,277,1,1,"20251222","CLE","CHA"],["Shot
+        Chart Detail","0022500402",376,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,11,39,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,12,7,1,1,"20251222","CLE","CHA"],["Shot
+        Chart Detail","0022500402",517,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,3,21,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Right Side Center(RC)","24+ ft.",25,232,102,1,1,"20251222","CLE","CHA"],["Shot
+        Chart Detail","0022500402",540,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,1,50,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Left Side Center(LC)","24+ ft.",31,-158,273,1,1,"20251222","CLE","CHA"],["Shot
+        Chart Detail","0022500402",575,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,11,47,"Made Shot","Cutting Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",0,5,-8,1,1,"20251222","CLE","CHA"],["Shot
+        Chart Detail","0022500412",26,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,9,12,"Made Shot","Driving Floating Bank Jump Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",1,12,10,1,1,"20251223","CLE","NOP"],["Shot
+        Chart Detail","0022500412",182,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,10,25,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,-5,11,1,1,"20251223","CLE","NOP"],["Shot
+        Chart Detail","0022500412",314,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,3,4,"Made Shot","Driving Floating Bank Jump Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",1,5,16,1,1,"20251223","CLE","NOP"],["Shot
+        Chart Detail","0022500412",335,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,1,12,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","8-16 ft.",8,-17,86,1,1,"20251223","CLE","NOP"],["Shot
+        Chart Detail","0022500412",356,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,11,30,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",5,-44,31,1,1,"20251223","CLE","NOP"],["Shot
+        Chart Detail","0022500412",365,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,10,24,"Made Shot","Driving Layup Shot","2PT Field Goal","In The
+        Paint (Non-RA)","Center(C)","Less Than 8 ft.",5,-31,42,1,1,"20251223","CLE","NOP"],["Shot
+        Chart Detail","0022500412",391,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,7,57,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,9,11,1,1,"20251223","CLE","NOP"],["Shot
+        Chart Detail","0022500412",401,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,7,9,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Center(C)","24+ ft.",25,4,257,1,1,"20251223","CLE","NOP"],["Shot Chart
+        Detail","0022500412",505,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,0,49,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",0,4,-1,1,1,"20251223","CLE","NOP"],["Shot
+        Chart Detail","0022500412",513,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,0,15,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Right Side(R)","8-16 ft.",10,67,83,1,1,"20251223","CLE","NOP"],["Shot
+        Chart Detail","0022500412",525,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,11,45,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Center(C)","24+ ft.",24,-6,248,1,1,"20251223","CLE","NOP"],["Shot Chart
+        Detail","0022500438",32,1628378,"Donovan Mitchell",1610612739,"Cleveland Cavaliers",1,9,22,"Made
+        Shot","Driving Floating Jump Shot","2PT Field Goal","In The Paint (Non-RA)","Center(C)","8-16
+        ft.",11,-42,112,1,1,"20251227","HOU","CLE"],["Shot Chart Detail","0022500438",152,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",1,1,31,"Made Shot","Driving Floating
+        Jump Shot","2PT Field Goal","In The Paint (Non-RA)","Center(C)","8-16 ft.",13,69,120,1,1,"20251227","HOU","CLE"],["Shot
+        Chart Detail","0022500438",164,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,0,31,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",4,-1,48,1,1,"20251227","HOU","CLE"],["Shot
+        Chart Detail","0022500438",332,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,11,37,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","8-16 ft.",9,-34,88,1,1,"20251227","HOU","CLE"],["Shot
+        Chart Detail","0022500438",374,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,8,53,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Right Side Center(RC)","24+ ft.",24,148,199,1,1,"20251227","HOU","CLE"],["Shot
+        Chart Detail","0022500438",387,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,7,54,"Made Shot","Cutting Dunk Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,10,4,1,1,"20251227","HOU","CLE"],["Shot
+        Chart Detail","0022500438",541,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,9,42,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Center(C)","24+ ft.",25,45,246,1,1,"20251227","HOU","CLE"],["Shot
+        Chart Detail","0022500456",177,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,10,41,"Made Shot","Jump Shot","3PT Field Goal","Left Corner 3","Left
+        Side(L)","24+ ft.",23,-229,69,1,1,"20251229","SAS","CLE"],["Shot Chart Detail","0022500456",593,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",4,9,9,"Made Shot","Running Layup
+        Shot","2PT Field Goal","Restricted Area","Center(C)","Less Than 8 ft.",1,17,6,1,1,"20251229","SAS","CLE"],["Shot
+        Chart Detail","0022500456",596,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,8,41,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Center(C)","24+ ft.",25,-48,251,1,1,"20251229","SAS","CLE"],["Shot
+        Chart Detail","0022500465",23,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,10,17,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Left Side Center(LC)","24+ ft.",25,-195,169,1,1,"20251231","CLE","PHX"],["Shot
+        Chart Detail","0022500465",27,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,9,43,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",7,16,71,1,1,"20251231","CLE","PHX"],["Shot
+        Chart Detail","0022500465",169,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,0,17,"Made Shot","Running Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",0,1,5,1,1,"20251231","CLE","PHX"],["Shot
+        Chart Detail","0022500465",210,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,9,58,"Made Shot","Putback Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",0,9,2,1,1,"20251231","CLE","PHX"],["Shot
+        Chart Detail","0022500465",353,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,0,28,"Made Shot","Jump Shot","2PT Field Goal","Mid-Range","Right
+        Side(R)","16-24 ft.",21,212,-16,1,1,"20251231","CLE","PHX"],["Shot Chart Detail","0022500465",361,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",2,0,2,"Made Shot","Driving Floating
+        Jump Shot","2PT Field Goal","Mid-Range","Left Side(L)","8-16 ft.",10,-102,39,1,1,"20251231","CLE","PHX"],["Shot
+        Chart Detail","0022500465",390,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,10,31,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",24,-208,132,1,1,"20251231","CLE","PHX"],["Shot
+        Chart Detail","0022500465",566,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,10,48,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","Mid-Range","Right
+        Side(R)","8-16 ft.",10,82,63,1,1,"20251231","CLE","PHX"],["Shot Chart Detail","0022500465",584,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",4,9,26,"Made Shot","Running Jump
+        Shot","3PT Field Goal","Above the Break 3","Right Side Center(RC)","24+ ft.",25,233,111,1,1,"20251231","CLE","PHX"],["Shot
+        Chart Detail","0022500465",597,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,8,15,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Right Side Center(RC)","24+ ft.",25,164,197,1,1,"20251231","CLE","PHX"],["Shot
+        Chart Detail","0022500478",112,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,3,50,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Right Side Center(RC)","24+ ft.",25,118,222,1,1,"20260102","CLE","DEN"],["Shot
+        Chart Detail","0022500478",181,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,10,56,"Made Shot","Floating Jump shot","2PT Field Goal","In The
+        Paint (Non-RA)","Right Side(R)","8-16 ft.",10,74,77,1,1,"20260102","CLE","DEN"],["Shot
+        Chart Detail","0022500478",186,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,10,33,"Made Shot","Running Dunk Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",0,0,9,1,1,"20260102","CLE","DEN"],["Shot
+        Chart Detail","0022500478",194,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,9,26,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,10,-6,1,1,"20260102","CLE","DEN"],["Shot
+        Chart Detail","0022500478",288,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,2,10,"Made Shot","Running Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",0,-7,5,1,1,"20260102","CLE","DEN"],["Shot
+        Chart Detail","0022500478",297,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,1,7,"Made Shot","Running Pull-Up Jump Shot","3PT Field Goal","Above
+        the Break 3","Right Side Center(RC)","24+ ft.",28,134,256,1,1,"20260102","CLE","DEN"],["Shot
+        Chart Detail","0022500478",331,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,10,24,"Made Shot","Jump Shot","3PT Field Goal","Left Corner 3","Left
+        Side(L)","24+ ft.",23,-230,17,1,1,"20260102","CLE","DEN"],["Shot Chart Detail","0022500478",367,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",3,7,25,"Made Shot","Jump Shot","3PT
+        Field Goal","Right Corner 3","Right Side(R)","24+ ft.",22,227,12,1,1,"20260102","CLE","DEN"],["Shot
+        Chart Detail","0022500478",430,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,2,56,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Left Side(L)","8-16 ft.",11,-66,91,1,1,"20260102","CLE","DEN"],["Shot
+        Chart Detail","0022500478",444,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,2,5,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Right Side Center(RC)","24+ ft.",26,145,227,1,1,"20260102","CLE","DEN"],["Shot
+        Chart Detail","0022500478",460,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,0,41,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,-1,12,1,1,"20260102","CLE","DEN"],["Shot
+        Chart Detail","0022500478",498,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,10,45,"Made Shot","Driving Floating Bank Jump Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",3,27,17,1,1,"20260102","CLE","DEN"],["Shot
+        Chart Detail","0022500478",523,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,8,26,"Made Shot","Running Dunk Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,4,13,1,1,"20260102","CLE","DEN"],["Shot
+        Chart Detail","0022500478",633,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,0,42,"Made Shot","Dunk Shot","2PT Field Goal","Restricted Area","Center(C)","Less
+        Than 8 ft.",1,-4,12,1,1,"20260102","CLE","DEN"],["Shot Chart Detail","0022500494",351,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",2,0,36,"Made Shot","Driving Floating
+        Jump Shot","2PT Field Goal","In The Paint (Non-RA)","Left Side(L)","8-16 ft.",11,-75,85,1,1,"20260104","CLE","DET"],["Shot
+        Chart Detail","0022500494",391,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,11,15,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Right Side Center(RC)","24+ ft.",24,232,93,1,1,"20260104","CLE","DET"],["Shot
+        Chart Detail","0022500494",395,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,10,42,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",1,6,11,1,1,"20260104","CLE","DET"],["Shot
+        Chart Detail","0022500494",400,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,10,4,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Center(C)","24+ ft.",27,78,268,1,1,"20260104","CLE","DET"],["Shot Chart
+        Detail","0022500494",496,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,3,43,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","Mid-Range","Right
+        Side Center(RC)","16-24 ft.",17,94,152,1,1,"20260104","CLE","DET"],["Shot
+        Chart Detail","0022500494",532,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,1,16,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","Mid-Range","Right
+        Side(R)","8-16 ft.",11,88,78,1,1,"20260104","CLE","DET"],["Shot Chart Detail","0022500494",653,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",4,5,44,"Made Shot","Driving Floating
+        Jump Shot","2PT Field Goal","Mid-Range","Right Side(R)","8-16 ft.",14,105,100,1,1,"20260104","CLE","DET"],["Shot
+        Chart Detail","0022500494",672,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,3,46,"Made Shot","Cutting Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,-5,14,1,1,"20260104","CLE","DET"],["Shot
+        Chart Detail","0022500494",676,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,3,30,"Made Shot","Running Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,-7,14,1,1,"20260104","CLE","DET"],["Shot
+        Chart Detail","0022500494",679,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,2,47,"Made Shot","Pullup Jump shot","3PT Field Goal","Left Corner
+        3","Left Side(L)","24+ ft.",23,-224,84,1,1,"20260104","CLE","DET"],["Shot
+        Chart Detail","0022500530",15,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,10,46,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",7,40,63,1,1,"20260108","MIN","CLE"],["Shot
+        Chart Detail","0022500530",220,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,8,25,"Made Shot","Pullup Jump shot","2PT Field Goal","Mid-Range","Right
+        Side Center(RC)","16-24 ft.",18,75,172,1,1,"20260108","MIN","CLE"],["Shot
+        Chart Detail","0022500530",303,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,3,42,"Made Shot","Driving Floating Bank Jump Shot","2PT Field
+        Goal","In The Paint (Non-RA)","Right Side(R)","8-16 ft.",8,69,51,1,1,"20260108","MIN","CLE"],["Shot
+        Chart Detail","0022500530",391,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,8,56,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",2,21,17,1,1,"20260108","MIN","CLE"],["Shot
+        Chart Detail","0022500530",397,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,8,1,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,17,10,1,1,"20260108","MIN","CLE"],["Shot
+        Chart Detail","0022500530",465,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,3,17,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","8-16 ft.",8,31,78,1,1,"20260108","MIN","CLE"],["Shot
+        Chart Detail","0022500530",501,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,0,4,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Right Side Center(RC)","24+ ft.",25,224,117,1,1,"20260108","MIN","CLE"],["Shot
+        Chart Detail","0022500530",531,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,10,19,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","Mid-Range","Right
+        Side(R)","8-16 ft.",10,103,21,1,1,"20260108","MIN","CLE"],["Shot Chart Detail","0022500530",557,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",4,8,20,"Made Shot","Running Finger
+        Roll Layup Shot","2PT Field Goal","Restricted Area","Center(C)","Less Than
+        8 ft.",3,-26,20,1,1,"20260108","MIN","CLE"],["Shot Chart Detail","0022500530",565,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",4,7,55,"Made Shot","Running Jump
+        Shot","3PT Field Goal","Above the Break 3","Left Side Center(LC)","24+ ft.",26,-191,184,1,1,"20260108","MIN","CLE"],["Shot
+        Chart Detail","0022500542",15,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,10,59,"Made Shot","Pullup Jump shot","3PT Field Goal","Above
+        the Break 3","Center(C)","24+ ft.",25,69,243,1,1,"20260110","CLE","MIN"],["Shot
+        Chart Detail","0022500542",18,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,10,34,"Made Shot","Pullup Jump shot","2PT Field Goal","Mid-Range","Right
+        Side Center(RC)","16-24 ft.",20,147,140,1,1,"20260110","CLE","MIN"],["Shot
+        Chart Detail","0022500542",36,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,8,31,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,9,-7,1,1,"20260110","CLE","MIN"],["Shot
+        Chart Detail","0022500542",164,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,9,55,"Made Shot","Finger Roll Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",0,5,-1,1,1,"20260110","CLE","MIN"],["Shot
+        Chart Detail","0022500542",286,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,2,5,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",25,-118,221,1,1,"20260110","CLE","MIN"],["Shot
+        Chart Detail","0022500542",335,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,10,25,"Made Shot","Jump Bank Shot","2PT Field Goal","Mid-Range","Right
+        Side(R)","8-16 ft.",10,97,39,1,1,"20260110","CLE","MIN"],["Shot Chart Detail","0022500542",432,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",3,3,19,"Made Shot","Pullup Jump
+        shot","3PT Field Goal","Above the Break 3","Right Side Center(RC)","24+ ft.",26,162,205,1,1,"20260110","CLE","MIN"],["Shot
+        Chart Detail","0022500542",436,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,3,0,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","8-16 ft.",9,-31,89,1,1,"20260110","CLE","MIN"],["Shot
+        Chart Detail","0022500542",448,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,1,42,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Right Side Center(RC)","24+ ft.",25,108,236,1,1,"20260110","CLE","MIN"],["Shot
+        Chart Detail","0022500558",145,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,1,51,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Left Side Center(LC)","24+ ft.",26,-134,231,1,1,"20260112","CLE","UTA"],["Shot
+        Chart Detail","0022500558",169,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,0,6,"Made Shot","Running Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",2,-17,11,1,1,"20260112","CLE","UTA"],["Shot
+        Chart Detail","0022500558",205,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,9,48,"Made Shot","Jump Shot","3PT Field Goal","Left Corner 3","Left
+        Side(L)","24+ ft.",23,-233,8,1,1,"20260112","CLE","UTA"],["Shot Chart Detail","0022500558",216,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",2,9,8,"Made Shot","Running Pull-Up
+        Jump Shot","3PT Field Goal","Above the Break 3","Center(C)","24+ ft.",25,-75,246,1,1,"20260112","CLE","UTA"],["Shot
+        Chart Detail","0022500558",359,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,11,7,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","Mid-Range","Right
+        Side(R)","8-16 ft.",9,82,55,1,1,"20260112","CLE","UTA"],["Shot Chart Detail","0022500558",518,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",4,10,26,"Made Shot","Pullup Jump
+        shot","3PT Field Goal","Above the Break 3","Right Side Center(RC)","24+ ft.",26,191,180,1,1,"20260112","CLE","UTA"],["Shot
+        Chart Detail","0022500558",614,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,4,31,"Made Shot","Turnaround Jump Shot","2PT Field Goal","Mid-Range","Left
+        Side(L)","8-16 ft.",12,-97,85,1,1,"20260112","CLE","UTA"],["Shot Chart Detail","0022500572",23,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",1,9,53,"Made Shot","Driving Hook
+        Shot","2PT Field Goal","In The Paint (Non-RA)","Right Side(R)","8-16 ft.",9,64,66,1,1,"20260114","PHI","CLE"],["Shot
+        Chart Detail","0022500572",46,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,8,16,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",2,15,17,1,1,"20260114","PHI","CLE"],["Shot
+        Chart Detail","0022500572",183,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,10,18,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,-18,-5,1,1,"20260114","PHI","CLE"],["Shot
+        Chart Detail","0022500572",202,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,8,25,"Made Shot","Running Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",1,16,3,1,1,"20260114","PHI","CLE"],["Shot
+        Chart Detail","0022500572",364,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,10,57,"Made Shot","Jump Shot","3PT Field Goal","Right Corner
+        3","Right Side(R)","24+ ft.",24,232,68,1,1,"20260114","PHI","CLE"],["Shot
+        Chart Detail","0022500572",374,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,10,38,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",7,11,78,1,1,"20260114","PHI","CLE"],["Shot
+        Chart Detail","0022500572",380,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,10,8,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Left Side Center(LC)","24+ ft.",25,-192,175,1,1,"20260114","PHI","CLE"],["Shot
+        Chart Detail","0022500572",395,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,8,38,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",7,72,13,1,1,"20260114","PHI","CLE"],["Shot
+        Chart Detail","0022500572",473,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,3,36,"Made Shot","Running Pull-Up Jump Shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",26,-201,170,1,1,"20260114","PHI","CLE"],["Shot
+        Chart Detail","0022500572",479,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,2,32,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Left Side Center(LC)","24+ ft.",26,-100,241,1,1,"20260114","PHI","CLE"],["Shot
+        Chart Detail","0022500572",532,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,10,33,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Left Side Center(LC)","24+ ft.",27,-194,194,1,1,"20260114","PHI","CLE"],["Shot
+        Chart Detail","0022500589",54,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,6,52,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Left Side Center(LC)","24+ ft.",27,-102,251,1,1,"20260116","PHI","CLE"],["Shot
+        Chart Detail","0022500589",287,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,3,25,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Center(C)","24+ ft.",25,-47,252,1,1,"20260116","PHI","CLE"],["Shot Chart
+        Detail","0022500589",507,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,11,42,"Made Shot","Pullup Jump shot","3PT Field Goal","Above
+        the Break 3","Center(C)","24+ ft.",27,0,279,1,1,"20260116","PHI","CLE"],["Shot
+        Chart Detail","0022500589",561,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,8,1,"Made Shot","Pullup Jump shot","3PT Field Goal","Right Corner
+        3","Right Side(R)","24+ ft.",22,223,43,1,1,"20260116","PHI","CLE"],["Shot
+        Chart Detail","0022500620",9,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,11,29,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","8-16 ft.",9,-6,99,1,1,"20260121","CHA","CLE"],["Shot
+        Chart Detail","0022500620",50,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,6,59,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",2,-11,20,1,1,"20260121","CHA","CLE"],["Shot
+        Chart Detail","0022500620",53,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,6,41,"Made Shot","Driving Reverse Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",2,-11,18,1,1,"20260121","CHA","CLE"],["Shot
+        Chart Detail","0022500620",234,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,8,40,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Center(C)","24+ ft.",28,-15,281,1,1,"20260121","CHA","CLE"],["Shot
+        Chart Detail","0022500620",247,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,7,50,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Center(C)","24+ ft.",27,18,274,1,1,"20260121","CHA","CLE"],["Shot
+        Chart Detail","0022500620",393,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,10,27,"Made Shot","Pullup Jump shot","2PT Field Goal","Mid-Range","Center(C)","16-24
+        ft.",23,-28,231,1,1,"20260121","CHA","CLE"],["Shot Chart Detail","0022500620",506,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",3,2,35,"Made Shot","Step Back Jump
+        shot","2PT Field Goal","Mid-Range","Center(C)","16-24 ft.",22,53,220,1,1,"20260121","CHA","CLE"],["Shot
+        Chart Detail","0022500620",631,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,7,32,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Right Side(R)","8-16 ft.",8,43,74,1,1,"20260121","CHA","CLE"],["Shot
+        Chart Detail","0022500638",7,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,11,42,"Made Shot","Pullup Jump shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",29,-113,270,1,1,"20260123","CLE","SAC"],["Shot
+        Chart Detail","0022500638",13,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,10,58,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","8-16 ft.",9,-20,92,1,1,"20260123","CLE","SAC"],["Shot
+        Chart Detail","0022500638",63,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,6,57,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","Mid-Range","Center(C)","8-16
+        ft.",15,55,148,1,1,"20260123","CLE","SAC"],["Shot Chart Detail","0022500638",236,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",2,7,49,"Made Shot","Step Back Jump
+        shot","3PT Field Goal","Right Corner 3","Right Side(R)","24+ ft.",23,232,4,1,1,"20260123","CLE","SAC"],["Shot
+        Chart Detail","0022500638",311,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,2,41,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Left Side Center(LC)","24+ ft.",32,-162,277,1,1,"20260123","CLE","SAC"],["Shot
+        Chart Detail","0022500638",362,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,10,52,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Right Side Center(RC)","24+ ft.",26,159,218,1,1,"20260123","CLE","SAC"],["Shot
+        Chart Detail","0022500638",375,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,9,23,"Made Shot","Running Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,-13,8,1,1,"20260123","CLE","SAC"],["Shot
+        Chart Detail","0022500638",477,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,2,32,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","Mid-Range","Right
+        Side(R)","8-16 ft.",15,86,130,1,1,"20260123","CLE","SAC"],["Shot Chart Detail","0022500638",500,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",3,0,53,"Made Shot","Turnaround
+        Jump Shot","2PT Field Goal","In The Paint (Non-RA)","Center(C)","8-16 ft.",13,55,121,1,1,"20260123","CLE","SAC"],["Shot
+        Chart Detail","0022500638",633,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,2,58,"Made Shot","Pullup Jump shot","2PT Field Goal","In The
+        Paint (Non-RA)","Center(C)","Less Than 8 ft.",7,-53,56,1,1,"20260123","CLE","SAC"],["Shot
+        Chart Detail","0022500638",637,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,2,27,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Right Side Center(RC)","24+ ft.",26,225,141,1,1,"20260123","CLE","SAC"],["Shot
+        Chart Detail","0022500646",25,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,9,51,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",2,18,13,1,1,"20260124","ORL","CLE"],["Shot
+        Chart Detail","0022500646",40,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,8,10,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","8-16 ft.",9,-7,94,1,1,"20260124","ORL","CLE"],["Shot
+        Chart Detail","0022500646",43,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,7,38,"Made Shot","Running Pull-Up Jump Shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",26,-183,185,1,1,"20260124","ORL","CLE"],["Shot
+        Chart Detail","0022500646",114,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,2,28,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","8-16 ft.",8,40,75,1,1,"20260124","ORL","CLE"],["Shot
+        Chart Detail","0022500646",368,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,11,30,"Made Shot","Driving Floating Bank Jump Shot","2PT Field
+        Goal","Mid-Range","Right Side(R)","8-16 ft.",12,118,22,1,1,"20260124","ORL","CLE"],["Shot
+        Chart Detail","0022500646",476,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,4,11,"Made Shot","Layup Shot","2PT Field Goal","Restricted Area","Center(C)","Less
+        Than 8 ft.",1,-12,15,1,1,"20260124","ORL","CLE"],["Shot Chart Detail","0022500646",513,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",3,1,53,"Made Shot","Running Layup
+        Shot","2PT Field Goal","Restricted Area","Center(C)","Less Than 8 ft.",2,27,4,1,1,"20260124","ORL","CLE"],["Shot
+        Chart Detail","0022500646",517,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,1,30,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","In The Paint (Non-RA)","Center(C)","Less Than 8 ft.",4,26,41,1,1,"20260124","ORL","CLE"],["Shot
+        Chart Detail","0022500646",536,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,0,59,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",2,-20,4,1,1,"20260124","ORL","CLE"],["Shot
+        Chart Detail","0022500646",599,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,8,28,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",5,-2,55,1,1,"20260124","ORL","CLE"],["Shot
+        Chart Detail","0022500646",640,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,6,5,"Made Shot","Driving Hook Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",3,15,29,1,1,"20260124","ORL","CLE"],["Shot
+        Chart Detail","0022500646",642,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,5,31,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",7,-21,75,1,1,"20260124","ORL","CLE"],["Shot
+        Chart Detail","0022500646",655,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,4,22,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",6,56,23,1,1,"20260124","ORL","CLE"],["Shot
+        Chart Detail","0022500646",673,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,2,57,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",2,-28,-4,1,1,"20260124","ORL","CLE"],["Shot
+        Chart Detail","0022500646",690,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,1,44,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Right Side Center(RC)","24+ ft.",26,212,167,1,1,"20260124","ORL","CLE"],["Shot
+        Chart Detail","0022500658",28,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,9,20,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Left Side Center(LC)","24+ ft.",25,-213,146,1,1,"20260126","CLE","ORL"],["Shot
+        Chart Detail","0022500658",49,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,7,28,"Made Shot","Jump Shot","3PT Field Goal","Right Corner 3","Right
+        Side(R)","24+ ft.",22,225,42,1,1,"20260126","CLE","ORL"],["Shot Chart Detail","0022500658",58,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",1,6,20,"Made Shot","Driving Floating
+        Jump Shot","2PT Field Goal","In The Paint (Non-RA)","Center(C)","8-16 ft.",8,-25,84,1,1,"20260126","CLE","ORL"],["Shot
+        Chart Detail","0022500658",176,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,10,23,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",2,20,5,1,1,"20260126","CLE","ORL"],["Shot
+        Chart Detail","0022500658",196,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,9,1,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",7,9,74,1,1,"20260126","CLE","ORL"],["Shot
+        Chart Detail","0022500658",222,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,7,43,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Right Side Center(RC)","24+ ft.",25,221,118,1,1,"20260126","CLE","ORL"],["Shot
+        Chart Detail","0022500658",226,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,7,16,"Made Shot","Running Pull-Up Jump Shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",26,-201,175,1,1,"20260126","CLE","ORL"],["Shot
+        Chart Detail","0022500658",336,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,0,52,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",0,1,5,1,1,"20260126","CLE","ORL"],["Shot
+        Chart Detail","0022500658",349,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,0,0,"Made Shot","Pullup Jump shot","2PT Field Goal","Mid-Range","Right
+        Side(R)","8-16 ft.",12,129,16,1,1,"20260126","CLE","ORL"],["Shot Chart Detail","0022500658",364,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",3,10,57,"Made Shot","Driving Layup
+        Shot","2PT Field Goal","Restricted Area","Center(C)","Less Than 8 ft.",3,-6,32,1,1,"20260126","CLE","ORL"],["Shot
+        Chart Detail","0022500658",370,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,10,35,"Made Shot","Running Pull-Up Jump Shot","3PT Field Goal","Above
+        the Break 3","Right Side Center(RC)","24+ ft.",26,194,174,1,1,"20260126","CLE","ORL"],["Shot
+        Chart Detail","0022500658",373,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,10,5,"Made Shot","Running Reverse Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,-13,4,1,1,"20260126","CLE","ORL"],["Shot
+        Chart Detail","0022500658",468,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,2,47,"Made Shot","Running Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,-4,13,1,1,"20260126","CLE","ORL"],["Shot
+        Chart Detail","0022500658",488,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,1,16,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",2,-20,9,1,1,"20260126","CLE","ORL"],["Shot
+        Chart Detail","0022500658",634,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,3,34,"Made Shot","Pullup Jump shot","2PT Field Goal","Mid-Range","Right
+        Side Center(RC)","16-24 ft.",18,61,172,1,1,"20260126","CLE","ORL"],["Shot
+        Chart Detail","0022500671",129,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,2,51,"Made Shot","Jump Shot","3PT Field Goal","Left Corner 3","Left
+        Side(L)","24+ ft.",23,-232,4,1,1,"20260128","CLE","LAL"],["Shot Chart Detail","0022500671",133,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",1,2,17,"Made Shot","Driving Floating
+        Jump Shot","2PT Field Goal","Mid-Range","Right Side(R)","8-16 ft.",8,81,8,1,1,"20260128","CLE","LAL"],["Shot
+        Chart Detail","0022500671",194,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,9,43,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",0,4,7,1,1,"20260128","CLE","LAL"],["Shot
+        Chart Detail","0022500671",216,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,8,17,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",5,-13,58,1,1,"20260128","CLE","LAL"],["Shot
+        Chart Detail","0022500671",334,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,1,19,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",0,-1,2,1,1,"20260128","CLE","LAL"],["Shot
+        Chart Detail","0022500671",367,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,11,10,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","Mid-Range","Left
+        Side(L)","8-16 ft.",12,-118,25,1,1,"20260128","CLE","LAL"],["Shot Chart Detail","0022500671",377,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",3,10,5,"Made Shot","Jump Shot","3PT
+        Field Goal","Above the Break 3","Right Side Center(RC)","24+ ft.",25,221,127,1,1,"20260128","CLE","LAL"],["Shot
+        Chart Detail","0022500671",380,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,9,38,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Right Side Center(RC)","24+ ft.",27,219,166,1,1,"20260128","CLE","LAL"],["Shot
+        Chart Detail","0022500671",519,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,10,13,"Made Shot","Running Dunk Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,9,16,1,1,"20260128","CLE","LAL"],["Shot
+        Chart Detail","0022500693",10,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,11,19,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","8-16 ft.",9,-11,91,1,1,"20260130","PHX","CLE"],["Shot
+        Chart Detail","0022500693",324,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,1,44,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Left Side Center(LC)","24+ ft.",25,-154,200,1,1,"20260130","PHX","CLE"],["Shot
+        Chart Detail","0022500693",362,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,11,29,"Made Shot","Fadeaway Jump Shot","2PT Field Goal","Mid-Range","Left
+        Side(L)","8-16 ft.",10,-102,31,1,1,"20260130","PHX","CLE"],["Shot Chart Detail","0022500693",380,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",3,9,56,"Made Shot","Turnaround
+        Jump Shot","2PT Field Goal","In The Paint (Non-RA)","Center(C)","8-16 ft.",12,-59,105,1,1,"20260130","PHX","CLE"],["Shot
+        Chart Detail","0022500693",504,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,1,34,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Right Side Center(RC)","24+ ft.",25,110,235,1,1,"20260130","PHX","CLE"],["Shot
+        Chart Detail","0022500693",506,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,0,56,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Right Side Center(RC)","24+ ft.",27,162,218,1,1,"20260130","PHX","CLE"],["Shot
+        Chart Detail","0022500710",201,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,10,50,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Right Side(R)","8-16 ft.",11,75,81,1,1,"20260201","POR","CLE"],["Shot
+        Chart Detail","0022500710",237,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,8,49,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Center(C)","24+ ft.",28,75,272,1,1,"20260201","POR","CLE"],["Shot
+        Chart Detail","0022500710",435,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,8,1,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Right Side Center(RC)","24+ ft.",26,99,250,1,1,"20260201","POR","CLE"],["Shot
+        Chart Detail","0022500710",504,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,2,50,"Made Shot","Running Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",2,-20,21,1,1,"20260201","POR","CLE"],["Shot
+        Chart Detail","0022500710",520,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,1,11,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",2,-5,26,1,1,"20260201","POR","CLE"],["Shot
+        Chart Detail","0022500710",526,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,0,31,"Made Shot","Running Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",0,-6,6,1,1,"20260201","POR","CLE"],["Shot
+        Chart Detail","0022500732",43,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,7,53,"Made Shot","Step Back Jump shot","2PT Field Goal","Mid-Range","Right
+        Side Center(RC)","16-24 ft.",17,94,151,1,1,"20260204","LAC","CLE"],["Shot
+        Chart Detail","0022500732",143,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,0,50,"Made Shot","Running Pull-Up Jump Shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",30,-162,254,1,1,"20260204","LAC","CLE"],["Shot
+        Chart Detail","0022500732",166,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,11,19,"Made Shot","Running Dunk Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,-4,17,1,1,"20260204","LAC","CLE"],["Shot
+        Chart Detail","0022500732",313,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,0,0,"Made Shot","Running Pull-Up Jump Shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",27,-152,232,1,1,"20260204","LAC","CLE"],["Shot
+        Chart Detail","0022500732",329,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,11,8,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",2,12,24,1,1,"20260204","LAC","CLE"],["Shot
+        Chart Detail","0022500732",352,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,8,28,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",2,18,14,1,1,"20260204","LAC","CLE"],["Shot
+        Chart Detail","0022500732",431,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,3,38,"Made Shot","Turnaround Fadeaway shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","8-16 ft.",12,56,117,1,1,"20260204","LAC","CLE"],["Shot
+        Chart Detail","0022500732",460,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,1,39,"Made Shot","Fadeaway Jump Shot","2PT Field Goal","In The
+        Paint (Non-RA)","Center(C)","8-16 ft.",11,15,110,1,1,"20260204","LAC","CLE"],["Shot
+        Chart Detail","0022500732",474,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,0,25,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",25,-156,201,1,1,"20260204","LAC","CLE"],["Shot
+        Chart Detail","0022500732",491,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,11,39,"Made Shot","Pullup Jump shot","2PT Field Goal","Mid-Range","Center(C)","8-16
+        ft.",15,27,153,1,1,"20260204","LAC","CLE"],["Shot Chart Detail","0022500756",38,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",1,9,18,"Made Shot","Driving Floating
+        Bank Jump Shot","2PT Field Goal","Restricted Area","Center(C)","Less Than
+        8 ft.",2,17,21,1,1,"20260207","SAC","CLE"],["Shot Chart Detail","0022500756",211,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",2,9,31,"Made Shot","Driving Layup
+        Shot","2PT Field Goal","In The Paint (Non-RA)","Center(C)","Less Than 8 ft.",4,43,13,1,1,"20260207","SAC","CLE"],["Shot
+        Chart Detail","0022500756",359,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,10,54,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",3,31,25,1,1,"20260207","SAC","CLE"],["Shot
+        Chart Detail","0022500756",377,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,9,4,"Made Shot","Jump Shot","3PT Field Goal","Right Corner 3","Right
+        Side(R)","24+ ft.",24,238,39,1,1,"20260207","SAC","CLE"],["Shot Chart Detail","0022500756",444,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",3,4,19,"Made Shot","Pullup Jump
+        shot","2PT Field Goal","Mid-Range","Right Side(R)","8-16 ft.",12,127,26,1,1,"20260207","SAC","CLE"],["Shot
+        Chart Detail","0022500756",449,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,3,45,"Made Shot","Step Back Jump shot","2PT Field Goal","Mid-Range","Center(C)","16-24
+        ft.",23,-1,237,1,1,"20260207","SAC","CLE"],["Shot Chart Detail","0022500756",462,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",3,2,37,"Made Shot","Pullup Jump
+        shot","3PT Field Goal","Above the Break 3","Right Side Center(RC)","24+ ft.",27,163,227,1,1,"20260207","SAC","CLE"],["Shot
+        Chart Detail","0022500756",510,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,11,21,"Made Shot","Driving Floating Bank Jump Shot","2PT Field
+        Goal","Mid-Range","Right Side(R)","8-16 ft.",9,87,37,1,1,"20260207","SAC","CLE"],["Shot
+        Chart Detail","0022500756",513,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,10,51,"Made Shot","Driving Layup Shot","2PT Field Goal","In The
+        Paint (Non-RA)","Center(C)","Less Than 8 ft.",5,-31,41,1,1,"20260207","SAC","CLE"],["Shot
+        Chart Detail","0022500756",517,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,10,22,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","8-16 ft.",9,13,92,1,1,"20260207","SAC","CLE"],["Shot
+        Chart Detail","0022500756",526,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,9,52,"Made Shot","Driving Reverse Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",3,-26,17,1,1,"20260207","SAC","CLE"],["Shot
+        Chart Detail","0022500756",544,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,8,25,"Made Shot","Fadeaway Jump Shot","2PT Field Goal","In The
+        Paint (Non-RA)","Center(C)","8-16 ft.",9,13,94,1,1,"20260207","SAC","CLE"],["Shot
+        Chart Detail","0022500756",635,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,2,12,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",5,31,50,1,1,"20260207","SAC","CLE"],["Shot
+        Chart Detail","0022500767",18,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,10,51,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",7,-51,58,1,1,"20260209","DEN","CLE"],["Shot
+        Chart Detail","0022500767",52,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,8,38,"Made Shot","Pullup Jump shot","2PT Field Goal","Mid-Range","Center(C)","16-24
+        ft.",17,-51,163,1,1,"20260209","DEN","CLE"],["Shot Chart Detail","0022500767",125,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",1,3,25,"Made Shot","Turnaround
+        Jump Shot","2PT Field Goal","In The Paint (Non-RA)","Center(C)","8-16 ft.",10,-1,107,1,1,"20260209","DEN","CLE"],["Shot
+        Chart Detail","0022500767",141,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,2,26,"Made Shot","Driving Layup Shot","2PT Field Goal","In The
+        Paint (Non-RA)","Center(C)","Less Than 8 ft.",4,-13,48,1,1,"20260209","DEN","CLE"],["Shot
+        Chart Detail","0022500767",153,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,1,30,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",6,4,65,1,1,"20260209","DEN","CLE"],["Shot
+        Chart Detail","0022500767",160,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,0,35,"Made Shot","Running Pull-Up Jump Shot","3PT Field Goal","Above
+        the Break 3","Center(C)","24+ ft.",27,-28,272,1,1,"20260209","DEN","CLE"],["Shot
+        Chart Detail","0022500767",304,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,3,8,"Made Shot","Turnaround Jump Shot","2PT Field Goal","In The
+        Paint (Non-RA)","Center(C)","8-16 ft.",9,-43,80,1,1,"20260209","DEN","CLE"],["Shot
+        Chart Detail","0022500767",358,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,11,39,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Left Side Center(LC)","24+ ft.",25,-134,220,1,1,"20260209","DEN","CLE"],["Shot
+        Chart Detail","0022500767",493,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,1,53,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Center(C)","24+ ft.",25,-7,256,1,1,"20260209","DEN","CLE"],["Shot
+        Chart Detail","0022500767",511,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,0,58,"Made Shot","Hook Shot","2PT Field Goal","In The Paint (Non-RA)","Center(C)","Less
+        Than 8 ft.",6,20,64,1,1,"20260209","DEN","CLE"],["Shot Chart Detail","0022500767",670,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",4,2,50,"Made Shot","Driving Finger
+        Roll Layup Shot","2PT Field Goal","Restricted Area","Center(C)","Less Than
+        8 ft.",3,27,14,1,1,"20260209","DEN","CLE"],["Shot Chart Detail","0022500776",52,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",1,8,54,"Made Shot","Driving Finger
+        Roll Layup Shot","2PT Field Goal","Restricted Area","Center(C)","Less Than
+        8 ft.",0,-1,8,1,1,"20260211","CLE","WAS"],["Shot Chart Detail","0022500776",75,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",1,7,31,"Made Shot","Driving Layup
+        Shot","2PT Field Goal","Restricted Area","Center(C)","Less Than 8 ft.",0,-4,8,1,1,"20260211","CLE","WAS"],["Shot
+        Chart Detail","0022500776",184,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,0,36,"Made Shot","Pullup Jump shot","2PT Field Goal","Mid-Range","Right
+        Side Center(RC)","16-24 ft.",16,86,141,1,1,"20260211","CLE","WAS"],["Shot
+        Chart Detail","0022500776",348,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,2,55,"Made Shot","Layup Shot","2PT Field Goal","Restricted Area","Center(C)","Less
+        Than 8 ft.",1,9,10,1,1,"20260211","CLE","WAS"],["Shot Chart Detail","0022500776",403,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",3,10,39,"Made Shot","Cutting Layup
+        Shot","2PT Field Goal","Restricted Area","Center(C)","Less Than 8 ft.",0,-5,4,1,1,"20260211","CLE","WAS"],["Shot
+        Chart Detail","0022500776",437,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,8,37,"Made Shot","Running Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",0,-7,-1,1,1,"20260211","CLE","WAS"],["Shot
+        Chart Detail","0022500776",541,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,2,5,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Right Side Center(RC)","24+ ft.",27,221,171,1,1,"20260211","CLE","WAS"],["Shot
+        Chart Detail","0022500776",545,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,1,31,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Left Side Center(LC)","24+ ft.",25,-205,150,1,1,"20260211","CLE","WAS"],["Shot
+        Chart Detail","0022500776",559,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,0,31,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",0,-2,-4,1,1,"20260211","CLE","WAS"],["Shot
+        Chart Detail","0022500776",589,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,10,12,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",0,0,9,1,1,"20260211","CLE","WAS"],["Shot
+        Chart Detail","0022500776",595,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,9,32,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","Less Than 8 ft.",7,33,63,1,1,"20260211","CLE","WAS"],["Shot
+        Chart Detail","0022500793",28,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,10,16,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","8-16 ft.",12,-42,115,1,1,"20260219","CLE","BKN"],["Shot
+        Chart Detail","0022500793",44,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,8,46,"Made Shot","Running Alley Oop Dunk Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,-1,13,1,1,"20260219","CLE","BKN"],["Shot
+        Chart Detail","0022500793",117,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,4,3,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Center(C)","8-16 ft.",10,51,97,1,1,"20260219","CLE","BKN"],["Shot
+        Chart Detail","0022500793",201,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,9,32,"Made Shot","Jump Shot","3PT Field Goal","Right Corner 3","Right
+        Side(R)","24+ ft.",23,233,-8,1,1,"20260219","CLE","BKN"],["Shot Chart Detail","0022500793",312,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",2,1,26,"Made Shot","Cutting Layup
+        Shot","2PT Field Goal","Restricted Area","Center(C)","Less Than 8 ft.",1,1,13,1,1,"20260219","CLE","BKN"],["Shot
+        Chart Detail","0022500793",356,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,10,49,"Made Shot","Pullup Jump shot","2PT Field Goal","Mid-Range","Right
+        Side(R)","8-16 ft.",9,86,30,1,1,"20260219","CLE","BKN"],["Shot Chart Detail","0022500793",389,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",3,7,25,"Made Shot","Running Jump
+        Shot","3PT Field Goal","Above the Break 3","Right Side Center(RC)","24+ ft.",24,223,100,1,1,"20260219","CLE","BKN"],["Shot
+        Chart Detail","0022500802",115,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,3,42,"Made Shot","Driving Layup Shot","2PT Field Goal","In The
+        Paint (Non-RA)","Center(C)","Less Than 8 ft.",6,45,43,1,1,"20260220","CHA","CLE"],["Shot
+        Chart Detail","0022500802",179,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,11,30,"Made Shot","Pullup Jump shot","3PT Field Goal","Above
+        the Break 3","Right Side Center(RC)","24+ ft.",26,127,230,1,1,"20260220","CHA","CLE"],["Shot
+        Chart Detail","0022500802",204,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,9,26,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",2,-20,16,1,1,"20260220","CHA","CLE"],["Shot
+        Chart Detail","0022500802",493,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,1,0,"Made Shot","Running Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,10,14,1,1,"20260220","CHA","CLE"],["Shot
+        Chart Detail","0022500802",513,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,0,3,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",0,0,-5,1,1,"20260220","CHA","CLE"],["Shot
+        Chart Detail","0022500802",535,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,11,2,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Left Side Center(LC)","24+ ft.",25,-203,157,1,1,"20260220","CHA","CLE"],["Shot
+        Chart Detail","0022500802",541,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,10,32,"Made Shot","Hook Shot","2PT Field Goal","In The Paint
+        (Non-RA)","Center(C)","Less Than 8 ft.",4,13,40,1,1,"20260220","CHA","CLE"],["Shot
+        Chart Detail","0022500802",555,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,9,19,"Made Shot","Driving Reverse Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,9,16,1,1,"20260220","CHA","CLE"],["Shot
+        Chart Detail","0022500802",654,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,0,41,"Made Shot","Pullup Jump shot","2PT Field Goal","Mid-Range","Center(C)","8-16
+        ft.",15,32,150,1,1,"20260220","CHA","CLE"],["Shot Chart Detail","0022501212",10,1628378,"Donovan
+        Mitchell",1610612739,"Cleveland Cavaliers",1,11,15,"Made Shot","Reverse Layup
+        Shot","2PT Field Goal","Restricted Area","Center(C)","Less Than 8 ft.",2,25,2,1,1,"20251212","WAS","CLE"],["Shot
+        Chart Detail","0022501212",146,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,2,10,"Made Shot","Running Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",0,5,5,1,1,"20251212","WAS","CLE"],["Shot
+        Chart Detail","0022501212",154,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,1,9,"Made Shot","Running Pull-Up Jump Shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",25,-172,184,1,1,"20251212","WAS","CLE"],["Shot
+        Chart Detail","0022501212",165,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,0,2,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Right Side Center(RC)","24+ ft.",26,201,173,1,1,"20251212","WAS","CLE"],["Shot
+        Chart Detail","0022501212",223,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",2,8,49,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Left Side Center(LC)","24+ ft.",27,-137,244,1,1,"20251212","WAS","CLE"],["Shot
+        Chart Detail","0022501212",381,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,11,26,"Made Shot","Floating Jump shot","2PT Field Goal","In The
+        Paint (Non-RA)","Center(C)","Less Than 8 ft.",7,-56,50,1,1,"20251212","WAS","CLE"],["Shot
+        Chart Detail","0022501212",501,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,3,32,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Right Side Center(RC)","24+ ft.",31,116,288,1,1,"20251212","WAS","CLE"],["Shot
+        Chart Detail","0022501212",510,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,2,44,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,-15,6,1,1,"20251212","WAS","CLE"],["Shot
+        Chart Detail","0022501212",547,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,0,17,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,1,11,1,1,"20251212","WAS","CLE"],["Shot
+        Chart Detail","0022501212",575,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,11,45,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Right Side Center(RC)","24+ ft.",27,183,204,1,1,"20251212","WAS","CLE"],["Shot
+        Chart Detail","0022501212",585,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,11,1,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,-15,-7,1,1,"20251212","WAS","CLE"],["Shot
+        Chart Detail","0022501212",589,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,10,29,"Made Shot","Pullup Jump shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",25,-224,124,1,1,"20251212","WAS","CLE"],["Shot
+        Chart Detail","0022501212",609,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,9,26,"Made Shot","Pullup Jump shot","3PT Field Goal","Above the
+        Break 3","Center(C)","24+ ft.",32,-7,329,1,1,"20251212","WAS","CLE"],["Shot
+        Chart Detail","0022501212",673,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,5,17,"Made Shot","Cutting Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",2,-20,16,1,1,"20251212","WAS","CLE"],["Shot
+        Chart Detail","0022501212",716,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,2,14,"Made Shot","Jump Shot","3PT Field Goal","Above the Break
+        3","Left Side Center(LC)","24+ ft.",25,-135,221,1,1,"20251212","WAS","CLE"],["Shot
+        Chart Detail","0022501212",728,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,1,0,"Made Shot","Driving Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",3,12,36,1,1,"20251212","WAS","CLE"],["Shot
+        Chart Detail","0022501212",759,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,0,5,"Made Shot","Running Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",1,1,11,1,1,"20251212","WAS","CLE"],["Shot
+        Chart Detail","0022501218",26,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,10,17,"Made Shot","Step Back Jump shot","3PT Field Goal","Above
+        the Break 3","Left Side Center(LC)","24+ ft.",25,-147,204,1,1,"20251214","CLE","CHA"],["Shot
+        Chart Detail","0022501218",30,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,10,0,"Made Shot","Running Layup Shot","2PT Field Goal","Restricted
+        Area","Center(C)","Less Than 8 ft.",2,1,24,1,1,"20251214","CLE","CHA"],["Shot
+        Chart Detail","0022501218",127,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",1,2,13,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",3,2,32,1,1,"20251214","CLE","CHA"],["Shot
+        Chart Detail","0022501218",398,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,10,8,"Made Shot","Driving Floating Jump Shot","2PT Field Goal","In
+        The Paint (Non-RA)","Right Side(R)","8-16 ft.",9,78,54,1,1,"20251214","CLE","CHA"],["Shot
+        Chart Detail","0022501218",502,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",3,2,22,"Made Shot","Fadeaway Jump Shot","2PT Field Goal","In The
+        Paint (Non-RA)","Center(C)","8-16 ft.",14,-45,138,1,1,"20251214","CLE","CHA"],["Shot
+        Chart Detail","0022501218",631,1628378,"Donovan Mitchell",1610612739,"Cleveland
+        Cavaliers",4,6,24,"Made Shot","Driving Finger Roll Layup Shot","2PT Field
+        Goal","Restricted Area","Center(C)","Less Than 8 ft.",1,11,5,1,1,"20251214","CLE","CHA"]]},{"name":"LeagueAverages","headers":["GRID_TYPE","SHOT_ZONE_BASIC","SHOT_ZONE_AREA","SHOT_ZONE_RANGE","FGA","FGM","FG_PCT"],"rowSet":[["League
+        Averages","Above the Break 3","Back Court(BC)","Back Court Shot",3,3,1.0],["League
+        Averages","Above the Break 3","Center(C)","24+ ft.",4144,4144,1.0],["League
+        Averages","Above the Break 3","Left Side Center(LC)","24+ ft.",6398,6398,1.0],["League
+        Averages","Above the Break 3","Right Side Center(RC)","24+ ft.",5629,5629,1.0],["League
+        Averages","Backcourt","Back Court(BC)","Back Court Shot",11,11,1.0],["League
+        Averages","In The Paint (Non-RA)","Center(C)","8-16 ft.",4371,4371,1.0],["League
+        Averages","In The Paint (Non-RA)","Center(C)","Less Than 8 ft.",7735,7735,1.0],["League
+        Averages","In The Paint (Non-RA)","Left Side(L)","8-16 ft.",683,683,1.0],["League
+        Averages","In The Paint (Non-RA)","Right Side(R)","8-16 ft.",792,792,1.0],["League
+        Averages","Left Corner 3","Left Side(L)","24+ ft.",3199,3199,1.0],["League
+        Averages","Mid-Range","Center(C)","8-16 ft.",584,584,1.0],["League Averages","Mid-Range","Center(C)","16-24
+        ft.",814,814,1.0],["League Averages","Mid-Range","Left Side Center(LC)","16-24
+        ft.",772,772,1.0],["League Averages","Mid-Range","Left Side(L)","16-24 ft.",323,323,1.0],["League
+        Averages","Mid-Range","Left Side(L)","8-16 ft.",1323,1323,1.0],["League Averages","Mid-Range","Right
+        Side Center(RC)","16-24 ft.",805,805,1.0],["League Averages","Mid-Range","Right
+        Side(R)","8-16 ft.",1434,1434,1.0],["League Averages","Mid-Range","Right Side(R)","16-24
+        ft.",307,307,1.0],["League Averages","Restricted Area","Center(C)","Less Than
+        8 ft.",28296,28296,1.0],["League Averages","Right Corner 3","Right Side(R)","24+
+        ft.",3018,3018,1.0]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Cache-Control:
+      - public, max-age=1
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '12270'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:37:05 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF/2OeEWcAQAABffZgx5lHtyGJ3xOKa0Bk3l9/uZSuGz064Qh+vaxbKYjYLfuNKssus+htwKWUUED7gCzF2jFWPKxzWjadHx270fKaxJUNHJ+FWYNHaVYbl+7bxtPOrpl10o2/6yLVpPd2Hh8ADBxmVbtKe82v3JKTjbq2rD+qpQeuTFbzmvktOKybk+mswoZD3SsaqarYiOMLFMjo/ScjbbWGB1y59WMJQn/8paDuf6BFScxePwLtew=~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7099;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-2
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-edge-ttl:
+      - '!no-store,max-age=120'
+      x-envoy-upstream-service-time:
+      - '0'
+      x-etag:
+      - ''
+      x-full-ttl:
+      - '120.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '1'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '-1308.651'
+      x-varnish:
+      - 39311951 37360229
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

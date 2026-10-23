@@ -1,6 +1,5 @@
 from nba_api.library import http
 
-
 try:
     from nba_api.library.debug.debug import STATS_HEADERS
 except ImportError:
@@ -11,7 +10,8 @@ except ImportError:
         "Cache-Control": "max-age=0",
         "Connection": "keep-alive",
         "Host": "cdn.nba.com",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
+        "Referer": "https://www.nba.com/",
     }
 
 

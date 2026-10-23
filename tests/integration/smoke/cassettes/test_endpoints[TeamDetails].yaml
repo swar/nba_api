@@ -1,0 +1,95 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQlWITAlL0b2ecAQAAqxDagx5nyiUlElzqRlPBcZRUZT6wzZ/3FBw3T6cOqsn2gzkajcCq9OgRec4+g06gntd9umdhrCo58Gs/+OuXPgHYaHKL9VkxmxQhfEj4ZsQUbDr9ICgQf/+4eiqA73DUGIQoZkq+WrLx5sSnMTqi9CTWTeKSPltStK9NJP7zoC7n0QeQI7SqAmtop6Npwng40FrhnQEEGCyVLJhF/HWhPImVyzMEZN9nZsvx05DoFgw=~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/teamdetails?TeamID=1610612739
+  response:
+    body:
+      string: '{"resource":"teamdetails","parameters":{"TeamID":1610612739},"resultSets":[{"name":"TeamBackground","headers":["TEAM_ID","ABBREVIATION","NICKNAME","YEARFOUNDED","CITY","ARENA","ARENACAPACITY","OWNER","GENERALMANAGER","HEADCOACH","DLEAGUEAFFILIATION"],"rowSet":[[1610612739,"CLE","Cavaliers",1970,"Cleveland","Rocket
+        Arena","20562","Dan Gilbert","Koby Altman","Kenny Atkinson","Cleveland Charge"]]},{"name":"TeamHistory","headers":["TEAM_ID","CITY","NICKNAME","YEARFOUNDED","YEARACTIVETILL"],"rowSet":[[1610612739,"Cleveland","Cavaliers",1970,2023]]},{"name":"TeamSocialSites","headers":["ACCOUNTTYPE","WEBSITE_LINK"],"rowSet":[["Facebook","https://www.facebook.com/Cavs"],["Instagram","https://instagram.com/cavs"],["Twitter","https://twitter.com/cavs"]]},{"name":"TeamAwardsChampionships","headers":["YEARAWARDED","OPPOSITETEAM"],"rowSet":[[2016,"Golden
+        State Warriors"]]},{"name":"TeamAwardsConf","headers":["YEARAWARDED","OPPOSITETEAM"],"rowSet":[[2007,null],[2015,null],[2016,null],[2017,null],[2018,null]]},{"name":"TeamAwardsDiv","headers":["YEARAWARDED","OPPOSITETEAM"],"rowSet":[[1976,null],[2009,null],[2010,null],[2015,null],[2016,null],[2017,null],[2018,null],[2025,null]]},{"name":"TeamHof","headers":["PLAYERID","PLAYER","POSITION","JERSEY","SEASONSWITHTEAM","YEAR"],"rowSet":[[2548,"Dwyane
+        Wade","G",null,"2017-2018",2023],[1112,"Ben Wallace","C-F",null,"2008-2009",2021],[406,"Shaquille
+        O''Neal","C",null,"2010",2016],[78530,"Lenny Wilkens","G",null,"1973-1974",1989],[76750,"Walt
+        Frazier","G",null,"1978-1980",1987],[600001,"Nate Thurmond","C",null,"1976-1977",1985]]},{"name":"TeamRetired","headers":["PLAYERID","PLAYER","POSITION","JERSEY","SEASONSWITHTEAM","YEAR"],"rowSet":[[980,"Zydrunas
+        Ilgauskas","C","11","1997-2010",2014],[899,"Mark Price","G","25","1987-1995",1999],[921,"Brad
+        Daugherty","C","43","1987-1994",1997],[77685,"Larry Nance","F","22","1989-1994",1995],[76348,"Austin
+        Carr","G","34","1972-1980",1981],[78202,"Bingo Smith","F","7","1971-1979",1979],[600001,"Nate
+        Thurmond","C","42","1976-1977",1977]]},{"name":"TeamAwardsCommCup","headers":["YEARAWARDED","OPPOSITETEAM"],"rowSet":[]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '928'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:37:13 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQjmITAosZ9GicAQAAXBTagx4T7rqhpiZsbb7iTl4BKZQu8wdm9pCTX1Clg5G449PfJ6cdZDtRmSzqF8641WzrFuM0z3w9e4FSA+Ac0l7QoO22Q3w4OFgQInLRRgUWBTLGXVjGSskhDLR+QWw2fERzxJHE+egal2XMdjWtv9LxckIbmt4FRMRHsYZ76WGJGflur2CqD2hsNoFqCbF17nhvzvdXTtkd4tJgUwEDffb03rd9154BdCAOkKgT1jo=~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7091;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - S3
+      x-envoy-upstream-service-time:
+      - '1'
+      x-full-ttl:
+      - '3600.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '5'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '1931.270'
+      x-varnish:
+      - 38123376 35737180
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

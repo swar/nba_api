@@ -22,7 +22,7 @@ TEAMDASHLINEUPS_SAMPLE = {
         "Month": 0,
         "OpponentTeamID": 0,
         "Period": 0,
-        "LeagueID": "00"
+        "LeagueID": "00",
     },
     "resultSets": [
         {
@@ -54,7 +54,7 @@ TEAMDASHLINEUPS_SAMPLE = {
                     120,
                     0.458,
                 ]
-            ]
+            ],
         },
         {
             "name": "Overall",
@@ -81,7 +81,7 @@ TEAMDASHLINEUPS_SAMPLE = {
                     32,
                     0.610,
                 ]
-            ]
-        }
-    ]
+            ],
+        },
+    ],
 }

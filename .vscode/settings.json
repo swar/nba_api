@@ -1,13 +1,12 @@
 {
     "editor.formatOnSave": true,
-    "flake8.args": [
-        "--config=.flake8"
-    ],
-    "python.formatting.provider": "black",
-    "python.formatting.blackArgs": [
-        "--line-length",
-        "88"
-    ],
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "explicit",
+            "source.organizeImports.ruff": "explicit"
+        }
+    },
     "python.analysis.diagnosticSeverityOverrides": {
         "reportUnboundVariable": "information",
         "reportImplicitStringConcatenation": "warning",

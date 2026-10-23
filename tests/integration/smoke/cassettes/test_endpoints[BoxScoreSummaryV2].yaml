@@ -1,0 +1,89 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAs8XbWicAQAAMfjYgx4EfPJVmX7fHR0HXEnRYg4qHfv27U4bORccGCsEuPjHVUYIycxmu55zkhOGq6BkKM8PYGEvXSyOfVMWTHzKTswmaFNyiuJvKzws2douHDCvUKeUH4HoDlQYZkIJOjpF0Np1iagK+e0uzXhGr5vD7Y269wn4Nnv0KcnUjDYpuwyL4jqrVHaWHhYocXeugzIR0v+UFoAvI/cThttzjzKVQQ4OmEnHwnw5kGInWQ==~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/boxscoresummaryv2?GameID=0022200552
+  response:
+    body:
+      string: '{"resource":"boxscoresummary","parameters":{"GameID":"0022200552"},"resultSets":[{"name":"GameSummary","headers":["GAME_DATE_EST","GAME_SEQUENCE","GAME_ID","GAME_STATUS_ID","GAME_STATUS_TEXT","GAMECODE","HOME_TEAM_ID","VISITOR_TEAM_ID","SEASON","LIVE_PERIOD","LIVE_PC_TIME","NATL_TV_BROADCASTER_ABBREVIATION","LIVE_PERIOD_TIME_BCAST","WH_STATUS"],"rowSet":[["2023-01-02T00:00:00",3,"0022200552",3,"Final/OT","20230102/CHICLE",1610612739,1610612741,"2022",5,"     ",null,null,1]]},{"name":"OtherStats","headers":["LEAGUE_ID","TEAM_ID","TEAM_ABBREVIATION","TEAM_CITY","PTS_PAINT","PTS_2ND_CHANCE","PTS_FB","LARGEST_LEAD","LEAD_CHANGES","TIMES_TIED","TEAM_TURNOVERS","TOTAL_TURNOVERS","TEAM_REBOUNDS","PTS_OFF_TO"],"rowSet":[["00",1610612739,"CLE","Cleveland",56,24,6,11,1,3,0,10,10,9],["00",1610612741,"CHI","Chicago",54,16,12,21,1,3,0,7,9,13]]},{"name":"Officials","headers":["OFFICIAL_ID","FIRST_NAME","LAST_NAME","JERSEY_NUM"],"rowSet":[[1146,"Tony","Brothers","25  "],[1155,"JB","DeRosa","22  "],[1627529,"Suyash","Mehta","82  "]]},{"name":"InactivePlayers","headers":["PLAYER_ID","FIRST_NAME","LAST_NAME","JERSEY_NUM","TEAM_ID","TEAM_CITY","TEAM_NAME","TEAM_ABBREVIATION"],"rowSet":[[1628366,"Lonzo","Ball","2   ",1610612741,"Chicago","Bulls","CHI"],[1628396,"Tony","Bradley","13  ",1610612741,"Chicago","Bulls","CHI"],[1629750,"Javonte","Green","24  ",1610612741,"Chicago","Bulls","CHI"],[1630250,"Marko","Simonovic","19  ",1610612741,"Chicago","Bulls","CHI"],[1630637,"Carlik","Jones","22  ",1610612741,"Chicago","Bulls","CHI"],[201937,"Ricky","Rubio","13  ",1610612739,"Cleveland","Cavaliers","CLE"],[1629603,"Mamadi","Diakite","21  ",1610612739,"Cleveland","Cavaliers","CLE"],[1629636,"Darius","Garland","10  ",1610612739,"Cleveland","Cavaliers","CLE"],[1629685,"Dylan","Windler","9   ",1610612739,"Cleveland","Cavaliers","CLE"],[1629731,"Dean","Wade","32  ",1610612739,"Cleveland","Cavaliers","CLE"]]},{"name":"GameInfo","headers":["GAME_DATE","ATTENDANCE","GAME_TIME"],"rowSet":[["Monday,
+        January 02, 2023",19432,"2:51"]]},{"name":"LineScore","headers":["GAME_DATE_EST","GAME_SEQUENCE","GAME_ID","TEAM_ID","TEAM_ABBREVIATION","TEAM_CITY_NAME","TEAM_NICKNAME","TEAM_WINS_LOSSES","PTS_QTR1","PTS_QTR2","PTS_QTR3","PTS_QTR4","PTS_OT1","PTS_OT2","PTS_OT3","PTS_OT4","PTS_OT5","PTS_OT6","PTS_OT7","PTS_OT8","PTS_OT9","PTS_OT10","PTS"],"rowSet":[["2023-01-02T00:00:00",3,"0022200552",1610612739,"CLE","Cleveland","Cavaliers","24-14",27,20,44,39,15,0,0,0,0,0,0,0,0,0,145],["2023-01-02T00:00:00",3,"0022200552",1610612741,"CHI","Chicago","Bulls","16-21",34,31,31,34,4,0,0,0,0,0,0,0,0,0,134]]},{"name":"LastMeeting","headers":["GAME_ID","LAST_GAME_ID","LAST_GAME_DATE_EST","LAST_GAME_HOME_TEAM_ID","LAST_GAME_HOME_TEAM_CITY","LAST_GAME_HOME_TEAM_NAME","LAST_GAME_HOME_TEAM_ABBREVIATION","LAST_GAME_HOME_TEAM_POINTS","LAST_GAME_VISITOR_TEAM_ID","LAST_GAME_VISITOR_TEAM_CITY","LAST_GAME_VISITOR_TEAM_NAME","LAST_GAME_VISITOR_TEAM_CITY1","LAST_GAME_VISITOR_TEAM_POINTS"],"rowSet":[["0022200552","0022200540","2022-12-31T00:00:00",1610612739,"Cleveland","Cavaliers","CLE",103,1610612741,"Chicago","Bulls","CHI",102]]},{"name":"SeasonSeries","headers":["GAME_ID","HOME_TEAM_ID","VISITOR_TEAM_ID","GAME_DATE_EST","HOME_TEAM_WINS","HOME_TEAM_LOSSES","SERIES_LEADER"],"rowSet":[["0022200552",1610612739,1610612741,"2023-01-02T00:00:00",4,0,"Cleveland"]]},{"name":"AvailableVideo","headers":["GAME_ID","VIDEO_AVAILABLE_FLAG","PT_AVAILABLE","PT_XYZ_AVAILABLE","WH_STATUS","HUSTLE_STATUS","HISTORICAL_STATUS"],"rowSet":[["0022200552",1,0,0,1,1,0]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1225'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:36:01 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF4KGeEWcAQAAlPrYgx609oecPnqCN2IsXPuAWU+QG5oTkpie0Ig2ok2viqU3vycUEaK9UkOPeovyIWeddjGKi8gQKSi8WeGgOS3fQfNMWbKaOHE99Cl+BP7C9Sxpxrt36LM6mD/KJhGRERF9IvxQGKgDPPz46TDKmWGeDFkgMuirJ4qncxo8SMwwSYA/1I75u23ESVgomDosu/P8usDxQthGZ+qNDCFQPgiY2Bbvn0bjeuf/pndXMw==~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7163;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-1
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - S3
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '300.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '1'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '-1108.097'
+      x-varnish:
+      - 68947774 67812286
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

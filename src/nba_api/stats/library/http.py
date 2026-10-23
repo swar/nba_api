@@ -9,15 +9,15 @@ try:
 except ImportError:
     STATS_HEADERS = {
         "Host": "stats.nba.com",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
         "Accept": "application/json, text/plain, */*",
         "Accept-Language": "en-US,en;q=0.5",
         "Accept-Encoding": "gzip, deflate, br",
         "Connection": "keep-alive",
-        "Referer": "https://stats.nba.com/",
+        "Referer": "https://www.nba.com/",
         "Pragma": "no-cache",
         "Cache-Control": "no-cache",
-        "Sec-Ch-Ua": '"Chromium";v="140", "Google Chrome";v="140", "Not;A=Brand";v="24"',
+        "Sec-Ch-Ua": '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"',
         "Sec-Ch-Ua-Mobile": "?0",
         "Sec-Fetch-Dest": "empty",
     }
@@ -25,6 +25,14 @@ except ImportError:
 
 class NBAStatsResponse(http.NBAResponse):
     """Response handler for NBA Stats API requests."""
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._endpoint = None
+
+    @staticmethod
+    def _build_rows(headers, row_set):
+        return [dict(zip(headers, raw_row, strict=False)) for raw_row in row_set]
 
     def get_normalized_dict(self):
         raw_data = self.get_dict()
@@ -45,16 +53,16 @@ class NBAStatsResponse(http.NBAResponse):
                 results = [results]
             for result in results:
                 name = result["name"]
-                headers = result["headers"]
-                row_set = result["rowSet"]
+                data[name] = self._build_rows(result["headers"], result["rowSet"])
+        elif self._endpoint is not None:
+            try:
+                from nba_api.stats.endpoints._parsers import get_parser_for_endpoint
 
-                rows = []
-                for raw_row in row_set:
-                    row = {}
-                    for i in range(len(headers)):
-                        row[headers[i]] = raw_row[i]
-                    rows.append(row)
-                data[name] = rows
+                endpoint_parser = get_parser_for_endpoint(self._endpoint, raw_data)
+                for name, dataset in endpoint_parser.get_data_sets().items():
+                    data[name] = self._build_rows(dataset["headers"], dataset["data"])
+            except (KeyError, ImportError):
+                pass
 
         return data
 
@@ -96,8 +104,10 @@ class NBAStatsResponse(http.NBAResponse):
     def get_data_sets(self, endpoint=None):
         raw_dict = self.get_dict()
 
+        if endpoint is not None:
+            self._endpoint = endpoint
+
         if endpoint is None:
-            # Process Tabular Json
             if "resultSets" in raw_dict:
                 results = raw_dict["resultSets"]
             else:
@@ -119,8 +129,6 @@ class NBAStatsResponse(http.NBAResponse):
                 for result_set in results
             }
         else:
-            # Process V3 endpoint with custom parser
-            # Lazy import to avoid circular dependency
             from nba_api.stats.endpoints._parsers import get_parser_for_endpoint
 
             endpoint_parser = get_parser_for_endpoint(endpoint, self.get_dict())

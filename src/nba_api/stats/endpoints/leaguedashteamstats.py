@@ -1,29 +1,29 @@
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
 from nba_api.stats.library.parameters import (
-    LastNGames,
-    MeasureTypeDetailedDefense,
-    Month,
-    PaceAdjust,
-    PerModeDetailed,
-    Period,
-    PlusMinus,
-    Rank,
-    Season,
-    SeasonTypeAllStar,
     ConferenceNullable,
+    DivisionNullable,
     DivisionSimpleNullable,
     GameScopeSimpleNullable,
     GameSegmentNullable,
+    LastNGames,
     LeagueIDNullable,
     LocationNullable,
+    MeasureTypeDetailedDefense,
+    Month,
     OutcomeNullable,
+    PaceAdjust,
+    Period,
+    PerModeDetailed,
     PlayerExperienceNullable,
     PlayerPositionAbbreviationNullable,
+    PlusMinus,
+    Rank,
+    Season,
     SeasonSegmentNullable,
+    SeasonTypeAllStar,
     ShotClockRangeNullable,
     StarterBenchNullable,
-    DivisionNullable,
 )
 
 
@@ -128,6 +128,7 @@ class LeagueDashTeamStats(Endpoint):
         two_way_nullable="",
         vs_conference_nullable=ConferenceNullable.default,
         vs_division_nullable=DivisionNullable.default,
+        ist_round_nullable=None,
         proxy=None,
         headers=None,
         timeout=30,
@@ -168,6 +169,7 @@ class LeagueDashTeamStats(Endpoint):
             "TwoWay": two_way_nullable,
             "VsConference": vs_conference_nullable,
             "VsDivision": vs_division_nullable,
+            "ISTRound": ist_round_nullable,
         }
         if get_request:
             self.get_request()

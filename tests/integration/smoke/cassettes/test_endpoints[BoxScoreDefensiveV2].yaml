@@ -1,0 +1,109 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAoIXbWicAQAA6uTYgx6QdK8dV78Q77gLiVJ2amErmd4EEPFotMPY8LKqxKwV2L8bl9eDv/Yt1e+7ywgls5786MdiuIiPHEVnujygjF5dSQApUpDvsKNH0QoRErJ9Z6sKxCMCZu6mW2KvxRI6kmQp0BNlQojcbMnopNHXszdQLbHufpREZBT63X/f43/8q9MPp8WKqEbWH8Uk5dl3CEf5HOfsZ+jWCzz4plL43rSh2Y6cx2y8CiXHew==~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/boxscoredefensivev2?GameID=0022200552
+  response:
+    body:
+      string: "{\"meta\":{\"version\":1,\"request\":\"http://nba.cloud/games/0022200552/boxscoredefensive?Format=json\",\"time\":\"2026-02-22T05:12:31.1231Z\"},\"boxScoreDefensive\":{\"gameId\":\"0022200552\",\"awayTeamId\":1610612741,\"homeTeamId\":1610612739,\"homeTeam\":{\"teamId\":1610612739,\"teamCity\":\"Cleveland\",\"teamName\":\"Cavaliers\",\"teamTricode\":\"CLE\",\"teamSlug\":\"cavaliers\",\"players\":[{\"personId\":1630205,\"firstName\":\"Lamar\",\"familyName\":\"Stevens\",\"nameI\":\"L.
+        Stevens\",\"playerSlug\":\"lamar-stevens\",\"position\":\"F\",\"comment\":\"\",\"jerseyNum\":\"8\",\"statistics\":{\"matchupMinutes\":\"7:04\",\"partialPossessions\":40.2,\"switchesOn\":0,\"playerPoints\":17,\"defensiveRebounds\":1,\"matchupAssists\":2,\"matchupTurnovers\":0,\"steals\":0,\"blocks\":0,\"matchupFieldGoalsMade\":8,\"matchupFieldGoalsAttempted\":12,\"matchupFieldGoalPercentage\":0.667,\"matchupThreePointersMade\":1,\"matchupThreePointersAttempted\":3,\"matchupThreePointerPercentage\":0.333}},{\"personId\":201567,\"firstName\":\"Kevin\",\"familyName\":\"Love\",\"nameI\":\"K.
+        Love\",\"playerSlug\":\"kevin-love\",\"position\":\"F\",\"comment\":\"\",\"jerseyNum\":\"0\",\"statistics\":{\"matchupMinutes\":\"14:09\",\"partialPossessions\":77.1,\"switchesOn\":0,\"playerPoints\":18,\"defensiveRebounds\":16,\"matchupAssists\":3,\"matchupTurnovers\":0,\"steals\":0,\"blocks\":0,\"matchupFieldGoalsMade\":6,\"matchupFieldGoalsAttempted\":15,\"matchupFieldGoalPercentage\":0.4,\"matchupThreePointersMade\":1,\"matchupThreePointersAttempted\":5,\"matchupThreePointerPercentage\":0.2}},{\"personId\":1628386,\"firstName\":\"Jarrett\",\"familyName\":\"Allen\",\"nameI\":\"J.
+        Allen\",\"playerSlug\":\"jarrett-allen\",\"position\":\"C\",\"comment\":\"\",\"jerseyNum\":\"31\",\"statistics\":{\"matchupMinutes\":\"13:55\",\"partialPossessions\":77.0,\"switchesOn\":0,\"playerPoints\":24,\"defensiveRebounds\":2,\"matchupAssists\":5,\"matchupTurnovers\":1,\"steals\":0,\"blocks\":1,\"matchupFieldGoalsMade\":8,\"matchupFieldGoalsAttempted\":18,\"matchupFieldGoalPercentage\":0.444,\"matchupThreePointersMade\":3,\"matchupThreePointersAttempted\":7,\"matchupThreePointerPercentage\":0.429}},{\"personId\":1627747,\"firstName\":\"Caris\",\"familyName\":\"LeVert\",\"nameI\":\"C.
+        LeVert\",\"playerSlug\":\"caris-levert\",\"position\":\"G\",\"comment\":\"\",\"jerseyNum\":\"3\",\"statistics\":{\"matchupMinutes\":\"14:18\",\"partialPossessions\":79.2,\"switchesOn\":0,\"playerPoints\":17,\"defensiveRebounds\":5,\"matchupAssists\":1,\"matchupTurnovers\":2,\"steals\":1,\"blocks\":0,\"matchupFieldGoalsMade\":6,\"matchupFieldGoalsAttempted\":15,\"matchupFieldGoalPercentage\":0.4,\"matchupThreePointersMade\":0,\"matchupThreePointersAttempted\":6,\"matchupThreePointerPercentage\":0.0}},{\"personId\":1628378,\"firstName\":\"Donovan\",\"familyName\":\"Mitchell\",\"nameI\":\"D.
+        Mitchell\",\"playerSlug\":\"donovan-mitchell\",\"position\":\"G\",\"comment\":\"\",\"jerseyNum\":\"45\",\"statistics\":{\"matchupMinutes\":\"18:27\",\"partialPossessions\":101.0,\"switchesOn\":0,\"playerPoints\":15,\"defensiveRebounds\":5,\"matchupAssists\":5,\"matchupTurnovers\":2,\"steals\":0,\"blocks\":1,\"matchupFieldGoalsMade\":6,\"matchupFieldGoalsAttempted\":11,\"matchupFieldGoalPercentage\":0.545,\"matchupThreePointersMade\":1,\"matchupThreePointersAttempted\":5,\"matchupThreePointerPercentage\":0.2}},{\"personId\":1626224,\"firstName\":\"Cedi\",\"familyName\":\"Osman\",\"nameI\":\"C.
+        Osman\",\"playerSlug\":\"cedi-osman\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"16\",\"statistics\":{\"matchupMinutes\":\"13:28\",\"partialPossessions\":73.1,\"switchesOn\":0,\"playerPoints\":14,\"defensiveRebounds\":3,\"matchupAssists\":2,\"matchupTurnovers\":2,\"steals\":0,\"blocks\":0,\"matchupFieldGoalsMade\":5,\"matchupFieldGoalsAttempted\":9,\"matchupFieldGoalPercentage\":0.556,\"matchupThreePointersMade\":4,\"matchupThreePointersAttempted\":6,\"matchupThreePointerPercentage\":0.667}},{\"personId\":1630171,\"firstName\":\"Isaac\",\"familyName\":\"Okoro\",\"nameI\":\"I.
+        Okoro\",\"playerSlug\":\"isaac-okoro\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"35\",\"statistics\":{\"matchupMinutes\":\"7:47\",\"partialPossessions\":37.8,\"switchesOn\":0,\"playerPoints\":20,\"defensiveRebounds\":2,\"matchupAssists\":2,\"matchupTurnovers\":0,\"steals\":0,\"blocks\":1,\"matchupFieldGoalsMade\":7,\"matchupFieldGoalsAttempted\":12,\"matchupFieldGoalPercentage\":0.583,\"matchupThreePointersMade\":0,\"matchupThreePointersAttempted\":0,\"matchupThreePointerPercentage\":0.0}},{\"personId\":203526,\"firstName\":\"Raul\",\"familyName\":\"Neto\",\"nameI\":\"R.
+        Neto\",\"playerSlug\":\"raul-neto\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"19\",\"statistics\":{\"matchupMinutes\":\"6:25\",\"partialPossessions\":35.0,\"switchesOn\":0,\"playerPoints\":6,\"defensiveRebounds\":0,\"matchupAssists\":0,\"matchupTurnovers\":0,\"steals\":0,\"blocks\":0,\"matchupFieldGoalsMade\":3,\"matchupFieldGoalsAttempted\":5,\"matchupFieldGoalPercentage\":0.6,\"matchupThreePointersMade\":0,\"matchupThreePointersAttempted\":1,\"matchupThreePointerPercentage\":0.0}},{\"personId\":201577,\"firstName\":\"Robin\",\"familyName\":\"Lopez\",\"nameI\":\"R.
+        Lopez\",\"playerSlug\":\"robin-lopez\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"33\",\"statistics\":{\"matchupMinutes\":\"2:41\",\"partialPossessions\":15.0,\"switchesOn\":0,\"playerPoints\":4,\"defensiveRebounds\":0,\"matchupAssists\":0,\"matchupTurnovers\":0,\"steals\":0,\"blocks\":0,\"matchupFieldGoalsMade\":2,\"matchupFieldGoalsAttempted\":4,\"matchupFieldGoalPercentage\":0.5,\"matchupThreePointersMade\":0,\"matchupThreePointersAttempted\":0,\"matchupThreePointerPercentage\":0.0}}],\"statistics\":{\"minutes\":null}},\"awayTeam\":{\"teamId\":1610612741,\"teamCity\":\"Chicago\",\"teamName\":\"Bulls\",\"teamTricode\":\"CHI\",\"teamSlug\":\"bulls\",\"players\":[{\"personId\":201942,\"firstName\":\"DeMar\",\"familyName\":\"DeRozan\",\"nameI\":\"D.
+        DeRozan\",\"playerSlug\":\"demar-derozan\",\"position\":\"F\",\"comment\":\"\",\"jerseyNum\":\"11\",\"statistics\":{\"matchupMinutes\":\"18:36\",\"partialPossessions\":92.5,\"switchesOn\":0,\"playerPoints\":22,\"defensiveRebounds\":2,\"matchupAssists\":5,\"matchupTurnovers\":3,\"steals\":4,\"blocks\":1,\"matchupFieldGoalsMade\":10,\"matchupFieldGoalsAttempted\":17,\"matchupFieldGoalPercentage\":0.588,\"matchupThreePointersMade\":2,\"matchupThreePointersAttempted\":6,\"matchupThreePointerPercentage\":0.333}},{\"personId\":1630172,\"firstName\":\"Patrick\",\"familyName\":\"Williams\",\"nameI\":\"P.
+        Williams\",\"playerSlug\":\"patrick-williams\",\"position\":\"F\",\"comment\":\"\",\"jerseyNum\":\"44\",\"statistics\":{\"matchupMinutes\":\"12:21\",\"partialPossessions\":59.5,\"switchesOn\":0,\"playerPoints\":10,\"defensiveRebounds\":5,\"matchupAssists\":5,\"matchupTurnovers\":1,\"steals\":1,\"blocks\":0,\"matchupFieldGoalsMade\":3,\"matchupFieldGoalsAttempted\":11,\"matchupFieldGoalPercentage\":0.273,\"matchupThreePointersMade\":1,\"matchupThreePointersAttempted\":5,\"matchupThreePointerPercentage\":0.2}},{\"personId\":202696,\"firstName\":\"Nikola\",\"familyName\":\"Vu\u010Devi\u0107\",\"nameI\":\"N.
+        Vu\u010Devi\u0107\",\"playerSlug\":\"nikola-vu\u010Devi\u0107\",\"position\":\"C\",\"comment\":\"\",\"jerseyNum\":\"9\",\"statistics\":{\"matchupMinutes\":\"18:20\",\"partialPossessions\":87.9,\"switchesOn\":0,\"playerPoints\":28,\"defensiveRebounds\":12,\"matchupAssists\":5,\"matchupTurnovers\":0,\"steals\":0,\"blocks\":0,\"matchupFieldGoalsMade\":11,\"matchupFieldGoalsAttempted\":16,\"matchupFieldGoalPercentage\":0.688,\"matchupThreePointersMade\":2,\"matchupThreePointersAttempted\":3,\"matchupThreePointerPercentage\":0.667}},{\"personId\":203897,\"firstName\":\"Zach\",\"familyName\":\"LaVine\",\"nameI\":\"Z.
+        LaVine\",\"playerSlug\":\"zach-lavine\",\"position\":\"G\",\"comment\":\"\",\"jerseyNum\":\"8\",\"statistics\":{\"matchupMinutes\":\"17:40\",\"partialPossessions\":79.9,\"switchesOn\":0,\"playerPoints\":24,\"defensiveRebounds\":6,\"matchupAssists\":3,\"matchupTurnovers\":3,\"steals\":0,\"blocks\":1,\"matchupFieldGoalsMade\":9,\"matchupFieldGoalsAttempted\":15,\"matchupFieldGoalPercentage\":0.6,\"matchupThreePointersMade\":4,\"matchupThreePointersAttempted\":8,\"matchupThreePointerPercentage\":0.5}},{\"personId\":1630245,\"firstName\":\"Ayo\",\"familyName\":\"Dosunmu\",\"nameI\":\"A.
+        Dosunmu\",\"playerSlug\":\"ayo-dosunmu\",\"position\":\"G\",\"comment\":\"\",\"jerseyNum\":\"12\",\"statistics\":{\"matchupMinutes\":\"13:50\",\"partialPossessions\":65.6,\"switchesOn\":0,\"playerPoints\":15,\"defensiveRebounds\":3,\"matchupAssists\":4,\"matchupTurnovers\":0,\"steals\":0,\"blocks\":0,\"matchupFieldGoalsMade\":6,\"matchupFieldGoalsAttempted\":14,\"matchupFieldGoalPercentage\":0.429,\"matchupThreePointersMade\":0,\"matchupThreePointersAttempted\":6,\"matchupThreePointerPercentage\":0.0}},{\"personId\":1627884,\"firstName\":\"Derrick\",\"familyName\":\"Jones
+        Jr.\",\"nameI\":\"D. Jones Jr.\",\"playerSlug\":\"derrick-jones-jr\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"5\",\"statistics\":{\"matchupMinutes\":\"9:20\",\"partialPossessions\":44.0,\"switchesOn\":0,\"playerPoints\":19,\"defensiveRebounds\":4,\"matchupAssists\":2,\"matchupTurnovers\":0,\"steals\":0,\"blocks\":0,\"matchupFieldGoalsMade\":5,\"matchupFieldGoalsAttempted\":10,\"matchupFieldGoalPercentage\":0.5,\"matchupThreePointersMade\":3,\"matchupThreePointersAttempted\":8,\"matchupThreePointerPercentage\":0.375}},{\"personId\":1627936,\"firstName\":\"Alex\",\"familyName\":\"Caruso\",\"nameI\":\"A.
+        Caruso\",\"playerSlug\":\"alex-caruso\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"6\",\"statistics\":{\"matchupMinutes\":\"9:47\",\"partialPossessions\":44.1,\"switchesOn\":0,\"playerPoints\":31,\"defensiveRebounds\":1,\"matchupAssists\":3,\"matchupTurnovers\":1,\"steals\":1,\"blocks\":0,\"matchupFieldGoalsMade\":11,\"matchupFieldGoalsAttempted\":16,\"matchupFieldGoalPercentage\":0.688,\"matchupThreePointersMade\":3,\"matchupThreePointersAttempted\":7,\"matchupThreePointerPercentage\":0.429}},{\"personId\":1629632,\"firstName\":\"Coby\",\"familyName\":\"White\",\"nameI\":\"C.
+        White\",\"playerSlug\":\"coby-white\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"0\",\"statistics\":{\"matchupMinutes\":\"4:19\",\"partialPossessions\":21.1,\"switchesOn\":0,\"playerPoints\":4,\"defensiveRebounds\":0,\"matchupAssists\":1,\"matchupTurnovers\":0,\"steals\":1,\"blocks\":0,\"matchupFieldGoalsMade\":1,\"matchupFieldGoalsAttempted\":4,\"matchupFieldGoalPercentage\":0.25,\"matchupThreePointersMade\":1,\"matchupThreePointersAttempted\":3,\"matchupThreePointerPercentage\":0.333}},{\"personId\":203083,\"firstName\":\"Andre\",\"familyName\":\"Drummond\",\"nameI\":\"A.
+        Drummond\",\"playerSlug\":\"andre-drummond\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"3\",\"statistics\":{\"matchupMinutes\":\"3:00\",\"partialPossessions\":13.3,\"switchesOn\":0,\"playerPoints\":8,\"defensiveRebounds\":3,\"matchupAssists\":0,\"matchupTurnovers\":2,\"steals\":1,\"blocks\":0,\"matchupFieldGoalsMade\":3,\"matchupFieldGoalsAttempted\":4,\"matchupFieldGoalPercentage\":0.75,\"matchupThreePointersMade\":1,\"matchupThreePointersAttempted\":2,\"matchupThreePointerPercentage\":0.5}},{\"personId\":201609,\"firstName\":\"Goran\",\"familyName\":\"Dragic\",\"nameI\":\"G.
+        Dragic\",\"playerSlug\":\"goran-dragic\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"7\",\"statistics\":{\"matchupMinutes\":\"4:14\",\"partialPossessions\":22.1,\"switchesOn\":0,\"playerPoints\":2,\"defensiveRebounds\":0,\"matchupAssists\":1,\"matchupTurnovers\":3,\"steals\":0,\"blocks\":0,\"matchupFieldGoalsMade\":1,\"matchupFieldGoalsAttempted\":2,\"matchupFieldGoalPercentage\":0.5,\"matchupThreePointersMade\":0,\"matchupThreePointersAttempted\":0,\"matchupThreePointerPercentage\":0.0}}],\"statistics\":{\"minutes\":null}}}}"
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1907'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:35:56 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF/SFeEWcAQAAZufYgx7jR7l55YqUYHjhhoHNgOnoejBs3WjIH9TbdET3v+ugcmC8WpTgSSVc6jn8C0SFxU5f4t3qfHl23MJXJjKT2r0lXJOGWdzv17XK9gykVFfkTkkIPCGEKdUEsuKw4i+7GUYtwK/81frth0tF1qI2Wlz+1RzvVXhpKOlasJO+4Tztfigv8igPknJdDb2scovX0MiR7Ss0Ak2ZAkg4demE4Aw8atSnarb0M/y0gQ==~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7168;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      ttl:
+      - '31536000'
+      vha6-origin:
+      - varnish-1
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '300.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '1'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '-1105.149'
+      x-varnish:
+      - 39332019 36775574
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

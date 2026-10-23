@@ -1,0 +1,117 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF1iLeEWcAQAAyZDZgx5gQ58MsbY4P7x5Kd5sn3FCdfz2I4J88Wu/Uh3pLYEEth76VRwnM1425f81yU7U16qonI4S2RVv3kmwQAZkBguLAX1lObB5naThsYaNBFFdL/dGg8S/jec26+gljKIlye3dMqfPK/WE4HUAFGH8/O4oC5tsziJFCf6/uiO4u8VDDZHAMUCKHo6fMvnlj3LoHQoYxX6VYlHNLG71StV1FufwmauxNiQAdAgViA==~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/leaguehustlestatsteam?College=&Conference=&Country=&DateFrom=&DateTo=&Division=&DraftPick=&DraftYear=&Height=&LeagueID=00&Location=&Month=&OpponentTeamID=&Outcome=&PORound=&PerMode=Totals&PlayerExperience=&PlayerPosition=&Season=2025-26&SeasonSegment=&SeasonType=Regular+Season&TeamID=&VsConference=&VsDivision=&Weight=
+  response:
+    body:
+      string: '{"resource":"leaguehustlestatsteam","parameters":{"LeagueID":"00","SeasonYear":"2025-26","SeasonType":"Regular
+        Season","PORound":null,"PerMode":"Totals","Outcome":null,"Location":null,"MonthNum":null,"SeasonSegment":null,"DateFrom":null,"DateTo":null,"OppTeamID":null,"vsConfernce":null,"vsDivision":null,"TeamID":null,"Conference":null,"Division":null,"PlayerExperience":null,"PlayerPosition":null,"DraftYear":null,"DraftPick":null,"College":null,"Country":null,"Height":null,"Weight":null,"LastNGames":null,"ISTRound":null},"resultSets":[{"name":"HustleStatsTeam","headers":["TEAM_ID","TEAM_NAME","MIN","CONTESTED_SHOTS","CONTESTED_SHOTS_2PT","CONTESTED_SHOTS_3PT","DEFLECTIONS","CHARGES_DRAWN","SCREEN_ASSISTS","SCREEN_AST_PTS","OFF_LOOSE_BALLS_RECOVERED","DEF_LOOSE_BALLS_RECOVERED","LOOSE_BALLS_RECOVERED","PCT_LOOSE_BALLS_RECOVERED_OFF","PCT_LOOSE_BALLS_RECOVERED_DEF","OFF_BOXOUTS","DEF_BOXOUTS","BOX_OUTS","PCT_BOX_OUTS_OFF","PCT_BOX_OUTS_DEF"],"rowSet":[[1610612737,"Atlanta
+        Hawks",2769.0,2541,1572,969,1140,10,437,1020,139,149,288,0.483,0.517,53,285,338,0.157,0.843],[1610612738,"Boston
+        Celtics",2617.0,2327,1382,945,890,23,549,1323,129,111,240,0.538,0.463,102,283,388,0.263,0.729],[1610612751,"Brooklyn
+        Nets",2619.0,2267,1433,834,953,9,372,896,112,104,216,0.519,0.481,99,209,308,0.321,0.679],[1610612766,"Charlotte
+        Hornets",2720.0,2489,1613,876,808,9,425,1006,147,106,253,0.581,0.419,134,307,441,0.304,0.696],[1610612741,"Chicago
+        Bulls",2716.0,2606,1632,974,800,35,348,778,120,118,238,0.504,0.496,64,340,404,0.158,0.842],[1610612739,"Cleveland
+        Cavaliers",2729.0,2385,1533,852,1146,9,448,1035,134,135,269,0.498,0.502,93,290,383,0.243,0.757],[1610612742,"Dallas
+        Mavericks",2619.0,2437,1567,870,796,20,511,1144,109,151,260,0.419,0.581,66,261,327,0.202,0.798],[1610612743,"Denver
+        Nuggets",2733.0,2119,1301,818,828,18,512,1213,108,114,222,0.486,0.514,92,249,341,0.27,0.73],[1610612765,"Detroit
+        Pistons",2624.0,2279,1410,869,1148,9,397,917,163,177,340,0.479,0.521,99,293,394,0.251,0.744],[1610612744,"Golden
+        State Warriors",2664.0,2259,1438,821,1116,32,436,1087,170,143,313,0.543,0.457,82,266,348,0.236,0.764],[1610612745,"Houston
+        Rockets",2653.0,2217,1384,833,954,11,350,789,173,133,306,0.565,0.435,135,201,337,0.401,0.596],[1610612754,"Indiana
+        Pacers",2725.0,2414,1626,788,880,15,401,910,128,113,241,0.531,0.469,73,306,379,0.193,0.807],[1610612746,"LA
+        Clippers",2656.0,2345,1446,899,1007,4,343,806,113,115,228,0.496,0.504,78,254,332,0.235,0.765],[1610612747,"Los
+        Angeles Lakers",2615.0,2023,1226,797,942,46,470,1106,122,135,257,0.475,0.525,56,207,263,0.213,0.787],[1610612763,"Memphis
+        Grizzlies",2637.0,2305,1416,889,915,14,355,836,130,125,255,0.51,0.49,103,255,358,0.288,0.712],[1610612748,"Miami
+        Heat",2777.0,2478,1422,1056,1070,28,176,408,115,131,246,0.467,0.533,71,368,440,0.161,0.836],[1610612749,"Milwaukee
+        Bucks",2554.0,1992,1205,787,935,10,341,782,104,112,216,0.481,0.519,85,273,358,0.237,0.763],[1610612750,"Minnesota
+        Timberwolves",2715.0,2404,1524,880,967,6,412,1018,132,123,255,0.518,0.482,116,233,349,0.332,0.668],[1610612740,"New
+        Orleans Pelicans",2795.0,2214,1256,958,1063,25,380,875,125,118,243,0.514,0.486,75,270,348,0.216,0.776],[1610612752,"New
+        York Knicks",2705.0,2217,1317,900,951,31,400,926,139,139,278,0.5,0.5,135,330,465,0.29,0.71],[1610612760,"Oklahoma
+        City Thunder",2739.0,2614,1541,1073,1224,28,462,1047,128,134,262,0.489,0.511,65,302,367,0.177,0.823],[1610612753,"Orlando
+        Magic",2617.0,2213,1408,805,934,16,400,907,121,130,251,0.482,0.518,98,298,396,0.247,0.753],[1610612755,"Philadelphia
+        76ers",2698.0,2241,1405,836,1133,14,380,900,143,157,300,0.477,0.523,93,182,278,0.335,0.655],[1610612756,"Phoenix
+        Suns",2725.0,1990,1182,808,1192,14,474,1138,143,145,288,0.497,0.503,57,226,284,0.201,0.796],[1610612757,"Portland
+        Trail Blazers",2707.0,2332,1467,865,884,25,342,796,132,100,232,0.569,0.431,109,242,352,0.31,0.688],[1610612758,"Sacramento
+        Kings",2770.0,2217,1384,833,923,19,470,1045,131,115,246,0.533,0.467,88,211,300,0.293,0.703],[1610612759,"San
+        Antonio Spurs",2659.0,2343,1524,819,857,16,458,1034,125,112,237,0.527,0.473,98,219,319,0.307,0.687],[1610612761,"Toronto
+        Raptors",2684.0,2226,1341,885,1146,15,379,847,125,122,247,0.506,0.494,100,261,361,0.277,0.723],[1610612762,"Utah
+        Jazz",2746.0,2265,1250,1015,926,18,531,1248,118,112,230,0.513,0.487,87,314,402,0.216,0.781],[1610612764,"Washington
+        Wizards",2615.0,2336,1464,872,949,24,463,1091,134,105,239,0.561,0.439,74,254,328,0.226,0.774]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '2198'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:36:40 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF6yLeEWcAQAAypXZgx70g/jeM7643iihUEQZt+H0gQBFRv3iImnhHk6ZofoXmQwyuM9sn7Uhpv/jt895Z3/PxsclGGPcRrYUT95/oevjVKp+uOr4Jpo6HhTkvyigASOcgTC/vwMWoFKKaAEyphsKPIk/vOv2DoC7hKS/rUCnwSARI2DwvpaK0EC6Kvv2EBFA7YlrLt3pkuSc34Q5BSwA+MsbDonu9jC9tYD3x5zf+CEeYZ5+As78pg==~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7124;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '1'
+      x-full-ttl:
+      - '1800.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '3'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '385.880'
+      x-varnish:
+      - 69017198 68043316
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,19 +1,19 @@
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
 from nba_api.stats.library.parameters import (
-    LastNGames,
-    LeagueID,
-    Month,
-    PerModeSimple,
-    Period,
-    Season,
-    SeasonTypeAllStar,
-    GameSegmentNullable,
-    LocationNullable,
-    OutcomeNullable,
-    SeasonSegmentNullable,
     ConferenceNullable,
     DivisionNullable,
+    GameSegmentNullable,
+    LastNGames,
+    LeagueID,
+    LocationNullable,
+    Month,
+    OutcomeNullable,
+    Period,
+    PerModeSimple,
+    Season,
+    SeasonSegmentNullable,
+    SeasonTypeAllStar,
 )
 
 
@@ -141,6 +141,7 @@ class TeamDashPtReb(Endpoint):
         season_segment_nullable=SeasonSegmentNullable.default,
         vs_conference_nullable=ConferenceNullable.default,
         vs_division_nullable=DivisionNullable.default,
+        ist_round_nullable=None,
         proxy=None,
         headers=None,
         timeout=30,
@@ -168,6 +169,7 @@ class TeamDashPtReb(Endpoint):
             "SeasonSegment": season_segment_nullable,
             "VsConference": vs_conference_nullable,
             "VsDivision": vs_division_nullable,
+            "ISTRound": ist_round_nullable,
         }
         if get_request:
             self.get_request()

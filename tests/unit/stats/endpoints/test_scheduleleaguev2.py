@@ -176,7 +176,7 @@ class TestScheduleLeagueV2Endpoint:
             assert isinstance(ScheduleLeagueV2.expected_data[dataset], list)
             assert len(ScheduleLeagueV2.expected_data[dataset]) > 0
 
-    @patch("nba_api.stats.library.http.NBAStatsHTTP.send_api_request")
+    @patch("nba_api.stats.endpoints.scheduleleaguev2.NBAStatsHTTP.send_api_request")
     def test_endpoint_with_mocked_request_2020(self, mock_request, json_fixture_2020):
         """Test endpoint processes 2020-21 response correctly."""
         # Mock the HTTP response
@@ -199,7 +199,7 @@ class TestScheduleLeagueV2Endpoint:
         assert endpoint.season_games is not None
         assert endpoint.season_weeks is not None
 
-    @patch("nba_api.stats.library.http.NBAStatsHTTP.send_api_request")
+    @patch("nba_api.stats.endpoints.scheduleleaguev2.NBAStatsHTTP.send_api_request")
     def test_endpoint_with_mocked_request_2015(self, mock_request, json_fixture_2015):
         """Test endpoint with 2015-16 response (empty weeks array)."""
         # Mock the HTTP response

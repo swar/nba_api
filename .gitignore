@@ -132,3 +132,9 @@ nba_api/library/debug/
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+# Git worktrees
+.worktrees/
+# Claude Code personal overrides
+.claude/settings.local.json
+CLAUDE.local.md

@@ -1,0 +1,93 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF/mIeEWcAQAApU7Zgx43Or3gIE/zxR+3/2o8YKfHzZ2n8UeM5tSw2NbaOU/sktcnLGFaEuJ0mJYMzPFprey4eW2ergKY55UTnycN6MjKQncJ3dqd4WKTTMAqAf5Ia9NxyDTE4AvN/F2rvGyQoK+wdWqD4mum/A7hw87kv4nlwXQFdZvLSI9J6uNOnPF+0idG2LlmBWglqSqAx1Fm3ZQRRbynMxUeDGArh0ZnRG0dF7rFUx1fANbulw==~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/leaderstiles?GameScope=Season&LeagueID=00&PlayerOrTeam=Team&PlayerScope=All+Players&Season=2025-26&SeasonType=Regular+Season&Stat=PTS
+  response:
+    body:
+      string: '{"resource":"leaderstiles","parameters":{"LeagueID":"00","Season":"2025-26","SeasonType":"Regular
+        Season","GameScope":"Season","PlayerScope":"All Players","PlayerOrTeam":"Team","Stat":"PTS"},"resultSet":[{"name":"LeadersTiles","headers":["RANK","TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","PTS"],"rowSet":[[1,1610612743,"DEN","Denver
+        Nuggets",120.9],[2,1610612748,"MIA","Miami Heat",120.0],[3,1610612739,"CLE","Cleveland
+        Cavaliers",119.8],[4,1610612750,"MIN","Minnesota Timberwolves",119.7],[5,1610612760,"OKC","Oklahoma
+        City Thunder",119.4]]},{"name":"AllTimeSeasonHigh","headers":["TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","SEASON_YEAR","PTS"],"rowSet":[[1610612743,"DEN","Nuggets","1981-82",126.475]]},{"name":"LastSeasonHigh","headers":["RANK","TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","PTS"],"rowSet":[[1,1610612739,"CLE","Cleveland
+        Cavaliers",121.9],[2,1610612763,"MEM","Memphis Grizzlies",121.7],[3,1610612743,"DEN","Denver
+        Nuggets",120.8],[4,1610612760,"OKC","Oklahoma City Thunder",120.5],[5,1610612737,"ATL","Atlanta
+        Hawks",118.2]]},{"name":"LowSeasonHigh","headers":["TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","SEASON_YEAR","PTS"],"rowSet":[[1610610025,"CHS","Stags","1947-48",75.833]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '523'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:36:23 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDFyKJeEWcAQAAvlHZgx5l74g6GmAQ42YU9TQFg6gAQPNRapNzuE8oPqm4n4kdgqOzUXOSEbyn78AQEEU0SX18uXSlh29BpN5DewGE4QDtvPCRoTMdqb0qhqvQfSChhoMwgSyr4Wh1SvJ2VM5u7luV4ikAlYkp1qnpZuN+FOT0Dv8Wq4z1Fp6P+76FLM17q+63uiXo6mwVSqDlDgMo31ydKt2oP2WtHdcWO6XOZ+BQ/YbDpqbrAsk9Bg==~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7141;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '1800.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '3'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '407.348'
+      x-varnish:
+      - 69285700 67992017
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

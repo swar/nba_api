@@ -1,0 +1,131 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF9OMeEWcAQAAy6/Zgx4AT3kTG45Yq184ahDs/WQIiJtOqcyQJkOd/3LVlbHdvhhhkANIKfBLDtJhe6+CNaRPdQjyRkTbZYCTSEpivtXVhdiUEGJmVXpmPjCPaKTc/wB4rhgmWMSMlEP/H4ye6FEcMoxtLop0P8LfrcWNcD7Q72pgEmn8TdodRADGUuslXEffcPoTUavTWeCj2TVkNcH4mbMB26r9Kj1s9rdSwTtV+IMwhyLAPwVTBzM=~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/playerawards?PlayerID=1628378
+  response:
+    body:
+      string: '{"resource":"playerawards","parameters":{"PlayerID":1628378},"resultSets":[{"name":"PlayerAwards","headers":["PERSON_ID","FIRST_NAME","LAST_NAME","TEAM","DESCRIPTION","ALL_NBA_TEAM_NUMBER","SEASON","MONTH","WEEK","CONFERENCE","TYPE","SUBTYPE1","SUBTYPE2","SUBTYPE3"],"rowSet":[[1628378,"Donovan","Mitchell","Cleveland
+        Cavaliers","All-NBA","2","2022-23",null,null,"East","Award","Kia Motors","KIANT",null],[1628378,"Donovan","Mitchell","Cleveland
+        Cavaliers","All-NBA","1","2024-25",null,null,"East","Award","Kia Motors","KIANT",null],[1628378,"Donovan","Mitchell","Utah
+        Jazz","All-Rookie Team","1","2017-18",null,null,"West","Award","Kia Motors","KIART",null],[1628378,"Donovan","Mitchell",null,"NBA
+        All-Star",null,"2019-20",null,null,null,"Award","All-Star",null,null],[1628378,"Donovan","Mitchell",null,"NBA
+        All-Star",null,"2020-21",null,null,null,"Award","All-Star",null,null],[1628378,"Donovan","Mitchell",null,"NBA
+        All-Star",null,"2021-22",null,null,null,"Award","All-Star",null,null],[1628378,"Donovan","Mitchell",null,"NBA
+        All-Star",null,"2022-23",null,null,null,"Award","All-Star",null,null],[1628378,"Donovan","Mitchell",null,"NBA
+        All-Star",null,"2023-24",null,null,null,"Award","All-Star",null,null],[1628378,"Donovan","Mitchell",null,"NBA
+        All-Star",null,"2024-25",null,null,null,"Award","All-Star",null,null],[1628378,"Donovan","Mitchell",null,"NBA
+        All-Star",null,"2025-26",null,null,null,"Award","All-Star",null,null],[1628378,"Donovan","Mitchell","Utah
+        Jazz","NBA Player of the Month",null,"2021-22","12/1/2021",null,"West","Award","Kia
+        Motors","KIPMO",null],[1628378,"Donovan","Mitchell","Cleveland Cavaliers","NBA
+        Player of the Month",null,"2023-24","1/1/2024",null,"East","Award","Kia Motors","KIPMO",null],[1628378,"Donovan","Mitchell","Cleveland
+        Cavaliers","NBA Player of the Month",null,"2024-25","2/1/2025",null,"East","Award","Kia
+        Motors","KIPMO",null],[1628378,"Donovan","Mitchell","Utah Jazz","NBA Player
+        of the Week",null,"2018-19",null,"2018-12-31T00:00:00","West","Award","Kia
+        Motors","KIPWK",null],[1628378,"Donovan","Mitchell","Utah Jazz","NBA Player
+        of the Week",null,"2018-19",null,"2019-01-07T00:00:00","West","Award","Kia
+        Motors","KIPWK",null],[1628378,"Donovan","Mitchell","Utah Jazz","NBA Player
+        of the Week",null,"2018-19",null,"2019-02-25T00:00:00","West","Award","Kia
+        Motors","KIPWK",null],[1628378,"Donovan","Mitchell","Utah Jazz","NBA Player
+        of the Week",null,"2021-22",null,"2021-11-29T00:00:00","West","Award","Kia
+        Motors","KIPWK",null],[1628378,"Donovan","Mitchell","Cleveland Cavaliers","NBA
+        Player of the Week",null,"2022-23",null,"2022-12-12T00:00:00","East","Award","Kia
+        Motors","KIPWK",null],[1628378,"Donovan","Mitchell","Cleveland Cavaliers","NBA
+        Player of the Week",null,"2022-23",null,"2023-01-02T00:00:00","East","Award","Kia
+        Motors","KIPWK",null],[1628378,"Donovan","Mitchell","Cleveland Cavaliers","NBA
+        Player of the Week",null,"2023-24",null,"2024-02-05T00:00:00","East","Award","Kia
+        Motors","KIPWK",null],[1628378,"Donovan","Mitchell","Cleveland Cavaliers","NBA
+        Player of the Week",null,"2024-25",null,"2024-10-28T00:00:00","East","Award","Kia
+        Motors","KIPWK",null],[1628378,"Donovan","Mitchell","Cleveland Cavaliers","NBA
+        Player of the Week",null,"2024-25",null,"2025-01-27T00:00:00","West","Award","Kia
+        Motors","KIPWK",null],[1628378,"Donovan","Mitchell","Cleveland Cavaliers","NBA
+        Player of the Week",null,"2025-26",null,"2025-11-17T00:00:00","East","Award","Kia
+        Motors","KIPWK",null],[1628378,"Donovan","Mitchell","Utah Jazz","NBA Rookie
+        of the Month",null,"2017-18","1/1/2018","1900-01-01T12:00:00","West","Award","Kia
+        Motors","KIRMO",null],[1628378,"Donovan","Mitchell","Utah Jazz","NBA Rookie
+        of the Month",null,"2017-18","12/1/2017","1900-01-01T12:00:00","West","Award","Kia
+        Motors","KIRMO",null],[1628378,"Donovan","Mitchell","Utah Jazz","NBA Rookie
+        of the Month",null,"2017-18","2/1/2018","1900-01-01T12:00:00","West","Award","Kia
+        Motors","KIRMO",null],[1628378,"Donovan","Mitchell","Utah Jazz","NBA Rookie
+        of the Month",null,"2017-18","3/1/2018","1900-01-01T12:00:00","West","Award","Kia
+        Motors","KIRMO",null]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '640'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:36:48 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAv8cbWicAQAAELPZgx6m/AXaGA2gddDYnLjprcdUouDkKVxRNGSlQ6Rq/88Nng4Ko3xfQpzRZ8ctMxHgXH3yQx3Y8o5iZVq3sjut6K/EBTX4STeuRaLm+bAj+qvz6AyygMwCLO+Nx0i99UZuIl5UaJEX4hC+TQj0koTjv9y1MdfN0AMsEEI5PLV1SvJe3HXspg0abo5r/UaRDdxOHt1ubw5pD0werMAq3avd1LrYuVw9wrdAlKUzmtM=~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7116;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-0
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - S3
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '1800.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '1'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '363.730'
+      x-varnish:
+      - 38490132 35192734
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

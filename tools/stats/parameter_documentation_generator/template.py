@@ -4,7 +4,7 @@ header_template = """
 
 regex_pattern_body_template = """
 #### Class `{python_class}`
-##### Patterns 
+##### Patterns
 {regex_patterns}
 """
 

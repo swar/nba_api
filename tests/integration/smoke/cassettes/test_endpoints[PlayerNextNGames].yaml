@@ -1,0 +1,118 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAoAebWicAQAAMebZgx7OJcaNpMR1BFhZyn9HsJJTAvoS74F0sgd+kyNjNz6KvYKWD8NmN/VG5Zk9RIXfo/O4/HUTfPFYefVhFl3Su+xf6jC6deJB1zSFgdD3NRklNDVLgz/Oad/tAIF10lU4x0C5XVqu053LA9s3NaC7cFCMn+0lT+lwMJi9FMO4lkDhzKBrVE1qCBM1JX/oxBh74aD+AEduixKCZCZmbhi0FDMR/WJSwfXjcyV4xzM=~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/playernextngames?LeagueID=00&NumberOfGames=2147483647&PlayerID=1628378&Season=2025-26&SeasonType=Regular+Season
+  response:
+    body:
+      string: '{"resource":"playernextngames","parameters":{"LeagueID":"00","Season":"2025-26","SeasonType":"Regular
+        Season","PlayerID":1628378,"NumberOfGames":2147483647},"resultSets":[{"name":"NextNGames","headers":["GAME_ID","GAME_DATE","HOME_TEAM_ID","VISITOR_TEAM_ID","HOME_TEAM_NAME","VISITOR_TEAM_NAME","HOME_TEAM_ABBREVIATION","VISITOR_TEAM_ABBREVIATION","HOME_TEAM_NICKNAME","VISITOR_TEAM_NICKNAME","GAME_TIME","HOME_WL","VISITOR_WL"],"rowSet":[["0022500817","FEB
+        22, 2026",1610612760,1610612739,"Oklahoma City","Cleveland","OKC","CLE","Thunder","Cavaliers","01:00
+        PM","43-14","36-21"],["0022500835","FEB 24, 2026",1610612739,1610612752,"Cleveland","New
+        York","CLE","NYK","Cavaliers","Knicks","07:30 PM","36-21","36-21"],["0022500846","FEB
+        25, 2026",1610612749,1610612739,"Milwaukee","Cleveland","MIL","CLE","Bucks","Cavaliers","08:00
+        PM","24-30","36-21"],["0022500858","FEB 27, 2026",1610612765,1610612739,"Detroit","Cleveland","DET","CLE","Pistons","Cavaliers","07:00
+        PM","42-13","36-21"],["0022500869","MAR 01, 2026",1610612751,1610612739,"Brooklyn","Cleveland","BKN","CLE","Nets","Cavaliers","03:30
+        PM","15-40","36-21"],["0022500884","MAR 03, 2026",1610612739,1610612765,"Cleveland","Detroit","CLE","DET","Cavaliers","Pistons","07:00
+        PM","36-21","42-13"],["0022500921","MAR 08, 2026",1610612739,1610612738,"Cleveland","Boston","CLE","BOS","Cavaliers","Celtics","01:00
+        PM","36-21","36-19"],["0022500931","MAR 09, 2026",1610612739,1610612755,"Cleveland","Philadelphia","CLE","PHI","Cavaliers","76ers","07:00
+        PM","36-21","30-26"],["0022500947","MAR 11, 2026",1610612753,1610612739,"Orlando","Cleveland","ORL","CLE","Magic","Cavaliers","07:30
+        PM","29-26","36-21"],["0022500965","MAR 13, 2026",1610612742,1610612739,"Dallas","Cleveland","DAL","CLE","Mavericks","Cavaliers","07:30
+        PM","19-36","36-21"],["0022500977","MAR 15, 2026",1610612739,1610612742,"Cleveland","Dallas","CLE","DAL","Cavaliers","Mavericks","03:30
+        PM","36-21","19-36"],["0022500995","MAR 17, 2026",1610612749,1610612739,"Milwaukee","Cleveland","MIL","CLE","Bucks","Cavaliers","08:00
+        PM","24-30","36-21"],["0022501011","MAR 19, 2026",1610612741,1610612739,"Chicago","Cleveland","CHI","CLE","Bulls","Cavaliers","08:00
+        PM","24-33","36-21"],["0022501025","MAR 21, 2026",1610612740,1610612739,"New
+        Orleans","Cleveland","NOP","CLE","Pelicans","Cavaliers","07:00 PM","16-42","36-21"],["0022501049","MAR
+        24, 2026",1610612739,1610612753,"Cleveland","Orlando","CLE","ORL","Cavaliers","Magic","08:00
+        PM","36-21","29-26"],["0022501055","MAR 25, 2026",1610612739,1610612748,"Cleveland","Miami","CLE","MIA","Cavaliers","Heat","07:30
+        PM","36-21","31-27"],["0022501068","MAR 27, 2026",1610612739,1610612748,"Cleveland","Miami","CLE","MIA","Cavaliers","Heat","07:30
+        PM","36-21","31-27"],["0022501096","MAR 30, 2026",1610612762,1610612739,"Utah","Cleveland","UTA","CLE","Jazz","Cavaliers","09:00
+        PM","18-39","36-21"],["0022501103","MAR 31, 2026",1610612747,1610612739,"L.A.
+        Lakers","Cleveland","LAL","CLE","Lakers","Cavaliers","10:30 PM","34-21","36-21"],["0022501117","APR
+        02, 2026",1610612744,1610612739,"Golden State","Cleveland","GSW","CLE","Warriors","Cavaliers","10:00
+        PM","29-27","36-21"],["0022501136","APR 05, 2026",1610612739,1610612754,"Cleveland","Indiana","CLE","IND","Cavaliers","Pacers","06:00
+        PM","36-21","15-42"],["0022501145","APR 06, 2026",1610612763,1610612739,"Memphis","Cleveland","MEM","CLE","Grizzlies","Cavaliers","08:00
+        PM","21-34","36-21"],["0022501158","APR 08, 2026",1610612739,1610612737,"Cleveland","Atlanta","CLE","ATL","Cavaliers","Hawks","07:00
+        PM","36-21","27-31"],["0022501173","APR 10, 2026",1610612737,1610612739,"Atlanta","Cleveland","ATL","CLE","Hawks","Cavaliers","07:00
+        PM","27-31","36-21"],["0022501187","APR 12, 2026",1610612739,1610612764,"Cleveland","Washington","CLE","WAS","Cavaliers","Wizards","06:00
+        PM","36-21","16-39"]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1124'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:37:02 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF4mOeEWcAQAAU+nZgx7kd7mWfA9XtVy7+4Hd4JXuv8MSuZ441grpYbD49i0JCioVsf53Ya0EBGAQqhWw4+Yx7EYaihOVpB5EhjXnv0nuuWrPYZCRW1tm3MYh8gmtVXo1GDlHhz0/dpCAQIJRp32eJxFZhyeZO3gxLlFx269ME/sY3qYJQF0E4hG7RDkBAADzyPutXQQNFs7JII/TyryyyFDRgQILzfnKrZoqtBOvpnaMvUhzyuRYE14=~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7102;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-0
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '1800.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '1'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '360.787'
+      x-varnish:
+      - 70097317 67185756
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

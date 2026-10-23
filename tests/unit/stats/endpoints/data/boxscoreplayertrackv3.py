@@ -10,7 +10,7 @@ BOXSCOREPLAYERTRACKV3_SAMPLE = {
     "meta": {
         "version": 1,
         "request": "http://nba.cloud/games/0022500148/boxscoreplayertrack?Format=json",
-        "time": "2025-11-05T17:45:29.4529Z"
+        "time": "2025-11-05T17:45:29.4529Z",
     },
     "boxScorePlayerTrack": {
         "gameId": "0022500148",
@@ -53,8 +53,8 @@ BOXSCOREPLAYERTRACKV3_SAMPLE = {
                         "fieldGoalPercentage": 0.545,
                         "defendedAtRimFieldGoalsMade": 1,
                         "defendedAtRimFieldGoalsAttempted": 1,
-                        "defendedAtRimFieldGoalPercentage": 1.0
-                    }
+                        "defendedAtRimFieldGoalPercentage": 1.0,
+                    },
                 }
             ],
             "statistics": {
@@ -77,8 +77,8 @@ BOXSCOREPLAYERTRACKV3_SAMPLE = {
                 "fieldGoalPercentage": 0.56,
                 "defendedAtRimFieldGoalsMade": 11,
                 "defendedAtRimFieldGoalsAttempted": 18,
-                "defendedAtRimFieldGoalPercentage": 0.611
-            }
+                "defendedAtRimFieldGoalPercentage": 0.611,
+            },
         },
         "awayTeam": {
             "teamId": 1610612740,
@@ -117,8 +117,8 @@ BOXSCOREPLAYERTRACKV3_SAMPLE = {
                         "fieldGoalPercentage": 0.538,
                         "defendedAtRimFieldGoalsMade": 3,
                         "defendedAtRimFieldGoalsAttempted": 3,
-                        "defendedAtRimFieldGoalPercentage": 1.0
-                    }
+                        "defendedAtRimFieldGoalPercentage": 1.0,
+                    },
                 }
             ],
             "statistics": {
@@ -141,8 +141,8 @@ BOXSCOREPLAYERTRACKV3_SAMPLE = {
                 "fieldGoalPercentage": 0.438,
                 "defendedAtRimFieldGoalsMade": 20,
                 "defendedAtRimFieldGoalsAttempted": 22,
-                "defendedAtRimFieldGoalPercentage": 0.909
-            }
-        }
-    }
+                "defendedAtRimFieldGoalPercentage": 0.909,
+            },
+        },
+    },
 }

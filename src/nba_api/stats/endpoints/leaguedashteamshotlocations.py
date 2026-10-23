@@ -1,30 +1,30 @@
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
 from nba_api.stats.library.parameters import (
-    DistanceRange,
-    LastNGames,
-    MeasureTypeSimple,
-    Month,
-    PaceAdjust,
-    PerModeDetailed,
-    Period,
-    PlusMinus,
-    Rank,
-    Season,
-    SeasonTypeAllStar,
     ConferenceNullable,
+    DistanceRange,
+    DivisionNullable,
     DivisionSimpleNullable,
     GameScopeSimpleNullable,
     GameSegmentNullable,
+    LastNGames,
     LeagueIDNullable,
     LocationNullable,
+    MeasureTypeSimple,
+    Month,
     OutcomeNullable,
+    PaceAdjust,
+    Period,
+    PerModeDetailed,
     PlayerExperienceNullable,
     PlayerPositionAbbreviationNullable,
+    PlusMinus,
+    Rank,
+    Season,
     SeasonSegmentNullable,
+    SeasonTypeAllStar,
     ShotClockRangeNullable,
     StarterBenchNullable,
-    DivisionNullable,
 )
 
 
@@ -116,6 +116,7 @@ class LeagueDashTeamShotLocations(Endpoint):
         team_id_nullable="",
         vs_conference_nullable=ConferenceNullable.default,
         vs_division_nullable=DivisionNullable.default,
+        ist_round_nullable=None,
         proxy=None,
         headers=None,
         timeout=30,
@@ -156,6 +157,7 @@ class LeagueDashTeamShotLocations(Endpoint):
             "TeamID": team_id_nullable,
             "VsConference": vs_conference_nullable,
             "VsDivision": vs_division_nullable,
+            "ISTRound": ist_round_nullable,
         }
         if get_request:
             self.get_request()

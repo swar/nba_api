@@ -6,14 +6,14 @@ including scores, standings, game status, leaders, and broadcast information.
 
 Example:
     >>> from nba_api.stats.endpoints import ScoreboardV3
-    >>> scoreboard = ScoreboardV3(game_date='2025-11-05')
+    >>> scoreboard = ScoreboardV3(game_date="2025-11-05")
     >>> games = scoreboard.game_header.get_data_frame()
 """
 
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.endpoints._expected_data.scoreboardv3 import _EXPECTED_DATA
 from nba_api.stats.library.http import NBAStatsHTTP
-from nba_api.stats.library.parameters import GameDate, LeagueID
+from nba_api.stats.library.parameters import LeagueID
 
 
 class ScoreboardV3(Endpoint):
@@ -45,19 +45,19 @@ class ScoreboardV3(Endpoint):
     Example:
         >>> from nba_api.stats.endpoints import ScoreboardV3
         >>> # Get scoreboard for a specific date
-        >>> scoreboard = ScoreboardV3(game_date='2025-11-05')
+        >>> scoreboard = ScoreboardV3(game_date="2025-11-05")
         >>>
         >>> # Get game headers as DataFrame
         >>> games_df = scoreboard.game_header.get_data_frame()
-        >>> print(games_df[['gameId', 'gameStatusText', 'homeTeam', 'awayTeam']])
+        >>> print(games_df[["gameId", "gameStatusText", "homeTeam", "awayTeam"]])
         >>>
         >>> # Get line scores
         >>> scores_df = scoreboard.line_score.get_data_frame()
-        >>> print(scores_df[['teamCity', 'teamName', 'wins', 'losses', 'score']])
+        >>> print(scores_df[["teamCity", "teamName", "wins", "losses", "score"]])
         >>>
         >>> # Get game leaders
         >>> leaders_df = scoreboard.game_leaders.get_data_frame()
-        >>> print(leaders_df[['name', 'leaderType', 'points', 'rebounds', 'assists']])
+        >>> print(leaders_df[["name", "leaderType", "points", "rebounds", "assists"]])
     """
 
     endpoint = "scoreboardv3"

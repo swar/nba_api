@@ -16,6 +16,70 @@
 - `Contributor` (notes on updates to the project)
 
 # Version History
+## Unreleased
+
+## v1.11.6
+Date: 2026-10-22
+
+### Fixed
+* **Live Endpoints** - `ScoreBoard`, `BoxScore`, `PlayByPlay` and `Odds` work again with default settings. cdn.nba.com had started rejecting the default request headers with `403 Access Denied`, which surfaced as a `JSONDecodeError`; the live client now sends a current Firefox `User-Agent` and a `Referer: https://www.nba.com/` header (PR [#716](https://github.com/swar/nba_api/pull/716))
+
+### Infrastructure
+* **CI** - Removed the CircleCI config and the Snyk dependency scan; GitHub Actions now runs lint, tests and releases (PR [#714](https://github.com/swar/nba_api/pull/714), PR [#718](https://github.com/swar/nba_api/pull/718))
+
+## v1.11.5
+Date: 2026-10-21
+
+### Changed
+* **Static WNBA Teams Data** - Added the Portland Fire and Toronto Tempo expansion teams, so `get_wnba_teams()` and the `find_wnba_team*` helpers return them (PR [#693](https://github.com/swar/nba_api/pull/693))
+* **Static Players Data** - Refreshed `players` and `wnba_players` from stats.nba.com: added the 2025 draft class and newly listed players, updated active-roster flags for the current season, applied upstream name corrections, and dropped inactive entries the API no longer returns (PR [#687](https://github.com/swar/nba_api/pull/687), PR [#698](https://github.com/swar/nba_api/pull/698))
+
+### Fixed
+* **V3 Normalized Output** - Fixed `get_normalized_dict()` / `get_normalized_json()` returning empty payloads for V3 endpoints by persisting endpoint context and normalizing parser-generated data sets (PR [#606](https://github.com/swar/nba_api/pull/606), fixes #602)
+* **DunkScoreLeaders Parsing** - Fixed response parsing by adding a dedicated parser, registering it in parser dispatch, and aligning expected data keys with the endpoint's nested V3 camelCase payload fields (PR [#598](https://github.com/swar/nba_api/pull/598))
+* **ScheduleLeagueV2** - League schedules now parse correctly regardless of the order of keys in the NBA.com response (PR [#692](https://github.com/swar/nba_api/pull/692))
+* **Static Teams Data** - Added the Boston Celtics' 2024 championship, so `find_teams_by_championship_year(2024)` returns them (PR [#695](https://github.com/swar/nba_api/pull/695))
+* **Win-Loss Example Notebook** - Replaced the `DataFrame.append` call removed in pandas 2 in the Home Team Win-Loss data-prep notebook (PR [#684](https://github.com/swar/nba_api/pull/684))
+
+### Infrastructure
+* **GitHub Actions CI** - Added GitHub Actions running lint plus unit and VCR tests on Python 3.10–3.13 alongside CircleCI, with a single `CI passed` status check, Conventional Commit PR-title validation, network-blocked test runs, and a lockfile sync check (PR [#704](https://github.com/swar/nba_api/pull/704), PR [#706](https://github.com/swar/nba_api/pull/706))
+* **Release Pipeline** - Releases are now published to PyPI from a GitHub Actions workflow using Trusted Publishing, and `scripts/gen-release.sh` was rewritten to prepare release PRs safely, including agent-written notes and a `--bump` override (PR [#705](https://github.com/swar/nba_api/pull/705), PR [#710](https://github.com/swar/nba_api/pull/710), PR [#711](https://github.com/swar/nba_api/pull/711))
+* **Static Teams Generator** - Added `scripts/static_teams_update/generate_static_teams.py` to refresh championship years and new teams in the static data, with a `--check` mode (PR [#699](https://github.com/swar/nba_api/pull/699))
+* **Integration Season Pinning** - Cassette-backed integration tests now pin season defaults to the recorded season, so they no longer break when the season rolls over each October (PR [#700](https://github.com/swar/nba_api/pull/700))
+* **Live Endpoint Unit Tests** - Mocked the HTTP layer in the live boxscore/odds `get_request_url` tests, which were making real network calls (PR [#686](https://github.com/swar/nba_api/pull/686))
+* **Ruff Tooling** - Replaced `flake8`, `isort`, and `pylint` with `ruff` for linting and formatting; added `pre-commit` hooks to auto-fix on commit (PR [#639](https://github.com/swar/nba_api/pull/639))
+* **Pytest Recording Stack** - Added `pytest-recording` (and `vcrpy`) to dev dependencies; introduced pytest markers for integration test modes (`live`, `vcr`, `canary`, `deprecated_endpoint`) (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **Integration Conftest** - Added `tests/integration/conftest.py` with shared request pacing, cassette directory configuration, and automatic skipping for deprecated endpoint smoke cases (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **VCR Query Matcher** - Updated query matching to ignore dynamic `GameDate` params so cassette playback remains stable in CI (PR [#644](https://github.com/swar/nba_api/pull/644))
+* **VCR Smoke and Scenario Coverage** - Added VCR-backed smoke coverage for ~130 endpoints and scenario/regression coverage for `LeagueDashTeamStats`, `LeagueGameFinder`, `PlayerDashPtShotDefend`, `ScoreboardV3`, `TeamDashLineups`, `TeamGameLog`, and `TeamGameLogs`, with shared validation helpers (PR [#640](https://github.com/swar/nba_api/pull/640))
+* **Test Layout Refactor** - Reorganized integration tests into `tests/integration/smoke/` and `tests/integration/scenarios/`, replaced `deferred_endpoints.py` with `EndpointSpec` (auto-parameter resolution, per-endpoint `skip` / `deprecated` metadata), and reorganized unit tests into package-based folders (PR [#640](https://github.com/swar/nba_api/pull/640), PR [#643](https://github.com/swar/nba_api/pull/643))
+* **Additional Test Coverage** - Added unit tests for `EndpointSpec`, legacy debug/proxy configuration, and `DunkScoreLeaders` / `BoxScoreTraditionalV3` parsing and normalization (PR [#640](https://github.com/swar/nba_api/pull/640), PR [#645](https://github.com/swar/nba_api/pull/645), PR [#598](https://github.com/swar/nba_api/pull/598), PR [#606](https://github.com/swar/nba_api/pull/606))
+* **Integration Test Fixes** - Updated pytest `skip` / `fail` calls to the `reason=` API and temporarily skipped `test_stats_library_playbyplayregex.py` until PlayByPlayV3 normalization is wired up (PR [#640](https://github.com/swar/nba_api/pull/640))
+
+### Contributor
+* **Documentation Overhaul** - Updated the README, contributing guide, and debug/HTTP/static docs to match the current codebase; regenerated the table of contents (adding 21 missing endpoints and the live endpoints); and added docs for `DunkScoreLeaders`, `GravityLeaders`, `ScoreboardV3`, and `VideoEventsAsset` (PR [#702](https://github.com/swar/nba_api/pull/702))
+* **AI Agent Guide** - Added `AGENTS.md` / `CLAUDE.md` and shared agent settings for AI coding tools (PR [#701](https://github.com/swar/nba_api/pull/701))
+
+## v1.11.4
+Date: 2026-02-20
+
+### Added
+* **GravityLeaders** - New endpoint added (PR [#626](https://github.com/swar/nba_api/pull/626))
+* **`__version__` attribute** - Package now exposes a `__version__` attribute using `importlib.metadata` with `pyproject.toml` as the single source of truth (PR [#612](https://github.com/swar/nba_api/pull/612))
+
+### Fixed
+* **HTTP Headers** - Updated request headers to fix broken NBA.com API requests caused by an outdated user agent (PR [#636](https://github.com/swar/nba_api/pull/636))
+* **ContextMeasureSimple** - Removed deprecated `PF` (Personal Fouls) parameter; NBA.com API no longer returns data for this context measure on the `shotchartdetail` endpoint (PR [#608](https://github.com/swar/nba_api/pull/608), fixes #600)
+
+### Deprecated
+* **PlayByPlayV2** - Added deprecation warning; NBA.com API returns empty JSON for this endpoint. Use **PlayByPlayV3** instead (PR [#613](https://github.com/swar/nba_api/pull/613), fixes #591)
+* **ScoreboardV2** - Added deprecation warning; returns empty line scores for 2025-26 season games. Use **ScoreboardV3** instead, which is 100% backward compatible (PR [#609](https://github.com/swar/nba_api/pull/609), fixes #596)
+
+### Contributor
+* Added type hints and docstrings to the `Endpoint` base class and `PlayerCareerStats` endpoint for improved code clarity and IDE support (PR [#628](https://github.com/swar/nba_api/pull/628))
+* Added `CODEOWNERS` file (PR [#627](https://github.com/swar/nba_api/pull/627))
+* Corrected typos in contributing guide and README (PR [#604](https://github.com/swar/nba_api/pull/604))
+
 ## v1.11.3
 Date: 2025-11-13
 

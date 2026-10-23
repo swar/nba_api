@@ -1,0 +1,88 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVApoVbWicAQAAVIvYgx5hf+M5VCsjrrhVel7p6VDLVFaMhDCfabczbSKNdSXrAsCp9oGgsLCjNMp53ZU1ChM4bLvThtv797+jZjE2dyQz2AOBQA8OkVvwuk/JV79SRJ2xxepWfqKScviiZG6cBgtbAsHP5AMTlbkerBZHfRZ81XJgkjD3rh6LkrvKlSZ9xhSLpt3zO4d2NvAEeQxFxKPzBGPnjPjOgK6iF9EKcJ6TuyPccQlLslLVsA==~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/teamdashlineups?DateFrom=&DateTo=&GameID=&GameSegment=&GroupQuantity=3&LastNGames=0&LeagueID=00&Location=&MeasureType=Advanced&Month=0&OpponentTeamID=0&Outcome=&PORound=&PaceAdjust=N&PerMode=Totals&Period=0&PlusMinus=N&Rank=N&Season=2023-24&SeasonSegment=&SeasonType=Playoffs&ShotClockRange=&TeamID=1610612744&VsConference=&VsDivision=
+  response:
+    body:
+      string: '{"resource":"teamdashlineups","parameters":{"MeasureType":"Advanced","PerMode":"Totals","PlusMinus":"N","PaceAdjust":"N","Rank":"N","LeagueID":"00","Season":"2023-24","SeasonType":"Playoffs","PORound":0,"TeamID":1610612744,"Outcome":null,"Location":null,"Month":0,"SeasonSegment":null,"DateFrom":null,"DateTo":null,"OpponentTeamID":0,"VsConference":null,"VsDivision":null,"GameSegment":null,"Period":0,"ShotClockRange":null,"LastNGames":0,"ISTRound":null,"GroupQuantity":3,"GameID":null},"resultSets":[{"name":"Overall","headers":["GROUP_SET","GROUP_VALUE","TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","GP","W","L","W_PCT","MIN","E_OFF_RATING","OFF_RATING","E_DEF_RATING","DEF_RATING","E_NET_RATING","NET_RATING","AST_PCT","AST_TO","AST_RATIO","OREB_PCT","DREB_PCT","REB_PCT","TM_TOV_PCT","EFG_PCT","TS_PCT","E_PACE","PACE","PACE_PER40","POSS","PIE","GP_RANK","W_RANK","L_RANK","W_PCT_RANK","MIN_RANK","OFF_RATING_RANK","DEF_RATING_RANK","NET_RATING_RANK","AST_PCT_RANK","AST_TO_RANK","AST_RATIO_RANK","OREB_PCT_RANK","DREB_PCT_RANK","REB_PCT_RANK","TM_TOV_PCT_RANK","EFG_PCT_RANK","TS_PCT_RANK","PACE_RANK","PIE_RANK"],"rowSet":[]},{"name":"Lineups","headers":["GROUP_SET","GROUP_ID","GROUP_NAME","GP","W","L","W_PCT","MIN","E_OFF_RATING","OFF_RATING","E_DEF_RATING","DEF_RATING","E_NET_RATING","NET_RATING","AST_PCT","AST_TO","AST_RATIO","OREB_PCT","DREB_PCT","REB_PCT","TM_TOV_PCT","EFG_PCT","TS_PCT","E_PACE","PACE","PACE_PER40","POSS","PIE","GP_RANK","W_RANK","L_RANK","W_PCT_RANK","MIN_RANK","OFF_RATING_RANK","DEF_RATING_RANK","NET_RATING_RANK","AST_PCT_RANK","AST_TO_RANK","AST_RATIO_RANK","OREB_PCT_RANK","DREB_PCT_RANK","REB_PCT_RANK","TM_TOV_PCT_RANK","EFG_PCT_RANK","TS_PCT_RANK","PACE_RANK","PIE_RANK","SUM_TIME_PLAYED"],"rowSet":[]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '587'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:35:33 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF1uDeEWcAQAAAo7Ygx7VP2+MoNsCJVCnIG1VUk27hnAIiWOTHsY0vgliWhYEJjoH4H6VXBh73CW6y01OQAE5fBWwGeCqESa9h9hF2PUiuDzJV69I0Eya99F04a7vpQrGGwKpoKP8wxBRxELolZ8LiC8LTNrhlbZBBpSjLN9nsy1gmMV/yZ5pZcDze8ubLC1tXEEkLy7Jrqqg6vFQP1v543LABcQ7sC0tbbZymCgnaN0AudLIQ+7p3w==~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7191;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      ttl:
+      - '31536000'
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '3600.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '3'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '2215.326'
+      x-varnish:
+      - 37962505 37207039
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

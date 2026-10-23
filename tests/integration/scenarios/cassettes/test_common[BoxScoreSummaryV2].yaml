@@ -1,0 +1,89 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAkoXbWicAQAA0tXYgx5WTgP+A/oqb+qMTQWsTRq/Us4MxFhOHgoa13RuyxmOXJJmwD13ve4pSgQIdurI2BNwRqIl795zWXwZ1Qty5Tt1mqsQGiABbjlbfzaW9qrtVPcQbvRhQFAuSp3UQ/tTb9TCJt4niPSLqrkQW1yXGRhi888VIfRsBAHPcPEc1YyC4SOlheXt+Dm+lWOArUsXBCqamEYPAyB6j5oK9OFPstURwVuMbKqhDtZfZg==~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/boxscoresummaryv2?GameID=0022300001
+  response:
+    body:
+      string: '{"resource":"boxscoresummary","parameters":{"GameID":"0022300001"},"resultSets":[{"name":"GameSummary","headers":["GAME_DATE_EST","GAME_SEQUENCE","GAME_ID","GAME_STATUS_ID","GAME_STATUS_TEXT","GAMECODE","HOME_TEAM_ID","VISITOR_TEAM_ID","SEASON","LIVE_PERIOD","LIVE_PC_TIME","NATL_TV_BROADCASTER_ABBREVIATION","LIVE_PERIOD_TIME_BCAST","WH_STATUS"],"rowSet":[["2023-11-03T00:00:00",1,"0022300001",3,"Final","20231103/CLEIND",1610612754,1610612739,"2023",4,"     ",null,null,1]]},{"name":"OtherStats","headers":["LEAGUE_ID","TEAM_ID","TEAM_ABBREVIATION","TEAM_CITY","PTS_PAINT","PTS_2ND_CHANCE","PTS_FB","LARGEST_LEAD","LEAD_CHANGES","TIMES_TIED","TEAM_TURNOVERS","TOTAL_TURNOVERS","TEAM_REBOUNDS","PTS_OFF_TO"],"rowSet":[["00",1610612739,"CLE","Cleveland",62,6,24,4,10,4,0,13,3,26],["00",1610612754,"IND","Indiana",52,20,17,18,10,4,1,19,16,15]]},{"name":"Officials","headers":["OFFICIAL_ID","FIRST_NAME","LAST_NAME","JERSEY_NUM"],"rowSet":[[101283,"Brian","Forte","45  "],[201638,"Brent","Barnaky","36  "],[1627529,"Suyash","Mehta","82  "]]},{"name":"InactivePlayers","headers":["PLAYER_ID","FIRST_NAME","LAST_NAME","JERSEY_NUM","TEAM_ID","TEAM_CITY","TEAM_NAME","TEAM_ABBREVIATION"],"rowSet":[[201937,"Ricky","Rubio","13  ",1610612739,"Cleveland","Cavaliers","CLE"],[1629660,"Ty","Jerome","2   ",1610612739,"Cleveland","Cavaliers","CLE"],[1630600,"Isaiah","Mobley","15  ",1610612739,"Cleveland","Cavaliers","CLE"],[1641734,"Emoni","Bates","21  ",1610612739,"Cleveland","Cavaliers","CLE"],[1631112,"Kendall","Brown","10  ",1610612754,"Indiana","Pacers","IND"],[1631131,"Oscar","Tshiebwe","44  ",1610612754,"Indiana","Pacers","IND"],[1631209,"Isaiah","Wong","21  ",1610612754,"Indiana","Pacers","IND"]]},{"name":"GameInfo","headers":["GAME_DATE","ATTENDANCE","GAME_TIME"],"rowSet":[["Friday,
+        November 03, 2023",16744,"2:20"]]},{"name":"LineScore","headers":["GAME_DATE_EST","GAME_SEQUENCE","GAME_ID","TEAM_ID","TEAM_ABBREVIATION","TEAM_CITY_NAME","TEAM_NICKNAME","TEAM_WINS_LOSSES","PTS_QTR1","PTS_QTR2","PTS_QTR3","PTS_QTR4","PTS_OT1","PTS_OT2","PTS_OT3","PTS_OT4","PTS_OT5","PTS_OT6","PTS_OT7","PTS_OT8","PTS_OT9","PTS_OT10","PTS"],"rowSet":[["2023-11-03T00:00:00",1,"0022300001",1610612739,"CLE","Cleveland","Cavaliers","2-4",26,27,34,29,0,0,0,0,0,0,0,0,0,0,116],["2023-11-03T00:00:00",1,"0022300001",1610612754,"IND","Indiana","Pacers","3-2",36,34,18,33,0,0,0,0,0,0,0,0,0,0,121]]},{"name":"LastMeeting","headers":["GAME_ID","LAST_GAME_ID","LAST_GAME_DATE_EST","LAST_GAME_HOME_TEAM_ID","LAST_GAME_HOME_TEAM_CITY","LAST_GAME_HOME_TEAM_NAME","LAST_GAME_HOME_TEAM_ABBREVIATION","LAST_GAME_HOME_TEAM_POINTS","LAST_GAME_VISITOR_TEAM_ID","LAST_GAME_VISITOR_TEAM_CITY","LAST_GAME_VISITOR_TEAM_NAME","LAST_GAME_VISITOR_TEAM_CITY1","LAST_GAME_VISITOR_TEAM_POINTS"],"rowSet":[["0022300001","0022300091","2023-10-28T00:00:00",1610612754,"Indiana","Pacers","IND",125,1610612739,"Cleveland","Cavaliers","CLE",113]]},{"name":"SeasonSeries","headers":["GAME_ID","HOME_TEAM_ID","VISITOR_TEAM_ID","GAME_DATE_EST","HOME_TEAM_WINS","HOME_TEAM_LOSSES","SERIES_LEADER"],"rowSet":[["0022300001",1610612754,1610612739,"2023-11-03T00:00:00",2,2,"Tied"]]},{"name":"AvailableVideo","headers":["GAME_ID","VIDEO_AVAILABLE_FLAG","PT_AVAILABLE","PT_XYZ_AVAILABLE","WH_STATUS","HUSTLE_STATUS","HISTORICAL_STATUS"],"rowSet":[["0022300001",1,0,0,1,1,0]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1180'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:35:52 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF5qFeEWcAQAAXdjYgx5Y4viR557waD0Tw5ND7dmSpGDSh8tlHsEt2ygtZ/cViwdqGwajVPMK15pyInY06exnFB9lJc3kgDct0k1eJWssYUY+u2aiQZmePmwmJ3R/QmWByUJ8wthb0Yg/MI4Hwhm34WOebFl6XdsD3l6akeGeXiFz4c0Oibp06Di9NOWaW89MOEWdr6Ygxp7Nw3D5JDKAXC8vteJTi0WRkDPeRdZ4+G5IzJWRVrJbDQ==~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7172;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-0
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - S3
+      x-envoy-upstream-service-time:
+      - '1'
+      x-full-ttl:
+      - '300.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '2'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '-1103.325'
+      x-varnish:
+      - 69914992 67803541
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

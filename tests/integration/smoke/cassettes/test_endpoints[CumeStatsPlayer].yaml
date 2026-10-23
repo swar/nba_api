@@ -1,0 +1,88 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAnEYbWicAQAATxTZgx7eek9Au/659MhLZwMz8c888LvxoCKOqi7HhKhGDdgK9WrZie8W+Dk0F4EXc0j92Pjoo9TX6YZmyyb4auacwHOohhVrZEG9200R/B+KJbpAop3kV/i6ToMx9MXtFbEveWz10DEK9gvgjQ/hxWV6TOHItfw/CChO515paujT2Cg7irKcYxqXEjzCpEn6XxltOxEWr3P/9qv4FiorxIUmpWUXZyZ48y444IxGaQ==~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/cumestatsplayer?GameIDs=0022200552&LeagueID=00&PlayerID=1628378&Season=2025-26&SeasonType=Regular+Season
+  response:
+    body:
+      string: '{"resource":"cumestatsplayer","parameters":{"LeagueID":"00","Season":"2025-26","SeasonType":"Regular
+        Season","PlayerID":1628378,"GameIDs":"0022200552"},"resultSets":[{"name":"GameByGameStats","headers":["DATE_EST","VISITOR_TEAM","HOME_TEAM","GP","GS","ACTUAL_MINUTES","ACTUAL_SECONDS","FG","FGA","FG_PCT","FG3","FG3A","FG3_PCT","FT","FTA","FT_PCT","OFF_REB","DEF_REB","TOT_REB","AVG_TOT_REB","AST","PF","DQ","STL","TURNOVERS","BLK","PTS","AVG_PTS"],"rowSet":[["01/02/2023","Bulls","Cavaliers",1,1,49,48,22,34,0.647,7,15,0.467,20,25,0.8,3,5,8,8.0,11,3,0,0,4,1,71,71.0]]},{"name":"TotalPlayerStats","headers":["DISPLAY_FI_LAST","PERSON_ID","JERSEY_NUM","GP","GS","ACTUAL_MINUTES","ACTUAL_SECONDS","FG","FGA","FG_PCT","FG3","FG3A","FG3_PCT","FT","FTA","FT_PCT","OFF_REB","DEF_REB","TOT_REB","AST","PF","DQ","STL","TURNOVERS","BLK","PTS","MAX_ACTUAL_MINUTES","MAX_ACTUAL_SECONDS","MAX_REB","MAX_AST","MAX_STL","MAX_TURNOVERS","MAX_BLK","MAX_PTS","AVG_ACTUAL_MINUTES","AVG_ACTUAL_SECONDS","AVG_TOT_REB","AVG_AST","AVG_STL","AVG_TURNOVERS","AVG_BLK","AVG_PTS","PER_MIN_TOT_REB","PER_MIN_AST","PER_MIN_STL","PER_MIN_TURNOVERS","PER_MIN_BLK","PER_MIN_PTS"],"rowSet":[["D.
+        Mitchell",1628378,"45",1,1,49,48,22,34,0.647,7,15,0.467,20,25,0.8,3,5,8,11,3,0,0,4,1,71,49,48,8,11,0,4,1,71,49,48.0,8.0,11.0,0.0,4.0,1.0,71.0,7.7,10.6,0.0,3.9,0.96,68.4]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '569'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:36:08 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF1+HeEWcAQAAxxbZgx4RrBfG3mLYsMHvQ/sj+SOa6Cn5e+fEYg+mtcACy6n768vdzDLtTjBukOTVUgMNYPNsLClAASWARywRZlqWvGMHeelm+WUEpFoV5rxdnjBpQOK1Rv1n3MaI0eH9FSV9YbuaGB+MVS8HYNkwLFno8sDjZE43qm8+fxfGsH26JeBjgdZunnwCt72az6AlJEzgyxF9uSTnsePMEgg5YKJiWLc9CqPH4PQbDWHZVg==~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7156;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '1'
+      x-full-ttl:
+      - '120.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '3'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '-1274.124'
+      x-varnish:
+      - 37994356 36887952
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

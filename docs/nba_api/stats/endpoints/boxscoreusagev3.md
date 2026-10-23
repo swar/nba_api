@@ -20,12 +20,12 @@
 ## Data Sets
 #### PlayerStats `player_stats`
 ```text
-['gameId', 'teamId', 'teamCity', 'teamName', 'teamTricode', 'teamSlug', 'personId', 'firstName', 'familyName', 'nameI', 'playerSlug', 'position', 'comment', 'jerseyNum', 'minutes', 'usagePercentage', 'percentageFieldGoalsMade', 'percentageFieldGoalsAttempted', 'percentageThreePointersMade', 'percentageThreePointersAttempted', 'percentageFreeThrowsMade', 'percentageFreeThrowsAttempted', 'percentageReboundsOffensive', 'percentageReboundsDefensive', 'percentageReboundsTotal', 'percentageAssists', 'percentageTurnovers', 'percentageSteals', 'percentageBlocks', 'percentageBlocksAllowed', 'percentagePersonalFouls', 'percentagePersonalFoulsDrawn', 'percentagePoints']
+['gameId', 'teamId', 'teamCity', 'teamName', 'teamTricode', 'teamSlug', 'personId', 'firstName', 'familyName', 'nameI', 'playerSlug', 'position', 'comment', 'jerseyNum', 'minutes', 'usagePercentage', 'percentageFieldGoalsMade', 'percentageFieldGoalsAttempted', 'percentageThreePointersMade', 'percentageThreePointersAttempted', 'percentageFreeThrowsMade', 'percentageFreeThrowsAttempted', 'percentageReboundsOffensive', 'percentageReboundsDefensive', 'percentageReboundsTotal', 'percentageAssists', 'percentageTurnovers', 'percentageSteals', 'percentageBlocks', 'percentageBlocksAllowed', 'percentagePersonalFouls', 'percentagePersonalFoulsDrawn', 'percentagePoints', 'homeTeamId', 'awayTeamId']
 ```
 
 #### TeamStats `team_stats`
 ```text
-['gameId', 'teamId', 'teamCity', 'teamName', 'teamTricode', 'teamSlug', 'minutes', 'usagePercentage', 'percentageFieldGoalsMade', 'percentageFieldGoalsAttempted', 'percentageThreePointersMade', 'percentageThreePointersAttempted', 'percentageFreeThrowsMade', 'percentageFreeThrowsAttempted', 'percentageReboundsOffensive', 'percentageReboundsDefensive', 'percentageReboundsTotal', 'percentageAssists', 'percentageTurnovers', 'percentageSteals', 'percentageBlocks', 'percentageBlocksAllowed', 'percentagePersonalFouls', 'percentagePersonalFoulsDrawn', 'percentagePoints']
+['gameId', 'teamId', 'teamCity', 'teamName', 'teamTricode', 'teamSlug', 'minutes', 'usagePercentage', 'percentageFieldGoalsMade', 'percentageFieldGoalsAttempted', 'percentageThreePointersMade', 'percentageThreePointersAttempted', 'percentageFreeThrowsMade', 'percentageFreeThrowsAttempted', 'percentageReboundsOffensive', 'percentageReboundsDefensive', 'percentageReboundsTotal', 'percentageAssists', 'percentageTurnovers', 'percentageSteals', 'percentageBlocks', 'percentageBlocksAllowed', 'percentagePersonalFouls', 'percentagePersonalFoulsDrawn', 'percentagePoints', 'homeTeamId', 'awayTeamId']
 ```
 
 
@@ -66,7 +66,9 @@
             "percentageBlocksAllowed",
             "percentagePersonalFouls",
             "percentagePersonalFoulsDrawn",
-            "percentagePoints"
+            "percentagePoints", 
+            "homeTeamId", 
+            "awayTeamId"
         ],
         "TeamStats": [
             "gameId", 
@@ -93,7 +95,9 @@
             "percentageBlocksAllowed",
             "percentagePersonalFouls",
             "percentagePersonalFoulsDrawn",
-            "percentagePoints"
+            "percentagePoints", 
+            "homeTeamId", 
+            "awayTeamId"
         ]
     },
     "endpoint": "BoxScoreUsageV3",

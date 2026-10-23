@@ -1,11 +1,17 @@
 import os
 
-from .template import argument_template, no_default_argument_template
-from .template import parameter_template, data_set_template, imports_template
-from .template import file_template
-from tools.stats.endpoint_analysis.analysis import load_endpoint_file
 from tools.library.functions import get_python_variable_name
-from tools.stats.library.mapping import parameter_variations, parameter_map
+from tools.stats.endpoint_analysis.analysis import load_endpoint_file
+from tools.stats.library.mapping import parameter_map, parameter_variations
+
+from .template import (
+    argument_template,
+    data_set_template,
+    file_template,
+    imports_template,
+    no_default_argument_template,
+    parameter_template,
+)
 
 
 def get_endpoint_contents(endpoint, endpoint_analysis):
@@ -116,10 +122,9 @@ def get_endpoint_contents(endpoint, endpoint_analysis):
 def generate_endpoint_file(endpoint, file_contents, directory):
     if not os.path.exists(directory):
         os.makedirs(directory)
-    file_name = "{endpoint_lowercase}.py".format(endpoint_lowercase=endpoint.lower())
-    f = open(os.path.join(os.getcwd(), directory, file_name), "w")
-    f.write(file_contents)
-    f.close()
+    file_name = f"{endpoint.lower()}.py"
+    with open(os.path.join(os.getcwd(), directory, file_name), "w") as f:
+        f.write(file_contents)
 
 
 def generate_endpoint_files(directory="endpoint_files"):

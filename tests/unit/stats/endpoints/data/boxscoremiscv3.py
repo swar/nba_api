@@ -10,7 +10,7 @@ BOXSCOREMISCV3_SAMPLE = {
     "meta": {
         "version": 1,
         "request": "http://nba.cloud/games/0022500148/boxscoremisc?Format=json",
-        "time": "2025-11-05T20:02:52.252Z"
+        "time": "2025-11-05T20:02:52.252Z",
     },
     "boxScoreMisc": {
         "gameId": "0022500148",
@@ -45,8 +45,8 @@ BOXSCOREMISCV3_SAMPLE = {
                         "blocks": 0,
                         "blocksAgainst": 2,
                         "foulsPersonal": 1,
-                        "foulsDrawn": 8
-                    }
+                        "foulsDrawn": 8,
+                    },
                 }
             ],
             "statistics": {
@@ -62,8 +62,8 @@ BOXSCOREMISCV3_SAMPLE = {
                 "blocks": 5,
                 "blocksAgainst": 3,
                 "foulsPersonal": 22,
-                "foulsDrawn": 22
-            }
+                "foulsDrawn": 22,
+            },
         },
         "awayTeam": {
             "teamId": 1610612740,
@@ -94,8 +94,8 @@ BOXSCOREMISCV3_SAMPLE = {
                         "blocks": 0,
                         "blocksAgainst": 1,
                         "foulsPersonal": 3,
-                        "foulsDrawn": 9
-                    }
+                        "foulsDrawn": 9,
+                    },
                 }
             ],
             "statistics": {
@@ -111,8 +111,8 @@ BOXSCOREMISCV3_SAMPLE = {
                 "blocks": 3,
                 "blocksAgainst": 5,
                 "foulsPersonal": 22,
-                "foulsDrawn": 22
-            }
-        }
-    }
+                "foulsDrawn": 22,
+            },
+        },
+    },
 }

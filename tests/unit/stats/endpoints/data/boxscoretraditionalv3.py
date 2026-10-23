@@ -10,7 +10,7 @@ BOXSCORETRADITIONALV3_SAMPLE = {
     "meta": {
         "version": 1,
         "request": "https://stats.nba.com/stats/boxscoretraditionalv3?GameID=0022500165",
-        "time": "2025-11-11T00:00:00.000Z"
+        "time": "2025-11-11T00:00:00.000Z",
     },
     "boxScoreTraditional": {
         "gameId": "0022500165",
@@ -42,7 +42,7 @@ BOXSCORETRADITIONALV3_SAMPLE = {
                 "turnovers": 13,
                 "foulsPersonal": 17,
                 "points": 122,
-                "plusMinusPoints": 14
+                "plusMinusPoints": 14,
             },
             "starters": {
                 "minutes": "PT94M32.00S",
@@ -63,7 +63,7 @@ BOXSCORETRADITIONALV3_SAMPLE = {
                 "blocks": 5,
                 "turnovers": 9,
                 "foulsPersonal": 13,
-                "points": 84
+                "points": 84,
             },
             "bench": {
                 "minutes": "PT25M28.00S",
@@ -84,7 +84,7 @@ BOXSCORETRADITIONALV3_SAMPLE = {
                 "blocks": 2,
                 "turnovers": 4,
                 "foulsPersonal": 4,
-                "points": 38
+                "points": 38,
             },
             "players": [
                 {
@@ -116,10 +116,10 @@ BOXSCORETRADITIONALV3_SAMPLE = {
                         "turnovers": 3,
                         "foulsPersonal": 2,
                         "points": 32,
-                        "plusMinusPoints": 12
-                    }
+                        "plusMinusPoints": 12,
+                    },
                 }
-            ]
+            ],
         },
         "awayTeam": {
             "teamId": 1610612744,
@@ -147,7 +147,7 @@ BOXSCORETRADITIONALV3_SAMPLE = {
                 "turnovers": 16,
                 "foulsPersonal": 19,
                 "points": 108,
-                "plusMinusPoints": -14
+                "plusMinusPoints": -14,
             },
             "starters": {
                 "minutes": "PT95M13.00S",
@@ -168,7 +168,7 @@ BOXSCORETRADITIONALV3_SAMPLE = {
                 "blocks": 3,
                 "turnovers": 12,
                 "foulsPersonal": 16,
-                "points": 78
+                "points": 78,
             },
             "bench": {
                 "minutes": "PT24M47.00S",
@@ -189,7 +189,7 @@ BOXSCORETRADITIONALV3_SAMPLE = {
                 "blocks": 1,
                 "turnovers": 4,
                 "foulsPersonal": 3,
-                "points": 30
+                "points": 30,
             },
             "players": [
                 {
@@ -221,10 +221,10 @@ BOXSCORETRADITIONALV3_SAMPLE = {
                         "turnovers": 4,
                         "foulsPersonal": 3,
                         "points": 27,
-                        "plusMinusPoints": -15
-                    }
+                        "plusMinusPoints": -15,
+                    },
                 }
-            ]
-        }
-    }
+            ],
+        },
+    },
 }
