@@ -1,113 +1,79 @@
 # teams.py
->/nba_api/stats/static/teams.py
+>/src/nba_api/stats/static/teams.py
 
-The purpose of this module is to access team information without having to submit requests.
+This module looks up NBA and WNBA teams from the data bundled in [`data.py`](../library/data.md), without sending any requests.
 
-## `_find_teams`(_`regex_pattern`_, _`row_id`_, _`teams=teams`_)
+Text searches take a regular expression and match case-insensitively. Use anchors for exact matches, for example `"^cleveland"`. Year arguments must be `int`s.
 
-This is a protected function used to help search regex patterns through the teams list. The `teams` parameter defaults to NBA teams, but `wnba_teams` can be passed in.
+Each team is returned as a `dict`:
 
-## `_find_team_name_by_id`(_`team_id`_, _`teams=teams`_)
-
-This is a protected function used to find a team by ID. The `teams` parameter defaults to NBA teams, but `wnba_teams` can be passed in.
-
-## `_find_team_by_abbreviation`(_`abbreviation`_, _`teams=teams`_)
-
-This is a protected function used to find a team by abbreviation. The `teams` parameter defaults to NBA teams, but `wnba_teams` can be passed in.
-
-## `_find_teams_by_championship_year`(_`year`_, _`teams=teams`_)
-
-This is a protected function used to find a team by championship year. The `teams` parameter defaults to NBA teams, but `wnba_teams` can be passed in.
-
-## `_find_teams_by_year_founded`(_`year`_, _`teams=teams`_)
-
-This is a protected function used to find a team by year founded. The `teams` parameter defaults to NBA teams, but `wnba_teams` can be passed in.
-
-## `_get_teams`(_`teams=teams`_)
-
-This is a protected function used to get all teams. The `teams` parameter defaults to NBA teams, but `wnba_teams` can be passed in.
-
-## `_get_team_dict`(_`team_row`_)
 ```python
-team = {
-    'id': team_id,
-    'full_name': full_name,
-    'abbreviation': abbreviation,
-    'nickname': nickname,
-    'city': city,
-    'state': state,
-    'year_founded': year_founded,
+{
+    'id': 1610612739,
+    'full_name': 'Cleveland Cavaliers',
+    'abbreviation': 'CLE',
+    'nickname': 'Cavaliers',
+    'city': 'Cleveland',
+    'state': 'Ohio',
+    'year_founded': 1970,
 }
 ```
-This a protected function that will parse a team list row into a friendly `dictionary`.
 
-## `find_teams_by_full_name`(_`regex_pattern`_)
+## Public functions
 
-Returns a list of teams where full team name matches the provided `regex pattern`. 
+### `get_teams`( )
 
-## `find_teams_by_state`(_`regex_pattern`_)
+Returns a list of all NBA teams.
 
-Returns a list of teams where the state matches the provided `regex pattern`. 
+### `find_teams_by_full_name`(_`regex_pattern`_)
 
-## `find_teams_by_city`(_`regex_pattern`_)
+Returns a list of teams whose full name matches `regex_pattern`.
 
-Returns a list of teams where the city matches the provided `regex pattern`.
+### `find_teams_by_state`(_`regex_pattern`_)
 
-## `find_teams_by_nickname`(_`regex_pattern`_)
+Returns a list of teams whose state matches `regex_pattern`.
 
-Returns a list of teams where the nickname matches the provided `regex pattern`.
+### `find_teams_by_city`(_`regex_pattern`_)
 
-## `find_teams_by_year_founded`(_`year`_)
+Returns a list of teams whose city matches `regex_pattern`.
 
-Returns a list of teams that matches the year provided.
+### `find_teams_by_nickname`(_`regex_pattern`_)
 
-## `find_teams_by_championship_year`(_`year`_)
+Returns a list of teams whose nickname matches `regex_pattern`.
 
-Returns a list of teams that matches the championship year provided.
+### `find_teams_by_year_founded`(_`year`_)
 
-## `find_team_by_abbreviation`(_`abbreviation`_)
+Returns a list of teams founded in `year`.
 
-Returns a team that matches the abbreviation provided. Function will fail on any multiple matches. This means our team list has a duplicate or there's an error in the function. No matches will return a `null` value.
+### `find_team_by_abbreviation`(_`abbreviation`_)
 
-## `find_team_name_by_id`(_`team_id`_)
+Returns the team with this abbreviation (case-insensitive), or `None` if there is no match.
 
-Returns a team that matches the team id provided. Function will fail on any multiple matches. This means our team list has a duplicate or there's an error in the function. No matches will return a `null` value.
+### `find_team_name_by_id`(_`team_id`_)
 
-## `get_teams`(_`regex_pattern`_, _`row_id`_)
+Returns the team **dict** with this ID, despite the function's name, or `None` if there is no match.
 
-Returns a list of all teams.
+### `find_teams_by_championship_year`(_`year`_)
 
-## `find_wnba_teams_by_full_name`(_`regex_pattern`_)
+Returns the **full name** (a `str`, not a team dict) of the team that won the championship in `year`, for example `"Cleveland Cavaliers"` for `2016`.
 
-Returns a list of WNBA teams where full team name matches the provided `regex pattern`. 
-## `find_wnba_teams_by_state`(_`regex_pattern`_)
+> [!WARNING]
+> If no team won a championship in `year` (a future season, for example), this function raises `UnboundLocalError` instead of returning `None`.
 
-Returns a list of WNBA teams where the state matches the provided `regex pattern`. 
+### WNBA equivalents
 
-## `find_wnba_teams_by_city`(_`regex_pattern`_)
+Each function above has a WNBA counterpart that behaves the same way over the WNBA team list:
 
-Returns a list of WNBA teams where the city matches the provided `regex pattern`.
+`get_wnba_teams`, `find_wnba_teams_by_full_name`, `find_wnba_teams_by_state`, `find_wnba_teams_by_city`, `find_wnba_teams_by_nickname`, `find_wnba_teams_by_year_founded`, `find_wnba_team_by_abbreviation`, `find_wnba_team_name_by_id`, `find_wnba_teams_by_championship_year`.
 
-## `find_wnba_teams_by_nickname`(_`regex_pattern`_)
+## Internal helpers
 
-Returns a list of WNBA teams where the nickname matches the provided `regex pattern`.
+These functions are prefixed with `_` and are not part of the public API. Each takes an optional `teams` argument that defaults to the NBA list; the WNBA functions pass `wnba_teams`.
 
-## `find_wnba_teams_by_year_founded`(_`year`_)
-
-Returns a list of WNBA teams that matches the year provided.
-
-## `find_wnba_teams_by_championship_year`(_`year`_)
-
-Returns a list of WNBA teams that matches the championship year provided.
-
-## `find_wnba_team_by_abbreviation`(_`abbreviation`_)
-
-Returns a WNBA team that matches the abbreviation provided. Function will fail on any multiple matches. This means our team list has a duplicate or there's an error in the function. No matches will return a `null` value.
-
-## `find_wnba_team_name_by_id`(_`team_id`_)
-
-Returns a WNBA team that matches the team id provided. Function will fail on any multiple matches. This means our team list has a duplicate or there's an error in the function. No matches will return a `null` value.
-
-## `get_wnba_teams`()
-
-Returns a list of all WNBA teams.
+- `_find_teams`(_`regex_pattern`_, _`row_id`_, _`teams=teams`_) — regex search on one column of the team rows.
+- `_find_team_name_by_id`(_`team_id`_, _`teams=teams`_)
+- `_find_team_by_abbreviation`(_`abbreviation`_, _`teams=teams`_)
+- `_find_teams_by_championship_year`(_`year`_, _`teams=teams`_)
+- `_find_teams_by_year_founded`(_`year`_, _`teams=teams`_)
+- `_get_teams`(_`teams=teams`_)
+- `_get_team_dict`(_`team_row`_) — converts a raw team row into the dict shown above.

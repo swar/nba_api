@@ -1,3 +1,13 @@
+"""
+BoxScoreFourFactorsV2 endpoint.
+
+.. deprecated:: 2026-27
+    This endpoint is deprecated. Please use BoxScoreFourFactorsV3 instead.
+    The NBA API no longer returns data for BoxScoreFourFactorsV2 (returns empty JSON).
+"""
+
+import warnings
+
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
 from nba_api.stats.library.parameters import (
@@ -10,6 +20,15 @@ from nba_api.stats.library.parameters import (
 
 
 class BoxScoreFourFactorsV2(Endpoint):
+    """
+    BoxScoreFourFactorsV2 endpoint.
+
+    .. deprecated:: 2026-27
+        **DEPRECATION WARNING:** This endpoint is deprecated.
+        Please use :class:`~nba_api.stats.endpoints.BoxScoreFourFactorsV3` instead.
+        The NBA API no longer returns data for BoxScoreFourFactorsV2 (returns empty JSON).
+    """
+
     endpoint = "boxscorefourfactorsv2"
     expected_data = {
         "sqlPlayersFourFactors": [
@@ -68,6 +87,13 @@ class BoxScoreFourFactorsV2(Endpoint):
         timeout=30,
         get_request=True,
     ):
+        warnings.warn(
+            "BoxScoreFourFactorsV2 is deprecated and will be removed in a future version. "
+            "Please use BoxScoreFourFactorsV3 instead. "
+            "The NBA API no longer returns data for BoxScoreFourFactorsV2 (returns empty JSON).",
+            DeprecationWarning,
+            stacklevel=2,
+        )
         self.proxy = proxy
         if headers is not None:
             self.headers = headers

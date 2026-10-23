@@ -1,5 +1,5 @@
 # ISTStandings
-##### [nba_api/stats/endpoints/iststandings.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/idststandings.py)
+##### [nba_api/stats/endpoints/iststandings.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/iststandings.py)
 
 ##### Endpoint URL
 >[https://stats.nba.com/stats/iststandings](https://stats.nba.com/stats/iststandings)

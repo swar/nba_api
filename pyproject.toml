@@ -1,6 +1,6 @@
 [project]
 name = "nba_api"
-version = "1.11.4"
+version = "1.11.6"
 description = "An API Client package to access the APIs for NBA.com"
 requires-python = ">=3.10"
 license = "MIT"
@@ -29,12 +29,18 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
 ]
 dependencies = [
     "numpy >=1.26.0 ; python_version < '3.13'",
-    "numpy >=2.1.0 ; python_version >= '3.13'",
+    "numpy >=2.1.0 ; python_version == '3.13'",
+    "numpy >=2.3.2 ; python_version == '3.14'",
+    "numpy >=2.5.2 ; python_version >= '3.15'",
     "pandas >=2.1.0; python_version < '3.12'",
-    "pandas >=2.2.0 ; python_version >= '3.12'",
+    "pandas >=2.2.0 ; python_version >= '3.12' and python_version < '3.14'",
+    "pandas >=2.3.3 ; python_version == '3.14'",
+    "pandas >=3.0.6 ; python_version >= '3.15'",
     "requests (>=2.32.3,<3.0.0)"
 ]
 
@@ -50,22 +56,23 @@ requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^8.3.3"
+pytest = "^9.0.2"
 pytest-cov = "^7.1"
 python-semantic-release = "^9.0.0"
 pandas = [
     {version = ">=2.2.0", python = ">=3.12"},
     {version = "<2.2.0", python = "<3.12"}
 ]
-ruff = "^0.15.2"
+ruff = "^0.15.9"
 pre-commit = "^4.0.0"
 pytest-recording = "^0.13.4"
+requests = {version = "^2.32.3", extras = ["socks"]}
 
 [tool.pytest.ini_options]
 markers = [
     "live: test makes real HTTP requests to the NBA Stats API; skip in CI unless cassettes are present",
     "vcr: test uses a pre-recorded VCR cassette and does not require network access",
-    "canary: lightweight smoke test suitable for rapid health checks",
+    "canary: lightweight live check of a few endpoints through the proxy (see tests/integration/canary); never runs in the default CI jobs",
     "deprecated_endpoint: marks a test for an endpoint known to be deprecated or unstable",
 ]
 
@@ -96,16 +103,13 @@ quote-style = "double"
 indent-style = "space"
 docstring-code-format = true
 
+# semantic-release only computes the next version from commit messages
+# (scripts/gen-release.sh). CHANGELOG.MD is written by hand, and publishing is
+# .github/workflows/release.yml. See RELEASING.md.
 [tool.semantic_release]
 version_toml = ["pyproject.toml:project.version"]
-build_command = "poetry build"
-dist_path = "dist/"
-upload_to_pypi = true
-upload_to_release = true
-commit_subject = "chore: release v{version}"
-commit_message = "chore: release v{version}\n\n{changelog}"
+commit_message = "chore: release v{version}"
 tag_format = "v{version}"
-changelog_placeholder = "# NBA API Change Log"
 
 [tool.semantic_release.remote]
 type = "github"
@@ -129,20 +133,13 @@ allowed_tags = ["build", "chore", "ci", "docs", "feat", "fix", "perf", "style", 
 minor_tags = ["feat"]
 patch_tags = ["fix", "perf"]
 
+# The default ("init") mode regenerates the whole file from git history, which
+# would wipe the hand-written changelog. "update" mode only writes at
+# insertion_flag, and CHANGELOG.MD never contains it, so a stray
+# `semantic-release version` leaves the file alone.
 [tool.semantic_release.changelog]
-exclude_commit_patterns = [
-  "^Bump .*",
-  "^Update .*", 
-  "^Merge pull request.*"
-]
-changelog_file = "CHANGELOG.MD"
+mode = "update"
+insertion_flag = "<!-- semantic-release: not used, CHANGELOG.MD is hand-written -->"
 
-[tool.semantic_release.changelog.environment]
-block_start_string = "{%"
-block_end_string = "%}"
-variable_start_string = "{{"
-variable_end_string = "}}"
-comment_start_string = "{#"
-comment_end_string = "#}"
-trim_blocks = false
-lstrip_blocks = false
+[tool.semantic_release.changelog.default_templates]
+changelog_file = "CHANGELOG.MD"

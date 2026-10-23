@@ -1,97 +1,71 @@
 # http.py
->/nba_api/stats/library/http.py
+>/src/nba_api/stats/library/http.py
 
-The purpose of this module is to connect to the NBA website as well as store the response in a `NBAStatsResponse` class.
-
-This should be considered as a base file to build on-top of an NBA API location.
+This module provides the `stats.nba.com` client. It extends the shared [`http.py`](../../library/http.md) with stats-specific headers, a base URL, and a response class that turns the stats API's tabular `resultSets` into data sets.
 
 ## `STATS_HEADERS`
 
-Default Value
+The default request headers. They imitate a desktop Chrome browser visiting `www.nba.com` (including `Referer`, `User-Agent`, and `Sec-Ch-Ua` headers), because `stats.nba.com` rejects or ignores many requests that don't look like they come from a browser. See the source for the exact values.
 
-```python
-STATS_HEADERS = {
-    'Host': 'stats.nba.com',
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
-    'Accept': 'application/json, text/plain, */*',
-    'Accept-Language': 'en-US,en;q=0.5',
-    'Accept-Encoding': 'gzip, deflate, br',
-    'Connection': 'keep-alive',
-}
-```
-
-This variable is set in [`/nba_api/debug.py`](/docs/nba_api/debug.md)
+If `STATS_HEADERS` is defined in [`debug.py`](../../debug.md#stats_headers), that value is used instead. To override headers for a single request, pass `headers=` to the endpoint.
 
 
 ## class `NBAStatsResponse`(_`NBAResponse`_)
 
-#### `get_normalized_dict` (_`response`_, _`url`_)
+#### `get_normalized_dict`( )
 
-Returns the data sets in a normalized `dictionary`.
+Returns every data set as a list of row dictionaries, keyed by data set name. Works for both tabular and nested-JSON endpoints (after `get_data_sets(endpoint)` has been called, which endpoints do automatically).
 
 ```python
 normalized_dict = {
-  'DataSet1': [
-    {'HEADER1': 'VALUE1', 'HEADER2': 'VALUE2', 'HEADER3': 'VALUE3' ...},
-    {'HEADER1': 'VALUE4', 'HEADER2': 'VALUE5', 'HEADER3': 'VALUE6' ...}
-  ],
-  'DataSet2': [
-    {'HEADER1': 'VALUE1', 'HEADER2': 'VALUE2', 'HEADER3': 'VALUE3' ...},
-    {'HEADER1': 'VALUE4', 'HEADER2': 'VALUE5', 'HEADER3': 'VALUE6' ...}
-  ]
+    "DataSet1": [
+        {"HEADER1": "VALUE1", "HEADER2": "VALUE2", ...},
+        {"HEADER1": "VALUE3", "HEADER2": "VALUE4", ...},
+    ],
+    "DataSet2": [...],
 }
 ```
 
 #### `get_normalized_json`( )
 
-Returns the data sets in a normalized `json`.
-
-```json
-{
-  "DataSet1": [
-    {"HEADER1": "VALUE1", "HEADER2": "VALUE2", "HEADER3": "VALUE3" ...},
-    {"HEADER1": "VALUE4", "HEADER2": "VALUE5", "HEADER3": "VALUE6" ...} ...
-  ],
-  "DataSet2": [
-    {"HEADER1": "VALUE1", "HEADER2": "VALUE2", "HEADER3": "VALUE3" ...},
-    {"HEADER1": "VALUE4", "HEADER2": "VALUE5", "HEADER3": "VALUE6" ...} ...
-  ]
-}
-```
-
-returns `response`
-
-This method will return the response returned by a request.
+Returns `get_normalized_dict()` as a JSON `str`.
 
 #### `get_parameters`( )
 
-This method will return a `dictionary` of all your inputted parameters and values.
+Returns the request parameters as echoed back by the API in the response, as a `dict`. Returns `None` if the response is not JSON or contains no `parameters`.
 
 #### `get_headers_from_data_sets`( )
 
-This method will return the names and headers of the data sets in a `dictionary`.
+Returns the column headers of each data set, keyed by data set name. Only supported for tabular `resultSets` responses; returns `{}` otherwise.
 
-#### `get_data_sets`( )
+#### `get_data_sets`( \[_`endpoint=None`_\] )
+
+Returns every data set with its headers and rows, keyed by data set name:
+
 ```python
-data_sets = { name: {'name': name, 'headers': [headers...], 'data': [[data1], [data2], ...]}, ...}
+data_sets = {
+    "DataSet1": {"headers": ["HEADER1", "HEADER2", ...], "data": [[...], [...], ...]},
+    ...
+}
 ```
-This method will return the data sets and values in a `dictionary`.
+
+With no argument, the data sets are read from the tabular `resultSets` (or `resultSet`) in the response. Endpoints that return nested JSON instead pass their `endpoint` name, and parsing is delegated to that endpoint's parser in `stats/endpoints/_parsers/`.
 
 
 ## class `NBAStatsHTTP`(_`NBAHTTP`_)
 
 #### `nba_response`
 
-The value is set to `NBAStatsResponse`.
+`NBAStatsResponse`
 
 #### `base_url`
 
-Base URL Format: `http://stats.nba.com/stats/{endpoint}`
+`https://stats.nba.com/stats/{endpoint}`
 
 #### `headers`
 
-The value is set to `STATS_HEADERS`
+`STATS_HEADERS`
 
 #### `clean_contents`(_`contents`_)
 
-This method is set to remove json parsed error responses.
+Replaces the stats API's JSON error body (`{"Message":"An error has occurred."}`) with a non-JSON placeholder, so that `valid_json()` returns `False` for failed requests.

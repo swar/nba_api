@@ -29,7 +29,8 @@ DEFAULT_LIVE_HEADERS = {
     "Cache-Control": "max-age=0",
     "Connection": "keep-alive",
     "Host": "cdn.nba.com",
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
+    "Referer": "https://www.nba.com/",
 }
 
 NEW_STATS_HEADERS = {
@@ -206,8 +207,9 @@ def test_stats_endpoint_customer_proxy_in_legacy_debug_module(
     monkeypatch.setattr(
         target="nba_api.library.debug.debug.PROXY", name=PROXY_URL, raising=False
     )
-    reload_http_modules()  # Reload Modules to ensure patched debug proxy is used
-    proxies = send_endpoint(capture="proxies")
+    monkeypatch.delenv("NBA_API_PROXY", raising=False)
+    with pytest.warns(FutureWarning):
+        proxies = send_endpoint(capture="proxies")
     assert proxies == PROXIES
 
 

@@ -1,9 +1,10 @@
 import json
 import os
-import random
 from urllib.parse import quote_plus
 
 import requests
+
+from nba_api.library.proxy import as_proxies, redact, resolve_proxy
 
 try:
     from nba_api.library.debug.debug import DEBUG
@@ -17,16 +18,31 @@ except ImportError:
     DEBUG_STORAGE = False
 
 
-try:
-    from nba_api.library.debug.debug import PROXY
-except ImportError:
-    PROXY = ""
-
-
 if DEBUG:
     from hashlib import md5
 
     print("DEBUG MODE")
+
+
+def _redacted(error, proxy_url):
+    """Mask proxy credentials in ``error`` in place.
+
+    Does nothing unless the proxy URL carries credentials. Otherwise it rewrites only
+    the arguments that contain them (keeping the exception type, ``request`` and
+    ``response``) and drops the chained cause/context, whose urllib3 messages can
+    embed the proxy URL.
+    """
+    if not proxy_url or "@" not in proxy_url:
+        return error
+    args = tuple(
+        masked if (masked := redact(arg, proxy_url)) != str(arg) else arg
+        for arg in error.args
+    )
+    if args != error.args:
+        error.args = args
+        error.__cause__ = None
+        error.__context__ = None
+    return error
 
 
 class NBAResponse:
@@ -102,24 +118,10 @@ class NBAHTTP:
         if referer:
             request_headers["Referer"] = referer
 
-        if proxy is None:
-            request_proxy = PROXY
-        elif not proxy:
-            request_proxy = None
-        else:
-            request_proxy = proxy
-
-        if isinstance(request_proxy, list):
-            request_proxy = random.choice(request_proxy)
-            if DEBUG:
-                print(request_proxy)
-
-        proxies = None
-        if request_proxy:
-            proxies = {
-                "http": request_proxy,
-                "https": request_proxy,
-            }
+        request_proxy = resolve_proxy(proxy)
+        if DEBUG and request_proxy:
+            print(redact(request_proxy, request_proxy))
+        proxies = as_proxies(request_proxy)
 
         url = None
         status_code = None
@@ -154,13 +156,16 @@ class NBAHTTP:
                 print("loading from file...")
 
         if not contents:
-            response = self.get_session().get(
-                url=base_url,
-                params=parameters,
-                headers=request_headers,
-                proxies=proxies,
-                timeout=timeout,
-            )
+            try:
+                response = self.get_session().get(
+                    url=base_url,
+                    params=parameters,
+                    headers=request_headers,
+                    proxies=proxies,
+                    timeout=timeout,
+                )
+            except requests.RequestException as e:
+                raise _redacted(e, request_proxy) from None
             url = response.url
             status_code = response.status_code
             contents = response.text

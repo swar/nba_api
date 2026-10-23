@@ -1,5 +1,7 @@
 """Parser(s) for boxscorematchupsv3 endpoint."""
 
+from ._home_away import add_home_away_ids
+
 
 class NBAStatsBoxscoreMatchupsParserV3:
     def __init__(self, nba_dict):
@@ -67,4 +69,5 @@ class NBAStatsBoxscoreMatchupsParserV3:
         player_head = self.get_players_headers()
         pl_data = self.get_player_data()
         results["PlayerStats"] = {"headers": player_head, "data": pl_data}
-        return results
+        boxscore = self.nba_dict[list(self.nba_dict.keys())[1]]
+        return add_home_away_ids(results, boxscore)

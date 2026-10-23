@@ -1,3 +1,13 @@
+"""
+LeagueLeaders endpoint.
+
+.. deprecated:: 2026-27
+    This endpoint is deprecated. Please use LeagueDashPlayerStats for per-player totals and ranks instead.
+    The NBA API no longer returns data for LeagueLeaders (it returns the NBA.com homepage instead).
+"""
+
+import warnings
+
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
 from nba_api.stats.library.parameters import (
@@ -11,6 +21,15 @@ from nba_api.stats.library.parameters import (
 
 
 class LeagueLeaders(Endpoint):
+    """
+    LeagueLeaders endpoint.
+
+    .. deprecated:: 2026-27
+        **DEPRECATION WARNING:** This endpoint is deprecated.
+        Please use :class:`~nba_api.stats.endpoints.LeagueDashPlayerStats` for per-player totals and ranks instead.
+        The NBA API no longer returns data for LeagueLeaders (it returns the NBA.com homepage instead).
+    """
+
     endpoint = "leagueleaders"
     expected_data = {
         "LeagueLeaders": [
@@ -64,6 +83,13 @@ class LeagueLeaders(Endpoint):
         timeout=30,
         get_request=True,
     ):
+        warnings.warn(
+            "LeagueLeaders is deprecated and will be removed in a future version. "
+            "Please use LeagueDashPlayerStats for per-player totals and ranks instead. "
+            "The NBA API no longer returns data for LeagueLeaders (it returns the NBA.com homepage instead).",
+            DeprecationWarning,
+            stacklevel=2,
+        )
         self.proxy = proxy
         if headers is not None:
             self.headers = headers

@@ -1,27 +1,48 @@
-# Package Structure
+# Package structure
 
-<img src="images/structure.svg" alt="nba_api Directory Structure" />
+```text
+nba_api/
+├── src/nba_api/                  # the installed package
+│   ├── library/
+│   │   ├── http.py               # shared HTTP client (NBAHTTP, NBAResponse)
+│   │   ├── proxy.py              # per-request proxy resolution (NBA_API_PROXY)
+│   │   └── debug/debug.py        # DEBUG flags (legacy PROXY, deprecated)
+│   ├── stats/                    # stats.nba.com
+│   │   ├── endpoints/            # one module per endpoint
+│   │   │   ├── _base.py          # Endpoint and Endpoint.DataSet base classes
+│   │   │   ├── _parsers/         # parsers for endpoints that return nested JSON
+│   │   │   └── _expected_data/   # expected data set columns for large endpoints
+│   │   ├── library/
+│   │   │   ├── http.py           # NBAStatsHTTP and NBAStatsResponse
+│   │   │   ├── parameters.py     # parameter values and defaults
+│   │   │   ├── data.py           # generated player and team data
+│   │   │   └── ...               # play-by-play helpers (eventmsgtype, playbyplayregex)
+│   │   └── static/               # offline player and team lookups
+│   └── live/nba/                 # cdn.nba.com live data
+│       ├── endpoints/            # ScoreBoard, BoxScore, PlayByPlay, Odds
+│       └── library/http.py       # NBALiveHTTP
+├── tests/
+│   ├── unit/                     # offline tests; HTTP is mocked
+│   └── integration/              # smoke and scenario tests using recorded (VCR) responses
+├── docs/                         # this documentation, plus example notebooks in docs/examples/
+├── tools/                        # endpoint analysis and code/doc generators
+└── scripts/                      # maintenance scripts (static data refresh, endpoint analysis, releases)
+```
 
-# `\analysis_archive`
-This directory is the archive of endpoint analysis files. 
+## `src/nba_api`
 
-# `\docs`
-This directory contains the documentation for the package. 
+The package installed by `pip install nba_api`. Users import from three places:
 
-# `\nba_api`
-This is the directory that contains the package.
+- **`nba_api.stats.endpoints`** — `stats.nba.com` endpoints. See [Endpoint data structure](nba_api/stats/endpoints_data_structure.md).
+- **`nba_api.stats.static`** — offline player and team lookups. See [players.py](nba_api/stats/static/players.md) and [teams.py](nba_api/stats/static/teams.md).
+- **`nba_api.live.nba.endpoints`** — live game data from `cdn.nba.com`.
 
-#### `\stats`
-This directory contains all library for stats.nba.com API.
+Modules and directories prefixed with `_` are internal.
 
-#### `\library`
-This directory contains files that are necessary to the package. In addition, these files can be used for additional purposes such as connecting to an endpoint or valid parameter values for endpoints.
+## `tests`
 
-# `\scripts`
-This directory contains the scripts.
+Unit tests run offline and must never make network requests. Integration tests replay HTTP responses recorded as VCR cassettes (the `vcr` marker); tests marked `live` call the real API. See [CONTRIBUTING.md](../CONTRIBUTING.md#running-checks).
 
-# `\tests`
-This directory contains the tests.
+## `tools` and `scripts`
 
-# `\tools`
-This directory contains the foundational tools of this package. These tools are used to help keep the package and documentation updated.
+`tools/` holds the endpoint analyzer and the generators for endpoint files and documentation. `scripts/` holds the entry points maintainers run. See [Scripts](scripts.md).
