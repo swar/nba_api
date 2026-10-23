@@ -57,7 +57,8 @@ attribute to call `.get_data_frame()` on.
 `ShotChartDetail` defaults to `context_measure_simple="PTS"`, which returns made shots only.
 Pass `"FGA"` for every attempt. `team_id=0` means all teams.
 
-For anything else, browse the [endpoint list](table_of_contents.md#reference).
+For anything else, see the [endpoint guide](nba_api/stats/endpoint_guide.md), which groups every
+endpoint by topic and says what each one returns.
 
 ## IDs, seasons, and dates
 

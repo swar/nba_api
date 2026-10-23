@@ -16,6 +16,7 @@ REPO_ROOT = Path(__file__).resolve().parents[4]
 ENDPOINTS_DIR = REPO_ROOT / "src" / "nba_api" / "stats" / "endpoints"
 DOCS_DIR = REPO_ROOT / "docs" / "nba_api" / "stats" / "endpoints"
 TABLE_OF_CONTENTS = REPO_ROOT / "docs" / "table_of_contents.md"
+ENDPOINT_GUIDE = REPO_ROOT / "docs" / "nba_api" / "stats" / "endpoint_guide.md"
 
 MODULES = sorted(
     path.stem for path in ENDPOINTS_DIR.glob("*.py") if not path.stem.startswith("_")
@@ -50,3 +51,9 @@ def test_table_of_contents_lists_every_endpoint():
     count = re.search(r"Endpoints \((\d+)\)", toc)
     assert count is not None
     assert int(count.group(1)) == len(MODULES)
+
+
+def test_endpoint_guide_lists_every_endpoint():
+    guide = ENDPOINT_GUIDE.read_text(encoding="utf-8")
+    linked = set(re.findall(r"\(endpoints/(\w+)\.md\)", guide))
+    assert linked == set(MODULES)

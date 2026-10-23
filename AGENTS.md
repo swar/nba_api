@@ -66,7 +66,8 @@ Stats endpoints share one shape — copy a neighbor (e.g. `commonplayerinfo.py`)
 Adding an endpoint touches: the endpoint file, `stats/endpoints/__init__.py` (both the `__all__`
 module name and the class import), a unit test using `get_request=False` (plus a parser test if
 applicable), an `EndpointSpec` in `tests/integration/helpers/endpoint_specs.py`, and
-`docs/nba_api/stats/endpoints/<name>.md` plus an entry in `docs/table_of_contents.md`.
+`docs/nba_api/stats/endpoints/<name>.md` plus entries in `docs/table_of_contents.md` and
+`docs/nba_api/stats/endpoint_guide.md`.
 
 ## Testing rules
 
