@@ -117,6 +117,7 @@ More detail is in the [stats examples](https://github.com/swar/nba_api/blob/mast
 - [Jupyter notebooks](https://github.com/swar/nba_api/tree/master/docs/examples): basic calls, finding games, play-by-play, live data
 - [Endpoint data structure](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/endpoints_data_structure.md): the methods every endpoint shares
 - [Parameters](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/library/parameters.md): valid values and defaults
+- [Using nba_api with AI agents](https://github.com/swar/nba_api/blob/master/docs/ai_agents.md): rules, an endpoint picker, and common errors for AI coding agents
 - [Changelog](https://github.com/swar/nba_api/blob/master/CHANGELOG.MD)
 
 ## Community
