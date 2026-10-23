@@ -1,0 +1,88 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/videoeventsasset?GameEventID=0&GameID=0022200552
+  response:
+    body:
+      string: '{"resource":"videoevents","parameters":{"GameID":"0022200552","GameEventID":0},"resultSets":{"Meta":{"videoUrls":[{"uuid":"4549dfbf-fde2-4dcc-8065-afade5ada267","sdur":0,"surl":"","sth":"","mdur":0,"murl":"","mth":"","ldur":0,"lurl":"","lth":"","vtt":"","scc":"","srt":"","mediaId":null}]},"playlist":[{"gi":"0022200552","ei":0,"y":2023,"m":"01","d":"02","gc":"2023-01-02/CHICLE","p":5,"dsc":"Final
+        Box Printed","ha":"CLE","hid":1610612739,"va":"CHI","vid":1610612741,"hpb":0,"hpa":0,"vpb":0,"vpa":0,"pta":0}]}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Cache-Control:
+      - public, max-age=31535991
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '328'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 23 Oct 2026 06:26:14 GMT
+      Set-Cookie:
+      - ak_bmsc=923C3F58728A972784ABE8041EA7DDAF~000000000000000000000000000000~YAAQSMgwFzHIXTqhAQAA1UpwZwEidypAtWax+pnOyIpLCBSvT+xa9sV8UJ0T+Y0ykbJRRoeD4aFoTMS8LmKemH+MlCGxcO0o2zcbXvQfdnVfAde2/cDmwzlDbzS3LWXNdMcSWcY2pchH+59byRjfqLF9+vTpEc1bCleDJ6x56LJs5f+JRhkLHil1fdwjWQH+KW6poWo7Vj9karWSh6AhOO2lzt9mTtlc6GwVgT9XTfeT68cABr2YbJ6Cd6h3uNQ4Pr25oH4hnNCYHe+Yj3w5XhNmXw9zfaFxcdZLZ1wDJkGFbuvCFEfezmHo7jR61PQB5GJyzuUOgnt8QIgYk75Wl+HxUw+pbB2UiZz+lwhvCw3J/Bopepu6ZstAoqQ=;
+        Domain=.nba.com; Path=/; Expires=Fri, 23 Oct 2026 08:26:14 GMT; Max-Age=7200;
+        HttpOnly
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      ttl:
+      - '31536000'
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-edge-ttl:
+      - '!no-store,max-age=31536000'
+      x-envoy-upstream-service-time:
+      - '361'
+      x-etag:
+      - ''
+      x-full-ttl:
+      - '31536000.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '0'
+      x-status:
+      - miss
+      x-varnish:
+      - '290892412'
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

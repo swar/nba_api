@@ -211,7 +211,7 @@ endpoint_specs = [
         end_period_nullable=1,
     ),
     EndpointSpec(ep.VideoEvents),
-    EndpointSpec(ep.VideoEventsAsset, skip="No cassette recorded yet."),
+    EndpointSpec(ep.VideoEventsAsset),
     EndpointSpec(ep.VideoStatus),
     # Niche/specialized game-state endpoint
     EndpointSpec(
