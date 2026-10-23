@@ -6,5 +6,3 @@
   project rules there, not here. This file is only for Claude Code–specific behavior.
 - Shared permissions live in `.claude/settings.json` (committed). Personal overrides go in
   `.claude/settings.local.json` and personal notes in `CLAUDE.local.md` (both gitignored).
-- After editing Python, run `poetry run ruff check --fix <files> && poetry run ruff format <files>`
-  before reporting the task done.
