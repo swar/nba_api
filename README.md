@@ -69,7 +69,7 @@ df[["SEASON_ID", "TEAM_ABBREVIATION", "PTS"]].tail(3)
 # 8   2025-26               CLE  1952
 ```
 
-Every stats endpoint works the same way: constructing it sends the request, and each data set it returns is an attribute with `get_data_frame()`, `get_dict()`, and `get_json()`. To grab everything at once, use `career.get_data_frames()` or `career.get_dict()`. The [endpoint reference](https://github.com/swar/nba_api/blob/master/docs/table_of_contents.md#reference) lists every endpoint's parameters and data sets.
+Every stats endpoint works the same way: constructing it sends the request, and each data set it returns is an attribute with `get_data_frame()`, `get_dict()`, and `get_json()`. To grab everything at once, use `career.get_data_frames()` or `career.get_dict()`. To find the endpoint that has the data you want, see the [endpoint guide](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/endpoint_guide.md). The [endpoint reference](https://github.com/swar/nba_api/blob/master/docs/table_of_contents.md#reference) lists every endpoint's parameters and data sets.
 
 ### Follow live games from `cdn.nba.com`
 

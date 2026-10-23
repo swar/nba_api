@@ -6,6 +6,7 @@
 - [Stats examples](nba_api/stats/examples.md) — request options, return types, static data
 - [Jupyter notebook examples](examples/)
 - [Endpoint data structure](nba_api/stats/endpoints_data_structure.md) — the `Endpoint` and `DataSet` API shared by every endpoint
+- [Endpoint guide](nba_api/stats/endpoint_guide.md): which endpoint has which data, grouped by topic
 - [Parameters](nba_api/stats/library/parameters.md) — valid values and defaults for endpoint parameters
 - [Known upstream issues](nba_api/stats/known_upstream_issues.md) — endpoints stats.nba.com is not serving correctly
 - [Using nba_api with AI agents](ai_agents.md): rules, an endpoint picker, and common errors for AI coding agents
