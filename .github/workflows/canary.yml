@@ -2,14 +2,15 @@
 # through the proxy in the NBA_API_PROXY secret (tests/integration/canary).
 #
 # Runs three ways:
-#   - weekly, against the default branch (a failed scheduled run emails whoever
-#     last edited the cron line below, if they have Actions email notifications on)
+#   - weekly, against the default branch (canary-report.yml opens an issue when
+#     a scheduled run fails and closes it when a run passes)
 #   - on demand (workflow_dispatch)
 #   - as a gate inside release.yml, against the release tag, before publishing
 #
 # The secret lives in the `release` environment, which must be limited to the
 # `master` branch: both the weekly run and release.yml run from there. One-time
 # setup is in RELEASING.md.
+# canary-report.yml matches this name; rename both together.
 name: Canary
 
 on:
