@@ -52,6 +52,8 @@ class BoxScoreMatchupsV3(Endpoint):
             "matchupFreeThrowsMade",
             "matchupFreeThrowsAttempted",
             "shootingFouls",
+            "homeTeamId",
+            "awayTeamId",
         ]
     }
 

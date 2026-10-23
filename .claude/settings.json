@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(poetry run pytest tests/unit:*)",
+      "Bash(NBA_API_PROXY= poetry run pytest tests/unit:*)",
+      "Bash(NBA_API_PROXY= poetry run pytest tests/integration -m vcr:*)",
+      "Bash(poetry run ruff:*)",
+      "Bash(make ci)",
+      "Bash(make test)",
+      "Bash(make test-vcr)",
+      "Bash(make lint)",
+      "Bash(make format)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)"
+    ],
+    "ask": [
+      "Bash(git push:*)",
+      "Bash(poetry add:*)",
+      "Bash(poetry remove:*)",
+      "Bash(poetry lock:*)",
+      "Bash(*--record-mode*)",
+      "Bash(* -m live*)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Edit(./.env)",
+      "Bash(cat .env*)",
+      "Bash(poetry publish:*)",
+      "Bash(poetry run semantic-release:*)",
+      "Bash(semantic-release:*)",
+      "Edit(./CHANGELOG.MD)"
+    ]
+  }
+}

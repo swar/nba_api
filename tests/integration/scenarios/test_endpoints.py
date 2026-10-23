@@ -7,6 +7,7 @@ Not the broad live smoke sweep.
 import pytest
 
 from nba_api.stats import endpoints
+from tests.integration.helpers.seasons import pinned_season_kwargs
 from tests.integration.scenarios.helpers import (
     assert_endpoint_instantiates,
     run_endpoint_test,
@@ -199,4 +200,5 @@ COMMON_TESTS = [
 )
 def test_common(endpoint_class, params, description):  # noqa: ARG001
     """Verify endpoint doesn't crash."""
+    params = {**pinned_season_kwargs(endpoint_class, params), **params}
     assert_endpoint_instantiates(endpoint_class, params, description)

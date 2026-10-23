@@ -1,3 +1,6 @@
+> [!NOTE]
+> This log is archived and covers releases up to **v1.1.11** (November 2021). Release notes for later versions are in [CHANGELOG.MD](../CHANGELOG.MD).
+
 # `v1.1.11`
 #### `2021-11-08`
 `Live NBA Stats`

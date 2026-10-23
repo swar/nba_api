@@ -35,6 +35,8 @@ class BoxScoreDefensiveV2(Endpoint):
             "matchupThreePointersMade",
             "matchupThreePointersAttempted",
             "matchupThreePointerPercentage",
+            "homeTeamId",
+            "awayTeamId",
         ],
         "TeamStats": [
             "gameId",
@@ -44,6 +46,8 @@ class BoxScoreDefensiveV2(Endpoint):
             "teamTricode",
             "teamSlug",
             "minutes",
+            "homeTeamId",
+            "awayTeamId",
         ],
     }
 
