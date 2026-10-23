@@ -22,7 +22,7 @@ For significant changes, open an issue titled `PROPOSAL: ...` to discuss the des
 
 ### Prerequisites
 
-- **Python** — a version listed under `requires-python` and the classifiers in [`pyproject.toml`](pyproject.toml) (currently 3.10–3.13; CI tests all of them).
+- **Python** — a version listed under `requires-python` and the classifiers in [`pyproject.toml`](pyproject.toml) (currently 3.10–3.15; CI tests all of them).
 - **[Poetry](https://python-poetry.org/docs/#installation) 2.x** — manages the virtual environment, dependencies, and builds.
 - **[pyenv](https://github.com/pyenv/pyenv)** (optional) — for switching between Python versions. Poetry uses whichever Python is active.
 
