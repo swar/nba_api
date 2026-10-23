@@ -26,6 +26,8 @@ make ci                                          # all of the above in check mod
 
 Single test: `poetry run pytest tests/unit/stats/endpoints/test_teamgamelog.py -k initialization`
 
+After editing Python, run `poetry run ruff check --fix <files> && poetry run ruff format <files>`.
+
 **Definition of done:** unit tests, VCR tests, `ruff check`, and `ruff format --check` all pass.
 
 ## Layout
@@ -43,7 +45,8 @@ src/nba_api/
   live/nba/endpoints/        # live CDN endpoints (scoreboard, boxscore, playbyplay, odds)
 tests/unit/                  # fast, offline; HTTP is mocked
 tests/integration/           # smoke + scenario tests; replay VCR cassettes or hit the live API
-tools/                       # code/doc generators used by scripts/analyze_endpoints_and_create_files.py
+tools/stats/endpoint_scope/  # scope a new endpoint from a URL; `--all --offline` audits expected_data vs cassettes
+tools/stats/ (others)        # old generators; endpoint_analysis no longer works upstream, so don't rely on them
 scripts/static_players_update/  # regenerate data.py from the live API
 docs/nba_api/                # per-endpoint markdown docs
 ```
@@ -76,6 +79,9 @@ applicable), an `EndpointSpec` in `tests/integration/helpers/endpoint_specs.py`,
   `NBA_API_REQUIRE_PROXY=1` and skip without `NBA_API_PROXY` (`make test-canary`).
   Do not record or re-record cassettes, or run `live`/`canary` tests, unless asked — they hit
   stats.nba.com, which rate-limits and blocks aggressively.
+- stats.nba.com does not answer most cloud IPs, so live requests from hosted agent sandboxes hang
+  until they time out. Work offline with cassettes and `get_request=False`. A hang there is not a
+  bug: don't "fix" it by raising timeouts or adding retries.
 - `Season.default` and friends are date-derived and roll over every October. Cassette tests pin
   them via `RECORDED_SEASON_YEAR` in `tests/integration/helpers/seasons.py`; bump it only when
   cassettes are re-recorded. Never hardcode "current season" assumptions in tests.
@@ -115,5 +121,7 @@ applicable), an `EndpointSpec` in `tests/integration/helpers/endpoint_specs.py`,
 
 `REFACTORING.md` (known tech debt, e.g. decoupling parsers from `http.py`),
 `docs/open_api_findings.md` (audit findings about stats.nba.com not yet handled: bad enum
-values, stale `expected_data`, unsent params, coverage gaps), `RELEASING.md`,
+values, stale `expected_data`, unsent params, coverage gaps),
+`docs/nba_api/stats/known_upstream_issues.md` (endpoints stats.nba.com broke or removed),
+`docs/ai_agents.md` (for agents writing code that *uses* nba_api), `RELEASING.md`,
 `docs/table_of_contents.md`.
