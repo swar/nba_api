@@ -4,7 +4,7 @@ SCOREBOARDV3_SAMPLE = {
     "meta": {
         "version": 1,
         "request": "http://nba.cloud/league/00/2025/11/05/scoreboard?Format=json",
-        "time": "2025-11-06T12:00:34.034Z"
+        "time": "2025-11-06T12:00:34.034Z",
     },
     "scoreboard": {
         "gameDate": "2025-11-05",
@@ -40,7 +40,7 @@ SCOREBOARDV3_SAMPLE = {
                         "teamTricode": "CLE",
                         "points": 46,
                         "rebounds": 4,
-                        "assists": 8
+                        "assists": 8,
                     },
                     "awayLeaders": {
                         "personId": 1630178,
@@ -51,8 +51,8 @@ SCOREBOARDV3_SAMPLE = {
                         "teamTricode": "PHI",
                         "points": 27,
                         "rebounds": 7,
-                        "assists": 9
-                    }
+                        "assists": 9,
+                    },
                 },
                 "teamLeaders": {
                     "homeLeaders": {
@@ -64,7 +64,7 @@ SCOREBOARDV3_SAMPLE = {
                         "teamTricode": "CLE",
                         "points": 31.9,
                         "rebounds": 2.6,
-                        "assists": 5.0
+                        "assists": 5.0,
                     },
                     "awayLeaders": {
                         "personId": 1630178,
@@ -75,9 +75,9 @@ SCOREBOARDV3_SAMPLE = {
                         "teamTricode": "PHI",
                         "points": 33.5,
                         "rebounds": 5.1,
-                        "assists": 8.5
+                        "assists": 8.5,
                     },
-                    "seasonLeadersFlag": 0
+                    "seasonLeadersFlag": 0,
                 },
                 "broadcasters": {
                     "nationalBroadcasters": [
@@ -85,7 +85,7 @@ SCOREBOARDV3_SAMPLE = {
                             "broadcasterId": 2,
                             "broadcastDisplay": "ESPN",
                             "broadcasterTeamId": -1,
-                            "broadcasterDescription": ""
+                            "broadcasterDescription": "",
                         }
                     ],
                     "nationalRadioBroadcasters": [],
@@ -95,7 +95,7 @@ SCOREBOARDV3_SAMPLE = {
                             "broadcasterId": 1001329,
                             "broadcastDisplay": "FDSNOH/RESN",
                             "broadcasterTeamId": 1610612739,
-                            "broadcasterDescription": ""
+                            "broadcasterDescription": "",
                         }
                     ],
                     "homeRadioBroadcasters": [
@@ -103,7 +103,7 @@ SCOREBOARDV3_SAMPLE = {
                             "broadcasterId": 1001554,
                             "broadcastDisplay": "WTAM/WMMS/WJMO",
                             "broadcasterTeamId": 1610612739,
-                            "broadcasterDescription": ""
+                            "broadcasterDescription": "",
                         }
                     ],
                     "homeOttBroadcasters": [],
@@ -112,7 +112,7 @@ SCOREBOARDV3_SAMPLE = {
                             "broadcasterId": 133,
                             "broadcastDisplay": "NBCSP",
                             "broadcasterTeamId": 1610612755,
-                            "broadcasterDescription": ""
+                            "broadcasterDescription": "",
                         }
                     ],
                     "awayRadioBroadcasters": [
@@ -120,10 +120,10 @@ SCOREBOARDV3_SAMPLE = {
                             "broadcasterId": 1434,
                             "broadcastDisplay": "WPEN",
                             "broadcasterTeamId": 1610612755,
-                            "broadcasterDescription": ""
+                            "broadcasterDescription": "",
                         }
                     ],
-                    "awayOttBroadcasters": []
+                    "awayOttBroadcasters": [],
                 },
                 "homeTeam": {
                     "teamId": 1610612739,
@@ -141,8 +141,8 @@ SCOREBOARDV3_SAMPLE = {
                         {"period": 1, "periodType": "REGULAR", "score": 35},
                         {"period": 2, "periodType": "REGULAR", "score": 27},
                         {"period": 3, "periodType": "REGULAR", "score": 28},
-                        {"period": 4, "periodType": "REGULAR", "score": 24}
-                    ]
+                        {"period": 4, "periodType": "REGULAR", "score": 24},
+                    ],
                 },
                 "awayTeam": {
                     "teamId": 1610612755,
@@ -160,10 +160,10 @@ SCOREBOARDV3_SAMPLE = {
                         {"period": 1, "periodType": "REGULAR", "score": 24},
                         {"period": 2, "periodType": "REGULAR", "score": 27},
                         {"period": 3, "periodType": "REGULAR", "score": 25},
-                        {"period": 4, "periodType": "REGULAR", "score": 30}
-                    ]
-                }
+                        {"period": 4, "periodType": "REGULAR", "score": 30},
+                    ],
+                },
             }
-        ]
-    }
+        ],
+    },
 }

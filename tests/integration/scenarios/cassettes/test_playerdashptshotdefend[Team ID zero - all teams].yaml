@@ -1,0 +1,93 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=D77EE8B6DDCD6D37555910E8C3F896F5~000000000000000000000000000000~YAAQjmITApga9GicAQAABlDagx6YA0PbH0G/k1Z5ms0kG2o+kbxp7jbphyuabEM5NnhranEU2mCqVS/z2utjLE4+n1M4v9mSaS5FH0XMSjjg/dMugVplnwixNVkdi25/hCp1phi35rsAimKATC/79PJJW653lOJ+UY6aPwNlpyOKZI9ngInC3qxcgl28KBaehEvqUuPwGh0W/TlvKYx9K7wtq6OsckEA0jULDUUkv2AOsNQgxGsZkao1wn1adhLzz4nopCFlDTuFz3o4o+77XPbL/KyiJxYOBBhztVUgHsWuq0MYlyTpS9L/3JvNM61cvAmRrNGea8+j4AjiIkorL7j6EE+FCDYqG03rzzhOLvhhF+aLsbxpQkLUpQ==
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/playerdashptshotdefend?DateFrom=&DateTo=&GameSegment=&LastNGames=0&LeagueID=00&Location=&Month=0&OpponentTeamID=0&Outcome=&PerMode=Totals&Period=0&PlayerID=2544&Season=2023-24&SeasonSegment=&SeasonType=Regular+Season&TeamID=0&VsConference=&VsDivision=
+  response:
+    body:
+      string: '{"resource":"playerdashptshotdefend","parameters":{"PerMode":"Totals","LeagueID":"00","Season":"2023-24","SeasonType":"Regular
+        Season","PlayerID":2544,"TeamID":0,"Outcome":null,"Location":null,"Month":0,"SeasonSegment":null,"DateFrom":null,"DateTo":null,"OpponentTeamID":0,"VsConference":null,"VsDivision":null,"GameSegment":null,"Period":0,"LastNGames":0,"ISTRound":null},"resultSets":[{"name":"DefendingShots","headers":["MATCHUPID","GP","G","DEFENSE_CATEGORY","FREQ","D_FGM","D_FGA","D_FG_PCT","NORMAL_FG_PCT","PCT_PLUSMINUS"],"rowSet":[[2544,70,70,"Overall",1.0,328,710,0.462,0.48,-0.019],[2544,70,70,"3
+        Pointers",0.427,106,303,0.35,0.367,-0.017],[2544,70,69,"2 Pointers",0.573,222,407,0.545,0.546,0.0],[2544,70,66,"Less
+        Than 6 Ft",0.344,150,244,0.615,0.621,-0.006],[2544,70,68,"Less Than 10 Ft",0.43,177,305,0.58,0.583,-0.003],[2544,70,70,"Greater
+        Than 15 Ft",0.508,134,361,0.371,0.371,0.0]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '528'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:37:29 GMT
+      Set-Cookie:
+      - bm_sv=856C19669A8A17B20698FEB428492AF1~YAAQjmITAqMa9GicAQAAo1Lagx4NFsiRxNXQ6q5YjCdAWBWkS0Rkguz1CE4WeLhe9OSxmh8axBjYTHOR8MJzkaOh0HO2nsP7cusChlQWtNoBAMtkAvIWw1AuKCOSohnmVlg1HHgCfqGBc8wz+p4RCTh+GKiWKFK3ALg08nbbXMcrxwadlFO8FlTlrWR0WQTZRWMEni542FH0b/dLyuOxv1nLDwUqygxUybujfh/ltKEfLFiwLOOV+ThZnM0J~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:37:29 GMT; Max-Age=7200;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      ttl:
+      - '31536000'
+      vha6-origin:
+      - varnish-2
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '1800.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '1'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '300.833'
+      x-varnish:
+      - 38112692 35730471
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

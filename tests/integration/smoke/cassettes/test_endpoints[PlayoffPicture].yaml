@@ -1,0 +1,97 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAsQebWicAQAA8e7Zgx5HUFFmPdQAO/V8MVWST8ixvXWaVoDHsft7tDOCkqD+9Tjm2p0aVkj54HyrqxEUC76Y+W+u7GVeXo0tb9+5MozAxfXBiWhmiW+c9NLM0nFPcrkW4M2jyMsB9+vhGqJD8DAxulWArP4BPeoTFXoLmj1E4MuFqFy8zWLl+yATUxdmx1OG+E/IceIDAJLPQZ3vyalxakYsg5f9iMYfgDjNgFpGxmm0sjII5sTKzac=~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/playoffpicture?LeagueID=00&SeasonID=22025
+  response:
+    body:
+      string: '{"resource":"playoffpicture","parameters":{"LeagueID":"00","SeasonID":"22025"},"resultSets":[{"name":"EastConfPlayoffPicture","headers":["CONFERENCE","HIGH_SEED_RANK","HIGH_SEED_TEAM","HIGH_SEED_TEAM_ID","LOW_SEED_RANK","LOW_SEED_TEAM","LOW_SEED_TEAM_ID","HIGH_SEED_SERIES_W","HIGH_SEED_SERIES_L","HIGH_SEED_SERIES_REMAINING_G","HIGH_SEED_SERIES_REMAINING_HOME_G","HIGH_SEED_SERIES_REMAINING_AWAY_G"],"rowSet":[["East",1,"Detroit",1610612765,8,"Orlando",1610612753,1,1,2,0,2],["East",2,"Boston",1610612738,7,"Miami",1610612748,3,0,1,0,1],["East",3,"New
+        York",1610612752,6,"Philadelphia",1610612755,2,2,0,0,0],["East",4,"Cleveland",1610612739,5,"Toronto",1610612761,0,3,0,0,0]]},{"name":"WestConfPlayoffPicture","headers":["CONFERENCE","HIGH_SEED_RANK","HIGH_SEED_TEAM","HIGH_SEED_TEAM_ID","LOW_SEED_RANK","LOW_SEED_TEAM","LOW_SEED_TEAM_ID","HIGH_SEED_SERIES_W","HIGH_SEED_SERIES_L","HIGH_SEED_SERIES_REMAINING_G","HIGH_SEED_SERIES_REMAINING_HOME_G","HIGH_SEED_SERIES_REMAINING_AWAY_G"],"rowSet":[["West",1,"Oklahoma
+        City",1610612760,8,"Golden State",1610612744,3,0,1,1,0],["West",2,"San Antonio",1610612759,7,"Phoenix",1610612756,1,2,1,1,0],["West",3,"Denver",1610612743,6,"Minnesota",1610612750,3,0,1,1,0],["West",4,"Houston",1610612745,5,"L.A.
+        Lakers",1610612747,1,0,2,2,0]]},{"name":"EastConfStandings","headers":["CONFERENCE","RANK","TEAM","TEAM_SLUG","TEAM_ID","WINS","LOSSES","PCT","DIV","CONF","HOME","AWAY","GB","GR_OVER_500","GR_OVER_500_HOME","GR_OVER_500_AWAY","GR_UNDER_500","GR_UNDER_500_HOME","GR_UNDER_500_AWAY","RANKING_CRITERIA","CLINCHED_PLAYOFFS","CLINCHED_CONFERENCE","CLINCHED_DIVISION","ELIMINATED_PLAYOFFS","SOSA_REMAINING"],"rowSet":[["East",1,"Detroit","pistons",1610612765,42,13,0.764,"9-3","28-7","21-6","20-7",0.0,17,8,9,11,5,6,0,null,null,null,null,null],["East",2,"Boston","celtics",1610612738,36,19,0.655,"7-5","24-13","18-9","18-10",6.0,15,7,8,12,7,5,0,null,null,null,null,null],["East",3,"New
+        York","knicks",1610612752,36,21,0.632,"10-3","24-14","22-8","13-13",7.0,12,6,6,14,5,9,1,null,null,null,null,null],["East",4,"Cleveland","cavaliers",1610612739,36,21,0.632,"7-3","22-13","19-11","17-10",7.0,12,7,5,13,4,9,0,null,null,null,null,null],["East",5,"Toronto","raptors",1610612761,33,23,0.589,"4-9","25-15","16-13","17-10",9.5,15,8,7,11,4,7,0,null,null,null,null,null],["East",6,"Philadelphia","sixers",1610612755,30,26,0.536,"8-6","19-19","15-15","15-11",12.5,13,5,8,14,6,8,0,null,null,null,null,null],["East",7,"Miami","heat",1610612748,31,27,0.534,"5-5","16-16","17-11","14-16",12.5,13,7,6,12,7,5,0,null,null,null,null,null],["East",8,"Orlando","magic",1610612753,29,26,0.527,"6-5","19-18","17-9","11-15",13.0,15,8,7,13,6,7,0,null,null,null,null,null],["East",9,"Atlanta","hawks",1610612737,27,31,0.466,"5-6","14-21","10-16","17-15",16.5,12,6,6,12,9,3,0,null,null,null,null,null],["East",10,"Charlotte","hornets",1610612766,26,31,0.456,"8-4","16-21","12-16","14-15",17.0,14,8,6,11,5,6,0,null,null,null,null,null],["East",11,"Milwaukee","bucks",1610612749,24,30,0.444,"7-4","17-18","12-12","12-18",17.5,15,10,5,13,7,6,0,null,null,null,null,null],["East",12,"Chicago","bulls",1610612741,24,33,0.421,"3-10","16-24","15-14","9-19",19.0,15,8,7,11,5,6,0,null,null,null,null,null],["East",13,"Washington","wizards",1610612764,16,39,0.291,"2-6","11-23","11-18","5-21",26.0,17,8,9,10,4,6,0,null,null,null,null,null],["East",14,"Brooklyn","nets",1610612751,15,40,0.273,"3-9","11-23","8-19","7-21",27.0,13,5,8,14,9,5,0,null,null,null,null,null],["East",15,"Indiana","pacers",1610612754,15,42,0.263,"3-9","11-28","10-18","5-24",28.0,13,8,5,12,5,7,0,null,null,null,null,null]]},{"name":"WestConfStandings","headers":["CONFERENCE","RANK","TEAM","TEAM_SLUG","TEAM_ID","WINS","LOSSES","PCT","DIV","CONF","HOME","AWAY","GB","GR_OVER_500","GR_OVER_500_HOME","GR_OVER_500_AWAY","GR_UNDER_500","GR_UNDER_500_HOME","GR_UNDER_500_AWAY","RANKING_CRITERIA","CLINCHED_PLAYOFFS","CLINCHED_CONFERENCE","CLINCHED_DIVISION","ELIMINATED_PLAYOFFS","SOSA_REMAINING"],"rowSet":[["West",1,"Oklahoma
+        City","thunder",1610612760,43,14,0.754,"8-3","32-9","23-6","20-7",0.0,18,10,8,7,2,5,0,null,null,null,null,null],["West",2,"San
+        Antonio","spurs",1610612759,40,16,0.714,"10-3","26-13","21-6","18-10",2.5,14,7,7,13,7,6,0,null,null,null,null,null],["West",3,"Denver","nuggets",1610612743,36,21,0.632,"5-2","21-10","15-11","21-10",7.0,17,10,7,8,5,3,0,null,null,null,null,null],["West",4,"Houston","rockets",1610612745,34,21,0.618,"6-5","19-16","18-7","16-14",8.0,16,8,8,12,8,4,1,null,null,null,null,null],["West",5,"L.A.
+        Lakers","lakers",1610612747,34,21,0.618,"6-6","23-14","16-10","18-11",8.0,18,8,10,9,7,2,0,null,null,null,null,null],["West",6,"Minnesota","timberwolves",1610612750,35,22,0.614,"6-5","20-17","20-10","15-12",8.0,15,6,9,10,5,5,0,null,null,null,null,null],["West",7,"Phoenix","suns",1610612756,33,24,0.579,"8-6","22-17","19-10","14-14",10.0,13,6,7,13,7,6,0,null,null,null,null,null],["West",8,"Golden
+        State","warriors",1610612744,29,27,0.518,"6-4","19-16","18-11","11-16",13.5,13,7,6,13,5,8,0,null,null,null,null,null],["West",9,"LA
+        Clippers","clippers",1610612746,27,29,0.482,"7-5","17-17","14-11","13-18",15.5,11,9,2,15,7,8,0,null,null,null,null,null],["West",10,"Portland","blazers",1610612757,27,30,0.474,"5-6","21-17","16-14","11-16",16.0,8,1,7,17,10,7,0,null,null,null,null,null],["West",11,"Memphis","grizzlies",1610612763,21,34,0.382,"5-6","17-21","11-15","9-18",21.0,15,9,6,13,5,8,0,null,null,null,null,null],["West",12,"Dallas","mavericks",1610612742,19,36,0.345,"3-9","11-26","14-16","5-19",23.0,13,6,7,14,5,9,0,null,null,null,null,null],["West",13,"Utah","jazz",1610612762,18,39,0.316,"1-9","10-26","11-18","7-21",25.0,15,7,8,10,5,5,0,null,null,null,null,null],["West",14,"New
+        Orleans","pelicans",1610612740,16,42,0.276,"6-7","9-26","10-21","6-21",27.5,14,6,8,11,5,6,0,null,null,null,null,null],["West",15,"Sacramento","kings",1610612758,12,46,0.207,"2-8","8-30","9-20","3-26",31.5,10,4,6,15,8,7,0,null,null,null,null,null]]},{"name":"EastConfRemainingGames","headers":["TEAM","TEAM_ID","REMAINING_G","REMAINING_HOME_G","REMAINING_AWAY_G"],"rowSet":[["Atlanta",1610612737,24,15,9],["Boston",1610612738,27,14,13],["Brooklyn",1610612751,27,14,13],["Charlotte",1610612766,25,13,12],["Chicago",1610612741,25,12,13],["Cleveland",1610612739,25,11,14],["Detroit",1610612765,27,13,14],["Indiana",1610612754,25,13,12],["Miami",1610612748,24,13,11],["Milwaukee",1610612749,28,17,11],["New
+        York",1610612752,25,10,15],["Orlando",1610612753,27,14,13],["Philadelphia",1610612755,26,11,15],["Toronto",1610612761,26,12,14],["Washington",1610612764,27,12,15]]},{"name":"WestConfRemainingGames","headers":["TEAM","TEAM_ID","REMAINING_G","REMAINING_HOME_G","REMAINING_AWAY_G"],"rowSet":[["Dallas",1610612742,27,11,16],["Denver",1610612743,25,15,10],["Golden
+        State",1610612744,26,12,14],["Houston",1610612745,27,16,11],["L.A. Lakers",1610612747,27,15,12],["LA
+        Clippers",1610612746,26,16,10],["Memphis",1610612763,27,14,13],["Minnesota",1610612750,25,11,14],["New
+        Orleans",1610612740,24,10,14],["Oklahoma City",1610612760,25,12,13],["Phoenix",1610612756,25,12,13],["Portland",1610612757,25,11,14],["Sacramento",1610612758,24,12,12],["San
+        Antonio",1610612759,26,13,13],["Utah",1610612762,25,12,13]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '2215'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:37:04 GMT
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '1800.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '3'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '384.478'
+      x-varnish:
+      - 69878005 67891680
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

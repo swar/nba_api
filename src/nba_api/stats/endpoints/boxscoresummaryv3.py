@@ -8,7 +8,7 @@ and advanced statistics.
 
 Example:
     >>> from nba_api.stats.endpoints import BoxScoreSummaryV3
-    >>> summary = BoxScoreSummaryV3(game_id='0022500142')
+    >>> summary = BoxScoreSummaryV3(game_id="0022500142")
     >>> game_data = summary.game_info.get_dict()
 """
 
@@ -53,7 +53,7 @@ class BoxScoreSummaryV3(Endpoint):
     Example:
         >>> from nba_api.stats.endpoints import BoxScoreSummaryV3
         >>> # Get game summary
-        >>> summary = BoxScoreSummaryV3(game_id='0022500142')
+        >>> summary = BoxScoreSummaryV3(game_id="0022500142")
         >>>
         >>> # Access game info as dictionary
         >>> game_info = summary.game_info.get_dict()
@@ -61,7 +61,7 @@ class BoxScoreSummaryV3(Endpoint):
         >>>
         >>> # Access team statistics as DataFrame
         >>> stats_df = summary.other_stats.get_data_frame()
-        >>> print(stats_df[['teamCity', 'points', 'pointsInThePaint']])
+        >>> print(stats_df[["teamCity", "points", "pointsInThePaint"]])
         >>>
         >>> # Get all datasets as DataFrames
         >>> all_data = summary.get_data_frames()

@@ -1,0 +1,99 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF3GHeEWcAQAAdhnZgx5IFVJZR3JzrPdRwJ26ggn4XVjZJUwLC/nwSLOzrB8kh8MR4soFHlOY7qlYaYAcuWrjkAAiu2VBkes2yR0c2XfFQigGcfKZlMmKe3JqDxabwnBUhU8VXGi0eXRq/vcztZ+shY2HXpzK9d3o/u8tXv/ah24gHSouNsJHyJ1/NF5KmCZ9LeEfwNc3FLP2vDwdkGqGMs0NN+LSh2qgXxaqlXNUiRVQDm2kjeAOrA==~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/cumestatsteam?GameIDs=0022200552&LeagueID=00&Season=2025-26&SeasonType=Regular+Season&TeamID=1610612739
+  response:
+    body:
+      string: '{"resource":"cumestatsteam","parameters":{"LeagueID":"00","Season":"2025-26","SeasonType":"Regular
+        Season","TeamID":1610612739,"GameIDs":"0022200552"},"resultSets":[{"name":"GameByGameStats","headers":["JERSEY_NUM","PLAYER","PERSON_ID","TEAM_ID","GP","GS","ACTUAL_MINUTES","ACTUAL_SECONDS","FG","FGA","FG_PCT","FG3","FG3A","FG3_PCT","FT","FTA","FT_PCT","OFF_REB","DEF_REB","TOT_REB","AST","PF","DQ","STL","TURNOVERS","BLK","PTS","MAX_ACTUAL_MINUTES","MAX_ACTUAL_SECONDS","MAX_REB","MAX_AST","MAX_STL","MAX_TURNOVERS","MAX_BLKP","MAX_PTS","AVG_ACTUAL_MINUTES","AVG_ACTUAL_SECONDS","AVG_REB","AVG_AST","AVG_STL","AVG_TURNOVERS","AVG_BLKP","AVG_PTS","PER_MIN_REB","PER_MIN_AST","PER_MIN_STL","PER_MIN_TURNOVERS","PER_MIN_BLK","PER_MIN_PTS"],"rowSet":[["45","Mitchell,
+        D",1628378,1610612739,1,1,49,48,22,34,0.647,7,15,0.467,20,25,0.8,3,5,8,11,3,0,0,4,1,71,49,48,8,11,0,4,1,71,49,48.0,8.0,11.0,0.0,4.0,1.0,71.0,7.7,10.6,0.0,3.9,0.96,68.4],["31","Allen,
+        J",1628386,1610612739,1,1,38,35,9,10,0.9,0,0,0.0,3,6,0.5,6,2,8,2,4,0,0,1,1,21,38,35,8,2,0,1,1,21,38,35.0,8.0,2.0,0.0,1.0,1.0,21.0,10.0,2.5,0.0,1.2,1.24,26.1],["","Osman,
+        C",1626224,1610612739,1,0,36,15,6,13,0.462,4,11,0.364,3,4,0.75,0,3,3,4,3,0,0,1,0,19,36,15,3,4,0,1,0,19,36,15.0,3.0,4.0,0.0,1.0,0.0,19.0,4.0,5.3,0.0,1.3,0.0,25.2],["","Love,
+        K",201567,1610612739,1,1,37,48,4,10,0.4,3,9,0.333,1,2,0.5,1,16,17,2,6,1,0,1,0,12,37,48,17,2,0,1,0,12,37,48.0,17.0,2.0,0.0,1.0,0.0,12.0,21.6,2.5,0.0,1.3,0.0,15.2],["","LeVert,
+        C",1627747,1610612739,1,1,39,9,2,13,0.154,1,7,0.143,5,6,0.833,0,5,5,3,4,0,1,1,0,10,39,9,5,3,1,1,0,10,39,9.0,5.0,3.0,1.0,1.0,0.0,10.0,6.1,3.7,1.23,1.2,0.0,12.3],["","Stevens,
+        L",1630205,1610612739,1,1,19,9,2,5,0.4,0,2,0.0,0,0,0.0,0,1,1,2,0,0,0,0,0,4,19,9,1,2,0,0,0,4,19,9.0,1.0,2.0,0.0,0.0,0.0,4.0,2.5,5.0,0.0,0.0,0.0,10.0],["","Neto,
+        R",203526,1610612739,1,0,17,27,2,3,0.667,0,1,0.0,0,0,0.0,1,0,1,2,0,0,0,1,0,4,17,27,1,2,0,1,0,4,17,27.0,1.0,2.0,0.0,1.0,0.0,4.0,2.8,5.5,0.0,2.8,0.0,11.0],["","Okoro,
+        I",1630171,1610612739,1,0,19,34,1,3,0.333,1,1,1.0,0,0,0.0,1,2,3,1,6,1,0,0,1,3,19,34,3,1,0,0,1,3,19,34.0,3.0,1.0,0.0,0.0,1.0,3.0,7.4,2.5,0.0,0.0,2.45,7.4],["","Lopez,
+        R",201577,1610612739,1,0,7,15,0,1,0.0,0,0,0.0,1,2,0.5,1,0,1,0,1,0,0,1,0,1,7,15,1,0,0,1,0,1,7,15.0,1.0,0.0,0.0,1.0,0.0,1.0,6.6,0.0,0.0,6.6,0.0,6.6],["4","Mobley,
+        E",1630596,1610612739,0,0,0,0,0,0,0.0,0,0,0.0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],["","Mobley,
+        I",1630600,1610612739,0,0,0,0,0,0,0.0,0,0,0.0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]]},{"name":"TotalTeamStats","headers":["CITY","NICKNAME","TEAM_ID","W","L","W_HOME","L_HOME","W_ROAD","L_ROAD","TEAM_TURNOVERS","TEAM_REBOUNDS","GP","GS","ACTUAL_MINUTES","ACTUAL_SECONDS","FG","FGA","FG_PCT","FG3","FG3A","FG3_PCT","FT","FTA","FT_PCT","OFF_REB","DEF_REB","TOT_REB","AST","PF","STL","TOTAL_TURNOVERS","BLK","PTS","AVG_REB","AVG_PTS","DQ"],"rowSet":[["Cleveland","Cavaliers",1610612739,1,0,1,0,0,0,0,10,1,5,265,0,48,92,0.522,16,46,0.348,33,45,0.733,13,34,57,27,27,1,10,3,145,57.0,145.0,2],["OPPONENTS","
+        ",0,0,1,0,0,0,1,0,9,1,5,265,0,47,95,0.495,10,33,0.303,30,34,0.882,6,36,51,22,33,8,7,2,134,51.0,134.0,1]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1189'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:36:09 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF4+HeEWcAQAALRzZgx5MqwLcNz+JDkpLgPoy/W0913LmwnCuXIOv+xW5O2ZROJS4f2Vc3ZLMUzuGdVViBNagkj1LCAM+fY30rnk0qknVvCM/m2ntYQWL45x1nKcTZjgMAPWQiykNEQY9o9NDrZObIcPc3tp8La3qKVm95/KyxcfnmQwbjlCCNomf8b/OxqoV9+DtVuJH1VlTpVBu5ThnM8Z20Zc7yu5UdP8LvFjtpT59VSqP7gDFDA==~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7155;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '120.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '3'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '-1274.517'
+      x-varnish:
+      - 38308625 36069359
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

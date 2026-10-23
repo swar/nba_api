@@ -10,7 +10,7 @@ BOXSCORESCORINGV3_SAMPLE = {
     "meta": {
         "version": 1,
         "request": "http://nba.cloud/games/1022500165/boxscorescoringv3?Format=json",
-        "time": "2025-11-05T20:06:02.62Z"
+        "time": "2025-11-05T20:06:02.62Z",
     },
     "boxScoreScoring": {
         "gameId": "1022500165",
@@ -48,8 +48,8 @@ BOXSCORESCORINGV3_SAMPLE = {
                         "percentageAssisted3pt": 1.0,
                         "percentageUnassisted3pt": 0.0,
                         "percentageAssistedFGM": 0.5,
-                        "percentageUnassistedFGM": 0.5
-                    }
+                        "percentageUnassistedFGM": 0.5,
+                    },
                 }
             ],
             "statistics": {
@@ -68,8 +68,8 @@ BOXSCORESCORINGV3_SAMPLE = {
                 "percentageAssisted3pt": 0.75,
                 "percentageUnassisted3pt": 0.25,
                 "percentageAssistedFGM": 0.741,
-                "percentageUnassistedFGM": 0.259
-            }
+                "percentageUnassistedFGM": 0.259,
+            },
         },
         "awayTeam": {
             "teamId": 1611661328,
@@ -103,8 +103,8 @@ BOXSCORESCORINGV3_SAMPLE = {
                         "percentageAssisted3pt": 0.0,
                         "percentageUnassisted3pt": 0.0,
                         "percentageAssistedFGM": 0.571,
-                        "percentageUnassistedFGM": 0.429
-                    }
+                        "percentageUnassistedFGM": 0.429,
+                    },
                 }
             ],
             "statistics": {
@@ -123,8 +123,8 @@ BOXSCORESCORINGV3_SAMPLE = {
                 "percentageAssisted3pt": 1.0,
                 "percentageUnassisted3pt": 0.0,
                 "percentageAssistedFGM": 0.714,
-                "percentageUnassistedFGM": 0.286
-            }
-        }
-    }
+                "percentageUnassistedFGM": 0.286,
+            },
+        },
+    },
 }

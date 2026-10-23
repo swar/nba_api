@@ -1,20 +1,20 @@
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
 from nba_api.stats.library.parameters import (
+    ConferenceNullable,
+    DivisionNullable,
     GameSegmentNullable,
     LastNGamesNullable,
     LeagueIDNullable,
     LocationNullable,
     MonthNullable,
     OutcomeNullable,
-    PerModeSimpleNullable,
     PeriodNullable,
-    SeasonNullable,
+    PerModeSimpleNullable,
+    Season,
     SeasonSegmentNullable,
     SeasonTypeNullable,
     ShotClockRangeNullable,
-    ConferenceNullable,
-    DivisionNullable,
 )
 
 
@@ -103,7 +103,7 @@ class TeamGameLogs(Endpoint):
         per_mode_simple_nullable=PerModeSimpleNullable.default,
         period_nullable=PeriodNullable.default,
         player_id_nullable="",
-        season_nullable=SeasonNullable.default,
+        season_nullable=Season.default,
         season_segment_nullable=SeasonSegmentNullable.default,
         season_type_nullable=SeasonTypeNullable.default,
         shot_clock_range_nullable=ShotClockRangeNullable.default,

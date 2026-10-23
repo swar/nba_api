@@ -1,6 +1,8 @@
 # DraftBoard
 ##### [nba_api/stats/endpoints/draftboard.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/draftboard.py)
 
+> **Known issue:** as of 2026-10-21 stats.nba.com answers this endpoint with HTTP 500 for every parameter combination tried. See [Known upstream issues](../known_upstream_issues.md#failing-upstream).
+
 ##### Endpoint URL
 >[https://stats.nba.com/stats/draftboard](https://stats.nba.com/stats/draftboard)
 

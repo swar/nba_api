@@ -1,24 +1,24 @@
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
 from nba_api.stats.library.parameters import (
+    ConferenceNullable,
+    DivisionNullable,
+    GameSegmentNullable,
     LastNGames,
+    LeagueIDNullable,
+    LocationNullable,
     MeasureTypeDetailed,
     Month,
+    OutcomeNullable,
     PaceAdjust,
-    PerModeDetailed,
     Period,
+    PerModeDetailed,
     PlusMinus,
     Rank,
     Season,
-    SeasonType,
-    GameSegmentNullable,
-    LeagueIDNullable,
-    LocationNullable,
-    OutcomeNullable,
     SeasonSegmentNullable,
+    SeasonType,
     ShotClockRangeNullable,
-    ConferenceNullable,
-    DivisionNullable,
 )
 
 
@@ -762,6 +762,7 @@ class PlayerDashboardByClutch(Endpoint):
         shot_clock_range_nullable=ShotClockRangeNullable.default,
         vs_conference_nullable=ConferenceNullable.default,
         vs_division_nullable=DivisionNullable.default,
+        ist_round_nullable=None,
         proxy=None,
         headers=None,
         timeout=30,
@@ -795,6 +796,7 @@ class PlayerDashboardByClutch(Endpoint):
             "ShotClockRange": shot_clock_range_nullable,
             "VsConference": vs_conference_nullable,
             "VsDivision": vs_division_nullable,
+            "ISTRound": ist_round_nullable,
         }
         if get_request:
             self.get_request()

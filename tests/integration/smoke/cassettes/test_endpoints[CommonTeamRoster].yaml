@@ -1,0 +1,136 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAl0YbWicAQAAOw/Zgx59tpO/BTsz2Oj353HAvm9+U2cauCSt46Qh+OjuFgDj88YV765QqVUVxepF85Rd6YUecNgN6Mfi42At3ycQBdSRNLOcr+6qze9SgjfaieLYC5RFHCJmetAit+tFcTFA2VFYld4iUHsQZ0wZ0AY5sM4/VUnDJ7WRMj3QOSDCLQa77mVG77IMamcT/lnkAoPgTIJoAZoJT35poT0+QuKdxOdOAWPCrKqiPlWGAA==~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/commonteamroster?LeagueID=00&Season=2025-26&TeamID=1610612739
+  response:
+    body:
+      string: "{\"resource\":\"commonteamroster\",\"parameters\":{\"TeamID\":1610612739,\"LeagueID\":\"00\",\"Season\":\"2025-26\"},\"resultSets\":[{\"name\":\"CommonTeamRoster\",\"headers\":[\"TeamID\",\"SEASON\",\"LeagueID\",\"PLAYER\",\"NICKNAME\",\"PLAYER_SLUG\",\"NUM\",\"POSITION\",\"HEIGHT\",\"WEIGHT\",\"BIRTH_DATE\",\"AGE\",\"EXP\",\"SCHOOL\",\"PLAYER_ID\",\"HOW_ACQUIRED\"],\"rowSet\":[[1610612739,\"2025\",\"00\",\"Darius
+        Brown\",\"Darius\",\"darius-brown\",null,\"G\",\"6-2\",\"192\",\"JUL 28, 1999\",26.0,\"R\",\"Utah
+        State\",1642468,\"Signed on 10/14/24\"],[1610612739,\"2025\",\"00\",\"James
+        Harden\",\"James\",\"james-harden\",\"1\",\"G\",\"6-5\",\"220\",\"AUG 26,
+        1989\",36.0,\"16\",\"Arizona State\",201935,\"Traded from LAC on 02/04/26\"],[1610612739,\"2025\",\"00\",\"Max
+        Strus\",\"Max\",\"max-strus\",\"2\",\"G-F\",\"6-5\",\"215\",\"MAR 28, 1996\",29.0,\"6\",\"DePaul\",1629622,\"Traded
+        from MIA on 07/06/23\"],[1610612739,\"2025\",\"00\",\"Thomas Bryant\",\"Thomas\",\"thomas-bryant\",\"3\",\"C-F\",\"6-9\",\"248\",\"JUL
+        31, 1997\",28.0,\"8\",\"Indiana\",1628418,\"Signed on 09/25/25\"],[1610612739,\"2025\",\"00\",\"Evan
+        Mobley\",\"Evan\",\"evan-mobley\",\"4\",\"C\",\"6-11\",\"215\",\"JUN 18, 2001\",24.0,\"4\",\"Southern
+        California\",1630596,\"#3 Pick in 2021 Draft\"],[1610612739,\"2025\",\"00\",\"Sam
+        Merrill\",\"Sam\",\"sam-merrill\",\"5\",\"G\",\"6-4\",\"205\",\"MAY 15, 1996\",29.0,\"5\",\"Utah
+        State\",1630241,\"Signed on 03/03/23\"],[1610612739,\"2025\",\"00\",\"Dennis
+        Schr\xF6der\",\"Dennis\",\"dennis-schr\xF6der\",\"8\",\"G\",\"6-1\",\"175\",\"SEP
+        15, 1993\",32.0,\"12\",\"Braunschweig\",203471,\"Traded from SAC on 02/01/26\"],[1610612739,\"2025\",\"00\",\"Craig
+        Porter Jr.\",\"Craig\",\"craig-porter-jr\",\"9\",\"G\",\"6-1\",\"180\",\"FEB
+        26, 2000\",25.0,\"2\",\"Wichita State\",1641854,\"Signed on 07/03/23\"],[1610612739,\"2025\",\"00\",\"Riley
+        Minix\",\"Riley\",\"riley-minix\",\"12\",\"F\",\"6-7\",\"230\",\"SEP 22, 2000\",25.0,\"1\",\"Morehead
+        State\",1642434,\"Signed on 02/13/26\"],[1610612739,\"2025\",\"00\",\"Keon
+        Ellis\",\"Keon\",\"keon-ellis\",\"14\",\"G\",\"6-4\",\"175\",\"JAN 08, 2000\",26.0,\"3\",\"Alabama\",1631165,\"Traded
+        from SAC on 02/01/26\"],[1610612739,\"2025\",\"00\",\"Emanuel Miller\",\"Emanuel\",\"emanuel-miller\",\"15\",\"F\",\"6-5\",\"215\",\"JUN
+        19, 2000\",25.0,\"1\",\"TCU\",1641801,null],[1610612739,\"2025\",\"00\",\"Jaylon
+        Tyson\",\"Jaylon\",\"jaylon-tyson\",\"20\",\"G-F\",\"6-6\",\"215\",\"DEC 02,
+        2002\",23.0,\"1\",\"California\",1642281,\"#20 Pick in 2024 Draft\"],[1610612739,\"2025\",\"00\",\"Tristan
+        Enaruna\",\"Tristan\",\"tristan-enaruna\",\"21\",\"F\",\"6-7\",\"220\",\"JUN
+        26, 2001\",24.0,\"R\",\"Cleveland State\",1642400,\"Signed on 09/26/25\"],[1610612739,\"2025\",\"00\",\"Larry
+        Nance Jr.\",\"Larry\",\"larry-nance-jr\",\"22\",\"F-C\",\"6-6\",\"245\",\"JAN
+        01, 1993\",33.0,\"10\",\"Wyoming\",1626204,\"Signed on 07/06/25\"],[1610612739,\"2025\",\"00\",\"Tyrese
+        Proctor\",\"Tyrese\",\"tyrese-proctor\",\"24\",\"G\",\"6-4\",\"185\",\"APR
+        01, 2004\",21.0,\"R\",\"Duke\",1642878,\"#49 Pick in 2025 Draft\"],[1610612739,\"2025\",\"00\",\"Jarrett
+        Allen\",\"Jarrett\",\"jarrett-allen\",\"31\",\"C\",\"6-9\",\"243\",\"APR 21,
+        1998\",27.0,\"8\",\"Texas\",1628386,\"Traded from BKN on 01/16/21\"],[1610612739,\"2025\",\"00\",\"Dean
+        Wade\",\"Dean\",\"dean-wade\",\"32\",\"F-C\",\"6-9\",\"228\",\"NOV 20, 1996\",29.0,\"6\",\"Kansas
+        State\",1629731,\"Signed on 07/01/19\"],[1610612739,\"2025\",\"00\",\"Nae'Qwan
+        Tomlin\",\"Nae'Qwan\",\"naeqwan-tomlin\",\"35\",\"F\",\"6-8\",\"210\",\"DEC
+        19, 2000\",25.0,\"1\",\"Memphis\",1641772,\"Signed on 09/23/24\"],[1610612739,\"2025\",\"00\",\"Donovan
+        Mitchell\",\"Donovan\",\"donovan-mitchell\",\"45\",\"G\",\"6-2\",\"215\",\"SEP
+        07, 1996\",29.0,\"8\",\"Louisville\",1628378,\"Traded from UTA on 09/03/22\"]]},{\"name\":\"Coaches\",\"headers\":[\"TEAM_ID\",\"SEASON\",\"COACH_ID\",\"FIRST_NAME\",\"LAST_NAME\",\"COACH_NAME\",\"IS_ASSISTANT\",\"COACH_TYPE\",\"SORT_SEQUENCE\",\"SUB_SORT_SEQUENCE\"],\"rowSet\":[[1610612739,\"2025\",201690,\"Kenny\",\"Atkinson\",\"Kenny
+        Atkinson\",1,\"Head Coach\",null,1],[1610612739,\"2025\",204008,\"Johnnie\",\"Bryant\",\"Johnnie
+        Bryant\",9,\"Associate Head Coach\",null,2],[1610612739,\"2025\",202565,\"Mike\",\"Gerrity\",\"Mike
+        Gerrity\",2,\"Assistant Coach\",1,5],[1610612739,\"2025\",1631326,\"Trevor\",\"Hendry\",\"Trevor
+        Hendry\",2,\"Assistant Coach\",2,5],[1610612739,\"2025\",1643350,\"Alex\",\"Sarama\",\"Alex
+        Sarama\",2,\"Assistant Coach\",3,5],[1610612739,\"2025\",1643351,\"Jawad\",\"Williams\",\"Jawad
+        Williams\",2,\"Assistant Coach\",4,5],[1610612739,\"2025\",1641539,\"Omar\",\"Cook\",\"Omar
+        Cook\",2,\"Assistant Coach\",5,5],[1610612739,\"2025\",1642529,\"Nate\",\"Reinking\",\"Nate
+        Reinking\",2,\"Assistant Coach\",6,5],[1610612739,\"2025\",1643352,\"Andrew\",\"Olson\",\"Andrew
+        Olson\",2,\"Assistant Coach\",7,5],[1610612739,\"2025\",204286,\"Stephen\",\"Spiro\",\"Stephen
+        Spiro\",3,\"Trainer\",null,7]]}]}"
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1692'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:36:07 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAmgYbWicAQAAhhHZgx4MrRgb3gIIZoy7BC5rhHOUlZeznU21rjqfgzzQPHEoVnFFG8zjbdM7fcqJRhl5gppMgk4G6tO3L4j2SpPQ0UkbhaHj+DHBGuZdt/0a+25dvzEGP6UlNfc/biJo7iq78jWu8klviQen7aOjFUR0bTjlP0E/Qd0LtkwIz/hljcrcTVIuHf57cQfv5meNsubSmcOlo3ic7pPF0Skkrl9mLC8VlQts+NEKArpA2Q==~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7157;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-2
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - S3
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '7200.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '6'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '6618.670'
+      x-varnish:
+      - 28143677 26227914
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

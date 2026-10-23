@@ -1,3 +1,13 @@
+"""
+BoxScoreMiscV2 endpoint.
+
+.. deprecated:: 2026-27
+    This endpoint is deprecated. Please use BoxScoreMiscV3 instead.
+    The NBA API no longer returns data for BoxScoreMiscV2 (returns empty JSON).
+"""
+
+import warnings
+
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
 from nba_api.stats.library.parameters import (
@@ -10,6 +20,15 @@ from nba_api.stats.library.parameters import (
 
 
 class BoxScoreMiscV2(Endpoint):
+    """
+    BoxScoreMiscV2 endpoint.
+
+    .. deprecated:: 2026-27
+        **DEPRECATION WARNING:** This endpoint is deprecated.
+        Please use :class:`~nba_api.stats.endpoints.BoxScoreMiscV3` instead.
+        The NBA API no longer returns data for BoxScoreMiscV2 (returns empty JSON).
+    """
+
     endpoint = "boxscoremiscv2"
     expected_data = {
         "sqlPlayersMisc": [
@@ -76,6 +95,13 @@ class BoxScoreMiscV2(Endpoint):
         timeout=30,
         get_request=True,
     ):
+        warnings.warn(
+            "BoxScoreMiscV2 is deprecated and will be removed in a future version. "
+            "Please use BoxScoreMiscV3 instead. "
+            "The NBA API no longer returns data for BoxScoreMiscV2 (returns empty JSON).",
+            DeprecationWarning,
+            stacklevel=2,
+        )
         self.proxy = proxy
         if headers is not None:
             self.headers = headers

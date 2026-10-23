@@ -19,40 +19,36 @@ class NBAStatsScheduleLeagueV2Parser:
         return results
 
     def get_weeks_headers(self):
-        weeks = self.nba_dict[list(self.nba_dict.keys())[1]]["weeks"]
+        weeks = self.nba_dict["leagueSchedule"]["weeks"]
         if not weeks:
             # Return default headers when weeks array is empty (e.g., older seasons)
-            headers = tuple(
-                [
-                    "leagueId",
-                    "seasonYear",
-                    "weekNumber",
-                    "weekName",
-                    "startDate",
-                    "endDate",
-                ]
+            headers = (
+                "leagueId",
+                "seasonYear",
+                "weekNumber",
+                "weekName",
+                "startDate",
+                "endDate",
             )
         else:
             tmp = weeks[0]
-            headers = tuple(
-                ["leagueId", "seasonYear"] + [header for header in tmp.keys()]
-            )
+            headers = tuple(["leagueId", "seasonYear"] + list(tmp))
         return headers
 
     def get_weeks_data(self):
-        tmp = self.nba_dict[list(self.nba_dict.keys())[1]]
+        tmp = self.nba_dict["leagueSchedule"]
         return [
             [tmp["leagueId"], tmp["seasonYear"]] + list(x.values())
             for x in tmp["weeks"]
         ]
 
     def get_games_headers(self):
-        tmp = self.nba_dict[list(self.nba_dict.keys())[1]]["gameDates"][0]["games"][0]
+        tmp = self.nba_dict["leagueSchedule"]["gameDates"][0]["games"][0]
         headers = tuple(
             ["leagueId", "seasonYear", "gameDate"]
             + [
                 header
-                for header in tmp.keys()
+                for header in tmp
                 if header
                 not in ("broadcasters", "awayTeam", "homeTeam", "pointsLeaders")
             ]
@@ -64,7 +60,7 @@ class NBAStatsScheduleLeagueV2Parser:
 
     def get_games_data(self):
         data = []
-        tmp = self.nba_dict[list(self.nba_dict.keys())[1]]
+        tmp = self.nba_dict["leagueSchedule"]
         all_gameDates = tmp["gameDates"]
         for gameDate in all_gameDates:
             for game in gameDate["games"]:
@@ -93,11 +89,11 @@ class NBAStatsScheduleLeagueV2Parser:
         return data
 
     def get_broadcaster_types(self):
-        tmp = self.nba_dict[list(self.nba_dict.keys())[1]]["gameDates"][0]["games"][0]
+        tmp = self.nba_dict["leagueSchedule"]["gameDates"][0]["games"][0]
         return tmp["broadcasters"].keys()
 
     def broadcaster_type_max(self, broadcaster_type):
-        all_gameDates = self.nba_dict[list(self.nba_dict.keys())[1]]["gameDates"]
+        all_gameDates = self.nba_dict["leagueSchedule"]["gameDates"]
         max_count = 0
         for gameDate in all_gameDates:
             for game in gameDate["games"]:
@@ -105,7 +101,7 @@ class NBAStatsScheduleLeagueV2Parser:
         return max_count
 
     def get_broadcaster_keys(self):
-        all_gameDates = self.nba_dict[list(self.nba_dict.keys())[1]]["gameDates"]
+        all_gameDates = self.nba_dict["leagueSchedule"]["gameDates"]
         # Not all games have any broadcasters (so can't use use game 0)
         # Not all broadcasters types are valid for any given game (so can't use broadcaster 0)
         # So we need to iterate over all games and all broadcasters types until we find them
@@ -133,13 +129,13 @@ class NBAStatsScheduleLeagueV2Parser:
             ibroadcasters = iter(game_dict["broadcasters"][broadcaster_type])
             for _ in range(max_count):
                 broadcaster = next(
-                    ibroadcasters, {k: None for k in self.get_broadcaster_keys()}
+                    ibroadcasters, dict.fromkeys(self.get_broadcaster_keys())
                 )
                 data.extend(list(broadcaster.values()))
         return data
 
     def points_leaders_max(self):
-        all_gameDates = self.nba_dict[list(self.nba_dict.keys())[1]]["gameDates"]
+        all_gameDates = self.nba_dict["leagueSchedule"]["gameDates"]
         max_count = 0
         for gameDate in all_gameDates:
             for game in gameDate["games"]:
@@ -147,7 +143,7 @@ class NBAStatsScheduleLeagueV2Parser:
         return max_count
 
     def get_points_leaders_keys(self):
-        all_gameDates = self.nba_dict[list(self.nba_dict.keys())[1]]["gameDates"]
+        all_gameDates = self.nba_dict["leagueSchedule"]["gameDates"]
         # Future games don't have points leaders (empty array), so iterate until we find one
 
         for gameDate in all_gameDates:
@@ -175,9 +171,9 @@ class NBAStatsScheduleLeagueV2Parser:
         for _ in range(max_count):
             pointsLeader = next(
                 ipointsLeaders,
-                {
-                    k: None for k in self.get_points_leaders_keys()
-                },  # Default to None for missing points leaders
+                dict.fromkeys(
+                    self.get_points_leaders_keys()
+                ),  # Default to None for missing points leaders
             )
             data.extend(list(pointsLeader.values()))
         return data
@@ -185,7 +181,7 @@ class NBAStatsScheduleLeagueV2Parser:
     def get_team_headers(self):
         headers = []
 
-        tmp = self.nba_dict[list(self.nba_dict.keys())[1]]
+        tmp = self.nba_dict["leagueSchedule"]
         tmp_team = tmp["gameDates"][0]["games"][0]["homeTeam"]
         team_keys = list(tmp_team.keys())
 
@@ -217,11 +213,11 @@ class NBAStatsScheduleLeagueV2IntParser(NBAStatsScheduleLeagueV2Parser):
         return results
 
     def get_broadcaster_list_headers(self):
-        tmp = self.nba_dict[list(self.nba_dict.keys())[1]]["broadcasterList"][0]
-        return tuple(["leagueId", "seasonYear"] + [header for header in tmp.keys()])
+        tmp = self.nba_dict["leagueSchedule"]["broadcasterList"][0]
+        return tuple(["leagueId", "seasonYear"] + list(tmp))
 
     def get_broadcaster_list_data(self):
-        tmp = self.nba_dict[list(self.nba_dict.keys())[1]]
+        tmp = self.nba_dict["leagueSchedule"]
         return [
             [tmp["leagueId"], tmp["seasonYear"]] + list(x.values())
             for x in tmp["broadcasterList"]

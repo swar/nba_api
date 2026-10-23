@@ -3,8 +3,8 @@ from nba_api.stats.library.http import NBAStatsHTTP
 from nba_api.stats.library.parameters import (
     LeagueID,
     PerModeSimple,
-    SeasonTypeAllStar,
     SeasonNullable,
+    SeasonTypeAllStar,
 )
 
 

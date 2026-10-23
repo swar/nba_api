@@ -1,9 +1,10 @@
-import os
 import json
-import random
+import os
+from urllib.parse import quote_plus
+
 import requests
 
-from urllib.parse import quote_plus
+from nba_api.library.proxy import as_proxies, redact, resolve_proxy
 
 try:
     from nba_api.library.debug.debug import DEBUG
@@ -17,16 +18,31 @@ except ImportError:
     DEBUG_STORAGE = False
 
 
-try:
-    from nba_api.library.debug.debug import PROXY
-except ImportError:
-    PROXY = ""
-
-
 if DEBUG:
     from hashlib import md5
 
     print("DEBUG MODE")
+
+
+def _redacted(error, proxy_url):
+    """Mask proxy credentials in ``error`` in place.
+
+    Does nothing unless the proxy URL carries credentials. Otherwise it rewrites only
+    the arguments that contain them (keeping the exception type, ``request`` and
+    ``response``) and drops the chained cause/context, whose urllib3 messages can
+    embed the proxy URL.
+    """
+    if not proxy_url or "@" not in proxy_url:
+        return error
+    args = tuple(
+        masked if (masked := redact(arg, proxy_url)) != str(arg) else arg
+        for arg in error.args
+    )
+    if args != error.args:
+        error.args = args
+        error.__cause__ = None
+        error.__context__ = None
+    return error
 
 
 class NBAResponse:
@@ -97,36 +113,20 @@ class NBAHTTP:
         endpoint = endpoint.lower()
         self.parameters = parameters
 
-        if headers is None:
-            request_headers = self.headers
-        else:
-            request_headers = headers
+        request_headers = self.headers if headers is None else headers
 
         if referer:
             request_headers["Referer"] = referer
 
-        if proxy is None:
-            request_proxy = PROXY
-        elif not proxy:
-            request_proxy = None
-        else:
-            request_proxy = proxy
-
-        if isinstance(request_proxy, list):
-            request_proxy = random.choice(request_proxy)
-            if DEBUG:
-                print(request_proxy)
-
-        proxies = None
-        if request_proxy:
-            proxies = {
-                "http": request_proxy,
-                "https": request_proxy,
-            }
+        request_proxy = resolve_proxy(proxy)
+        if DEBUG and request_proxy:
+            print(redact(request_proxy, request_proxy))
+        proxies = as_proxies(request_proxy)
 
         url = None
         status_code = None
         contents = None
+        file_path = None
 
         # Sort parameters by key... for some reason this matters for some requests...
         parameters = sorted(parameters.items(), key=lambda kv: kv[0])
@@ -138,7 +138,7 @@ class NBAHTTP:
                 "{}={}".format(key, "" if val is None else quote_plus(str(val)))
                 for key, val in parameters
             )
-            url = "{}?{}".format(base_url, parameter_string)
+            url = f"{base_url}?{parameter_string}"
             print(url)
             file_name = "{}-{}.txt".format(
                 endpoint, md5(parameter_string.encode("utf-8")).hexdigest()
@@ -151,28 +151,29 @@ class NBAHTTP:
             file_path = os.path.join(file_path, file_name)
             print(file_name, os.path.isfile(file_path))
             if os.path.isfile(file_path):
-                f = open(file_path, "r")
-                contents = f.read()
-                f.close()
+                with open(file_path) as f:
+                    contents = f.read()
                 print("loading from file...")
 
         if not contents:
-            response = self.get_session().get(
-                url=base_url,
-                params=parameters,
-                headers=request_headers,
-                proxies=proxies,
-                timeout=timeout,
-            )
+            try:
+                response = self.get_session().get(
+                    url=base_url,
+                    params=parameters,
+                    headers=request_headers,
+                    proxies=proxies,
+                    timeout=timeout,
+                )
+            except requests.RequestException as e:
+                raise _redacted(e, request_proxy) from None
             url = response.url
             status_code = response.status_code
             contents = response.text
 
         contents = self.clean_contents(contents)
         if DEBUG and DEBUG_STORAGE:
-            f = open(file_path, "w")
-            f.write(contents)
-            f.close()
+            with open(file_path, "w") as f:
+                f.write(contents)
             print(url)
 
         data = self.nba_response(response=contents, status_code=status_code, url=url)

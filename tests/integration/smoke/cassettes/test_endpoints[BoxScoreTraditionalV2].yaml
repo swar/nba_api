@@ -1,0 +1,111 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF4KGeEWcAQAAlPrYgx609oecPnqCN2IsXPuAWU+QG5oTkpie0Ig2ok2viqU3vycUEaK9UkOPeovyIWeddjGKi8gQKSi8WeGgOS3fQfNMWbKaOHE99Cl+BP7C9Sxpxrt36LM6mD/KJhGRERF9IvxQGKgDPPz46TDKmWGeDFkgMuirJ4qncxo8SMwwSYA/1I75u23ESVgomDosu/P8usDxQthGZ+qNDCFQPgiY2Bbvn0bjeuf/pndXMw==~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/boxscoretraditionalv2?EndPeriod=0&EndRange=0&GameID=0022200552&RangeType=0&StartPeriod=0&StartRange=0
+  response:
+    body:
+      string: "{\"resource\":\"boxscore\",\"parameters\":{\"GameID\":\"0022200552\",\"StartPeriod\":0,\"EndPeriod\":0,\"StartRange\":0,\"EndRange\":0,\"RangeType\":0},\"resultSets\":[{\"name\":\"PlayerStats\",\"headers\":[\"GAME_ID\",\"TEAM_ID\",\"TEAM_ABBREVIATION\",\"TEAM_CITY\",\"PLAYER_ID\",\"PLAYER_NAME\",\"NICKNAME\",\"START_POSITION\",\"COMMENT\",\"MIN\",\"FGM\",\"FGA\",\"FG_PCT\",\"FG3M\",\"FG3A\",\"FG3_PCT\",\"FTM\",\"FTA\",\"FT_PCT\",\"OREB\",\"DREB\",\"REB\",\"AST\",\"STL\",\"BLK\",\"TO\",\"PF\",\"PTS\",\"PLUS_MINUS\"],\"rowSet\":[[\"0022200552\",1610612741,\"CHI\",\"Chicago\",201942,\"DeMar
+        DeRozan\",\"DeMar\",\"F\",\"\",\"45:55\",16,32,0.5,2,6,0.333,10,12,0.833,1,2,3,4,4,1,1,4,44,-9],[\"0022200552\",1610612741,\"CHI\",\"Chicago\",1630172,\"Patrick
+        Williams\",\"Patrick\",\"F\",\"\",\"30:08\",4,10,0.4,2,7,0.286,0,0,0.0,0,5,5,2,1,0,0,3,10,-2],[\"0022200552\",1610612741,\"CHI\",\"Chicago\",202696,\"Nikola
+        Vu\u010Devi\u0107\",\"Nikola\",\"C\",\"\",\"43:31\",6,8,0.75,2,4,0.5,6,7,0.857,1,12,13,2,0,0,1,3,20,-19],[\"0022200552\",1610612741,\"CHI\",\"Chicago\",203897,\"Zach
+        LaVine\",\"Zach\",\"G\",\"\",\"40:22\",7,18,0.389,3,9,0.333,9,9,1.0,0,6,6,6,0,1,3,5,26,-12],[\"0022200552\",1610612741,\"CHI\",\"Chicago\",1630245,\"Ayo
+        Dosunmu\",\"Ayo\",\"G\",\"\",\"32:46\",4,8,0.5,0,3,0.0,3,4,0.75,0,3,3,5,0,0,1,5,11,-9],[\"0022200552\",1610612741,\"CHI\",\"Chicago\",1627884,\"Derrick
+        Jones Jr.\",\"Derrick\",\"\",\"\",\"21:53\",3,4,0.75,0,1,0.0,0,0,0.0,2,4,6,0,0,0,1,4,6,-6],[\"0022200552\",1610612741,\"CHI\",\"Chicago\",1627936,\"Alex
+        Caruso\",\"Alex\",\"\",\"\",\"22:20\",2,7,0.286,0,1,0.0,0,0,0.0,1,1,2,1,1,0,0,6,4,-1],[\"0022200552\",1610612741,\"CHI\",\"Chicago\",1629632,\"Coby
+        White\",\"Coby\",\"\",\"\",\"10:22\",1,2,0.5,1,1,1.0,2,2,1.0,0,0,0,1,1,0,0,1,5,-4],[\"0022200552\",1610612741,\"CHI\",\"Chicago\",203083,\"Andre
+        Drummond\",\"Andre\",\"\",\"\",\"6:48\",3,3,1.0,0,0,0.0,0,0,0.0,1,3,4,0,1,0,0,2,6,5],[\"0022200552\",1610612741,\"CHI\",\"Chicago\",201609,\"Goran
+        Dragic\",\"Goran\",\"\",\"\",\"10:56\",1,3,0.333,0,1,0.0,0,0,0.0,0,0,0,1,0,0,0,0,2,2],[\"0022200552\",1610612741,\"CHI\",\"Chicago\",1630792,\"Malcolm
+        Hill\",\"Malcolm\",\"\",\"DNP - Coach's Decision\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[\"0022200552\",1610612741,\"CHI\",\"Chicago\",1631207,\"Dalen
+        Terry\",\"Dalen\",\"\",\"DNP - Coach's Decision\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[\"0022200552\",1610612739,\"CLE\",\"Cleveland\",1630205,\"Lamar
+        Stevens\",\"Lamar\",\"F\",\"\",\"19:09\",2,5,0.4,0,2,0.0,0,0,0.0,0,1,1,2,0,0,0,0,4,-6],[\"0022200552\",1610612739,\"CLE\",\"Cleveland\",201567,\"Kevin
+        Love\",\"Kevin\",\"F\",\"\",\"37:48\",4,10,0.4,3,9,0.333,1,2,0.5,1,16,17,2,0,0,1,6,12,6],[\"0022200552\",1610612739,\"CLE\",\"Cleveland\",1628386,\"Jarrett
+        Allen\",\"Jarrett\",\"C\",\"\",\"38:35\",9,10,0.9,0,0,0.0,3,6,0.5,6,2,8,2,0,1,1,4,21,11],[\"0022200552\",1610612739,\"CLE\",\"Cleveland\",1627747,\"Caris
+        LeVert\",\"Caris\",\"G\",\"\",\"39:09\",2,13,0.154,1,7,0.143,5,6,0.833,0,5,5,3,1,0,1,4,10,7],[\"0022200552\",1610612739,\"CLE\",\"Cleveland\",1628378,\"Donovan
+        Mitchell\",\"Donovan\",\"G\",\"\",\"49:48\",22,34,0.647,7,15,0.467,20,25,0.8,3,5,8,11,0,1,4,3,71,19],[\"0022200552\",1610612739,\"CLE\",\"Cleveland\",1626224,\"Cedi
+        Osman\",\"Cedi\",\"\",\"\",\"36:15\",6,13,0.462,4,11,0.364,3,4,0.75,0,3,3,4,0,0,1,3,19,15],[\"0022200552\",1610612739,\"CLE\",\"Cleveland\",1630171,\"Isaac
+        Okoro\",\"Isaac\",\"\",\"\",\"19:34\",1,3,0.333,1,1,1.0,0,0,0.0,1,2,3,1,0,1,0,6,3,3],[\"0022200552\",1610612739,\"CLE\",\"Cleveland\",203526,\"Raul
+        Neto\",\"Raul\",\"\",\"\",\"17:27\",2,3,0.667,0,1,0.0,0,0,0.0,1,0,1,2,0,0,1,0,4,3],[\"0022200552\",1610612739,\"CLE\",\"Cleveland\",201577,\"Robin
+        Lopez\",\"Robin\",\"\",\"\",\"7:15\",0,1,0.0,0,0,0.0,1,2,0.5,1,0,1,0,0,0,1,1,1,-3],[\"0022200552\",1610612739,\"CLE\",\"Cleveland\",1630596,\"Evan
+        Mobley\",\"Evan\",\"\",\"DNP - Injury/Illness\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[\"0022200552\",1610612739,\"CLE\",\"Cleveland\",1630600,\"Isaiah
+        Mobley\",\"Isaiah\",\"\",\"DNP - Coach's Decision\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]]},{\"name\":\"TeamStats\",\"headers\":[\"GAME_ID\",\"TEAM_ID\",\"TEAM_NAME\",\"TEAM_ABBREVIATION\",\"TEAM_CITY\",\"MIN\",\"FGM\",\"FGA\",\"FG_PCT\",\"FG3M\",\"FG3A\",\"FG3_PCT\",\"FTM\",\"FTA\",\"FT_PCT\",\"OREB\",\"DREB\",\"REB\",\"AST\",\"STL\",\"BLK\",\"TO\",\"PF\",\"PTS\",\"PLUS_MINUS\"],\"rowSet\":[[\"0022200552\",1610612739,\"Cavaliers\",\"CLE\",\"Cleveland\",\"265:00\",48,92,0.522,16,46,0.348,33,45,0.733,13,34,47,27,1,3,10,27,145,11],[\"0022200552\",1610612741,\"Bulls\",\"CHI\",\"Chicago\",\"265:00\",47,95,0.495,10,33,0.303,30,34,0.882,6,36,42,22,8,2,7,33,134,-11]]},{\"name\":\"TeamStarterBenchStats\",\"headers\":[\"GAME_ID\",\"TEAM_ID\",\"TEAM_NAME\",\"TEAM_ABBREVIATION\",\"TEAM_CITY\",\"STARTERS_BENCH\",\"MIN\",\"FGM\",\"FGA\",\"FG_PCT\",\"FG3M\",\"FG3A\",\"FG3_PCT\",\"FTM\",\"FTA\",\"FT_PCT\",\"OREB\",\"DREB\",\"REB\",\"AST\",\"STL\",\"BLK\",\"TO\",\"PF\",\"PTS\"],\"rowSet\":[[\"0022200552\",1610612739,\"Cavaliers\",\"CLE\",\"Cleveland\",\"Starters\",\"184:29\",39,72,0.542,11,33,0.333,29,39,0.744,10,29,39,20,1,2,7,17,118],[\"0022200552\",1610612741,\"Bulls\",\"CHI\",\"Chicago\",\"Starters\",\"192:42\",37,76,0.487,9,29,0.31,28,32,0.875,2,28,30,19,5,2,6,20,111],[\"0022200552\",1610612739,\"CLE\",\"Cleveland\",\"cavaliers\",\"Bench\",\"80:31\",9,20,0.45,5,13,0.385,4,6,0.667,3,5,8,7,0,1,3,10,27],[\"0022200552\",1610612741,\"CHI\",\"Chicago\",\"bulls\",\"Bench\",\"72:19\",10,19,0.526,1,4,0.25,2,2,1.0,4,8,12,3,3,0,1,13,23]]}]}"
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1624'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:36:01 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF6iGeEWcAQAAp/3Ygx4pJg+JX+QDTw0l5Hhyv+gDHfvpEQIHPUQOftHIXm7drzgUSHHvF8DqO10JvXUKMkoIz3o5b+I0TxJdDYD5GzEpJRW+nUT3sxIu+ahlPgotf7MOykTabGTxnQAPiMLNYkg5G15qzJnSevuQLKxTOinDaD+u881T8z4KA9NJuAawyyPLCZMH4a9YXxU8W7Sduf6PkudKXUnQHnkq1T0OskoBDfx+caqGgMRAlA==~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7163;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-0
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - S3
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '300.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '1'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '-1108.822'
+      x-varnish:
+      - 38414349 36132289
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,107 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVApAXbWicAQAAierYgx6AgPTQqfFBftXRHSE3NtAUzr1II2xxHdQyzCjuLOruz/H9UHzUsYy5mK89TiCvGnphj5l2slT/5aqx1JVYG2dIkI+t5m3FY8nIaa/jLZ1p4C69i90Qwf0K37frJNPsf4jndPuSUj95Sgl5DALQPzs78JIqPv/cSYwbhRjmqKm/c2ggalpoL49KlLLWEa0HSm2HzJkNM2lYfNnWmoKb6uQKrcUU6mnFbpb/Ag==~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/boxscorehustlev2?GameID=0022200552
+  response:
+    body:
+      string: "{\"meta\":{\"version\":1,\"request\":\"http://nba.cloud/games/0022200552/boxscorehustle?Format=json\",\"time\":\"2026-02-22T05:13:07.137Z\"},\"boxScoreHustle\":{\"gameId\":\"0022200552\",\"awayTeamId\":1610612741,\"homeTeamId\":1610612739,\"homeTeam\":{\"teamId\":1610612739,\"teamCity\":\"Cleveland\",\"teamName\":\"Cavaliers\",\"teamTricode\":\"CLE\",\"teamSlug\":\"cavaliers\",\"players\":[{\"personId\":1630205,\"firstName\":\"Lamar\",\"familyName\":\"Stevens\",\"nameI\":\"L.
+        Stevens\",\"playerSlug\":\"lamar-stevens\",\"position\":\"F\",\"comment\":\"\",\"jerseyNum\":\"8\",\"statistics\":{\"minutes\":\"19:09\",\"points\":4,\"contestedShots\":9,\"contestedShots2pt\":6,\"contestedShots3pt\":3,\"deflections\":2,\"chargesDrawn\":0,\"screenAssists\":1,\"screenAssistPoints\":2,\"looseBallsRecoveredOffensive\":0,\"looseBallsRecoveredDefensive\":0,\"looseBallsRecoveredTotal\":0,\"offensiveBoxOuts\":0,\"defensiveBoxOuts\":2,\"boxOutPlayerTeamRebounds\":2,\"boxOutPlayerRebounds\":1,\"boxOuts\":2}},{\"personId\":201567,\"firstName\":\"Kevin\",\"familyName\":\"Love\",\"nameI\":\"K.
+        Love\",\"playerSlug\":\"kevin-love\",\"position\":\"F\",\"comment\":\"\",\"jerseyNum\":\"0\",\"statistics\":{\"minutes\":\"37:48\",\"points\":12,\"contestedShots\":6,\"contestedShots2pt\":3,\"contestedShots3pt\":3,\"deflections\":1,\"chargesDrawn\":0,\"screenAssists\":4,\"screenAssistPoints\":10,\"looseBallsRecoveredOffensive\":0,\"looseBallsRecoveredDefensive\":0,\"looseBallsRecoveredTotal\":0,\"offensiveBoxOuts\":0,\"defensiveBoxOuts\":4,\"boxOutPlayerTeamRebounds\":4,\"boxOutPlayerRebounds\":4,\"boxOuts\":4}},{\"personId\":1628386,\"firstName\":\"Jarrett\",\"familyName\":\"Allen\",\"nameI\":\"J.
+        Allen\",\"playerSlug\":\"jarrett-allen\",\"position\":\"C\",\"comment\":\"\",\"jerseyNum\":\"31\",\"statistics\":{\"minutes\":\"38:35\",\"points\":21,\"contestedShots\":12,\"contestedShots2pt\":7,\"contestedShots3pt\":5,\"deflections\":0,\"chargesDrawn\":0,\"screenAssists\":1,\"screenAssistPoints\":2,\"looseBallsRecoveredOffensive\":0,\"looseBallsRecoveredDefensive\":0,\"looseBallsRecoveredTotal\":0,\"offensiveBoxOuts\":1,\"defensiveBoxOuts\":1,\"boxOutPlayerTeamRebounds\":2,\"boxOutPlayerRebounds\":1,\"boxOuts\":2}},{\"personId\":1627747,\"firstName\":\"Caris\",\"familyName\":\"LeVert\",\"nameI\":\"C.
+        LeVert\",\"playerSlug\":\"caris-levert\",\"position\":\"G\",\"comment\":\"\",\"jerseyNum\":\"3\",\"statistics\":{\"minutes\":\"39:09\",\"points\":10,\"contestedShots\":8,\"contestedShots2pt\":4,\"contestedShots3pt\":4,\"deflections\":3,\"chargesDrawn\":0,\"screenAssists\":1,\"screenAssistPoints\":3,\"looseBallsRecoveredOffensive\":0,\"looseBallsRecoveredDefensive\":0,\"looseBallsRecoveredTotal\":0,\"offensiveBoxOuts\":0,\"defensiveBoxOuts\":0,\"boxOutPlayerTeamRebounds\":0,\"boxOutPlayerRebounds\":0,\"boxOuts\":0}},{\"personId\":1628378,\"firstName\":\"Donovan\",\"familyName\":\"Mitchell\",\"nameI\":\"D.
+        Mitchell\",\"playerSlug\":\"donovan-mitchell\",\"position\":\"G\",\"comment\":\"\",\"jerseyNum\":\"45\",\"statistics\":{\"minutes\":\"49:48\",\"points\":71,\"contestedShots\":5,\"contestedShots2pt\":1,\"contestedShots3pt\":4,\"deflections\":3,\"chargesDrawn\":0,\"screenAssists\":0,\"screenAssistPoints\":0,\"looseBallsRecoveredOffensive\":2,\"looseBallsRecoveredDefensive\":0,\"looseBallsRecoveredTotal\":2,\"offensiveBoxOuts\":0,\"defensiveBoxOuts\":1,\"boxOutPlayerTeamRebounds\":1,\"boxOutPlayerRebounds\":1,\"boxOuts\":1}},{\"personId\":1626224,\"firstName\":\"Cedi\",\"familyName\":\"Osman\",\"nameI\":\"C.
+        Osman\",\"playerSlug\":\"cedi-osman\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"16\",\"statistics\":{\"minutes\":\"36:15\",\"points\":19,\"contestedShots\":5,\"contestedShots2pt\":3,\"contestedShots3pt\":2,\"deflections\":0,\"chargesDrawn\":0,\"screenAssists\":2,\"screenAssistPoints\":4,\"looseBallsRecoveredOffensive\":0,\"looseBallsRecoveredDefensive\":0,\"looseBallsRecoveredTotal\":0,\"offensiveBoxOuts\":0,\"defensiveBoxOuts\":0,\"boxOutPlayerTeamRebounds\":0,\"boxOutPlayerRebounds\":0,\"boxOuts\":0}},{\"personId\":1630171,\"firstName\":\"Isaac\",\"familyName\":\"Okoro\",\"nameI\":\"I.
+        Okoro\",\"playerSlug\":\"isaac-okoro\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"35\",\"statistics\":{\"minutes\":\"19:34\",\"points\":3,\"contestedShots\":6,\"contestedShots2pt\":6,\"contestedShots3pt\":0,\"deflections\":0,\"chargesDrawn\":0,\"screenAssists\":1,\"screenAssistPoints\":2,\"looseBallsRecoveredOffensive\":1,\"looseBallsRecoveredDefensive\":0,\"looseBallsRecoveredTotal\":1,\"offensiveBoxOuts\":0,\"defensiveBoxOuts\":0,\"boxOutPlayerTeamRebounds\":0,\"boxOutPlayerRebounds\":0,\"boxOuts\":0}},{\"personId\":203526,\"firstName\":\"Raul\",\"familyName\":\"Neto\",\"nameI\":\"R.
+        Neto\",\"playerSlug\":\"raul-neto\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"19\",\"statistics\":{\"minutes\":\"17:27\",\"points\":4,\"contestedShots\":2,\"contestedShots2pt\":2,\"contestedShots3pt\":0,\"deflections\":2,\"chargesDrawn\":0,\"screenAssists\":0,\"screenAssistPoints\":0,\"looseBallsRecoveredOffensive\":0,\"looseBallsRecoveredDefensive\":0,\"looseBallsRecoveredTotal\":0,\"offensiveBoxOuts\":0,\"defensiveBoxOuts\":0,\"boxOutPlayerTeamRebounds\":0,\"boxOutPlayerRebounds\":0,\"boxOuts\":0}},{\"personId\":201577,\"firstName\":\"Robin\",\"familyName\":\"Lopez\",\"nameI\":\"R.
+        Lopez\",\"playerSlug\":\"robin-lopez\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"33\",\"statistics\":{\"minutes\":\"7:15\",\"points\":1,\"contestedShots\":2,\"contestedShots2pt\":2,\"contestedShots3pt\":0,\"deflections\":0,\"chargesDrawn\":0,\"screenAssists\":3,\"screenAssistPoints\":7,\"looseBallsRecoveredOffensive\":0,\"looseBallsRecoveredDefensive\":0,\"looseBallsRecoveredTotal\":0,\"offensiveBoxOuts\":2,\"defensiveBoxOuts\":2,\"boxOutPlayerTeamRebounds\":3,\"boxOutPlayerRebounds\":1,\"boxOuts\":4}}],\"statistics\":{\"minutes\":\"265.0:00\",\"points\":145,\"contestedShots\":55,\"contestedShots2pt\":34,\"contestedShots3pt\":21,\"deflections\":11,\"chargesDrawn\":0,\"screenAssists\":13,\"screenAssistPoints\":30,\"looseBallsRecoveredOffensive\":3,\"looseBallsRecoveredDefensive\":0,\"looseBallsRecoveredTotal\":3,\"offensiveBoxOuts\":3,\"defensiveBoxOuts\":10,\"boxOutPlayerTeamRebounds\":12,\"boxOutPlayerRebounds\":8,\"boxOuts\":13}},\"awayTeam\":{\"teamId\":1610612741,\"teamCity\":\"Chicago\",\"teamName\":\"Bulls\",\"teamTricode\":\"CHI\",\"teamSlug\":\"bulls\",\"players\":[{\"personId\":201942,\"firstName\":\"DeMar\",\"familyName\":\"DeRozan\",\"nameI\":\"D.
+        DeRozan\",\"playerSlug\":\"demar-derozan\",\"position\":\"F\",\"comment\":\"\",\"jerseyNum\":\"11\",\"statistics\":{\"minutes\":\"45:55\",\"points\":44,\"contestedShots\":8,\"contestedShots2pt\":6,\"contestedShots3pt\":2,\"deflections\":3,\"chargesDrawn\":0,\"screenAssists\":0,\"screenAssistPoints\":0,\"looseBallsRecoveredOffensive\":0,\"looseBallsRecoveredDefensive\":0,\"looseBallsRecoveredTotal\":0,\"offensiveBoxOuts\":0,\"defensiveBoxOuts\":0,\"boxOutPlayerTeamRebounds\":0,\"boxOutPlayerRebounds\":0,\"boxOuts\":0}},{\"personId\":1630172,\"firstName\":\"Patrick\",\"familyName\":\"Williams\",\"nameI\":\"P.
+        Williams\",\"playerSlug\":\"patrick-williams\",\"position\":\"F\",\"comment\":\"\",\"jerseyNum\":\"44\",\"statistics\":{\"minutes\":\"30:08\",\"points\":10,\"contestedShots\":6,\"contestedShots2pt\":2,\"contestedShots3pt\":4,\"deflections\":4,\"chargesDrawn\":0,\"screenAssists\":3,\"screenAssistPoints\":6,\"looseBallsRecoveredOffensive\":1,\"looseBallsRecoveredDefensive\":0,\"looseBallsRecoveredTotal\":1,\"offensiveBoxOuts\":0,\"defensiveBoxOuts\":0,\"boxOutPlayerTeamRebounds\":0,\"boxOutPlayerRebounds\":0,\"boxOuts\":0}},{\"personId\":202696,\"firstName\":\"Nikola\",\"familyName\":\"Vu\u010Devi\u0107\",\"nameI\":\"N.
+        Vu\u010Devi\u0107\",\"playerSlug\":\"nikola-vu\u010Devi\u0107\",\"position\":\"C\",\"comment\":\"\",\"jerseyNum\":\"9\",\"statistics\":{\"minutes\":\"43:31\",\"points\":20,\"contestedShots\":7,\"contestedShots2pt\":5,\"contestedShots3pt\":2,\"deflections\":2,\"chargesDrawn\":0,\"screenAssists\":3,\"screenAssistPoints\":6,\"looseBallsRecoveredOffensive\":0,\"looseBallsRecoveredDefensive\":0,\"looseBallsRecoveredTotal\":0,\"offensiveBoxOuts\":1,\"defensiveBoxOuts\":2,\"boxOutPlayerTeamRebounds\":3,\"boxOutPlayerRebounds\":1,\"boxOuts\":3}},{\"personId\":203897,\"firstName\":\"Zach\",\"familyName\":\"LaVine\",\"nameI\":\"Z.
+        LaVine\",\"playerSlug\":\"zach-lavine\",\"position\":\"G\",\"comment\":\"\",\"jerseyNum\":\"8\",\"statistics\":{\"minutes\":\"40:22\",\"points\":26,\"contestedShots\":11,\"contestedShots2pt\":5,\"contestedShots3pt\":6,\"deflections\":0,\"chargesDrawn\":0,\"screenAssists\":1,\"screenAssistPoints\":2,\"looseBallsRecoveredOffensive\":1,\"looseBallsRecoveredDefensive\":1,\"looseBallsRecoveredTotal\":2,\"offensiveBoxOuts\":0,\"defensiveBoxOuts\":0,\"boxOutPlayerTeamRebounds\":0,\"boxOutPlayerRebounds\":0,\"boxOuts\":0}},{\"personId\":1630245,\"firstName\":\"Ayo\",\"familyName\":\"Dosunmu\",\"nameI\":\"A.
+        Dosunmu\",\"playerSlug\":\"ayo-dosunmu\",\"position\":\"G\",\"comment\":\"\",\"jerseyNum\":\"12\",\"statistics\":{\"minutes\":\"32:46\",\"points\":11,\"contestedShots\":5,\"contestedShots2pt\":0,\"contestedShots3pt\":5,\"deflections\":1,\"chargesDrawn\":0,\"screenAssists\":0,\"screenAssistPoints\":0,\"looseBallsRecoveredOffensive\":1,\"looseBallsRecoveredDefensive\":0,\"looseBallsRecoveredTotal\":1,\"offensiveBoxOuts\":0,\"defensiveBoxOuts\":0,\"boxOutPlayerTeamRebounds\":0,\"boxOutPlayerRebounds\":0,\"boxOuts\":0}},{\"personId\":1627884,\"firstName\":\"Derrick\",\"familyName\":\"Jones
+        Jr.\",\"nameI\":\"D. Jones Jr.\",\"playerSlug\":\"derrick-jones-jr\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"5\",\"statistics\":{\"minutes\":\"21:53\",\"points\":6,\"contestedShots\":7,\"contestedShots2pt\":0,\"contestedShots3pt\":7,\"deflections\":0,\"chargesDrawn\":0,\"screenAssists\":0,\"screenAssistPoints\":0,\"looseBallsRecoveredOffensive\":0,\"looseBallsRecoveredDefensive\":0,\"looseBallsRecoveredTotal\":0,\"offensiveBoxOuts\":1,\"defensiveBoxOuts\":1,\"boxOutPlayerTeamRebounds\":2,\"boxOutPlayerRebounds\":2,\"boxOuts\":2}},{\"personId\":1627936,\"firstName\":\"Alex\",\"familyName\":\"Caruso\",\"nameI\":\"A.
+        Caruso\",\"playerSlug\":\"alex-caruso\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"6\",\"statistics\":{\"minutes\":\"22:20\",\"points\":4,\"contestedShots\":4,\"contestedShots2pt\":1,\"contestedShots3pt\":3,\"deflections\":3,\"chargesDrawn\":0,\"screenAssists\":0,\"screenAssistPoints\":0,\"looseBallsRecoveredOffensive\":0,\"looseBallsRecoveredDefensive\":0,\"looseBallsRecoveredTotal\":0,\"offensiveBoxOuts\":0,\"defensiveBoxOuts\":0,\"boxOutPlayerTeamRebounds\":0,\"boxOutPlayerRebounds\":0,\"boxOuts\":0}},{\"personId\":1629632,\"firstName\":\"Coby\",\"familyName\":\"White\",\"nameI\":\"C.
+        White\",\"playerSlug\":\"coby-white\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"0\",\"statistics\":{\"minutes\":\"10:22\",\"points\":5,\"contestedShots\":2,\"contestedShots2pt\":1,\"contestedShots3pt\":1,\"deflections\":0,\"chargesDrawn\":0,\"screenAssists\":0,\"screenAssistPoints\":0,\"looseBallsRecoveredOffensive\":0,\"looseBallsRecoveredDefensive\":0,\"looseBallsRecoveredTotal\":0,\"offensiveBoxOuts\":0,\"defensiveBoxOuts\":0,\"boxOutPlayerTeamRebounds\":0,\"boxOutPlayerRebounds\":0,\"boxOuts\":0}},{\"personId\":203083,\"firstName\":\"Andre\",\"familyName\":\"Drummond\",\"nameI\":\"A.
+        Drummond\",\"playerSlug\":\"andre-drummond\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"3\",\"statistics\":{\"minutes\":\"6:48\",\"points\":6,\"contestedShots\":0,\"contestedShots2pt\":0,\"contestedShots3pt\":0,\"deflections\":1,\"chargesDrawn\":0,\"screenAssists\":0,\"screenAssistPoints\":0,\"looseBallsRecoveredOffensive\":0,\"looseBallsRecoveredDefensive\":0,\"looseBallsRecoveredTotal\":0,\"offensiveBoxOuts\":0,\"defensiveBoxOuts\":3,\"boxOutPlayerTeamRebounds\":3,\"boxOutPlayerRebounds\":2,\"boxOuts\":3}},{\"personId\":201609,\"firstName\":\"Goran\",\"familyName\":\"Dragic\",\"nameI\":\"G.
+        Dragic\",\"playerSlug\":\"goran-dragic\",\"position\":\"\",\"comment\":\"\",\"jerseyNum\":\"7\",\"statistics\":{\"minutes\":\"10:56\",\"points\":2,\"contestedShots\":1,\"contestedShots2pt\":1,\"contestedShots3pt\":0,\"deflections\":0,\"chargesDrawn\":0,\"screenAssists\":0,\"screenAssistPoints\":0,\"looseBallsRecoveredOffensive\":0,\"looseBallsRecoveredDefensive\":0,\"looseBallsRecoveredTotal\":0,\"offensiveBoxOuts\":0,\"defensiveBoxOuts\":1,\"boxOutPlayerTeamRebounds\":1,\"boxOutPlayerRebounds\":0,\"boxOuts\":1}}],\"statistics\":{\"minutes\":\"265.0:00\",\"points\":134,\"contestedShots\":51,\"contestedShots2pt\":21,\"contestedShots3pt\":30,\"deflections\":14,\"chargesDrawn\":0,\"screenAssists\":7,\"screenAssistPoints\":14,\"looseBallsRecoveredOffensive\":3,\"looseBallsRecoveredDefensive\":1,\"looseBallsRecoveredTotal\":4,\"offensiveBoxOuts\":2,\"defensiveBoxOuts\":7,\"boxOutPlayerTeamRebounds\":9,\"boxOutPlayerRebounds\":5,\"boxOuts\":9}}}}"
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1856'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:35:57 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVApgXbWicAQAAau3Ygx6Jp89m2UfOTK4FnISZFm0aCRnKtA3HDxNEpZgPpnlNw0OA7KV8CTow0RxJTc2uKjuMB1JcdikLUXbKooWmMQUt/ltGNUQwlA8lF7LzFQnYNKsN0y4NnS1PP38bjhPx5FYKq66UOgI/v5xj1NHVoBO0q0qvCb3Dis7scdD++EaDoJ2tGibQrNOZVhbWqjUbBL+DB9N7awyAlqk+S5MYj4S/3PNeJiOrBLOiuQ==~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7167;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      ttl:
+      - '31536000'
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '300.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '3'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '-1070.668'
+      x-varnish:
+      - 38028179 37288381
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

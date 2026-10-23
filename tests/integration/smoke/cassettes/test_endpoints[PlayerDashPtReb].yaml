@@ -1,0 +1,103 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQPfAVAlYdbWicAQAAqr3Zgx4GMvlgTwSuO6UHBmFzbZJbogXvRq/74CnzMKLlE45r0oiaKRwd4xTYWvRLDiELoXWTwpO8+11iNUmXSJJj4BhRZsjDuCbTILS27ZQ1PiEG0xEHxL4TvTwOSVFw0KJx5jPGmZwmY9m505U5fglzejFWxvw0VTfbdLgAqpcyPsMI1xIjgVbQfMK6CThOIes/uSqNL3FAo2ykqI6ox9QxpirHLuobNBP3rJUhiK8=~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/playerdashptreb?DateFrom=&DateTo=&GameSegment=&LastNGames=0&LeagueID=00&Location=&Month=0&OpponentTeamID=0&Outcome=&PerMode=Totals&Period=0&PlayerID=1628378&Season=2025-26&SeasonSegment=&SeasonType=Regular+Season&TeamID=1610612739&VsConference=&VsDivision=
+  response:
+    body:
+      string: '{"resource":"playerdashptreb","parameters":{"PerMode":"Totals","LeagueID":"00","Season":"2025-26","SeasonType":"Regular
+        Season","PlayerID":1628378,"TeamID":1610612739,"Outcome":null,"Location":null,"Month":0,"SeasonSegment":null,"DateFrom":null,"DateTo":null,"OpponentTeamID":0,"VsConference":null,"VsDivision":null,"GameSegment":null,"Period":0,"LastNGames":0,"ISTRound":null},"resultSets":[{"name":"OverallRebounding","headers":["PLAYER_ID","PLAYER_NAME_LAST_FIRST","G","OVERALL","REB_FREQUENCY","OREB","DREB","REB","C_OREB","C_DREB","C_REB","C_REB_PCT","UC_OREB","UC_DREB","UC_REB","UC_REB_PCT"],"rowSet":[[1628378,"Mitchell,
+        Donovan",52,"Overall",1.0,40,194,234,15,33,48,0.205,25,161,186,0.795]]},{"name":"ShotTypeRebounding","headers":["PLAYER_ID","PLAYER_NAME_LAST_FIRST","SORT_ORDER","G","SHOT_TYPE_RANGE","REB_FREQUENCY","OREB","DREB","REB","C_OREB","C_DREB","C_REB","C_REB_PCT","UC_OREB","UC_DREB","UC_REB","UC_REB_PCT"],"rowSet":[[1628378,"Mitchell,
+        Donovan",2,52,"Miss 2FG",0.449,17,88,105,10,15,25,0.238,7,73,80,0.762],[1628378,"Mitchell,
+        Donovan",3,52,"Miss 3FG",0.538,23,103,126,5,18,23,0.183,18,85,103,0.817]]},{"name":"NumContestedRebounding","headers":["PLAYER_ID","PLAYER_NAME_LAST_FIRST","SORT_ORDER","G","REB_NUM_CONTESTING_RANGE","REB_FREQUENCY","OREB","DREB","REB","C_OREB","C_DREB","C_REB","C_REB_PCT","UC_OREB","UC_DREB","UC_REB","UC_REB_PCT"],"rowSet":[[1628378,"Mitchell,
+        Donovan",1,52,"0 Contesting Rebounders",0.795,25,161,186,0,0,0,0.0,25,161,186,1.0],[1628378,"Mitchell,
+        Donovan",2,52,"1 Contesting Rebounder",0.192,13,32,45,13,32,45,1.0,0,0,0,0.0],[1628378,"Mitchell,
+        Donovan",3,52,"2+ Contesting Rebounders",0.013,2,1,3,2,1,3,1.0,0,0,0,0.0]]},{"name":"ShotDistanceRebounding","headers":["PLAYER_ID","PLAYER_NAME_LAST_FIRST","SORT_ORDER","G","SHOT_DIST_RANGE","REB_FREQUENCY","OREB","DREB","REB","C_OREB","C_DREB","C_REB","C_REB_PCT","UC_OREB","UC_DREB","UC_REB","UC_REB_PCT"],"rowSet":[[1628378,"Mitchell,
+        Donovan",1,52,"0-6 Feet",0.201,8,39,47,5,8,13,0.277,3,31,34,0.723],[1628378,"Mitchell,
+        Donovan",2,52,"7-13 Feet",0.128,7,23,30,4,2,6,0.2,3,21,24,0.8],[1628378,"Mitchell,
+        Donovan",3,52,"13-19 Feet",0.085,2,18,20,1,5,6,0.3,1,13,14,0.7],[1628378,"Mitchell,
+        Donovan",4,52,"19+ Feet",0.573,23,111,134,5,18,23,0.172,18,93,111,0.828]]},{"name":"RebDistanceRebounding","headers":["PLAYER_ID","PLAYER_NAME_LAST_FIRST","SORT_ORDER","G","REB_DIST_RANGE","REB_FREQUENCY","OREB","DREB","REB","C_OREB","C_DREB","C_REB","C_REB_PCT","UC_OREB","UC_DREB","UC_REB","UC_REB_PCT"],"rowSet":[[1628378,"Mitchell,
+        Donovan",1,52,"0-3 Feet",0.038,2,7,9,2,3,5,0.556,0,4,4,0.444],[1628378,"Mitchell,
+        Donovan",2,52,"3-6 Feet",0.226,9,44,53,6,12,18,0.34,3,32,35,0.66],[1628378,"Mitchell,
+        Donovan",3,52,"6-10 Feet",0.355,8,75,83,5,12,17,0.205,3,63,66,0.795],[1628378,"Mitchell,
+        Donovan",4,52,"10+ Feet",0.38,21,68,89,2,6,8,0.09,19,62,81,0.91]]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '904'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:36:51 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQJFoDF1ONeEWcAQAAZcDZgx5Szx2gHGYQ5eHkw/yP2Gn8YMcL7D0Fl9qAfnabfhA6eoILIiG00H6d9FhffCKvgT7yufgMPMtShihe8S6hnb/jRk8lGIxYhrxiCe5QMAg965SHufcd38RQIqI1seeFF2bdHOo5+YNcSjoBJ/zW7hEZAQ8zwOlAxtiAxb7VtXkGHKaws/lt8t04VJnKfr6RlZK0++axX083GBuAIYVjrbDqqJHw6mtLMleNPYQ=~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7113;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-2
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '1'
+      x-full-ttl:
+      - '1800.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '1'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '367.282'
+      x-varnish:
+      - 38461528 36142634
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1

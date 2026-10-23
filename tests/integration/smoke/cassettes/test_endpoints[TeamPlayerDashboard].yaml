@@ -1,0 +1,110 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - ak_bmsc=4706A5D9C1CF0328EBE1874B1B90A0F6~000000000000000000000000000000~YAAQPfAVAsUUbWicAQAAA2vYgx4/5NdSFHuy6mI815GQnffwT5JCluprLAx33bifEy1n+tKPxnFpF6zfTtXDi2Y9kK8S5Lly6FPcuP6j8UAcuaJ4r6zYvnxRBEUgbdgxOvb9CGsJf1BuO0KjqezK8Zg3UDLotUhgIXoLHrYfjZjrx4ZxaWGMSBLAcwQ/xqax3LpwJwezWU8EmgHYsO/Z6hudJozl/DG2QHwZcly+PHqrO7LBuHBwNG8NxV8KSg3TXiW1MKuiaJQUB9iH93ZlDM19jjxpa8doNHctM2vFeDD5n3jB3J/IuXnqBp9fLhsjkBKHOFK39/Q38SlEb9UGl82ljM9uXXp8x2T1UlPBpeZyudYsOv3bnkEzaQ==;
+        bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQjmITAqIZ9GicAQAAMBragx4nO9H/zA4B9TflWbLjyEtrC7gYRtoCJbOr1O83xyyQB/JeF0kdtDksE1efY6KUVdqchZfiNYSt7IlPWjYL2gZ4X4Dfq3BuMtVCt2CH6CTWY9MIGUeKnu+pJt//guKtZI+uJiOdOGtqiJgoCVb2l0ToNPYKDGFNEz0Ny3gNjAvIjaEgFYOpsbW3S8WKOUh2wmHCZj+wmSskJdWOv5Y+rFHu63PFwlmbQspqlTA=~1
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/teamplayerdashboard?DateFrom=&DateTo=&GameSegment=&LastNGames=0&LeagueID=00&Location=&MeasureType=Base&Month=0&OpponentTeamID=0&Outcome=&PORound=&PaceAdjust=N&PerMode=Totals&Period=0&PlusMinus=N&Rank=N&Season=2025-26&SeasonSegment=&SeasonType=Regular+Season&ShotClockRange=&TeamID=1610612739&VsConference=&VsDivision=
+  response:
+    body:
+      string: "{\"resource\":\"teamplayerdashboard\",\"parameters\":{\"MeasureType\":\"Base\",\"PerMode\":\"Totals\",\"PlusMinus\":\"N\",\"PaceAdjust\":\"N\",\"Rank\":\"N\",\"LeagueId\":\"00\",\"Season\":\"2025-26\",\"SeasonType\":\"Regular
+        Season\",\"PORound\":0,\"TeamID\":1610612739,\"Outcome\":null,\"Location\":null,\"Month\":0,\"SeasonSegment\":null,\"DateFrom\":null,\"DateTo\":null,\"OpponentTeamID\":0,\"VsConference\":null,\"VsDivision\":null,\"GameSegment\":null,\"Period\":0,\"ShotClockRange\":null,\"LastNGames\":0,\"ISTRound\":null},\"resultSets\":[{\"name\":\"TeamOverall\",\"headers\":[\"GROUP_SET\",\"TEAM_ID\",\"TEAM_NAME\",\"GROUP_VALUE\",\"GP\",\"W\",\"L\",\"W_PCT\",\"MIN\",\"FGM\",\"FGA\",\"FG_PCT\",\"FG3M\",\"FG3A\",\"FG3_PCT\",\"FTM\",\"FTA\",\"FT_PCT\",\"OREB\",\"DREB\",\"REB\",\"AST\",\"TOV\",\"STL\",\"BLK\",\"BLKA\",\"PF\",\"PFD\",\"PTS\",\"PLUS_MINUS\",\"GP_RANK\",\"W_RANK\",\"L_RANK\",\"W_PCT_RANK\",\"MIN_RANK\",\"FGM_RANK\",\"FGA_RANK\",\"FG_PCT_RANK\",\"FG3M_RANK\",\"FG3A_RANK\",\"FG3_PCT_RANK\",\"FTM_RANK\",\"FTA_RANK\",\"FT_PCT_RANK\",\"OREB_RANK\",\"DREB_RANK\",\"REB_RANK\",\"AST_RANK\",\"TOV_RANK\",\"STL_RANK\",\"BLK_RANK\",\"BLKA_RANK\",\"PF_RANK\",\"PFD_RANK\",\"PTS_RANK\",\"PLUS_MINUS_RANK\"],\"rowSet\":[[\"Overall\",1610612739,\"Cleveland
+        Cavaliers\",\"2025-26\",57,36,21,0.632,2746.0,2484,5203,0.477,831,2314,0.359,1030,1314,0.784,689,1858,2547,1625,821.0,513,294,249,1134,1150,6829,257.0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]]},{\"name\":\"PlayersSeasonTotals\",\"headers\":[\"GROUP_SET\",\"PLAYER_ID\",\"PLAYER_NAME\",\"NICKNAME\",\"GP\",\"W\",\"L\",\"W_PCT\",\"MIN\",\"FGM\",\"FGA\",\"FG_PCT\",\"FG3M\",\"FG3A\",\"FG3_PCT\",\"FTM\",\"FTA\",\"FT_PCT\",\"OREB\",\"DREB\",\"REB\",\"AST\",\"TOV\",\"STL\",\"BLK\",\"BLKA\",\"PF\",\"PFD\",\"PTS\",\"PLUS_MINUS\",\"NBA_FANTASY_PTS\",\"DD2\",\"TD3\",\"WNBA_FANTASY_PTS\",\"GP_RANK\",\"W_RANK\",\"L_RANK\",\"W_PCT_RANK\",\"MIN_RANK\",\"FGM_RANK\",\"FGA_RANK\",\"FG_PCT_RANK\",\"FG3M_RANK\",\"FG3A_RANK\",\"FG3_PCT_RANK\",\"FTM_RANK\",\"FTA_RANK\",\"FT_PCT_RANK\",\"OREB_RANK\",\"DREB_RANK\",\"REB_RANK\",\"AST_RANK\",\"TOV_RANK\",\"STL_RANK\",\"BLK_RANK\",\"BLKA_RANK\",\"PF_RANK\",\"PFD_RANK\",\"PTS_RANK\",\"PLUS_MINUS_RANK\",\"NBA_FANTASY_PTS_RANK\",\"DD2_RANK\",\"TD3_RANK\",\"WNBA_FANTASY_PTS_RANK\",\"TEAM_COUNT\"],\"rowSet\":[[\"Players\",1641753,\"Chris
+        Livingston\",\"Chris\",3,2,1,0.667,17.426666666666666,4,7,0.571,0,3,0.0,1,1,1.0,0,3,3,1,0,1,0,0,4,1,9,8,17.1,0,0,15.0,20,20,5,9,20,19,20,2,19,19,19,18,19,1,19,19,20,20,20,19,18,1,2,19,19,15,20,7,1,20,1],[\"Players\",1641854,\"Craig
+        Porter Jr.\",\"Craig\",50,34,16,0.68,892.7133333333334,93,206,0.451,26,71,0.366,18,33,0.545,67,103,170,157,45,50,30,16,58,42,230,64,864.5,0,0,743.0,3,1,13,7,7,9,10,11,10,12,5,13,11,18,4,8,7,4,8,2,3,13,12,8,10,7,6,7,1,8,1],[\"Players\",1629636,\"Darius
+        Garland\",\"Darius\",26,13,13,0.5,791.9683333333334,170,377,0.451,59,164,0.36,68,79,0.861,12,51,63,180,73,21,3,17,48,70,467,-40,811.6,4,0,817.0,13,14,9,19,9,6,6,12,5,5,7,5,6,7,13,12,13,2,4,10,16,14,10,6,6,19,7,4,1,6,1],[\"Players\",1629631,\"De'Andre
+        Hunter\",\"De'Andre\",43,24,19,0.558,1124.5033333333333,204,482,0.423,73,237,0.308,119,137,0.869,29,153,182,89,71,30,6,19,107,131,600,-20,988.9,0,0,1016.0,7,9,18,17,5,5,4,15,4,3,12,4,4,5,9,5,6,7,5,9,10,16,17,4,5,17,5,7,1,5,1],[\"Players\",1629731,\"Dean
+        Wade\",\"Dean\",45,28,17,0.622,1022.7816666666666,92,211,0.436,56,155,0.361,27,36,0.75,36,151,187,68,13,36,17,6,70,38,267,109,739.4,0,0,684.0,4,6,16,14,6,10,9,14,6,7,6,10,10,13,7,6,5,10,14,7,7,8,13,10,9,6,8,7,1,9,1],[\"Players\",203471,\"Dennis
+        Schr\xF6der\",\"Dennis\",6,6,0,1.0,119.28333333333333,17,47,0.362,3,17,0.176,13,15,0.867,0,13,13,21,8,9,1,5,6,13,50,54,119.1,0,0,107.0,16,15,1,1,17,16,16,18,16,16,16,15,15,6,19,18,18,16,16,16,17,7,3,16,16,8,16,7,1,16,1],[\"Players\",1628378,\"Donovan
+        Mitchell\",\"Donovan\",53,34,19,0.642,1773.5783333333334,532,1094,0.486,189,503,0.376,274,320,0.856,41,194,235,311,164,81,15,33,130,249,1527,337,2399.5,4,0,2454.0,1,1,18,12,1,1,1,7,1,1,4,1,1,8,6,3,4,1,1,1,8,19,19,1,1,1,1,4,1,1,1],[\"Players\",1630596,\"Evan
+        Mobley\",\"Evan\",43,26,17,0.605,1420.2666666666667,296,577,0.513,48,159,0.302,122,192,0.635,98,279,377,172,90,38,83,32,107,143,762,165,1745.4,17,0,1601.0,7,8,16,15,3,2,2,3,7,6,13,3,2,16,3,1,2,3,2,6,1,18,17,3,2,4,2,1,1,2,1],[\"Players\",201935,\"James
+        Harden\",\"James\",5,5,0,1.0,159.13666666666666,27,55,0.491,13,27,0.481,25,28,0.893,4,21,25,43,15,5,4,4,12,15,92,41,198.5,2,0,191.0,18,18,1,1,15,15,15,6,14,14,1,11,12,3,17,15,15,12,13,18,13,6,6,14,14,10,15,6,1,15,1],[\"Players\",1628386,\"Jarrett
+        Allen\",\"Jarrett\",45,30,15,0.667,1230.9583333333333,264,421,0.627,1,10,0.1,140,190,0.737,110,270,380,88,60,43,40,31,80,169,669,197,1446.0,15,0,1304.0,4,4,11,9,4,4,5,1,17,18,17,2,3,14,1,2,1,8,6,4,2,17,14,2,4,2,3,2,1,4,1],[\"Players\",1642281,\"Jaylon
+        Tyson\",\"Jaylon\",52,33,19,0.635,1429.0466666666666,269,526,0.511,106,225,0.471,65,86,0.756,102,174,276,117,80,43,21,33,131,81,709,128,1327.7,5,0,1336.0,2,3,18,13,2,3,3,4,3,4,2,6,5,11,2,4,3,6,3,4,5,19,20,5,3,5,4,3,1,3,1],[\"Players\",1631165,\"Keon
+        Ellis\",\"Keon\",6,6,0,1.0,126.21666666666667,12,26,0.462,6,19,0.316,1,2,0.5,2,18,20,10,5,10,6,0,10,6,31,52,113.0,0,0,99.0,16,15,1,1,16,17,18,10,15,15,11,18,18,19,18,16,17,17,17,14,10,1,5,17,17,9,17,7,1,17,1],[\"Players\",1626204,\"Larry
+        Nance Jr.\",\"Larry\",26,19,7,0.731,334.4866666666667,35,95,0.368,16,50,0.32,3,5,0.6,23,46,69,25,12,15,4,6,48,14,89,-7,254.3,0,0,237.0,13,12,7,5,14,14,14,17,13,13,10,17,17,17,11,13,12,15,15,13,13,8,10,15,15,16,14,7,1,14,1],[\"Players\",1628366,\"Lonzo
+        Ball\",\"Lonzo\",35,19,16,0.543,727.7433333333333,53,176,0.301,40,147,0.272,14,21,0.667,26,114,140,136,52,45,9,6,46,17,160,32,642.0,0,0,584.0,11,12,13,18,11,13,11,19,8,8,14,14,14,15,10,7,8,5,7,3,9,8,8,13,13,12,11,7,1,11,1],[\"Players\",1631247,\"Luke
+        Travers\",\"Luke\",12,6,6,0.5,103.09166666666667,9,36,0.25,1,16,0.063,9,9,1.0,9,15,24,9,3,7,4,3,6,5,28,-32,100.3,0,0,84.0,15,15,6,19,18,18,17,20,17,17,18,16,16,1,14,17,16,18,18,17,13,4,3,18,18,18,18,7,1,18,1],[\"Players\",1641772,\"Nae'Qwan
+        Tomlin\",\"Nae'Qwan\",45,30,15,0.667,763.1166666666667,117,241,0.485,20,89,0.225,40,53,0.755,63,77,140,42,17,34,28,17,95,37,294,41,694.0,0,0,620.0,4,4,11,9,10,8,8,8,12,10,15,7,7,12,5,10,8,13,11,8,4,14,16,11,8,10,9,7,1,10,1],[\"Players\",1630241,\"Sam
+        Merrill\",\"Sam\",33,24,9,0.727,832.0433333333333,143,295,0.485,112,239,0.469,36,41,0.878,22,54,76,75,29,19,5,3,84,55,434,166,680.7,0,0,745.0,12,9,8,6,8,7,7,9,2,2,3,8,8,4,12,11,11,9,9,11,12,4,15,7,7,3,10,7,1,7,1],[\"Players\",1628418,\"Thomas
+        Bryant\",\"Thomas\",40,24,16,0.6,424.06,74,147,0.503,26,75,0.347,32,38,0.842,34,83,117,26,17,10,18,8,47,39,206,21,452.4,0,0,431.0,9,9,13,16,12,11,13,5,10,11,8,9,9,10,8,9,10,14,11,14,6,11,9,9,11,13,12,7,1,12,1],[\"Players\",1642400,\"Tristan
+        Enaruna\",\"Tristan\",4,4,0,1.0,23.45,4,9,0.444,0,2,0.0,0,1,0.0,5,2,7,2,1,0,0,1,0,1,8,11,18.4,0,0,17.0,19,19,1,1,19,19,19,13,19,20,19,20,19,20,16,20,19,19,19,20,18,3,1,19,20,14,19,7,1,19,1],[\"Players\",1642878,\"Tyrese
+        Proctor\",\"Tyrese\",40,27,13,0.675,414.12833333333333,69,175,0.394,36,106,0.34,23,27,0.852,6,37,43,53,27,16,0,9,45,24,197,-42,349.1,0,0,361.0,9,7,9,8,13,12,12,16,9,9,9,12,13,9,15,14,14,11,10,12,18,12,7,12,12,20,13,7,1,13,1]]}]}"
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '2854'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Feb 2026 05:37:15 GMT
+      Set-Cookie:
+      - bm_sv=1D119FE7E011B49174C7020457EC6DE9~YAAQlWITAnf0b2ecAQAA2xzagx6K0vpdstj63/PsyfNXpph9We+NVRfYBEcTBRY7Ca23xGRy8/H2iozXMBGDT048rruXOreE/hoBE1lPyNQl4lM6ABX6ec70d/IPTvFKqJRo0tiwm2uCbEEMct9hHxNFaSuuKrPP4lpzozr5879fOa5KMlQwwzmY3GQBeG4mdaCcEoxF59ghU4E7M/THFLDdHRB/0TngV17e+D5ztCcmIbMXlEtBuhvruj7HJKw=~1;
+        Domain=.nba.com; Path=/; Expires=Sun, 22 Feb 2026 07:35:24 GMT; Max-Age=7089;
+        Secure
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      vha6-origin:
+      - varnish-0
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - Databricks
+      x-envoy-upstream-service-time:
+      - '1'
+      x-full-ttl:
+      - '3600.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '3'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '-1207.391'
+      x-varnish:
+      - 38522958 29673457
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1
