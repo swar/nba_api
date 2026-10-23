@@ -161,14 +161,14 @@ files = [
 
 [[package]]
 name = "click"
-version = "8.3.1"
+version = "8.1.8"
 description = "Composable command line interface toolkit"
 optional = false
-python-versions = ">=3.10"
+python-versions = ">=3.7"
 groups = ["dev"]
 files = [
-    {file = "click-8.3.1-py3-none-any.whl", hash = "sha256:981153a64e25f12d547d3426c367a4857371575ee7ad18df2a6183ab0545b2a6"},
-    {file = "click-8.3.1.tar.gz", hash = "sha256:12ff4785d337a1bb490bb7e9c2b1ee5da3112e94a8622f26a6c77f5d2fc6842a"},
+    {file = "click-8.1.8-py3-none-any.whl", hash = "sha256:63c132bbbed01578a06712a2d1f497bb62d9c1c0d329b7903a866228027263b2"},
+    {file = "click-8.1.8.tar.gz", hash = "sha256:ed53c9d8990d83c2a27deae68e4ee337473f6330c040a31d4225c9574d16096a"},
 ]
 
 [package.dependencies]
@@ -1209,14 +1209,14 @@ typing-extensions = ">=4.16.0"
 
 [[package]]
 name = "pygments"
-version = "2.19.2"
+version = "2.20.0"
 description = "Pygments is a syntax highlighting package written in Python."
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 groups = ["dev"]
 files = [
-    {file = "pygments-2.19.2-py3-none-any.whl", hash = "sha256:86540386c03d588bb81d44bc3928634ff26449851e99741617ecb9037ee5ec0b"},
-    {file = "pygments-2.19.2.tar.gz", hash = "sha256:636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887"},
+    {file = "pygments-2.20.0-py3-none-any.whl", hash = "sha256:81a9e26dd42fd28a23a2d169d86d7ac03b46e2f8b59ed4698fb4785f946d0176"},
+    {file = "pygments-2.20.0.tar.gz", hash = "sha256:6757cd03768053ff99f3039c1a36d6c0aa0b263438fcab17520b30a303a82b5f"},
 ]
 
 [package.extras]
@@ -1237,21 +1237,21 @@ files = [
 
 [[package]]
 name = "pytest"
-version = "8.4.2"
+version = "9.0.2"
 description = "pytest: simple powerful testing with Python"
 optional = false
-python-versions = ">=3.9"
+python-versions = ">=3.10"
 groups = ["dev"]
 files = [
-    {file = "pytest-8.4.2-py3-none-any.whl", hash = "sha256:872f880de3fc3a5bdc88a11b39c9710c3497a547cfa9320bc3c5e62fbf272e79"},
-    {file = "pytest-8.4.2.tar.gz", hash = "sha256:86c0d0b93306b961d58d62a4db4879f27fe25513d4b969df351abdddb3c30e01"},
+    {file = "pytest-9.0.2-py3-none-any.whl", hash = "sha256:711ffd45bf766d5264d487b917733b453d917afd2b0ad65223959f59089f875b"},
+    {file = "pytest-9.0.2.tar.gz", hash = "sha256:75186651a92bd89611d1d9fc20f0b4345fd827c41ccd5c299a868a05d70edf11"},
 ]
 
 [package.dependencies]
 colorama = {version = ">=0.4", markers = "sys_platform == \"win32\""}
 exceptiongroup = {version = ">=1", markers = "python_version < \"3.11\""}
-iniconfig = ">=1"
-packaging = ">=20"
+iniconfig = ">=1.0.1"
+packaging = ">=22"
 pluggy = ">=1.5,<2"
 pygments = ">=2.7.2"
 tomli = {version = ">=1", markers = "python_version < \"3.11\""}
@@ -1261,22 +1261,23 @@ dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "requests
 
 [[package]]
 name = "pytest-cov"
-version = "4.1.0"
+version = "7.1.0"
 description = "Pytest plugin for measuring coverage."
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.9"
 groups = ["dev"]
 files = [
-    {file = "pytest-cov-4.1.0.tar.gz", hash = "sha256:3904b13dfbfec47f003b8e77fd5b589cd11904a21ddf1ab38a64f204d6a10ef6"},
-    {file = "pytest_cov-4.1.0-py3-none-any.whl", hash = "sha256:6ba70b9e97e69fcc3fb45bfeab2d0a138fb65c4d0d6a41ef33983ad114be8c3a"},
+    {file = "pytest_cov-7.1.0-py3-none-any.whl", hash = "sha256:a0461110b7865f9a271aa1b51e516c9a95de9d696734a2f71e3e78f46e1d4678"},
+    {file = "pytest_cov-7.1.0.tar.gz", hash = "sha256:30674f2b5f6351aa09702a9c8c364f6a01c27aae0c1366ae8016160d1efc56b2"},
 ]
 
 [package.dependencies]
-coverage = {version = ">=5.2.1", extras = ["toml"]}
-pytest = ">=4.6"
+coverage = {version = ">=7.10.6", extras = ["toml"]}
+pluggy = ">=1.2"
+pytest = ">=7"
 
 [package.extras]
-testing = ["fields", "hunter", "process-tests", "pytest-xdist", "six", "virtualenv"]
+testing = ["process-tests", "pytest-xdist", "virtualenv"]
 
 [[package]]
 name = "pytest-recording"
@@ -1336,18 +1337,18 @@ yaml = ["PyYaml (>=6.0.1)"]
 
 [[package]]
 name = "python-semantic-release"
-version = "9.21.1"
+version = "10.3.1"
 description = "Automatic Semantic Versioning for Python projects"
 optional = false
 python-versions = ">=3.8"
 groups = ["dev"]
 files = [
-    {file = "python_semantic_release-9.21.1-py3-none-any.whl", hash = "sha256:e69afe5100106390eec9e800132c947ed774bdcf9aa8f0df29589ea9ef375a21"},
-    {file = "python_semantic_release-9.21.1.tar.gz", hash = "sha256:b5c509a573899e88e8f29504d2f83e9ddab9a66af861ec1baf39f2b86bbf3517"},
+    {file = "python_semantic_release-10.3.1-py3-none-any.whl", hash = "sha256:b2677018e761dfbfdf5758eeee6b09963e136d67c43059f12f9bc6c441fcbf13"},
+    {file = "python_semantic_release-10.3.1.tar.gz", hash = "sha256:16003292315ee29b6ad424fad9745946422cf965e19649269c4e2fb8271cb267"},
 ]
 
 [package.dependencies]
-click = ">=8.0,<9.0"
+click = ">=8.1.0,<8.2.0"
 click-option-group = ">=0.5,<1.0"
 Deprecated = ">=1.2,<2.0"
 dotty-dict = ">=1.3,<2.0"
@@ -1355,7 +1356,7 @@ gitpython = ">=3.0,<4.0"
 importlib-resources = ">=6.0,<7.0"
 jinja2 = ">=3.1,<4.0"
 pydantic = ">=2.0,<3.0"
-python-gitlab = ">=4.0.0,<6.0.0"
+python-gitlab = ">=4.0.0,<7.0.0"
 requests = ">=2.25,<3.0"
 rich = ">=14.0,<15.0"
 shellingham = ">=1.5,<2.0"
@@ -1365,7 +1366,7 @@ tomlkit = ">=0.11,<1.0"
 build = ["build (>=1.2,<2.0)"]
 dev = ["pre-commit (>=3.5,<4.0)", "ruff (==0.6.1)", "tox (>=4.11,<5.0)"]
 docs = ["Sphinx (>=6.0,<7.0)", "furo (>=2024.1,<2025.0)", "sphinx-autobuild (==2024.2.4)", "sphinxcontrib-apidoc (==0.5.0)"]
-mypy = ["mypy (==1.15.0)", "types-Deprecated (>=1.2,<2.0)", "types-pyyaml (>=6.0,<7.0)", "types-requests (>=2.32.0,<2.33.0)"]
+mypy = ["mypy (==1.16.1)", "types-Deprecated (>=1.2,<2.0)", "types-pyyaml (>=6.0,<7.0)", "types-requests (>=2.32.0,<2.33.0)"]
 test = ["coverage[toml] (>=7.0,<8.0)", "filelock (>=3.15,<4.0)", "flatdict (>=4.0,<5.0)", "freezegun (>=1.5,<2.0)", "pytest (>=8.3,<9.0)", "pytest-clarity (>=1.0,<2.0)", "pytest-cov (>=5.0.0,<7.0.0)", "pytest-env (>=1.0,<2.0)", "pytest-lazy-fixtures (>=1.1.1,<1.2.0)", "pytest-mock (>=3.0,<4.0)", "pytest-order (>=1.3,<2.0)", "pytest-pretty (>=1.2,<2.0)", "pytest-xdist (>=3.0,<4.0)", "pyyaml (>=6.0,<7.0)", "requests-mock (>=1.10,<2.0)", "responses (>=0.25.0,<0.26.0)"]
 
 [[package]]
@@ -1886,4 +1887,4 @@ dev = ["pytest", "setuptools"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10"
-content-hash = "9bd3920e30155cf3449db54c42c49ec8ce94bff1d910ae3e3bff3abd220c6ab2"
+content-hash = "974457ab139efdf7414ee6ed0cea0c229399791a9408e488180f48ff8124a48d"

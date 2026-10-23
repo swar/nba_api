@@ -56,9 +56,9 @@ requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^8.3.3"
-pytest-cov = "^4.0"
-python-semantic-release = "^9.0.0"
+pytest = "^9.0.2"
+pytest-cov = "^7.1"
+python-semantic-release = "^10.3.1"
 pandas = [
     {version = ">=2.2.0", python = ">=3.12"},
     {version = "<2.2.0", python = "<3.12"}
