@@ -3,12 +3,12 @@
 
 This module looks up NBA and WNBA players from the data bundled in [`data.py`](../library/data.md), without sending any requests.
 
-Name searches take a regular expression, match case-insensitively, and ignore accents in both the pattern and the name, so `"jokic"` matches `"Nikola Jokić"`. Use anchors for exact matches, for example `"^james$"`.
+Name searches take a regular expression, match case-insensitively, and ignore accents in both the pattern and the name, so `"žydrūnas"` finds `"Zydrunas Ilgauskas"`. Use anchors for exact matches, for example `"^mitchell$"`.
 
 Each player is returned as a `dict`:
 
 ```python
-{'id': 203999, 'full_name': 'Nikola Jokić', 'first_name': 'Nikola', 'last_name': 'Jokić', 'is_active': True}
+{'id': 1628378, 'full_name': 'Donovan Mitchell', 'first_name': 'Donovan', 'last_name': 'Mitchell', 'is_active': True}
 ```
 
 ## Public functions

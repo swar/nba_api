@@ -14,7 +14,7 @@ Each list holds one row (a `list`) per player or team. Use the index constants t
 ```
 
 ```python
-[203999, "Jokić", "Nikola", "Nikola Jokić", True]
+[1628378, "Mitchell", "Donovan", "Donovan Mitchell", True]
 ```
 
 | Constant | Value |
@@ -34,7 +34,7 @@ Each list holds one row (a `list`) per player or team. Use the index constants t
 ```
 
 ```python
-[1610612737, "ATL", "Hawks", 1949, "Atlanta", "Atlanta Hawks", "Georgia", [1958]]
+[1610612739, "CLE", "Cavaliers", 1970, "Cleveland", "Cleveland Cavaliers", "Ohio", [2016]]
 ```
 
 | Constant | Value |
