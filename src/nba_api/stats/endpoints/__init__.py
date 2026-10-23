@@ -135,6 +135,7 @@ __all__ = [
     "videodetails",
     "videodetailsasset",
     "videoevents",
+    "videoeventsasset",
     "videostatus",
     "winprobabilitypbp",
 ]
@@ -246,6 +247,7 @@ from .playerprofilev2 import PlayerProfileV2
 from .playervsplayer import PlayerVsPlayer
 from .playoffpicture import PlayoffPicture
 from .scheduleleaguev2 import ScheduleLeagueV2
+from .scheduleleaguev2int import ScheduleLeagueV2Int
 from .scoreboardv2 import ScoreboardV2
 from .scoreboardv3 import ScoreboardV3
 from .shotchartdetail import ShotChartDetail
@@ -274,5 +276,6 @@ from .teamyearbyyearstats import TeamYearByYearStats
 from .videodetails import VideoDetails
 from .videodetailsasset import VideoDetailsAsset
 from .videoevents import VideoEvents
+from .videoeventsasset import VideoEventsAsset
 from .videostatus import VideoStatus
 from .winprobabilitypbp import WinProbabilityPBP
