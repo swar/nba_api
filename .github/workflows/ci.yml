@@ -74,12 +74,32 @@ jobs:
           NBA_API_PROXY: ""
         run: poetry run pytest tests/integration -m vcr --block-network --record-mode=none
 
+  # The tests run against the source tree; this checks what ships to PyPI.
+  package:
+    name: Package (build, twine check, import wheel)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install Poetry
+        run: pipx install "poetry==${POETRY_VERSION}"
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        id: python
+        with:
+          python-version: "3.13"
+      - name: Build, check, and import the wheel
+        env:
+          PYTHON: ${{ steps.python.outputs.python-path }}
+        run: scripts/check-package.sh "$PYTHON"
+
   # Single check for branch protection to require, so adding or renaming
   # jobs and matrix entries never means editing the protection rules.
   all-green:
     name: CI passed
     if: always()
-    needs: [lint, test]
+    needs: [lint, test, package]
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:

@@ -12,6 +12,7 @@
 #   make test-vcr      - Run cassette-backed integration tests (offline)
 #   make test-canary   - Run live canary tests through NBA_API_PROXY (real requests)
 #   make check         - Format + lint + unit tests + vcr tests (pre-commit check)
+#   make check-package - Build, twine-check, and import the installed wheel
 #   make ci            - Same checks as CI, without modifying files
 #
 # EXAMPLES:
@@ -23,7 +24,7 @@
 #
 # ============================================================================
 
-.PHONY: format lint test test-unit test-vcr test-canary test-cov check ci all install clean build help
+.PHONY: format lint test test-unit test-vcr test-canary test-cov check-package check ci all install clean build help
 
 # Default paths (can be overridden with FILES=path/to/file.py)
 SRC_DIR = src/nba_api
@@ -42,8 +43,9 @@ help:
 	@echo "  make test-vcr         - Run cassette-backed integration tests (offline)"
 	@echo "  make test-canary      - Run live canary tests through NBA_API_PROXY (real requests)"
 	@echo "  make test-cov         - Run tests with coverage report"
+	@echo "  make check-package    - Build, twine-check, and import the installed wheel"
 	@echo "  make check            - Run format + lint + unit + vcr tests"
-	@echo "  make ci               - Run lint + unit + vcr tests (no formatting, mirrors CI)"
+	@echo "  make ci               - Run lint + unit + vcr tests + package check (no formatting, mirrors CI)"
 	@echo "  make clean            - Remove cache and build artifacts"
 	@echo ""
 	@echo "Examples with specific files:"
@@ -66,9 +68,9 @@ lint:
 	poetry run ruff check $(FILES)
 	poetry run ruff format --check $(FILES)
 
-# Run all unit tests
+# Run all unit tests. --block-network fails any test that opens a real socket.
 test-unit:
-	poetry run pytest $(TEST_DIR) -v
+	poetry run pytest $(TEST_DIR) -v --block-network --record-mode=none
 
 # Alias for test-unit
 test: test-unit
@@ -76,7 +78,7 @@ test: test-unit
 # Run cassette-backed integration tests. NBA_API_PROXY is blanked so a proxy
 # exported in your shell doesn't intercept cassette replay.
 test-vcr:
-	NBA_API_PROXY= poetry run pytest tests/integration -m vcr
+	NBA_API_PROXY= poetry run pytest tests/integration -m vcr --block-network --record-mode=none
 
 # Run the live canary tests: real requests to stats.nba.com and cdn.nba.com, always
 # through NBA_API_PROXY (skipped when it is unset). Not part of check/ci.
@@ -87,11 +89,15 @@ test-canary:
 test-cov:
 	poetry run pytest $(TEST_DIR) --cov=$(SRC_DIR) --cov-report=html --cov-report=term
 
+# Build the sdist and wheel, twine-check them, and import the installed wheel
+check-package:
+	scripts/check-package.sh "$$(poetry env info --executable)"
+
 # Run all checks (use before committing)
 check: format lint test test-vcr
 
 # Run all checks without formatting (for CI)
-ci: lint test test-vcr
+ci: lint test test-vcr check-package
 
 # Clean up cache and build artifacts
 clean:
