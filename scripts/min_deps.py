@@ -1,7 +1,7 @@
 """Print the lowest versions pyproject.toml allows for the running Python.
 
 One pin per runtime dependency whose marker matches this interpreter, taken from
-its highest ">=" (or "==" / "~=") bound, e.g. "numpy==1.26.0". CI installs these over
+its highest ">=" (or "==" / "~=") bound, e.g. "pandas==2.2.2". CI installs these over
 the locked versions to test the floors the package promises.
 
 Usage: poetry run python scripts/min_deps.py
