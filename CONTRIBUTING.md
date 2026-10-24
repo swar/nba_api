@@ -23,8 +23,7 @@ For significant changes, open an issue titled `PROPOSAL: ...` to discuss the des
 ### Prerequisites
 
 - **Python** — a version listed under `requires-python` and the classifiers in [`pyproject.toml`](pyproject.toml) (currently 3.10–3.15; CI tests all of them).
-- **[Poetry](https://python-poetry.org/docs/#installation) 2.x** — manages the virtual environment, dependencies, and builds.
-- **[pyenv](https://github.com/pyenv/pyenv)** (optional) — for switching between Python versions. Poetry uses whichever Python is active.
+- **[uv](https://docs.astral.sh/uv/getting-started/installation/)** — manages the virtual environment, dependencies, and builds. It can also install the Python versions listed above.
 
 A [dev container](.devcontainer/devcontainer.json) is also provided if you prefer VS Code or Codespaces.
 
@@ -35,17 +34,17 @@ A [dev container](.devcontainer/devcontainer.json) is also provided if you prefe
 git clone https://github.com/<your-username>/nba_api.git
 cd nba_api
 
-# 2. Install the package and all development dependencies
-poetry install
+# 2. Create .venv and install the locked dependencies, including the dev group
+uv sync
 
 # 3. Install the pre-commit hooks (runs Ruff on every commit)
-poetry run pre-commit install
+uv run pre-commit install
 
 # 4. Verify everything passes
 make ci
 ```
 
-Run commands with `poetry run <command>`, or activate the environment with `eval $(poetry env activate)`.
+Run commands with `uv run <command>`, or activate the environment with `source .venv/bin/activate`.
 
 ## Running checks
 
@@ -53,11 +52,11 @@ Run commands with `poetry run <command>`, or activate the environment with `eval
 
 | Check | Command |
 |---|---|
-| Unit tests (offline, fast) | `poetry run pytest tests/unit` |
+| Unit tests (offline, fast) | `uv run pytest tests/unit` |
 | Integration tests (replay recorded responses, offline) | `make test-vcr` |
 | Live canary tests (real requests, needs a proxy; see below) | `make test-canary` |
-| Lint | `poetry run ruff check` |
-| Format check | `poetry run ruff format --check` |
+| Lint | `uv run ruff check` |
+| Format check | `uv run ruff format --check` |
 | Auto-fix lint and format | `make format` |
 | Coverage report | `make test-cov` |
 

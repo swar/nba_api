@@ -52,15 +52,24 @@ readme = "README.md"
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
-[tool.poetry.group.dev.dependencies]
-pytest = "^9.0.2"
-pytest-cov = "^7.1"
-python-semantic-release = "^10.3.1"
-pandas = ">=2.2.2"
-ruff = "^0.17.2"
-pre-commit = "^4.0.0"
-pytest-recording = "^0.14.0"
-requests = {version = "^2.32.3", extras = ["socks"]}
+[dependency-groups]
+# `uv sync` installs `dev` by default; the lint job installs only `lint`.
+lint = [
+    "ruff>=0.17.2,<0.18",
+]
+dev = [
+    {include-group = "lint"},
+    "pytest>=9.0.2,<10",
+    "pytest-cov>=7.1,<8",
+    "python-semantic-release>=10.3.1,<11",
+    "pandas>=2.2.2",
+    "pre-commit>=4.0.0,<5",
+    "pytest-recording>=0.14.0,<0.15",
+    "requests[socks]>=2.32.3,<3",
+]
+
+[tool.uv]
+required-version = ">=0.9"
 
 [tool.pytest.ini_options]
 markers = [

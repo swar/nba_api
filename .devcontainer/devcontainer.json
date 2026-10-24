@@ -66,7 +66,7 @@
     "remoteUser": "vscode",
 
     // Command to run after the container is created and VS Code connects
-    // This executes the post-create script that sets up Poetry and dependencies
+    // This executes the post-create script that installs the dependencies with uv
     // Runs only once when the container is first created, not on every restart
     "postCreateCommand": "bash .devcontainer/post-create-command.sh"
 }

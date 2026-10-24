@@ -14,8 +14,8 @@ revert them) and ``src/nba_api/stats/library/data.py``.
 
 Usage (from the repo root)::
 
-    poetry run python scripts/static_teams_update/generate_static_teams.py --check
-    poetry run python scripts/static_teams_update/generate_static_teams.py
+    uv run python scripts/static_teams_update/generate_static_teams.py --check
+    uv run python scripts/static_teams_update/generate_static_teams.py
 """
 
 import argparse

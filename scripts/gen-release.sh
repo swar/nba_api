@@ -3,7 +3,7 @@
 # Prepare an nba_api release.
 #
 # Computes the next version from the Conventional Commits since the last tag,
-# bumps pyproject.toml, and writes the release's CHANGELOG.MD section, all in
+# bumps pyproject.toml (and uv.lock), and writes the release's CHANGELOG.MD section, all in
 # one commit on a new release/vX.Y.Z branch. The notes come from a file
 # (--notes, e.g. written by an AI agent from --context output) or from the
 # hand-written "## Unreleased" section. Nothing is pushed, tagged, or
@@ -99,7 +99,7 @@ cd "$(git rev-parse --show-toplevel)"
 
 # --- Preconditions -----------------------------------------------------------
 
-command -v poetry >/dev/null || die "poetry is not installed"
+command -v uv >/dev/null || die "uv is not installed"
 git remote get-url "$REMOTE" >/dev/null 2>&1 ||
     die "no git remote named '$REMOTE' (pass --remote)"
 
@@ -115,7 +115,7 @@ git fetch --quiet --tags --force "$REMOTE" "$BASE_BRANCH"
 [ "$(git rev-parse HEAD)" = "$(git rev-parse "$REMOTE/$BASE_BRANCH")" ] ||
     die "local $BASE_BRANCH differs from $REMOTE/$BASE_BRANCH; run: git pull --ff-only $REMOTE $BASE_BRANCH"
 
-current=$(poetry version --short)
+current=$(uv version --short)
 last_tag=$(git describe --tags --abbrev=0 --match 'v[0-9]*' 2>/dev/null) ||
     die "no vX.Y.Z tags found"
 [ "v$current" = "$last_tag" ] ||
@@ -129,7 +129,7 @@ trap 'rm -f "$psr_log" "$notes"' EXIT
 
 # --strict makes "nothing to release" exit 2 instead of reprinting the current version.
 set +e
-computed=$(poetry run semantic-release --strict version --print 2>"$psr_log")
+computed=$(uv run --locked semantic-release --strict version --print 2>"$psr_log")
 status=$?
 set -e
 if [ "$status" -ne 0 ]; then
@@ -314,7 +314,9 @@ fi
 # --- Apply -------------------------------------------------------------------
 
 git switch --quiet -c "$release_branch"
-poetry version "$next" >/dev/null
+# uv.lock records the project version, so uv re-locks along with the bump; both
+# files go in the release commit or `uv sync --locked` fails on master.
+uv version "$next" --no-sync >/dev/null
 
 # Replace the Unreleased section (heading through the line before the next
 # "## ") with an empty Unreleased heading followed by the new version section.
@@ -334,7 +336,7 @@ awk -v re="$UNRELEASED_RE" -v heading="## v$next" -v date="Date: $today" -v note
 cat "$tmp" >"$CHANGELOG"
 rm -f "$tmp"
 
-git add pyproject.toml "$CHANGELOG"
+git add pyproject.toml uv.lock "$CHANGELOG"
 git commit --quiet -m "chore: release v$next"
 
 cat <<EOF

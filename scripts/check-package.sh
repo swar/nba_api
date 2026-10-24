@@ -6,21 +6,21 @@
 #
 # Usage: scripts/check-package.sh [PYTHON]
 #
-# PYTHON is the interpreter for the throwaway virtualenv (default: python3).
-# It must satisfy requires-python. Nothing is written inside the repo.
+# PYTHON is the interpreter for the throwaway virtualenv (default: whatever uv
+# finds). It must satisfy requires-python. Nothing is written inside the repo.
 
 set -euo pipefail
 
 TWINE_VERSION="7.0.0"
-PYTHON="${1:-python3}"
+PYTHON="${1:-}"
 
 work="$(mktemp -d)"
 trap 'rm -rf "$work"' EXIT
 
-poetry build --no-ansi --output "$work/dist"
+uv build --quiet --out-dir "$work/dist"
 
-"$PYTHON" -m venv "$work/venv"
-"$work/venv/bin/python" -m pip install --quiet --disable-pip-version-check \
+uv venv --quiet ${PYTHON:+--python "$PYTHON"} "$work/venv"
+uv pip install --quiet --python "$work/venv/bin/python" \
     "twine==${TWINE_VERSION}" "$work"/dist/*.whl
 
 "$work/venv/bin/twine" check --strict "$work"/dist/*
