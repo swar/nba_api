@@ -23,7 +23,7 @@ instead of recording, so this never touches the network.
 
 To regenerate after an intentional change, run::
 
-    NBA_API_UPDATE_SNAPSHOTS=1 NBA_API_PROXY= poetry run pytest \\
+    NBA_API_UPDATE_SNAPSHOTS=1 NBA_API_PROXY= uv run pytest \\
         tests/integration/snapshots -m vcr
 
 Partial runs (``-k``) only rewrite the endpoints that ran; entries for classes
@@ -223,7 +223,7 @@ def test_endpoint_datasets_match_snapshot(name, snapshot):
             f"{name} datasets differ from {SNAPSHOT_PATH.name} at:\n{paths}\n\n"
             f"{diff}\n\n"
             "If this change is intentional, regenerate with:\n"
-            "NBA_API_UPDATE_SNAPSHOTS=1 NBA_API_PROXY= poetry run pytest "
+            "NBA_API_UPDATE_SNAPSHOTS=1 NBA_API_PROXY= uv run pytest "
             f"tests/integration/snapshots -m vcr -k {name}",
             pytrace=False,
         )

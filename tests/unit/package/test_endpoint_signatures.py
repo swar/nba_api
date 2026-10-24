@@ -11,7 +11,7 @@ so the snapshot does not roll over in October (see ``endpoint_signatures.py``).
 
 If a change to the snapshot is intentional, regenerate it and commit the diff::
 
-    NBA_API_UPDATE_SNAPSHOTS=1 poetry run pytest tests/unit/package/test_endpoint_signatures.py
+    NBA_API_UPDATE_SNAPSHOTS=1 uv run pytest tests/unit/package/test_endpoint_signatures.py
 """
 
 import difflib
@@ -26,7 +26,7 @@ import pytest
 HERE = Path(__file__).parent
 SNAPSHOT_PATH = HERE / "endpoint_signatures.json"
 UPDATE_COMMAND = (
-    "NBA_API_UPDATE_SNAPSHOTS=1 poetry run pytest "
+    "NBA_API_UPDATE_SNAPSHOTS=1 uv run pytest "
     "tests/unit/package/test_endpoint_signatures.py"
 )
 
