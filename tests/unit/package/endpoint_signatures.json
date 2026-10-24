@@ -1,0 +1,4964 @@
+{
+  "live.BoxScore": {
+    "endpoint_url": "boxscore/boxscore_{game_id}.json",
+    "expected_data": [
+      "game",
+      "meta"
+    ],
+    "none_attrs": [
+      "arena",
+      "away_team",
+      "away_team_player_stats",
+      "away_team_stats",
+      "data_sets",
+      "game",
+      "game_details",
+      "headers",
+      "home_team",
+      "home_team_player_stats",
+      "home_team_stats",
+      "nba_response",
+      "officials"
+    ],
+    "params": [
+      "game_id",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "live.Odds": {
+    "endpoint_url": "odds/odds_todaysGames.json",
+    "expected_data": [
+      "games"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "games",
+      "headers",
+      "nba_response"
+    ],
+    "params": [
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "live.PlayByPlay": {
+    "endpoint_url": "playbyplay/playbyplay_{game_id}.json",
+    "expected_data": [
+      "game",
+      "meta"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "live.ScoreBoard": {
+    "endpoint_url": "scoreboard/todaysScoreboard_00.json",
+    "expected_data": [
+      "meta",
+      "scoreboard"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "games",
+      "headers",
+      "nba_response",
+      "score_board_date"
+    ],
+    "params": [
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.AllTimeLeadersGrids": {
+    "endpoint": "alltimeleadersgrids",
+    "expected_data": [
+      "ASTLeaders",
+      "BLKLeaders",
+      "DREBLeaders",
+      "FG3ALeaders",
+      "FG3MLeaders",
+      "FG3_PCTLeaders",
+      "FGALeaders",
+      "FGMLeaders",
+      "FG_PCTLeaders",
+      "FTALeaders",
+      "FTMLeaders",
+      "FT_PCTLeaders",
+      "GPLeaders",
+      "OREBLeaders",
+      "PFLeaders",
+      "PTSLeaders",
+      "REBLeaders",
+      "STLLeaders",
+      "TOVLeaders"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "per_mode_simple='Totals'",
+      "season_type='Regular Season'",
+      "topx=10",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.AssistLeaders": {
+    "endpoint": "assistleaders",
+    "expected_data": [
+      "AssistLeaders"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "per_mode_simple='Totals'",
+      "player_or_team='Team'",
+      "season=Season.default",
+      "season_type_playoffs='Regular Season'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.AssistTracker": {
+    "endpoint": "assisttracker",
+    "expected_data": [
+      "AssistTracker"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "college_nullable=''",
+      "conference_nullable=''",
+      "country_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "division_simple_nullable=''",
+      "draft_pick_nullable=''",
+      "draft_year_nullable=''",
+      "game_scope_simple_nullable=''",
+      "height_nullable=''",
+      "last_n_games_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "month_nullable=''",
+      "opponent_team_id_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "per_mode_simple_nullable=''",
+      "player_experience_nullable=''",
+      "player_position_abbreviation_nullable=''",
+      "season_nullable=''",
+      "season_segment_nullable=''",
+      "season_type_all_star_nullable=''",
+      "starter_bench_nullable=''",
+      "team_id_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "weight_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.BoxScoreAdvancedV2": {
+    "endpoint": "boxscoreadvancedv2",
+    "expected_data": [
+      "PlayerStats",
+      "TeamStats"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "end_period='0'",
+      "end_range='0'",
+      "range_type='0'",
+      "start_period='0'",
+      "start_range='0'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.BoxScoreAdvancedV3": {
+    "endpoint": "boxscoreadvancedv3",
+    "expected_data": [
+      "PlayerStats",
+      "TeamStats"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "end_period='0'",
+      "end_range='0'",
+      "range_type='0'",
+      "start_period='0'",
+      "start_range='0'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.BoxScoreDefensiveV2": {
+    "endpoint": "boxscoredefensivev2",
+    "expected_data": [
+      "PlayerStats",
+      "TeamStats"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.BoxScoreFourFactorsV2": {
+    "endpoint": "boxscorefourfactorsv2",
+    "expected_data": [
+      "sqlPlayersFourFactors",
+      "sqlTeamsFourFactors"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "end_period='0'",
+      "end_range='0'",
+      "range_type='0'",
+      "start_period='0'",
+      "start_range='0'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.BoxScoreFourFactorsV3": {
+    "endpoint": "boxscorefourfactorsv3",
+    "expected_data": [
+      "PlayerStats",
+      "TeamStats"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "end_period='0'",
+      "end_range='0'",
+      "range_type='0'",
+      "start_period='0'",
+      "start_range='0'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.BoxScoreHustleV2": {
+    "endpoint": "boxscorehustlev2",
+    "expected_data": [
+      "PlayerStats",
+      "TeamStats"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.BoxScoreMatchupsV3": {
+    "endpoint": "boxscorematchupsv3",
+    "expected_data": [
+      "PlayerStats"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.BoxScoreMiscV2": {
+    "endpoint": "boxscoremiscv2",
+    "expected_data": [
+      "sqlPlayersMisc",
+      "sqlTeamsMisc"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "end_period='0'",
+      "end_range='0'",
+      "range_type='0'",
+      "start_period='0'",
+      "start_range='0'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.BoxScoreMiscV3": {
+    "endpoint": "boxscoremiscv3",
+    "expected_data": [
+      "PlayerStats",
+      "TeamStats"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "end_period='0'",
+      "end_range='0'",
+      "range_type='0'",
+      "start_period='0'",
+      "start_range='0'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.BoxScorePlayerTrackV3": {
+    "endpoint": "boxscoreplayertrackv3",
+    "expected_data": [
+      "PlayerStats",
+      "TeamStats"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.BoxScoreScoringV2": {
+    "endpoint": "boxscorescoringv2",
+    "expected_data": [
+      "sqlPlayersScoring",
+      "sqlTeamsScoring"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "end_period='0'",
+      "end_range='0'",
+      "range_type='0'",
+      "start_period='0'",
+      "start_range='0'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.BoxScoreScoringV3": {
+    "endpoint": "boxscorescoringv3",
+    "expected_data": [
+      "PlayerStats",
+      "TeamStats"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "end_period='0'",
+      "end_range='0'",
+      "range_type='0'",
+      "start_period='0'",
+      "start_range='0'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.BoxScoreSummaryV2": {
+    "endpoint": "boxscoresummaryv2",
+    "expected_data": [
+      "AvailableVideo",
+      "GameInfo",
+      "GameSummary",
+      "InactivePlayers",
+      "LastMeeting",
+      "LineScore",
+      "Officials",
+      "OtherStats",
+      "SeasonSeries"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.BoxScoreSummaryV3": {
+    "endpoint": "boxscoresummaryv3",
+    "expected_data": [
+      "ArenaInfo",
+      "AvailableVideo",
+      "GameInfo",
+      "GameSummary",
+      "InactivePlayers",
+      "LastFiveMeetings",
+      "LineScore",
+      "Officials",
+      "OtherStats"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.BoxScoreTraditionalV2": {
+    "endpoint": "boxscoretraditionalv2",
+    "expected_data": [
+      "PlayerStats",
+      "TeamStarterBenchStats",
+      "TeamStats"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "end_period='0'",
+      "end_range='0'",
+      "range_type='0'",
+      "start_period='0'",
+      "start_range='0'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.BoxScoreTraditionalV3": {
+    "endpoint": "boxscoretraditionalv3",
+    "expected_data": [
+      "PlayerStats",
+      "TeamStarterBenchStats",
+      "TeamStats"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "end_period='0'",
+      "end_range='0'",
+      "range_type='0'",
+      "start_period='0'",
+      "start_range='0'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.BoxScoreUsageV2": {
+    "endpoint": "boxscoreusagev2",
+    "expected_data": [
+      "sqlPlayersUsage",
+      "sqlTeamsUsage"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "end_period='0'",
+      "end_range='0'",
+      "range_type='0'",
+      "start_period='0'",
+      "start_range='0'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.BoxScoreUsageV3": {
+    "endpoint": "boxscoreusagev3",
+    "expected_data": [
+      "PlayerStats",
+      "TeamStats"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "end_period='0'",
+      "end_range='0'",
+      "range_type='0'",
+      "start_period='0'",
+      "start_range='0'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.CommonAllPlayers": {
+    "endpoint": "commonallplayers",
+    "expected_data": [
+      "CommonAllPlayers"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "is_only_current_season=0",
+      "league_id='00'",
+      "season=Season.default",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.CommonPlayerInfo": {
+    "endpoint": "commonplayerinfo",
+    "expected_data": [
+      "AvailableSeasons",
+      "CommonPlayerInfo",
+      "PlayerHeadlineStats"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "player_id",
+      "league_id_nullable='00'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.CommonPlayoffSeries": {
+    "endpoint": "commonplayoffseries",
+    "expected_data": [
+      "PlayoffSeries"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "season=Season.default",
+      "series_id_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.CommonTeamRoster": {
+    "endpoint": "commonteamroster",
+    "expected_data": [
+      "Coaches",
+      "CommonTeamRoster"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "season=Season.default",
+      "league_id_nullable='00'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.CommonTeamYears": {
+    "endpoint": "commonteamyears",
+    "expected_data": [
+      "TeamYears"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.CumeStatsPlayer": {
+    "endpoint": "cumestatsplayer",
+    "expected_data": [
+      "GameByGameStats",
+      "TotalPlayerStats"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "player_id",
+      "game_ids",
+      "league_id='00'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.CumeStatsPlayerGames": {
+    "endpoint": "cumestatsplayergames",
+    "expected_data": [
+      "CumeStatsPlayerGames"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "player_id",
+      "league_id='00'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "vs_team_id_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.CumeStatsTeam": {
+    "endpoint": "cumestatsteam",
+    "expected_data": [
+      "GameByGameStats",
+      "TotalTeamStats"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "game_ids",
+      "league_id='00'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.CumeStatsTeamGames": {
+    "endpoint": "cumestatsteamgames",
+    "expected_data": [
+      "CumeStatsTeamGames"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "league_id='00'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "season_id_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "vs_team_id_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.DefenseHub": {
+    "endpoint": "defensehub",
+    "expected_data": [
+      "DefenseHubStat1",
+      "DefenseHubStat10",
+      "DefenseHubStat2",
+      "DefenseHubStat3",
+      "DefenseHubStat4",
+      "DefenseHubStat5",
+      "DefenseHubStat6",
+      "DefenseHubStat7",
+      "DefenseHubStat8",
+      "DefenseHubStat9"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_scope_detailed='Season'",
+      "league_id='00'",
+      "player_or_team='Team'",
+      "player_scope='All Players'",
+      "season=Season.default",
+      "season_type_playoffs='Regular Season'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.DraftBoard": {
+    "endpoint": "draftboard",
+    "expected_data": [
+      "DraftBoard"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "season_year=SeasonYear.default",
+      "college_nullable=''",
+      "overall_pick_nullable=''",
+      "round_num_nullable=''",
+      "round_pick_nullable=''",
+      "team_id_nullable=''",
+      "topx_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.DraftCombineDrillResults": {
+    "endpoint": "draftcombinedrillresults",
+    "expected_data": [
+      "Results"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "season_year=SeasonYear.default",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.DraftCombineNonStationaryShooting": {
+    "endpoint": "draftcombinenonstationaryshooting",
+    "expected_data": [
+      "Results"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "season_year=SeasonYear.default",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.DraftCombinePlayerAnthro": {
+    "endpoint": "draftcombineplayeranthro",
+    "expected_data": [
+      "Results"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "season_year=SeasonYear.default",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.DraftCombineSpotShooting": {
+    "endpoint": "draftcombinespotshooting",
+    "expected_data": [
+      "Results"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "season_year=SeasonYear.default",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.DraftCombineStats": {
+    "endpoint": "draftcombinestats",
+    "expected_data": [
+      "DraftCombineStats"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "season_all_time=Season.default",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.DraftHistory": {
+    "endpoint": "drafthistory",
+    "expected_data": [
+      "DraftHistory"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "college_nullable=''",
+      "overall_pick_nullable=''",
+      "round_num_nullable=''",
+      "round_pick_nullable=''",
+      "season_year_nullable=''",
+      "team_id_nullable=''",
+      "topx_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.DunkScoreLeaders": {
+    "endpoint": "dunkscoreleaders",
+    "expected_data": [
+      "dunks"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id_nullable='00'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "player_id_nullable=None",
+      "team_id_nullable=None",
+      "game_id_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.FantasyWidget": {
+    "endpoint": "fantasywidget",
+    "expected_data": [
+      "FantasyWidgetResult"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "active_players='N'",
+      "last_n_games='0'",
+      "league_id='00'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "todays_opponent=0",
+      "todays_players='N'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "location_nullable=''",
+      "month_nullable=''",
+      "opponent_team_id_nullable=''",
+      "po_round_nullable=''",
+      "player_id_nullable=''",
+      "position_nullable=''",
+      "season_segment_nullable=''",
+      "team_id_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.FranchiseHistory": {
+    "endpoint": "franchisehistory",
+    "expected_data": [
+      "DefunctTeams",
+      "FranchiseHistory"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.FranchiseLeaders": {
+    "endpoint": "franchiseleaders",
+    "expected_data": [
+      "FranchiseLeaders"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "league_id_nullable='00'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.FranchisePlayers": {
+    "endpoint": "franchiseplayers",
+    "expected_data": [
+      "FranchisePlayers"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "league_id='00'",
+      "per_mode_detailed='Totals'",
+      "season_type_all_star='Regular Season'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.GLAlumBoxScoreSimilarityScore": {
+    "endpoint": "glalumboxscoresimilarityscore",
+    "expected_data": [
+      "GLeagueAlumBoxScoreSimilarityScores"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "person2_id",
+      "person1_id",
+      "person1_league_id='00'",
+      "person1_season_year=SeasonYear.default",
+      "person1_season_type='Regular Season'",
+      "person2_league_id='00'",
+      "person2_season_year=SeasonYear.default",
+      "person2_season_type='Regular Season'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.GameRotation": {
+    "endpoint": "gamerotation",
+    "expected_data": [
+      "AwayTeam",
+      "HomeTeam"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "league_id='00'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.GravityLeaders": {
+    "endpoint": "gravityleaders",
+    "expected_data": [
+      "leaders"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response"
+    ],
+    "params": [
+      "league_id='00'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.HomePageLeaders": {
+    "endpoint": "homepageleaders",
+    "expected_data": [
+      "HomePageLeaders",
+      "LeagueAverage",
+      "LeagueMax"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_scope_detailed='Season'",
+      "league_id='00'",
+      "player_or_team='Team'",
+      "player_scope='All Players'",
+      "season=Season.default",
+      "season_type_playoffs='Regular Season'",
+      "stat_category='Points'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.HomePageV2": {
+    "endpoint": "homepagev2",
+    "expected_data": [
+      "HomePageStat1",
+      "HomePageStat2",
+      "HomePageStat3",
+      "HomePageStat4",
+      "HomePageStat5",
+      "HomePageStat6",
+      "HomePageStat7",
+      "HomePageStat8"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_scope_detailed='Season'",
+      "league_id='00'",
+      "player_or_team='Team'",
+      "player_scope='All Players'",
+      "season=Season.default",
+      "season_type_playoffs='Regular Season'",
+      "stat_type='Traditional'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.HustleStatsBoxScore": {
+    "endpoint": "hustlestatsboxscore",
+    "expected_data": [
+      "HustleStatsAvailable",
+      "PlayerStats",
+      "TeamStats"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.ISTStandings": {
+    "endpoint": "iststandings",
+    "expected_data": [
+      "Standings"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "standings"
+    ],
+    "params": [
+      "league_id='00'",
+      "season=Season.default",
+      "section='group'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.InfographicFanDuelPlayer": {
+    "endpoint": "infographicfanduelplayer",
+    "expected_data": [
+      "FanDuelPlayer"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.LeadersTiles": {
+    "endpoint": "leaderstiles",
+    "expected_data": [
+      "AllTimeSeasonHigh",
+      "LastSeasonHigh",
+      "LeadersTiles",
+      "LowSeasonHigh"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_scope_detailed='Season'",
+      "league_id='00'",
+      "player_or_team='Team'",
+      "player_scope='All Players'",
+      "season=Season.default",
+      "season_type_playoffs='Regular Season'",
+      "stat='PTS'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.LeagueDashLineups": {
+    "endpoint": "leaguedashlineups",
+    "expected_data": [
+      "Lineups"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "group_quantity='5'",
+      "last_n_games='0'",
+      "measure_type_detailed_defense='Base'",
+      "month='0'",
+      "opponent_team_id=0",
+      "pace_adjust='N'",
+      "per_mode_detailed='Totals'",
+      "period='0'",
+      "plus_minus='N'",
+      "rank='N'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "conference_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "division_simple_nullable=''",
+      "game_segment_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "season_segment_nullable=''",
+      "shot_clock_range_nullable=''",
+      "team_id_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.LeagueDashOppPtShot": {
+    "endpoint": "leaguedashoppptshot",
+    "expected_data": [
+      "LeagueDashPTShots"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "per_mode_simple='Totals'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "close_def_dist_range_nullable=''",
+      "conference_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "division_nullable=''",
+      "dribble_range_nullable=''",
+      "game_segment_nullable=''",
+      "general_range_nullable=''",
+      "last_n_games_nullable=''",
+      "location_nullable=''",
+      "month_nullable=''",
+      "opponent_team_id_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "period_nullable=''",
+      "season_segment_nullable=''",
+      "shot_clock_range_nullable=''",
+      "shot_dist_range_nullable=''",
+      "team_id_nullable=''",
+      "touch_time_range_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.LeagueDashPlayerBioStats": {
+    "endpoint": "leaguedashplayerbiostats",
+    "expected_data": [
+      "LeagueDashPlayerBioStats"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "per_mode_simple='Totals'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "college_nullable=''",
+      "conference_nullable=''",
+      "country_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "division_simple_nullable=''",
+      "draft_pick_nullable=''",
+      "draft_year_nullable=''",
+      "game_scope_simple_nullable=''",
+      "game_segment_nullable=''",
+      "height_nullable=''",
+      "last_n_games_nullable=''",
+      "location_nullable=''",
+      "month_nullable=''",
+      "opponent_team_id_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "period_nullable=''",
+      "player_experience_nullable=''",
+      "player_position_abbreviation_nullable=''",
+      "season_segment_nullable=''",
+      "shot_clock_range_nullable=''",
+      "starter_bench_nullable=''",
+      "team_id_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "weight_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.LeagueDashPlayerClutch": {
+    "endpoint": "leaguedashplayerclutch",
+    "expected_data": [
+      "LeagueDashPlayerClutch"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "ahead_behind='Ahead or Behind'",
+      "clutch_time='Last 5 Minutes'",
+      "last_n_games='0'",
+      "measure_type_detailed_defense='Base'",
+      "month='0'",
+      "opponent_team_id=0",
+      "pace_adjust='N'",
+      "per_mode_detailed='Totals'",
+      "period='0'",
+      "plus_minus='N'",
+      "point_diff='5'",
+      "rank='N'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "college_nullable=''",
+      "conference_nullable=''",
+      "country_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "division_simple_nullable=''",
+      "draft_pick_nullable=''",
+      "draft_year_nullable=''",
+      "game_scope_simple_nullable=''",
+      "game_segment_nullable=''",
+      "height_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "player_experience_nullable=''",
+      "player_position_abbreviation_nullable=''",
+      "season_segment_nullable=''",
+      "shot_clock_range_nullable=''",
+      "starter_bench_nullable=''",
+      "team_id_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "weight_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.LeagueDashPlayerPtShot": {
+    "endpoint": "leaguedashplayerptshot",
+    "expected_data": [
+      "LeagueDashPTShots"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "per_mode_simple='Totals'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "close_def_dist_range_nullable=''",
+      "college_nullable=''",
+      "conference_nullable=''",
+      "country_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "division_nullable=''",
+      "draft_pick_nullable=''",
+      "draft_year_nullable=''",
+      "dribble_range_nullable=''",
+      "game_segment_nullable=''",
+      "general_range_nullable=''",
+      "height_nullable=''",
+      "last_n_games_nullable=''",
+      "location_nullable=''",
+      "month_nullable=''",
+      "opponent_team_id_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "period_nullable=''",
+      "player_experience_nullable=''",
+      "player_position_nullable=''",
+      "season_segment_nullable=''",
+      "shot_clock_range_nullable=''",
+      "shot_dist_range_nullable=''",
+      "starter_bench_nullable=''",
+      "team_id_nullable=''",
+      "touch_time_range_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "weight_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.LeagueDashPlayerShotLocations": {
+    "endpoint": "leaguedashplayershotlocations",
+    "expected_data": [
+      "ShotLocations"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "distance_range='By Zone'",
+      "last_n_games='0'",
+      "measure_type_simple='Base'",
+      "month='0'",
+      "opponent_team_id=0",
+      "pace_adjust='N'",
+      "per_mode_detailed='Totals'",
+      "period='0'",
+      "plus_minus='N'",
+      "rank='N'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "college_nullable=''",
+      "conference_nullable=''",
+      "country_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "division_simple_nullable=''",
+      "draft_pick_nullable=''",
+      "draft_year_nullable=''",
+      "game_scope_simple_nullable=''",
+      "game_segment_nullable=''",
+      "height_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "player_experience_nullable=''",
+      "player_position_abbreviation_nullable=''",
+      "season_segment_nullable=''",
+      "shot_clock_range_nullable=''",
+      "starter_bench_nullable=''",
+      "team_id_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "weight_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.LeagueDashPlayerStats": {
+    "endpoint": "leaguedashplayerstats",
+    "expected_data": [
+      "LeagueDashPlayerStats"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "last_n_games='0'",
+      "measure_type_detailed_defense='Base'",
+      "month='0'",
+      "opponent_team_id=0",
+      "pace_adjust='N'",
+      "per_mode_detailed='Totals'",
+      "period='0'",
+      "plus_minus='N'",
+      "rank='N'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "college_nullable=''",
+      "conference_nullable=''",
+      "country_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "division_simple_nullable=''",
+      "draft_pick_nullable=''",
+      "draft_year_nullable=''",
+      "game_scope_simple_nullable=''",
+      "game_segment_nullable=''",
+      "height_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "player_experience_nullable=''",
+      "player_position_abbreviation_nullable=''",
+      "season_segment_nullable=''",
+      "shot_clock_range_nullable=''",
+      "starter_bench_nullable=''",
+      "team_id_nullable=''",
+      "two_way_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "weight_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.LeagueDashPtDefend": {
+    "endpoint": "leaguedashptdefend",
+    "expected_data": [
+      "LeagueDashPTDefend"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "defense_category='Overall'",
+      "league_id='00'",
+      "per_mode_simple='Totals'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "college_nullable=''",
+      "conference_nullable=''",
+      "country_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "division_nullable=''",
+      "draft_pick_nullable=''",
+      "draft_year_nullable=''",
+      "game_segment_nullable=''",
+      "height_nullable=''",
+      "last_n_games_nullable=''",
+      "location_nullable=''",
+      "month_nullable=''",
+      "opponent_team_id_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "period_nullable=''",
+      "player_experience_nullable=''",
+      "player_id_nullable=''",
+      "player_position_nullable=''",
+      "season_segment_nullable=''",
+      "starter_bench_nullable=''",
+      "team_id_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "weight_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.LeagueDashPtStats": {
+    "endpoint": "leaguedashptstats",
+    "expected_data": [
+      "LeagueDashPtStats"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "last_n_games='0'",
+      "month='0'",
+      "opponent_team_id=0",
+      "per_mode_simple='Totals'",
+      "player_or_team='Team'",
+      "pt_measure_type='SpeedDistance'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "college_nullable=''",
+      "conference_nullable=''",
+      "country_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "division_simple_nullable=''",
+      "draft_pick_nullable=''",
+      "draft_year_nullable=''",
+      "game_scope_simple_nullable=''",
+      "height_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "player_experience_nullable=''",
+      "player_position_abbreviation_nullable=''",
+      "season_segment_nullable=''",
+      "starter_bench_nullable=''",
+      "team_id_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "weight_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.LeagueDashPtTeamDefend": {
+    "endpoint": "leaguedashptteamdefend",
+    "expected_data": [
+      "LeagueDashPtTeamDefend"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "defense_category='Overall'",
+      "league_id='00'",
+      "per_mode_simple='Totals'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "conference_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "division_nullable=''",
+      "game_segment_nullable=''",
+      "last_n_games_nullable=''",
+      "location_nullable=''",
+      "month_nullable=''",
+      "opponent_team_id_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "period_nullable=''",
+      "season_segment_nullable=''",
+      "team_id_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.LeagueDashTeamClutch": {
+    "endpoint": "leaguedashteamclutch",
+    "expected_data": [
+      "LeagueDashTeamClutch"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "ahead_behind='Ahead or Behind'",
+      "clutch_time='Last 5 Minutes'",
+      "last_n_games='0'",
+      "measure_type_detailed_defense='Base'",
+      "month='0'",
+      "opponent_team_id=0",
+      "pace_adjust='N'",
+      "per_mode_detailed='Totals'",
+      "period='0'",
+      "plus_minus='N'",
+      "point_diff='5'",
+      "rank='N'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "conference_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "division_simple_nullable=''",
+      "game_scope_simple_nullable=''",
+      "game_segment_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "player_experience_nullable=''",
+      "player_position_abbreviation_nullable=''",
+      "season_segment_nullable=''",
+      "shot_clock_range_nullable=''",
+      "starter_bench_nullable=''",
+      "team_id_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.LeagueDashTeamPtShot": {
+    "endpoint": "leaguedashteamptshot",
+    "expected_data": [
+      "LeagueDashPTShots"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "per_mode_simple='Totals'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "close_def_dist_range_nullable=''",
+      "conference_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "division_nullable=''",
+      "dribble_range_nullable=''",
+      "game_segment_nullable=''",
+      "general_range_nullable=''",
+      "last_n_games_nullable=''",
+      "location_nullable=''",
+      "month_nullable=''",
+      "opponent_team_id_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "period_nullable=''",
+      "season_segment_nullable=''",
+      "shot_clock_range_nullable=''",
+      "shot_dist_range_nullable=''",
+      "team_id_nullable=''",
+      "touch_time_range_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.LeagueDashTeamShotLocations": {
+    "endpoint": "leaguedashteamshotlocations",
+    "expected_data": [
+      "ShotLocations"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "distance_range='By Zone'",
+      "last_n_games='0'",
+      "measure_type_simple='Base'",
+      "month='0'",
+      "opponent_team_id=0",
+      "pace_adjust='N'",
+      "per_mode_detailed='Totals'",
+      "period='0'",
+      "plus_minus='N'",
+      "rank='N'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "conference_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "division_simple_nullable=''",
+      "game_scope_simple_nullable=''",
+      "game_segment_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "player_experience_nullable=''",
+      "player_position_abbreviation_nullable=''",
+      "season_segment_nullable=''",
+      "shot_clock_range_nullable=''",
+      "starter_bench_nullable=''",
+      "team_id_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.LeagueDashTeamStats": {
+    "endpoint": "leaguedashteamstats",
+    "expected_data": [
+      "LeagueDashTeamStats"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "last_n_games='0'",
+      "measure_type_detailed_defense='Base'",
+      "month='0'",
+      "opponent_team_id=0",
+      "pace_adjust='N'",
+      "per_mode_detailed='Totals'",
+      "period='0'",
+      "plus_minus='N'",
+      "rank='N'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "conference_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "division_simple_nullable=''",
+      "game_scope_simple_nullable=''",
+      "game_segment_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "player_experience_nullable=''",
+      "player_position_abbreviation_nullable=''",
+      "season_segment_nullable=''",
+      "shot_clock_range_nullable=''",
+      "starter_bench_nullable=''",
+      "team_id_nullable=''",
+      "two_way_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.LeagueGameFinder": {
+    "endpoint": "leaguegamefinder",
+    "expected_data": [
+      "LeagueGameFinderResults"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "player_or_team_abbreviation='T'",
+      "conference_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "division_simple_nullable=''",
+      "draft_number_nullable=''",
+      "draft_round_nullable=''",
+      "draft_team_id_nullable=''",
+      "draft_year_nullable=''",
+      "eq_ast_nullable=''",
+      "eq_blk_nullable=''",
+      "eq_dd_nullable=''",
+      "eq_dreb_nullable=''",
+      "eq_fg3a_nullable=''",
+      "eq_fg3m_nullable=''",
+      "eq_fg3_pct_nullable=''",
+      "eq_fga_nullable=''",
+      "eq_fgm_nullable=''",
+      "eq_fg_pct_nullable=''",
+      "eq_fta_nullable=''",
+      "eq_ftm_nullable=''",
+      "eq_ft_pct_nullable=''",
+      "eq_minutes_nullable=''",
+      "eq_oreb_nullable=''",
+      "eq_pf_nullable=''",
+      "eq_pts_nullable=''",
+      "eq_reb_nullable=''",
+      "eq_stl_nullable=''",
+      "eq_td_nullable=''",
+      "eq_tov_nullable=''",
+      "game_id_nullable=''",
+      "gt_ast_nullable=''",
+      "gt_blk_nullable=''",
+      "gt_dd_nullable=''",
+      "gt_dreb_nullable=''",
+      "gt_fg3a_nullable=''",
+      "gt_fg3m_nullable=''",
+      "gt_fg3_pct_nullable=''",
+      "gt_fga_nullable=''",
+      "gt_fgm_nullable=''",
+      "gt_fg_pct_nullable=''",
+      "gt_fta_nullable=''",
+      "gt_ftm_nullable=''",
+      "gt_ft_pct_nullable=''",
+      "gt_minutes_nullable=''",
+      "gt_oreb_nullable=''",
+      "gt_pf_nullable=''",
+      "gt_pts_nullable=''",
+      "gt_reb_nullable=''",
+      "gt_stl_nullable=''",
+      "gt_td_nullable=''",
+      "gt_tov_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "lt_ast_nullable=''",
+      "lt_blk_nullable=''",
+      "lt_dd_nullable=''",
+      "lt_dreb_nullable=''",
+      "lt_fg3a_nullable=''",
+      "lt_fg3m_nullable=''",
+      "lt_fg3_pct_nullable=''",
+      "lt_fga_nullable=''",
+      "lt_fgm_nullable=''",
+      "lt_fg_pct_nullable=''",
+      "lt_fta_nullable=''",
+      "lt_ftm_nullable=''",
+      "lt_ft_pct_nullable=''",
+      "lt_minutes_nullable=''",
+      "lt_oreb_nullable=''",
+      "lt_pf_nullable=''",
+      "lt_pts_nullable=''",
+      "lt_reb_nullable=''",
+      "lt_stl_nullable=''",
+      "lt_td_nullable=''",
+      "lt_tov_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "player_id_nullable=''",
+      "rookie_year_nullable=''",
+      "season_nullable=''",
+      "season_segment_nullable=''",
+      "season_type_nullable=''",
+      "starter_bench_nullable=''",
+      "team_id_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "vs_team_id_nullable=''",
+      "years_experience_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.LeagueGameLog": {
+    "endpoint": "leaguegamelog",
+    "expected_data": [
+      "LeagueGameLog"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "counter=0",
+      "direction='ASC'",
+      "league_id='00'",
+      "player_or_team_abbreviation='T'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "sorter='DATE'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.LeagueHustleStatsPlayer": {
+    "endpoint": "leaguehustlestatsplayer",
+    "expected_data": [
+      "HustleStatsPlayer"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "per_mode_time='Totals'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "college_nullable=''",
+      "conference_nullable=''",
+      "country_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "division_simple_nullable=''",
+      "draft_pick_nullable=''",
+      "draft_year_nullable=''",
+      "height_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "month_nullable=''",
+      "opponent_team_id_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "player_experience_nullable=''",
+      "player_position_nullable=''",
+      "season_segment_nullable=''",
+      "team_id_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "weight_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.LeagueHustleStatsTeam": {
+    "endpoint": "leaguehustlestatsteam",
+    "expected_data": [
+      "HustleStatsTeam"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "per_mode_time='Totals'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "college_nullable=''",
+      "conference_nullable=''",
+      "country_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "division_simple_nullable=''",
+      "draft_pick_nullable=''",
+      "draft_year_nullable=''",
+      "height_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "month_nullable=''",
+      "opponent_team_id_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "player_experience_nullable=''",
+      "player_position_nullable=''",
+      "season_segment_nullable=''",
+      "team_id_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "weight_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.LeagueLeaders": {
+    "endpoint": "leagueleaders",
+    "expected_data": [
+      "LeagueLeaders"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "per_mode48='Totals'",
+      "scope='S'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "stat_category_abbreviation='PTS'",
+      "active_flag_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.LeagueLineupViz": {
+    "endpoint": "leaguelineupviz",
+    "expected_data": [
+      "LeagueLineupViz"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "minutes_min",
+      "group_quantity='5'",
+      "last_n_games='0'",
+      "measure_type_detailed_defense='Base'",
+      "month='0'",
+      "opponent_team_id=0",
+      "pace_adjust='N'",
+      "per_mode_detailed='Totals'",
+      "period='0'",
+      "plus_minus='N'",
+      "rank='N'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "conference_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "division_simple_nullable=''",
+      "game_segment_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "season_segment_nullable=''",
+      "shot_clock_range_nullable=''",
+      "team_id_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.LeaguePlayerOnDetails": {
+    "endpoint": "leagueplayerondetails",
+    "expected_data": [
+      "PlayersOnCourtLeaguePlayerDetails"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "last_n_games='0'",
+      "measure_type_detailed_defense='Base'",
+      "month='0'",
+      "opponent_team_id=0",
+      "pace_adjust='N'",
+      "per_mode_detailed='Totals'",
+      "period='0'",
+      "plus_minus='N'",
+      "rank='N'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "game_segment_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "season_segment_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.LeagueSeasonMatchups": {
+    "endpoint": "leagueseasonmatchups",
+    "expected_data": [
+      "SeasonMatchups"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "per_mode_simple='Totals'",
+      "season=Season.default",
+      "season_type_playoffs='Regular Season'",
+      "def_player_id_nullable=''",
+      "def_team_id_nullable=None",
+      "off_player_id_nullable=''",
+      "off_team_id_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.LeagueStandings": {
+    "endpoint": "leaguestandings",
+    "expected_data": [
+      "Standings"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "season=Season.default",
+      "season_type='Regular Season'",
+      "season_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.LeagueStandingsV3": {
+    "endpoint": "leaguestandingsv3",
+    "expected_data": [
+      "Standings"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "season=Season.default",
+      "season_type='Regular Season'",
+      "season_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.MatchupsRollup": {
+    "endpoint": "matchupsrollup",
+    "expected_data": [
+      "MatchupsRollup"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "per_mode_simple='Totals'",
+      "season=Season.default",
+      "season_type_playoffs='Regular Season'",
+      "def_player_id_nullable=''",
+      "def_team_id_nullable=None",
+      "off_player_id_nullable=''",
+      "off_team_id_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayByPlay": {
+    "endpoint": "playbyplay",
+    "expected_data": [
+      "AvailableVideo",
+      "PlayByPlay"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "end_period='0'",
+      "start_period='0'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayByPlayV2": {
+    "endpoint": "playbyplayv2",
+    "expected_data": [
+      "AvailableVideo",
+      "PlayByPlay"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "end_period='0'",
+      "start_period='0'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayByPlayV3": {
+    "endpoint": "playbyplayv3",
+    "expected_data": [
+      "AvailableVideo",
+      "PlayByPlay"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "end_period='0'",
+      "start_period='0'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayerAwards": {
+    "endpoint": "playerawards",
+    "expected_data": [
+      "PlayerAwards"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "player_id",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayerCareerByCollege": {
+    "endpoint": "playercareerbycollege",
+    "expected_data": [
+      "PlayerCareerByCollege"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "college",
+      "league_id='00'",
+      "per_mode_simple='Totals'",
+      "season_type_all_star='Regular Season'",
+      "season_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayerCareerByCollegeRollup": {
+    "endpoint": "playercareerbycollegerollup",
+    "expected_data": [
+      "East",
+      "Midwest",
+      "South",
+      "West"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "per_mode_simple='Totals'",
+      "season_type_all_star='Regular Season'",
+      "season_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayerCareerStats": {
+    "endpoint": "playercareerstats",
+    "expected_data": [
+      "CareerTotalsAllStarSeason",
+      "CareerTotalsCollegeSeason",
+      "CareerTotalsPostSeason",
+      "CareerTotalsRegularSeason",
+      "SeasonRankingsPostSeason",
+      "SeasonRankingsRegularSeason",
+      "SeasonTotalsAllStarSeason",
+      "SeasonTotalsCollegeSeason",
+      "SeasonTotalsPostSeason",
+      "SeasonTotalsRegularSeason"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "player_id",
+      "per_mode36='Totals'",
+      "league_id_nullable='00'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayerCompare": {
+    "endpoint": "playercompare",
+    "expected_data": [
+      "Individual",
+      "OverallCompare"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "vs_player_id_list",
+      "player_id_list",
+      "last_n_games='0'",
+      "measure_type_detailed_defense='Base'",
+      "month='0'",
+      "opponent_team_id=0",
+      "pace_adjust='N'",
+      "per_mode_detailed='Totals'",
+      "period='0'",
+      "plus_minus='N'",
+      "rank='N'",
+      "season=Season.default",
+      "season_type_playoffs='Regular Season'",
+      "conference_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "division_simple_nullable=''",
+      "game_segment_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "season_segment_nullable=''",
+      "shot_clock_range_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayerDashPtPass": {
+    "endpoint": "playerdashptpass",
+    "expected_data": [
+      "PassesMade",
+      "PassesReceived"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "player_id",
+      "last_n_games='0'",
+      "league_id='00'",
+      "month='0'",
+      "opponent_team_id=0",
+      "per_mode_simple='Totals'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "season_segment_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayerDashPtReb": {
+    "endpoint": "playerdashptreb",
+    "expected_data": [
+      "NumContestedRebounding",
+      "OverallRebounding",
+      "RebDistanceRebounding",
+      "ShotDistanceRebounding",
+      "ShotTypeRebounding"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "player_id",
+      "last_n_games='0'",
+      "league_id='00'",
+      "month='0'",
+      "opponent_team_id=0",
+      "per_mode_simple='Totals'",
+      "period='0'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "game_segment_nullable=''",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "season_segment_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayerDashPtShotDefend": {
+    "endpoint": "playerdashptshotdefend",
+    "expected_data": [
+      "DefendingShots"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "player_id",
+      "last_n_games='0'",
+      "league_id='00'",
+      "month='0'",
+      "opponent_team_id=0",
+      "per_mode_simple='Totals'",
+      "period='0'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "game_segment_nullable=''",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "season_segment_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayerDashPtShots": {
+    "endpoint": "playerdashptshots",
+    "expected_data": [
+      "ClosestDefender10ftPlusShooting",
+      "ClosestDefenderShooting",
+      "DribbleShooting",
+      "GeneralShooting",
+      "Overall",
+      "ShotClockShooting",
+      "TouchTimeShooting"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "player_id",
+      "last_n_games='0'",
+      "league_id='00'",
+      "month='0'",
+      "opponent_team_id=0",
+      "per_mode_simple='Totals'",
+      "period='0'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "game_segment_nullable=''",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "season_segment_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayerDashboardByClutch": {
+    "endpoint": "playerdashboardbyclutch",
+    "expected_data": [
+      "Last10Sec3Point2PlayerDashboard",
+      "Last10Sec3PointPlayerDashboard",
+      "Last1Min5PointPlayerDashboard",
+      "Last1MinPlusMinus5PointPlayerDashboard",
+      "Last30Sec3Point2PlayerDashboard",
+      "Last30Sec3PointPlayerDashboard",
+      "Last3Min5PointPlayerDashboard",
+      "Last3MinPlusMinus5PointPlayerDashboard",
+      "Last5Min5PointPlayerDashboard",
+      "Last5MinPlusMinus5PointPlayerDashboard",
+      "OverallPlayerDashboard"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "player_id",
+      "last_n_games='0'",
+      "measure_type_detailed='Base'",
+      "month='0'",
+      "opponent_team_id=0",
+      "pace_adjust='N'",
+      "per_mode_detailed='Totals'",
+      "period='0'",
+      "plus_minus='N'",
+      "rank='N'",
+      "season=Season.default",
+      "season_type_playoffs='Regular Season'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "game_segment_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "season_segment_nullable=''",
+      "shot_clock_range_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayerDashboardByGameSplits": {
+    "endpoint": "playerdashboardbygamesplits",
+    "expected_data": [
+      "ByActualMarginPlayerDashboard",
+      "ByHalfPlayerDashboard",
+      "ByPeriodPlayerDashboard",
+      "ByScoreMarginPlayerDashboard",
+      "OverallPlayerDashboard"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "player_id",
+      "last_n_games='0'",
+      "measure_type_detailed='Base'",
+      "month='0'",
+      "opponent_team_id=0",
+      "pace_adjust='N'",
+      "per_mode_detailed='Totals'",
+      "period='0'",
+      "plus_minus='N'",
+      "rank='N'",
+      "season=Season.default",
+      "season_type_playoffs='Regular Season'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "game_segment_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "season_segment_nullable=''",
+      "shot_clock_range_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayerDashboardByGeneralSplits": {
+    "endpoint": "playerdashboardbygeneralsplits",
+    "expected_data": [
+      "DaysRestPlayerDashboard",
+      "LocationPlayerDashboard",
+      "MonthPlayerDashboard",
+      "OverallPlayerDashboard",
+      "PrePostAllStarPlayerDashboard",
+      "StartingPosition",
+      "WinsLossesPlayerDashboard"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "player_id",
+      "last_n_games='0'",
+      "measure_type_detailed='Base'",
+      "month='0'",
+      "opponent_team_id=0",
+      "pace_adjust='N'",
+      "per_mode_detailed='Totals'",
+      "period='0'",
+      "plus_minus='N'",
+      "rank='N'",
+      "season=Season.default",
+      "season_type_playoffs='Regular Season'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "game_segment_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "season_segment_nullable=''",
+      "shot_clock_range_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayerDashboardByLastNGames": {
+    "endpoint": "playerdashboardbylastngames",
+    "expected_data": [
+      "GameNumberPlayerDashboard",
+      "Last10PlayerDashboard",
+      "Last15PlayerDashboard",
+      "Last20PlayerDashboard",
+      "Last5PlayerDashboard",
+      "OverallPlayerDashboard"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "player_id",
+      "last_n_games='0'",
+      "measure_type_detailed='Base'",
+      "month='0'",
+      "opponent_team_id=0",
+      "pace_adjust='N'",
+      "per_mode_detailed='Totals'",
+      "period='0'",
+      "plus_minus='N'",
+      "rank='N'",
+      "season=Season.default",
+      "season_type_playoffs='Regular Season'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "game_segment_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "season_segment_nullable=''",
+      "shot_clock_range_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayerDashboardByShootingSplits": {
+    "endpoint": "playerdashboardbyshootingsplits",
+    "expected_data": [
+      "AssistedBy",
+      "AssitedShotPlayerDashboard",
+      "OverallPlayerDashboard",
+      "Shot5FTPlayerDashboard",
+      "Shot8FTPlayerDashboard",
+      "ShotAreaPlayerDashboard",
+      "ShotTypePlayerDashboard",
+      "ShotTypeSummaryPlayerDashboard"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "player_id",
+      "last_n_games='0'",
+      "measure_type_detailed='Base'",
+      "month='0'",
+      "opponent_team_id=0",
+      "pace_adjust='N'",
+      "per_mode_detailed='Totals'",
+      "period='0'",
+      "plus_minus='N'",
+      "rank='N'",
+      "season=Season.default",
+      "season_type_playoffs='Regular Season'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "game_segment_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "season_segment_nullable=''",
+      "shot_clock_range_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayerDashboardByTeamPerformance": {
+    "endpoint": "playerdashboardbyteamperformance",
+    "expected_data": [
+      "OverallPlayerDashboard",
+      "PointsScoredPlayerDashboard",
+      "PontsAgainstPlayerDashboard",
+      "ScoreDifferentialPlayerDashboard"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "player_id",
+      "last_n_games='0'",
+      "measure_type_detailed='Base'",
+      "month='0'",
+      "opponent_team_id=0",
+      "pace_adjust='N'",
+      "per_mode_detailed='Totals'",
+      "period='0'",
+      "plus_minus='N'",
+      "rank='N'",
+      "season=Season.default",
+      "season_type_playoffs='Regular Season'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "game_segment_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "season_segment_nullable=''",
+      "shot_clock_range_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayerDashboardByYearOverYear": {
+    "endpoint": "playerdashboardbyyearoveryear",
+    "expected_data": [
+      "ByYearPlayerDashboard",
+      "OverallPlayerDashboard"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "player_id",
+      "last_n_games='0'",
+      "measure_type_detailed='Base'",
+      "month='0'",
+      "opponent_team_id=0",
+      "pace_adjust='N'",
+      "per_mode_detailed='Totals'",
+      "period='0'",
+      "plus_minus='N'",
+      "rank='N'",
+      "season=Season.default",
+      "season_type_playoffs='Regular Season'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "game_segment_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "season_segment_nullable=''",
+      "shot_clock_range_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayerEstimatedMetrics": {
+    "endpoint": "playerestimatedmetrics",
+    "expected_data": [
+      "PlayerEstimatedMetrics"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "season=Season.default",
+      "season_type='Regular Season'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayerFantasyProfileBarGraph": {
+    "endpoint": "playerfantasyprofilebargraph",
+    "expected_data": [
+      "LastFiveGamesAvg",
+      "SeasonAvg"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "player_id",
+      "season=Season.default",
+      "league_id_nullable='00'",
+      "season_type_all_star_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayerGameLog": {
+    "endpoint": "playergamelog",
+    "expected_data": [
+      "PlayerGameLog"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "player_id",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "league_id_nullable='00'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayerGameLogs": {
+    "endpoint": "playergamelogs",
+    "expected_data": [
+      "PlayerGameLogs"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "game_segment_nullable=''",
+      "last_n_games_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "measure_type_player_game_logs_nullable=None",
+      "month_nullable=''",
+      "opp_team_id_nullable=None",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "per_mode_simple_nullable=''",
+      "period_nullable=''",
+      "player_id_nullable=''",
+      "season_nullable=Season.default",
+      "season_segment_nullable=''",
+      "season_type_nullable=''",
+      "shot_clock_range_nullable=''",
+      "team_id_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayerGameStreakFinder": {
+    "endpoint": "playergamestreakfinder",
+    "expected_data": [
+      "PlayerGameStreakFinderResults"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "active_streaks_only_nullable=''",
+      "conference_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "division_simple_nullable=''",
+      "draft_number_nullable=''",
+      "draft_round_nullable=''",
+      "draft_team_id_nullable=''",
+      "draft_year_nullable=''",
+      "eq_ast_nullable=''",
+      "eq_blk_nullable=''",
+      "eq_dd_nullable=''",
+      "eq_dreb_nullable=''",
+      "eq_fg3a_nullable=''",
+      "eq_fg3m_nullable=''",
+      "eq_fg3_pct_nullable=''",
+      "eq_fga_nullable=''",
+      "eq_fgm_nullable=''",
+      "eq_fg_pct_nullable=''",
+      "eq_fta_nullable=''",
+      "eq_ftm_nullable=''",
+      "eq_ft_pct_nullable=''",
+      "eq_minutes_nullable=''",
+      "eq_oreb_nullable=''",
+      "eq_pf_nullable=''",
+      "eq_pts_nullable=''",
+      "eq_reb_nullable=''",
+      "eq_stl_nullable=''",
+      "eq_td_nullable=''",
+      "eq_tov_nullable=''",
+      "game_id_nullable=''",
+      "gt_ast_nullable=''",
+      "gt_blk_nullable=''",
+      "gt_dd_nullable=''",
+      "gt_dreb_nullable=''",
+      "gt_fg3a_nullable=''",
+      "gt_fg3m_nullable=''",
+      "gt_fg3_pct_nullable=''",
+      "gt_fga_nullable=''",
+      "gt_fgm_nullable=''",
+      "gt_fg_pct_nullable=''",
+      "gt_fta_nullable=''",
+      "gt_ftm_nullable=''",
+      "gt_ft_pct_nullable=''",
+      "gt_minutes_nullable=''",
+      "gt_oreb_nullable=''",
+      "gt_pf_nullable=''",
+      "gt_pts_nullable=''",
+      "gt_reb_nullable=''",
+      "gt_stl_nullable=''",
+      "gt_td_nullable=''",
+      "gt_tov_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "lt_ast_nullable=''",
+      "lt_blk_nullable=''",
+      "lt_dd_nullable=''",
+      "lt_dreb_nullable=''",
+      "lt_fg3a_nullable=''",
+      "lt_fg3m_nullable=''",
+      "lt_fg3_pct_nullable=''",
+      "lt_fga_nullable=''",
+      "lt_fgm_nullable=''",
+      "lt_fg_pct_nullable=''",
+      "lt_fta_nullable=''",
+      "lt_ftm_nullable=''",
+      "lt_ft_pct_nullable=''",
+      "lt_minutes_nullable=''",
+      "lt_oreb_nullable=''",
+      "lt_pf_nullable=''",
+      "lt_pts_nullable=''",
+      "lt_reb_nullable=''",
+      "lt_stl_nullable=''",
+      "lt_td_nullable=''",
+      "lt_tov_nullable=''",
+      "min_games_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "player_id_nullable=''",
+      "rookie_year_nullable=''",
+      "season_nullable=''",
+      "season_segment_nullable=''",
+      "season_type_nullable=''",
+      "starter_bench_nullable=''",
+      "team_id_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "vs_team_id_nullable=''",
+      "years_experience_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayerIndex": {
+    "endpoint": "playerindex",
+    "expected_data": [
+      "PlayerIndex"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "active_nullable=''",
+      "allstar_nullable=''",
+      "college_nullable=''",
+      "country_nullable=''",
+      "draft_pick_nullable=''",
+      "draft_year_nullable=''",
+      "height_nullable=''",
+      "player_position_abbreviation_nullable=''",
+      "historical_nullable=''",
+      "league_id='00'",
+      "season=Season.default",
+      "team_id_nullable=''",
+      "weight_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayerNextNGames": {
+    "endpoint": "playernextngames",
+    "expected_data": [
+      "NextNGames"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "player_id",
+      "number_of_games='2147483647'",
+      "season_all=Season.default",
+      "season_type_all_star='Regular Season'",
+      "league_id_nullable='00'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayerProfileV2": {
+    "endpoint": "playerprofilev2",
+    "expected_data": [
+      "CareerHighs",
+      "CareerTotalsAllStarSeason",
+      "CareerTotalsCollegeSeason",
+      "CareerTotalsPostSeason",
+      "CareerTotalsPreseason",
+      "CareerTotalsRegularSeason",
+      "NextGame",
+      "SeasonHighs",
+      "SeasonRankingsPostSeason",
+      "SeasonRankingsRegularSeason",
+      "SeasonTotalsAllStarSeason",
+      "SeasonTotalsCollegeSeason",
+      "SeasonTotalsPostSeason",
+      "SeasonTotalsPreseason",
+      "SeasonTotalsRegularSeason"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "player_id",
+      "per_mode36='Totals'",
+      "league_id_nullable='00'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayerVsPlayer": {
+    "endpoint": "playervsplayer",
+    "expected_data": [
+      "OnOffCourt",
+      "Overall",
+      "PlayerInfo",
+      "ShotAreaOffCourt",
+      "ShotAreaOnCourt",
+      "ShotAreaOverall",
+      "ShotDistanceOffCourt",
+      "ShotDistanceOnCourt",
+      "ShotDistanceOverall",
+      "VsPlayerInfo"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "vs_player_id",
+      "player_id",
+      "last_n_games='0'",
+      "measure_type_detailed_defense='Base'",
+      "month='0'",
+      "opponent_team_id=0",
+      "pace_adjust='N'",
+      "per_mode_detailed='Totals'",
+      "period='0'",
+      "plus_minus='N'",
+      "rank='N'",
+      "season=Season.default",
+      "season_type_playoffs='Regular Season'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "game_segment_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "season_segment_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.PlayoffPicture": {
+    "endpoint": "playoffpicture",
+    "expected_data": [
+      "EastConfPlayoffPicture",
+      "EastConfRemainingGames",
+      "EastConfStandings",
+      "WestConfPlayoffPicture",
+      "WestConfRemainingGames",
+      "WestConfStandings"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "season_id=SeasonID.default",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.ScheduleLeagueV2": {
+    "endpoint": "scheduleleaguev2",
+    "expected_data": [
+      "SeasonGames",
+      "SeasonWeeks"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "season_games",
+      "season_weeks"
+    ],
+    "params": [
+      "league_id='00'",
+      "season=Season.default",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.ScheduleLeagueV2Int": {
+    "endpoint": "scheduleleaguev2int",
+    "expected_data": [
+      "BroadcasterList",
+      "SeasonGames",
+      "SeasonWeeks"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "season_games",
+      "season_weeks"
+    ],
+    "params": [
+      "league_id='00'",
+      "season=Season.default",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.ScoreboardV2": {
+    "endpoint": "scoreboardv2",
+    "expected_data": [
+      "Available",
+      "EastConfStandingsByDay",
+      "GameHeader",
+      "LastMeeting",
+      "LineScore",
+      "SeriesStandings",
+      "TeamLeaders",
+      "TicketLinks",
+      "WestConfStandingsByDay",
+      "WinProbability"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "day_offset='0'",
+      "game_date=GameDate.default",
+      "league_id='00'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.ScoreboardV3": {
+    "endpoint": "scoreboardv3",
+    "expected_data": [
+      "Broadcasters",
+      "GameHeader",
+      "GameLeaders",
+      "LineScore",
+      "ScoreboardInfo",
+      "TeamLeaders"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_date",
+      "league_id='00'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.ShotChartDetail": {
+    "endpoint": "shotchartdetail",
+    "expected_data": [
+      "LeagueAverages",
+      "Shot_Chart_Detail"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "player_id",
+      "context_measure_simple='PTS'",
+      "last_n_games='0'",
+      "league_id='00'",
+      "month='0'",
+      "opponent_team_id=0",
+      "period='0'",
+      "season_type_all_star='Regular Season'",
+      "ahead_behind_nullable=''",
+      "clutch_time_nullable=''",
+      "context_filter_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "end_period_nullable=''",
+      "end_range_nullable=''",
+      "game_id_nullable=''",
+      "game_segment_nullable=''",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "player_position_nullable=''",
+      "point_diff_nullable=''",
+      "position_nullable=''",
+      "range_type_nullable=''",
+      "rookie_year_nullable=''",
+      "season_nullable=''",
+      "season_segment_nullable=''",
+      "start_period_nullable=''",
+      "start_range_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.ShotChartLeagueWide": {
+    "endpoint": "shotchartleaguewide",
+    "expected_data": [
+      "League_Wide"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "season=Season.default",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.ShotChartLineupDetail": {
+    "endpoint": "shotchartlineupdetail",
+    "expected_data": [
+      "ShotChartLineupDetail",
+      "ShotChartLineupLeagueAverage"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "context_measure_detailed='PTS'",
+      "group_id=0",
+      "league_id='00'",
+      "period='0'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "context_filter_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "game_id_nullable=''",
+      "game_segment_nullable=''",
+      "last_n_games_nullable=''",
+      "location_nullable=''",
+      "month_nullable=''",
+      "opponent_team_id_nullable=''",
+      "outcome_nullable=''",
+      "season_segment_nullable=''",
+      "team_id_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.SynergyPlayTypes": {
+    "endpoint": "synergyplaytypes",
+    "expected_data": [
+      "SynergyPlayType"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "per_mode_simple='Totals'",
+      "player_or_team_abbreviation='T'",
+      "season_type_all_star='Regular Season'",
+      "season=Season.default",
+      "play_type_nullable=''",
+      "type_grouping_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.TeamAndPlayersVsPlayers": {
+    "endpoint": "teamandplayersvsplayers",
+    "expected_data": [
+      "PlayersVsPlayers",
+      "TeamPlayersVsPlayersOff",
+      "TeamPlayersVsPlayersOn",
+      "TeamVsPlayers",
+      "TeamVsPlayersOff"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "vs_team_id",
+      "vs_player_id5",
+      "vs_player_id4",
+      "vs_player_id3",
+      "vs_player_id2",
+      "vs_player_id1",
+      "team_id",
+      "player_id5",
+      "player_id4",
+      "player_id3",
+      "player_id2",
+      "player_id1",
+      "last_n_games='0'",
+      "measure_type_detailed_defense='Base'",
+      "month='0'",
+      "opponent_team_id=0",
+      "pace_adjust='N'",
+      "per_mode_detailed='Totals'",
+      "period='0'",
+      "plus_minus='N'",
+      "rank='N'",
+      "season=Season.default",
+      "season_type_playoffs='Regular Season'",
+      "conference_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "division_simple_nullable=''",
+      "game_segment_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "season_segment_nullable=''",
+      "shot_clock_range_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.TeamDashLineups": {
+    "endpoint": "teamdashlineups",
+    "expected_data": [
+      "Lineups",
+      "Overall"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "group_quantity='5'",
+      "last_n_games='0'",
+      "measure_type_detailed_defense='Base'",
+      "month='0'",
+      "opponent_team_id=0",
+      "pace_adjust='N'",
+      "per_mode_detailed='Totals'",
+      "period='0'",
+      "plus_minus='N'",
+      "rank='N'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "game_id_nullable=''",
+      "game_segment_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "season_segment_nullable=''",
+      "shot_clock_range_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.TeamDashPtPass": {
+    "endpoint": "teamdashptpass",
+    "expected_data": [
+      "PassesMade",
+      "PassesReceived"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "last_n_games='0'",
+      "league_id='00'",
+      "month='0'",
+      "opponent_team_id=0",
+      "per_mode_simple='Totals'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "season_segment_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.TeamDashPtReb": {
+    "endpoint": "teamdashptreb",
+    "expected_data": [
+      "NumContestedRebounding",
+      "OverallRebounding",
+      "RebDistanceRebounding",
+      "ShotDistanceRebounding",
+      "ShotTypeRebounding"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "last_n_games='0'",
+      "league_id='00'",
+      "month='0'",
+      "opponent_team_id=0",
+      "per_mode_simple='Totals'",
+      "period='0'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "game_segment_nullable=''",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "season_segment_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.TeamDashPtShots": {
+    "endpoint": "teamdashptshots",
+    "expected_data": [
+      "ClosestDefender10ftPlusShooting",
+      "ClosestDefenderShooting",
+      "DribbleShooting",
+      "GeneralShooting",
+      "ShotClockShooting",
+      "TouchTimeShooting"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "last_n_games='0'",
+      "league_id='00'",
+      "month='0'",
+      "opponent_team_id=0",
+      "per_mode_simple='Totals'",
+      "period='0'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "game_segment_nullable=''",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "season_segment_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.TeamDashboardByGeneralSplits": {
+    "endpoint": "teamdashboardbygeneralsplits",
+    "expected_data": [
+      "DaysRestTeamDashboard",
+      "LocationTeamDashboard",
+      "MonthTeamDashboard",
+      "OverallTeamDashboard",
+      "PrePostAllStarTeamDashboard",
+      "WinsLossesTeamDashboard"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "last_n_games='0'",
+      "measure_type_detailed_defense='Base'",
+      "month='0'",
+      "opponent_team_id=0",
+      "pace_adjust='N'",
+      "per_mode_detailed='Totals'",
+      "period='0'",
+      "plus_minus='N'",
+      "rank='N'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "game_segment_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "season_segment_nullable=''",
+      "shot_clock_range_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.TeamDashboardByShootingSplits": {
+    "endpoint": "teamdashboardbyshootingsplits",
+    "expected_data": [
+      "AssistedBy",
+      "AssitedShotTeamDashboard",
+      "OverallTeamDashboard",
+      "Shot5FTTeamDashboard",
+      "Shot8FTTeamDashboard",
+      "ShotAreaTeamDashboard",
+      "ShotTypeTeamDashboard"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "last_n_games='0'",
+      "measure_type_detailed_defense='Base'",
+      "month='0'",
+      "opponent_team_id=0",
+      "pace_adjust='N'",
+      "per_mode_detailed='Totals'",
+      "period='0'",
+      "plus_minus='N'",
+      "rank='N'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "game_segment_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "season_segment_nullable=''",
+      "shot_clock_range_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.TeamDetails": {
+    "endpoint": "teamdetails",
+    "expected_data": [
+      "TeamAwardsChampionships",
+      "TeamAwardsConf",
+      "TeamAwardsDiv",
+      "TeamBackground",
+      "TeamHistory",
+      "TeamHof",
+      "TeamRetired",
+      "TeamSocialSites"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.TeamEstimatedMetrics": {
+    "endpoint": "teamestimatedmetrics",
+    "expected_data": [
+      "TeamEstimatedMetrics"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "league_id='00'",
+      "season=Season.default",
+      "season_type='Regular Season'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.TeamGameLog": {
+    "endpoint": "teamgamelog",
+    "expected_data": [
+      "TeamGameLog"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "league_id_nullable='00'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.TeamGameLogs": {
+    "endpoint": "teamgamelogs",
+    "expected_data": [
+      "TeamGameLogs"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "game_segment_nullable=''",
+      "last_n_games_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "measure_type_player_game_logs_nullable=None",
+      "month_nullable=''",
+      "opp_team_id_nullable=None",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "per_mode_simple_nullable=''",
+      "period_nullable=''",
+      "player_id_nullable=''",
+      "season_nullable=Season.default",
+      "season_segment_nullable=''",
+      "season_type_nullable=''",
+      "shot_clock_range_nullable=''",
+      "team_id_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.TeamGameStreakFinder": {
+    "endpoint": "teamgamestreakfinder",
+    "expected_data": [
+      "TeamGameStreakFinderParametersResults"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "active_streaks_only_nullable=''",
+      "active_teams_only_nullable=''",
+      "btr_opp_ast_nullable=''",
+      "btr_opp_blk_nullable=''",
+      "btr_opp_dreb_nullable=''",
+      "btr_opp_fg3a_nullable=''",
+      "btr_opp_fg3m_nullable=''",
+      "btr_opp_fg3_pct_nullable=''",
+      "btr_opp_fga_nullable=''",
+      "btr_opp_fgm_nullable=''",
+      "btr_opp_fg_pct_nullable=''",
+      "btr_opp_fta_nullable=''",
+      "btr_opp_ftm_nullable=''",
+      "btr_opp_ft_pct_nullable=''",
+      "btr_opp_oreb_nullable=''",
+      "btr_opp_pf_nullable=''",
+      "btr_opp_pts_nullable=''",
+      "btr_opp_pts2nd_chance_nullable=''",
+      "btr_opp_pts_fb_nullable=''",
+      "btr_opp_pts_off_tov_nullable=''",
+      "btr_opp_pts_paint_nullable=''",
+      "btr_opp_reb_nullable=''",
+      "btr_opp_stl_nullable=''",
+      "btr_opp_tov_nullable=''",
+      "conference_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "division_simple_nullable=''",
+      "eq_ast_nullable=''",
+      "eq_blk_nullable=''",
+      "eq_dd_nullable=''",
+      "eq_dreb_nullable=''",
+      "eq_fg3a_nullable=''",
+      "eq_fg3m_nullable=''",
+      "eq_fg3_pct_nullable=''",
+      "eq_fga_nullable=''",
+      "eq_fgm_nullable=''",
+      "eq_fg_pct_nullable=''",
+      "eq_fta_nullable=''",
+      "eq_ftm_nullable=''",
+      "eq_ft_pct_nullable=''",
+      "eq_minutes_nullable=''",
+      "eq_opp_pts2nd_chance_nullable=''",
+      "eq_opp_pts_fb_nullable=''",
+      "eq_opp_pts_off_tov_nullable=''",
+      "eq_opp_pts_paint_nullable=''",
+      "eq_oreb_nullable=''",
+      "eq_pf_nullable=''",
+      "eq_pts_nullable=''",
+      "eq_pts2nd_chance_nullable=''",
+      "eq_pts_fb_nullable=''",
+      "eq_pts_off_tov_nullable=''",
+      "eq_pts_paint_nullable=''",
+      "eq_reb_nullable=''",
+      "eq_stl_nullable=''",
+      "eq_td_nullable=''",
+      "eq_tov_nullable=''",
+      "game_id_nullable=''",
+      "gt_ast_nullable=''",
+      "gt_blk_nullable=''",
+      "gt_dd_nullable=''",
+      "gt_dreb_nullable=''",
+      "gt_fg3a_nullable=''",
+      "gt_fg3m_nullable=''",
+      "gt_fg3_pct_nullable=''",
+      "gt_fga_nullable=''",
+      "gt_fgm_nullable=''",
+      "gt_fg_pct_nullable=''",
+      "gt_fta_nullable=''",
+      "gt_ftm_nullable=''",
+      "gt_ft_pct_nullable=''",
+      "gt_minutes_nullable=''",
+      "gt_opp_ast_nullable=''",
+      "gt_opp_blk_nullable=''",
+      "gt_opp_dreb_nullable=''",
+      "gt_opp_fg3a_nullable=''",
+      "gt_opp_fg3m_nullable=''",
+      "gt_opp_fg3_pct_nullable=''",
+      "gt_opp_fga_nullable=''",
+      "gt_opp_fgm_nullable=''",
+      "gt_opp_fg_pct_nullable=''",
+      "gt_opp_fta_nullable=''",
+      "gt_opp_ftm_nullable=''",
+      "gt_opp_ft_pct_nullable=''",
+      "gt_opp_oreb_nullable=''",
+      "gt_opp_pf_nullable=''",
+      "gt_opp_pts_nullable=''",
+      "gt_opp_pts2nd_chance_nullable=''",
+      "gt_opp_pts_fb_nullable=''",
+      "gt_opp_pts_off_tov_nullable=''",
+      "gt_opp_pts_paint_nullable=''",
+      "gt_opp_reb_nullable=''",
+      "gt_opp_stl_nullable=''",
+      "gt_opp_tov_nullable=''",
+      "gt_oreb_nullable=''",
+      "gt_pf_nullable=''",
+      "gt_pts_nullable=''",
+      "gt_pts2nd_chance_nullable=''",
+      "gt_pts_fb_nullable=''",
+      "gt_pts_off_tov_nullable=''",
+      "gt_pts_paint_nullable=''",
+      "gt_reb_nullable=''",
+      "gt_stl_nullable=''",
+      "gt_td_nullable=''",
+      "gt_tov_nullable=''",
+      "lstreak_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "lt_ast_nullable=''",
+      "lt_blk_nullable=''",
+      "lt_dd_nullable=''",
+      "lt_dreb_nullable=''",
+      "lt_fg3a_nullable=''",
+      "lt_fg3m_nullable=''",
+      "lt_fg3_pct_nullable=''",
+      "lt_fga_nullable=''",
+      "lt_fgm_nullable=''",
+      "lt_fg_pct_nullable=''",
+      "lt_fta_nullable=''",
+      "lt_ftm_nullable=''",
+      "lt_ft_pct_nullable=''",
+      "lt_minutes_nullable=''",
+      "lt_opp_ast_nullable=''",
+      "lt_opp_blk_nullable=''",
+      "lt_opp_dreb_nullable=''",
+      "lt_opp_fg3a_nullable=''",
+      "lt_opp_fg3m_nullable=''",
+      "lt_opp_fg3_pct_nullable=''",
+      "lt_opp_fga_nullable=''",
+      "lt_opp_fgm_nullable=''",
+      "lt_opp_fg_pct_nullable=''",
+      "lt_opp_fta_nullable=''",
+      "lt_opp_ftm_nullable=''",
+      "lt_opp_ft_pct_nullable=''",
+      "lt_opp_oreb_nullable=''",
+      "lt_opp_pf_nullable=''",
+      "lt_opp_pts_nullable=''",
+      "lt_opp_pts2nd_chance_nullable=''",
+      "lt_opp_pts_fb_nullable=''",
+      "lt_opp_pts_off_tov_nullable=''",
+      "lt_opp_pts_paint_nullable=''",
+      "lt_opp_reb_nullable=''",
+      "lt_opp_stl_nullable=''",
+      "lt_opp_tov_nullable=''",
+      "lt_oreb_nullable=''",
+      "lt_pf_nullable=''",
+      "lt_pts_nullable=''",
+      "lt_pts2nd_chance_nullable=''",
+      "lt_pts_fb_nullable=''",
+      "lt_pts_off_tov_nullable=''",
+      "lt_pts_paint_nullable=''",
+      "lt_reb_nullable=''",
+      "lt_stl_nullable=''",
+      "lt_td_nullable=''",
+      "lt_tov_nullable=''",
+      "min_games_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "season_nullable=''",
+      "season_segment_nullable=''",
+      "season_type_nullable=''",
+      "team_id_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "vs_team_id_nullable=''",
+      "wstreak_nullable=''",
+      "wrs_opp_ast_nullable=''",
+      "wrs_opp_blk_nullable=''",
+      "wrs_opp_dreb_nullable=''",
+      "wrs_opp_fg3a_nullable=''",
+      "wrs_opp_fg3m_nullable=''",
+      "wrs_opp_fg3_pct_nullable=''",
+      "wrs_opp_fga_nullable=''",
+      "wrs_opp_fgm_nullable=''",
+      "wrs_opp_fg_pct_nullable=''",
+      "wrs_opp_fta_nullable=''",
+      "wrs_opp_ftm_nullable=''",
+      "wrs_opp_ft_pct_nullable=''",
+      "wrs_opp_oreb_nullable=''",
+      "wrs_opp_pf_nullable=''",
+      "wrs_opp_pts_nullable=''",
+      "wrs_opp_pts2nd_chance_nullable=''",
+      "wrs_opp_pts_fb_nullable=''",
+      "wrs_opp_pts_off_tov_nullable=''",
+      "wrs_opp_pts_paint_nullable=''",
+      "wrs_opp_reb_nullable=''",
+      "wrs_opp_stl_nullable=''",
+      "wrs_opp_tov_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.TeamHistoricalLeaders": {
+    "endpoint": "teamhistoricalleaders",
+    "expected_data": [
+      "CareerLeadersByTeam"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "league_id='00'",
+      "season_id=SeasonID.default",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.TeamInfoCommon": {
+    "endpoint": "teaminfocommon",
+    "expected_data": [
+      "AvailableSeasons",
+      "TeamInfoCommon",
+      "TeamSeasonRanks"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "league_id='00'",
+      "season_nullable=''",
+      "season_type_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.TeamPlayerDashboard": {
+    "endpoint": "teamplayerdashboard",
+    "expected_data": [
+      "PlayersSeasonTotals",
+      "TeamOverall"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "last_n_games='0'",
+      "measure_type_detailed_defense='Base'",
+      "month='0'",
+      "opponent_team_id=0",
+      "pace_adjust='N'",
+      "per_mode_detailed='Totals'",
+      "period='0'",
+      "plus_minus='N'",
+      "rank='N'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "game_segment_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "po_round_nullable=''",
+      "season_segment_nullable=''",
+      "shot_clock_range_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.TeamPlayerOnOffDetails": {
+    "endpoint": "teamplayeronoffdetails",
+    "expected_data": [
+      "OverallTeamPlayerOnOffDetails",
+      "PlayersOffCourtTeamPlayerOnOffDetails",
+      "PlayersOnCourtTeamPlayerOnOffDetails"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "last_n_games='0'",
+      "measure_type_detailed_defense='Base'",
+      "month='0'",
+      "opponent_team_id=0",
+      "pace_adjust='N'",
+      "per_mode_detailed='Totals'",
+      "period='0'",
+      "plus_minus='N'",
+      "rank='N'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "game_segment_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "season_segment_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.TeamPlayerOnOffSummary": {
+    "endpoint": "teamplayeronoffsummary",
+    "expected_data": [
+      "OverallTeamPlayerOnOffSummary",
+      "PlayersOffCourtTeamPlayerOnOffSummary",
+      "PlayersOnCourtTeamPlayerOnOffSummary"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "last_n_games='0'",
+      "measure_type_detailed_defense='Base'",
+      "month='0'",
+      "opponent_team_id=0",
+      "pace_adjust='N'",
+      "per_mode_detailed='Totals'",
+      "period='0'",
+      "plus_minus='N'",
+      "rank='N'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "game_segment_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "season_segment_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.TeamVsPlayer": {
+    "endpoint": "teamvsplayer",
+    "expected_data": [
+      "OnOffCourt",
+      "Overall",
+      "ShotAreaOffCourt",
+      "ShotAreaOnCourt",
+      "ShotAreaOverall",
+      "ShotDistanceOffCourt",
+      "ShotDistanceOnCourt",
+      "ShotDistanceOverall",
+      "vsPlayerOverall"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "vs_player_id",
+      "team_id",
+      "last_n_games='0'",
+      "measure_type_detailed_defense='Base'",
+      "month='0'",
+      "opponent_team_id=0",
+      "pace_adjust='N'",
+      "per_mode_detailed='Totals'",
+      "period='0'",
+      "plus_minus='N'",
+      "rank='N'",
+      "season=Season.default",
+      "season_type_playoffs='Regular Season'",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "game_segment_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "player_id_nullable=''",
+      "season_segment_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.TeamYearByYearStats": {
+    "endpoint": "teamyearbyyearstats",
+    "expected_data": [
+      "TeamStats"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "league_id='00'",
+      "per_mode_simple='Totals'",
+      "season_type_all_star='Regular Season'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.VideoDetails": {
+    "endpoint": "videodetails",
+    "expected_data": [],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "player_id",
+      "context_measure_detailed='PTS'",
+      "last_n_games='0'",
+      "month='0'",
+      "opponent_team_id=0",
+      "period='0'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "ahead_behind_nullable=''",
+      "clutch_time_nullable=''",
+      "context_filter_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "end_period_nullable=''",
+      "end_range_nullable=''",
+      "game_id_nullable=''",
+      "game_segment_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "point_diff_nullable=''",
+      "position_nullable=''",
+      "range_type_nullable=''",
+      "rookie_year_nullable=''",
+      "season_segment_nullable=''",
+      "start_period_nullable=''",
+      "start_range_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.VideoDetailsAsset": {
+    "endpoint": "videodetailsasset",
+    "expected_data": [],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "team_id",
+      "player_id",
+      "context_measure_detailed='PTS'",
+      "last_n_games='0'",
+      "month='0'",
+      "opponent_team_id=0",
+      "period='0'",
+      "season=Season.default",
+      "season_type_all_star='Regular Season'",
+      "ahead_behind_nullable=''",
+      "clutch_time_nullable=''",
+      "context_filter_nullable=''",
+      "date_from_nullable=''",
+      "date_to_nullable=''",
+      "end_period_nullable=''",
+      "end_range_nullable=''",
+      "game_id_nullable=''",
+      "game_segment_nullable=''",
+      "league_id_nullable='00'",
+      "location_nullable=''",
+      "outcome_nullable=''",
+      "point_diff_nullable=''",
+      "position_nullable=''",
+      "range_type_nullable=''",
+      "rookie_year_nullable=''",
+      "season_segment_nullable=''",
+      "start_period_nullable=''",
+      "start_range_nullable=''",
+      "vs_conference_nullable=''",
+      "vs_division_nullable=''",
+      "ist_round_nullable=None",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.VideoEvents": {
+    "endpoint": "videoevents",
+    "expected_data": [],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "game_event_id=0",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.VideoEventsAsset": {
+    "endpoint": "videoeventsasset",
+    "expected_data": [],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "game_event_id=0",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.VideoStatus": {
+    "endpoint": "videostatus",
+    "expected_data": [
+      "VideoStatus"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_date=GameDate.default",
+      "league_id='00'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  },
+  "stats.WinProbabilityPBP": {
+    "endpoint": "winprobabilitypbp",
+    "expected_data": [
+      "GameInfo",
+      "WinProbPBP"
+    ],
+    "none_attrs": [
+      "data_sets",
+      "headers",
+      "nba_response",
+      "player_stats",
+      "team_stats"
+    ],
+    "params": [
+      "game_id",
+      "run_type='each second'",
+      "proxy=None",
+      "headers=None",
+      "timeout=30",
+      "get_request=True"
+    ]
+  }
+}
