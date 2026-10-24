@@ -7,8 +7,7 @@ instead of on the first request.
 import requests
 
 from nba_api._core.common.cache import ResponseCache
-from nba_api._core.http.send import send
-from nba_api._core.http.sites import SITES
+from nba_api._core.http.api import HTTP
 
 _UNSET = object()
 
@@ -78,42 +77,12 @@ class Client:
         )
 
         self.session = requests.Session()
+        self.http = HTTP(self)
 
     def merge_headers(self, defaults):
         """Return ``defaults`` with this client's headers on top; ``None`` removes one."""
         merged = {**defaults, **self.headers}
         return {name: value for name, value in merged.items() if value is not None}
-
-    def _request(self, site, endpoint, params=None):
-        """Fetch ``endpoint`` from ``site`` ("stats" or "live") and return a Response.
-
-        Private plumbing for the layers above. Uses the cache when it is on, and only
-        caches a 200 with valid JSON.
-        """
-        if site not in SITES:
-            raise ValueError(f"site must be one of {sorted(SITES)}, got {site!r}")
-        # Sorted like 1.x: some NBA endpoints care about parameter order.
-        params = dict(sorted((params or {}).items()))
-
-        key = ResponseCache.key(site, endpoint, params)
-        if self.cache is not None:
-            cached = self.cache.get(key)
-            if cached is not None:
-                return cached
-
-        _, default_headers = SITES[site]
-        response = send(
-            self.session,
-            site,
-            endpoint,
-            params,
-            headers=self.merge_headers(default_headers),
-            proxy=self.proxy,
-            timeout=self.timeout,
-        )
-        if self.cache is not None and response.ok:
-            self.cache.set(key, response)
-        return response
 
     def close(self):
         self.session.close()

@@ -36,7 +36,7 @@ def calls(monkeypatch):
 
 
 def test_stats_request(calls):
-    response = Client(timeout=12)._request(
+    response = Client(timeout=12).http.get(
         "stats", "commonplayerinfo", {"PlayerID": 2544}
     )
     (call,) = calls
@@ -53,7 +53,7 @@ def test_stats_request(calls):
 
 
 def test_live_request_uses_live_headers(calls):
-    Client()._request("live", "scoreboard/todaysScoreboard_00.json")
+    Client().http.get("live", "scoreboard/todaysScoreboard_00.json")
     (call,) = calls
     assert call["url"] == (
         "https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json"
@@ -63,51 +63,51 @@ def test_live_request_uses_live_headers(calls):
 
 def test_unknown_site_raises(calls):
     with pytest.raises(ValueError, match="site"):
-        Client()._request("espn", "x")
+        Client().http.get("espn", "x")
     assert calls == []
 
 
 def test_params_are_sorted(calls):
-    Client()._request("stats", "x", {"b": 2, "a": 1})
+    Client().http.get("stats", "x", {"b": 2, "a": 1})
     assert list(calls[0]["params"]) == ["a", "b"]
 
 
 def test_client_headers_merge(calls):
-    Client(headers={"User-Agent": "mine"})._request("stats", "x")
+    Client(headers={"User-Agent": "mine"}).http.get("stats", "x")
     assert calls[0]["headers"]["User-Agent"] == "mine"
     assert calls[0]["headers"]["Host"] == "stats.nba.com"
 
 
 def test_proxy_is_used(calls):
-    Client(proxy=SECRET_PROXY)._request("stats", "x")
+    Client(proxy=SECRET_PROXY).http.get("stats", "x")
     assert calls[0]["proxies"] == {"http": SECRET_PROXY, "https": SECRET_PROXY}
 
 
 def test_proxy_env_is_read_per_request(calls, monkeypatch):
     client = Client()
     monkeypatch.setenv("NBA_API_PROXY", SECRET_PROXY)
-    client._request("stats", "x")
+    client.http.get("stats", "x")
     assert calls[0]["proxies"] == {"http": SECRET_PROXY, "https": SECRET_PROXY}
 
 
 def test_network_error_masks_proxy(calls):
     calls.reply = requests.ConnectionError(f"cannot reach {SECRET_PROXY}")
     with pytest.raises(requests.ConnectionError) as info:
-        Client(proxy=SECRET_PROXY)._request("stats", "x")
+        Client(proxy=SECRET_PROXY).http.get("stats", "x")
     assert "hunter2" not in str(info.value)
 
 
 def test_no_cache_by_default(calls):
     client = Client()
-    client._request("stats", "x")
-    client._request("stats", "x")
+    client.http.get("stats", "x")
+    client.http.get("stats", "x")
     assert len(calls) == 2
 
 
 def test_cache_returns_saved_response(calls):
     client = Client(cache=True)
-    first = client._request("stats", "x", {"a": 1})
-    second = client._request("stats", "x", {"a": 1})
+    first = client.http.get("stats", "x", {"a": 1})
+    second = client.http.get("stats", "x", {"a": 1})
     assert len(calls) == 1
     assert second is first
 
@@ -118,6 +118,6 @@ def test_cache_returns_saved_response(calls):
 def test_failures_are_not_cached(calls, reply):
     calls.reply = reply
     client = Client(cache=True)
-    client._request("stats", "x")
-    client._request("stats", "x")
+    client.http.get("stats", "x")
+    client.http.get("stats", "x")
     assert len(calls) == 2

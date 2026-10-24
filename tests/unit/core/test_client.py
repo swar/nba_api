@@ -95,3 +95,8 @@ def test_context_manager_closes_session(monkeypatch):
     with client as entered:
         assert entered is client
     assert closed == [True]
+
+
+def test_http_uses_this_client():
+    client = Client()
+    assert client.http._client is client
