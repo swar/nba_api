@@ -34,7 +34,7 @@ classifiers = [
 ]
 dependencies = [
     "pandas >=2.1.0; python_version < '3.12'",
-    "pandas >=2.2.0 ; python_version == '3.12'",
+    "pandas >=2.2.2 ; python_version == '3.12'",
     "pandas >=2.2.3 ; python_version == '3.13'",
     "pandas >=2.3.3 ; python_version == '3.14'",
     "pandas >=3.0.6 ; python_version >= '3.15'",
