@@ -74,8 +74,8 @@ jobs:
           NBA_API_PROXY: ""
         run: poetry run pytest tests/integration -m vcr --block-network --record-mode=none
 
-  # The matrix above tests the locked versions; this tests the lowest numpy,
-  # pandas, and requests that pyproject.toml allows on each Python. The floors
+  # The matrix above tests the locked versions; this tests the lowest pandas
+  # and requests that pyproject.toml allows on each Python. The floors
   # differ per Python (see the markers in pyproject.toml), so it is a matrix too.
   test-min-deps:
     name: Tests (Python ${{ matrix.python-version }}, minimum dependencies)
