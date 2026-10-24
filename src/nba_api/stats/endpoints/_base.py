@@ -1,14 +1,10 @@
+from __future__ import annotations
+
 import json
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
-try:
-    from pandas import DataFrame, MultiIndex
-
-    PANDAS = True
-except ImportError:
-    PANDAS = False
-    DataFrame = Any
-    MultiIndex = Any
+if TYPE_CHECKING:
+    from pandas import DataFrame
 
 
 class Endpoint:
@@ -28,16 +24,10 @@ class Endpoint:
             return self.data
 
         def get_data_frame(self) -> DataFrame:
-            """Return the data as a pandas DataFrame.
-
-            Raises:
-                ImportError: If pandas is not installed.
-            """
-            if not PANDAS:
-                raise ImportError(
-                    "Import Missing - Failed to import DataFrame from pandas. "
-                    "Install it with: pip install pandas"
-                )
+            """Return the data as a pandas DataFrame."""
+            # Imported here, not at the top: importing pandas takes most of the time
+            # `import nba_api.stats.endpoints` costs, and get_dict() doesn't need it.
+            from pandas import DataFrame, MultiIndex
 
             if "headers" not in self.data or not self.data["headers"]:
                 return DataFrame()

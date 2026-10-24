@@ -11,17 +11,45 @@ from nba_api.stats.library.data import (
     wnba_players,
 )
 
+# Lookup tables built on first use, keyed by id() of the player list. Each entry
+# keeps a reference to its list so the id can't be reused by another object, and
+# its length so a table is rebuilt when players are appended or removed.
+_stripped_columns = {}
+_rows_by_id = {}
+
+
+def _cached(cache, key, players, build):
+    entry = cache.get(key)
+    if entry is None or entry[0] is not players or entry[1] != len(players):
+        entry = cache[key] = (players, len(players), build())
+    return entry[2]
+
+
+def _stripped_column(players, row_id):
+    return _cached(
+        _stripped_columns,
+        (id(players), row_id),
+        players,
+        lambda: [_strip_accents(str(player[row_id])) for player in players],
+    )
+
+
+def _build_id_index(players):
+    index = {}
+    for player in players:
+        index.setdefault(str(player[player_index_id]), []).append(player)
+    return index
+
 
 def _find_players(regex_pattern, row_id, players=players):
-    players_found = []
-    for player in players:
-        if re.search(
-            _strip_accents(regex_pattern),
-            _strip_accents(str(player[row_id])),
-            flags=re.I,
-        ):
-            players_found.append(_get_player_dict(player))
-    return players_found
+    pattern = re.compile(_strip_accents(regex_pattern), flags=re.I)
+    return [
+        _get_player_dict(player)
+        for player, value in zip(
+            players, _stripped_column(players, row_id), strict=True
+        )
+        if pattern.search(value)
+    ]
 
 
 def _strip_accents(inputstr: str) -> str:
@@ -37,8 +65,10 @@ def _strip_accents(inputstr: str) -> str:
 
 
 def _find_player_by_id(player_id, players=players):
-    regex_pattern = f"^{player_id}$"
-    players_list = _find_players(regex_pattern, player_index_id, players=players)
+    index = _cached(_rows_by_id, id(players), players, lambda: _build_id_index(players))
+    players_list = [
+        _get_player_dict(player) for player in index.get(str(player_id), [])
+    ]
     if len(players_list) > 1:
         raise Exception("Found more than 1 id")
     elif not players_list:
