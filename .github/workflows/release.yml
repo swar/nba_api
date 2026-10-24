@@ -1,5 +1,4 @@
-# Publishes to PyPI from CI (replaces the manual `poetry publish` in
-# scripts/gen-release.sh): build once, check the version, upload via Trusted
+# Publishes to PyPI from CI: build once, check the version, upload via Trusted
 # Publishing (no API token), and attach the files to the GitHub release.
 #
 # It starts automatically, and only, when a release commit lands on master: a commit

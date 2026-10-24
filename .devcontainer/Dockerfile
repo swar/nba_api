@@ -30,6 +30,10 @@ COPY --from=ghcr.io/astral-sh/uv:0.13.4 /uv /uvx /usr/local/bin/
 # so copy instead of hardlinking (silences uv's warning).
 ENV UV_LINK_MODE=copy
 
+# Keep the container's virtualenv out of the bind-mounted repo, so `uv sync` here
+# never replaces a .venv created on the host (different OS, different interpreter).
+ENV UV_PROJECT_ENVIRONMENT=/home/vscode/.venv
+
 # Set the working directory where your project files will be mounted
 # This is where VS Code will open and where your code will live
 WORKDIR /workspace

@@ -57,6 +57,8 @@ jobs:
       - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
         with:
           version: ${{ env.UV_VERSION }}
+          # Runs with the proxy secret, and gates the release: no restored caches.
+          enable-cache: false
       - name: Install dependencies
         run: uv sync --locked
       # Actions only masks the exact secret string; also mask the pieces a

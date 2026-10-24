@@ -11,6 +11,9 @@
 
 set -euo pipefail
 
+# `uv build` builds the project in the current directory.
+cd "$(dirname "$0")/.."
+
 TWINE_VERSION="7.0.0"
 PYTHON="${1:-}"
 

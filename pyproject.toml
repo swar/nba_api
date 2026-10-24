@@ -69,7 +69,11 @@ dev = [
 ]
 
 [tool.uv]
-required-version = ">=0.9"
+required-version = ">=0.13"
+# `uv build` resolves poetry-core fresh on every build, unlike `poetry build`, which
+# used the one bundled in the pinned Poetry. Pin it so the wheel's generator can't
+# change between release PR and tag. Goes away with the uv_build switch.
+build-constraint-dependencies = ["poetry-core==2.3.1"]
 
 [tool.pytest.ini_options]
 markers = [

@@ -96,8 +96,12 @@ jobs:
       - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
         with:
           version: ${{ env.UV_VERSION }}
+          # Its own cache, so this job's downgraded wheels never land in the test job's.
+          cache-suffix: min-deps
       # Re-resolves every direct dependency to its lowest allowed version for this
       # Python (the floors differ per Python, see the markers in pyproject.toml).
+      # That includes the dev tools (pytest, pytest-recording, ...), so a dev floor
+      # that stops working also fails this job.
       # Wheels only for numpy and pandas: a floor with no wheel for this Python
       # means users would have to build from source, so it should fail here.
       # uv.lock is rewritten in this checkout only, never committed.

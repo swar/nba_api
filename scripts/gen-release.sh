@@ -100,6 +100,8 @@ cd "$(git rev-parse --show-toplevel)"
 # --- Preconditions -----------------------------------------------------------
 
 command -v uv >/dev/null || die "uv is not installed"
+uv lock --check >/dev/null 2>&1 ||
+    die "uv.lock is out of date with pyproject.toml; run: uv lock"
 git remote get-url "$REMOTE" >/dev/null 2>&1 ||
     die "no git remote named '$REMOTE' (pass --remote)"
 

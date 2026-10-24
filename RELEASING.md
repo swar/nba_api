@@ -175,6 +175,18 @@ git log --format=%s -20 | grep -vE '^(feat|fix|perf|docs|style|refactor|test|cho
 > [!CAUTION]
 > Don't test the release pipeline by merging test commits into `swar/nba_api:master`. Any merged `feat:` or `fix:` commit will be included in the next real release and its changelog. To exercise the full pipeline end to end, run the **Release** workflow with target `testpypi`, or use your own fork.
 
+## Upgrading uv
+
+The uv version is pinned in four places that nothing keeps in step. To bump it, change all of them in one PR:
+
+- `UV_VERSION` in `.github/workflows/ci.yml`, `release.yml` and `canary.yml`;
+- the `ghcr.io/astral-sh/uv:` tag in `.devcontainer/Dockerfile` (Dependabot's `docker` entry also proposes this one);
+- `required-version` in `pyproject.toml`, if the new uv writes a lockfile older uv can't read.
+
+Then run `uv lock`, and check that `git diff uv.lock` is empty or explainable. The `setup-uv` action itself is bumped by Dependabot.
+
+The first release after the Poetry to uv switch (PR #751) is the real test of the new pipeline. Rehearse it first: run the **Release** workflow by hand against TestPyPI with the existing tag, as described in "Cutting a release".
+
 ## Troubleshooting
 
 **"No release will be made"**

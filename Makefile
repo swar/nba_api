@@ -26,6 +26,10 @@
 
 .PHONY: format lint test test-unit test-vcr test-canary test-cov check-package check ci all install clean build help
 
+# Never let `uv run` re-lock behind your back: a stale uv.lock is an error
+# (fix it with `uv lock`).
+export UV_LOCKED := 1
+
 # Default paths (can be overridden with FILES=path/to/file.py)
 SRC_DIR = src/nba_api
 TEST_DIR = tests/unit

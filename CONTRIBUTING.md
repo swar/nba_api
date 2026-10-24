@@ -46,6 +46,12 @@ make ci
 
 Run commands with `uv run <command>`, or activate the environment with `source .venv/bin/activate`.
 
+Notes:
+
+- Poetry is no longer used. If an old checkout or habit runs `poetry install`, run `uv sync` instead.
+- uv picks a Python that satisfies `requires-python`. To choose one, run `uv sync --python 3.12` (or any supported version).
+- `uv.lock` is committed. If it conflicts with another PR, don't merge it by hand: take either side, then run `uv lock` and commit the result. Add or change dependencies with `uv add`, `uv remove`, or by editing `pyproject.toml` and running `uv lock`.
+
 ## Running checks
 
 `make ci` runs the same checks as CI. The individual commands:
