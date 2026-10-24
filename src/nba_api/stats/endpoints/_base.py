@@ -1,14 +1,15 @@
+from __future__ import annotations
+
 import json
-from typing import Any
+from importlib.util import find_spec
+from typing import TYPE_CHECKING, Any
 
-try:
-    from pandas import DataFrame, MultiIndex
+if TYPE_CHECKING:
+    from pandas import DataFrame
 
-    PANDAS = True
-except ImportError:
-    PANDAS = False
-    DataFrame = Any
-    MultiIndex = Any
+# pandas is imported on first use in get_data_frame(): importing it takes most of
+# the time `import nba_api.stats.endpoints` costs, and get_dict() doesn't need it.
+PANDAS = find_spec("pandas") is not None
 
 
 class Endpoint:
@@ -37,6 +38,8 @@ class Endpoint:
                 raise Exception(
                     "Import Missing - Failed to import DataFrame from pandas."
                 )
+
+            from pandas import DataFrame, MultiIndex
 
             if "headers" not in self.data or not self.data["headers"]:
                 return DataFrame()

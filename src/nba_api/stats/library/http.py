@@ -131,7 +131,7 @@ class NBAStatsResponse(http.NBAResponse):
         else:
             from nba_api.stats.endpoints._parsers import get_parser_for_endpoint
 
-            endpoint_parser = get_parser_for_endpoint(endpoint, self.get_dict())
+            endpoint_parser = get_parser_for_endpoint(endpoint, raw_dict)
             return endpoint_parser.get_data_sets()
 
 
