@@ -28,10 +28,11 @@ uv pip install --quiet --python "$work/venv/bin/python" \
 
 "$work/venv/bin/twine" check --strict "$work"/dist/*
 
-# uv_build only ships the license files listed in `license-files`.
-unzip -l "$work"/dist/*.whl | grep -q 'dist-info/licenses/LICENSE$' \
+# uv_build only ships the license files listed in `license-files`. grep reads all
+# of its input (no -q), so pipefail never sees a SIGPIPE from unzip or tar.
+unzip -l "$work"/dist/*.whl | grep 'dist-info/licenses/LICENSE$' >/dev/null \
     || { echo "LICENSE missing from the wheel" >&2; exit 1; }
-tar tzf "$work"/dist/*.tar.gz | grep -q '^[^/]*/LICENSE$' \
+tar tzf "$work"/dist/*.tar.gz | grep '^[^/]*/LICENSE$' >/dev/null \
     || { echo "LICENSE missing from the sdist" >&2; exit 1; }
 
 # -I and a cwd outside the repo, so nothing can be imported from src/.
