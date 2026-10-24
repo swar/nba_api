@@ -1330,7 +1330,234 @@
     ]
   },
   "BoxScoreSummaryV3": {
-    "gap": "no EndpointSpec"
+    "attributes": {
+      "arena_info": {
+        "columns": [
+          "gameId",
+          "arenaId",
+          "arenaName",
+          "arenaCity",
+          "arenaState",
+          "arenaCountry",
+          "arenaTimezone"
+        ],
+        "empty": false,
+        "none": false,
+        "rows": 1
+      },
+      "available_video": {
+        "columns": [
+          "gameId",
+          "videoAvailableFlag",
+          "ptAvailable",
+          "ptXYZAvailable",
+          "whStatus",
+          "hustleStatus",
+          "historicalStatus"
+        ],
+        "empty": false,
+        "none": false,
+        "rows": 1
+      },
+      "game_info": {
+        "columns": [
+          "gameId",
+          "gameDate",
+          "attendance",
+          "gameDuration"
+        ],
+        "empty": false,
+        "none": false,
+        "rows": 1
+      },
+      "game_summary": {
+        "columns": [
+          "gameId",
+          "gameCode",
+          "gameStatus",
+          "gameStatusText",
+          "period",
+          "gameClock",
+          "gameTimeUTC",
+          "gameEt",
+          "awayTeamId",
+          "homeTeamId",
+          "duration",
+          "attendance",
+          "sellout"
+        ],
+        "empty": false,
+        "none": false,
+        "rows": 1
+      },
+      "inactive_players": {
+        "columns": [
+          "gameId",
+          "teamId",
+          "personId",
+          "firstName",
+          "familyName",
+          "jerseyNum"
+        ],
+        "empty": true,
+        "none": false,
+        "rows": 0
+      },
+      "last_five_meetings": {
+        "columns": [
+          "recencyOrder",
+          "gameId",
+          "gameTimeUTC",
+          "gameEt",
+          "gameStatus",
+          "gameStatusText",
+          "awayTeamId",
+          "awayTeamCity",
+          "awayTeamName",
+          "awayTeamTricode",
+          "awayTeamScore",
+          "awayTeamWins",
+          "awayTeamLosses",
+          "homeTeamId",
+          "homeTeamCity",
+          "homeTeamName",
+          "homeTeamTricode",
+          "homeTeamScore",
+          "homeTeamWins",
+          "homeTeamLosses"
+        ],
+        "empty": true,
+        "none": false,
+        "rows": 0
+      },
+      "line_score": {
+        "columns": [
+          "gameId",
+          "teamId",
+          "teamCity",
+          "teamName",
+          "teamTricode",
+          "teamSlug",
+          "teamWins",
+          "teamLosses",
+          "period1Score",
+          "period2Score",
+          "period3Score",
+          "period4Score",
+          "score"
+        ],
+        "empty": false,
+        "none": false,
+        "rows": 2
+      },
+      "officials": {
+        "columns": [
+          "gameId",
+          "personId",
+          "name",
+          "nameI",
+          "firstName",
+          "familyName",
+          "jerseyNum"
+        ],
+        "empty": false,
+        "none": false,
+        "rows": 3
+      },
+      "other_stats": {
+        "columns": [
+          "gameId",
+          "teamId",
+          "teamCity",
+          "teamName",
+          "teamTricode",
+          "points",
+          "reboundsTotal",
+          "assists",
+          "steals",
+          "blocks",
+          "turnovers",
+          "fieldGoalsPercentage",
+          "threePointersPercentage",
+          "freeThrowsPercentage",
+          "pointsInThePaint",
+          "pointsSecondChance",
+          "pointsFastBreak",
+          "biggestLead",
+          "leadChanges",
+          "timesTied",
+          "biggestScoringRun",
+          "turnoversTeam",
+          "turnoversTotal",
+          "reboundsTeam",
+          "pointsFromTurnovers",
+          "benchPoints"
+        ],
+        "empty": false,
+        "none": false,
+        "rows": 2
+      },
+      "player_stats": {
+        "columns": null,
+        "empty": true,
+        "none": true,
+        "rows": 0
+      },
+      "team_stats": {
+        "columns": null,
+        "empty": true,
+        "none": true,
+        "rows": 0
+      }
+    },
+    "data_sets": [
+      {
+        "matches": [
+          "game_summary"
+        ]
+      },
+      {
+        "matches": [
+          "game_info"
+        ]
+      },
+      {
+        "matches": [
+          "arena_info"
+        ]
+      },
+      {
+        "matches": [
+          "officials"
+        ]
+      },
+      {
+        "matches": [
+          "line_score"
+        ]
+      },
+      {
+        "matches": [
+          "inactive_players"
+        ]
+      },
+      {
+        "matches": [
+          "last_five_meetings"
+        ]
+      },
+      {
+        "matches": [
+          "other_stats"
+        ]
+      },
+      {
+        "matches": [
+          "available_video"
+        ]
+      }
+    ],
+    "source": "unit fixture tests/unit/stats/endpoints/data/boxscoresummaryv3.py BOXSCORESUMMARYV3_SAMPLE"
   },
   "BoxScoreTraditionalV2": {
     "attributes": {
@@ -2642,7 +2869,90 @@
     ]
   },
   "DunkScoreLeaders": {
-    "gap": "no EndpointSpec"
+    "attributes": {
+      "dunks": {
+        "columns": [
+          "gameId",
+          "gameDate",
+          "matchup",
+          "period",
+          "gameClockTime",
+          "eventNum",
+          "playerId",
+          "playerName",
+          "firstName",
+          "lastName",
+          "teamId",
+          "teamName",
+          "teamCity",
+          "teamAbbreviation",
+          "dunkScore",
+          "jumpSubscore",
+          "powerSubscore",
+          "styleSubscore",
+          "defensiveContestSubscore",
+          "maxBallHeight",
+          "ballSpeedThroughRim",
+          "playerVertical",
+          "hangTime",
+          "takeoffDistance",
+          "reverseDunk",
+          "dunk360",
+          "throughTheLegs",
+          "alleyOop",
+          "tipIn",
+          "selfOop",
+          "playerRotation",
+          "playerLateralSpeed",
+          "ballDistanceTraveled",
+          "ballReachBack",
+          "totalBallAcceleration",
+          "dunkingHand",
+          "jumpingFoot",
+          "passLength",
+          "catchingHand",
+          "catchDistance",
+          "lateralCatchDistance",
+          "passerId",
+          "passerName",
+          "passerFirstName",
+          "passerLastName",
+          "passReleasePoint",
+          "shooterId",
+          "shooterName",
+          "shooterFirstName",
+          "shooterLastName",
+          "shotReleasePoint",
+          "shotLength",
+          "defensiveContestLevel",
+          "possibleAttemptedCharge",
+          "videoAvailable"
+        ],
+        "empty": false,
+        "none": false,
+        "rows": 11
+      },
+      "player_stats": {
+        "columns": null,
+        "empty": true,
+        "none": true,
+        "rows": 0
+      },
+      "team_stats": {
+        "columns": null,
+        "empty": true,
+        "none": true,
+        "rows": 0
+      }
+    },
+    "data_sets": [
+      {
+        "matches": [
+          "dunks"
+        ]
+      }
+    ],
+    "source": "unit fixture tests/unit/stats/endpoints/data/dunkscoreleaders.py DUNKSCORELEADERS_SAMPLE"
   },
   "FantasyWidget": {
     "attributes": {
@@ -2938,7 +3248,50 @@
     ]
   },
   "GravityLeaders": {
-    "gap": "no EndpointSpec"
+    "attributes": {
+      "leaders": {
+        "columns": [
+          "PLAYERID",
+          "FIRSTNAME",
+          "LASTNAME",
+          "TEAMID",
+          "TEAMABBREVIATION",
+          "TEAMNAME",
+          "TEAMCITY",
+          "FRAMES",
+          "GRAVITYSCORE",
+          "AVGGRAVITYSCORE",
+          "ONBALLPERIMETERFRAMES",
+          "ONBALLPERIMETERGRAVITYSCORE",
+          "AVGONBALLPERIMETERGRAVITYSCORE",
+          "OFFBALLPERIMETERFRAMES",
+          "OFFBALLPERIMETERGRAVITYSCORE",
+          "AVGOFFBALLPERIMETERGRAVITYSCORE",
+          "ONBALLINTERIORFRAMES",
+          "ONBALLINTERIORGRAVITYSCORE",
+          "AVGONBALLINTERIORGRAVITYSCORE",
+          "OFFBALLINTERIORFRAMES",
+          "OFFBALLINTERIORGRAVITYSCORE",
+          "AVGOFFBALLINTERIORGRAVITYSCORE",
+          "GAMESPLAYED",
+          "MINUTES",
+          "PTS",
+          "REB",
+          "AST"
+        ],
+        "empty": false,
+        "none": false,
+        "rows": 3
+      }
+    },
+    "data_sets": [
+      {
+        "matches": [
+          "leaders"
+        ]
+      }
+    ],
+    "source": "unit fixture tests/unit/stats/endpoints/data/gravityleaders.py GRAVITYLEADERS_SAMPLE"
   },
   "HomePageLeaders": {
     "attributes": {
@@ -11106,7 +11459,111 @@
     ]
   },
   "ScheduleLeagueV2": {
-    "gap": "no EndpointSpec"
+    "attributes": {
+      "season_games": {
+        "columns": [
+          "leagueId",
+          "seasonYear",
+          "gameDate",
+          "gameId",
+          "gameCode",
+          "gameStatus",
+          "gameStatusText",
+          "gameSequence",
+          "gameDateEst",
+          "gameTimeEst",
+          "gameDateTimeEst",
+          "gameDateUTC",
+          "gameTimeUTC",
+          "gameDateTimeUTC",
+          "awayTeamTime",
+          "homeTeamTime",
+          "day",
+          "monthNum",
+          "weekNumber",
+          "weekName",
+          "ifNecessary",
+          "seriesGameNumber",
+          "gameLabel",
+          "gameSubLabel",
+          "seriesText",
+          "arenaName",
+          "arenaState",
+          "arenaCity",
+          "postponedStatus",
+          "branchLink",
+          "gameSubtype",
+          "isNeutral",
+          "homeTeam_teamId",
+          "homeTeam_teamName",
+          "homeTeam_teamCity",
+          "homeTeam_teamTricode",
+          "homeTeam_teamSlug",
+          "homeTeam_wins",
+          "homeTeam_losses",
+          "homeTeam_score",
+          "homeTeam_seed",
+          "awayTeam_teamId",
+          "awayTeam_teamName",
+          "awayTeam_teamCity",
+          "awayTeam_teamTricode",
+          "awayTeam_teamSlug",
+          "awayTeam_wins",
+          "awayTeam_losses",
+          "awayTeam_score",
+          "awayTeam_seed",
+          "pointsLeaders_personId",
+          "pointsLeaders_firstName",
+          "pointsLeaders_lastName",
+          "pointsLeaders_teamId",
+          "pointsLeaders_teamCity",
+          "pointsLeaders_teamName",
+          "pointsLeaders_teamTricode",
+          "pointsLeaders_points",
+          "homeTvBroadcasters_broadcasterScope",
+          "homeTvBroadcasters_broadcasterMedia",
+          "homeTvBroadcasters_broadcasterId",
+          "homeTvBroadcasters_broadcasterDisplay",
+          "homeTvBroadcasters_broadcasterAbbreviation",
+          "homeTvBroadcasters_tapeDelayComments",
+          "homeTvBroadcasters_broadcasterVideoLink",
+          "homeTvBroadcasters_broadcasterDescription",
+          "homeTvBroadcasters_broadcasterTeamId"
+        ],
+        "empty": false,
+        "none": false,
+        "rows": 2
+      },
+      "season_weeks": {
+        "columns": [
+          "leagueId",
+          "seasonYear",
+          "weekNumber",
+          "weekName",
+          "startDate",
+          "endDate"
+        ],
+        "empty": false,
+        "none": false,
+        "rows": 2
+      }
+    },
+    "data_sets": [
+      {
+        "matches": [
+          "season_games"
+        ]
+      },
+      {
+        "matches": [
+          "season_weeks"
+        ]
+      }
+    ],
+    "expected_data_unmatched": [
+      "SeasonGames"
+    ],
+    "source": "unit fixture tests/unit/stats/endpoints/data/scheduleleaguev2.py SCHEDULELEAGUEV2_2020_21"
   },
   "ScheduleLeagueV2Int": {
     "gap": "no EndpointSpec"
@@ -11362,7 +11819,159 @@
     ]
   },
   "ScoreboardV3": {
-    "gap": "no EndpointSpec"
+    "attributes": {
+      "broadcasters": {
+        "columns": [
+          "gameId",
+          "broadcasterType",
+          "broadcasterId",
+          "broadcastDisplay",
+          "broadcasterTeamId",
+          "broadcasterDescription"
+        ],
+        "empty": false,
+        "none": false,
+        "rows": 62
+      },
+      "game_header": {
+        "columns": [
+          "gameId",
+          "gameCode",
+          "gameStatus",
+          "gameStatusText",
+          "period",
+          "gameClock",
+          "gameTimeUTC",
+          "gameEt",
+          "regulationPeriods",
+          "seriesGameNumber",
+          "gameLabel",
+          "gameSubLabel",
+          "seriesText",
+          "ifNecessary",
+          "seriesConference",
+          "poRoundDesc",
+          "gameSubtype",
+          "isNeutral"
+        ],
+        "empty": false,
+        "none": false,
+        "rows": 11
+      },
+      "game_leaders": {
+        "columns": [
+          "gameId",
+          "teamId",
+          "leaderType",
+          "personId",
+          "name",
+          "playerSlug",
+          "jerseyNum",
+          "position",
+          "teamTricode",
+          "points",
+          "rebounds",
+          "assists"
+        ],
+        "empty": false,
+        "none": false,
+        "rows": 22
+      },
+      "line_score": {
+        "columns": [
+          "gameId",
+          "teamId",
+          "teamCity",
+          "teamName",
+          "teamTricode",
+          "teamSlug",
+          "wins",
+          "losses",
+          "score",
+          "seed",
+          "inBonus",
+          "timeoutsRemaining"
+        ],
+        "empty": false,
+        "none": false,
+        "rows": 22
+      },
+      "player_stats": {
+        "columns": null,
+        "empty": true,
+        "none": true,
+        "rows": 0
+      },
+      "scoreboard_info": {
+        "columns": [
+          "gameDate",
+          "leagueId",
+          "leagueName"
+        ],
+        "empty": false,
+        "none": false,
+        "rows": 1
+      },
+      "team_leaders": {
+        "columns": [
+          "gameId",
+          "teamId",
+          "leaderType",
+          "personId",
+          "name",
+          "playerSlug",
+          "jerseyNum",
+          "position",
+          "teamTricode",
+          "points",
+          "rebounds",
+          "assists",
+          "seasonLeadersFlag"
+        ],
+        "empty": false,
+        "none": false,
+        "rows": 22
+      },
+      "team_stats": {
+        "columns": null,
+        "empty": true,
+        "none": true,
+        "rows": 0
+      }
+    },
+    "data_sets": [
+      {
+        "matches": [
+          "scoreboard_info"
+        ]
+      },
+      {
+        "matches": [
+          "game_header"
+        ]
+      },
+      {
+        "matches": [
+          "line_score"
+        ]
+      },
+      {
+        "matches": [
+          "game_leaders"
+        ]
+      },
+      {
+        "matches": [
+          "team_leaders"
+        ]
+      },
+      {
+        "matches": [
+          "broadcasters"
+        ]
+      }
+    ],
+    "source": "scenario cassette test_scoreboardv3[Regular season game date - November 5, 2025]"
   },
   "ShotChartDetail": {
     "attributes": {
@@ -13170,10 +13779,153 @@
     ]
   },
   "TeamGameLog": {
-    "gap": "no EndpointSpec"
+    "attributes": {
+      "player_stats": {
+        "columns": null,
+        "empty": true,
+        "none": true,
+        "rows": 0
+      },
+      "team_game_log": {
+        "columns": [
+          "Team_ID",
+          "Game_ID",
+          "GAME_DATE",
+          "MATCHUP",
+          "WL",
+          "W",
+          "L",
+          "W_PCT",
+          "MIN",
+          "FGM",
+          "FGA",
+          "FG_PCT",
+          "FG3M",
+          "FG3A",
+          "FG3_PCT",
+          "FTM",
+          "FTA",
+          "FT_PCT",
+          "OREB",
+          "DREB",
+          "REB",
+          "AST",
+          "STL",
+          "BLK",
+          "TOV",
+          "PF",
+          "PTS"
+        ],
+        "empty": false,
+        "none": false,
+        "rows": 82
+      },
+      "team_stats": {
+        "columns": null,
+        "empty": true,
+        "none": true,
+        "rows": 0
+      }
+    },
+    "data_sets": [
+      {
+        "matches": [
+          "team_game_log"
+        ]
+      }
+    ],
+    "source": "scenario cassette test_teamgamelog[Lakers 2023-24 regular season]"
   },
   "TeamGameLogs": {
-    "gap": "no EndpointSpec"
+    "attributes": {
+      "player_stats": {
+        "columns": null,
+        "empty": true,
+        "none": true,
+        "rows": 0
+      },
+      "team_game_logs": {
+        "columns": [
+          "SEASON_YEAR",
+          "TEAM_ID",
+          "TEAM_ABBREVIATION",
+          "TEAM_NAME",
+          "GAME_ID",
+          "GAME_DATE",
+          "MATCHUP",
+          "WL",
+          "MIN",
+          "FGM",
+          "FGA",
+          "FG_PCT",
+          "FG3M",
+          "FG3A",
+          "FG3_PCT",
+          "FTM",
+          "FTA",
+          "FT_PCT",
+          "OREB",
+          "DREB",
+          "REB",
+          "AST",
+          "TOV",
+          "STL",
+          "BLK",
+          "BLKA",
+          "PF",
+          "PFD",
+          "PTS",
+          "PLUS_MINUS",
+          "GP_RANK",
+          "W_RANK",
+          "L_RANK",
+          "W_PCT_RANK",
+          "MIN_RANK",
+          "FGM_RANK",
+          "FGA_RANK",
+          "FG_PCT_RANK",
+          "FG3M_RANK",
+          "FG3A_RANK",
+          "FG3_PCT_RANK",
+          "FTM_RANK",
+          "FTA_RANK",
+          "FT_PCT_RANK",
+          "OREB_RANK",
+          "DREB_RANK",
+          "REB_RANK",
+          "AST_RANK",
+          "TOV_RANK",
+          "STL_RANK",
+          "BLK_RANK",
+          "BLKA_RANK",
+          "PF_RANK",
+          "PFD_RANK",
+          "PTS_RANK",
+          "PLUS_MINUS_RANK",
+          "AVAILABLE_FLAG"
+        ],
+        "empty": false,
+        "none": false,
+        "rows": 82
+      },
+      "team_stats": {
+        "columns": null,
+        "empty": true,
+        "none": true,
+        "rows": 0
+      }
+    },
+    "data_sets": [
+      {
+        "matches": [
+          "team_game_logs"
+        ]
+      }
+    ],
+    "expected_data_unmatched": [
+      "TeamGameLogs"
+    ],
+    "source": "scenario cassette test_teamgamelogs[Lakers 2023-24 regular season]"
   },
   "TeamGameStreakFinder": {
     "gap": "spec skipped: Answers HTTP 500 upstream; see docs/nba_api/stats/known_upstream_issues.md"
