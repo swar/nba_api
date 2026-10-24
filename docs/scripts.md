@@ -38,19 +38,6 @@ uv run python scripts/static_teams_update/generate_static_teams.py --check
 uv run python scripts/static_teams_update/generate_static_teams.py
 ```
 
-## `analyze_endpoints_and_create_files.py`
-
-Analyzes every endpoint in the analyzer's endpoint list by probing `stats.nba.com` with valid, missing, and invalid parameters. It then generates endpoint `.py` files, endpoint documentation, and parameter documentation from the results. See the [endpoint tooling docs](table_of_contents.md#contributing-and-maintenance) and the [analysis format](endpoint_analysis_format.md).
-
-```bash
-PYTHONPATH=. uv run python scripts/analyze_endpoints_and_create_files.py   # run from the repo root so `tools` is importable
-```
-
-> [!WARNING]
-> This script sends a large number of requests and depends on the exact wording of the API's error messages, so it tends to break when NBA.com changes. Its output is a starting point to review and merge by hand, not a drop-in replacement for the files in `src/` and `docs/`. For a single endpoint, writing the class by hand and generating its docs with `generate_boilerplate_endpoint_documentation()` is usually easier.
-
-Enabling `DEBUG` and `DEBUG_STORAGE` in [`debug.py`](nba_api/debug.md) caches responses between runs, which helps while debugging the analyzer.
-
 ## `gen-release.sh`
 
 Prepares a release locally. It computes the next version from the Conventional Commits since the last tag, bumps `pyproject.toml`, and renames the hand-written `## Unreleased` section of `CHANGELOG.MD` to `## vX.Y.Z`, in one commit on a new `release/vX.Y.Z` branch. It doesn't tag, push, or build. See [RELEASING.md](../RELEASING.md).

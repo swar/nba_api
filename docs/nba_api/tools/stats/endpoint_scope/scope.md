@@ -5,7 +5,7 @@ Scopes out stats.nba.com endpoints: what a response contains, how it has drifted
 what the library expects, and how the server treats each parameter. Use it to check
 existing endpoints for upstream changes and to map out a new endpoint before adding it.
 
-It replaces [`endpoint_analysis`](../endpoint_analysis/analysis.md), which relied on
+It replaces the old `endpoint_analysis` tool (since removed), which relied on
 error messages stats.nba.com no longer sends: an empty request now returns a bare HTTP
 500, and invalid values return `{"Param": ["Invalid parameters"]}` with no regex pattern.
 
