@@ -171,6 +171,9 @@ jobs:
     permissions:
       contents: read
     uses: ./.github/workflows/canary.yml
+    # Without this the called workflow saw an empty NBA_API_PROXY, even though the
+    # secret is in the `release` environment its job deploys to (v1.12.0 release run).
+    secrets: inherit
     with:
       ref: ${{ needs.prepare.outputs.ref }}
 
