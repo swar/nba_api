@@ -47,8 +47,8 @@ def _find_team_by_abbreviation(abbreviation, teams=teams):
 def _find_teams_by_championship_year(year, teams=teams):
     for team in teams:
         if year in team[team_index_championship_year]:
-            result = team[team_index_full_name]
-    return result
+            return team[team_index_full_name]
+    return None
 
 
 def _find_teams_by_year_founded(year, teams=teams):

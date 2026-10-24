@@ -62,3 +62,15 @@ def test_schedule_response_metadata_does_not_change_datasets(
         actual.get_data_frames(), expected.get_data_frames(), strict=True
     ):
         assert_frame_equal(actual_frame, expected_frame)
+
+
+def test_scheduleleaguev2int_exposes_broadcaster_list():
+    payload = deepcopy(SCHEDULELEAGUEV2_2020_21)
+    payload["leagueSchedule"]["broadcasterList"] = [
+        {"broadcasterId": 1234, "broadcasterDisplay": "Bally Sports"}
+    ]
+
+    endpoint = load_endpoint(ScheduleLeagueV2Int, payload)
+
+    assert endpoint.broadcaster_list.get_dict() == endpoint.data_sets[2].get_dict()
+    assert endpoint.broadcaster_list.get_dict()["data"]
