@@ -22,23 +22,17 @@ RUN apt-get update && apt-get install -y \
 # The vscode user is pre-configured in the base image with development tools
 USER vscode
 
-# Download and install Poetry package manager for the vscode user
-# Poetry manages Python dependencies and virtual environments
-RUN curl -sSL https://install.python-poetry.org -o /tmp/install-poetry.py \
-    && python3 /tmp/install-poetry.py \
-    && rm /tmp/install-poetry.py
+# uv manages Python dependencies and the project's .venv. Copied from the pinned
+# official image (keep the version in step with UV_VERSION in .github/workflows/ci.yml).
+COPY --from=ghcr.io/astral-sh/uv:0.13.4 /uv /uvx /usr/local/bin/
 
-# Add Poetry's installation directory to the system PATH
-# This allows the 'poetry' command to be run from anywhere
-ENV PATH="/home/vscode/.local/bin:$PATH"
+# uv's cache and the workspace are on different filesystems in a dev container,
+# so copy instead of hardlinking (silences uv's warning).
+ENV UV_LINK_MODE=copy
 
-# Configure Poetry to create virtual environments inside the project directory
-# This creates a .venv folder in your project root instead of Poetry's global cache
-# This setting acts as a "gate" - it ensures proper environment setup before shells can run
-# Set cache directory to /tmp to enable fast package downloads during build
-# while preventing cache bloat in the final Docker image
-RUN poetry config virtualenvs.in-project true \
-    && poetry config cache-dir /tmp/poetry_cache
+# Keep the container's virtualenv out of the bind-mounted repo, so `uv sync` here
+# never replaces a .venv created on the host (different OS, different interpreter).
+ENV UV_PROJECT_ENVIRONMENT=/home/vscode/.venv
 
 # Set the working directory where your project files will be mounted
 # This is where VS Code will open and where your code will live

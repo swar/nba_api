@@ -6,7 +6,7 @@ socket opens instead of falling back to a direct connection. Locally the tests
 skip when no proxy is configured; on GitHub Actions they fail instead, so a
 missing secret can't pass silently.
 
-Run with: ``poetry run pytest tests/integration/canary -m canary``
+Run with: ``uv run pytest tests/integration/canary -m canary``
 Never combine with ``--block-network`` (these are real requests).
 """
 

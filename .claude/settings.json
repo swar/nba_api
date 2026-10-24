@@ -6,6 +6,10 @@
       "Bash(NBA_API_PROXY= poetry run pytest tests/unit:*)",
       "Bash(NBA_API_PROXY= poetry run pytest tests/integration -m vcr:*)",
       "Bash(poetry run ruff:*)",
+      "Bash(uv run pytest tests/unit:*)",
+      "Bash(NBA_API_PROXY= uv run pytest tests/unit:*)",
+      "Bash(NBA_API_PROXY= uv run pytest tests/integration -m vcr:*)",
+      "Bash(uv run ruff:*)",
       "Bash(make ci)",
       "Bash(make test)",
       "Bash(make test-vcr)",
@@ -21,6 +25,10 @@
       "Bash(poetry add:*)",
       "Bash(poetry remove:*)",
       "Bash(poetry lock:*)",
+      "Bash(uv add:*)",
+      "Bash(uv remove:*)",
+      "Bash(uv lock:*)",
+      "Bash(uv sync --upgrade:*)",
       "Bash(*--record-mode*)",
       "Bash(* -m live*)"
     ],
@@ -31,6 +39,9 @@
       "Bash(cat .env*)",
       "Bash(poetry publish:*)",
       "Bash(poetry run semantic-release:*)",
+      "Bash(uv publish:*)",
+      "Bash(uv run semantic-release:*)",
+      "Bash(uv run --locked semantic-release:*)",
       "Bash(semantic-release:*)",
       "Edit(./CHANGELOG.MD)"
     ]

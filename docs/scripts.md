@@ -11,11 +11,11 @@ Regenerates [`src/nba_api/stats/library/data.py`](nba_api/stats/library/data.md)
 
 ```bash
 cd scripts/static_players_update
-poetry run python generate_static_data_file.py   # writes ./static_files/data.py (gitignored)
+uv run python generate_static_data_file.py   # writes ./static_files/data.py (gitignored)
 cp static_files/data.py ../../src/nba_api/stats/library/data.py
 cd ../..
-poetry run ruff format src/nba_api/stats/library/data.py
-poetry run pytest tests/unit/stats/static
+uv run ruff format src/nba_api/stats/library/data.py
+uv run pytest tests/unit/stats/static
 ```
 
 Commit the result as `chore: refresh static player data`.
@@ -32,10 +32,10 @@ The lists are rewritten in both `scripts/static_players_update/template.py` and 
 
 ```bash
 # Report what would change, exit 1 if the data is out of date (writes nothing)
-poetry run python scripts/static_teams_update/generate_static_teams.py --check
+uv run python scripts/static_teams_update/generate_static_teams.py --check
 
 # Apply the changes
-poetry run python scripts/static_teams_update/generate_static_teams.py
+uv run python scripts/static_teams_update/generate_static_teams.py
 ```
 
 ## `analyze_endpoints_and_create_files.py`
@@ -43,7 +43,7 @@ poetry run python scripts/static_teams_update/generate_static_teams.py
 Analyzes every endpoint in the analyzer's endpoint list by probing `stats.nba.com` with valid, missing, and invalid parameters. It then generates endpoint `.py` files, endpoint documentation, and parameter documentation from the results. See the [endpoint tooling docs](table_of_contents.md#contributing-and-maintenance) and the [analysis format](endpoint_analysis_format.md).
 
 ```bash
-PYTHONPATH=. poetry run python scripts/analyze_endpoints_and_create_files.py   # run from the repo root so `tools` is importable
+PYTHONPATH=. uv run python scripts/analyze_endpoints_and_create_files.py   # run from the repo root so `tools` is importable
 ```
 
 > [!WARNING]

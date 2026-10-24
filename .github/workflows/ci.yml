@@ -15,8 +15,10 @@ concurrency:
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 env:
-  # Matches the Poetry that generated poetry.lock.
-  POETRY_VERSION: "2.3.2"
+  # Matches the uv that generated uv.lock.
+  UV_VERSION: "0.13.4"
+  # setup-python provides the interpreters; uv must not fetch its own.
+  UV_PYTHON_DOWNLOADS: never
   PYTHONUNBUFFERED: "1"
   FORCE_COLOR: "1"
 
@@ -29,20 +31,19 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - name: Install Poetry
-        run: pipx install "poetry==${POETRY_VERSION}"
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: "3.13"
-          cache: poetry
-      - name: poetry.lock is in sync with pyproject.toml
-        run: poetry check --lock
-      - name: Install dependencies
-        run: poetry install --no-ansi --no-interaction
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+        with:
+          version: ${{ env.UV_VERSION }}
+      - name: uv.lock is in sync with pyproject.toml
+        run: uv lock --check
+      # Only the lint group (ruff), not the project or its runtime dependencies.
       - name: ruff check
-        run: poetry run ruff check --output-format=github
+        run: uv run --locked --only-group lint ruff check --output-format=github
       - name: ruff format --check
-        run: poetry run ruff format --check
+        run: uv run --locked --only-group lint ruff format --check
 
   test:
     name: Tests (Python ${{ matrix.python-version }})
@@ -56,23 +57,23 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - name: Install Poetry
-        run: pipx install "poetry==${POETRY_VERSION}"
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: ${{ matrix.python-version }}
-          cache: poetry
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+        with:
+          version: ${{ env.UV_VERSION }}
       - name: Install dependencies
-        run: poetry install --no-ansi --no-interaction
+        run: uv sync --locked --python "${{ matrix.python-version }}"
       # --block-network fails any test that opens a real socket, and
       # --record-mode=none stops VCR from recording a missing cassette.
       - name: Unit tests
-        run: poetry run pytest tests/unit --block-network --record-mode=none
+        run: uv run --no-sync pytest tests/unit --block-network --record-mode=none
       - name: Integration tests (VCR cassette replay)
         # A proxy would intercept cassette replay; keep it blank in CI.
         env:
           NBA_API_PROXY: ""
-        run: poetry run pytest tests/integration -m vcr --block-network --record-mode=none
+        run: uv run --no-sync pytest tests/integration -m vcr --block-network --record-mode=none
 
   # The matrix above tests the locked versions; this tests the lowest pandas
   # and requests that pyproject.toml allows on each Python. The floors
@@ -89,31 +90,32 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - name: Install Poetry
-        run: pipx install "poetry==${POETRY_VERSION}"
-      # No cache: it shares a key with the test job, and the downgraded venv
-      # must not be what gets saved.
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Install dependencies
-        run: poetry install --no-ansi --no-interaction
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+        with:
+          version: ${{ env.UV_VERSION }}
+          # Its own cache, so this job's downgraded wheels never land in the test job's.
+          cache-suffix: min-deps
+      # Re-resolves every direct dependency to its lowest allowed version for this
+      # Python (the floors differ per Python, see the markers in pyproject.toml).
+      # That includes the dev tools (pytest, pytest-recording, ...), so a dev floor
+      # that stops working also fails this job.
       # Wheels only for numpy and pandas: a floor with no wheel for this Python
       # means users would have to build from source, so it should fail here.
-      # pip check catches a dev dependency that needs something newer.
-      - name: Downgrade runtime dependencies to their floors
+      # uv.lock is rewritten in this checkout only, never committed.
+      - name: Install the lowest direct dependencies
         run: |
-          pins="$(poetry run python scripts/min_deps.py)"
-          echo "$pins"
-          poetry run python -m pip install --disable-pip-version-check \
-            --only-binary numpy,pandas $pins
-          poetry run python -m pip check
+          uv sync --python "${{ matrix.python-version }}" --resolution lowest-direct \
+            --no-build-package numpy --no-build-package pandas
+          uv pip check
       - name: Unit tests
-        run: poetry run pytest tests/unit --block-network --record-mode=none
+        run: uv run --no-sync pytest tests/unit --block-network --record-mode=none
       - name: Integration tests (VCR cassette replay)
         env:
           NBA_API_PROXY: ""
-        run: poetry run pytest tests/integration -m vcr --block-network --record-mode=none
+        run: uv run --no-sync pytest tests/integration -m vcr --block-network --record-mode=none
 
   # The tests run against the source tree; this checks what ships to PyPI.
   package:
@@ -124,12 +126,14 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - name: Install Poetry
-        run: pipx install "poetry==${POETRY_VERSION}"
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         id: python
         with:
           python-version: "3.13"
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+        with:
+          version: ${{ env.UV_VERSION }}
+          enable-cache: false
       - name: Build, check, and import the wheel
         env:
           PYTHON: ${{ steps.python.outputs.python-path }}

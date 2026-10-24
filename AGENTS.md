@@ -7,26 +7,26 @@ rule here goes stale, fix it in the same PR that made it stale.
 ## What this is
 
 `nba_api` is a widely used PyPI client for the NBA.com APIs (stats.nba.com and the live CDN).
-Python 3.10–3.15, `src/` layout, managed with Poetry, linted/formatted with Ruff.
+Python 3.10–3.15, `src/` layout, managed with uv, linted/formatted with Ruff.
 **Downstream users depend on the public API** — endpoint class names, constructor parameter
 names, and dataset attribute names are a compatibility contract. Don't rename or remove them;
 add new things alongside old ones.
 
 ## Commands
 
-Run everything through Poetry. These mirror CI (`.github/workflows/ci.yml`):
+Run everything through uv. These mirror CI (`.github/workflows/ci.yml`):
 
 ```bash
-poetry install                                   # set up env
-poetry run pytest tests/unit                     # unit tests (no network, ~5s)
-NBA_API_PROXY= poetry run pytest tests/integration -m vcr   # cassette replay tests (no network)
-poetry run ruff check --fix && poetry run ruff format       # lint + format
-make ci                                          # all of the above in check mode
+uv sync                                                     # set up env (installs the locked dev group)
+uv run pytest tests/unit                                    # unit tests (no network, ~5s)
+NBA_API_PROXY= uv run pytest tests/integration -m vcr       # cassette replay tests (no network)
+uv run ruff check --fix && uv run ruff format               # lint + format
+make ci                                                     # all of the above in check mode
 ```
 
-Single test: `poetry run pytest tests/unit/stats/endpoints/test_teamgamelog.py -k initialization`
+Single test: `uv run pytest tests/unit/stats/endpoints/test_teamgamelog.py -k initialization`
 
-After editing Python, run `poetry run ruff check --fix <files> && poetry run ruff format <files>`.
+After editing Python, run `uv run ruff check --fix <files> && uv run ruff format <files>`.
 
 **Definition of done:** unit tests, VCR tests, `ruff check`, and `ruff format --check` all pass.
 
@@ -109,14 +109,14 @@ applicable), an `EndpointSpec` in `tests/integration/helpers/endpoint_specs.py`,
   releases. `feat:` → minor, `fix:`/`perf:` → patch, `!`/`BREAKING CHANGE:` → major. Use
   `test:`, `docs:`, `chore:`, `refactor:`, `ci:`, `build:` for everything else.
 - Branch off `master`; one logical change per PR; don't commit directly to `master`.
-- Pre-commit runs Ruff (`poetry run pre-commit install` once per clone).
+- Pre-commit runs Ruff (`uv run pre-commit install` once per clone).
 
 ## Ask before
 
 - Changing public endpoint/parameter/dataset names or signatures.
 - Adding runtime dependencies (keep the dependency list minimal: requests, pandas).
 - Touching release config (`[tool.semantic_release]`, `.github/workflows/`, `scripts/gen-release.sh`).
-- Anything that publishes: `semantic-release`, `poetry publish`, pushing tags.
+- Anything that publishes: `semantic-release`, `uv publish`, pushing tags.
 
 ## Further reading
 

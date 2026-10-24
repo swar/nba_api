@@ -15,16 +15,16 @@ Run from the repo root:
 
 ```bash
 # Offline audit of every endpoint against its VCR cassette (no network, ~3s)
-poetry run python -m tools.stats.endpoint_scope --all --offline
+uv run python -m tools.stats.endpoint_scope --all --offline
 
 # Probe library endpoints live
-poetry run python -m tools.stats.endpoint_scope commonplayerinfo leaguedashplayerstats
+uv run python -m tools.stats.endpoint_scope commonplayerinfo leaguedashplayerstats
 
 # Scope an endpoint the library doesn't have yet: paste a working URL from devtools
-poetry run python -m tools.stats.endpoint_scope "https://stats.nba.com/stats/playerindex?LeagueID=00&Season=2025-26"
+uv run python -m tools.stats.endpoint_scope "https://stats.nba.com/stats/playerindex?LeagueID=00&Season=2025-26"
 
 # Which values does the server accept? (one request per candidate value)
-poetry run python -m tools.stats.endpoint_scope leaguedashplayerstats --values PerMode,PlayerPosition
+uv run python -m tools.stats.endpoint_scope leaguedashplayerstats --values PerMode,PlayerPosition
 ```
 
 | Option | |
@@ -97,13 +97,13 @@ every non-200 sent twice to check the server is deterministic.
 
 ```bash
 # Record ground truth (live; ~3.5 requests per parameter)
-poetry run python -m tools.stats.endpoint_scope.truth record leaguedashteamstats boxscoreadvancedv3 --out truth.json
+uv run python -m tools.stats.endpoint_scope.truth record leaguedashteamstats boxscoreadvancedv3 --out truth.json
 
 # Grade the scoper against it, cold and with warm priors (live, uncached)
-poetry run python -m tools.stats.endpoint_scope.truth score truth.json --check-simulator
+uv run python -m tools.stats.endpoint_scope.truth score truth.json --check-simulator
 
 # Same, with no network: answers come from truth.json
-poetry run python -m tools.stats.endpoint_scope.truth score truth.json --simulate
+uv run python -m tools.stats.endpoint_scope.truth score truth.json --simulate
 ```
 
 `--simulate` assumes a group of changes fails exactly when one of them fails alone.
@@ -115,7 +115,7 @@ it to try out changes to the probing before spending live requests on them.
 a per-phase breakdown of where the requests went:
 
 ```bash
-poetry run python -m tools.stats.endpoint_scope.report scope.json --offline offline.json > report.md
+uv run python -m tools.stats.endpoint_scope.report scope.json --offline offline.json > report.md
 ```
 
 ## Output

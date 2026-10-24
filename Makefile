@@ -26,6 +26,10 @@
 
 .PHONY: format lint test test-unit test-vcr test-canary test-cov check-package check ci all install clean build help
 
+# Never let `uv run` re-lock behind your back: a stale uv.lock is an error
+# (fix it with `uv lock`).
+export UV_LOCKED := 1
+
 # Default paths (can be overridden with FILES=path/to/file.py)
 SRC_DIR = src/nba_api
 TEST_DIR = tests/unit
@@ -35,7 +39,7 @@ FILES ?= .
 help:
 	@echo "NBA API Makefile Commands:"
 	@echo ""
-	@echo "  make install          - Install dependencies with poetry"
+	@echo "  make install          - Install dependencies with uv"
 	@echo "  make format           - Auto-fix lint issues and format with ruff"
 	@echo "  make lint             - Run ruff lint + format check"
 	@echo "  make test             - Run all unit tests"
@@ -54,23 +58,24 @@ help:
 
 # Install dependencies
 install:
-	poetry sync
+	uv sync --locked
 
 # Auto-fix lint issues (incl. import sorting) and format with ruff
 format:
 	@echo "Formatting: $(FILES)"
-	poetry run ruff check --fix $(FILES)
-	poetry run ruff format $(FILES)
+	uv run ruff check --fix $(FILES)
+	uv run ruff format $(FILES)
 
 # Lint and verify formatting without modifying files
 lint:
 	@echo "Linting: $(FILES)"
-	poetry run ruff check $(FILES)
-	poetry run ruff format --check $(FILES)
+	uv lock --check
+	uv run ruff check $(FILES)
+	uv run ruff format --check $(FILES)
 
 # Run all unit tests. --block-network fails any test that opens a real socket.
 test-unit:
-	poetry run pytest $(TEST_DIR) -v --block-network --record-mode=none
+	uv run pytest $(TEST_DIR) -v --block-network --record-mode=none
 
 # Alias for test-unit
 test: test-unit
@@ -78,20 +83,20 @@ test: test-unit
 # Run cassette-backed integration tests. NBA_API_PROXY is blanked so a proxy
 # exported in your shell doesn't intercept cassette replay.
 test-vcr:
-	NBA_API_PROXY= poetry run pytest tests/integration -m vcr --block-network --record-mode=none
+	NBA_API_PROXY= uv run pytest tests/integration -m vcr --block-network --record-mode=none
 
 # Run the live canary tests: real requests to stats.nba.com and cdn.nba.com, always
 # through NBA_API_PROXY (skipped when it is unset). Not part of check/ci.
 test-canary:
-	poetry run pytest tests/integration/canary -m canary -v
+	uv run pytest tests/integration/canary -m canary -v
 
 # Run tests with coverage
 test-cov:
-	poetry run pytest $(TEST_DIR) --cov=$(SRC_DIR) --cov-report=html --cov-report=term
+	uv run pytest $(TEST_DIR) --cov=$(SRC_DIR) --cov-report=html --cov-report=term
 
 # Build the sdist and wheel, twine-check them, and import the installed wheel
 check-package:
-	scripts/check-package.sh "$$(poetry env info --executable)"
+	scripts/check-package.sh
 
 # Run all checks (use before committing)
 check: format lint test test-vcr
@@ -109,7 +114,7 @@ clean:
 
 # Build package
 build:
-	poetry build
+	uv build
 
 # Default target
 all: check
