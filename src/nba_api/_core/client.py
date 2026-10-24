@@ -4,11 +4,23 @@ Settings are checked when the client is created, so a bad value fails right away
 instead of on the first request.
 """
 
+from datetime import datetime, timezone
+
 import requests
 
 from nba_api._core.cache import ResponseCache
+from nba_api._core.headers import LIVE_HEADERS, STATS_HEADERS
+from nba_api._core.response import Response
+from nba_api.library.http import _redacted
+from nba_api.library.proxy import as_proxies, redact, resolve_proxy
 
 _UNSET = object()
+
+# site: (URL template, default headers)
+SITES = {
+    "stats": ("https://stats.nba.com/stats/{endpoint}", STATS_HEADERS),
+    "live": ("https://cdn.nba.com/static/json/liveData/{endpoint}", LIVE_HEADERS),
+}
 
 
 def _check_proxy(proxy):
@@ -81,6 +93,49 @@ class Client:
         """Return ``defaults`` with this client's headers on top; ``None`` removes one."""
         merged = {**defaults, **self.headers}
         return {name: value for name, value in merged.items() if value is not None}
+
+    def get(self, site, endpoint, params=None):
+        """Fetch ``endpoint`` from ``site`` ("stats" or "live") and return a Response.
+
+        Uses the cache when it is on. Errors are not designed yet: requests
+        exceptions pass through with proxy credentials masked, like 1.x.
+        """
+        if site not in SITES:
+            raise ValueError(f"site must be one of {sorted(SITES)}, got {site!r}")
+        url_template, default_headers = SITES[site]
+        # Sorted like 1.x: some NBA endpoints care about parameter order.
+        params = dict(sorted((params or {}).items()))
+
+        key = ResponseCache.key(site, endpoint, params)
+        if self.cache is not None:
+            cached = self.cache.get(key)
+            if cached is not None:
+                return cached
+
+        proxy = resolve_proxy(self.proxy)
+        try:
+            raw = self.session.get(
+                url_template.format(endpoint=endpoint),
+                params=params,
+                headers=self.merge_headers(default_headers),
+                proxies=as_proxies(proxy),
+                timeout=self.timeout,
+            )
+        except requests.RequestException as e:
+            raise _redacted(e, proxy) from None
+
+        response = Response(
+            site=site,
+            endpoint=endpoint,
+            params=params,
+            url=redact(raw.url, proxy) if proxy else raw.url,
+            status=raw.status_code,
+            fetched_at=datetime.now(timezone.utc),
+            text=raw.text,
+        )
+        if self.cache is not None and response.ok:
+            self.cache.set(key, response)
+        return response
 
     def close(self):
         self.session.close()

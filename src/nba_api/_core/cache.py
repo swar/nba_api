@@ -17,9 +17,9 @@ class ResponseCache:
         self._lock = threading.Lock()
 
     @staticmethod
-    def key(endpoint, params):
-        """Build a cache key from an endpoint name and its query parameters."""
-        return (endpoint, tuple(sorted(params.items())))
+    def key(site, endpoint, params):
+        """Build a cache key from the site, endpoint name and query parameters."""
+        return (site, endpoint, tuple(sorted(params.items())))
 
     def get(self, key):
         """Return the cached value for ``key``, or ``None`` if it isn't cached."""

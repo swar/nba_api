@@ -34,9 +34,13 @@ def test_bad_cache_size_raises(size):
 
 
 def test_key_ignores_param_order():
-    assert ResponseCache.key("x", {"a": 1, "b": 2}) == ResponseCache.key(
-        "x", {"b": 2, "a": 1}
-    )
+    key = ResponseCache.key
+    assert key("stats", "x", {"a": 1, "b": 2}) == key("stats", "x", {"b": 2, "a": 1})
+
+
+def test_key_includes_site():
+    key = ResponseCache.key
+    assert key("stats", "x", {}) != key("live", "x", {})
 
 
 def test_get_and_set():
