@@ -28,6 +28,12 @@ uv pip install --quiet --python "$work/venv/bin/python" \
 
 "$work/venv/bin/twine" check --strict "$work"/dist/*
 
+# uv_build only ships the license files listed in `license-files`.
+unzip -l "$work"/dist/*.whl | grep -q 'dist-info/licenses/LICENSE$' \
+    || { echo "LICENSE missing from the wheel" >&2; exit 1; }
+tar tzf "$work"/dist/*.tar.gz | grep -q '^[^/]*/LICENSE$' \
+    || { echo "LICENSE missing from the sdist" >&2; exit 1; }
+
 # -I and a cwd outside the repo, so nothing can be imported from src/.
 cd "$work"
 "$work/venv/bin/python" -I - <<'EOF'

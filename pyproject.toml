@@ -20,7 +20,6 @@ keywords = [
 classifiers = [
     "Intended Audience :: Developers",
     "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Topic :: Software Development",
     'Programming Language :: Python',
@@ -50,6 +49,9 @@ readme = "README.md"
     Documentation = "https://github.com/swar/nba_api/blob/master/docs/table_of_contents.md"
 
 [build-system]
+# Keep the upper bound in step with UV_VERSION in .github/workflows/. While the
+# running uv satisfies it, `uv build` uses uv's own backend, so the release wheel
+# is built by the pinned uv. Outside it, uv downloads uv_build from PyPI instead.
 requires = ["uv_build>=0.13.0,<0.14"]
 build-backend = "uv_build"
 
