@@ -33,10 +33,6 @@ classifiers = [
     "Programming Language :: Python :: 3.15",
 ]
 dependencies = [
-    "numpy >=1.26.0 ; python_version < '3.13'",
-    "numpy >=2.1.0 ; python_version == '3.13'",
-    "numpy >=2.3.2 ; python_version == '3.14'",
-    "numpy >=2.5.2 ; python_version >= '3.15'",
     "pandas >=2.1.0; python_version < '3.12'",
     "pandas >=2.2.0 ; python_version == '3.12'",
     "pandas >=2.2.3 ; python_version == '3.13'",

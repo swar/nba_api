@@ -1,8 +1,6 @@
 import json
 from typing import Any
 
-import numpy as np
-
 try:
     from pandas import DataFrame, MultiIndex
 
@@ -61,12 +59,11 @@ class Endpoint:
                         if "columnsToSkip" in level
                         else []
                     )
-                    column_names += list(
-                        np.repeat(
-                            np.array(level["columnNames"]),
-                            level.get("columnSpan", 1),
-                        )
-                    )
+                    column_names += [
+                        name
+                        for name in level["columnNames"]
+                        for _ in range(level.get("columnSpan", 1))
+                    ]
                     levels.append(column_names)
                 midx = MultiIndex.from_arrays(
                     levels, names=level_names

@@ -114,7 +114,7 @@ applicable), an `EndpointSpec` in `tests/integration/helpers/endpoint_specs.py`,
 ## Ask before
 
 - Changing public endpoint/parameter/dataset names or signatures.
-- Adding runtime dependencies (keep the dependency list minimal: requests, numpy, pandas).
+- Adding runtime dependencies (keep the dependency list minimal: requests, pandas).
 - Touching release config (`[tool.semantic_release]`, `.github/workflows/`, `scripts/gen-release.sh`).
 - Anything that publishes: `semantic-release`, `poetry publish`, pushing tags.
 
