@@ -10,7 +10,10 @@ from nba_api.stats.endpoints._parsers.scheduleleaguev2 import (
 )
 
 
-@pytest.fixture
+# The fixture is a full season (8 MB) and parsing it takes most of a second, so the
+# file, parser and parsed result are shared by every test in this module. The
+# parser only reads its input, so sharing is safe.
+@pytest.fixture(scope="module")
 def json_fixture():
     """Load the ScheduleLeagueV2 JSON fixture."""
     fixture_path = (
@@ -30,10 +33,22 @@ def json_fixture():
         return json.load(f)
 
 
-@pytest.fixture
+@pytest.fixture(scope="module")
 def parser(json_fixture):
     """Create a parser instance with the JSON fixture."""
     return NBAStatsScheduleLeagueV2Parser(json_fixture)
+
+
+@pytest.fixture(scope="module")
+def data_sets(parser):
+    """Parse the whole season once."""
+    return parser.get_data_sets()
+
+
+@pytest.fixture(scope="module")
+def games_data(data_sets):
+    """Rows from get_games_data(), which get_data_sets() uses for SeasonGames."""
+    return data_sets["SeasonGames"]["data"]
 
 
 class TestNBAStatsScheduleLeagueV2Parser:
@@ -43,9 +58,9 @@ class TestNBAStatsScheduleLeagueV2Parser:
         """Test that parser initializes correctly."""
         assert parser.nba_dict == json_fixture
 
-    def test_get_data_sets(self, parser):
+    def test_get_data_sets(self, data_sets):
         """Test get_data_sets returns correct structure."""
-        result = parser.get_data_sets()
+        result = data_sets
 
         assert "SeasonGames" in result
         assert "SeasonWeeks" in result
@@ -117,9 +132,9 @@ class TestNBAStatsScheduleLeagueV2Parser:
         assert any("homeTeam" in h for h in headers), "Should have homeTeam fields"
         assert any("awayTeam" in h for h in headers), "Should have awayTeam fields"
 
-    def test_get_games_data(self, parser, json_fixture):
+    def test_get_games_data(self, games_data, json_fixture):
         """Test games data extraction."""
-        data = parser.get_games_data()
+        data = games_data
 
         assert isinstance(data, list)
         assert len(data) > 0, "Should have game data"
@@ -210,9 +225,9 @@ class TestNBAStatsScheduleLeagueV2Parser:
         assert isinstance(max_count, int)
         assert max_count >= 0
 
-    def test_data_row_count_matches_headers(self, parser):
+    def test_data_row_count_matches_headers(self, data_sets):
         """Test that each data row has same number of columns as headers."""
-        result = parser.get_data_sets()
+        result = data_sets
 
         # Check SeasonGames
         games_headers = result["SeasonGames"]["headers"]
@@ -230,7 +245,7 @@ class TestNBAStatsScheduleLeagueV2Parser:
                 f"Weeks row {i} has {len(row)} columns but headers has {len(weeks_headers)}"
             )
 
-    def test_parser_handles_nested_structure(self, parser, json_fixture):
+    def test_parser_handles_nested_structure(self, games_data, json_fixture):
         """Test parser correctly processes nested game dates and games."""
         # Verify the fixture has nested structure
         assert "leagueSchedule" in json_fixture
@@ -239,8 +254,7 @@ class TestNBAStatsScheduleLeagueV2Parser:
         assert "games" in json_fixture["leagueSchedule"]["gameDates"][0]
 
         # Verify parser extracts data from nested structure
-        data = parser.get_games_data()
-        assert len(data) > 0, "Should extract data from nested games"
+        assert len(games_data) > 0, "Should extract data from nested games"
 
     def test_get_game_data(self, parser, json_fixture):
         """Test individual game data extraction."""
