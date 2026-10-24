@@ -7,7 +7,7 @@ rule here goes stale, fix it in the same PR that made it stale.
 ## What this is
 
 `nba_api` is a widely used PyPI client for the NBA.com APIs (stats.nba.com and the live CDN).
-Python 3.10–3.15, `src/` layout, managed with uv, linted/formatted with Ruff.
+Python 3.11–3.15, `src/` layout, managed with uv, linted/formatted with Ruff.
 **Downstream users depend on the public API** — endpoint class names, constructor parameter
 names, and dataset attribute names are a compatibility contract. Don't rename or remove them;
 add new things alongside old ones.
