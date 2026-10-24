@@ -25,8 +25,8 @@ nba_api/
 │   ├── unit/                     # offline tests; HTTP is mocked
 │   └── integration/              # smoke and scenario tests using recorded (VCR) responses
 ├── docs/                         # this documentation, plus example notebooks in docs/examples/
-├── tools/                        # endpoint analysis and code/doc generators
-└── scripts/                      # maintenance scripts (static data refresh, endpoint analysis, releases)
+├── tools/                        # endpoint scope tool (audits and probes stats.nba.com endpoints)
+└── scripts/                      # maintenance scripts (static data refresh, releases)
 ```
 
 ## `src/nba_api`
@@ -45,4 +45,4 @@ Unit tests run offline and must never make network requests. Integration tests r
 
 ## `tools` and `scripts`
 
-`tools/` holds the endpoint analyzer and the generators for endpoint files and documentation. `scripts/` holds the entry points maintainers run. See [Scripts](scripts.md).
+`tools/` holds the [endpoint scope](nba_api/tools/stats/endpoint_scope/scope.md) tool, which audits `expected_data` against cassettes and probes endpoints before they are added. `scripts/` holds the entry points maintainers run. See [Scripts](scripts.md).

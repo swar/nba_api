@@ -46,7 +46,6 @@ src/nba_api/
 tests/unit/                  # fast, offline; HTTP is mocked
 tests/integration/           # smoke + scenario tests; replay VCR cassettes or hit the live API
 tools/stats/endpoint_scope/  # scope a new endpoint from a URL; `--all --offline` audits expected_data vs cassettes
-tools/stats/ (others)        # old generators; endpoint_analysis no longer works upstream, so don't rely on them
 scripts/static_players_update/  # regenerate data.py from the live API
 docs/nba_api/                # per-endpoint markdown docs
 ```
