@@ -121,3 +121,20 @@ def test_findbylastname(lastname):
     print(
         f"Result of find_players_by_full_name('{lastname}'), n={len(result)}: {result}"
     )
+
+
+def test_lookups_see_players_appended_after_first_use():
+    from nba_api.stats.library import data
+
+    players.find_players_by_full_name("LeBron")
+    players.find_player_by_id(2544)
+    data.players.append([99999999, "Testguy", "Zzz", "Zzz Testguy", False])
+    try:
+        assert players.find_player_by_id(99999999)["full_name"] == "Zzz Testguy"
+        assert [p["id"] for p in players.find_players_by_full_name("Testguy")] == [
+            99999999
+        ]
+    finally:
+        data.players.pop()
+    assert players.find_player_by_id(99999999) is None
+    assert players.find_players_by_full_name("Testguy") == []
