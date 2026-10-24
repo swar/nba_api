@@ -12,8 +12,9 @@ class HTTP:
     def get(self, site, endpoint, params=None):
         """Fetch ``endpoint`` from ``site`` ("stats" or "live") and return a Response.
 
-        Uses the client's proxy, headers, timeout and session. With the cache on, a
-        repeat call returns the saved Response; only a 200 with valid JSON is saved.
+        Uses the client's proxy, headers, timeout and session. Raises an NBAAPIError
+        for anything that isn't usable data, so errors are never cached. With the
+        cache on, a repeat call returns the saved Response.
         """
         if site not in SITES:
             raise ValueError(f"site must be one of {sorted(SITES)}, got {site!r}")
@@ -37,6 +38,6 @@ class HTTP:
             proxy=client.proxy,
             timeout=client.timeout,
         )
-        if client.cache is not None and response.ok:
+        if client.cache is not None:
             client.cache.set(key, response)
         return response

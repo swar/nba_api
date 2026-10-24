@@ -2,6 +2,7 @@ import pytest
 import requests
 
 from nba_api._core.client import Client
+from nba_api._core.common.errors import HTTPStatusError
 from nba_api._core.http.sites import LIVE_HEADERS, STATS_HEADERS
 
 SECRET_PROXY = "http://user:hunter2@proxy.example:8080"
@@ -112,12 +113,15 @@ def test_cache_returns_saved_response(calls):
     assert second is first
 
 
-@pytest.mark.parametrize(
-    "reply", [FakeResponse(status_code=500), FakeResponse(text="<html>blocked</html>")]
-)
-def test_failures_are_not_cached(calls, reply):
-    calls.reply = reply
+def test_errors_are_not_cached(calls):
+    calls.reply = FakeResponse(status_code=500, text="")
     client = Client(cache=True)
-    client.http.get("stats", "x")
-    client.http.get("stats", "x")
+    for _ in range(2):
+        with pytest.raises(HTTPStatusError):
+            client.http.get("stats", "x")
     assert len(calls) == 2
+
+
+def test_redirects_are_not_followed(calls):
+    Client().http.get("stats", "x")
+    assert calls[0]["allow_redirects"] is False

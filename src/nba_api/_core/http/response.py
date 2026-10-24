@@ -17,14 +17,3 @@ class Response:
 
     def json(self):
         return json.loads(self.text)
-
-    @property
-    def ok(self):
-        """True for a 200 whose body is valid JSON. Only these get cached."""
-        if self.status != 200:
-            return False
-        try:
-            self.json()
-        except ValueError:
-            return False
-        return True
