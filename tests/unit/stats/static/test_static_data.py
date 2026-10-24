@@ -35,3 +35,12 @@ def test_toronto_tempo():
         "state": "Ontario",
         "year_founded": 2026,
     }
+
+
+def test_find_teams_by_championship_year():
+    assert teams.find_teams_by_championship_year(2016) == "Cleveland Cavaliers"
+
+
+def test_find_teams_by_championship_year_with_no_champion():
+    assert teams.find_teams_by_championship_year(1800) is None
+    assert teams.find_wnba_teams_by_championship_year(1800) is None

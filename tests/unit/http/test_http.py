@@ -71,3 +71,19 @@ def cleanup():
     yield
     # Clean up after each test
     NBAHTTP._session = None
+
+
+def test_referer_does_not_change_default_headers(mock_session):
+    from nba_api.stats.library.http import NBAStatsHTTP
+
+    NBAHTTP.set_session(mock_session)
+    defaults = dict(NBAStatsHTTP.headers)
+
+    NBAStatsHTTP().send_api_request(
+        endpoint="alltimeleadersgrids", parameters={}, referer="https://example.com"
+    )
+
+    assert mock_session.get.call_args.kwargs["headers"]["Referer"] == (
+        "https://example.com"
+    )
+    assert NBAStatsHTTP.headers == defaults

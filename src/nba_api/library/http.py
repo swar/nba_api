@@ -116,7 +116,7 @@ class NBAHTTP:
         request_headers = self.headers if headers is None else headers
 
         if referer:
-            request_headers["Referer"] = referer
+            request_headers = {**request_headers, "Referer": referer}
 
         request_proxy = resolve_proxy(proxy)
         if DEBUG and request_proxy:

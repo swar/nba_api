@@ -216,3 +216,4 @@ class ScheduleLeagueV2Int(Endpoint):
         ]
         self.season_games = Endpoint.DataSet(data=data_sets["SeasonGames"])
         self.season_weeks = Endpoint.DataSet(data=data_sets["SeasonWeeks"])
+        self.broadcaster_list = Endpoint.DataSet(data=data_sets["BroadcasterList"])

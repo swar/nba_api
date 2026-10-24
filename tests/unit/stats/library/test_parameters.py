@@ -81,7 +81,7 @@ def test_season_type_all_star_nullable():
     assert hasattr(SeasonTypeAllStarNullable, "playoffs")
     assert hasattr(SeasonTypeAllStarNullable, "playin")
     assert hasattr(SeasonTypeAllStarNullable, "none")
-    assert not hasattr(SeasonTypeAllStarNullable, "all_star")
+    assert SeasonTypeAllStarNullable.all_star == "All Star"
 
 
 def test_season_type_inheritance():
@@ -90,4 +90,4 @@ def test_season_type_inheritance():
     assert issubclass(SeasonTypeNullable, _NotRequired)
     assert issubclass(SeasonTypeNullable, SeasonTypePlayoffs)
     assert issubclass(SeasonTypeAllStarNullable, _NotRequired)
-    assert issubclass(SeasonTypeAllStarNullable, SeasonTypePlayoffs)
+    assert issubclass(SeasonTypeAllStarNullable, SeasonTypeAllStar)
