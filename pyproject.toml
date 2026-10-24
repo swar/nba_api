@@ -4,9 +4,10 @@ version = "1.12.0"
 description = "An API Client package to access the APIs for NBA.com"
 requires-python = ">=3.10"
 license = "MIT"
-authors = [ {name = "Swar Patel", email = "<swar.m.patel@gmail.com>"}]
+license-files = ["LICENSE"]
+authors = [ {name = "Swar Patel", email = "swar.m.patel@gmail.com"}]
 maintainers = [
-    {name = "Swar Patel", email = "<swar.m.patel@gmail.com>"},
+    {name = "Swar Patel", email = "swar.m.patel@gmail.com"},
 ]
 keywords = [
     "api", 
@@ -19,7 +20,6 @@ keywords = [
 classifiers = [
     "Intended Audience :: Developers",
     "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Topic :: Software Development",
     'Programming Language :: Python',
@@ -44,13 +44,16 @@ dependencies = [
 readme = "README.md"
 
 [project.urls]
-    repository = "https://github.com/swar/nba_api"
+    Repository = "https://github.com/swar/nba_api"
     "Bug Tracker" = "https://github.com/swar/nba_api/issues"
-    documentation = "https://github.com/swar/nba_api/blob/master/docs/table_of_contents.md"
+    Documentation = "https://github.com/swar/nba_api/blob/master/docs/table_of_contents.md"
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
+# Keep the upper bound in step with UV_VERSION in .github/workflows/. While the
+# running uv satisfies it, `uv build` uses uv's own backend, so the release wheel
+# is built by the pinned uv. Outside it, uv downloads uv_build from PyPI instead.
+requires = ["uv_build>=0.13.0,<0.14"]
+build-backend = "uv_build"
 
 [dependency-groups]
 # `uv sync` installs `dev` by default; the lint job installs only `lint`.
@@ -70,10 +73,6 @@ dev = [
 
 [tool.uv]
 required-version = ">=0.13"
-# `uv build` resolves poetry-core fresh on every build, unlike `poetry build`, which
-# used the one bundled in the pinned Poetry. Pin it so the wheel's generator can't
-# change between release PR and tag. Goes away with the uv_build switch.
-build-constraint-dependencies = ["poetry-core==2.3.1"]
 
 [tool.pytest.ini_options]
 markers = [
