@@ -1,4 +1,4 @@
-"""Default request headers for each NBA site.
+"""The NBA sites the client can call: URL template and default headers for each.
 
 stats.nba.com blocks requests that don't look like a browser, so these mimic one.
 Client(headers=...) merges over them. Update by copying a real browser's request
@@ -32,4 +32,10 @@ LIVE_HEADERS = {
     "Host": "cdn.nba.com",
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
     "Referer": "https://www.nba.com/",
+}
+
+# site name: (URL template, default headers)
+SITES = {
+    "stats": ("https://stats.nba.com/stats/{endpoint}", STATS_HEADERS),
+    "live": ("https://cdn.nba.com/static/json/liveData/{endpoint}", LIVE_HEADERS),
 }

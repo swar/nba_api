@@ -1,7 +1,7 @@
 import pytest
 
-from nba_api._core.cache import ResponseCache
 from nba_api._core.client import Client
+from nba_api._core.common.cache import ResponseCache
 
 
 def test_client_cache_off_by_default():
