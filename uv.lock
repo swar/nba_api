@@ -20,9 +20,6 @@ resolution-markers = [
     "python_full_version < '3.11'",
 ]
 
-[manifest]
-build-constraints = [{ name = "poetry-core", specifier = "==2.3.1" }]
-
 [[package]]
 name = "annotated-types"
 version = "0.8.0"

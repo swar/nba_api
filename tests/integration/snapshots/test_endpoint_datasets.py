@@ -1,9 +1,23 @@
-"""Snapshot of the datasets every cassette-backed stats endpoint produces.
+"""Snapshot of the datasets every offline-testable stats endpoint produces.
 
 Each endpoint class exported from ``nba_api.stats.endpoints`` has one entry in
-``endpoint_datasets.json``. Endpoints with an ``EndpointSpec`` and a smoke
-cassette are replayed offline from ``tests/integration/smoke/cassettes`` and
-their parsed output is pinned:
+``endpoint_datasets.json``. Each endpoint is parsed from exactly one offline
+source, picked in this order:
+
+1. its smoke cassette ``tests/integration/smoke/cassettes/test_endpoints[<Class>]``,
+   replayed through its ``EndpointSpec`` (when the spec exists and is not
+   skipped),
+2. otherwise the source listed for it in ``EXTRA_SOURCES``, either
+
+   - a scenario cassette from ``tests/integration/scenarios/cassettes``,
+     replayed with that scenario case's ``params`` from
+     ``tests/integration/scenarios/data``, or
+   - a unit fixture payload from ``tests/unit/stats/endpoints/data``, loaded
+     into the endpoint (built with ``get_request=False``) through an
+     ``NBAStatsResponse``.
+
+Entries from the second group carry a ``source`` field naming the cassette or
+fixture used; smoke cassette entries have none. The parsed output is pinned:
 
 - ``data_sets``: the ``get_data_frames()`` order, each entry naming the
   ``DataSet`` attributes holding equal data (columns and row count are spelled
@@ -17,6 +31,8 @@ their parsed output is pinned:
 
 Every other endpoint is listed with a ``gap`` reason (no spec, spec skipped,
 or no cassette), so changes to the set of uncovered endpoints also fail here.
+``EXTRA_SOURCES`` only reuses cassettes and fixtures other tests already rely
+on; it never adds response data of its own.
 
 Record mode is forced to ``none``: a missing or unmatched cassette fails
 instead of recording, so this never touches the network.
@@ -31,9 +47,11 @@ no longer exported are dropped.
 """
 
 import difflib
+import importlib
 import inspect
 import json
 import os
+from dataclasses import dataclass, field
 from pathlib import Path
 
 import pytest
@@ -41,13 +59,16 @@ from vcr.errors import CannotOverwriteExistingCassetteException
 
 import nba_api.stats.endpoints as ep
 from nba_api.stats.endpoints._base import Endpoint
+from nba_api.stats.library.http import NBAStatsResponse
 
 from ..helpers.endpoint_specs import endpoint_specs
+from ..helpers.seasons import pinned_season_kwargs
 
 pytestmark = [pytest.mark.vcr]
 
 SNAPSHOT_PATH = Path(__file__).with_name("endpoint_datasets.json")
 CASSETTE_DIR = Path(__file__).parent.parent / "smoke" / "cassettes"
+SCENARIO_CASSETTE_DIR = Path(__file__).parent.parent / "scenarios" / "cassettes"
 UPDATE = os.environ.get("NBA_API_UPDATE_SNAPSHOTS") == "1"
 
 # Class-level attributes that are None but are not datasets.
@@ -74,6 +95,87 @@ def gap_reason(name):
     if not (CASSETTE_DIR / f"{cassette_name(name)}.yaml").exists():
         return "no cassette"
     return None
+
+
+@dataclass(frozen=True)
+class ScenarioSource:
+    """A scenario cassette, replayed with its case's params."""
+
+    module: str  # tests/integration/scenarios/data/<module>.py
+    case: str  # the TEST_CASES entry "name"
+
+    @property
+    def cassette(self):
+        return f"test_{self.module}[{self.case}]"
+
+    @property
+    def description(self):
+        return f"scenario cassette {self.cassette}"
+
+    def build(self, endpoint_class):
+        data = importlib.import_module(
+            f"tests.integration.scenarios.data.{self.module}"
+        )
+        (params,) = [c["params"] for c in data.TEST_CASES if c["name"] == self.case]
+        params = {**pinned_season_kwargs(endpoint_class, params), **params}
+        return endpoint_class(**params)
+
+
+@dataclass(frozen=True)
+class FixtureSource:
+    """A unit test fixture payload, loaded without a request."""
+
+    module: str  # tests/unit/stats/endpoints/data/<module>.py
+    attr: str  # the payload constant in that module
+    # Required constructor args, taken from the fixture's own request.
+    kwargs: dict = field(default_factory=dict)
+
+    @property
+    def description(self):
+        return (
+            f"unit fixture tests/unit/stats/endpoints/data/{self.module}.py {self.attr}"
+        )
+
+    def build(self, endpoint_class):
+        data = importlib.import_module(f"tests.unit.stats.endpoints.data.{self.module}")
+        payload = getattr(data, self.attr)
+        kwargs = {**pinned_season_kwargs(endpoint_class, self.kwargs), **self.kwargs}
+        instance = endpoint_class(**kwargs, get_request=False)
+        instance.nba_response = NBAStatsResponse(
+            json.dumps(payload), 200, "http://fixture.invalid"
+        )
+        instance.load_response()
+        return instance
+
+
+# Offline sources for endpoints without a usable smoke cassette, one per
+# endpoint so each entry is deterministic.
+EXTRA_SOURCES = {
+    "BoxScoreSummaryV3": FixtureSource(
+        "boxscoresummaryv3", "BOXSCORESUMMARYV3_SAMPLE", {"game_id": "0022500142"}
+    ),
+    "DunkScoreLeaders": FixtureSource("dunkscoreleaders", "DUNKSCORELEADERS_SAMPLE"),
+    "GravityLeaders": FixtureSource("gravityleaders", "GRAVITYLEADERS_SAMPLE"),
+    "ScheduleLeagueV2": FixtureSource("scheduleleaguev2", "SCHEDULELEAGUEV2_2020_21"),
+    # ScheduleLeagueV2Int has no source: the ScheduleLeagueV2 fixture has no
+    # leagueSchedule.broadcasterList, so the Int parse raises KeyError on it.
+    "ScoreboardV3": ScenarioSource(
+        "scoreboardv3", "Regular season game date - November 5, 2025"
+    ),
+    "TeamGameLog": ScenarioSource("teamgamelog", "Lakers 2023-24 regular season"),
+    "TeamGameLogs": ScenarioSource("teamgamelogs", "Lakers 2023-24 regular season"),
+}
+
+
+def source_for(name):
+    """Return ``(extra_source, gap_reason)``; both None means the smoke cassette."""
+    reason = gap_reason(name)
+    if reason is None:
+        return None, None
+    extra = EXTRA_SOURCES.get(name)
+    if extra is None:
+        return None, reason
+    return extra, None
 
 
 def describe(data_set):
@@ -138,16 +240,20 @@ def snapshot_instance(instance):
 
 
 def build_entry(name):
-    reason = gap_reason(name)
+    extra, reason = source_for(name)
     if reason:
         return {"gap": reason}
     try:
-        instance = SPECS[name]()
+        instance = extra.build(ENDPOINT_CLASSES[name]) if extra else SPECS[name]()
     except CannotOverwriteExistingCassetteException:
         raise  # request no longer matches the cassette: fail, never record
     except Exception as exc:  # noqa: BLE001 - pin how broken cassettes fail
-        return {"error": type(exc).__name__}
-    return snapshot_instance(instance)
+        entry = {"error": type(exc).__name__}
+    else:
+        entry = snapshot_instance(instance)
+    if extra:
+        entry["source"] = extra.description
+    return entry
 
 
 def dump(data):
@@ -187,8 +293,19 @@ def vcr_config():
     return {"record_mode": "none"}
 
 
-@pytest.fixture(scope="module")
-def vcr_cassette_dir():
+def scenario_source(request):
+    """Return the ScenarioSource behind this test's endpoint, if it has one."""
+    callspec = getattr(request.node, "callspec", None)
+    if callspec is None:
+        return None
+    extra, _ = source_for(callspec.params["name"])
+    return extra if isinstance(extra, ScenarioSource) else None
+
+
+@pytest.fixture
+def vcr_cassette_dir(request):
+    if scenario_source(request):
+        return str(SCENARIO_CASSETTE_DIR)
     return str(CASSETTE_DIR)
 
 
@@ -197,6 +314,9 @@ def default_cassette_name(request):
     callspec = getattr(request.node, "callspec", None)
     if callspec is None:
         return request.node.name
+    scenario = scenario_source(request)
+    if scenario:
+        return scenario.cassette
     return cassette_name(callspec.params["name"])
 
 
