@@ -18,6 +18,45 @@
 # Version History
 ## Unreleased
 
+## v1.12.0
+Date: 2026-10-24
+
+### Added
+* **NBA Cup Round Filter** - 34 dashboard, league, shot chart and video endpoints take a new `ist_round_nullable` argument that sends the `ISTRound` filter (`Group`, `East/West Group A-C`, `Knockout`, `Championship`), with `ISTRound` / `ISTRoundNullable` added to `parameters.py`. It defaults to `None`, so existing requests are unchanged (PR [#719](https://github.com/swar/nba_api/pull/719))
+* **V3 Box Scores** - Every dataset of the ten nested box score endpoints (`BoxScoreAdvancedV3`, `BoxScoreDefensiveV2`, `BoxScoreFourFactorsV3`, `BoxScoreHustleV2`, `BoxScoreMatchupsV3`, `BoxScoreMiscV3`, `BoxScorePlayerTrackV3`, `BoxScoreScoringV3`, `BoxScoreTraditionalV3`, `BoxScoreUsageV3`) now has `homeTeamId` and `awayTeamId` columns, so home and away rows no longer have to be told apart by row order. The columns are appended at the end, so existing column positions stay the same (PR [#717](https://github.com/swar/nba_api/pull/717))
+* **Proxy Settings** - The proxy is now resolved on every request (explicit `proxy=`, then `NBA_API_PROXY`, then the legacy `debug.PROXY`), so setting `NBA_API_PROXY` after import takes effect. Setting `NBA_API_REQUIRE_PROXY=1` makes a request raise `ProxyRequiredError` before any connection opens when no proxy is configured, and proxy credentials are masked in request errors (PR [#720](https://github.com/swar/nba_api/pull/720))
+* **Python 3.14 and 3.15** - Added support for Python 3.14 and 3.15, with numpy and pandas floors on those versions set to the first releases that ship wheels for them (PR [#729](https://github.com/swar/nba_api/pull/729))
+* **Documentation** - Added an endpoint guide that maps the data you want to the endpoint, parameters and datasets to use, a guide for AI coding agents writing code with `nba_api`, and a list of endpoints stats.nba.com currently fails or no longer serves (PR [#737](https://github.com/swar/nba_api/pull/737), PR [#736](https://github.com/swar/nba_api/pull/736), PR [#715](https://github.com/swar/nba_api/pull/715))
+
+### Changed
+* **Dependencies** - numpy is no longer a direct dependency; it is still installed through pandas, so environments are unchanged, and the per-Python numpy pins that conflicted with numpy 2 (for example on Colab, see #509 and #523) are gone. Column labels in multi-level `get_data_frame()` frames are now `str` instead of `numpy.str_` (equal values) (PR [#741](https://github.com/swar/nba_api/pull/741))
+* **Dependencies** - The pandas floor is now 2.2.2 on Python 3.10 to 3.12 and 2.2.3 on Python 3.13. Older pandas releases either fail to import next to numpy 2 (`numpy.dtype size changed`) or, on 3.13, have no wheels and must be built from source (PR [#741](https://github.com/swar/nba_api/pull/741), PR [#744](https://github.com/swar/nba_api/pull/744), PR [#740](https://github.com/swar/nba_api/pull/740))
+* **Import Time** - pandas is imported only when `get_data_frame()` is first called, so `import nba_api.stats.endpoints` drops from about 185 ms to about 62 ms and code that only uses `get_dict()` / `get_json()` never loads pandas. `nba_api.__version__` is looked up on first access. If pandas is missing, `get_data_frame()` raises `ModuleNotFoundError` (PR [#743](https://github.com/swar/nba_api/pull/743), PR [#746](https://github.com/swar/nba_api/pull/746), PR [#742](https://github.com/swar/nba_api/pull/742))
+* **Static Players** - `find_player_by_id` uses an id index instead of scanning every player, and name searches cache the accent-stripped names (about 5.9 ms to 0.4 ms per search). The caches rebuild if `data.players` changes length (PR [#743](https://github.com/swar/nba_api/pull/743))
+
+### Deprecated
+* **Endpoints No Longer Served** - `LeagueLeaders`, `AssistLeaders`, `AssistTracker` and `PlayoffPicture` (stats.nba.com returns its homepage) and `BoxScoreAdvancedV2`, `BoxScoreFourFactorsV2`, `BoxScoreMiscV2`, `BoxScoreScoringV2`, `BoxScoreUsageV2` and `PlayByPlay` (empty JSON) now emit a `DeprecationWarning` naming the replacement where one exists (the V3 box scores, `PlayByPlayV3`, `LeagueDashPlayerStats`, `LeagueStandingsV3`). Nothing is removed (PR [#712](https://github.com/swar/nba_api/pull/712))
+* **`debug.PROXY`** - Setting the proxy through `nba_api.library.debug.debug.PROXY` now emits a `FutureWarning`; set `NBA_API_PROXY` or pass `proxy=` instead (PR [#720](https://github.com/swar/nba_api/pull/720))
+
+### Fixed
+* **PlayerGameLogs / TeamGameLogs** - Default calls work again. `Season` was sent blank, which stats.nba.com answers with HTTP 500; it now defaults to the current season, and an explicit season still wins (PR [#709](https://github.com/swar/nba_api/pull/709))
+* **DunkScoreLeaders** - Default calls work again. Blank `PlayerID` and `TeamID` values made stats.nba.com answer HTTP 400; both now default to `None` and are left out of the request (PR [#708](https://github.com/swar/nba_api/pull/708))
+* **Endpoint Exports** - `VideoEventsAsset` and `ScheduleLeagueV2Int` can now be imported from `nba_api.stats.endpoints`; `ScheduleLeagueV2Int` raised `ImportError` before (PR [#734](https://github.com/swar/nba_api/pull/734))
+* **ScheduleLeagueV2Int** - Now sets the `broadcaster_list` dataset attribute its docs list (PR [#742](https://github.com/swar/nba_api/pull/742))
+* **Static Teams** - `find_teams_by_championship_year` and its WNBA variant return `None` for a year with no champion instead of raising `UnboundLocalError` (PR [#742](https://github.com/swar/nba_api/pull/742))
+* **SeasonTypeAllStarNullable** - Now has the `all_star` value its name promises; it inherited from `SeasonTypePlayoffs` by mistake (PR [#742](https://github.com/swar/nba_api/pull/742))
+* **HTTP Headers** - A request's `Referer` no longer leaks into the shared default headers used by every later request (PR [#742](https://github.com/swar/nba_api/pull/742))
+
+### Infrastructure
+* **Release Pipeline** - PyPI publishing is gated on a live canary that also runs weekly and opens an issue when it fails, and merging a `chore: release vX.Y.Z` PR starts the release (PR [#722](https://github.com/swar/nba_api/pull/722), PR [#724](https://github.com/swar/nba_api/pull/724), PR [#739](https://github.com/swar/nba_api/pull/739))
+* **CI** - CI now builds and checks the wheel and sdist, and tests the lowest dependency versions `pyproject.toml` allows on every supported Python (PR [#738](https://github.com/swar/nba_api/pull/738), PR [#739](https://github.com/swar/nba_api/pull/739), PR [#748](https://github.com/swar/nba_api/pull/748))
+* **Tests** - Added a test that every endpoint is exported and documented, sped up the schedule parser tests, and removed a play-by-play regex integration test that had been skipped since it stopped working upstream (PR [#734](https://github.com/swar/nba_api/pull/734), PR [#745](https://github.com/swar/nba_api/pull/745))
+* **Dev Dependencies** - Updated locked dev and transitive packages, including fixes for certifi and gitpython advisories, and moved to ruff 0.17.2, python-semantic-release 10.3.1, pytest 9 and pytest-recording 0.14. The lock file is not shipped, so installs are unaffected (PR [#619](https://github.com/swar/nba_api/pull/619), PR [#663](https://github.com/swar/nba_api/pull/663), PR [#730](https://github.com/swar/nba_api/pull/730), PR [#731](https://github.com/swar/nba_api/pull/731), PR [#732](https://github.com/swar/nba_api/pull/732), PR [#733](https://github.com/swar/nba_api/pull/733), PR [#735](https://github.com/swar/nba_api/pull/735))
+
+### Contributor
+* **Endpoint Scope Tool** - Added `tools/stats/endpoint_scope` to replace the broken `endpoint_analysis`: it probes an endpoint's datasets and parameters from a known-good request, and `--all --offline` audits `expected_data` against the cassettes (PR [#703](https://github.com/swar/nba_api/pull/703))
+* **Documentation** - Refreshed the README, examples and issue/PR templates, added a citation file, refreshed `AGENTS.md`, and recorded open stats.nba.com audit findings in `docs/open_api_findings.md` (PR [#725](https://github.com/swar/nba_api/pull/725), PR [#736](https://github.com/swar/nba_api/pull/736), PR [#723](https://github.com/swar/nba_api/pull/723))
+
 ## v1.11.6
 Date: 2026-10-22
 
