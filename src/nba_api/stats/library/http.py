@@ -143,8 +143,3 @@ class NBAStatsHTTP(http.NBAHTTP):
     base_url = "https://stats.nba.com/stats/{endpoint}"
 
     headers = STATS_HEADERS
-
-    def clean_contents(self, contents):
-        if '{"Message":"An error has occurred."}' in contents:
-            return "<Error><Message>An error has occurred.</Message></Error>"
-        return contents

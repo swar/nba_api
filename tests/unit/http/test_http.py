@@ -4,8 +4,10 @@ from unittest.mock import Mock
 import pytest
 import requests
 
-from nba_api.library.http import NBAHTTP
+from nba_api.library.http import NBAHTTP, NBAResponse
+from nba_api.live.nba.library.http import NBALiveHTTP
 from nba_api.stats.endpoints import AllTimeLeadersGrids
+from nba_api.stats.library.http import NBAStatsHTTP
 
 
 @pytest.fixture
@@ -87,3 +89,15 @@ def test_referer_does_not_change_default_headers(mock_session):
         "https://example.com"
     )
     assert NBAStatsHTTP.headers == defaults
+
+
+@pytest.mark.parametrize("http_class", [NBAHTTP, NBAStatsHTTP, NBALiveHTTP])
+def test_clean_contents_replaces_api_error_body(http_class):
+    cleaned = http_class().clean_contents('{"Message":"An error has occurred."}')
+    assert not NBAResponse(response=cleaned, status_code=200, url="").valid_json()
+
+
+@pytest.mark.parametrize("http_class", [NBAHTTP, NBAStatsHTTP, NBALiveHTTP])
+def test_clean_contents_keeps_other_text(http_class):
+    contents = '{"resultSets": []}'
+    assert http_class().clean_contents(contents) == contents

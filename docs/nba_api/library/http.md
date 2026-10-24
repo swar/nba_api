@@ -74,7 +74,7 @@ NBAStatsHTTP.set_session(session)
 
 #### `clean_contents`(_`contents`_)
 
-A hook for subclasses to normalize the response text before it is wrapped. The base implementation returns it unchanged.
+Normalizes the response text before it is wrapped. It replaces the JSON error body both NBA APIs return for some failures (`{"Message":"An error has occurred."}`) with a non-JSON placeholder, so that `valid_json()` returns `False` for those requests. Other text is returned unchanged. Subclasses can override it.
 
 #### `send_api_request`(_`endpoint`_, _`parameters`_ \[, _`referer=None`_, _`proxy=None`_, _`headers=None`_, _`timeout=None`_, _`raise_exception_on_error=False`_\] )
 

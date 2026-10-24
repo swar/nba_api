@@ -65,7 +65,3 @@ With no argument, the data sets are read from the tabular `resultSets` (or `resu
 #### `headers`
 
 `STATS_HEADERS`
-
-#### `clean_contents`(_`contents`_)
-
-Replaces the stats API's JSON error body (`{"Message":"An error has occurred."}`) with a non-JSON placeholder, so that `valid_json()` returns `False` for failed requests.

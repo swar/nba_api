@@ -19,8 +19,3 @@ class NBALiveHTTP(http.NBAHTTP):
     nba_response = http.NBAResponse
     base_url = "https://cdn.nba.com/static/json/liveData/{endpoint}"
     headers = STATS_HEADERS
-
-    def clean_contents(self, contents):
-        if '{"Message":"An error has occurred."}' in contents:
-            return "<Error><Message>An error has occurred.</Message></Error>"
-        return contents

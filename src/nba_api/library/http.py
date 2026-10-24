@@ -95,6 +95,10 @@ class NBAHTTP:
         cls._session = session
 
     def clean_contents(self, contents):
+        # Both NBA APIs answer some failures with this JSON body. Replacing it with
+        # non-JSON text makes valid_json() return False for those responses.
+        if '{"Message":"An error has occurred."}' in contents:
+            return "<Error><Message>An error has occurred.</Message></Error>"
         return contents
 
     def send_api_request(
