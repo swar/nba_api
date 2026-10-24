@@ -31,11 +31,12 @@ class Endpoint:
             """Return the data as a pandas DataFrame.
 
             Raises:
-                Exception: If pandas is not installed.
+                ImportError: If pandas is not installed.
             """
             if not PANDAS:
-                raise Exception(
-                    "Import Missing - Failed to import DataFrame from pandas."
+                raise ImportError(
+                    "Import Missing - Failed to import DataFrame from pandas. "
+                    "Install it with: pip install pandas"
                 )
 
             if "headers" not in self.data or not self.data["headers"]:

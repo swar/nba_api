@@ -740,7 +740,7 @@ class SeasonTypeAllStar(SeasonTypePlayoffs):
     all_star = "All Star"
 
 
-class SeasonTypeAllStarNullable(_NotRequired, SeasonTypePlayoffs):
+class SeasonTypeAllStarNullable(_NotRequired, SeasonTypeAllStar):
     pass
 
 

@@ -1,3 +1,4 @@
+import pytest
 from pandas import MultiIndex
 
 from nba_api.stats.endpoints._base import Endpoint
@@ -92,3 +93,11 @@ def test_zero_span_drops_names():
         ]
     )
     assert list(df.columns) == [("", "id")]
+
+
+def test_missing_pandas_raises_import_error(monkeypatch):
+    from nba_api.stats.endpoints import _base
+
+    monkeypatch.setattr(_base, "PANDAS", False)
+    with pytest.raises(ImportError, match="pip install pandas"):
+        _frame([{"columnNames": ["x"]}])
