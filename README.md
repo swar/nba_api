@@ -33,7 +33,7 @@
 pip install nba_api
 ```
 
-Requires Python 3.10+. Installs `requests` and `pandas`.
+Requires Python 3.11+. Installs `requests` and `pandas`.
 
 ## Quick start
 

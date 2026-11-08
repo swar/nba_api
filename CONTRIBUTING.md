@@ -22,7 +22,7 @@ For significant changes, open an issue titled `PROPOSAL: ...` to discuss the des
 
 ### Prerequisites
 
-- **Python** — a version listed under `requires-python` and the classifiers in [`pyproject.toml`](pyproject.toml) (currently 3.10–3.15; CI tests all of them).
+- **Python** — a version listed under `requires-python` and the classifiers in [`pyproject.toml`](pyproject.toml) (currently 3.11–3.15; CI tests all of them).
 - **[uv](https://docs.astral.sh/uv/getting-started/installation/)** — manages the virtual environment, dependencies, and builds. It can also install the Python versions listed above.
 
 A [dev container](.devcontainer/devcontainer.json) is also provided if you prefer VS Code or Codespaces.

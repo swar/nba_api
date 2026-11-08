@@ -1,6 +1,6 @@
 # Specify the Python version and base OS for the container
-# VARIANT allows customization of Python version (default: 3.10 on Debian Bullseye)
-ARG VARIANT="3.10-bullseye"
+# VARIANT allows customization of Python version (default: 3.11 on Debian Bullseye)
+ARG VARIANT="3.11-bullseye"
 
 # Use Microsoft's official Python dev container as the base image
 FROM mcr.microsoft.com/devcontainers/python:1-${VARIANT}
