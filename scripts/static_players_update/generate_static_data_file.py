@@ -17,6 +17,7 @@ log = logging.getLogger(__name__)
 # Note: is_active status is preserved from NBA API, not set here
 player_adjustments = {
     # Asian naming convention (Family name, Given name)
+    1642385: ["Cui", "Yongxi", "Cui Yongxi"],  # Chinese: 崔永熙
     2775: ["Ha", "Seung-jin", "Ha Seung-jin"],  # Korean: 하승진
     201180: ["Sun", "Yue", "Sun Yue"],  # Chinese: 孙悦
     2397: ["Yao", "Ming", "Yao Ming"],  # Chinese: 姚明
@@ -27,7 +28,12 @@ player_adjustments = {
     77510: ["McClain", "Ted 'Hound Dog'", "Ted 'Hound Dog' McClain"],
 }
 
-wnba_player_adjustments = {}
+wnba_player_adjustments = {
+    # Asian naming convention (Family name, Given name)
+    1629566: ["Han", "Xu", "Han Xu"],  # Chinese: 韩旭
+    # Garbled name in official data
+    100069: ["McCray-Penny", "Nikki", "Nikki McCray-Penny"],  # stub duplicate of 100198
+}
 
 
 def create_players_list(
@@ -49,10 +55,10 @@ def create_players_list(
 
     players_dict = {}
     for player in all_players["resultSets"][0]["rowSet"]:
+        # split on the last comma so "Udeh, Jr., Ernest" keeps its first name
+        last_name, _, first_name = player[1].rpartition(", ")
         # Catch players with only a single name.
-        try:
-            last_name, first_name = player[1].split(", ")
-        except ValueError:
+        if not last_name:
             last_name = player[1]
             first_name = ""
             log.warning(f"Player has single name: {player[1]} (ID: {player[0]})")
